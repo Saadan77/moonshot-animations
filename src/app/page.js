@@ -4,6 +4,8 @@ import Brand from "./components/UI/Brand";
 import Hero from "./components/UI/Hero";
 import Partners from "./components/UI/Partners";
 import WhatWeDo from "./components/UI/WhatWeDo";
+import Testimonials from "./components/UI/Testimonials";
+import CTA from "./components/UI/CTA";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <About2 />
       <Brand />
       <Partners />
+      <Testimonials />
+      <CTA />
     </>
   );
 }
