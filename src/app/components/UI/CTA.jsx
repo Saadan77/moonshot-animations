@@ -52,7 +52,7 @@ export default function CTA() {
             </div>
 
             {/* Bottom large background word/image */}
-            <div className="">
+            <div>
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"

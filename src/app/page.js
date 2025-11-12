@@ -6,6 +6,7 @@ import Partners from "./components/UI/Partners";
 import WhatWeDo from "./components/UI/WhatWeDo";
 import Testimonials from "./components/UI/Testimonials";
 import CTA from "./components/UI/CTA";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Partners />
       <Testimonials />
       <CTA />
+      <Footer />
     </>
   );
 }
