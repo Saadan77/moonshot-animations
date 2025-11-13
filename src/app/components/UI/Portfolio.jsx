@@ -3,6 +3,7 @@
 import { Tabs } from '@/components/ui/tabs';
 import React from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
+import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 
 export function Tags() {
     const tabs = [
@@ -44,10 +45,10 @@ const Portfolio = () => {
         <section className="relative text-white py-24 bg-black/90 relative z-50">
             <div className="max-w-[90%] mx-auto px-6 lg:px-8">
 
-                {/* First Row - 3 Column Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                    {/* Column 1: Section Label + Heading */}
-                    <div className="space-y-6">
+                {/* 3 Column Grid - 3 Rows */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Row 1, Col 1: Section Label + Heading */}
+                    <div className="space-y-6 col-span-1">
                         <h2 className="text-[#808080] text-[20px]">06 — Portfolio</h2>
 
                         <h2 className="text-7xl lg:text-8xl max-sm:text-4xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
@@ -67,48 +68,74 @@ const Portfolio = () => {
                         </button>
                     </div>
 
-                    {/* Column 2: First Portfolio Image */}
-                    <div className="rounded-3xl overflow-hidden">
-                        <img
-                            src="/images/portfolio/portfolio-1.png"
-                            alt="Portfolio 1"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
+                    {/* Row 1, Col 2: First Portfolio Image */}
+                    <DirectionAwareHover 
+                        imageUrl="/images/portfolio/portfolio-1.png"
+                        className="rounded-3xl w-full h-full col-span-1"
+                    >
+                        <div className="space-y-2">
+                            <p className="font-bold text-xl">Brand Identity</p>
+                            <p className="font-normal text-sm">Creative Design Studio</p>
+                        </div>
+                    </DirectionAwareHover>
 
-                    {/* Column 3: Filter Tags */}
-                    <div className="flex flex-col justify-start gap-3">
+                    {/* Row 1, Col 3: Filter Tags */}
+                    <div className="flex flex-col justify-start gap-3 col-span-1">
                         <Tags />
                     </div>
-                </div>
 
-                {/* Second Row - 2 Images Aligned to End */}
-                <div className="flex flex-row max-sm:flex-col gap-8 mb-8 justify-end">
-                    <img
-                        src="/images/portfolio/portfolio-2.png"
-                        alt="Portfolio 2"
-                        className="h-1/2 object-contain"
-                    />
-                    <img
-                        src="/images/portfolio/portfolio-3.png"
-                        alt="Portfolio 3"
-                        className="h-1/2 object-contain"
-                    />
-                </div>
+                    
+                    {/* Row 2, Col 3: Empty Spacer */}
+                    <div className="col-span-1"></div>
+                    
+                    {/* Row 2, Col 1: Portfolio Image 2 */}
+                    <DirectionAwareHover 
+                        imageUrl="/images/portfolio/portfolio-2.png"
+                        className="rounded-3xl w-full h-full col-span-1"
+                    >
+                        <div className="space-y-2">
+                            <p className="font-bold text-xl">Mobile App UI</p>
+                            <p className="font-normal text-sm">E-Commerce Platform</p>
+                        </div>
+                    </DirectionAwareHover>
 
-                {/* Third Row - 2 Images with Space Between */}
-                <div className="flex flex-row max-sm:flex-col gap-8 justify-between">
-                    <img
-                        src="/images/portfolio/portfolio-4.png"
-                        alt="Portfolio 4"
-                        className="h-1/2 object-cover"
-                    />
 
-                    <img
-                        src="/images/portfolio/portfolio-5.png"
-                        alt="Portfolio 5"
-                        className="h-1/2 object-cover"
-                    />
+                    {/* Row 2, Col 2: Portfolio Image 3 */}
+                    <DirectionAwareHover 
+                        imageUrl="/images/portfolio/portfolio-3.png"
+                        className="rounded-3xl w-full h-full col-span-1"
+                    >
+                        <div className="space-y-2">
+                            <p className="font-bold text-xl">Web Design</p>
+                            <p className="font-normal text-sm">Tech Startup Landing</p>
+                        </div>
+                    </DirectionAwareHover>
+
+                    {/* Row 3, Col 1: Portfolio Image 4 */}
+                    <DirectionAwareHover 
+                        imageUrl="/images/portfolio/portfolio-4.png"
+                        className="rounded-3xl w-full h-full col-span-1"
+                    >
+                        <div className="space-y-2">
+                            <p className="font-bold text-xl">Motion Graphics</p>
+                            <p className="font-normal text-sm">Product Animation</p>
+                        </div>
+                    </DirectionAwareHover>
+
+                    
+                    {/* Row 3, Col 2: Empty Spacer */}
+                    <div className="col-span-1"></div>
+
+                    {/* Row 3, Col 2: Portfolio Image 5 */}
+                    <DirectionAwareHover 
+                        imageUrl="/images/portfolio/portfolio-5.png"
+                        className="rounded-3xl w-full h-full col-span-1"
+                    >
+                        <div className="space-y-2">
+                            <p className="font-bold text-xl">UX/UI Design</p>
+                            <p className="font-normal text-sm">Financial Dashboard</p>
+                        </div>
+                    </DirectionAwareHover>
                 </div>
 
             </div>
