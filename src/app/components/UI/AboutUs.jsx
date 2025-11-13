@@ -1,3 +1,4 @@
+import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React from 'react';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
@@ -137,13 +138,9 @@ const AboutUs = () => {
                             className="text-[clamp(28px,4.2vw,40px)] leading-[1.18] font-semibold tracking-[-0.01em]"
                             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                         >
-                            <span className="text-white">
-                                Tech With Moonshot delivers smart digital design and strategy, navigating trends and
-                            </span>{' '}
-                            <span className="text-white">metrics </span>
-                            <span className="text-white/60">
-                                to craft powerful, tailored solutions for your brand.
-                            </span>
+                            <ScrollReveal>
+                                Tech With Moonshot delivers smart digital design and strategy, navigating trends and metrics to craft powerful, tailored solutions for your brand.
+                            </ScrollReveal>
                         </h2>
 
 

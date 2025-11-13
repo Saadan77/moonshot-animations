@@ -1,3 +1,4 @@
+import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 
@@ -16,14 +17,9 @@ const About2 = () => {
 
                     <div>
                         {/* Heading */}
-                        <h2
-                            className="text-[clamp(28px,4.2vw,40px)] leading-[1.18] tracking-[-0.01em]"
-                            style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-                        >
-                            <p className="text-white">
-                                Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
-                            </p>
-                        </h2>
+                        <ScrollReveal>
+                            Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
+                        </ScrollReveal>
                     </div>
                 </div>
 
