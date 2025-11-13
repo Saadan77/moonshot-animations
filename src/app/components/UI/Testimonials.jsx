@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 
 export default function Testimonials() {
@@ -27,7 +29,7 @@ export default function Testimonials() {
 
     return (
         <section
-            className="bg-black relative z-50"
+            className="bg-black"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             <AnimatedTestimonials

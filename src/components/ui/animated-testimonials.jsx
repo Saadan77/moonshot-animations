@@ -43,14 +43,14 @@ export const AnimatedTestimonials = ({
         <div>
           <div className="relative h-80 w-full">
             {/* Gradient ellipse background behind the image */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
                 className="w-[300px] h-[366px] rounded-full opacity-90"
                 style={{
                   background: "linear-gradient(180deg, #43158C 0%, #CB3C78 100%)",
                 }}
               />
-            </div>
+            </div> */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonials[active].src}
