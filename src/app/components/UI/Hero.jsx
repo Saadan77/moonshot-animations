@@ -34,7 +34,7 @@ const Hero = () => {
                         </div>
                     </div>
                     {/* Video Container - Center */}
-                    <div className="-mt-[250px] relative w-[55%] max-w-[700px] aspect-[4/3] rounded-[32px] shadow-2xl">
+                    <div className="-mt-[250px] relative w-[55%] max-w-[700px] aspect-4/3 rounded-4xl shadow-2xl">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
