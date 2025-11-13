@@ -66,9 +66,9 @@ const Hero = () => {
                 </div> */}
 
                 {/* Right Side Labels */}
-                <div className="absolute right-12 top-[45%] text-gray-500">
+                {/* <div className="absolute right-12 top-[45%] text-gray-500">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(agency)</p>
-                </div>
+                </div> */}
 
                 {/* Services Text - Right Bottom */}
                 <div className="absolute right-12 bottom-32 text-right">

@@ -9,24 +9,25 @@ import CTA from "./components/UI/CTA";
 import Footer from "./components/Footer";
 import Portfolio from "./components/UI/Portfolio";
 import Proficients from "./components/UI/Proficients";
-import SplashCursor from "@/components/SplashCursor";
+import SmoothScroll from "./components/SmoothScroll";
 
 
 export default function Home() {
   return (
     <>
-      <SplashCursor />
-      <Hero />
-      <AboutUs />
-      <WhatWeDo />
-      <About2 />
-      <Proficients />
-      <Portfolio />
-      <Brand />
-      <Partners />
-      <Testimonials />
-      <CTA />
-      <Footer />
+      <SmoothScroll>
+        <Hero />
+        <AboutUs />
+        <WhatWeDo />
+        <About2 />
+        <Proficients />
+        <Portfolio />
+        <Brand />
+        <Partners />
+        <Testimonials />
+        <CTA />
+        <Footer />
+      </SmoothScroll>
     </>
   );
 }

@@ -156,8 +156,6 @@ export default function Carousel({
         style={{
           width: itemWidth,
           gap: `${GAP}px`,
-          perspective: 1000,
-          perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`,
           x
         }}
         onDragEnd={handleDragEnd}
@@ -165,10 +163,6 @@ export default function Carousel({
         transition={effectiveTransition}
         onAnimationComplete={handleAnimationComplete}>
         {carouselItems.map((item, index) => {
-          const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
-          const outputRange = [90, 0, -90];
-          // eslint-disable-next-line react-hooks/rules-of-hooks
-          const rotateY = useTransform(x, range, outputRange, { clamp: false });
           return (
             <motion.div
               key={index}
@@ -179,7 +173,6 @@ export default function Carousel({
               style={{
                 width: itemWidth,
                 height: round ? itemWidth : '100%',
-                rotateY: rotateY,
                 backgroundColor: 'rgba(3, 3, 3, 1)',
                 ...(round && { borderRadius: '50%' })
               }}
@@ -257,12 +250,8 @@ export default function Carousel({
             <motion.div
               key={index}
               className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${currentIndex % items.length === index
-                ? round
-                  ? 'bg-white'
-                  : 'bg-[#333333]'
-                : round
-                  ? 'bg-[#555]'
-                  : 'bg-[rgba(51,51,51,0.4)]'
+                ? 'bg-white'
+                : 'bg-white/40'
                 }`}
               animate={{
                 scale: currentIndex % items.length === index ? 1.2 : 1

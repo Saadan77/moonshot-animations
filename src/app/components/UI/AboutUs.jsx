@@ -119,7 +119,7 @@ const AboutUs = () => {
     ];
 
     return (
-        <section className="relative isolate w-full overflow-hidden bg-black text-white">
+        <section className="relative isolate w-full overflow-hidden bg-black text-white z-10">
             <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 py-24 md:py-28 lg:py-32">
                 <div className='flex items-start'>
                     {/* Small "About Us" label */}
