@@ -1,16 +1,18 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import Image from 'next/image';
+import { AuroraText } from '@/components/ui/aurora-text';
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden bg-black z-50">
+        <div className="relative h-screen w-full overflow-visible bg-black z-50">
             {/* Navbar */}
             <Navbar />
 
             {/* Hero Content */}
-            <div className="relative h-screen flex items-center justify-center pt-20">
+            <div className="relative h-screen flex items-center justify-center pt-20 overflow-visible">
                 {/* Main Content Container */}
-                <div className="z-10 w-full flex flex-col justify-center items-center max-w-[70%]">
+                <div className="z-10 w-full flex flex-col justify-center items-center max-w-[70%] overflow-visible">
                     <div className='w-full'>
                         {/* Left Side - Digital Text */}
                         <div className="text-left">
@@ -23,19 +25,21 @@ const Hero = () => {
                             </h1>
                         </div>
 
-
                         {/* Right Side - Experts Text */}
                         <div className="text-right">
                             <h1
                                 className="text-[180px] leading-none text-white"
-                                style={{ fontFamily: 'var(--font-playfair), sans-serif' }}
+                                style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                             >
-                                Experts
+                                <AuroraText colors={['#ffffff', '#d1bd73']}>
+                                    Experts
+                                </AuroraText>
                             </h1>
                         </div>
                     </div>
-                    {/* Video Container - Center */}
-                    <div className="-mt-[250px] relative w-[55%] max-w-[700px]">
+
+                    {/* Video Container - Center (overflow visible) */}
+                    <div className="-mt-[250px] relative w-[55%] overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
@@ -49,26 +53,15 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="w-full h-full object-contain overflow-visible"
+                            className="w-full h-full object-contain"
                             style={{
                                 mixBlendMode: 'screen',
                             }}
                         >
                             <source src="/videos/hero/service-video.mp4" type="video/mp4" />
-                            {/* <Image src="/videos/hero/hero-bg-removed.gif" alt='hero-bg' width={100} height={100} className="w-full h-full object-cover overflow-visible" /> */}
                         </video>
                     </div>
                 </div>
-
-                {/* Left Side Labels */}
-                {/* <div className="absolute left-12 top-[45%] text-gray-500">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(creative)</p>
-                </div> */}
-
-                {/* Right Side Labels */}
-                {/* <div className="absolute right-12 top-[45%] text-gray-500">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(agency)</p>
-                </div> */}
 
                 {/* Services Text - Right Bottom */}
                 <div className="absolute right-12 bottom-50 text-right">
@@ -97,14 +90,6 @@ const Hero = () => {
                 <div className="absolute bottom-12 left-12">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500">(Scroll Down)</p>
                 </div>
-
-                {/* Bottom Gradient Overlay */}
-                <div
-                    className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
-                    style={{
-                        background: 'linear-gradient(180deg, rgba(100, 150, 255, 0) 0%, rgba(100, 150, 255, 0.2) 60%, rgba(150, 180, 255, 0.3) 100%)'
-                    }}
-                />
             </div>
 
             {/* Social Media Icons - Left Side */}

@@ -245,27 +245,16 @@ export const StaggeredMenu = ({
     const btn = toggleBtnRef.current;
     if (!btn) return;
     colorTweenRef.current?.kill();
-    if (changeMenuColorOnOpen) {
-      const targetColor = opening ? openMenuButtonColor : menuButtonColor;
-      colorTweenRef.current = gsap.to(
-        btn,
-        { color: targetColor, delay: 0.18, duration: 0.3, ease: 'power2.out' }
-      );
-    } else {
-      gsap.set(btn, { color: menuButtonColor });
-    }
-  }, [openMenuButtonColor, menuButtonColor, changeMenuColorOnOpen]);
+    // Always keep white color
+    gsap.set(btn, { color: 'white' });
+  }, []);
 
   React.useEffect(() => {
     if (toggleBtnRef.current) {
-      if (changeMenuColorOnOpen) {
-        const targetColor = openRef.current ? openMenuButtonColor : menuButtonColor;
-        gsap.set(toggleBtnRef.current, { color: targetColor });
-      } else {
-        gsap.set(toggleBtnRef.current, { color: menuButtonColor });
-      }
+      // Always keep white color
+      gsap.set(toggleBtnRef.current, { color: 'white' });
     }
-  }, [changeMenuColorOnOpen, menuButtonColor, openMenuButtonColor]);
+  }, []);
 
   const animateText = useCallback(opening => {
     const inner = textInnerRef.current;
@@ -350,7 +339,8 @@ export const StaggeredMenu = ({
           aria-label="Main navigation header">
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto"
+            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto [&_.sm-icon-line]:!bg-white"
+            style={{ color: 'white' }}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
@@ -390,7 +380,7 @@ export const StaggeredMenu = ({
             <img
               src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
               alt="Logo"
-              className="sm-logo-img block h-12 w-auto object-contain"
+              className="sm-logo-img block h-36 w-auto object-contain"
               draggable={false}
               width={110}
               height={24} />
@@ -500,7 +490,7 @@ export const StaggeredMenu = ({
 .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index: 20; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
-.sm-scope .sm-logo-img { display: block; height: 48px; width: auto; object-fit: contain; }
+.sm-scope .sm-logo-img { display: block; height: 75px; width: auto; object-fit: contain; }
 .sm-scope .sm-toggle { position: relative; display: inline-flex; align-items: center; gap: 0.3rem; background: transparent; border: none; cursor: pointer; color: #e9e9ef; font-weight: 500; line-height: 1; overflow: visible; }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }
 .sm-scope .sm-line:last-of-type { margin-top: 6px; }
