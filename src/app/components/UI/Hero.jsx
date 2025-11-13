@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import Image from 'next/image';
 
 const Hero = () => {
     return (
@@ -8,14 +9,15 @@ const Hero = () => {
             <Navbar />
 
             {/* Hero Content */}
-            <div className="relative h-full flex items-center justify-center pt-20">
+            <div className="relative h-screen flex items-center justify-center pt-20">
                 {/* Main Content Container */}
-                <div className="z-10 w-full max-w-[70%]">
-                    <div>
+                <div className="z-10 w-full flex flex-col justify-center items-center max-w-[70%]">
+                    <div className='w-full'>
                         {/* Left Side - Digital Text */}
                         <div className="text-left">
+                            <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(creative)</p>
                             <h1
-                                className="text-[180px] leading-none font-bold italic text-white"
+                                className="text-[180px] leading-none italic text-white"
                                 style={{ fontFamily: 'var(--font-playfair), serif' }}
                             >
                                 Digital
@@ -26,7 +28,7 @@ const Hero = () => {
                         {/* Right Side - Experts Text */}
                         <div className="text-right">
                             <h1
-                                className="text-[180px] leading-none font-bold text-white"
+                                className="text-[180px] leading-none text-white"
                                 style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                             >
                                 Experts
@@ -34,7 +36,7 @@ const Hero = () => {
                         </div>
                     </div>
                     {/* Video Container - Center */}
-                    <div className="-mt-[250px] relative w-[55%] max-w-[700px] aspect-4/3 rounded-4xl shadow-2xl">
+                    <div className="-mt-[250px] relative w-[55%] max-w-[700px]">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
@@ -48,21 +50,21 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain overflow-visible"
                             style={{
                                 mixBlendMode: 'screen',
-                                filter: 'brightness(1.2) contrast(1.1)',
                             }}
                         >
                             <source src="/videos/hero/service-video.mp4" type="video/mp4" />
+                            {/* <Image src="/videos/hero/hero-bg-removed.gif" alt='hero-bg' width={100} height={100} className="w-full h-full object-cover overflow-visible" /> */}
                         </video>
                     </div>
                 </div>
 
                 {/* Left Side Labels */}
-                <div className="absolute left-12 top-[45%] text-gray-500">
+                {/* <div className="absolute left-12 top-[45%] text-gray-500">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(creative)</p>
-                </div>
+                </div> */}
 
                 {/* Right Side Labels */}
                 <div className="absolute right-12 top-[45%] text-gray-500">

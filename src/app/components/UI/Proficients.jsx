@@ -13,7 +13,7 @@ export default function Proficients() {
 
             <div className="flex justify-center">
                 <Carousel
-                    autoplay={false}
+                    autoplay={true}
                     autoplayDelay={3000}
                     pauseOnHover={true}
                     loop={true}
