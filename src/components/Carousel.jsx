@@ -1,40 +1,32 @@
+"use client";
+
 import { useEffect, useState, useRef } from 'react';
 import { motion, useMotionValue, useTransform } from 'motion/react';
-// replace icons with your own if needed
-import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
-
-import './Carousel.css';
 
 const DEFAULT_ITEMS = [
   {
-    title: 'Text Animations',
-    description: 'Cool text animations for your projects.',
-    id: 1,
-    icon: <FiFileText className="carousel-icon" />
+    title: 'UNIT MOVE',
+    description: 'The co-founders of Unit Move, Jaye and Claire, had faced digital marketing complications until they met our digital performance gurus.',
+    stats: [
+      { value: '68%', label: 'Sixty Eight per cent increase in lead conversions.' },
+      { value: '50%', label: 'Fifty per cent increase in lead conversions.' },
+      { value: '72%', label: 'Seventy Two per cent increase in lead conversions.' }
+    ],
+    badge: 'PASSION IN BUSINESS',
+    image: '/images/proficients/laptop-1.png',
+    id: 1
   },
   {
-    title: 'Animations',
-    description: 'Smooth animations for your projects.',
-    id: 2,
-    icon: <FiCircle className="carousel-icon" />
-  },
-  {
-    title: 'Components',
-    description: 'Reusable components for your projects.',
-    id: 3,
-    icon: <FiLayers className="carousel-icon" />
-  },
-  {
-    title: 'Backgrounds',
-    description: 'Beautiful backgrounds and patterns for your projects.',
-    id: 4,
-    icon: <FiLayout className="carousel-icon" />
-  },
-  {
-    title: 'Common UI',
-    description: 'Common UI components are coming soon!',
-    id: 5,
-    icon: <FiCode className="carousel-icon" />
+    title: 'MARKING',
+    description: 'The co-founders of Marking, Jaye and Claire, had faced digital marketing complications until they met our digital performance gurus.',
+    stats: [
+      { value: '55%', label: 'Sixty Eight per cent increase in lead conversions.' },
+      { value: '80%', label: 'Fifty per cent increase in lead conversions.' },
+      { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
+    ],
+    badge: 'PASSION IN BUSINESS',
+    image: '/images/proficients/laptop-2.png',
+    id: 2
   }
 ];
 
@@ -45,7 +37,7 @@ const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
-  baseWidth = 300,
+  baseWidth = '80%',
   autoplay = false,
   autoplayDelay = 3000,
   pauseOnHover = false,
@@ -53,16 +45,32 @@ export default function Carousel({
   round = false
 }) {
   const containerPadding = 16;
-  const itemWidth = baseWidth - containerPadding * 2;
+  const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        const width = containerRef.current.offsetWidth;
+        setContainerWidth(width);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  const itemWidth = containerWidth - containerPadding * 2;
   const trackItemOffset = itemWidth + GAP;
 
-  const carouselItems = loop ? [...items, items[0]] : items;
   const [currentIndex, setCurrentIndex] = useState(0);
   const x = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
 
-  const containerRef = useRef(null);
+  const carouselItems = loop ? [...items, items[0]] : items;
+
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
       const container = containerRef.current;
@@ -126,22 +134,23 @@ export default function Carousel({
   const dragProps = loop
     ? {}
     : {
-        dragConstraints: {
-          left: -trackItemOffset * (carouselItems.length - 1),
-          right: 0
-        }
-      };
+      dragConstraints: {
+        left: -trackItemOffset * (carouselItems.length - 1),
+        right: 0
+      }
+    };
 
   return (
     <div
       ref={containerRef}
-      className={`carousel-container ${round ? 'round' : ''}`}
+      className={`relative overflow-hidden p-4'
+        }`}
       style={{
-        width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px`, borderRadius: '50%' })
+        width: baseWidth,
+        ...(round && containerWidth && { height: `${containerWidth}px` })
       }}>
       <motion.div
-        className="carousel-track"
+        className="flex"
         drag="x"
         {...dragProps}
         style={{
@@ -163,31 +172,98 @@ export default function Carousel({
           return (
             <motion.div
               key={index}
-              className={`carousel-item ${round ? 'round' : ''}`}
+              className={`relative shrink-0 flex flex-col ${round
+                ? 'items-center justify-center text-center bg-[#060010] border-0'
+                : 'items-start justify-between rounded-[28px] border border-white/10'
+                } overflow-hidden cursor-grab active:cursor-grabbing`}
               style={{
                 width: itemWidth,
                 height: round ? itemWidth : '100%',
                 rotateY: rotateY,
+                backgroundColor: 'rgba(3, 3, 3, 1)',
                 ...(round && { borderRadius: '50%' })
               }}
               transition={effectiveTransition}>
-              <div className={`carousel-item-header ${round ? 'round' : ''}`}>
-                <span className="carousel-icon-container">{item.icon}</span>
-              </div>
-              <div className="carousel-item-content">
-                <div className="carousel-item-title">{item.title}</div>
-                <p className="carousel-item-description">{item.description}</p>
+
+              {/* Gradient - Bottom Left */}
+              <div
+                className="absolute -left-32 -bottom-32 w-150 h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
+                }}
+              />
+
+              {/* Gradient - Top Right */}
+              <div
+                className="absolute -top-2 -right-2 w-250 h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
+                }}
+              />
+
+              {/* Content */}
+              <div className="relative z-10 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Top Section */}
+                <div className="flex flex-col justify-between space-y-6 col-span-1">
+                  <h3 className="text-4xl lg:text-5xl font-bold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    {item.title}
+                  </h3>
+
+                  <p className="text-white/70 text-sm lg:text-base max-w-md" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    {item.description}
+                  </p>
+
+                  {/* Statistics */}
+                  <div className="grid grid-cols-2 col-span-2 gap-x-8 gap-y-4 pt-4 max-w-lg">
+                    {item.stats?.map((stat, idx) => (
+                      <div key={idx} className={`space-y-1 ${idx === 2 ? 'col-span-1' : ''}`}>
+                        <div className="text-6xl lg:text-7xl text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                          {stat.value}
+                        </div>
+                        <p className="text-white/60 text-md lg:text-lg" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                          {stat.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Section - Laptop Image & Badge */}
+                <div className="col-span-2 flex flex-col justify-between">
+                  <div className="flex items-start justify-end gap-2 text-white/70 text-xs">
+                    <div className="text-right">
+                      <div className="font-bold text-white">PASSION</div>
+                      <div className="text-white/50">IN {item.badge?.split(' ')[2] || 'BUSINESS'}</div>
+                    </div>
+                  </div>
+
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-3/4 object-cover"
+                    />
+                  )}
+                </div>
               </div>
             </motion.div>
           );
         })}
       </motion.div>
-      <div className={`carousel-indicators-container ${round ? 'round' : ''}`}>
-        <div className="carousel-indicators">
+      <div
+        className={`flex w-full justify-center ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
+        <div className="mt-4 flex w-[150px] justify-between px-8">
           {items.map((_, index) => (
             <motion.div
               key={index}
-              className={`carousel-indicator ${currentIndex % items.length === index ? 'active' : 'inactive'}`}
+              className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${currentIndex % items.length === index
+                ? round
+                  ? 'bg-white'
+                  : 'bg-[#333333]'
+                : round
+                  ? 'bg-[#555]'
+                  : 'bg-[rgba(51,51,51,0.4)]'
+                }`}
               animate={{
                 scale: currentIndex % items.length === index ? 1.2 : 1
               }}

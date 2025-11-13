@@ -7,7 +7,8 @@ import WhatWeDo from "./components/UI/WhatWeDo";
 import Testimonials from "./components/UI/Testimonials";
 import CTA from "./components/UI/CTA";
 import Footer from "./components/Footer";
-import Portfolio from "./components/UI/Portfoli";
+import Portfolio from "./components/UI/Portfolio";
+import Proficients from "./components/UI/Proficients";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhatWeDo />
       <AboutUs />
       <About2 />
+      <Proficients />
       <Portfolio />
       <Brand />
       <Partners />
