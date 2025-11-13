@@ -28,7 +28,7 @@ const Hero = () => {
                         <div className="text-right">
                             <h1
                                 className="text-[180px] leading-none text-white"
-                                style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                                style={{ fontFamily: 'var(--font-playfair), sans-serif' }}
                             >
                                 Experts
                             </h1>
@@ -71,9 +71,9 @@ const Hero = () => {
                 </div> */}
 
                 {/* Services Text - Right Bottom */}
-                <div className="absolute right-12 bottom-32 text-right">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm text-gray-600 leading-relaxed">
-                        Branding / Mobile Apps
+                <div className="absolute right-12 bottom-50 text-right">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-600 leading-relaxed">
+                        Branding / <span className="text-white">Mobile Apps</span>
                         <br />
                         / Graphic / UI/UX
                     </p>

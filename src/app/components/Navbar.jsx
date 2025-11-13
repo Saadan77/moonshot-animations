@@ -1,46 +1,35 @@
-import CardNav from './CardNav'
+import StaggeredMenu from '@/components/StaggeredMenu'
 
 const Navbar = () => {
-    const items = [
-        {
-            label: "About",
-            bgColor: "#0D0716",
-            textColor: "#fff",
-            links: [
-                { label: "Company", ariaLabel: "About Company" },
-                { label: "Careers", ariaLabel: "About Careers" }
-            ]
-        },
-        {
-            label: "Projects",
-            bgColor: "#170D27",
-            textColor: "#fff",
-            links: [
-                { label: "Featured", ariaLabel: "Featured Projects" },
-                { label: "Case Studies", ariaLabel: "Project Case Studies" }
-            ]
-        },
-        {
-            label: "Contact",
-            bgColor: "#271E37",
-            textColor: "#fff",
-            links: [
-                { label: "Email", ariaLabel: "Email us" },
-                { label: "Twitter", ariaLabel: "Twitter" },
-                { label: "LinkedIn", ariaLabel: "LinkedIn" }
-            ]
-        }
+    const menuItems = [
+        { label: 'Home', link: '#', ariaLabel: 'Go to Home' },
+        { label: 'About', link: '#about', ariaLabel: 'Go to About' },
+        { label: 'Projects', link: '#projects', ariaLabel: 'Go to Projects' },
+        { label: 'Services', link: '#services', ariaLabel: 'Go to Services' },
+        { label: 'Contact', link: '#contact', ariaLabel: 'Go to Contact' }
+    ];
+
+    const socialItems = [
+        { label: 'Twitter', link: 'https://twitter.com' },
+        { label: 'LinkedIn', link: 'https://linkedin.com' },
+        { label: 'Instagram', link: 'https://instagram.com' },
+        { label: 'GitHub', link: 'https://github.com' }
     ];
 
     return (
-        <CardNav
-            logo="/images/primary-logo.png"
-            logoAlt="Company Logo"
-            items={items}
-            menuColor="#fff"
-            buttonBgColor="#111"
-            buttonTextColor="#fff"
-            ease="power3.out"
+        <StaggeredMenu
+            position="left"
+            colors={['#38BDF8', '#FA2889', '#FFD700', '#3E5FF9']}
+            items={menuItems}
+            socialItems={socialItems}
+            displaySocials={true}
+            displayItemNumbering={true}
+            logoUrl="/images/primary-logo.png"
+            menuButtonColor="#ffffff"
+            openMenuButtonColor="#000000"
+            changeMenuColorOnOpen={true}
+            isFixed={true}
+            accentColor="#FA2889"
         />
     );
 };
