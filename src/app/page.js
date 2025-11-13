@@ -9,13 +9,16 @@ import CTA from "./components/UI/CTA";
 import Footer from "./components/Footer";
 import Portfolio from "./components/UI/Portfolio";
 import Proficients from "./components/UI/Proficients";
+import SplashCursor from "@/components/SplashCursor";
+
 
 export default function Home() {
   return (
     <>
+      <SplashCursor />
       <Hero />
-      <WhatWeDo />
       <AboutUs />
+      <WhatWeDo />
       <About2 />
       <Proficients />
       <Portfolio />

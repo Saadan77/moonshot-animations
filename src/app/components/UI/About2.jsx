@@ -3,7 +3,7 @@ import { GoArrowUpRight } from 'react-icons/go';
 
 const About2 = () => {
     return (
-        <section className="relative bg-black text-white py-24">
+        <section className="relative bg-black text-white py-24 z-50">
             {/* Removed overflow-hidden to allow sticky to work properly */}
 
             {/* Content Overlay */}

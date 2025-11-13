@@ -41,7 +41,7 @@ export function Tags() {
 
 const Portfolio = () => {
     return (
-        <section className="relative text-white py-24 bg-black/90">
+        <section className="relative text-white py-24 bg-black/90 relative z-50">
             <div className="max-w-[90%] mx-auto px-6 lg:px-8">
 
                 {/* First Row - 3 Column Grid */}

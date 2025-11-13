@@ -7,7 +7,7 @@ import {
 
 export default function Partners() {
     return (
-        <section className="relative bg-black mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
+        <section className="relative z-50 bg-black mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
             <div>
                 {/* Top meta label */}
                 <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden bg-black">
+        <div className="relative h-screen w-full overflow-hidden bg-black z-50">
             {/* Navbar */}
             <Navbar />
 

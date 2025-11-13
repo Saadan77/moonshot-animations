@@ -27,7 +27,7 @@ export default function Testimonials() {
 
     return (
         <section
-            className="bg-black"
+            className="bg-black relative z-50"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             <AnimatedTestimonials

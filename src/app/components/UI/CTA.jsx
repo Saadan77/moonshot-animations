@@ -8,7 +8,7 @@ export default function CTA() {
         >
 
             {/* Heading */}
-            <div className="text-center relative z-10">
+            <div className="text-center relative">
                 <p className="text-white/60 text-6xl mb-2 tracking-tight">Let’s start</p>
                 <h2 className="text-white text-9xl max-sm:text-5xl font-semibold tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Your <span className="italic" style={{ fontFamily: 'var(--font-playfair), serif' }}>Project</span></span>

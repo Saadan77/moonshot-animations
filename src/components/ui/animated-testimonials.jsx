@@ -10,7 +10,7 @@ export const AnimatedTestimonials = ({
   nameClass = "text-2xl font-bold text-white/70",
   designationClass = "text-lg text-white/70",
   quoteClass = "mt-8 text-lg text-white/70",
-  containerClass = "mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12",
+  containerClass = "mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 z-10",
 }) => {
   const [active, setActive] = useState(0);
 
@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
             {/* Gradient ellipse background behind the image */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
-                className="w-[600px] h-[732px] rounded-full opacity-90"
+                className="w-[300px] h-[366px] rounded-full opacity-90"
                 style={{
                   background: "linear-gradient(180deg, #43158C 0%, #CB3C78 100%)",
                 }}
@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({
                   width={500}
                   height={500}
                   draggable={false}
-                  className="h-full w-full rounded-3xl object-cover object-center overflow-visible"
+                  className="h-3/4 w-3/4 rounded-3xl object-cover object-center overflow-visible"
                 />
               </motion.div>
             </AnimatePresence>
