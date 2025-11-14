@@ -132,7 +132,7 @@ const AboutUs = () => {
                             <span className="block h-2.5 w-0.5 rounded bg-white/50" />
                             <span className="block h-2.5 w-0.5 rounded bg-white/30" />
                         </div>
-                        <span className='font-bold text-nowrap'>About Us</span>
+                        <p className='font-bold text-nowrap text-lg'>About Us</p>
                     </div>
 
                     <div>

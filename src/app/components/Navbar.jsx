@@ -1,6 +1,9 @@
+"use client";
+
+import { useState } from 'react';
 import StaggeredMenu from '@/components/StaggeredMenu'
 
-const Navbar = () => {
+const Navbar = ({ onMenuStateChange }) => {
     const menuItems = [
         { label: 'Home', link: '#', ariaLabel: 'Go to Home' },
         { label: 'About', link: '#about', ariaLabel: 'Go to About' },
@@ -30,6 +33,8 @@ const Navbar = () => {
             changeMenuColorOnOpen={true}
             isFixed={true}
             accentColor="#FA2889"
+            onMenuOpen={() => onMenuStateChange?.(true)}
+            onMenuClose={() => onMenuStateChange?.(false)}
         />
     );
 };

@@ -4,11 +4,45 @@ import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
 
+const socials = [
+    {
+        key: 'facebook',
+        label: 'Facebook',
+        char: 'f',
+        href: '#',
+        // Gradient that fills upward on hover
+        gradient: 'bg-gradient-to-tr from-[#2563EB] via-[#3B82F6] to-[#93C5FD]',
+    },
+    {
+        key: 'instagram',
+        label: 'Instagram',
+        char: '@',
+        href: '#',
+        gradient: 'bg-[linear-gradient(135deg,#FF8A00_0%,#E52E71_50%,#9B00FF_100%)]',
+    },
+    {
+        key: 'x',
+        label: 'X (Twitter)',
+        char: '𝕏',
+        href: '#',
+        gradient: 'bg-gradient-to-br from-[#0EA5E9] via-[#2563EB] to-[#1E3A8A]',
+    },
+    {
+        key: 'linkedin',
+        label: 'LinkedIn',
+        char: 'in',
+        href: '#',
+        gradient: 'bg-gradient-to-tr from-[#0A66C2] via-[#2A7BCB] to-[#60A5FA]',
+    },
+];
+
 const Hero = () => {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
     return (
-        <div className="relative h-screen w-full overflow-visible bg-black z-50">            
+        <div className="relative h-screen w-full overflow-visible bg-black z-50">
             {/* Navbar */}
-            <Navbar />
+            <Navbar onMenuStateChange={setIsMenuOpen} />
 
             {/* Hero Content */}
             <div className="relative h-screen flex items-center justify-center pt-20 overflow-visible">
@@ -64,11 +98,11 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-sm:hidden block absolute right-12 bottom-50 text-right">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-600 leading-relaxed">
-                        Branding / <span className="text-white">Mobile Apps</span>
+                <div className="max-sm:hidden block absolute right-12 bottom-50 text-right z-50">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-lg leading-relaxed transition-colors duration-300">
+                        <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
                         <br />
-                        / Graphic / UI/UX
+                        / <span className='text-gray-600 hover:text-white hover:underline'>Graphic</span> / <span className='hover:underline text-gray-600 hover:text-white'>UI/UX</span>
                     </p>
                 </div>
 
@@ -93,19 +127,66 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className="absolute left-12 max-sm:left-0 pl-3 bottom-[40%] flex flex-col gap-3 z-20">
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800/80 backdrop-blur flex items-center justify-center text-white hover:bg-gray-700 transition text-xs">
-                    f
-                </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800/80 backdrop-blur flex items-center justify-center text-white hover:bg-gray-700 transition text-xs">
-                    @
-                </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800/80 backdrop-blur flex items-center justify-center text-white hover:bg-gray-700 transition text-xs">
-                    𝕏
-                </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800/80 backdrop-blur flex items-center justify-center text-white hover:bg-gray-700 transition text-xs">
-                    in
-                </a>
+            <div className={`absolute left-12 max-sm:left-0 pl-3 bottom-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
+                }`}>
+                {socials.map((s) => (
+                    <a
+                        key={s.key}
+                        href={s.href}
+                        aria-label={s.label}
+                        className={`
+                        group relative w-9 h-9 rounded-full
+                        flex items-center justify-center text-xs font-semibold
+                        bg-gray-800/80 backdrop-blur
+                        text-white transition-colors duration-300
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
+                        overflow-hidden
+                        `}
+                    >
+                        {/* Animated gradient fill layer (hidden until hover) */}
+                        <span
+                            aria-hidden="true"
+                            className={`
+                                absolute left-0 top-full w-full h-full rounded-full
+                                ${s.gradient}
+                                transition-all duration-500 ease-out
+                                group-hover:top-0
+                                group-active:top-0
+                                will-change:top
+                            `}
+                        />
+                        {/* Shine sweep */}
+                        <span
+                            aria-hidden="true"
+                            className="
+                                pointer-events-none absolute inset-0
+                                before:absolute before:top-0 before:-left-full before:h-full before:w-[60%]
+                                before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent
+                                before:skew-x-[30deg]
+                                before:transition-transform before:duration-[900ms]
+                                group-hover:before:translate-x-[260%]
+                            "
+                        />
+                        {/* Glyph */}
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                            {s.char}
+                        </span>
+                    </a>
+                ))}
+                {/* Reduced motion: users preferring reduced motion see instant fill (optional) */}
+                <style jsx>{`
+                    @media (prefers-reduced-motion: reduce) {
+                    .group span:first-child {
+                        transition: none;
+                    }
+                    .group:hover span:first-child {
+                        top: 0;
+                    }
+                    .group:hover .relative.z-10 {
+                        transition: none;
+                    }
+                    }
+                `}</style>
             </div>
         </div>
     );
