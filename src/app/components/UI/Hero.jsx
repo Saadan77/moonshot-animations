@@ -1,11 +1,12 @@
+"use client";
+
 import React from 'react';
 import Navbar from '../Navbar';
-import Image from 'next/image';
 import { AuroraText } from '@/components/ui/aurora-text';
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-visible bg-black z-50">
+        <div className="relative h-screen w-full overflow-visible bg-black z-50">            
             {/* Navbar */}
             <Navbar />
 

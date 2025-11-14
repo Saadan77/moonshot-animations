@@ -2,7 +2,10 @@
 
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate } from 'motion/react';
+
+const ROTATION_RANGE = 32.5;
+const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const ParallaxCard = ({ children, className, offset = 0 }) => {
     const ref = useRef(null);
@@ -13,13 +16,56 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
 
     const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
 
+    // Tilt effect
+    const x = useMotionValue(0);
+    const yTilt = useMotionValue(0);
+
+    const xSpring = useSpring(x);
+    const ySpring = useSpring(yTilt);
+
+    const transform = useMotionTemplate`perspective(1000px) rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+    const handleMouseMove = (e) => {
+        if (!ref.current) return;
+
+        const rect = ref.current.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+
+        const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+        const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+        const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+        const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+        x.set(rX);
+        yTilt.set(rY);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        yTilt.set(0);
+    };
+
     return (
         <motion.div
             ref={ref}
             style={{ y }}
             className={className}
         >
-            {children}
+            <motion.div
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                    transformStyle: "preserve-3d",
+                    transform,
+                }}
+                className="w-full h-full"
+            >
+                <div className='flex flex-col justify-between h-full' style={{ transformStyle: "preserve-3d" }}>
+                    {children}
+                </div>
+            </motion.div>
         </motion.div>
     );
 };
@@ -65,13 +111,13 @@ const About2 = () => {
                     {/* Cards Container */}
                     <div style={{ maxWidth: "60%" }} className='relative mx-auto z-10 -mt-[68vh]'>
                         {/* Card 01 */}
-                        <div className="relative flex justify-end mb-[-120px]">
+                        <div className="relative flex justify-end mb-[-120px] max-md:mb-0">
                             <ParallaxCard
                                 offset={100}
                                 className={[
-                                    ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 bg-black/70 overflow-hidden',
+                                    'relative rounded-[28px] border border-white/10 bg-black/70 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 max-w-[45%] min-h-[500px]',
+                                    'p-8 lg:p-12 max-w-[45%] max-md:max-w-full min-h-[500px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Bottom Left */}
@@ -121,9 +167,9 @@ const About2 = () => {
                             <ParallaxCard
                                 offset={-100}
                                 className={[
-                                    ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
+                                    'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%]',
+                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Bottom Left */}
@@ -141,7 +187,7 @@ const About2 = () => {
                                         background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%);'
                                     }}
                                 />
-
+                                
                                 {/* Top row: index + ball */}
                                 <div className="relative flex items-start justify-between z-10">
                                     <div
@@ -173,9 +219,9 @@ const About2 = () => {
                             <ParallaxCard
                                 offset={120}
                                 className={[
-                                    ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
+                                    'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%]',
+                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Bottom Left */}
@@ -225,9 +271,9 @@ const About2 = () => {
                             <ParallaxCard
                                 offset={-120}
                                 className={[
-                                    ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
+                                    'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%]',
+                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Bottom Left */}
@@ -252,12 +298,12 @@ const About2 = () => {
                                         className="text-[#38BDF8] text-5xl font-bold tracking-tight"
                                         style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                     >
-                                        01
+                                        04
                                     </div>
 
                                     <img
                                         src="/images/about-2/balls/ball-4.png"
-                                        alt="Ball 1"
+                                        alt="Ball 4"
                                         className="pointer-events-none absolute -top-20 -right-[100px] w-44 h-44 lg:w-52 lg:h-52 object-contain"
                                     />
                                 </div>

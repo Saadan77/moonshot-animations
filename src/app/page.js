@@ -4,7 +4,6 @@ import Brand from "./components/UI/Brand";
 import Hero from "./components/UI/Hero";
 import Partners from "./components/UI/Partners";
 import WhatWeDo from "./components/UI/WhatWeDo";
-import Testimonials from "./components/UI/Testimonials";
 import CTA from "./components/UI/CTA";
 import Footer from "./components/Footer";
 import Portfolio from "./components/UI/Portfolio";
@@ -24,7 +23,6 @@ export default function Home() {
         <Portfolio />
         <Brand />
         <Partners />
-        {/* <Testimonials /> */}
         <CTA />
         <Footer />
       </SmoothScroll>

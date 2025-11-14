@@ -1,3 +1,4 @@
+import LiquidEther from "@/components/LiquidEther";
 import Image from "next/image";
 
 export default function CTA() {
@@ -6,9 +7,65 @@ export default function CTA() {
             className="relative flex flex-col items-center justify-start overflow-hidden bg-black py-28 md:py-36"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
+            {/* Left Gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-[400px] pointer-events-none">
+                <div
+                    className="w-full h-full"
+                    style={{
+                        background: 'linear-gradient(90deg, rgba(250, 40, 137, 0.4) 0%, rgba(62, 95, 249, 0.3) 50%, transparent 100%)',
+                        filter: 'blur(80px)',
+                        opacity: 0.6
+                    }}
+                />
+            </div>
+
+            {/* Right Gradient */}
+            <div className="absolute right-0 top-0 bottom-0 w-[400px] pointer-events-none">
+                <div
+                    className="w-full h-full"
+                    style={{
+                        background: 'linear-gradient(270deg, rgba(93, 66, 255, 0.4) 0%, rgba(255, 159, 252, 0.3) 50%, transparent 100%)',
+                        filter: 'blur(80px)',
+                        opacity: 0.6
+                    }}
+                />
+            </div>
+
+            {/* Bottom Gradient */}
+            <div className="absolute left-0 right-0 bottom-0 h-[400px] pointer-events-none">
+                <div
+                    className="w-full h-full"
+                    style={{
+                        background: 'linear-gradient(0deg, rgba(82, 39, 255, 0.4) 0%, rgba(255, 159, 252, 0.3) 50%, transparent 100%)',
+                        filter: 'blur(100px)',
+                        opacity: 0.5
+                    }}
+                />
+            </div>
+
+            {/* LiquidEther Background */}
+            <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
+                <LiquidEther
+                    colors={['#5227FF', '#FF9FFC', '#B19EEF']}
+                    mouseForce={20}
+                    cursorSize={100}
+                    isViscous={false}
+                    viscous={30}
+                    iterationsViscous={32}
+                    iterationsPoisson={32}
+                    resolution={0.5}
+                    isBounce={false}
+                    autoDemo={true}
+                    autoSpeed={0.5}
+                    autoIntensity={2.2}
+                    takeoverDuration={0.25}
+                    autoResumeDelay={3000}
+                    autoRampDuration={0.6}
+                />
+            </div>
 
             {/* Heading */}
-            <div className="text-center relative">
+            <div className="text-center relative z-10">
                 <p className="text-white/60 text-6xl mb-2 tracking-tight">Let’s start</p>
                 <h2 className="text-white text-9xl max-sm:text-5xl font-semibold tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Your <span className="italic" style={{ fontFamily: 'var(--font-playfair), serif' }}>Project</span></span>
@@ -16,12 +73,12 @@ export default function CTA() {
             </div>
 
             <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
-            
+
             {/* Video container with outline */}
             <div className="relative min-h-screen z-10 -mt-10 flex items-center justify-center border border-white/30"
-            style={{
-                borderRadius: "20rem"
-            }}>
+                style={{
+                    borderRadius: "20rem"
+                }}>
                 <div className="flex flex-col items-center w-3/4">
                     <video
                         autoPlay

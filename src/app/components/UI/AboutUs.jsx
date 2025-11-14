@@ -199,6 +199,47 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Flowing gradient trail at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden pointer-events-none">
+                <svg className="absolute inset-0 w-[300%] h-full" preserveAspectRatio="none" viewBox="0 0 4800 128">
+                    <defs>
+                        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="rgba(93, 66, 255, 0)" stopOpacity="0" />
+                            <stop offset="10%" stopColor="rgba(93, 66, 255, 0.3)" stopOpacity="0.3" />
+                            <stop offset="20%" stopColor="rgba(93, 66, 255, 0.6)" stopOpacity="0.6" />
+                            <stop offset="35%" stopColor="rgba(255, 41, 124, 0.55)" stopOpacity="0.8" />
+                            <stop offset="50%" stopColor="rgba(93, 66, 255, 0.6)" stopOpacity="0.6" />
+                            <stop offset="60%" stopColor="rgba(93, 66, 255, 0.3)" stopOpacity="0.3" />
+                            <stop offset="70%" stopColor="rgba(93, 66, 255, 0)" stopOpacity="0" />
+                            <stop offset="100%" stopColor="rgba(93, 66, 255, 0)" stopOpacity="0" />
+                        </linearGradient>
+                    </defs>
+                    
+                    {/* Wave shape - smooth continuous wave */}
+                    <path 
+                        d="M -1600,85 Q -1200,65 -800,80 Q -400,95 0,65 Q 400,35 800,50 Q 1200,65 1600,45 Q 2000,25 2400,40 Q 2800,55 3200,35 Q 3600,15 4000,30 Q 4400,45 4800,25 Q 5200,10 5600,20 Q 6000,30 6400,15 L 6400,128 L -1600,128 Z" 
+                        fill="url(#waveGradient)"
+                        className="wave-shape"
+                    />
+                </svg>
+            </div>
+
+            <style jsx>{`
+                @keyframes wave-slide {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-1600px);
+                    }
+                }
+                
+                .wave-shape {
+                    animation: wave-slide 12s linear infinite;
+                    filter: blur(25px);
+                }
+            `}</style>
         </section>
     );
 };
