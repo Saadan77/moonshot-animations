@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import Shuffle from '@/components/Shuffle';
 
 const WhatWeDo = () => {
     const categories = [
@@ -60,10 +63,30 @@ const WhatWeDo = () => {
 
             {/* Large heading bottom-left */}
             <div className="text-[45px] absolute left-[4%] bottom-[12%] sm:bottom-[10%]">
-                <h2 className="leading-[0.92] font-semibold text-left">
-                    <span className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]">MOBILE</span>
-                    <span className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]">APPLICATIONS</span>
-                </h2>
+                <div className="leading-[0.92] font-semibold text-left">
+                    <Shuffle 
+                        text="MOBILE" 
+                        className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
+                        tag="span"
+                        textAlign="left"
+                        shuffleDirection="left"
+                        duration={0.5}
+                        stagger={0.04}
+                        shuffleTimes={2}
+                        style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                    />
+                    <Shuffle 
+                        text="APPLICATIONS" 
+                        className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
+                        tag="span"
+                        textAlign="left"
+                        shuffleDirection="left"
+                        duration={0.5}
+                        stagger={0.04}
+                        shuffleTimes={2}
+                        style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                    />
+                </div>
             </div>
         </section>
     );
