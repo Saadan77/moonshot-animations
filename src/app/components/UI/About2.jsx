@@ -115,7 +115,7 @@ const About2 = () => {
                             <ParallaxCard
                                 offset={100}
                                 className={[
-                                    'relative rounded-[28px] border border-white/10 bg-black/70 bg-black/70 overflow-hidden',
+                                    'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
                                     'p-8 lg:p-12 max-w-[45%] max-md:max-w-full min-h-[500px]',
                                 ].join(' ')}

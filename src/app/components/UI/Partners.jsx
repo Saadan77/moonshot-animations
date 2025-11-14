@@ -31,7 +31,7 @@ export default function Partners() {
                                 '/images/partners/logo_zm.png',
                             ].map((src, index) => (
                                 <MarqueeItem key={index} className="h-66 w-66 mx-0">
-                                    <div className="h-full w-full rounded-full bg-[#03182c]/100 flex items-center justify-center">
+                                    <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
                                         <img
                                             alt={`Partner logo ${index + 1}`}
                                             className="max-h-full max-w-full object-contain"

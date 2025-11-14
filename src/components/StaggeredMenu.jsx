@@ -316,7 +316,7 @@ export const StaggeredMenu = ({
         data-open={open || undefined}>
         <div
           ref={preLayersRef}
-          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-[5]"
+          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-5"
           aria-hidden="true">
           {(() => {
             const raw = colors && colors.length ? colors.slice(0, 4) : ['#1e1e22', '#35353c'];
@@ -339,7 +339,7 @@ export const StaggeredMenu = ({
           aria-label="Main navigation header">
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto [&_.sm-icon-line]:!bg-white"
+            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto [&_.sm-icon-line]:bg-white!"
             style={{ color: 'white' }}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
@@ -348,7 +348,7 @@ export const StaggeredMenu = ({
             type="button">
             <span
               ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-[var(--sm-toggle-width,auto)] min-w-[var(--sm-toggle-width,auto)]"
+              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-(--sm-toggle-width,auto) min-w-(--sm-toggle-width,auto)"
               aria-hidden="true">
               <span
                 ref={textInnerRef}
@@ -363,14 +363,14 @@ export const StaggeredMenu = ({
 
             <span
               ref={iconRef}
-              className="sm-icon relative w-[14px] h-[14px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
+              className="sm-icon relative w-3.5 h-3.5 shrink-0 inline-flex items-center justify-center will-change-transform"
               aria-hidden="true">
               <span
                 ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]" />
+                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
               <span
                 ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]" />
+                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
             </span>
           </button>
 
@@ -404,15 +404,15 @@ export const StaggeredMenu = ({
               {/* Shine sweep (pseudo element via span) */}
               <span
                 className="
-        pointer-events-none absolute inset-0
-        before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
-        before:bg-gradient-to-r before:from-white/0 before:via-white/15 before:to-white/0
-        before:skew-x-[25deg]
-        before:transition-transform before:duration-[800ms]
-        group-hover:before:translate-x-[260%]
-      "
+                  pointer-events-none absolute inset-0
+                  before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
+                  before:bg-linear-to-r before:from-white/0 before:via-white/15 before:to-white/0
+                  before:skew-x-25
+                  before:transition-transform before:duration-800
+                  group-hover:before:translate-x-[260%]
+                "
               />
-              <span className="transition-transform duration-300 group-hover:translate-x-[2px]">
+              <span className="transition-transform duration-300 group-hover:translate-x-0.5">
                 Our Works
               </span>
               <svg
@@ -422,7 +422,7 @@ export const StaggeredMenu = ({
                 fill="none"
                 className="
                   transition-transform duration-300
-                  group-hover:translate-x-1 group-active:translate-x-[6px]
+                  group-hover:translate-x-1 group-active:translate-x-1.5
                 "
               >
                 <path
@@ -437,7 +437,7 @@ export const StaggeredMenu = ({
               <div
                 className="
                   absolute left-3 right-3 bottom-1 h-px
-                  bg-gradient-to-r from-transparent via-white/40 to-transparent
+                  bg-linear-to-r from-transparent via-white/40 to-transparent
                   opacity-0 group-hover:opacity-100 transition-opacity duration-300
                 "
               />
@@ -460,12 +460,12 @@ export const StaggeredMenu = ({
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
               <span
                 className="
-        pointer-events-none absolute inset-0 opacity-0
-        group-hover:opacity-100 transition-opacity duration-500
-        bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
-      "
+                  pointer-events-none absolute inset-0 opacity-0
+                  group-hover:opacity-100 transition-opacity duration-500
+                  bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
+                "
               />
-              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-[2px]">
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Let's Talk
               </span>
               <div
@@ -478,7 +478,7 @@ export const StaggeredMenu = ({
                   animate-none group-hover:animate-pulsePink
                 "
               >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="transition-transform duration-300 group-hover:translate-x-[1px]">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="transition-transform duration-300 group-hover:translate-x-px">
                   <path
                     d="M5 12h14m0 0l-7-7m7 7l-7 7"
                     stroke="white"
@@ -493,9 +493,9 @@ export const StaggeredMenu = ({
                 className="
                   pointer-events-none absolute inset-0
                   before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
-                  before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
-                  before:skew-x-[25deg]
-                  before:transition-transform before:duration-[900ms]
+                  before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
+                  before:skew-x-25
+                  before:transition-transform before:duration-900
                   group-hover:before:translate-x-[250%]
                 "
               />
@@ -506,7 +506,7 @@ export const StaggeredMenu = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-black/90 flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-black/90 flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-md"
           style={{ WebkitBackdropFilter: 'blur(12px)', fontFamily: 'var(--font-sora), sans-serif' }}
           aria-hidden={!open}>
           <div className="sm-panel-inner flex-1 flex flex-col gap-5">
@@ -525,7 +525,7 @@ export const StaggeredMenu = ({
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}>
                       <span
-                        className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                        className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                         {it.label}
                       </span>
                     </a>
@@ -538,7 +538,7 @@ export const StaggeredMenu = ({
                   <span
                     className="sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
                     <span
-                      className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                      className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                       No items
                     </span>
                   </span>
@@ -551,7 +551,7 @@ export const StaggeredMenu = ({
                 className="sm-socials mt-auto pt-8 flex flex-col gap-3"
                 aria-label="Social links">
                 <h3
-                  className="sm-socials-title m-0 text-base font-medium [color:var(--sm-accent,#ff0000)]">Socials</h3>
+                  className="sm-socials-title m-0 text-base font-medium text-(--sm-accent,#ff0000)">Socials</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-4 flex-wrap"
                   role="list">
@@ -561,7 +561,7 @@ export const StaggeredMenu = ({
                         href={s.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm-socials-link text-[1.2rem] font-medium text-[#111] no-underline relative inline-block py-[2px] transition-[color,opacity] duration-300 ease-linear">
+                        className="sm-socials-link text-[1.2rem] font-medium text-[#111] no-underline relative inline-block py-0.5 transition-[color,opacity] duration-300 ease-linear">
                         {s.label}
                       </a>
                     </li>

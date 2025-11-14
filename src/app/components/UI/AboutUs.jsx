@@ -33,7 +33,7 @@ const AboutCard = ({
     return (
         <div
             className={[
-                'group relative overflow-hidden rounded-[24px] border border-white/10',
+                'group relative overflow-hidden rounded-3xl border border-white/10',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
                 // Increased heights slightly
                 compact ? 'h-[280px]' : 'h-[336px]',
@@ -52,7 +52,7 @@ const AboutCard = ({
             />
 
             {/* Subtle vignette/gradients for legibility */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/10" />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/65 via-black/15 to-black/10" />
             <div className="pointer-events-none absolute inset-0 ring-1 ring-white/5" />
 
             {/* Corner text (Roman + Titles) */}
@@ -128,9 +128,9 @@ const AboutUs = () => {
                     {/* Small "About Us" label */}
                     <div className="mr-60 flex items-center gap-3 text-sm text-white/80">
                         <div className="flex items-center gap-[3px]">
-                            <span className="block h-[10px] w-[2px] rounded bg-white/70" />
-                            <span className="block h-[10px] w-[2px] rounded bg-white/50" />
-                            <span className="block h-[10px] w-[2px] rounded bg-white/30" />
+                            <span className="block h-2.5 w-0.5 rounded bg-white/70" />
+                            <span className="block h-2.5 w-0.5 rounded bg-white/50" />
+                            <span className="block h-2.5 w-0.5 rounded bg-white/30" />
                         </div>
                         <span className='font-bold text-nowrap'>About Us</span>
                     </div>
@@ -154,7 +154,7 @@ const AboutUs = () => {
                                 className="inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 px-6 py-3 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora">Learn More About</span>
-                                <span className="grid place-items-center rounded-full bg-gradient-to-r from-[#5F7BFF] to-[#FF2A7D] p-[6px]">
+                                <span className="grid place-items-center rounded-full bg-linear-to-r from-[#5F7BFF] to-[#FF2A7D] p-1.5">
                                     <ArrowUpRight className="w-4 h-4" />
                                 </span>
                             </a>

@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <SmoothScroll>
         <Hero />
-        {/* <AboutUs />
+        <AboutUs />
         <WhatWeDo />
         <About2 />
         <Proficients />
@@ -24,7 +24,7 @@ export default function Home() {
         <Brand />
         <Partners />
         <CTA />
-        <Footer /> */}
+        <Footer />
       </SmoothScroll>
     </>
   );

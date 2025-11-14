@@ -79,7 +79,7 @@ export default function CTA() {
                 style={{
                     borderRadius: "20rem"
                 }}>
-                <div className="flex flex-col items-center w-3/4">
+                <div className="flex flex-col items-center space-y-6">
                     <video
                         autoPlay
                         loop
@@ -87,9 +87,14 @@ export default function CTA() {
                         playsInline
                         className="h-full w-full object-cover rounded-full items-center"
                     >
-                        <source src="/videos/bg-cta.mp4" type="video/mp4" />
+                        {/* <source src="/videos/bg-cta.mp4" type="video/mp4" /> */}
+                        <source src="/videos/bg-cta-webm.webm" type="video/mp4" />
+                        {/* <Image src="/videos/bg-cta-webm.webm" height={100} width={100} className="w-full h-full" /> */}
                     </video>
-                    <p className="text-center text-3xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+
+                    {/* <Image src="/videos/bg-cta-webm.webm" height={100} width={100} className="w-full h-full" /> */}
+
+                    <p className="text-center text-3xl text-white/70 mb-15" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>
