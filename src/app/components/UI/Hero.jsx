@@ -3,6 +3,8 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
+import { motion } from "motion/react";
+import ShinyText from '@/components/lightswind/shiny-text'
 
 const socials = [
     {
@@ -108,15 +110,23 @@ const Hero = () => {
 
                 {/* Bottom Right Scroll Indicator */}
                 <div className="max-sm:hidden block absolute bottom-12 right-12 text-right">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 mb-2 leading-relaxed">
-                        Let's explore
-                        <br />
-                        Moonshot Tech
-                    </p>
-                    <div className="flex justify-end mt-2">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gray-400">
-                            <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                    <div className='flex justify-center items-center gap-4'>
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 mb-2 leading-relaxed">
+                            <ShinyText
+                                size='sm'
+                                baseColor="rgba(255, 255, 255, 1)"
+                                shineColor="rgb(220,220,220)"
+                                speed={5}
+                            >Let's explore
+                                <br />
+                                Moonshot Animations
+                            </ShinyText>
+                        </p>
+                        <div className="group border border-gray-500 hover:border-white p-2 rounded-full z-50">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gray-400 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
@@ -188,7 +198,7 @@ const Hero = () => {
                     }
                 `}</style>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -62,35 +62,6 @@ const WhatWeDo = () => {
                         <div className="mt-4 h-px w-full bg-white/10" />
                     </div>
 
-                    {/* Large heading bottom-left */}
-                    {/* <div className="text-[45px] absolute left-[4%] bottom-[12%] sm:bottom-[10%]">
-                    <div className="leading-[0.92] font-semibold text-left">
-                        <Shuffle
-                            text="MOBILE"
-                            className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
-                            tag="span"
-                            textAlign="left"
-                            shuffleDirection="left"
-                            duration={0.5}
-                            stagger={0.04}
-                            shuffleTimes={2}
-                            style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-                        />
-                        <br />
-                        <Shuffle
-                            text="APPLICATIONS"
-                            className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
-                            tag="span"
-                            textAlign="left"
-                            shuffleDirection="left"
-                            duration={0.5}
-                            stagger={0.04}
-                            shuffleTimes={2}
-                            style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-                        />
-                    </div>
-                    </div> */}
-
                     <div className="text-[45px] ml-20">
                         <div className="leading-[0.92] font-semibold text-left">
                             <Shuffle
