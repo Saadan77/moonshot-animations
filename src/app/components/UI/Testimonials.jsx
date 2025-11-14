@@ -47,27 +47,29 @@ export default function Testimonials() {
     ];
 
     return (
-        <section
-            className="relative bg-black mt-50"
-            style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-        >
-            {/* DottedMap Background */}
-            <div className="absolute inset-0 opacity-30 pointer-events-none">
-                <div className="absolute inset-0" />
-                <DottedMap markers={markers} />
-            </div>
+        <>
+            <section
+                className="relative bg-black mt-50"
+                style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+            >
+                {/* DottedMap Background */}
+                <div className="absolute inset-0 opacity-30 pointer-events-none">
+                    <div className="absolute inset-0" />
+                    <DottedMap markers={markers} />
+                </div>
 
-            {/* Content */}
-            <div className="relative z-10">
-                <AnimatedTestimonials
-                    testimonials={testimonials}
-                    autoplay
-                    containerClass="mx-auto max-w-6xl px-6 py-24 md:py-28 lg:py-32"
-                    nameClass="text-2xl font-semibold text-white/70"
-                    designationClass="text-sm text-white/70"
-                    quoteClass="mt-8 text-2xl leading-relaxed text-white/70"
-                />
-            </div>
-        </section>
+                {/* Content */}
+                <div className="relative z-10">
+                    <AnimatedTestimonials
+                        testimonials={testimonials}
+                        autoplay
+                        containerClass="mx-auto max-w-6xl px-6 py-24 md:py-28 lg:py-32"
+                        nameClass="text-2xl font-semibold text-white/70"
+                        designationClass="text-sm text-white/70"
+                        quoteClass="mt-8 text-2xl leading-relaxed text-white/70"
+                    />
+                </div>
+            </section>
+        </>
     );
 }

@@ -258,12 +258,14 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <img
-                src="/images/footer-moonshot.png"
-                alt="Unique typography"
-                className="w-full h-auto object-contain mb-10"
-                draggable={false}
-            />
+            <div style={{ transform: 'translate3d(0, 0, 0)' }}>
+                <img
+                    src="/images/footer-moonshot.png"
+                    alt="Unique typography"
+                    className="w-full h-auto object-contain mb-10"
+                    draggable={false}
+                />
+            </div>
         </footer>
     );
 }

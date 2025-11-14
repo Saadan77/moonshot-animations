@@ -99,17 +99,19 @@ const About2 = () => {
                 {/* Cards Section with Background */}
                 <div className="relative">
                     {/* Background Image - Behind cards only */}
-                    <div className="sticky top-24 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
-                        <img
-                            src="/images/about-2/about-2-bg.png"
-                            alt=""
-                            className="max-w-[1100px] w-[86vw] object-contain grayscale opacity-60"
-                            style={{ transform: 'translateZ(0)' }}
-                        />
+                    <div style={{ transform: 'translate3d(0, 0, 0)' }}>
+                        <div className="sticky top-24 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
+                            <img
+                                src="/images/about-2/about-2-bg.png"
+                                alt=""
+                                className="max-w-[1100px] w-[86vw] object-contain grayscale opacity-60"
+                                style={{ transform: 'translateZ(0)' }}
+                            />
+                        </div>
                     </div>
 
                     {/* Cards Container */}
-                    <div style={{ maxWidth: "60%" }} className='relative mx-auto z-10 -mt-[68vh]'>
+                    <div style={{ maxWidth: "80%" }} className='relative mx-auto z-10 -mt-[68vh]'>
                         {/* Card 01 */}
                         <div className="relative flex justify-end mb-[-120px] max-md:mb-0">
                             <ParallaxCard
@@ -120,19 +122,19 @@ const About2 = () => {
                                     'p-8 lg:p-12 max-w-[45%] max-md:max-w-full min-h-[500px]',
                                 ].join(' ')}
                             >
-                                {/* Gradient - Bottom Left */}
+                                {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-[200px] h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 100%)'
+                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 
-                                {/* Gradient - Top Right */}
+                                {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-[200px] h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-80 h-60 rounded-full blur-[50px] opacity-60 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%);'
+                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
                                 />
 
@@ -172,22 +174,22 @@ const About2 = () => {
                                     'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
-                                {/* Gradient - Bottom Left */}
+                                {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-[200px] h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 100%)'
+                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 
-                                {/* Gradient - Top Right */}
+                                {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-[200px] h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-80 h-60 rounded-full blur-[50px] opacity-60 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%);'
+                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
                                 />
-                                
+
                                 {/* Top row: index + ball */}
                                 <div className="relative flex items-start justify-between z-10">
                                     <div
@@ -206,7 +208,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <p
-                                    className="relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-60 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     It Is Independent Google Partner (Accredited By Google)
@@ -224,19 +226,19 @@ const About2 = () => {
                                     'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
-                                {/* Gradient - Bottom Left */}
+                                {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-[200px] h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 100%)'
+                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 
-                                {/* Gradient - Top Right */}
+                                {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-[200px] h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-80 h-60 rounded-full blur-[50px] opacity-60 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%);'
+                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
                                 />
 
@@ -276,19 +278,19 @@ const About2 = () => {
                                     'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
-                                {/* Gradient - Bottom Left */}
+                                {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-[200px] h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 100%)'
+                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 
-                                {/* Gradient - Top Right */}
+                                {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-[200px] h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-80 h-60 rounded-full blur-[50px] opacity-60 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%);'
+                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
                                 />
 
@@ -310,7 +312,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <p
-                                    className="relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-30 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year.

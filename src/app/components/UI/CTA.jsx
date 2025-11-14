@@ -72,14 +72,19 @@ export default function CTA() {
                 </h2>
             </div>
 
-            <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
+            <div style={{ transform: 'translate3d(0, 0, 0)' }}>
+                <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
+            </div>
 
             {/* Video container with outline */}
             <div className="relative min-h-screen z-10 -mt-10 flex items-center justify-center border border-white/30"
                 style={{
-                    borderRadius: "20rem"
+                    borderRadius: "1333.3px",
+                    width: "35%",
+                    transform: 'translate3d(0, 0, 0)',
+                    isolation: 'isolate'
                 }}>
-                <div className="flex flex-col items-center space-y-6">
+                <div className="flex flex-col items-center space-y-6 py-10">
                     <video
                         autoPlay
                         loop
@@ -94,7 +99,7 @@ export default function CTA() {
 
                     {/* <Image src="/videos/bg-cta-webm.webm" height={100} width={100} className="w-full h-full" /> */}
 
-                    <p className="text-center text-3xl text-white/70 mb-15" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    <p className="text-center text-3xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>
@@ -118,7 +123,7 @@ export default function CTA() {
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"
-                    className="w-full h-auto object-contain mt-20"
+                    className="w-full h-auto object-contain mt-20 opacity-40"
                     draggable={false}
                 />
             </div>

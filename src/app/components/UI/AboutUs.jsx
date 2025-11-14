@@ -138,7 +138,7 @@ const AboutUs = () => {
                     <div>
                         {/* Heading */}
                         <h2
-                            className="text-[clamp(28px,4.2vw,40px)] leading-[1.18] font-semibold tracking-[-0.01em]"
+                            className="text-[clamp(28px,4.2vw,40px)] leading-[1.18] tracking-[-0.01em]"
                             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                         >
                             <ScrollReveal>
