@@ -389,29 +389,116 @@ export const StaggeredMenu = ({
           <div className="flex items-center gap-4 pointer-events-auto">
             <button
               type="button"
-              className="hidden md:inline-flex border border-white/20 rounded-full px-5 py-2.5 items-center gap-2 font-medium cursor-pointer transition-all duration-300 hover:bg-white/10 text-white text-sm"
+              className="
+      relative group hidden md:inline-flex items-center gap-2
+      rounded-full px-5 py-2.5 font-medium text-sm text-white
+      border border-white/20 cursor-pointer
+      transition-all duration-300
+      hover:bg-white/10 hover:border-white/30
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
+      active:scale-[0.97]
+      overflow-hidden
+    "
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
-              Our Works
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5">
-                <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Shine sweep (pseudo element via span) */}
+              <span
+                className="
+        pointer-events-none absolute inset-0
+        before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
+        before:bg-gradient-to-r before:from-white/0 before:via-white/15 before:to-white/0
+        before:skew-x-[25deg]
+        before:transition-transform before:duration-[800ms]
+        group-hover:before:translate-x-[260%]
+      "
+              />
+              <span className="transition-transform duration-300 group-hover:translate-x-[2px]">
+                Our Works
+              </span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="
+                  transition-transform duration-300
+                  group-hover:translate-x-1 group-active:translate-x-[6px]
+                "
+              >
+                <path
+                  d="M5 12h14m0 0l-7-7m7 7l-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
+              {/* Subtle bottom highlight line */}
+              <div
+                className="
+                  absolute left-3 right-3 bottom-1 h-px
+                  bg-gradient-to-r from-transparent via-white/40 to-transparent
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                "
+              />
             </button>
 
             <button
               type="button"
-              className="hidden md:inline-flex rounded-full px-5 py-2.5 items-center gap-2 font-medium cursor-pointer transition-all duration-300 text-white text-sm group"
-              style={{
-                fontFamily: 'var(--font-sora), sans-serif',
-                background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'
-              }}
+              className="
+      relative group hidden md:inline-flex items-center gap-2
+      rounded-full px-5 py-2.5 font-medium text-sm text-white
+      cursor-pointer
+      transition-all duration-500
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
+      active:scale-[0.97]
+      overflow-hidden
+      bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)]
+    "
+              style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
-              Let's Talk
-              <div className="w-5 h-5 rounded-full bg-[#FA2889] flex items-center justify-center">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
+              <span
+                className="
+        pointer-events-none absolute inset-0 opacity-0
+        group-hover:opacity-100 transition-opacity duration-500
+        bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
+      "
+              />
+              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-[2px]">
+                Let's Talk
+              </span>
+              <div
+                className="
+                  relative z-10 w-5 h-5 rounded-full bg-[#FA2889]
+                  flex items-center justify-center
+                  shadow-[0_0_0_0_rgba(250,40,137,0.6)]
+                  group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
+                  transition-all duration-400
+                  animate-none group-hover:animate-pulsePink
+                "
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="transition-transform duration-300 group-hover:translate-x-[1px]">
+                  <path
+                    d="M5 12h14m0 0l-7-7m7 7l-7 7"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
+              {/* Soft glossy sweep */}
+              <span
+                className="
+                  pointer-events-none absolute inset-0
+                  before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
+                  before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
+                  before:skew-x-[25deg]
+                  before:transition-transform before:duration-[900ms]
+                  group-hover:before:translate-x-[250%]
+                "
+              />
             </button>
           </div>
         </header>
