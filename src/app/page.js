@@ -15,16 +15,16 @@ export default function Home() {
   return (
     <>
       <SmoothScroll>
-        <Hero />
+        {/* <Hero /> */}
         <AboutUs />
-        <WhatWeDo />
+        {/* <WhatWeDo />
         <About2 />
         <Proficients />
         <Portfolio />
         <Brand />
         <Partners />
-        <CTA />
-        <Footer />
+        <CTA /> */}
+        {/* <Footer /> */}
       </SmoothScroll>
     </>
   );

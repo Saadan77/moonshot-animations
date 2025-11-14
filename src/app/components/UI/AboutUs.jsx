@@ -124,9 +124,9 @@ const AboutUs = () => {
     return (
         <section className="relative isolate w-full overflow-hidden bg-black text-white z-10">
             <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 py-24 md:py-28 lg:py-32">
-                <div className='flex items-start'>
+                <div className='flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
-                    <div className="mr-60 flex items-center gap-3 text-sm text-white/80">
+                    <div className="mr-60 md:mr-30 flex items-center gap-3 text-sm text-white/80">
                         <div className="flex items-center gap-[3px]">
                             <span className="block h-2.5 w-0.5 rounded bg-white/70" />
                             <span className="block h-2.5 w-0.5 rounded bg-white/50" />
@@ -173,7 +173,7 @@ const AboutUs = () => {
                         }}
                     />
 
-                    <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4 gap-10">
                         {cards.map((c, i) => (
                             <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
                                 <PinContainer
