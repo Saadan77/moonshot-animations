@@ -154,7 +154,7 @@ export function ScrollReveal({
     >
       <motion.p
         className={cn(
-          "leading-relaxed font-semibold",
+          "leading-relaxed",
           sizeClasses[size],
           alignClasses[align],
           variantClasses[variant],

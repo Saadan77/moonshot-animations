@@ -1,8 +1,14 @@
-import { Sora, Playfair_Display } from "next/font/google";
+import { Sora, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
   variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
@@ -23,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} ${playfair.variable} antialiased`}
+        className={`${sora.variable} ${playfair.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
