@@ -18,7 +18,7 @@ export default function CTA() {
             <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
             
             {/* Video container with outline */}
-            <div className="relative min-h-screen z-10 -mt-10 border border-white/15 flex items-center justify-center"
+            <div className="relative min-h-screen z-10 -mt-10 flex items-center justify-center border border-white/30"
             style={{
                 borderRadius: "20rem"
             }}>
@@ -56,7 +56,7 @@ export default function CTA() {
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain mt-20"
                     draggable={false}
                 />
             </div>

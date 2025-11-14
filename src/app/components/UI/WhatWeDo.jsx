@@ -59,7 +59,7 @@ const WhatWeDo = () => {
             </div>
 
             {/* Large heading bottom-left */}
-            <div className="absolute left-[4%] bottom-[12%] sm:bottom-[10%]">
+            <div className="text-[45px] absolute left-[4%] bottom-[12%] sm:bottom-[10%]">
                 <h2 className="leading-[0.92] font-semibold text-left">
                     <span className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]">MOBILE</span>
                     <span className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]">APPLICATIONS</span>

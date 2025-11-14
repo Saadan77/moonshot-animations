@@ -12,7 +12,7 @@ export const Marquee = ({
 export const MarqueeContent = ({
   loop = 0,
   autoFill = true,
-  pauseOnHover = true,
+  pauseOnHover = false,
   ...props
 }) => (
   <FastMarquee autoFill={autoFill} loop={loop} pauseOnHover={pauseOnHover} {...props} />
@@ -31,5 +31,5 @@ export const MarqueeItem = ({
   className,
   ...props
 }) => (
-  <div className={cn('mx-2 flex-shrink-0 object-contain', className)} {...props} />
+  <div className={cn('mx-2 flex-shrink-0 object-contain hover:border-2 hover:border-white/70 hover:rounded-full', className)} {...props} />
 );

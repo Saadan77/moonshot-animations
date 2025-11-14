@@ -1,5 +1,8 @@
+"use client";
+
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React from 'react';
+import { PinContainer } from '@/components/ui/3d-pin';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -173,18 +176,24 @@ const AboutUs = () => {
                     <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {cards.map((c, i) => (
                             <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
-                                <AboutCard
-                                    roman={c.roman}
-                                    titleTopRight={
-                                        // Convert \n to <br /> for the two-line top-right labels
-                                        <span className="whitespace-pre leading-5">
-                                            {String(c.titleTopRight)}
-                                        </span>
-                                    }
-                                    number={c.number}
-                                    image={c.image}
-                                    compact={c.compact}
-                                />
+                                <PinContainer
+                                    title={c.titleTopRight.replace('\n', ' ')}
+                                    href="#"
+                                    containerClassName="w-full h-full"
+                                >
+                                    <AboutCard
+                                        roman={c.roman}
+                                        titleTopRight={
+                                            // Convert \n to <br /> for the two-line top-right labels
+                                            <span className="whitespace-pre leading-5">
+                                                {String(c.titleTopRight)}
+                                            </span>
+                                        }
+                                        number={c.number}
+                                        image={c.image}
+                                        compact={c.compact}
+                                    />
+                                </PinContainer>
                             </div>
                         ))}
                     </div>

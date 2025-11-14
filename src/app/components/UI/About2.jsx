@@ -1,10 +1,32 @@
+"use client";
+
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
-import React from 'react';
-import { GoArrowUpRight } from 'react-icons/go';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
+
+const ParallaxCard = ({ children, className, offset = 0 }) => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+
+    const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+
+    return (
+        <motion.div
+            ref={ref}
+            style={{ y }}
+            className={className}
+        >
+            {children}
+        </motion.div>
+    );
+};
 
 const About2 = () => {
     return (
-        <section className="relative bg-black text-white py-24 z-50">
+        <section className="relative bg-black text-white py-24 z-50 pb-50">
             {/* Removed overflow-hidden to allow sticky to work properly */}
 
             {/* Content Overlay */}
@@ -44,7 +66,8 @@ const About2 = () => {
                     <div style={{ maxWidth: "60%" }} className='relative mx-auto z-10 -mt-[68vh]'>
                         {/* Card 01 */}
                         <div className="relative flex justify-end mb-[-120px]">
-                            <div
+                            <ParallaxCard
+                                offset={100}
                                 className={[
                                     ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
@@ -90,12 +113,13 @@ const About2 = () => {
                                 >
                                     Forty Three Leading Digital Performance Strategists Works With Tech With Moonshot.
                                 </p>
-                            </div>
+                            </ParallaxCard>
                         </div>
 
                         {/* Card 02 */}
                         <div className="relative mb-[-120px] max-md:mb-0">
-                            <div
+                            <ParallaxCard
+                                offset={-100}
                                 className={[
                                     ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
@@ -141,12 +165,13 @@ const About2 = () => {
                                 >
                                     It Is Independent Google Partner (Accredited By Google)
                                 </p>
-                            </div>
+                            </ParallaxCard>
                         </div>
 
                         {/* Card 03 */}
                         <div className="relative flex justify-end mb-[-120px] max-md:mb-0">
-                            <div
+                            <ParallaxCard
+                                offset={120}
                                 className={[
                                     ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
@@ -192,12 +217,13 @@ const About2 = () => {
                                 >
                                     Tech With Moonshot Is Trusted With Some Of World's Leading Digital Brands.
                                 </p>
-                            </div>
+                            </ParallaxCard>
                         </div>
 
                         {/* Card 04 */}
                         <div className="relative">
-                            <div
+                            <ParallaxCard
+                                offset={-120}
                                 className={[
                                     ' flex flex-col justify-between relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
@@ -243,7 +269,7 @@ const About2 = () => {
                                 >
                                     Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year.
                                 </p>
-                            </div>
+                            </ParallaxCard>
                         </div>
                     </div>
                 </div>

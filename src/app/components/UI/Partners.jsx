@@ -4,6 +4,7 @@ import {
     MarqueeContent,
     MarqueeItem,
 } from '@/components/ui/shadcn-io/marquee';
+import Testimonials from './Testimonials';
 
 export default function Partners() {
     return (
@@ -43,6 +44,8 @@ export default function Partners() {
                     </Marquee>
                 </div>
             </div>
+
+            <Testimonials />
         </section>
     );
 }

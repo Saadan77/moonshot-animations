@@ -24,7 +24,7 @@ export default function Home() {
         <Portfolio />
         <Brand />
         <Partners />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CTA />
         <Footer />
       </SmoothScroll>
