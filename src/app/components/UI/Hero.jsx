@@ -13,13 +13,12 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="relative h-screen flex items-center justify-center pt-20 overflow-visible">
                 {/* Main Content Container */}
-                <div className="z-10 w-full flex flex-col justify-center items-center max-w-[70%] overflow-visible">
+                <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
                     <div className='w-full'>
                         {/* Left Side - Digital Text */}
-                        <div className="text-left">
-                            <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-sm">(creative)</p>
+                        <div className="text-left max-sm:text-center max-sm:mb-5">
                             <h1
-                                className="text-[180px] leading-none italic text-white"
+                                className="text-[180px] max-xl:text-[120px] max-md:text-[80px] leading-none italic text-white"
                                 style={{ fontFamily: 'var(--font-playfair), serif' }}
                             >
                                 Digital
@@ -27,9 +26,9 @@ const Hero = () => {
                         </div>
 
                         {/* Right Side - Experts Text */}
-                        <div className="text-right">
+                        <div className="text-right max-sm:text-center">
                             <h1
-                                className="text-[180px] leading-none text-white"
+                                className="text-[180px] max-xl:text-[120px] max-md:text-[70px] leading-none text-white"
                                 style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                             >
                                 <AuroraText colors={['#ffffff', '#d1bd73']}>
@@ -40,7 +39,7 @@ const Hero = () => {
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[250px] relative w-[55%] overflow-visible">
+                    <div className="-mt-[250px] max-sm:mt-0 relative w-[55%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
@@ -65,7 +64,7 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="absolute right-12 bottom-50 text-right">
+                <div className="max-sm:hidden block absolute right-12 bottom-50 text-right">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-600 leading-relaxed">
                         Branding / <span className="text-white">Mobile Apps</span>
                         <br />
@@ -74,7 +73,7 @@ const Hero = () => {
                 </div>
 
                 {/* Bottom Right Scroll Indicator */}
-                <div className="absolute bottom-12 right-12 text-right">
+                <div className="max-sm:hidden block absolute bottom-12 right-12 text-right">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 mb-2 leading-relaxed">
                         Let's explore
                         <br />
@@ -88,13 +87,13 @@ const Hero = () => {
                 </div>
 
                 {/* Bottom Left Scroll Text */}
-                <div className="absolute bottom-12 left-12">
+                <div className="max-sm:hidden block absolute bottom-12 left-12">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500">(Scroll Down)</p>
                 </div>
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className="absolute left-12 bottom-[40%] flex flex-col gap-3 z-20">
+            <div className="absolute left-12 max-sm:left-0 pl-3 bottom-[40%] flex flex-col gap-3 z-20">
                 <a href="#" className="w-9 h-9 rounded-full bg-gray-800/80 backdrop-blur flex items-center justify-center text-white hover:bg-gray-700 transition text-xs">
                     f
                 </a>

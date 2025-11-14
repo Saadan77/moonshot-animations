@@ -375,7 +375,7 @@ export const StaggeredMenu = ({
           </button>
 
           <div
-            className="sm-logo absolute left-1/2 -translate-x-1/2 flex items-center select-none pointer-events-auto"
+            className="max-sm:mt-30 sm-logo absolute left-1/2 -translate-x-1/2 flex items-center select-none pointer-events-auto"
             aria-label="Logo">
             <img
               src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}

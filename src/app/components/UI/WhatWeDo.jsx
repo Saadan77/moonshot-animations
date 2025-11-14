@@ -15,7 +15,7 @@ const WhatWeDo = () => {
 
     return (
         <section
-            className="relative w-full min-h-[100vh] text-white select-none z-50"
+            className="relative w-full min-h-screen text-white select-none z-50"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* Background image */}
