@@ -15,7 +15,7 @@ const WhatWeDo = () => {
 
     return (
         <section
-            className="relative text-white select-none z-50 min-h-screen"
+            className="relative text-white select-none z-50 min-h-screen max-sm:min-h-[50vh]"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* Background image */}
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
                 {/* Dark vignette overlays */}
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_1%_100%,rgba(0,0,0,0)_0%,rgba(0,0,0,100)_100%,rgba(0,0,0,100)_100%)]" />
 
-                <div className='flex flex-col justify-between min-h-screen'>
+                <div className='flex flex-col justify-between min-h-screen max-sm:min-h-[50vh]'>
                     {/* Top meta label */}
                     <div className="relative mx-auto w-[92%] pt-16 sm:pt-20">
                         <div className="flex items-center justify-between gap-4 text-[11px] sm:text-xs tracking-widest uppercase text-white/70">
@@ -54,6 +54,7 @@ const WhatWeDo = () => {
                                             )}
                                         </div>
                                     ))}
+                                    <span className="hidden max-sm:block mx-1 sm:mx-2 text-white/25">|</span>
                                 </div>
                             </div>
 
@@ -62,11 +63,11 @@ const WhatWeDo = () => {
                         <div className="mt-4 h-px w-full bg-white/10" />
                     </div>
 
-                    <div className="text-[45px] ml-20">
-                        <div className="leading-[0.92] font-semibold text-left">
+                    <div className="ml-20 max-sm:ml-1 max-sm:mb-10">
+                        <div className="leading-[0.92] font-semibold text-left max-sm:text-center">
                             <Shuffle
                                 text="MOBILE"
-                                className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
+                                className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[108px]"
                                 tag="span"
                                 textAlign="left"
                                 shuffleDirection="left"
@@ -78,7 +79,7 @@ const WhatWeDo = () => {
                             <br />
                             <Shuffle
                                 text="APPLICATIONS"
-                                className="block text-[42px] sm:text-[68px] md:text-[92px] lg:text-[108px]"
+                                className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[108px]"
                                 tag="span"
                                 textAlign="left"
                                 shuffleDirection="left"

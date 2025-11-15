@@ -47,14 +47,14 @@ const Hero = () => {
             <Navbar onMenuStateChange={setIsMenuOpen} />
 
             {/* Hero Content */}
-            <div className="relative h-screen flex items-center justify-center pt-20 overflow-visible">
+            <div className="relative h-screen flex items-center justify-center pt-100 overflow-visible">
                 {/* Main Content Container */}
                 <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
                     <div className='w-full'>
                         {/* Left Side - Digital Text */}
                         <div className="text-left max-sm:text-center max-sm:mb-5">
                             <h1
-                                className="text-[180px] max-xl:text-[120px] max-md:text-[80px] leading-none italic text-white"
+                                className="text-[240px] max-xl:text-[150px] max-md:text-[80px] leading-none italic text-white"
                                 style={{ fontFamily: 'var(--font-playfair), serif' }}
                             >
                                 Digital
@@ -64,7 +64,7 @@ const Hero = () => {
                         {/* Right Side - Experts Text */}
                         <div className="text-right max-sm:text-center">
                             <h1
-                                className="text-[180px] max-xl:text-[120px] max-md:text-[70px] leading-none text-white"
+                                className="text-[240px] max-xl:text-[150px] max-md:text-[70px] leading-none text-white"
                                 style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                             >
                                 <AuroraText colors={['#ffffff', '#d1bd73']}>
@@ -75,7 +75,7 @@ const Hero = () => {
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[250px] max-sm:mt-0 relative w-[55%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[250px] max-sm:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
@@ -145,7 +145,7 @@ const Hero = () => {
                         href={s.href}
                         aria-label={s.label}
                         className={`
-                        group relative w-9 h-9 rounded-full
+                        group relative w-15 h-15 rounded-full
                         flex items-center justify-center text-xs font-semibold
                         bg-gray-800/80 backdrop-blur
                         text-white transition-colors duration-300
