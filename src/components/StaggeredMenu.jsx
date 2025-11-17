@@ -403,16 +403,16 @@ export const StaggeredMenu = ({
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Shine sweep (pseudo element via span) */}
-              <span
+              {/* <span
                 className="
-                  absolute inset-0
+                  pointer-events-none absolute inset-0
                   before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
                   before:bg-linear-to-r before:from-white/0 before:via-white/15 before:to-white/0
                   before:skew-x-25
                   before:transition-transform before:duration-800
                   group-hover:before:translate-x-[260%]
                 "
-              />
+              /> */}
               <span className="text-[20px] transition-transform duration-300 group-hover:translate-x-0.5">
                 Our Works
               </span>
@@ -460,13 +460,13 @@ export const StaggeredMenu = ({
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
-              <span
+              {/* <span
                 className="
-                  absolute inset-0 opacity-0
+                  pointer-events-none absolute inset-0 opacity-0
                   group-hover:opacity-100 transition-opacity duration-500
                   bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
                 "
-              />
+              /> */}
               <span className="text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Let's Talk
               </span>
@@ -491,16 +491,16 @@ export const StaggeredMenu = ({
                 </svg>
               </div>
               {/* Soft glossy sweep */}
-              <span
+              {/* <span
                 className="
-                  absolute inset-0
+                  pointer-events-none absolute inset-0
                   before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
                   before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
                   before:skew-x-25
                   before:transition-transform before:duration-900
                   group-hover:before:translate-x-[250%]
                 "
-              />
+              /> */}
             </button>
           </div>
         </header>

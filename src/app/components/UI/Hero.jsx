@@ -174,17 +174,17 @@ const Hero = () => {
                             `}
                         />
                         {/* Shine sweep */}
-                        <span
+                        {/* <span
                             aria-hidden="true"
                             className="
-                                absolute inset-0
+                                pointer-events-none absolute inset-0
                                 before:absolute before:top-0 before:-left-full before:h-full before:w-[60%]
                                 before:bg-linear-to-r before:from-transparent before:via-white/25 before:to-transparent
                                 before:skew-x-30
                                 before:transition-transform before:duration-900
                                 group-hover:before:translate-x-[260%]
                             "
-                        />
+                        /> */}
                         {/* Glyph */}
                         <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                             {s.char}

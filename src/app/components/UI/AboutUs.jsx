@@ -53,8 +53,8 @@ const AboutCard = ({
             />
 
             {/* Subtle vignette/gradients for legibility */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/15 to-black/10" />
-            <div className="absolute inset-0 ring-1 ring-white/5" />
+            {/* <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/65 via-black/15 to-black/10" />
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-white/5" /> */}
 
             {/* Corner text (Roman + Titles) */}
             <div className="absolute left-4 top-4 text-white/80 text-[13px] tracking-wide select-none">
