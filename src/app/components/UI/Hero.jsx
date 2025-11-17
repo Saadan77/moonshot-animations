@@ -210,7 +210,7 @@ const Hero = () => {
             {/* Bottom div */}
             <div className="relative w-full py-12 min-h-[200px] overflow-visible">
                 {/* Background gradient */}
-                <div className="rounded-b-[64px] absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-blue-900/30 pointer-events-none"></div>
+                <div className="rounded-b-[64px] absolute inset-0 bg-linear-to-b from-transparent via-purple-900/20 to-blue-900/30 pointer-events-none"></div>
 
                 {/* Bottom large background word/image */}
                 <img

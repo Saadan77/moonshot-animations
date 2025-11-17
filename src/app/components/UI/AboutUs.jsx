@@ -174,7 +174,7 @@ const AboutUs = () => {
                         }}
                     />
 
-                    <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4 gap-10">
+                    <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4">
                         {cards.map((c, i) => (
                             <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
                                 <PinContainer
