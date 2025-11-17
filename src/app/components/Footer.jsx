@@ -3,7 +3,7 @@
 export default function Footer() {
     return (
         <footer
-            className="relative bg-[#0A1628] text-white overflow-hidden z-50"
+            className="relative bg-[#020E1A] text-white overflow-hidden z-50"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             <div className="relative z-10 mx-auto max-w-[90%] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
@@ -14,14 +14,14 @@ export default function Footer() {
                         <div className="space-y-8">
                             {/* Location */}
                             <div>
-                                <p className="text-xs uppercase tracking-wider text-white/50 mb-3">
+                                <p className="text-xl uppercase tracking-wider text-white/50 mb-3">
                                     LOCATION
                                 </p>
-                                <address className="not-italic text-sm leading-relaxed text-white/80">
+                                <p className="not-italic text-lg leading-relaxed text-white/80">
                                     1200 East Collins Boulevard
                                     <br />
                                     Suite 106 Richardson Texas 75081
-                                </address>
+                                </p>
                             </div>
                         </div>
 
@@ -39,10 +39,10 @@ export default function Footer() {
                     <div className="col-span-1 space-y-8">
                         {/* Inquiry */}
                         <div>
-                            <p className="text-xs uppercase tracking-wider text-white/50 mb-3">
+                            <p className="text-xl uppercase tracking-wider text-white/50 mb-3">
                                 INQUIRY
                             </p>
-                            <div className="space-y-2 text-sm text-white/80">
+                            <div className="space-y-2 text-lg text-white/80">
                                 <a
                                     href="mailto:info@gmail.com"
                                     className="block hover:text-white transition-colors"
@@ -59,10 +59,10 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p className="text-xs uppercase tracking-wider text-white/50 mb-6">
+                            <p className="text-xl uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
-                            <ul className="space-y-3 text-sm">
+                            <ul className="space-y-3 text-lg">
                                 {['About', 'Services', 'Project', 'Case Studies', 'Industries', 'Contact'].map(
                                     (link) => (
                                         <li key={link}>
@@ -87,7 +87,7 @@ export default function Footer() {
                                 <h2 className="text-2xl font-semibold tracking-tight">
                                     MOONSHOT TECH
                                 </h2>
-                                <p className="mt-3 text-sm text-white/70 max-w-md">
+                                <p className="mt-3 text-lg text-white/70 max-w-md">
                                     We hope to empower user and simplify
                                     <br />
                                     their everyday lives
@@ -212,10 +212,8 @@ export default function Footer() {
                                     </button>
                                 </form>
 
-                                <p className="text-xs text-white/50">
-                                    By subscribing, you accept our newsletter
-                                    <br />
-                                    terms and privacy policy.
+                                <p className="text-lg text-white/50">
+                                    By subscribing, you accept our newsletter terms and privacy policy.
                                 </p>
                             </div>
                         </div>
@@ -224,7 +222,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-16 pt-8 border-t border-white/10">
-                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-lg text-white/50">
                         <p>© 2025 Moonshot Tech. All Rights Reserved</p>
                         <div className="flex gap-6">
                             <a href="#" className="hover:text-white/70 transition-colors">

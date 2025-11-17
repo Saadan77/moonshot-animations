@@ -244,8 +244,33 @@ export default function Carousel({
         })}
       </motion.div>
       <div
-        className={`flex w-full justify-center ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
-        <div className="mt-4 flex w-[150px] justify-between px-8">
+        className={`mt-10 flex w-full justify-center items-center gap-6 ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
+        {/* Previous Button */}
+        <button
+          onClick={() => {
+            if (loop && currentIndex === 0) {
+              setCurrentIndex(items.length - 1);
+            } else {
+              setCurrentIndex(prev => Math.max(prev - 1, 0));
+            }
+          }}
+          disabled={!loop && currentIndex === 0}
+          className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Previous">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="text-white">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        {/* Dot Indicators */}
+        <div className="mt-4 flex w-[150px] justify-center gap-2">
           {items.map((_, index) => (
             <motion.div
               key={index}
@@ -260,6 +285,30 @@ export default function Carousel({
               transition={{ duration: 0.15 }} />
           ))}
         </div>
+
+        {/* Next Button */}
+        <button
+          onClick={() => {
+            if (loop && currentIndex === items.length - 1) {
+              setCurrentIndex(currentIndex + 1);
+            } else {
+              setCurrentIndex(prev => Math.min(prev + 1, carouselItems.length - 1));
+            }
+          }}
+          disabled={!loop && currentIndex === items.length - 1}
+          className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Next">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="text-white">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </div>
   );

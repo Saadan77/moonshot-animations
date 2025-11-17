@@ -3,6 +3,7 @@
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React from 'react';
 import { PinContainer } from '@/components/ui/3d-pin';
+import Link from 'next/link';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -126,7 +127,7 @@ const AboutUs = () => {
             <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 py-24 md:py-28 lg:py-32">
                 <div className='flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
-                    <div className="mr-60 md:mr-30 flex items-center gap-3 text-sm text-white/80">
+                    <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
                         <div className="flex items-center gap-[3px]">
                             <span className="block h-2.5 w-0.5 rounded bg-white/70" />
                             <span className="block h-2.5 w-0.5 rounded bg-white/50" />
@@ -138,7 +139,7 @@ const AboutUs = () => {
                     <div>
                         {/* Heading */}
                         <h2
-                            className="text-[clamp(28px,4.2vw,40px)] tracking-[-0.01em]"
+                            className="text-[clamp(28px,4.2vw,40px)]"
                             style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                         >
                             <ScrollReveal>
@@ -148,16 +149,16 @@ const AboutUs = () => {
 
 
                         {/* CTA */}
-                        <div className="mt-8">
-                            <a
+                        <div className="mt-8 group">
+                            <Link
                                 href="#"
-                                className="inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 px-6 py-3 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#FF2A7D] px-6 py-3 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora">Learn More About</span>
-                                <span className="grid place-items-center rounded-full bg-linear-to-r from-[#5F7BFF] to-[#FF2A7D] p-1.5">
-                                    <ArrowUpRight className="w-4 h-4" />
+                                <span className="grid place-items-center rounded-full bg-[#FF2A7D] group-hover:bg-white p-1.5">
+                                    <ArrowUpRight className="w-4 h-4 group-hover:text-black" />
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

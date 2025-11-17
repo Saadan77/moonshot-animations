@@ -42,12 +42,12 @@ const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <div className="relative w-full overflow-visible bg-black z-50">
+        <div className="relative w-full overflow-visible z-50 bg-black">
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
 
             {/* Hero Content */}
-            <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
+            <div className="rounded-b-4xl relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
                 <div className="absolute top-[20%] left-16 max-sm:hidden">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
@@ -64,11 +64,11 @@ const Hero = () => {
                 <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
                     <div className='w-full relative'>
                         {/* Decorative Lines in Middle */}
-                        
+
                         <div className="absolute left-[5%] top-[5%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
-                        
+
                         <div className="absolute left-[25%] top-[25%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
@@ -81,11 +81,11 @@ const Hero = () => {
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
 
-                        
+
                         <div className="absolute left-[95%] top-[95%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
-                        
+
                         {/* Left Side - Digital Text */}
                         <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
                             <h1
@@ -141,33 +141,6 @@ const Hero = () => {
                         <br />
                         / <span className='text-gray-600 hover:text-white hover:underline'>Graphic</span> / <span className='hover:underline text-gray-600 hover:text-white'>UI/UX</span>
                     </p>
-                </div>
-
-                {/* Bottom Right Scroll Indicator */}
-                <div className="max-sm:hidden block absolute bottom-12 right-12 text-right">
-                    <div className='flex justify-center items-center gap-4'>
-                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 mb-2 leading-relaxed">
-                            <ShinyText
-                                size='sm'
-                                baseColor="rgba(255, 255, 255, 1)"
-                                shineColor="rgb(220,220,220)"
-                                speed={5}
-                            >Let's explore
-                                <br />
-                                Moonshot Animations
-                            </ShinyText>
-                        </p>
-                        <div className="group border border-gray-500 hover:border-white p-2 rounded-full z-50">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gray-400 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Bottom Left Scroll Text */}
-                <div className="max-sm:hidden block absolute bottom-12 left-12">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500">(Scroll Down)</p>
                 </div>
             </div>
 
@@ -232,6 +205,53 @@ const Hero = () => {
                     }
                     }
                 `}</style>
+            </div>
+
+            {/* Bottom div */}
+            <div className="relative w-full py-12 min-h-[200px] overflow-visible">
+                {/* Background gradient */}
+                <div className="rounded-b-[64px] absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-blue-900/30 pointer-events-none"></div>
+
+                {/* Bottom large background word/image */}
+                <img
+                    src="/images/hero/moonshot-tech.png"
+                    alt="Unique typography"
+                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none overflow-visible"
+                    draggable={false}
+                />
+
+                {/* Content Container */}
+                <div className="relative flex justify-between items-center px-12 py-8 gap-8">
+
+                    {/* Bottom Left Scroll Text */}
+                    <div className="max-sm:hidden flex justify-center items-center gap-4">
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-white">(Scroll Down)</p>
+                    </div>
+
+                    {/* Center Button */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div className="group border border-gray-500 hover:border-white p-3 rounded-full z-10 cursor-pointer transition-colors duration-300 bg-black/20 backdrop-blur-sm">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gray-400 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    {/* Bottom Right Scroll Indicator */}
+                    <div className="max-sm:hidden flex justify-center items-center gap-4">
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 leading-relaxed">
+                            <ShinyText
+                                size='sm'
+                                baseColor="rgba(255, 255, 255, 1)"
+                                shineColor="rgb(220,220,220)"
+                                speed={5}
+                            >Let's explore
+                                <br />
+                                Moonshot Tech
+                            </ShinyText>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div >
     );

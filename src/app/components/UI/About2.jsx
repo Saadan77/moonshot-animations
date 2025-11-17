@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
+import TextType from '@/components/TextType';
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate } from 'motion/react';
 
@@ -92,9 +93,12 @@ const About2 = () => {
                 </div>
 
                 {/* Core Discernments Title */}
-                <h2 className="text-xl lg:text-2xl font-bold uppercase mb-20" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
-                    Core <br /> Discernments
-                </h2>
+                <div className="text-xl lg:text-2xl font-bold uppercase mb-20" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    <TextType text="Core Discernments" typingSpeed={15}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="|" startOnVisible={true} loop={true} />
+                </div>
 
                 {/* Cards Section with Background */}
                 <div className="relative">
@@ -119,7 +123,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 max-w-[45%] max-md:max-w-full min-h-[500px]',
+                                    'p-8 lg:p-12 min-w-[45%] max-w-[45%] max-md:max-w-full min-h-[500px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -155,12 +159,15 @@ const About2 = () => {
                                 </div>
 
                                 {/* Headline */}
-                                <p
+                                <div
                                     className="relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
-                                    Forty Three Leading Digital Performance Strategists Works With Tech With Moonshot.
-                                </p>
+                                    <TextType text="Forty Three Leading Digital Performance Strategists Works With Tech With Moonshot." typingSpeed={15}
+                                        pauseDuration={1500}
+                                        showCursor={true}
+                                        cursorCharacter="|" loop={true} startOnVisible={true} />
+                                </div>
                             </ParallaxCard>
                         </div>
 
@@ -171,7 +178,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -207,12 +214,15 @@ const About2 = () => {
                                 </div>
 
                                 {/* Headline */}
-                                <p
+                                <div
                                     className="mt-60 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
-                                    It Is Independent Google Partner (Accredited By Google)
-                                </p>
+                                    <TextType text="It Is Independent Google Partner (Accredited By Google)" typingSpeed={15}
+                                        pauseDuration={1500}
+                                        showCursor={true}
+                                        cursorCharacter="|" loop={true} />
+                                </div>
                             </ParallaxCard>
                         </div>
 
@@ -223,7 +233,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -259,12 +269,15 @@ const About2 = () => {
                                 </div>
 
                                 {/* Headline */}
-                                <p
+                                <div
                                     className="relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
-                                    Tech With Moonshot Is Trusted With Some Of World's Leading Digital Brands.
-                                </p>
+                                    <TextType text="Tech With Moonshot Is Trusted With Some Of World's Leading Digital Brands." typingSpeed={15}
+                                        pauseDuration={1500}
+                                        showCursor={true}
+                                        cursorCharacter="|" loop={true} startOnVisible={true} />
+                                </div>
                             </ParallaxCard>
                         </div>
 
@@ -275,7 +288,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -311,12 +324,15 @@ const About2 = () => {
                                 </div>
 
                                 {/* Headline */}
-                                <p
+                                <div
                                     className="mt-30 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
-                                    Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year.
-                                </p>
+                                    <TextType text="Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year." typingSpeed={15}
+                                        pauseDuration={1500}
+                                        showCursor={true}
+                                        cursorCharacter="|" loop={true} startOnVisible={true} />
+                                </div>
                             </ParallaxCard>
                         </div>
                     </div>
