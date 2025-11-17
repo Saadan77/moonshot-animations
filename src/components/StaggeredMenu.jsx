@@ -405,7 +405,7 @@ export const StaggeredMenu = ({
               {/* Shine sweep (pseudo element via span) */}
               <span
                 className="
-                  pointer-events-none absolute inset-0
+                  absolute inset-0
                   before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
                   before:bg-linear-to-r before:from-white/0 before:via-white/15 before:to-white/0
                   before:skew-x-25
@@ -462,7 +462,7 @@ export const StaggeredMenu = ({
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
               <span
                 className="
-                  pointer-events-none absolute inset-0 opacity-0
+                  absolute inset-0 opacity-0
                   group-hover:opacity-100 transition-opacity duration-500
                   bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
                 "
@@ -493,7 +493,7 @@ export const StaggeredMenu = ({
               {/* Soft glossy sweep */}
               <span
                 className="
-                  pointer-events-none absolute inset-0
+                  absolute inset-0
                   before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
                   before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
                   before:skew-x-25

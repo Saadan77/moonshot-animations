@@ -177,7 +177,7 @@ const Hero = () => {
                         <span
                             aria-hidden="true"
                             className="
-                                pointer-events-none absolute inset-0
+                                absolute inset-0
                                 before:absolute before:top-0 before:-left-full before:h-full before:w-[60%]
                                 before:bg-linear-to-r before:from-transparent before:via-white/25 before:to-transparent
                                 before:skew-x-30
