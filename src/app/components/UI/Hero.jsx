@@ -42,17 +42,52 @@ const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <div className="relative h-screen w-full overflow-visible bg-black z-50">
+        <div className="relative w-full overflow-visible bg-black z-50">
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
 
             {/* Hero Content */}
-            <div className="relative h-screen flex items-center justify-center pt-100 overflow-visible">
+            <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
+                {/* Decorative Labels */}
+                <div className="absolute top-[20%] left-16 max-sm:hidden">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
+                        (creative)
+                    </p>
+                </div>
+                <div className="absolute top-[20%] right-16 max-sm:hidden">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
+                        (agency)
+                    </p>
+                </div>
+
                 {/* Main Content Container */}
                 <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
-                    <div className='w-full'>
+                    <div className='w-full relative'>
+                        {/* Decorative Lines in Middle */}
+                        
+                        <div className="absolute left-[5%] top-[5%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
+                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
+                        </div>
+                        
+                        <div className="absolute left-[25%] top-[25%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
+                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
+                        </div>
+
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
+                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
+                        </div>
+
+                        <div className="absolute left-[75%] top-[75%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
+                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
+                        </div>
+
+                        
+                        <div className="absolute left-[95%] top-[95%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
+                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
+                        </div>
+                        
                         {/* Left Side - Digital Text */}
-                        <div className="text-left max-sm:text-center max-sm:mb-5">
+                        <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
                             <h1
                                 className="text-[240px] max-xl:text-[150px] max-md:text-[80px] leading-none italic text-white"
                                 style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -75,10 +110,10 @@ const Hero = () => {
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[250px] max-sm:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[350px] max-sm:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
-                                className="w-[900px] h-[900px] rounded-full blur-[120px] opacity-80"
+                                className="w-[600px] h-[600px] rounded-full blur-[120px] opacity-80"
                                 style={{
                                     background: 'linear-gradient(125.65deg, rgba(40, 100, 255, 0.6) 15.91%, rgba(250, 40, 137, 0.6) 52.98%, rgba(35, 141, 250, 0.6) 73.58%, rgba(62, 95, 249, 0.6) 107.45%)'
                                 }}
@@ -100,8 +135,8 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-sm:hidden block absolute right-12 bottom-50 text-right z-50">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-lg leading-relaxed transition-colors duration-300">
+                <div className="max-sm:hidden block absolute right-12 top-[50%] text-right z-50">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl leading-relaxed transition-colors duration-300">
                         <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
                         <br />
                         / <span className='text-gray-600 hover:text-white hover:underline'>Graphic</span> / <span className='hover:underline text-gray-600 hover:text-white'>UI/UX</span>
@@ -137,7 +172,7 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`absolute left-12 max-sm:left-0 pl-3 bottom-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
+            <div className={`absolute left-12 max-sm:left-0 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
                 }`}>
                 {socials.map((s) => (
                     <a
@@ -171,9 +206,9 @@ const Hero = () => {
                             className="
                                 pointer-events-none absolute inset-0
                                 before:absolute before:top-0 before:-left-full before:h-full before:w-[60%]
-                                before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent
-                                before:skew-x-[30deg]
-                                before:transition-transform before:duration-[900ms]
+                                before:bg-linear-to-r before:from-transparent before:via-white/25 before:to-transparent
+                                before:skew-x-30
+                                before:transition-transform before:duration-900
                                 group-hover:before:translate-x-[260%]
                             "
                         />

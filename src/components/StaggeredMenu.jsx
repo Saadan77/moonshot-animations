@@ -390,15 +390,16 @@ export const StaggeredMenu = ({
             <button
               type="button"
               className="
-      relative group hidden md:inline-flex items-center gap-2
-      rounded-full px-5 py-2.5 font-medium text-sm text-white
-      border border-white/20 cursor-pointer
-      transition-all duration-300
-      hover:bg-white/10 hover:border-white/30
-      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
-      active:scale-[0.97]
-      overflow-hidden
-    "
+              relative group hidden md:inline-flex items-center gap-2
+              rounded-full px-4.5 py-4.5 text-white
+              border border-white/20 cursor-pointer
+              transition-all duration-300
+              bg-[#262626b5]
+              hover:bg-white/10 hover:border-white/30
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
+              active:scale-[0.97]
+              overflow-hidden
+            "
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Shine sweep (pseudo element via span) */}
@@ -412,7 +413,7 @@ export const StaggeredMenu = ({
                   group-hover:before:translate-x-[260%]
                 "
               />
-              <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="text-[20px] transition-transform duration-300 group-hover:translate-x-0.5">
                 Our Works
               </span>
               <svg
@@ -446,15 +447,16 @@ export const StaggeredMenu = ({
             <button
               type="button"
               className="
-      relative group hidden md:inline-flex items-center gap-2
-      rounded-full px-5 py-2.5 font-medium text-sm text-white
-      cursor-pointer
-      transition-all duration-500
-      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
-      active:scale-[0.97]
-      overflow-hidden
-      bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)]
-    "
+              relative group hidden md:inline-flex items-center gap-2
+              rounded-full px-5 py-2.5 text-white
+              cursor-pointer
+              transition-all duration-500
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
+              active:scale-[0.97]
+              overflow-hidden
+              bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)]
+              border border-gray-200
+            "
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
@@ -465,12 +467,12 @@ export const StaggeredMenu = ({
                   bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
                 "
               />
-              <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Let's Talk
               </span>
               <div
                 className="
-                  relative z-10 w-5 h-5 rounded-full bg-[#FA2889]
+                  relative z-10 w-10 h-10 rounded-full bg-[#FA2889]
                   flex items-center justify-center
                   shadow-[0_0_0_0_rgba(250,40,137,0.6)]
                   group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
