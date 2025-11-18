@@ -2,14 +2,12 @@
 
 import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Environment, useGLTF, OrbitControls } from '@react-three/drei'
+import { useGLTF, OrbitControls } from '@react-three/drei'
 
 function Model(props) {
     const group = useRef()
-    // Load model
     const { scene } = useGLTF('/images/portfolio-page/macbook.glb')
     
-    // Make it float and rotate
     useFrame((state) => {
         const t = state.clock.getElapsedTime()
         if (group.current) {
@@ -18,19 +16,19 @@ function Model(props) {
         }
     })
     
-    return <primitive ref={group} object={scene} {...props} scale={6} />
+    return <primitive ref={group} object={scene} {...props} scale={4} />
 }
 
 export default function MacModel() {
     return (
-        <div className="relative w-[760px] h-[760px] max-md:w-[400px] max-md:h-[400px] z-100">
+        <div className="relative w-[750px] h-[750px] max-md:w-[400px] max-md:h-[400px]">
             <Canvas camera={{ position: [0, 1, 3], fov: 60 }}>
-                <ambientLight intensity={0.5} />
-                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
-                <pointLight position={[-10, -10, -10]} intensity={0.5} />
+                <ambientLight intensity={0.8} />
+                <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1.5} />
+                <pointLight position={[-10, -10, -10]} intensity={0.8} />
+                <directionalLight position={[0, 5, 5]} intensity={1} />
                 <Suspense fallback={null}>
                     <Model />
-                    <Environment preset="city" />
                 </Suspense>
                 <OrbitControls 
                     enablePan={false} 
