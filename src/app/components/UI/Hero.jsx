@@ -42,12 +42,12 @@ const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <div className="relative w-full overflow-visible z-50 bg-black">
+        <section className="relative w-full z-50 bg-black/80 rounded-b-[64px] overflow-hidden">
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
 
             {/* Hero Content */}
-            <div className="rounded-b-4xl relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
+            <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
                 <div className="absolute top-[20%] left-16 max-sm:hidden">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
@@ -113,7 +113,7 @@ const Hero = () => {
                     <div className="-mt-[350px] max-sm:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
-                                className="w-[600px] h-[600px] rounded-full blur-[120px] opacity-80"
+                                className="w-[600px] h-[800px] rounded-full blur-[120px] opacity-80"
                                 style={{
                                     background: 'linear-gradient(125.65deg, rgba(40, 100, 255, 0.6) 15.91%, rgba(250, 40, 137, 0.6) 52.98%, rgba(35, 141, 250, 0.6) 73.58%, rgba(62, 95, 249, 0.6) 107.45%)'
                                 }}
@@ -208,15 +208,23 @@ const Hero = () => {
             </div>
 
             {/* Bottom div */}
-            <div className="relative w-full py-12 min-h-[200px] overflow-visible">
+            <div className="relative w-full py-12 min-h-[200px]">
                 {/* Background gradient */}
-                <div className="rounded-b-[64px] absolute inset-0 bg-linear-to-b from-transparent via-purple-900/20 to-blue-900/30 pointer-events-none"></div>
+                <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+                    <div
+                        className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                        style={{
+                            background: 'linear-gradient(119.09deg, #ff83bc 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)'
+
+                        }}
+                    />
+                </div>
 
                 {/* Bottom large background word/image */}
                 <img
                     src="/images/hero/moonshot-tech.png"
                     alt="Unique typography"
-                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none overflow-visible"
+                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none"
                     draggable={false}
                 />
 
@@ -225,7 +233,7 @@ const Hero = () => {
 
                     {/* Bottom Left Scroll Text */}
                     <div className="max-sm:hidden flex justify-center items-center gap-4">
-                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-white">(Scroll Down)</p>
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md text-white">(Scroll Down)</p>
                     </div>
 
                     {/* Center Button */}
@@ -253,7 +261,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </section>
     );
 };
 

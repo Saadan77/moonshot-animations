@@ -308,7 +308,7 @@ export const StaggeredMenu = ({
 
   return (
     <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}>
+      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-[full] h-full'}`}>
       <div
         className={(className ? className + ' ' : '') + 'staggered-menu-wrapper relative w-full h-full'}
         style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
@@ -339,16 +339,28 @@ export const StaggeredMenu = ({
           aria-label="Main navigation header">
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto [&_.sm-icon-line]:bg-white!"
-            style={{ color: 'white' }}
+            className="sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm bg-black/20"
+            style={{ color: 'white', fontFamily: 'var(--font-sora), sans-serif' }}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
             onClick={toggleMenu}
             type="button">
             <span
+              ref={iconRef}
+              className="sm-icon relative w-4 h-4 shrink-0 inline-flex items-center justify-center will-change-transform"
+              aria-hidden="true">
+              <span
+                ref={plusHRef}
+                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
+              <span
+                ref={plusVRef}
+                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
+            </span>
+
+            <span
               ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-(--sm-toggle-width,auto) min-w-(--sm-toggle-width,auto)"
+              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap text-lg"
               aria-hidden="true">
               <span
                 ref={textInnerRef}
@@ -361,16 +373,8 @@ export const StaggeredMenu = ({
               </span>
             </span>
 
-            <span
-              ref={iconRef}
-              className="sm-icon relative w-3.5 h-3.5 shrink-0 inline-flex items-center justify-center will-change-transform"
-              aria-hidden="true">
-              <span
-                ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
-              <span
-                ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform" />
+            <span className="text-lg text-white/60 underline" aria-hidden="true">
+              +1-972-331-5058
             </span>
           </button>
 
@@ -380,10 +384,10 @@ export const StaggeredMenu = ({
             <img
               src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
               alt="Logo"
-              className="sm-logo-img block h-36 w-auto object-contain"
+              className="sm-logo-img block h-50 w-auto object-contain"
               draggable={false}
-              width={110}
-              height={24} />
+              width={100}
+              height={100} />
           </div>
 
           <div className="flex items-center gap-4 pointer-events-auto">
@@ -576,7 +580,7 @@ export const StaggeredMenu = ({
       </div>
       <style>{`
 .sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 40; }
-.sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index: 20; }
+.sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em 4rem; background: transparent; pointer-events: none; z-index: 20; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; height: 75px; width: auto; object-fit: contain; }
