@@ -7,7 +7,7 @@ const Navbar = ({ onMenuStateChange }) => {
     const menuItems = [
         { label: 'Home', link: '#', ariaLabel: 'Go to Home' },
         { label: 'About', link: '#about', ariaLabel: 'Go to About' },
-        { label: 'Projects', link: '#projects', ariaLabel: 'Go to Projects' },
+        { label: 'Portfolio', link: '/portfolio', ariaLabel: 'Go to Portfolio' },
         { label: 'Services', link: '#services', ariaLabel: 'Go to Services' },
         { label: 'Contact', link: '#contact', ariaLabel: 'Go to Contact' }
     ];

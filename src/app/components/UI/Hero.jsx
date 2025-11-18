@@ -64,7 +64,6 @@ const Hero = () => {
                 <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
                     <div className='w-full relative'>
                         {/* Decorative Lines in Middle */}
-
                         <div className="absolute left-[5%] top-[5%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
@@ -80,7 +79,6 @@ const Hero = () => {
                         <div className="absolute left-[75%] top-[75%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
                         </div>
-
 
                         <div className="absolute left-[95%] top-[95%] -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
                             <img src="/images/hero/Line-1.png" alt="" className="w-full invert-10" />
