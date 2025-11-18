@@ -8,13 +8,13 @@ import Testimonials from './Testimonials';
 
 export default function Partners() {
     return (
-        <section className="bg-black mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
+        <section className="bg-[#00060B] mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
             <div>
                 {/* Top meta label */}
                 <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
-                    <div className="flex justify-between tracking-widest text-white/70 text-sm">
+                    <div className="flex justify-between tracking-widest text-[#808080] text-[20px]">
                         <p className="text-nowrap">08 — Partners</p>
-                        <p className="text-[#41454a] text-end text-[20px] font-medium leading-tight">
+                        <p className="text-[#41454a] text-end text-[26px] leading-tight">
                             Over <span className="text-white">10 Years</span> <br /> Partnership
                         </p>
                     </div>
