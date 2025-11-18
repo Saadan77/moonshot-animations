@@ -80,8 +80,8 @@ const About2 = () => {
             <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8">
                 <div className='mb-20 space-y-4'>
                     {/* Top label */}
-                    <div className="flex items-center gap-3 text-sm text-white/80">
-                        <span className='font-bold text-nowrap'>04 — The Inventive Minds</span>
+                    <div className="flex items-center gap-3 text-lg text-[#808080]">
+                        <span className='text-nowrap font-poppins'>04 — The Inventive Minds</span>
                     </div>
 
                     <div>
@@ -94,7 +94,12 @@ const About2 = () => {
 
                 {/* Core Discernments Title */}
                 <div className="text-xl lg:text-2xl font-bold uppercase mb-20" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
-                    <TextType text="Core Discernments" typingSpeed={15}
+                    <TextType text="Core" typingSpeed={15}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="|" startOnVisible={true} loop={true} />
+                    <br />
+                    <TextType text="Discernments" typingSpeed={15}
                         pauseDuration={1500}
                         showCursor={true}
                         cursorCharacter="|" startOnVisible={true} loop={true} />
@@ -123,7 +128,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-w-[45%] max-w-[45%] max-md:max-w-full min-h-[500px]',
+                                    'p-8 lg:p-12 min-w-[40%] max-w-[40%] max-md:max-w-full min-h-[600px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -154,7 +159,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-1.png"
                                         alt="Ball 1"
-                                        className="pointer-events-none absolute -top-20 -right-[100px] w-44 h-44 lg:w-52 lg:h-52 object-contain"
+                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
                                     />
                                 </div>
 
@@ -178,7 +183,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -209,13 +214,13 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-2.png"
                                         alt="Ball 1"
-                                        className="pointer-events-none absolute -top-20 -right-[100px] w-44 h-44 lg:w-52 lg:h-52 object-contain"
+                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
                                     />
                                 </div>
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-60 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-80 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="It Is Independent Google Partner (Accredited By Google)" typingSpeed={15}
@@ -233,7 +238,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -264,7 +269,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-3.png"
                                         alt="Ball 3"
-                                        className="pointer-events-none absolute -bottom-20 -right-[100px] w-44 h-44 lg:w-52 lg:h-52 object-contain"
+                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
                                     />
                                 </div>
 
@@ -288,7 +293,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[500px] min-w-[45%] max-w-[45%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -319,13 +324,13 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-4.png"
                                         alt="Ball 4"
-                                        className="pointer-events-none absolute -top-20 -right-[100px] w-44 h-44 lg:w-52 lg:h-52 object-contain"
+                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
                                     />
                                 </div>
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-30 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-60 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year." typingSpeed={15}

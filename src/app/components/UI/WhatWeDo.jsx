@@ -8,31 +8,31 @@ const categories = [
     name: "Mobile Applications",
     image: "/images/what-we-do-bg.png",
     title: "MOBILE APPLICATIONS",
-    subtitle: "APPLICATIONS",
+    subtitle: " ",
   },
   {
     name: "UI/UX",
     image: "/images/what-we-do/ui-ux.png",
-    title: "UI/UX DESIGN",
-    subtitle: "DESIGN",
+    title: "UI/UX",
+    subtitle: " ",
   },
   {
     name: "Branding",
     image: "/images/what-we-do/branding.png",
     title: "BRANDING",
-    subtitle: "IDENTITY",
+    subtitle: " ",
   },
   {
     name: "Web Development",
     image: "/images/what-we-do/web.png",
     title: "WEB DEVELOPMENT",
-    subtitle: "DEVELOPMENT",
+    subtitle: " ",
   },
   {
     name: "Animations",
     video: "/images/what-we-do/animation.mp4",
     title: "ANIMATIONS",
-    subtitle: "ANIMATIONS",
+    subtitle: " ",
   },
 ];
 
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
 
   return (
     <section
-      className="relative text-white select-none z-50 min-h-screen max-sm:min-h-[50vh]"
+      className="relative text-white select-none min-h-screen max-sm:min-h-[50vh]"
       style={{ fontFamily: "var(--font-sora), sans-serif" }}
     >
       {/* Background media */}

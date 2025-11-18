@@ -13,7 +13,7 @@ const DEFAULT_ITEMS = [
       { value: '72%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop-1.png',
+    image: '/images/proficients/laptop1.png',
     id: 1
   },
   {
@@ -25,7 +25,7 @@ const DEFAULT_ITEMS = [
       { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop-2.png',
+    image: '/images/proficients/laptop2.png',
     id: 2
   }
 ];
@@ -195,7 +195,7 @@ export default function Carousel({
               />
 
               {/* Content */}
-              <div className="relative z-10 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="relative z-10 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Top Section */}
                 <div className="flex flex-col justify-between space-y-6 col-span-1">
                   <h3 className="text-4xl lg:text-5xl font-bold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
@@ -207,7 +207,7 @@ export default function Carousel({
                   </p>
 
                   {/* Statistics */}
-                  <div className="grid grid-cols-2 col-span-2 gap-x-8 gap-y-4 pt-4 max-w-lg">
+                  <div className="grid grid-cols-2 col-span-2 gap-x-16 gap-y-4 max-w-lg">
                     {item.stats?.map((stat, idx) => (
                       <div key={idx} className={`space-y-1 ${idx === 2 ? 'col-span-1' : ''}`}>
                         <div className="text-6xl lg:text-7xl text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
@@ -222,7 +222,7 @@ export default function Carousel({
                 </div>
 
                 {/* Bottom Section - Laptop Image & Badge */}
-                <div className="col-span-2 flex flex-col justify-between">
+                <div className="col-span-1 flex flex-col justify-between">
                   <div className="flex items-start justify-end gap-2 text-white/70 text-xs">
                     <div className="text-right">
                       <div className="font-bold text-white">PASSION</div>
@@ -234,7 +234,7 @@ export default function Carousel({
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-3/4 object-cover"
+                      className="object-cover"
                     />
                   )}
                 </div>

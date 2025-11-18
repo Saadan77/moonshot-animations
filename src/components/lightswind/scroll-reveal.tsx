@@ -154,7 +154,7 @@ export function ScrollReveal({
     >
       <motion.p
         className={cn(
-          "leading-relaxed",
+          "leading-relaxed space-y-8",
           sizeClasses[size],
           alignClasses[align],
           variantClasses[variant],

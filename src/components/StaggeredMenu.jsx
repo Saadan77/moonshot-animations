@@ -393,17 +393,7 @@ export const StaggeredMenu = ({
           <div className="flex items-center gap-4 pointer-events-auto">
             <button
               type="button"
-              className="
-              relative group hidden md:inline-flex items-center gap-2
-              rounded-full px-4.5 py-4.5 text-white
-              border border-white/20 cursor-pointer
-              transition-all duration-300
-              bg-[#262626b5]
-              hover:bg-white/10 hover:border-white/30
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
-              active:scale-[0.97]
-              overflow-hidden
-            "
+              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-4.5 py-4.5 text-white border border-white/20 cursor-pointer transition-all duration-300 bg-[#262626b5] hover:bg-white/10 hover:border-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden"
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Shine sweep (pseudo element via span) */}
@@ -450,17 +440,7 @@ export const StaggeredMenu = ({
 
             <button
               type="button"
-              className="
-              relative group hidden md:inline-flex items-center gap-2
-              rounded-full px-5 py-2.5 text-white
-              cursor-pointer
-              transition-all duration-500
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60
-              active:scale-[0.97]
-              overflow-hidden
-              bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)]
-              border border-gray-200
-            "
+              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
