@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 import CTA from "../components/UI/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
-import MacModel from "@/components/MacModel";
 import SmoothScroll from "../components/SmoothScroll";
 import PortfolioGrid from "../components/UI/PortfolioGrid";
+import MacModel from "../components/3D Models/MacModel";
 
 export default function Portfolio() {
     return (
