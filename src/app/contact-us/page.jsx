@@ -45,9 +45,9 @@ export default function ContactUs() {
             >
                 <Navbar />
 
-                <div className="h-screen flex justify-center items-center relative w-full overflow-visible bg-black">
+                <div className="h-screen flex justify-center items-end relative w-full overflow-hidden bg-black">
                     {/* Dither Background */}
-                    <div className="absolute inset-0 w-full h-full opacity-10">
+                    <div className="absolute inset-0 w-full h-full opacity-30">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
                             backgroundColor={[0.84, 0.13, 0.69]}
@@ -61,12 +61,11 @@ export default function ContactUs() {
                         />
                     </div>
 
-                    {/* Background Gradient Overlay */}
                     <div
-                        className="absolute inset-0 opacity-50"
+                        className="absolute inset-0 rotate-30 scale-185"
                         style={{
-                            background:
-                                "linear-gradient(180deg, #000000 0%, #1a2a4a 40%, #2d1b4e 70%, #4a1d5f 85%, #6b2b7a 100%)",
+                            backgroundImage:
+                                "url('/images/bg-hero.png')",
                         }}
                     />
 
@@ -94,7 +93,7 @@ export default function ContactUs() {
                     </div>
 
                     {/* Industries Hero Section */}
-                    <div className="max-w-[90%] flex items-center justify-center gap-8">
+                    <div className="max-w-[90%] flex max-md:flex-col items-center justify-center gap-8 overflow-visible">
                         <div className="z-10">
                             {/* Small "Industries" label */}
                             <div className="mb-6 flex items-center gap-3 text-sm text-white/80">
@@ -106,19 +105,19 @@ export default function ContactUs() {
                                 <p className="font-bold text-lg">Industries</p>
                             </div>
 
-                            <h1 className="font-sora mb-4 text-[60px] max-md:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
+                            <h1 className="font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                    Innovating Industries Demonstrating Our Multi{" "}
+                                    Let’s Start a <br /> Conversation Connect{" "}
                                 </AuroraText>
-                                <span className="text-end items-end block w-full -ml-30">
+                                <span className="text-end max-md:text-center max-md:items-center items-end block w-full">
                                     <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
-                                        Sector Strength
-                                    </AuroraText>
+                                        With Our Team
+                                    </AuroraText>   
                                 </span>
                             </h1>
 
-                            <p className="font-light text-white/70 lg:mb-8 md:text-md lg:text-xl">
-                                From conceptual sketches to digital experiences, here's how we turn imagination into design
+                            <p className="font-light text-white/70 md:text-md lg:text-lg">
+                                From quick questions to big ideas, here’s how we turn your message into real progress
                             </p>
                         </div>
 
@@ -132,7 +131,7 @@ export default function ContactUs() {
                         <div>
                             <p className="text-[20px] text-[#989898] mb-4">02 — Get in Touch</p>
 
-                            <h2 style={{ fontFamily: 'Inter, sans-serif' }} className="leading-tight text-white mb-6 block text-[80px] max-md:text-[40px] max-sm:text-[30px]">
+                            <h2 style={{ fontFamily: 'Inter, sans-serif' }} className="leading-tight text-white mb-6 block text-[60px] max-xl:text-[40px] max-sm:text-[30px]">
                                 <span className="flex items-center gap-x-4">
                                     Have a <RotatingText
                                         texts={['Project?', 'Idea?', 'Vision?', 'Goal?', 'Dream?', 'Challenge?']}
@@ -211,7 +210,7 @@ export default function ContactUs() {
                                 <div className="mt-6">
                                     <button
                                         type="button"
-                                        className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+                                        className="relative group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
                                         style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                     >
                                         {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}

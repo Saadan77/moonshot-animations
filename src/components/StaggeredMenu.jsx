@@ -373,13 +373,13 @@ export const StaggeredMenu = ({
               </span>
             </span>
 
-            <span className="text-lg text-white/60 underline" aria-hidden="true">
+            <span className="text-lg text-white/60 underline text-nowrap" aria-hidden="true">
               +1-972-331-5058
             </span>
           </button>
 
           <div
-            className="max-sm:mt-30 sm-logo absolute left-1/2 -translate-x-1/2 flex items-center select-none pointer-events-auto"
+            className="max-md:mt-30 sm-logo absolute left-1/2 -translate-x-1/2 flex items-center select-none pointer-events-auto"
             aria-label="Logo">
             <img
               src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
@@ -393,54 +393,7 @@ export const StaggeredMenu = ({
           <div className="flex items-center gap-4 pointer-events-auto">
             <button
               type="button"
-              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-4.5 py-4.5 text-white border border-white/20 cursor-pointer transition-all duration-300 bg-[#262626b5] hover:bg-white/10 hover:border-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden"
-              style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-            >
-              {/* Shine sweep (pseudo element via span) */}
-              {/* <span
-                className="
-                  pointer-events-none absolute inset-0
-                  before:absolute before:top-0 before:-left-full before:h-full before:w-[55%]
-                  before:bg-linear-to-r before:from-white/0 before:via-white/15 before:to-white/0
-                  before:skew-x-25
-                  before:transition-transform before:duration-800
-                  group-hover:before:translate-x-[260%]
-                "
-              /> */}
-              <span className="text-[20px] transition-transform duration-300 group-hover:translate-x-0.5">
-                Our Works
-              </span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="
-                  transition-transform duration-300
-                  group-hover:translate-x-1 group-active:translate-x-1.5
-                "
-              >
-                <path
-                  d="M5 12h14m0 0l-7-7m7 7l-7 7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              {/* Subtle bottom highlight line */}
-              <div
-                className="
-                  absolute left-3 right-3 bottom-1 h-px
-                  bg-linear-to-r from-transparent via-white/40 to-transparent
-                  opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                "
-              />
-            </button>
-
-            <button
-              type="button"
-              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-3 max-lg:px-3 max-lg:py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#041426]"
               style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
               {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
@@ -451,7 +404,56 @@ export const StaggeredMenu = ({
                   bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
                 "
               /> */}
-              <span className="text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="text-[20px] lg:text-[15px] md:text-[12px] max-sm:text-[10px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+                Our Work
+              </span>
+              <div
+                className="
+                  relative z-10 w-10 h-10 rounded-full bg-[#333333]
+                  flex items-center justify-center
+                  shadow-[0_0_0_0_rgba(250,40,137,0.6)]
+                  group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
+                  transition-all duration-400
+                  animate-none group-hover:animate-pulsePink
+                "
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="transition-transform duration-300 group-hover:translate-x-px">
+                  <path
+                    d="M5 12h14m0 0l-7-7m7 7l-7 7"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              {/* Soft glossy sweep */}
+              {/* <span
+                className="
+                  pointer-events-none absolute inset-0
+                  before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
+                  before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
+                  before:skew-x-25
+                  before:transition-transform before:duration-900
+                  group-hover:before:translate-x-[250%]
+                "
+              /> */}
+            </button>
+
+            <button
+              type="button"
+              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-3 max-lg:px-3 max-lg:py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+              style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+            >
+              {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
+              {/* <span
+                className="
+                  pointer-events-none absolute inset-0 opacity-0
+                  group-hover:opacity-100 transition-opacity duration-500
+                  bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
+                "
+              /> */}
+              <span className="text-[20px] lg:text-[15px] md:text-[12px] max-sm:text-[10px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Let's Talk
               </span>
               <div

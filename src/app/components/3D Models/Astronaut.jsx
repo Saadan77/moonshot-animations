@@ -6,8 +6,7 @@ import { useGLTF, OrbitControls, Environment, useAnimations } from '@react-three
 
 function Model(props) {
     const group = useRef()
-    const { scene } = useGLTF('/images/astronaut.glb')
-    const { animations } = useGLTF('/images/astronaut.glb')
+    const { scene, animations } = useGLTF('/images/astronaut.glb')
     const { actions } = useAnimations(animations, group)
 
     useFrame((state) => {
@@ -37,7 +36,7 @@ function Model(props) {
 
 export default function Astronaut() {
     return (
-        <div className="relative w-[700px] h-[700px] max-md:w-[400px] max-md:h-[400px]">
+        <div className="relative w-[400px] h-[700px] max-md:h-[400px]">
             <Canvas camera={{ position: [0.8, 0.6, 4], fov: 50 }}>
                 <Suspense fallback={null}>
                     <Model />
