@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CTA from "../components/UI/CTA";
+import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import SmoothScroll from "../components/SmoothScroll";
@@ -61,8 +61,9 @@ export default function ContactUs() {
                         />
                     </div>
 
+                    {/* Background Image */}
                     <div
-                        className="absolute inset-0 rotate-30 scale-185"
+                        className="absolute inset-0 rotate-30 scale-185 blur-[708.18px]"
                         style={{
                             backgroundImage:
                                 "url('/images/bg-hero.png')",
@@ -102,7 +103,7 @@ export default function ContactUs() {
                                     <span className="block h-2.5 w-0.5 rounded bg-white/50" />
                                     <span className="block h-2.5 w-0.5 rounded bg-white/30" />
                                 </div>
-                                <p className="font-bold text-lg">Industries</p>
+                                <p className="font-bold text-lg">Contact</p>
                             </div>
 
                             <h1 className="font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
@@ -112,7 +113,7 @@ export default function ContactUs() {
                                 <span className="text-end max-md:text-start max-md:items-start items-end block w-full">
                                     <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
                                         With Our Team
-                                    </AuroraText>   
+                                    </AuroraText>
                                 </span>
                             </h1>
 
@@ -153,7 +154,7 @@ export default function ContactUs() {
                             </h2>
 
                             <p className="text-[#989898] text-[20px] max-w-lg leading-relaxed mb-8">
-                                <TextType text="Ready to take your triathlon performance to the next level? Reach out today and let's create a personalized training plan for you." 
+                                <TextType text="Ready to take your triathlon performance to the next level? Reach out today and let's create a personalized training plan for you."
                                     typingSpeed={15}
                                     pauseDuration={1500}
                                     showCursor={true}

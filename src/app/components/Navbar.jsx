@@ -5,7 +5,7 @@ import StaggeredMenu from '@/components/StaggeredMenu'
 const Navbar = ({ onMenuStateChange }) => {
     const menuItems = [
         { label: 'Home', link: '/', ariaLabel: 'Go to Home' },
-        { label: 'About', link: '#about', ariaLabel: 'Go to About' },
+        { label: 'About', link: '/about-us', ariaLabel: 'Go to About' },
         { label: 'Portfolio', link: '/portfolio', ariaLabel: 'Go to Portfolio' },
         { label: 'Industries', link: '/industries', ariaLabel: 'Go to Industries' },
         { label: 'Services', link: '#services', ariaLabel: 'Go to Services' },

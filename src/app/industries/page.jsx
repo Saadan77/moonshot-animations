@@ -2,7 +2,7 @@
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CTA from "../components/UI/CTA";
+import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import SmoothScroll from "../components/SmoothScroll";
@@ -97,9 +97,9 @@ export default function Portfolio() {
             >
                 <Navbar />
 
-                <div className="h-screen flex justify-center items-center relative w-full overflow-visible bg-black">
+                <div className="min-h-screen flex justify-center items-end relative w-full overflow-hidden bg-black">
                     {/* Dither Background */}
-                    <div className="absolute inset-0 w-full h-full opacity-10">
+                    <div className="absolute inset-0 w-full h-full opacity-30">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
                             backgroundColor={[0.84, 0.13, 0.69]}
@@ -113,12 +113,12 @@ export default function Portfolio() {
                         />
                     </div>
 
-                    {/* Background Gradient Overlay */}
+                    {/* Background Image */}
                     <div
-                        className="absolute inset-0 opacity-50"
+                        className="absolute inset-0 rotate-30 scale-185 blur-[708.18px]"
                         style={{
-                            background:
-                                "linear-gradient(180deg, #000000 0%, #1a2a4a 40%, #2d1b4e 70%, #4a1d5f 85%, #6b2b7a 100%)",
+                            backgroundImage:
+                                "url('/images/bg-hero.png')",
                         }}
                     />
 
@@ -146,7 +146,7 @@ export default function Portfolio() {
                     </div>
 
                     {/* Industries Hero Section */}
-                    <div className="max-w-[90%] flex items-center justify-center gap-8">
+                    <div className="max-w-[90%] max-md:mt-50 flex max-md:flex-col items-center justify-center gap-8">
                         <div className="z-10">
                             {/* Small "Industries" label */}
                             <div className="mb-6 flex items-center gap-3 text-sm text-white/80">
@@ -158,11 +158,11 @@ export default function Portfolio() {
                                 <p className="font-bold text-lg">Industries</p>
                             </div>
 
-                            <h1 className="font-sora mb-4 text-[60px] max-md:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
+                            <h1 className="font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Innovating Industries Demonstrating Our Multi{" "}
                                 </AuroraText>
-                                <span className="text-end items-end block w-full -ml-30">
+                                <span className="text-end items-end block w-full">
                                     <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
                                         Sector Strength
                                     </AuroraText>
@@ -173,7 +173,7 @@ export default function Portfolio() {
                                 From conceptual sketches to digital experiences, here's how we turn imagination into design
                             </p>
                         </div>
-                        <img src="/images/industries/city-bg.png" className="w-2/5 h-auto z-100" alt="City" />
+                        <img src="/images/industries/city-bg.png" className="w-2/5 max-md:w-3/4 h-auto z-100" alt="City" />
                     </div>
                 </div>
 
