@@ -45,7 +45,7 @@ export default function ContactUs() {
             >
                 <Navbar />
 
-                <div className="h-screen flex justify-center items-end relative w-full overflow-hidden bg-black">
+                <div className="min-h-screen flex justify-center items-end relative w-full overflow-hidden bg-black">
                     {/* Dither Background */}
                     <div className="absolute inset-0 w-full h-full opacity-30">
                         <Dither
@@ -162,14 +162,14 @@ export default function ContactUs() {
 
                             <div className="border-t border-gray-700 my-8" />
 
-                            <ul className="space-y-6 text-white text-[24px]">
+                            <ul className="space-y-6 text-white text-[24px] lg:text-[15px] md:text-[12px] max-sm:text-[10px]">
                                 <li className="flex items-center gap-4">
-                                    <PhoneCall className="w-10 h-10 hover:w-12 hover:h-12 transition-all transition-duration-200 text-white fill-amber-50" />
-                                    <span className="">+1-972-331-5058</span>
+                                    <PhoneCall className="w-10 h-10 hover:w-12 hover:h-12 max-lg:h-8 md:h-8 transition-all transition-duration-200 text-white fill-amber-50" />
+                                    <span>+1-972-331-5058</span>
                                 </li>
 
                                 <li className="flex items-center gap-4">
-                                    <GoLocation className="w-10 h-10 hover:w-12 hover:h-12 transition-all transition-duration-200 text-white fill-white" />
+                                    <GoLocation className="w-10 h-10 hover:w-12 hover:h-12 max-lg:h-8 md:h-8 transition-all transition-duration-200 text-white fill-white" />
                                     <span>1200 East Collins Boulevard <br /> Suite 106 Richardson Texas 75081</span>
                                 </li>
                             </ul>
@@ -177,7 +177,7 @@ export default function ContactUs() {
 
                         {/* Right form */}
                         <form>
-                            <div style={{ background: "#011322" }} className="rounded-2xl p-12">
+                            <div style={{ background: "#011322" }} className="rounded-2xl p-12 max-lg:p-8 max-sm:p-5">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <input placeholder="Email" className="w-full rounded-[90px] py-3 px-4 text-white text-sm bg-[#000911] border border-[#18354D] outline-none" />
                                     <input placeholder="Full Name" className="w-full rounded-[90px] py-3 px-4 text-white text-sm bg-[#000911] border border-[#18354D] outline-none" />
@@ -221,7 +221,7 @@ export default function ContactUs() {
                                             bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
                                             "
                                         /> */}
-                                        <span className="text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+                                        <span className="text-[20px] lg:text-[15px] max-sm:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                                             Send Message
                                         </span>
                                         <div

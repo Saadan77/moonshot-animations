@@ -77,10 +77,9 @@ export default function CTA() {
             </div>
 
             {/* Video container with outline */}
-            <div className="relative min-h-screen z-10 -mt-10 flex items-center justify-center border border-white/30"
+            <div className="relative min-h-screen max-w-[35%] max-xl:max-w-[50%] max-md:max-w-[75%] z-10 -mt-10 flex items-center justify-center border border-white/30"
                 style={{
                     borderRadius: "1333.3px",
-                    width: "35%",
                     transform: 'translate3d(0, 0, 0)',
                     isolation: 'isolate'
                 }}>
@@ -92,12 +91,9 @@ export default function CTA() {
                         playsInline
                         className="h-full w-full object-cover rounded-full items-center"
                     >
-                        {/* <source src="/videos/bg-cta.mp4" type="video/mp4" /> */}
                         <source src="/videos/bg-cta-webm.webm" type="video/mp4" />
-                        {/* <Image src="/videos/bg-cta-webm.webm" height={100} width={100} className="w-full h-full" /> */}
                     </video>
 
-                    {/* <Image src="/videos/bg-cta-webm.webm" height={100} width={100} className="w-full h-full" /> */}
 
                     <p className="text-center text-3xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
