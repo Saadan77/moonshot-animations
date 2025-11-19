@@ -93,7 +93,7 @@ export default function ContactUs() {
                     </div>
 
                     {/* Industries Hero Section */}
-                    <div className="max-w-[90%] flex max-md:flex-col items-center justify-center gap-8 overflow-visible">
+                    <div className="max-w-[90%] max-md:mt-50 flex max-md:flex-col items-center justify-center gap-8 overflow-visible">
                         <div className="z-10">
                             {/* Small "Industries" label */}
                             <div className="mb-6 flex items-center gap-3 text-sm text-white/80">
@@ -109,7 +109,7 @@ export default function ContactUs() {
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Let’s Start a <br /> Conversation Connect{" "}
                                 </AuroraText>
-                                <span className="text-end max-md:text-center max-md:items-center items-end block w-full">
+                                <span className="text-end max-md:text-start max-md:items-start items-end block w-full">
                                     <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
                                         With Our Team
                                     </AuroraText>   
