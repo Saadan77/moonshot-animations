@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CTA from "../components/UI/CTA";
@@ -9,8 +10,33 @@ import SmoothScroll from "../components/SmoothScroll";
 import Astronaut from "../components/3D Models/Astronaut";
 import { PhoneCall } from "lucide-react";
 import { GoLocation } from "react-icons/go";
+import RotatingText from "@/components/RotatingText";
+import TextType from "@/components/TextType";
 
 export default function ContactUs() {
+    const tags = [
+        'UI/UX Design',
+        'Website Development',
+        'Ecommerce',
+        'Branding',
+        'Web Applications',
+        'Animations',
+        'Mobile Applications',
+        'SEO',
+        'SSM',
+        'Google Adwords',
+        'Email Marketing',
+        'Digital Marketing',
+    ];
+
+    // single selected tag (only one active at a time). default to first tag
+    const [selectedTag, setSelectedTag] = useState(tags[0]);
+
+    const toggleTag = (t) => {
+        // always set the clicked tag as selected (single-select). keep selected if same clicked.
+        setSelectedTag(t);
+    };
+
     return (
         <SmoothScroll>
             <section
@@ -100,36 +126,51 @@ export default function ContactUs() {
                     </div>
                 </div>
 
-                <div className="max-w-[80%] mx-auto py-50 bg-[#00050A]">
-                    <div className="grid lg:grid-cols-2 items-start gap-16">
+                <div className="py-50 bg-[#00050A]">
+                    <div className="max-w-[80%] mx-auto grid lg:grid-cols-2 items-start gap-16">
                         {/* Left content */}
                         <div>
                             <p className="text-[20px] text-[#989898] mb-4">02 — Get in Touch</p>
 
-                            <h1 className="leading-tight text-white mb-6">
-                                <span className="block text-[80px] max-md:text-[40px] max-sm:text-[30px]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    Have a Project? Let’s
-                                    <span className="italic" style={{ fontFamily: 'Playfair Display, serif' }}>
-                                        {" "} Talk!
-                                    </span>
+                            <h2 style={{ fontFamily: 'Inter, sans-serif' }} className="leading-tight text-white mb-6 block text-[80px] max-md:text-[40px] max-sm:text-[30px]">
+                                <span className="flex items-center gap-x-4">
+                                    Have a <RotatingText
+                                        texts={['Project?', 'Idea?', 'Vision?', 'Goal?', 'Dream?', 'Challenge?']}
+                                        mainClassName="inline-block px-3 py-2 text-white overflow-hidden justify-center rounded-lg"
+                                        staggerFrom={"last"}
+                                        initial={{ y: "100%" }}
+                                        animate={{ y: 0 }}
+                                        exit={{ y: "-120%" }}
+                                        staggerDuration={0.025}
+                                        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                        rotationInterval={5000}
+                                    /> <br />
                                 </span>
-                            </h1>
+                                Let’s
+                                <span className="italic" style={{ fontFamily: 'Playfair Display, serif' }}>
+                                    {" "} Talk!
+                                </span>
+                            </h2>
 
                             <p className="text-[#989898] text-[20px] max-w-lg leading-relaxed mb-8">
-                                Ready to take your triathlon performance to the next
-                                level? Reach out today and let's create a personalized training plan for you
+                                <TextType text="Ready to take your triathlon performance to the next level? Reach out today and let's create a personalized training plan for you." 
+                                    typingSpeed={15}
+                                    pauseDuration={1500}
+                                    showCursor={true}
+                                    cursorCharacter="|" startOnVisible={true} loop={true} />
                             </p>
 
                             <div className="border-t border-gray-700 my-8" />
 
                             <ul className="space-y-6 text-white text-[24px]">
                                 <li className="flex items-center gap-4">
-                                    <PhoneCall className="w-10 h-10 text-white fill-amber-50" />
+                                    <PhoneCall className="w-10 h-10 hover:w-12 hover:h-12 transition-all transition-duration-200 text-white fill-amber-50" />
                                     <span className="">+1-972-331-5058</span>
                                 </li>
 
                                 <li className="flex items-center gap-4">
-                                    <GoLocation className="w-10 h-10 text-white fill-white" />
+                                    <GoLocation className="w-10 h-10 hover:w-12 hover:h-12 transition-all transition-duration-200 text-white fill-white" />
                                     <span>1200 East Collins Boulevard <br /> Suite 106 Richardson Texas 75081</span>
                                 </li>
                             </ul>
@@ -152,9 +193,19 @@ export default function ContactUs() {
 
                                 <p className="text-white my-4">How can we help you?</p>
                                 <div className="flex flex-wrap gap-y-5 gap-x-1">
-                                    {['UI/UX Design', 'Website Development', 'Ecommerce', 'Branding', 'Web Applications', 'Animations', 'Mobile Applications', 'SEO', "SSM", 'Google Adwords', 'Email Marketing', 'Digital Marketing'].map((t) => (
-                                        <button key={t} className="py-4 px-6 rounded-full bg-[#000911] border border-[#18354D] text-[#999999] text-[13px]">{t}</button>
-                                    ))}
+                                    {tags.map((t) => {
+                                        const isSelected = selectedTag === t;
+                                        return (
+                                            <button
+                                                key={t}
+                                                type="button"
+                                                onClick={() => toggleTag(t)}
+                                                className={`py-4 px-6 rounded-full bg-[#000911] text-[13px] transition-colors duration-200 border ${isSelected ? 'border-white/80 text-white/80' : 'border-[#18354D] text-[#999999]'} hover:border-white/80 hover:text-white/80 cursor-pointer`}
+                                            >
+                                                {t}
+                                            </button>
+                                        );
+                                    })}
                                 </div>
 
                                 <div className="mt-6">
