@@ -47,7 +47,7 @@ export default function ContactUs() {
 
                 <div className="min-h-screen flex justify-center items-end relative w-full overflow-hidden bg-black">
                     {/* Dither Background */}
-                    <div className="absolute inset-0 w-full h-full opacity-30">
+                    <div className="absolute inset-0 w-full h-full opacity-20">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
                             backgroundColor={[0.84, 0.13, 0.69]}
@@ -63,7 +63,7 @@ export default function ContactUs() {
 
                     {/* Background Image */}
                     <div
-                        className="absolute inset-0 rotate-30 scale-185 blur-[708.18px]"
+                        className="absolute inset-0 brightness-125"
                         style={{
                             backgroundImage:
                                 "url('/images/bg-hero.png')",
@@ -72,25 +72,28 @@ export default function ContactUs() {
 
                     {/* Decorative Lines */}
                     <div>
-                        <div className="absolute left-[5%] top-0 translate-x-1/2 0translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
-                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-5 opacity-50" />
-                        </div>
-
-                        <div className="absolute left-[25%] top-0 translate-x-1/2 0translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
-                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-5 opacity-50" />
-                        </div>
-
-                        <div className="absolute left-1/2 top-0 translate-x-1/2 0translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
-                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-5 opacity-50" />
-                        </div>
-
-                        <div className="absolute left-[75%] top-0 translate-x-1/2 0translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
-                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-5 opacity-50" />
-                        </div>
-
-                        <div className="absolute left-[95%] top-0 translate-x-1/2 0translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50">
-                            <img src="/images/hero/Line-1.png" alt="" className="w-full invert-5 opacity-50" />
-                        </div>
+                        {[
+                            '15%',
+                            '30%',
+                            '45%',
+                            '60%',
+                            '75%',
+                            '90%'
+                        ].map((left) => (
+                            <div
+                                key={left}
+                                style={{ left }}
+                                className="absolute top-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50"
+                            >
+                                <div
+                                    className="w-px h-screen"
+                                    style={{
+                                        background:
+                                            'linear-gradient(to bottom, rgba(187,187,187,0) 0%, rgba(187,187,187,0.12) 12%, rgba(187,187,187,0.12) 88%, rgba(187,187,187,0) 100%)'
+                                    }}
+                                />
+                            </div>
+                        ))}
                     </div>
 
                     {/* Industries Hero Section */}

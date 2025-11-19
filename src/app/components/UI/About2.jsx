@@ -74,8 +74,6 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
 const About2 = () => {
     return (
         <section className="relative bg-black text-white py-24 z-50 pb-50">
-            {/* Removed overflow-hidden to allow sticky to work properly */}
-
             {/* Content Overlay */}
             <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8">
                 <div className='mb-20 space-y-4'>
