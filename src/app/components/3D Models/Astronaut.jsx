@@ -18,7 +18,6 @@ function Model(props) {
         }
     })
 
-    // play the 'moon_walk' animation if available, otherwise play the first animation
     useEffect(() => {
         if (!actions) return
         const walkAction = actions['wave'] || Object.values(actions)[0]
