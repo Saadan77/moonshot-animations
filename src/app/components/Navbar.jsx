@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from 'react';
 import StaggeredMenu from '@/components/StaggeredMenu'
 
 const Navbar = ({ onMenuStateChange }) => {
@@ -10,7 +9,7 @@ const Navbar = ({ onMenuStateChange }) => {
         { label: 'Portfolio', link: '/portfolio', ariaLabel: 'Go to Portfolio' },
         { label: 'Industries', link: '/industries', ariaLabel: 'Go to Industries' },
         { label: 'Services', link: '#services', ariaLabel: 'Go to Services' },
-        { label: 'Contact', link: '#contact', ariaLabel: 'Go to Contact' }
+        { label: 'Contact', link: '/contact-us', ariaLabel: 'Go to Contact' }
     ];
 
     const socialItems = [
