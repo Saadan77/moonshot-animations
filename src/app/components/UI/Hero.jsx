@@ -3,7 +3,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
-import { motion } from "motion/react";
 import ShinyText from '@/components/lightswind/shiny-text'
 
 const socials = [

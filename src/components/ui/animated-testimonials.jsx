@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({
                   width={500}
                   height={500}
                   draggable={false}
-                  className="h-3/4 w-3/4 rounded-3xl object-cover object-center overflow-visible"
+                  className="max-md:hidden h-3/4 w-3/4 rounded-3xl object-cover object-center overflow-visible"                               
                 />
               </motion.div>
             </AnimatePresence>

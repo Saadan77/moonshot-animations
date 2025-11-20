@@ -104,17 +104,15 @@ const About2 = () => {
                 </div>
 
                 {/* Cards Section with Background */}
-                <div className="relative">
+                <div className="relative" data-smoother-ignore>
                     {/* Background Image - Behind cards only */}
-                    <div style={{ transform: 'translate3d(0, 0, 0)' }}>
-                        <div className="sticky top-24 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
-                            <img
-                                src="/images/about-2/about-2-bg.png"
-                                alt=""
-                                className="max-w-[1100px] w-[86vw] object-contain grayscale opacity-60"
-                                style={{ transform: 'translateZ(0)' }}
-                            />
-                        </div>
+                    <div className="sticky top-0 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
+                        <img
+                            src="/images/about-2/about-2-bg.png"
+                            alt=""
+                            className="max-w-[1100px] w-[86vw] object-contain grayscale opacity-60"
+                            style={{ transform: 'translateZ(0)' }}
+                        />
                     </div>
 
                     {/* Cards Container */}
