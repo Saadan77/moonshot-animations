@@ -223,7 +223,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-16 pt-8 border-t border-white/10">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-lg text-white/50">
-                        <p>© 2025 Moonshot Tech. All Rights Reserved</p>
+                        <p className="max-sm:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
                         <div className="flex gap-6">
                             <a href="#" className="hover:text-white/70 transition-colors">
                                 Terms & Conditions

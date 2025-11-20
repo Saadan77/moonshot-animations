@@ -198,22 +198,22 @@ export default function Carousel({
               <div className="relative z-10 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Top Section */}
                 <div className="flex flex-col justify-between space-y-6 col-span-1">
-                  <h3 className="text-4xl lg:text-5xl font-bold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                  <h3 className="text-3xl lg:text-5xl font-bold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                     {item.title}
                   </h3>
 
-                  <p className="text-white/70 text-sm lg:text-base max-w-md" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                  <p className="text-white/70 text-md lg:text-lg max-w-md" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                     {item.description}
                   </p>
 
                   {/* Statistics */}
-                  <div className="grid grid-cols-2 col-span-2 gap-x-16 gap-y-4 max-w-lg">
+                  <div className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-x-16 gap-y-4 max-w-lg">
                     {item.stats?.map((stat, idx) => (
                       <div key={idx} className={`space-y-1 ${idx === 2 ? 'col-span-1' : ''}`}>
-                        <div className="text-6xl lg:text-7xl text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                        <div className="text-5xl md:text-7xl text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                           {stat.value}
                         </div>
-                        <p className="text-white/60 text-md lg:text-lg" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                        <p className="text-white/60 text-sm md:text-lg" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                           {stat.label}
                         </p>
                       </div>
@@ -223,7 +223,7 @@ export default function Carousel({
 
                 {/* Bottom Section - Laptop Image & Badge */}
                 <div className="col-span-1 flex flex-col justify-between">
-                  <div className="flex items-start justify-end gap-2 text-white/70 text-xs">
+                  <div className="hidden md:flex items-start justify-end gap-2 text-white/70 text-xs">
                     <div className="text-right">
                       <div className="font-bold text-white">PASSION</div>
                       <div className="text-white/50">IN {item.badge?.split(' ')[2] || 'BUSINESS'}</div>

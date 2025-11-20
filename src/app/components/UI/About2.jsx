@@ -116,15 +116,15 @@ const About2 = () => {
                     </div>
 
                     {/* Cards Container */}
-                    <div style={{ maxWidth: "80%" }} className='relative mx-auto z-10 -mt-[68vh]'>
+                    <div className='max-w-[80%] max-md:max-w-full relative mx-auto z-10 -mt-[68vh]'>
                         {/* Card 01 */}
-                        <div className="relative flex justify-end mb-[-120px] max-md:mb-0">
+                        <div className="relative flex justify-end mb-10 md:mb-[-120px]">
                             <ParallaxCard
                                 offset={100}
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-w-[40%] max-w-[40%] max-md:max-w-full min-h-[600px]',
+                                    'p-8 lg:p-12 min-w-[40%] max-w-[40%] max-md:max-w-full max-md:min-w-full min-h-[600px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -173,13 +173,13 @@ const About2 = () => {
                         </div>
 
                         {/* Card 02 */}
-                        <div className="relative mb-[-120px] max-md:mb-0">
+                        <div className="relative mb-10 md:mb-[-120px]">
                             <ParallaxCard
                                 offset={-100}
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -228,13 +228,13 @@ const About2 = () => {
                         </div>
 
                         {/* Card 03 */}
-                        <div className="relative flex justify-end mb-[-120px] max-md:mb-0">
+                        <div className="relative flex justify-end mb-10 md:mb-[-120px]">
                             <ParallaxCard
                                 offset={120}
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -289,7 +289,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:max-w-full',
+                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}

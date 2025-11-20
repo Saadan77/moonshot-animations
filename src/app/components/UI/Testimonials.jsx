@@ -49,7 +49,7 @@ export default function Testimonials() {
     return (
         <>
             <section
-                className="relative bg-[#00060B] mt-50"
+                className="relative bg-[#00060B] mt-30"
                 style={{ fontFamily: 'var(--font-sora), sans-serif' }}
             >
                 {/* DottedMap Background */}

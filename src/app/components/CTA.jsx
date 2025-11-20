@@ -77,7 +77,7 @@ export default function CTA() {
             </div>
 
             {/* Video container with outline */}
-            <div className="relative min-h-screen max-w-[35%] max-xl:max-w-[50%] max-md:max-w-[75%] z-10 -mt-10 flex items-center justify-center border border-white/30"
+            <div className="relative min-h-[75vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center border border-white/30"
                 style={{
                     borderRadius: "1333.3px",
                     transform: 'translate3d(0, 0, 0)',
@@ -95,7 +95,7 @@ export default function CTA() {
                     </video>
 
 
-                    <p className="text-center text-3xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    <p className="text-center text-3xl max-sm:text-xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>

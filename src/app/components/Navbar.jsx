@@ -1,6 +1,8 @@
 "use client";
 
-import StaggeredMenu from '@/components/StaggeredMenu'
+import dynamic from 'next/dynamic';
+
+const StaggeredMenu = dynamic(() => import('@/components/StaggeredMenu'), { ssr: false });
 
 const Navbar = ({ onMenuStateChange }) => {
     const menuItems = [

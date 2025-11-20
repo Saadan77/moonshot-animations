@@ -147,7 +147,7 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`absolute left-12 max-sm:left-0 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
+            <div className={`max-sm:hidden absolute left-12 max-sm:left-0 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
                 }`}>
                 {socials.map((s) => (
                     <a
