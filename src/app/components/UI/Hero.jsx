@@ -89,30 +89,31 @@ const Hero = () => {
                         </div>
 
                         {/* Left Side - Digital Text */}
-                        <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
-                            <h1
-                                className="text-[240px] max-xl:text-[150px] max-md:text-[80px] leading-none italic text-white"
-                                style={{ fontFamily: 'var(--font-playfair), serif' }}
-                            >
-                                Digital
-                            </h1>
-                        </div>
+                        <div className='text-[240px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] leading-none text-white'>
+                            <div className="text-left max-md:text-center max-sm:mb-5 relative z-10">
+                                <h1
+                                    className="italic"
+                                    style={{ fontFamily: 'var(--font-playfair), serif' }}
+                                >
+                                    Digital
+                                </h1>
+                            </div>
 
-                        {/* Right Side - Experts Text */}
-                        <div className="text-right max-sm:text-center">
-                            <h1
-                                className="text-[240px] max-xl:text-[150px] max-md:text-[70px] leading-none text-white"
-                                style={{ fontFamily: 'var(--font-sora), sans-serif' }}
-                            >
-                                <AuroraText colors={['#ffffff', '#d1bd73']}>
-                                    Experts
-                                </AuroraText>
-                            </h1>
+                            {/* Right Side - Experts Text */}
+                            <div className="text-right max-sm:text-center">
+                                <h1
+                                    style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                                >
+                                    <AuroraText colors={['#ffffff', '#d1bd73']}>
+                                        Experts
+                                    </AuroraText>
+                                </h1>
+                            </div>
                         </div>
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[350px] max-sm:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[350px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
                             <div
                                 className="w-[600px] h-[800px] rounded-full blur-[120px] opacity-80"
@@ -137,8 +138,8 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-sm:hidden block absolute right-12 top-[50%] text-right z-50">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl leading-relaxed transition-colors duration-300">
+                <div className="max-md:hidden block absolute right-12 top-[60%] max-2xl:top-[70%] text-right z-50">
+                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
                         <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
                         <br />
                         / <span className='text-gray-600 hover:text-white hover:underline'>Graphic</span> / <span className='hover:underline text-gray-600 hover:text-white'>UI/UX</span>
@@ -147,7 +148,7 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`max-sm:hidden absolute left-12 max-sm:left-0 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
+            <div className={`max-sm:hidden absolute left-12 max-lg:left-6 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
                 }`}>
                 {socials.map((s) => (
                     <a
@@ -210,7 +211,7 @@ const Hero = () => {
             </div>
 
             {/* Bottom div */}
-            <div className="relative w-full py-12 min-h-[200px]">
+            <div className="relative z-50 w-full py-12 max-sm:py-4 max-sm:min-h-0 min-h-[200px] max-sm:-mt-[100px]">
                 {/* Background gradient */}
                 <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
                     <div
@@ -231,15 +232,15 @@ const Hero = () => {
                 />
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center px-12 py-8 gap-8">
+                <div className="relative flex justify-between items-center px-12 max-sm:px-6 py-8 gap-8">
 
                     {/* Bottom Left Scroll Text */}
-                    <div className="max-sm:hidden flex justify-center items-center gap-4">
-                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md text-white">(Scroll Down)</p>
+                    <div className="flex justify-center items-center gap-4">
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>
                     </div>
 
                     {/* Center Button */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="">
                         <div className="group border border-gray-500 hover:border-white p-3 rounded-full z-10 cursor-pointer transition-colors duration-300 bg-black/20 backdrop-blur-sm">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gray-400 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -248,7 +249,7 @@ const Hero = () => {
                     </div>
 
                     {/* Bottom Right Scroll Indicator */}
-                    <div className="max-sm:hidden flex justify-center items-center gap-4">
+                    <div className="flex justify-center items-center gap-4 text-nowrap">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 leading-relaxed">
                             <ShinyText
                                 size='sm'
