@@ -13,8 +13,45 @@ import ScrollReveal from "@/components/lightswind/scroll-reveal";
 import TextType from "@/components/TextType";
 import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
 import { Gallery3D } from "../components/Gallery3D";
+import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
+import Image from "next/image";
 
 export default function ContactUs() {
+
+    const logos = [
+        {
+            id: "1",
+            content: <Image src="/images/about-us-page/slider-logos/logo-1.png" width={200} height={200} alt="Logo" />,
+        },
+        {
+            id: "2",
+            content: <Image src="/images/about-us-page/slider-logos/logo-2.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "3",
+            content: <Image src="/images/about-us-page/slider-logos/logo-3.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "4",
+            content: <Image src="/images/about-us-page/slider-logos/logo-4.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "5",
+            content: <Image src="/images/about-us-page/slider-logos/logo-5.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "6",
+            content: <Image src="/images/about-us-page/slider-logos/logo-6.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "7",
+            content: <Image src="/images/about-us-page/slider-logos/logo-7.png" width={200} height={200} alt="Logo" />
+        },
+        {
+            id: "8",
+            content: <Image src="/images/about-us-page/slider-logos/logo-8.png" width={200} height={200} alt="Logo" />
+        }
+    ];
 
     const images = [
         // Front
@@ -46,7 +83,7 @@ export default function ContactUs() {
                 </div>
 
                 <div className="min-h-screen flex justify-center items-end relative w-full overflow-visible">
-                    {/* <div className="absolute inset-0 w-full h-[125vh] opacity-30">
+                    <div className="absolute inset-0 w-full h-[125vh] opacity-10">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
                             backgroundColor={[0.84, 0.13, 0.69]}
@@ -58,7 +95,7 @@ export default function ContactUs() {
                             waveFrequency={3}
                             waveSpeed={0.05}
                         />
-                    </div> */}
+                    </div>
 
                     {/* Decorative Lines */}
                     <div>
@@ -190,6 +227,18 @@ export default function ContactUs() {
                 <div className="mt-10">
                     <Gallery3D images={images} />
                 </div>
+
+                <div className="px-10 items-center py-20 bg-black">
+                    {/* Heading */}
+                    <div className="text-center relative z-10 space-y-8">
+                        <p className="text-white/60 text-2xl tracking-tight">05 - Technologies</p>
+                        <h2 className="text-white text-center text-6xl max-sm:text-2xl tracking-tight leading-tight">
+                            <p className="uppercase" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Advanced Tech Stack for <br /> Performance, Scalability & Innovation</p>
+                        </h2>
+                        <SlidingLogoMarquee items={logos} />
+                    </div>
+                </div>
+
 
                 <AboutUs />
                 <Partners />
