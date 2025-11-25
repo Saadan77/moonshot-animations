@@ -346,11 +346,10 @@ export const StaggeredMenu = ({
 
   return (
     <div
-      className={`sm-scope z-50 ${
-        isFixed
+      className={`sm-scope z-50 ${isFixed
           ? "fixed top-0 left-0 w-screen h-screen overflow-hidden"
           : "w-[full] h-full"
-      }`}
+        }`}
     >
       <div
         className={
@@ -387,64 +386,66 @@ export const StaggeredMenu = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-2 px-4 max-lg:py-4 max-lg:px-4 bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
-          <button
-            ref={toggleBtnRef}
-            className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
-            style={{
-              color: "white",
-              fontFamily: "var(--font-sora), sans-serif",
-            }}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="staggered-menu-panel"
-            onClick={toggleMenu}
-            type="button"
-          >
-            <span
-              ref={iconRef}
-              className="sm-icon relative w-4 h-4 shrink-0 inline-flex items-center justify-center will-change-transform"
-              aria-hidden="true"
+          <div className="flex justify-center items-center gap-6">
+            <button
+              ref={toggleBtnRef}
+              className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              style={{
+                color: "white",
+                fontFamily: "var(--font-sora), sans-serif",
+              }}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="staggered-menu-panel"
+              onClick={toggleMenu}
+              type="button"
             >
               <span
-                ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
-              />
-              <span
-                ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
-              />
-            </span>
-
-            <span
-              ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap text-lg"
-              aria-hidden="true"
-            >
-              <span
-                ref={textInnerRef}
-                className="sm-toggle-textInner flex flex-col leading-none"
+                ref={iconRef}
+                className="sm-icon relative w-4 h-4 shrink-0 inline-flex items-center justify-center will-change-transform"
+                aria-hidden="true"
               >
-                {textLines.map((l, i) => (
-                  <span
-                    className="sm-toggle-line block h-[1em] leading-none"
-                    key={i}
-                  >
-                    {l}
-                  </span>
-                ))}
+                <span
+                  ref={plusHRef}
+                  className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
+                />
+                <span
+                  ref={plusVRef}
+                  className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
+                />
               </span>
-            </span>
-          </button>
 
-          <span
-            className="hidden md:flex text-lg max-lg:text-sm text-white/60 underline text-nowrap"
-            aria-hidden="true"
-          >
-            +1-972-331-5058
-          </span>
+              <span
+                ref={textWrapRef}
+                className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap text-lg"
+                aria-hidden="true"
+              >
+                <span
+                  ref={textInnerRef}
+                  className="sm-toggle-textInner flex flex-col leading-none"
+                >
+                  {textLines.map((l, i) => (
+                    <span
+                      className="sm-toggle-line block h-[1em] leading-none"
+                      key={i}
+                    >
+                      {l}
+                    </span>
+                  ))}
+                </span>
+              </span>
+            </button>
+
+            <span
+              className="font-sora hidden md:flex text-lg max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
+              aria-hidden="true"
+            >
+              +1-972-331-5058
+            </span>
+          </div>
 
           <div
             className="hidden md:flex relative items-center select-none pointer-events-auto"
