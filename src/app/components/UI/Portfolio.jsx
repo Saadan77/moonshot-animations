@@ -52,7 +52,7 @@ const Portfolio = () => {
                         <div className='space-y-6'>
                             <h2 className="text-[#808080] text-[20px]">06 — Portfolio</h2>
 
-                            <h2 className="text-7xl lg:text-8xl max-sm:text-4xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                            <h2 className="text-4xl lg:text-7xl max-sm:text-4xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                                 Explore <br /> Our <span
                                     className="italic"
                                     style={{ fontFamily: 'var(--font-playfair), serif' }}

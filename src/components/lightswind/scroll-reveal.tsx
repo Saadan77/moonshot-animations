@@ -77,7 +77,6 @@ export function ScrollReveal({
   },
   size = "lg",
   align = "left",
-  variant = "white",
 }: ScrollRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
@@ -157,7 +156,6 @@ export function ScrollReveal({
           "leading-relaxed space-y-8",
           sizeClasses[size],
           alignClasses[align],
-          variantClasses[variant],
           textClassName
         )}
         variants={containerVariants}
