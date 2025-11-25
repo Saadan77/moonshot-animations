@@ -320,7 +320,11 @@ const Shuffle = ({
     ...style
   };
 
-  const classes = `${baseTw} ${ready ? 'visible' : 'invisible'} ${className}`.trim();
+  // Always keep element in the layout (visible) so subtitles/titles
+  // don't disappear before the shuffle animation runs. The Shuffle
+  // animation will still be triggered by ScrollTrigger when the
+  // element enters the viewport.
+  const classes = `${baseTw} ${className}`.trim();
   const Tag = tag || 'p';
 
   return React.createElement(Tag, { ref: ref, className: classes, style: commonStyle }, text);

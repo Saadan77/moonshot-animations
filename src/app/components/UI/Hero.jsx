@@ -50,19 +50,19 @@ const Hero = () => {
             <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
                 <div className="absolute top-[20%] left-16 max-sm:hidden">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
                         (creative)
                     </p>
                 </div>
                 <div className="absolute top-[20%] right-16 max-sm:hidden">
-                    <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-lg text-gray-500">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
                         (agency)
                     </p>
                 </div>
 
                 {/* Main Content Container */}
-                <div className="z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[70%] overflow-visible">
-                    <div className='w-full relative'>
+                <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible">
+                    <div className='hidden lg:block w-full relative'>
                         {/* Decorative Lines */}
                         <div>
                             {[
@@ -90,7 +90,7 @@ const Hero = () => {
                         </div>
 
                         {/* Left Side - Digital Text */}
-                        <div className='text-[240px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] leading-none text-white'>
+                        <div className='text-[220px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] leading-none text-white'>
                             <div className="text-left max-md:text-center max-sm:mb-5 relative z-10">
                                 <h1
                                     className="italic"
@@ -101,7 +101,7 @@ const Hero = () => {
                             </div>
 
                             {/* Right Side - Experts Text */}
-                            <div className="text-right max-sm:text-center">
+                            <div className="text-end max-sm:text-center">
                                 <h1
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
@@ -139,7 +139,7 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-md:hidden block absolute right-12 top-[60%] max-2xl:top-[70%] text-right z-50">
+                <div className="max-md:hidden block absolute right-12 top-[55%] max-2xl:top-[70%] text-right z-50">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
                         <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
                         <br />
@@ -212,7 +212,7 @@ const Hero = () => {
             </div>
 
             {/* Bottom div */}
-            <div className="relative z-50 w-full py-12 max-sm:py-4 max-sm:min-h-0 min-h-[200px] max-sm:-mt-[100px]">
+            <div className="relative z-50 w-full max-sm:py-4 max-sm:min-h-0 min-h-[200px] max-sm:-mt-[100px]">
                 {/* Background gradient */}
                 <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
                     <div

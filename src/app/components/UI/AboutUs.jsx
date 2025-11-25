@@ -6,6 +6,7 @@ import { PinContainer } from '@/components/ui/3d-pin';
 import Link from 'next/link';
 import Image from 'next/image';
 import AboutUsCards from '../AboutUsCards';
+import { ArrowRight } from 'lucide-react';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -27,9 +28,9 @@ const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
 const AboutUs = () => {
 
     return (
-        <section className="relative isolate w-full overflow-visible bg-black text-white z-50">
-            <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 py-24 md:py-28 lg:py-32">
-                <div className='flex items-start max-md:flex-col'>
+        <section className="relative isolate w-full overflow-visible bg-[#00060b] text-white z-50">
+            <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 pt-20 pb-56">
+                <div className='pb-20 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
                     <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
                         <div className="flex items-center gap-[3px]">
@@ -46,7 +47,7 @@ const AboutUs = () => {
                             className="text-[clamp(28px,4.2vw,40px)] font-normal"
                             style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                         >
-                            <ScrollReveal>
+                            <ScrollReveal enableBlur={false}>
                                 Tech With Moonshot delivers smart digital design and strategy, navigating trends and metrics to craft powerful, tailored solutions for your brand.
                             </ScrollReveal>
                         </h2>
@@ -57,9 +58,9 @@ const AboutUs = () => {
                                 href="#"
                                 className="border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#FF2A7D] px-6 py-3 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
-                                <span className="relative top-[0.5px] font-sora">Learn More About</span>
+                                <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
                                 <span className="grid place-items-center rounded-full bg-[#FF2A7D] group-hover:bg-white p-1.5">
-                                    <ArrowUpRight className="w-4 h-4 group-hover:text-black" />
+                                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                 </span>
                             </Link>
                         </div>
@@ -93,7 +94,7 @@ const AboutUs = () => {
             </div> */}
 
             <div className='absolute -bottom-8 left-[45%] z-100' style={{ transform: 'translate3d(0, 0, 0)' }}>
-                <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
+                <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[90px] relative z-10" />
             </div>
 
             <style jsx>{`

@@ -2,6 +2,7 @@
 
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 export const StaggeredMenu = ({
   position = "right",
@@ -386,7 +387,7 @@ export const StaggeredMenu = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
           <div className="flex justify-center items-center gap-6">
@@ -464,18 +465,10 @@ export const StaggeredMenu = ({
           <div className="flex items-center gap-4 pointer-events-auto">
             <button
               type="button"
-              className="relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-3 max-lg:px-3 max-lg:py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#041426]"
+              className="relative group hidden md:inline-flex items-center gap-4 rounded-full pl-8 pr-1 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#2626264D]"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
-              {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
-              <span
-                className="
-                  pointer-events-none absolute inset-0 opacity-0
-                  group-hover:opacity-100 transition-opacity duration-500
-                  bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
-                "
-              />
-              <span className="text-nowrap text-[20px] lg:text-[15px] md:text-[12px] max-sm:text-[10px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Our Work
               </span>
               <div
@@ -488,21 +481,7 @@ export const StaggeredMenu = ({
                   animate-none group-hover:animate-pulsePink
                 "
               >
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="transition-transform duration-300 group-hover:translate-x-px"
-                >
-                  <path
-                    d="M5 12h14m0 0l-7-7m7 7l-7 7"
-                    stroke="white"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <ChevronRight className="w-6 h-6" />
               </div>
               {/* Soft glossy sweep */}
               <span
@@ -519,18 +498,10 @@ export const StaggeredMenu = ({
 
             <button
               type="button"
-              className="text-nowrap relative group hidden md:inline-flex items-center gap-2 rounded-full px-5 py-3 max-lg:px-3 max-lg:py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+              className="relative group hidden md:inline-flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
-              {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
-              <span
-                className="
-                  pointer-events-none absolute inset-0 opacity-0
-                  group-hover:opacity-100 transition-opacity duration-500
-                  bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
-                "
-              />
-              <span className="text-[20px] lg:text-[15px] md:text-[12px] max-sm:text-[10px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
                 Let's Talk
               </span>
               <div
@@ -543,21 +514,7 @@ export const StaggeredMenu = ({
                   animate-none group-hover:animate-pulsePink
                 "
               >
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="transition-transform duration-300 group-hover:translate-x-px"
-                >
-                  <path
-                    d="M5 12h14m0 0l-7-7m7 7l-7 7"
-                    stroke="white"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <ArrowRight className="w-6 h-6" />
               </div>
               {/* Soft glossy sweep */}
               <span

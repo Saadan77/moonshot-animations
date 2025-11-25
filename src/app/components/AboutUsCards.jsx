@@ -34,7 +34,7 @@ const AboutCard = ({
             className={[
                 'group relative overflow-hidden rounded-3xl border border-white/10',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
-                compact ? 'h-[280px]' : 'h-[336px]',
+                compact ? 'h-[400px]' : 'h-[400px]',
                 'w-[min(92vw,340px)] sm:w-[min(44vw,400px)] lg:w-[340px] xl:w-[360px]',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
@@ -48,23 +48,22 @@ const AboutCard = ({
             />
 
             {/* Corner text (Roman + Titles) */}
-            <div className="absolute left-4 top-4 text-white/80 text-[13px] tracking-wide select-none">
+            <div className="absolute left-8 top-4 text-white/80 text-[20px] tracking-wide select-none">
                 {roman}
             </div>
-            <div className="absolute right-4 top-4 text-right text-white/85 text-sm leading-5 select-none">
+            <div className="font-poppins leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
+            >
                 {titleTopLeft && <div>{titleTopLeft}</div>}
                 {titleTopRight && <div>{titleTopRight}</div>}
             </div>
 
             {/* Bottom row: metric + arrow */}
-            <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-                <div className="text-white text-5xl font-semibold drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+            <div className="absolute bottom-2 left-4 right-4 flex items-end justify-between">
+                <div className="text-white text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
                     {number}
                 </div>
 
-                <div className="grid place-items-center rounded-xl text-white/90 border border-white/15 bg-white/5 backdrop-blur-[2px] p-2">
-                    <ArrowUpRight className="w-4 h-4" />
-                </div>
+                <ArrowUpRight className="w-16 h-16" />
             </div>
         </div>
     );
@@ -113,39 +112,39 @@ export default function AboutUsCards() {
     ];
 
     return (
-            <div className="relative my-10 overflow-visible mt-20">
-                {/* Glow ellipse below cards */}
-                <div
-                    className="pointer-events-none absolute -bottom-14 left-1/2 h-[230px] w-screen -translate-x-1/2 blur-[60px] opacity-90"
-                    style={{
-                        background:
-                            'radial-gradient(60% 60% at 50% 50%, rgba(93, 66, 255, 0.6) 0%, rgba(255, 41, 124, 0.55) 45%, rgba(0,0,0,0) 70%)',
-                    }}
-                />
+        <div className="relative my-10 overflow-visible mt-20">
+            {/* Glow ellipse below cards */}
+            <div
+                className="pointer-events-none absolute -bottom-14 left-1/2 h-[230px] w-screen -translate-x-1/2 blur-[60px] opacity-90"
+                style={{
+                    background:
+                        'radial-gradient(60% 60% at 50% 50%, rgba(93, 66, 255, 0.6) 0%, rgba(255, 41, 124, 0.55) 45%, rgba(0,0,0,0) 70%)',
+                }}
+            />
 
-                <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4">
-                    {cards.map((c, i) => (
-                        <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
-                            <PinContainer
-                                title={c.titleTopRight.replace('\n', ' ')}
-                                href="#"
-                                containerClassName="w-full h-full"
-                            >
-                                <AboutCard
-                                    roman={c.roman}
-                                    titleTopRight={
-                                        <span className="whitespace-pre leading-5">
-                                            {String(c.titleTopRight)}
-                                        </span>
-                                    }
-                                    number={c.number}
-                                    image={c.image}
-                                    compact={c.compact}
-                                />
-                            </PinContainer>
-                        </div>
-                    ))}
-                </div>
+            <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4">
+                {cards.map((c, i) => (
+                    <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
+                        <PinContainer
+                            title={c.titleTopRight.replace('\n', ' ')}
+                            href="#"
+                            containerClassName="w-full h-full"
+                        >
+                            <AboutCard
+                                roman={c.roman}
+                                titleTopRight={
+                                    <span className="whitespace-pre leading-5">
+                                        {String(c.titleTopRight)}
+                                    </span>
+                                }
+                                number={c.number}
+                                image={c.image}
+                                compact={c.compact}
+                            />
+                        </PinContainer>
+                    </div>
+                ))}
             </div>
+        </div>
     );
 };
