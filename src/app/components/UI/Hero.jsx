@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
 import ShinyText from '@/components/lightswind/shiny-text'
+import { ChevronDown } from 'lucide-react';
 
 const socials = [
     {
@@ -240,12 +241,8 @@ const Hero = () => {
                     </div>
 
                     {/* Center Button */}
-                    <div className="">
-                        <div className="group border border-gray-500 hover:border-white p-3 rounded-full z-10 cursor-pointer transition-colors duration-300 bg-black/20 backdrop-blur-sm">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gray-400 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 5v14M12 19l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </div>
+                    <div className='bg-white/10 rounded-[133px] py-2 px-10 hover:scale-105 transition-transform duration-300 flex justify-center items-center gap-4 cursor-pointer'>
+                        <ChevronDown className="text-white w-8 h-8" />
                     </div>
 
                     {/* Bottom Right Scroll Indicator */}
