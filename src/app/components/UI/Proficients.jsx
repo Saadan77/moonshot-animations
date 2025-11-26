@@ -2,7 +2,7 @@ import Carousel from "@/components/Carousel";
 
 export default function Proficients() {
     return (
-        <section className="px-10 items-center py-20 bg-[#00080F] relative z-50">
+        <section className="px-10 items-center py-52 bg-[#00080F] relative z-50">
             {/* Heading */}
             <div className="text-center relative z-10 space-y-8">
                 <p className="text-white/60 text-2xl tracking-tight">05 - Profecients</p>

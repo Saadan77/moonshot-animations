@@ -4,13 +4,13 @@ import Image from "next/image";
 export default function CTA() {
     return (
         <section
-            className="relative flex flex-col items-center justify-start overflow-hidden bg-black py-28 md:py-36"
+            className="relative flex flex-col items-center justify-start overflow-hidden bg-black pt-28 md:pt-36"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* Left Gradient */}
-            <div className="absolute left-0 top-0 bottom-0 w-[400px] pointer-events-none">
+            <div className="absolute -left-10 top-60 bottom-0 w-[600px] pointer-events-none">
                 <div
-                    className="w-full h-full"
+                    className="w-full h-1/3"
                     style={{
                         background: 'linear-gradient(90deg, rgba(250, 40, 137, 0.4) 0%, rgba(62, 95, 249, 0.3) 50%, transparent 100%)',
                         filter: 'blur(80px)',
@@ -20,9 +20,9 @@ export default function CTA() {
             </div>
 
             {/* Right Gradient */}
-            <div className="absolute right-0 top-0 bottom-0 w-[400px] pointer-events-none">
+            <div className="absolute -right-20 top-160 bottom-0 w-[600px] pointer-events-none">
                 <div
-                    className="w-full h-full"
+                    className="w-full h-1/3"
                     style={{
                         background: 'linear-gradient(270deg, rgba(93, 66, 255, 0.4) 0%, rgba(255, 159, 252, 0.3) 50%, transparent 100%)',
                         filter: 'blur(80px)',
@@ -32,7 +32,7 @@ export default function CTA() {
             </div>
 
             {/* Bottom Gradient */}
-            <div className="absolute left-0 right-0 bottom-0 h-[400px] pointer-events-none">
+            {/* <div className="absolute left-0 right-0 bottom-0 h-[400px] pointer-events-none">
                 <div
                     className="w-full h-full"
                     style={{
@@ -41,7 +41,7 @@ export default function CTA() {
                         opacity: 0.5
                     }}
                 />
-            </div>
+            </div> */}
 
             {/* LiquidEther Background */}
             <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
@@ -66,8 +66,8 @@ export default function CTA() {
 
             {/* Heading */}
             <div className="text-center relative z-10">
-                <p className="text-white/60 text-6xl mb-2 tracking-tight">Let’s start</p>
-                <h2 className="text-white text-9xl max-sm:text-5xl font-semibold tracking-tight leading-tight">
+                <p className="text-white/60 text-6xl mb-2 tracking-tight font-sora font-light">Let’s start</p>
+                <h2 className="text-white text-9xl max-sm:text-5xl font-medium tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Your <span className="italic" style={{ fontFamily: 'var(--font-playfair), serif' }}>Project</span></span>
                 </h2>
             </div>
@@ -121,6 +121,17 @@ export default function CTA() {
                     alt="Unique typography"
                     className="w-full h-auto object-contain mt-20 opacity-40"
                     draggable={false}
+                />
+            </div>
+
+            <div className="-mt-64 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+                <div
+                    className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                    style={{
+                        background:
+                            "linear-gradient(119.09deg, #4f00ff 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                    }}
+
                 />
             </div>
         </section>

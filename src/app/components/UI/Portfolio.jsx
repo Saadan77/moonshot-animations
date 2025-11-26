@@ -4,6 +4,7 @@ import { Tabs } from '@/components/ui/tabs';
 import React from 'react';
 import { GoArrowUpRight } from 'react-icons/go';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
+import { ArrowRight } from 'lucide-react';
 
 export function Tags() {
     const tabs = [
@@ -42,7 +43,7 @@ export function Tags() {
 
 const Portfolio = () => {
     return (
-        <section className="relative text-white py-24 bg-[#0a0f14] z-50">
+        <section className="relative text-white py-52 bg-[#0a0f14] z-50">
             <div className="max-w-[90%] mx-auto px-6 lg:px-8">
 
                 {/* 3 Column Grid - 3 Rows */}
@@ -62,10 +63,10 @@ const Portfolio = () => {
                             </h2>
                         </div>
 
-                        <button className="max-w-fit group flex items-center gap-2 bg-[#041426] hover:bg-[#FA2889] border border-[#979797] text-white px-6 py-3 rounded-full transition-colors">
-                            <span className='text-[20px]' style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Explore All Works</span>
-                            <div className="bg-[#FA2889] group-hover:bg-white group-hover:text-black rounded-full p-1">
-                                <GoArrowUpRight className="w-4 h-4" />
+                        <button className="max-w-fit group flex items-center gap-2 bg-[#041426] hover:bg-[#FA2889] border border-[#979797] text-white pl-6 pr-2 py-2 rounded-full transition-colors">
+                            <span className='text-[20px] font-light' style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Explore All Works</span>
+                            <div className="bg-[#FA2889] group-hover:bg-white group-hover:text-black rounded-full p-4">
+                                <ArrowRight className="w-6 h-6" />
                             </div>
                         </button>
                     </div>

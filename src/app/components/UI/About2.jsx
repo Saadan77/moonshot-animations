@@ -73,7 +73,7 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
 
 const About2 = () => {
     return (
-        <section className="relative bg-black text-white py-24 z-50 pb-50">
+        <section className="relative bg-black text-white py-24 z-50 pb-50" data-smoother-ignore>
             {/* Content Overlay */}
             <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8">
                 <div className='mb-20 space-y-4'>
@@ -104,7 +104,7 @@ const About2 = () => {
                 </div>
 
                 {/* Cards Section with Background */}
-                <div className="relative" data-smoother-ignore>
+                <div className="relative">
                     {/* Background Image - Behind cards only */}
                     <div className="sticky top-0 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
                         <img
@@ -114,7 +114,6 @@ const About2 = () => {
                             style={{ transform: 'translateZ(0)' }}
                         />
                     </div>
-
                     {/* Cards Container */}
                     <div className='max-w-[80%] max-md:max-w-full relative mx-auto z-10 -mt-[68vh]'>
                         {/* Card 01 */}
@@ -129,7 +128,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -155,7 +154,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-1.png"
                                         alt="Ball 1"
-                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
+                                        className="pointer-events-none absolute -top-30 -right-[150px] w-100 h-100 object-contain"
                                     />
                                 </div>
 
@@ -184,7 +183,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -210,7 +209,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-2.png"
                                         alt="Ball 1"
-                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
+                                        className="pointer-events-none absolute -top-30 -right-[150px] w-100 h-100 object-contain"
                                     />
                                 </div>
 
@@ -239,7 +238,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -265,7 +264,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-3.png"
                                         alt="Ball 3"
-                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
+                                        className="pointer-events-none absolute -top-30 -right-[150px] w-100 h-100 object-contain"
                                     />
                                 </div>
 
@@ -294,7 +293,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute -top-2 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-60 rounded-full blur-[50px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -320,7 +319,7 @@ const About2 = () => {
                                     <img
                                         src="/images/about-2/balls/ball-4.png"
                                         alt="Ball 4"
-                                        className="pointer-events-none absolute -top-8 -right-[150px] w-85 h-85 object-contain"
+                                        className="pointer-events-none absolute -top-30 -right-[150px] w-100 h-100 object-contain"
                                     />
                                 </div>
 
