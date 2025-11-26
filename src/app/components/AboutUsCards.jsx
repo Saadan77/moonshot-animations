@@ -112,16 +112,7 @@ export default function AboutUsCards() {
     ];
 
     return (
-        <div className="relative my-10 overflow-visible mt-20">
-            {/* Glow ellipse below cards */}
-            <div
-                className="pointer-events-none absolute -bottom-14 left-1/2 h-[230px] w-screen -translate-x-1/2 blur-[250px] opacity-90"
-                style={{
-                    background:
-                        "linear-gradient(119.09deg, #4f00ff 8%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 10%, rgba(62, 95, 249, 0.8) 40.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 8%, rgba(250, 40, 137, 0.8) 20.09%, rgba(35, 141, 250, 0.8) 25.83%, rgba(62, 95, 249, 0.8) 40.08%)",
-                }}
-            />
-
+        <div className="relative z-10 my-10 overflow-visible mt-20">
             <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4">
                 {cards.map((c, i) => (
                     <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>

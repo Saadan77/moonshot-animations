@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AboutUsCards from '../AboutUsCards';
 import { ArrowRight } from 'lucide-react';
+import LiquidEther from '@/components/LiquidEther';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -29,6 +30,26 @@ const AboutUs = () => {
 
     return (
         <section className="relative isolate w-full overflow-visible bg-[#00060b] text-white z-50">
+            {/* LiquidEther Background */}
+            <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
+                <LiquidEther
+                    colors={['#5227FF', '#FF9FFC', '#B19EEF']}
+                    mouseForce={20}
+                    cursorSize={100}
+                    isViscous={false}
+                    viscous={30}
+                    iterationsViscous={32}
+                    iterationsPoisson={32}
+                    resolution={0.5}
+                    isBounce={false}
+                    autoDemo={true}
+                    autoSpeed={0.5}
+                    autoIntensity={2.2}
+                    takeoverDuration={0.25}
+                    autoResumeDelay={3000}
+                    autoRampDuration={0.6}
+                />
+            </div>
             <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 pt-20 pb-56">
                 <div className='pb-20 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
@@ -68,6 +89,18 @@ const AboutUs = () => {
                 </div>
 
                 <AboutUsCards />
+            </div>
+            {/* Glow ellipse below cards */}
+            <div className="relative">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div
+                        className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                        style={{
+                            background:
+                                "linear-gradient(119.09deg, #4f00ff 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                        }}
+                    />
+                </div>
             </div>
         </section>
     );
