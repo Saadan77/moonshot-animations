@@ -4,13 +4,15 @@ import { useRef, useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 
 export const DirectionAwareHover = ({
   imageUrl,
   children,
   childrenClassName,
   imageClassName,
-  className
+  className,
+  heading,
 }) => {
   const ref = useRef(null);
 
@@ -60,36 +62,62 @@ export const DirectionAwareHover = ({
       className={cn(
         "w-2/4 h-2/4 bg-transparent rounded-lg overflow-hidden group/card relative",
         className
-      )}>
+      )}
+    >
       <AnimatePresence mode="wait">
         <motion.div
           className="relative h-full w-full"
           initial="initial"
           whileHover={direction}
-          exit="exit">
+          exit="exit"
+        >
           <motion.div
-            className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
+            className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/80 z-10 transition duration-500"
+          />
           <motion.div
             variants={variants}
             className="h-full w-full relative bg-gray-50 dark:bg-black"
             transition={{
               duration: 0.2,
               ease: "easeOut",
-            }}>
+            }}
+          >
             <img
               alt="image"
               className={cn("h-full w-full object-cover scale-[1.15]", imageClassName)}
               width="1000"
               height="1000"
-              src={imageUrl} />
+              src={imageUrl}
+            />
           </motion.div>
+
           <motion.div
             variants={textVariants}
             transition={{
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("text-white absolute bottom-4 left-4 z-40", childrenClassName)}>
+            className={cn("absolute top-8 left-4 z-40 text-2xl font-semibold font-poppins")}
+          >
+            {heading}
+          </motion.div>
+          {/* <motion.div
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            className={cn("absolute top-50 right-4 z-40")}
+          >
+            <ArrowUpRight className="h-12 w-12 p-3 text-white bg-white/20 rounded-full" />
+          </motion.div> */}
+          <motion.div
+            variants={textVariants}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            className={cn("absolute bottom-4 right-8 z-40", childrenClassName)}
+          >
             {children}
           </motion.div>
         </motion.div>

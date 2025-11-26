@@ -75,10 +75,11 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-1.png"
                         className="rounded-3xl w-full h-full col-span-1"
+                        heading={<p>Branding</p>}
                     >
-                        <div className="space-y-2">
-                            <p className="font-bold text-2xl">Brand Identity</p>
-                            <p className="font-normal text-lg">Creative Design Studio</p>
+                        <div className="space-y-2 font-poppins font-light text-white/80">
+                            <p className="text-2xl">#BuildYourBrand</p>
+                            <p className="text-lg">#brandwithpurpose</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -95,10 +96,11 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-2.png"
                         className="rounded-3xl w-full h-full col-span-1"
+                        heading={<p>UI/UX</p>}
                     >
-                        <div className="space-y-2">
-                            <p className="font-bold text-2xl">Mobile App UI</p>
-                            <p className="font-normal text-lg">E-Commerce Platform</p>
+                        <div className="space-y-2 font-poppins font-light text-white/80">
+                            <p className="text-2xl">#Webdesign</p>
+                            <p className="text-lg">#Creativewebsolutions</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -107,10 +109,11 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-3.png"
                         className="rounded-3xl w-full h-full col-span-1"
+                        heading={<p>Mobile App</p>}
                     >
-                        <div className="space-y-2">
-                            <p className="font-bold text-2xl">Web Design</p>
-                            <p className="font-normal text-lg">Tech Startup Landing</p>
+                        <div className="space-y-2 font-poppins font-light text-white/80">
+                            <p className="text-2xl">#Appdesign</p>
+                            <p className="text-lg">#Mobileapps</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -118,10 +121,11 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-4.png"
                         className="rounded-3xl w-full h-full col-span-1"
+                        heading={<p>Animations</p>}
                     >
-                        <div className="space-y-2">
-                            <p className="font-bold text-2xl">Motion Graphics</p>
-                            <p className="font-normal text-lg">Product Animation</p>
+                        <div className="space-y-2 font-poppins font-light text-white/80">
+                            <p className="text-2xl">#Creativemotion</p>
+                            <p className="text-lg">#Animateddesign</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -133,10 +137,11 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-5.png"
                         className="rounded-3xl w-full h-full col-span-1"
+                        heading={<p>Logo Design</p>}
                     >
-                        <div className="space-y-2">
-                            <p className="font-bold text-2xl">UX/UI Design</p>
-                            <p className="font-normal text-lg">Financial Dashboard</p>
+                        <div className="space-y-2 font-poppins font-light text-white/80">
+                            <p className="text-2xl">#Logodesign</p>
+                            <p className="text-lg">#Brandidentity</p>
                         </div>
                     </DirectionAwareHover>
                 </div>
