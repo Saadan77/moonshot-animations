@@ -387,7 +387,7 @@ export const StaggeredMenu = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] max-sm:px-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
           <div className="flex justify-center items-center gap-6">
@@ -449,7 +449,7 @@ export const StaggeredMenu = ({
           </div>
 
           <div
-            className="hidden md:flex relative items-center select-none pointer-events-auto"
+            className="relative items-center select-none pointer-events-auto"
             aria-label="Logo"
           >
             <img
@@ -462,10 +462,10 @@ export const StaggeredMenu = ({
             />
           </div>
 
-          <div className="flex items-center gap-4 pointer-events-auto">
+          <div className="hidden md:flex  items-center gap-4 pointer-events-auto">
             <button
               type="button"
-              className="relative group hidden md:inline-flex items-center gap-4 rounded-full pl-8 pr-1 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#2626264D]"
+              className="relative group flex items-center gap-4 rounded-full pl-8 pr-1 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#2626264D]"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
@@ -498,7 +498,7 @@ export const StaggeredMenu = ({
 
             <button
               type="button"
-              className="relative group hidden md:inline-flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">

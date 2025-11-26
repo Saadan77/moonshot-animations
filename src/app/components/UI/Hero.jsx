@@ -49,12 +49,12 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
-                <div className="absolute top-[20%] left-16 max-sm:hidden">
+                <div className="absolute top-[20%] left-16">
                     <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
                         (creative)
                     </p>
                 </div>
-                <div className="absolute top-[20%] right-16 max-sm:hidden">
+                <div className="absolute top-[20%] right-16">
                     <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
                         (agency)
                     </p>
@@ -62,7 +62,7 @@ const Hero = () => {
 
                 {/* Main Content Container */}
                 <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible">
-                    <div className='hidden lg:block w-full relative'>
+                    <div className='w-full relative'>
                         {/* Decorative Lines */}
                         <div className="max-md:hidden block">
                             {[
@@ -233,10 +233,10 @@ const Hero = () => {
                 />
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center px-12 max-sm:px-6 py-8 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-12 max-sm:px-6 py-8 gap-8">
 
                     {/* Bottom Left Scroll Text */}
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>
                     </div>
 
@@ -246,7 +246,7 @@ const Hero = () => {
                     </div>
 
                     {/* Bottom Right Scroll Indicator */}
-                    <div className="flex justify-center items-center gap-4 text-nowrap">
+                    <div className="flex justify-center items-center gap-4 text-nowrap max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 leading-relaxed">
                             <ShinyText
                                 size='sm'
