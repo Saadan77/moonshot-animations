@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Shuffle from "@/components/Shuffle";
+import Image from "next/image";
 
 const categories = [
   {
@@ -41,8 +42,12 @@ const WhatWeDo = () => {
 
   return (
     <section
-      className="bg-black relative  text-white"
+      className="bg-black relative z-50 text-white"
     >
+      <div className='absolute -top-8 left-[45%] z-100' style={{ transform: 'translate3d(0, 0, 0)' }}>
+        <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[90px] relative z-10" />
+      </div>
+
       {/* Content wrapper */}
       <div className="flex flex-col justify-between min-h-screen">
         {/* Top meta label & categories */}
@@ -66,8 +71,8 @@ const WhatWeDo = () => {
                         onClick={() => setActive(item)}
                         aria-selected={isActive}
                         className={`px-1 whitespace-nowrap transition-colors focus:outline-none ${isActive
-                            ? "text-white"
-                            : "text-white/55 hover:text-white/80"
+                          ? "text-white"
+                          : "text-white/55 hover:text-white/80"
                           }`}
                       >
                         {item.name}

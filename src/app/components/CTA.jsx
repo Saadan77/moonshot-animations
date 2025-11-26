@@ -31,18 +31,6 @@ export default function CTA() {
                 />
             </div>
 
-            {/* Bottom Gradient */}
-            {/* <div className="absolute left-0 right-0 bottom-0 h-[400px] pointer-events-none">
-                <div
-                    className="w-full h-full"
-                    style={{
-                        background: 'linear-gradient(0deg, rgba(82, 39, 255, 0.4) 0%, rgba(255, 159, 252, 0.3) 50%, transparent 100%)',
-                        filter: 'blur(100px)',
-                        opacity: 0.5
-                    }}
-                />
-            </div> */}
-
             {/* LiquidEther Background */}
             <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
                 <LiquidEther
@@ -105,7 +93,7 @@ export default function CTA() {
             <div className="-mt-12 relative z-10 flex flex-col items-center">
                 <button
                     type="button"
-                    className="mt-6 h-12 w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 transition"
+                    className="mt-6 h-12 w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
                     aria-label="Start your project"
                 >
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -124,6 +112,7 @@ export default function CTA() {
                 />
             </div>
 
+            {/* Bottom large gradient */}
             <div className="-mt-64 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
                     className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"

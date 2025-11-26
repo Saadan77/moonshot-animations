@@ -115,10 +115,10 @@ export default function AboutUsCards() {
         <div className="relative my-10 overflow-visible mt-20">
             {/* Glow ellipse below cards */}
             <div
-                className="pointer-events-none absolute -bottom-14 left-1/2 h-[230px] w-screen -translate-x-1/2 blur-[60px] opacity-90"
+                className="pointer-events-none absolute -bottom-14 left-1/2 h-[230px] w-screen -translate-x-1/2 blur-[250px] opacity-90"
                 style={{
                     background:
-                        'radial-gradient(60% 60% at 50% 50%, rgba(93, 66, 255, 0.6) 0%, rgba(255, 41, 124, 0.55) 45%, rgba(0,0,0,0) 70%)',
+                        "linear-gradient(119.09deg, #4f00ff 8%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 10%, rgba(62, 95, 249, 0.8) 40.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 8%, rgba(250, 40, 137, 0.8) 20.09%, rgba(35, 141, 250, 0.8) 25.83%, rgba(62, 95, 249, 0.8) 40.08%)",
                 }}
             />
 
