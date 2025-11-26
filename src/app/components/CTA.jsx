@@ -60,9 +60,7 @@ export default function CTA() {
                 </h2>
             </div>
 
-            <div style={{ transform: 'translate3d(0, 0, 0)' }}>
-                <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
-            </div>
+            <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
 
             {/* Video container with outline */}
             <div className="relative min-h-[75vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center border border-white/30"
@@ -103,7 +101,7 @@ export default function CTA() {
             </div>
 
             {/* Bottom large background word/image */}
-            <div>
+            <div data-smoother-ignore>
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"
