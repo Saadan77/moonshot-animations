@@ -6,7 +6,7 @@ import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import SmoothScroll from "../components/SmoothScroll";
-import PortfolioGrid from "../components/UI/PortfolioGrid";
+import PortfolioGrid from "../components/PortfolioGrid";
 import MacModel from "../components/3D Models/MacModel";
 
 export default function Portfolio() {
@@ -18,9 +18,9 @@ export default function Portfolio() {
             >
                 <Navbar />
 
-                <div className="min-h-screen flex justify-center items-center relative w-full overflow-hidden bg-black">
+                <div className="min-h-screen flex justify-center items-center relative w-full overflow-visible bg-black">
                     {/* Dither Background */}
-                    <div className="absolute inset-0 w-full h-full opacity-20">
+                    <div className="absolute inset-0 w-full h-[150vh] opacity-20">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
                             backgroundColor={[0.84, 0.13, 0.69]}
@@ -36,11 +36,8 @@ export default function Portfolio() {
 
                     {/* Background Image */}
                     <div
-                        className="absolute inset-0 brightness-125"
-                        style={{
-                            backgroundImage:
-                                "url('/images/bg-hero.png')",
-                        }}
+                        className="absolute inset-0 brightness-125 h-[150vh]"
+                        style={{ backgroundImage: "url('/images/bg-hero.png')" }}
                     />
 
                     {/* Decorative Lines */}

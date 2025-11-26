@@ -60,7 +60,7 @@ export default function CTA() {
                 </h2>
             </div>
 
-            <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" />
+            <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" data-smoother-ignore/>
 
             {/* Video container with outline */}
             <div className="relative min-h-[75vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center border border-white/30"

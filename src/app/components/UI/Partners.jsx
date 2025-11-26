@@ -14,7 +14,7 @@ export default function Partners() {
                 <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
                     <div className="flex justify-between tracking-widest text-[#808080] text-[20px]">
                         <p className="text-nowrap">08 — Partners</p>
-                        <p className="text-[#41454a] text-end text-[26px] leading-tight">
+                        <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
                             Over <span className="text-white">10 Years</span> <br /> Partnership
                         </p>
                     </div>

@@ -559,6 +559,7 @@ export default function AboutUsPage() {
             </div>
           </div>
 
+          {/* Linear Gradient Background Lines */}
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
               <div

@@ -80,7 +80,7 @@ const PortfolioGrid = () => {
                                 <button
                                     key={tab.value}
                                     onClick={() => setActiveTab(tab.value)}
-                                    className={`px-12 py-4 rounded-full text-lg transition-all ${
+                                    className={`relative z-10 px-12 py-4 rounded-full text-lg transition-all ${
                                         activeTab === tab.value
                                             ? 'bg-[#FA2889] text-white'
                                             : 'bg-[#041426] text-white hover:bg-[#FA2889]'
@@ -98,7 +98,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item) => (
                         <div
                             key={item.id}
-                            className={`p-25 rounded-3xl overflow-hidden relative group max-h-screen ${
+                            className={`p-25 rounded-3xl overflow-hidden relative group h-screen ${
                                 item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                             }`}
                             style={{
@@ -115,12 +115,14 @@ const PortfolioGrid = () => {
                                     muted
                                     playsInline
                                     className="w-full h-full object-cover rounded-4xl"
+                                    data-smoother-ignore
                                 />
                             ) : (
                                 <img
                                     src={item.src}
                                     alt={item.title}
                                     className="w-full h-full object-cover rounded-4xl"
+                                    data-smoother-ignore
                                 />
                             )}
                             <div className="absolute bottom-6 left-6">

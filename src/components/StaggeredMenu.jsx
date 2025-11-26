@@ -441,7 +441,7 @@ export const StaggeredMenu = ({
             </button>
 
             <span
-              className="font-sora hidden md:flex text-lg max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
+              className="-z-10 font-sora hidden md:flex text-lg max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
               aria-hidden="true"
             >
               +1-972-331-5058
@@ -498,7 +498,7 @@ export const StaggeredMenu = ({
 
             <button
               type="button"
-              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
+              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[#041426] border border-gray-200"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">

@@ -35,7 +35,7 @@ const AboutCard = ({
                 'group relative overflow-hidden rounded-3xl border border-white/10',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
                 compact ? 'h-[400px]' : 'h-[400px]',
-                'w-[min(92vw,340px)] sm:w-[min(44vw,400px)] lg:w-[340px] xl:w-[360px]',
+                'w-[min(92vw,340px)] sm:w-[min(44vw,400px)] lg:w-[400px]',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
                 className,
@@ -44,7 +44,7 @@ const AboutCard = ({
             <img
                 src={image}
                 alt={titleTopRight || titleTopLeft}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-right"
             />
 
             {/* Corner text (Roman + Titles) */}

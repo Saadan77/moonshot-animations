@@ -3,7 +3,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
-import ShinyText from '@/components/lightswind/shiny-text'
 import { ChevronDown } from 'lucide-react';
 
 const socials = [
@@ -12,7 +11,6 @@ const socials = [
         label: 'Facebook',
         char: 'f',
         href: '#',
-        // Gradient that fills upward on hover
         gradient: 'bg-gradient-to-tr from-[#2563EB] via-[#3B82F6] to-[#93C5FD]',
     },
     {
@@ -42,7 +40,8 @@ const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <section className="relative w-full z-50 bg-black/80 rounded-b-[64px] overflow-hidden">
+        <section className="relative w-full z-50 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1240px]"
+            style={{ backgroundImage: 'url("/images/hero-bg.png")' }}>
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
 
@@ -50,12 +49,12 @@ const Hero = () => {
             <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
                 <div className="absolute top-[20%] left-16">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
                         (creative)
                     </p>
                 </div>
                 <div className="absolute top-[20%] right-16">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg text-[#FFFFFF99]">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
                         (agency)
                     </p>
                 </div>
@@ -66,12 +65,12 @@ const Hero = () => {
                         {/* Decorative Lines */}
                         <div className="max-md:hidden block">
                             {[
+                                '-5%',
                                 '15%',
-                                '30%',
-                                '45%',
+                                '35%',
                                 '60%',
-                                '75%',
-                                '90%'
+                                '85%',
+                                '105%'
                             ].map((left) => (
                                 <div
                                     key={left}
@@ -79,7 +78,7 @@ const Hero = () => {
                                     className="absolute top-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50"
                                 >
                                     <div
-                                        className="w-px h-screen"
+                                        className="w-px h-[150vh]"
                                         style={{
                                             background:
                                                 'linear-gradient(to bottom, rgba(187,187,187,0) 0%, rgba(187,187,187,0.12) 12%, rgba(187,187,187,0.12) 88%, rgba(187,187,187,0) 100%)'
@@ -90,10 +89,10 @@ const Hero = () => {
                         </div>
 
                         {/* Left Side - Digital Text */}
-                        <div className='text-[220px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] leading-none text-white'>
+                        <div className='leading-none text-white tracking-[-0.03em]'>
                             <div className="text-left max-md:text-center max-sm:mb-5 relative z-10">
                                 <h1
-                                    className="italic"
+                                    className="italic text-[220px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] "
                                     style={{ fontFamily: 'var(--font-playfair), serif' }}
                                 >
                                     Digital
@@ -103,6 +102,7 @@ const Hero = () => {
                             {/* Right Side - Experts Text */}
                             <div className="text-end max-sm:text-center">
                                 <h1
+                                    className="text-[200px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <AuroraText colors={['#ffffff', '#d1bd73']}>
@@ -128,7 +128,7 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain opacity-40"
                             style={{
                                 mixBlendMode: 'screen',
                             }}
@@ -177,20 +177,8 @@ const Hero = () => {
                                 will-change:top
                             `}
                         />
-                        {/* Shine sweep */}
-                        {/* <span
-                            aria-hidden="true"
-                            className="
-                                pointer-events-none absolute inset-0
-                                before:absolute before:top-0 before:-left-full before:h-full before:w-[60%]
-                                before:bg-linear-to-r before:from-transparent before:via-white/25 before:to-transparent
-                                before:skew-x-30
-                                before:transition-transform before:duration-900
-                                group-hover:before:translate-x-[260%]
-                            "
-                        /> */}
                         {/* Glyph */}
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                        <span className="relative text-[15px] z-10 transition-colors duration-300 group-hover:text-white">
                             {s.char}
                         </span>
                     </a>
@@ -212,7 +200,15 @@ const Hero = () => {
             </div>
 
             {/* Bottom div */}
-            <div className="relative z-50 w-full max-sm:py-4 max-sm:min-h-0 min-h-[200px] max-sm:-mt-[100px]">
+            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-[232px] max-sm:-mt-[150px]">
+                {/* Bottom large background word/image */}
+                <img
+                    src="/images/hero/moonshot-tech.png"
+                    alt="Unique typography"
+                    className="absolute inset-0 w-full h-full object-contain opacity-5"
+                    style={{scale: "105%"}}
+                />
+
                 {/* Background gradient */}
                 <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
                     <div
@@ -224,17 +220,8 @@ const Hero = () => {
                     />
                 </div>
 
-                {/* Bottom large background word/image */}
-                <img
-                    src="/images/hero/moonshot-tech.png"
-                    alt="Unique typography"
-                    className="absolute inset-0 w-full h-full object-contain opacity-5 pointer-events-none"
-                    draggable={false}
-                />
-
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-12 max-sm:px-6 py-8 gap-8">
-
+                <div className="relative flex justify-between items-center max-sm:justify-center px-12 max-sm:px-6 py-20 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>
@@ -246,17 +233,11 @@ const Hero = () => {
                     </div>
 
                     {/* Bottom Right Scroll Indicator */}
-                    <div className="flex justify-center items-center gap-4 text-nowrap max-sm:hidden">
-                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-xs text-gray-500 leading-relaxed">
-                            <ShinyText
-                                size='sm'
-                                baseColor="rgba(255, 255, 255, 1)"
-                                shineColor="rgb(220,220,220)"
-                                speed={5}
-                            >Let's explore
-                                <br />
-                                Moonshot Tech
-                            </ShinyText>
+                    <div className="flex justify-center items-center text-nowrap max-sm:hidden">
+                        <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-right text-md leading-relaxed text-[#9DA1A7]">
+                            Let's explore
+                            <br />
+                            <span className='text-white'>Moonshot Tech</span>
                         </p>
                     </div>
                 </div>

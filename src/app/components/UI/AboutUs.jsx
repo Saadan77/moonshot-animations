@@ -52,7 +52,7 @@ const AboutUs = () => {
                     />
                 </div>
             </div>
-            <div className="mx-auto max-w-[90%] px-6 sm:px-8 md:px-10 lg:px-12 pt-20 pb-56">
+            <div className="mx-auto max-w-[90%] px-6 pt-20 pb-56">
                 <div className='pb-20 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
                     <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
@@ -67,7 +67,7 @@ const AboutUs = () => {
                     <div>
                         {/* Heading */}
                         <h2
-                            className="text-[clamp(28px,4.2vw,40px)] font-normal"
+                            className="tracking-[-0.03em] font-normal"
                             style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
                         >
                             <ScrollReveal enableBlur={false}>
@@ -79,10 +79,10 @@ const AboutUs = () => {
                         <div className="mt-8 group">
                             <Link
                                 href="#"
-                                className="border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#FF2A7D] px-6 py-3 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
-                                <span className="grid place-items-center rounded-full bg-[#FF2A7D] group-hover:bg-white p-1.5">
+                                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
                                     <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                 </span>
                             </Link>

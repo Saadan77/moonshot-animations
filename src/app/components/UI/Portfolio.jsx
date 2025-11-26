@@ -74,7 +74,7 @@ const Portfolio = () => {
                     {/* Row 1, Col 2: First Portfolio Image */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-1.png"
-                        className="rounded-3xl w-full h-full col-span-1"
+                        className="w-full h-full col-span-1"
                         heading={<p>Branding</p>}
                     >
                         <div className="space-y-2 font-poppins font-light text-white/80">
@@ -95,7 +95,7 @@ const Portfolio = () => {
                     {/* Row 2, Col 1: Portfolio Image 2 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-2.png"
-                        className="rounded-3xl w-full h-full col-span-1"
+                        className="w-full h-full col-span-1"
                         heading={<p>UI/UX</p>}
                     >
                         <div className="space-y-2 font-poppins font-light text-white/80">
@@ -108,7 +108,7 @@ const Portfolio = () => {
                     {/* Row 2, Col 2: Portfolio Image 3 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-3.png"
-                        className="rounded-3xl w-full h-full col-span-1"
+                        className="w-full h-full col-span-1"
                         heading={<p>Mobile App</p>}
                     >
                         <div className="space-y-2 font-poppins font-light text-white/80">
@@ -120,7 +120,7 @@ const Portfolio = () => {
                     {/* Row 3, Col 1: Portfolio Image 4 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-4.png"
-                        className="rounded-3xl w-full h-full col-span-1"
+                        className="w-full h-full col-span-1"
                         heading={<p>Animations</p>}
                     >
                         <div className="space-y-2 font-poppins font-light text-white/80">
@@ -136,7 +136,7 @@ const Portfolio = () => {
                     {/* Row 3, Col 2: Portfolio Image 5 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-5.png"
-                        className="rounded-3xl w-full h-full col-span-1"
+                        className="w-full h-full col-span-1"
                         heading={<p>Logo Design</p>}
                     >
                         <div className="space-y-2 font-poppins font-light text-white/80">

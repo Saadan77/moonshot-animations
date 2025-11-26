@@ -80,9 +80,14 @@ const About2 = () => {
 
                     <div>
                         {/* Heading */}
-                        <ScrollReveal enableBlur={false}>
-                            Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
-                        </ScrollReveal>
+                        <h2
+                            className="tracking-[-0.03em] font-normal"
+                            style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                        >
+                            <ScrollReveal enableBlur={false}>
+                                Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
+                            </ScrollReveal>
+                        </h2>
                     </div>
                 </div>
 
@@ -90,13 +95,13 @@ const About2 = () => {
                 <div className="text-xl lg:text-2xl font-bold uppercase mb-20" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                     <TextType text="Core" typingSpeed={15}
                         pauseDuration={1500}
-                        showCursor={true}
-                        cursorCharacter="|" startOnVisible={true} loop={true} />
+                        showCursor={false}
+                        startOnVisible={true} loop={true} />
                     <br />
                     <TextType text="Discernments" typingSpeed={15}
                         pauseDuration={1500}
-                        showCursor={true}
-                        cursorCharacter="|" startOnVisible={true} loop={true} />
+                        showCursor={false}
+                        startOnVisible={true} loop={true} />
                 </div>
 
                 {/* Cards Section with Background */}
