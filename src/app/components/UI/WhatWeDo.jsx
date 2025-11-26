@@ -108,7 +108,7 @@ const WhatWeDo = () => {
             )}
 
             {/* Top dark overlay (subtle fade from top) */}
-            <div className="absolute inset-x-0 top-0 h-[26%] pointer-events-none bg-linear-to-b from-black/60 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-[45%] pointer-events-none bg-linear-to-b from-black to-transparent" />
 
             {/* Vignette */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_1%_100%,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none" />

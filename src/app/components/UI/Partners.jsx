@@ -21,7 +21,7 @@ export default function Partners() {
                 </div>
 
                 {/* Logo Loop Section */}
-                <div className="flex size-full items-center justify-center bg-black">
+                <div className="flex size-full items-center justify-center">
                     <Marquee>
                         <MarqueeContent>
                             {[

@@ -77,8 +77,8 @@ const Portfolio = () => {
                         className="rounded-3xl w-full h-full col-span-1"
                     >
                         <div className="space-y-2">
-                            <p className="font-bold text-xl">Brand Identity</p>
-                            <p className="font-normal text-sm">Creative Design Studio</p>
+                            <p className="font-bold text-2xl">Brand Identity</p>
+                            <p className="font-normal text-lg">Creative Design Studio</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -97,8 +97,8 @@ const Portfolio = () => {
                         className="rounded-3xl w-full h-full col-span-1"
                     >
                         <div className="space-y-2">
-                            <p className="font-bold text-xl">Mobile App UI</p>
-                            <p className="font-normal text-sm">E-Commerce Platform</p>
+                            <p className="font-bold text-2xl">Mobile App UI</p>
+                            <p className="font-normal text-lg">E-Commerce Platform</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -109,8 +109,8 @@ const Portfolio = () => {
                         className="rounded-3xl w-full h-full col-span-1"
                     >
                         <div className="space-y-2">
-                            <p className="font-bold text-xl">Web Design</p>
-                            <p className="font-normal text-sm">Tech Startup Landing</p>
+                            <p className="font-bold text-2xl">Web Design</p>
+                            <p className="font-normal text-lg">Tech Startup Landing</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -120,8 +120,8 @@ const Portfolio = () => {
                         className="rounded-3xl w-full h-full col-span-1"
                     >
                         <div className="space-y-2">
-                            <p className="font-bold text-xl">Motion Graphics</p>
-                            <p className="font-normal text-sm">Product Animation</p>
+                            <p className="font-bold text-2xl">Motion Graphics</p>
+                            <p className="font-normal text-lg">Product Animation</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -135,8 +135,8 @@ const Portfolio = () => {
                         className="rounded-3xl w-full h-full col-span-1"
                     >
                         <div className="space-y-2">
-                            <p className="font-bold text-xl">UX/UI Design</p>
-                            <p className="font-normal text-sm">Financial Dashboard</p>
+                            <p className="font-bold text-2xl">UX/UI Design</p>
+                            <p className="font-normal text-lg">Financial Dashboard</p>
                         </div>
                     </DirectionAwareHover>
                 </div>

@@ -57,13 +57,9 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
             <motion.div
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                style={{
-                    transformStyle: "preserve-3d",
-                    transform,
-                }}
                 className="w-full h-full"
             >
-                <div className='flex flex-col justify-between h-full' style={{ transformStyle: "preserve-3d" }}>
+                <div className='flex flex-col justify-between h-full'>
                     {children}
                 </div>
             </motion.div>
@@ -84,7 +80,7 @@ const About2 = () => {
 
                     <div>
                         {/* Heading */}
-                        <ScrollReveal>
+                        <ScrollReveal enableBlur={false}>
                             Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
                         </ScrollReveal>
                     </div>
@@ -123,7 +119,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-w-[40%] max-w-[40%] max-md:max-w-full max-md:min-w-full min-h-[600px]',
+                                    'p-8 min-w-[40%] max-w-[40%] max-md:max-w-full max-md:min-w-full min-h-[600px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -178,7 +174,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -215,7 +211,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-80 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-100 relative z-10 text-2xl lg:text-3xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="It Is Independent Google Partner (Accredited By Google)" typingSpeed={15}
@@ -233,7 +229,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -288,7 +284,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-white/10 bg-black/70 overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 lg:p-12 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[40%] max-w-[40%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}

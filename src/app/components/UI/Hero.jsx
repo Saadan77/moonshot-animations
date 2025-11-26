@@ -64,7 +64,7 @@ const Hero = () => {
                 <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible">
                     <div className='hidden lg:block w-full relative'>
                         {/* Decorative Lines */}
-                        <div>
+                        <div className="max-md:hidden block">
                             {[
                                 '15%',
                                 '30%',
