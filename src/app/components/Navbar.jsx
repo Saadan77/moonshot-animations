@@ -33,7 +33,7 @@ const Navbar = ({ onMenuStateChange }) => {
             menuButtonColor="#ffffff"
             openMenuButtonColor="#000000"
             changeMenuColorOnOpen={true}
-            isFixed={true}
+            isFixed={false}
             accentColor="#FA2889"
             onMenuOpen={() => onMenuStateChange?.(true)}
             onMenuClose={() => onMenuStateChange?.(false)}

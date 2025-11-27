@@ -107,16 +107,16 @@ const About2 = () => {
                 {/* Cards Section with Background */}
                 <div className="relative">
                     {/* Background Image - Behind cards only */}
-                    <div className="sticky top-0 z-0 flex h-[68vh] items-center justify-center pointer-events-none will-change-transform">
+                    <div className="sticky top-0 z-0 flex h-screen items-center justify-center pointer-events-none will-change-transform">
                         <img
                             src="/images/about-2/about-2-bg.png"
                             alt=""
-                            className="max-w-[1100px] w-[86vw] object-contain grayscale opacity-60"
+                            className="max-w-[1100px] w-[60vw] object-contain grayscale opacity-60"
                             style={{ transform: 'translateZ(0)' }}
                         />
                     </div>
                     {/* Cards Container */}
-                    <div className='max-w-[80%] max-md:max-w-full relative mx-auto z-10 -mt-[68vh]'>
+                    <div className='max-w-[80%] max-md:max-w-full relative mx-auto z-10 -mt-[100vh]'>
                         {/* Card 01 */}
                         <div className="relative flex justify-end mb-10 md:mb-[-120px]">
                             <ParallaxCard
