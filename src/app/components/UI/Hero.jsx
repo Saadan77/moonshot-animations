@@ -16,7 +16,20 @@ const socials = [
     {
         key: 'instagram',
         label: 'Instagram',
-        char: '@',
+        char: (
+            <svg
+                id="instagram"
+                fill="#fff"
+                viewBox="0 0 169.063 169.063"
+                style={{ width: '15px', height: '15px' }}
+            >
+                <g>
+                    <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                    <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" />
+                    <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78C135.661,29.421,132.821,28.251,129.921,28.251z" />
+                </g>
+            </svg>
+        ),
         href: '#',
         gradient: 'bg-[linear-gradient(135deg,#FF8A00_0%,#E52E71_50%,#9B00FF_100%)]',
     },
@@ -149,7 +162,7 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`max-sm:hidden absolute left-12 max-lg:left-6 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
+            <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-50'
                 }`}>
                 {socials.map((s) => (
                     <a
@@ -178,7 +191,7 @@ const Hero = () => {
                             `}
                         />
                         {/* Glyph */}
-                        <span className="relative text-[15px] z-10 transition-colors duration-300 group-hover:text-white">
+                        <span className="relative text-[16px] z-10 transition-colors duration-300 group-hover:text-white">
                             {s.char}
                         </span>
                     </a>
@@ -206,7 +219,7 @@ const Hero = () => {
                     src="/images/hero/moonshot-tech.png"
                     alt="Unique typography"
                     className="absolute inset-0 w-full h-full object-contain opacity-5"
-                    style={{scale: "105%"}}
+                    style={{ scale: "110%" }}
                 />
 
                 {/* Background gradient */}

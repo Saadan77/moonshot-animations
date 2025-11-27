@@ -44,14 +44,14 @@ const WhatWeDo = () => {
     <section
       className="bg-black relative z-50 text-white"
     >
-      <div className='absolute -top-8 left-[45%] z-100' style={{ transform: 'translate3d(0, 0, 0)' }}>
+      <div className='absolute -top-8 left-[48%] z-100' data-smoother-ignore>
         <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[90px] relative z-10" />
       </div>
 
       {/* Content wrapper */}
-      <div className="flex flex-col justify-between min-h-screen">
+      <div className="flex flex-col justify-between min-h-screen xl:min-h-[1080px]">
         {/* Top meta label & categories */}
-        <div className="relative z-20 mx-auto w-[92%] pt-16 sm:pt-20">
+        <div className="relative z-20 mx-auto w-[92%] pt-24 sm:pt-26">
           <div className="flex items-center justify-between gap-4 text-white/70">
             <div className="text-nowrap text-[20px] flex items-center gap-2 font-poppins font-light">
               <span>03</span>
@@ -61,7 +61,7 @@ const WhatWeDo = () => {
 
             {/* Categories */}
             <div className="relative w-[92%]">
-              <div className="w-full flex flex-wrap justify-end gap-2 sm:gap-3 font-sora font-light">
+              <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">
                 {categories.map((item, idx) => {
                   const isActive = item === active;
                   return (
@@ -78,7 +78,7 @@ const WhatWeDo = () => {
                         {item.name}
                       </button>
                       {idx < categories.length - 1 && (
-                        <span className="mx-1 sm:mx-2 text-white/25">|</span>
+                        <span className="mx-2 text-white/25">|</span>
                       )}
                     </div>
                   );
@@ -107,7 +107,7 @@ const WhatWeDo = () => {
             ) : (
               <div
                 key={active.image}
-                className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500"
+                className="absolute inset-0 w-full h-full bg-cover bg-bottom transition-opacity duration-500"
                 style={{ backgroundImage: `url('${active.image}')` }}
               />
             )}
@@ -121,11 +121,11 @@ const WhatWeDo = () => {
 
           {/* Title */}
           <div className="ml-20 max-sm:ml-1 max-sm:mb-10">
-            <div className="leading-[0.92] font-semibold text-left max-sm:text-center">
+            <div className="tracking-[-0.5em] text-left max-sm:text-center">
               <Shuffle
                 key={`${active.name}-title`}
                 text={active.title}
-                className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[108px]"
+                className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[100px]"
                 tag="span"
                 textAlign="left"
                 shuffleDirection="left"
@@ -140,7 +140,7 @@ const WhatWeDo = () => {
                   <Shuffle
                     key={`${active.name}-subtitle`}
                     text={active.subtitle}
-                    className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[108px]"
+                    className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[100px]"
                     tag="span"
                     textAlign="left"
                     shuffleDirection="left"

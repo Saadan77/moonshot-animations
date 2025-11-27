@@ -52,8 +52,8 @@ const AboutUs = () => {
                     />
                 </div>
             </div>
-            <div className="mx-auto max-w-[90%] px-6 pt-20 pb-56">
-                <div className='pb-20 flex items-start max-md:flex-col'>
+            <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
+                <div className='pb-24 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
                     <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
                         <div className="flex items-center gap-[3px]">
@@ -99,7 +99,7 @@ const AboutUs = () => {
                         className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
                         style={{
                             background:
-                                "linear-gradient(119.09deg, #4f00ff 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                                "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
                         }}
                     />
                 </div>
