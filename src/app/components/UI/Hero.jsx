@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 const socials = [
     {
@@ -165,7 +166,7 @@ const Hero = () => {
             <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-0'
                 }`}>
                 {socials.map((s) => (
-                    <a
+                    <Link
                         key={s.key}
                         href={s.href}
                         aria-label={s.label}
@@ -194,7 +195,7 @@ const Hero = () => {
                         <span className="relative text-[16px] z-10 transition-colors duration-300 group-hover:text-white">
                             {s.char}
                         </span>
-                    </a>
+                    </Link>
                 ))}
                 {/* Reduced motion: users preferring reduced motion see instant fill (optional) */}
                 <style jsx>{`
@@ -218,7 +219,7 @@ const Hero = () => {
                 <img
                     src="/images/hero/moonshot-tech.png"
                     alt="Unique typography"
-                    className="absolute inset-0 w-full h-full object-contain opacity-5"
+                    className="max-sm:hidden absolute inset-0 w-full h-full object-contain opacity-5"
                     style={{ scale: "110%" }}
                 />
 

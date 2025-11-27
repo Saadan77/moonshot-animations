@@ -40,7 +40,7 @@ export interface ScrollRevealProps {
 
 const sizeClasses = {
   sm: "text-lg md:text-xl",
-  md: "text-xl md:text-2xl lg:text-3xl",
+  md: "text-xl md:text-2xl lg:text-4xl",
   lg: "text-2xl md:text-3xl lg:text-4xl xl:text-5xl",
   xl: "text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
   "2xl": "text-4xl md:text-5xl lg:text-6xl xl:text-7xl",
@@ -153,7 +153,7 @@ export function ScrollReveal({
     >
       <motion.p
         className={cn(
-          "leading-relaxed space-y-8",
+          "leading-relaxed space-y-4",
           sizeClasses[size],
           alignClasses[align],
           textClassName

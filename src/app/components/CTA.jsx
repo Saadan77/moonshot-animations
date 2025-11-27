@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function CTA() {
     return (
         <section
-            className="relative flex flex-col items-center justify-start overflow-hidden bg-black pt-28 md:pt-36"
+            className="relative flex flex-col items-center justify-start overflow-hidden bg-[#00060B] pt-28 md:pt-36"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* Left Gradient */}

@@ -6,8 +6,8 @@ export default function Proficients() {
         <section className="px-10 items-center py-52 bg-[#00080F] relative z-50">
             {/* Heading */}
             <div className="text-center relative z-10 space-y-8">
-                <p className="text-white/60 text-2xl tracking-tight">05 - Profecients</p>
-                <h2 className="text-white text-7xl max-sm:text-3xl font-semibold tracking-tight leading-tight">
+                <p className="text-white/60 text-2xl tracking-tight font-poppins font-light">05 <span className="-mr-2">—</span> — Profecients</p>
+                <h2 className="text-white text-7xl max-sm:text-3xl tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         <TextType
                             text="Performance"
@@ -30,10 +30,9 @@ export default function Proficients() {
                         </span>
                     </span>
                 </h2>
-
             </div>
 
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-16">
                 <Carousel
                     autoplay={true}
                     autoplayDelay={3000}
