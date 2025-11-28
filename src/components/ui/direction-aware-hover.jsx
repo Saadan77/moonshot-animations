@@ -102,15 +102,16 @@ export const DirectionAwareHover = ({
           >
             {heading}
           </motion.div>
-          {/* <motion.div
+          <motion.div
+            variants={textVariants}
             transition={{
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute top-50 right-4 z-40")}
+            className={cn("absolute top-50 right-12 z-40")}
           >
-            <ArrowUpRight className="h-12 w-12 p-3 text-white bg-white/20 rounded-full" />
-          </motion.div> */}
+            <img src="/images/images-arrow.png" alt="arrow" className="h-full w-full" />
+          </motion.div>
           <motion.div
             variants={textVariants}
             transition={{

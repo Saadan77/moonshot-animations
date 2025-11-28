@@ -10,21 +10,10 @@ const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const ParallaxCard = ({ children, className, offset = 0 }) => {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"]
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
 
     // Tilt effect
     const x = useMotionValue(0);
     const yTilt = useMotionValue(0);
-
-    const xSpring = useSpring(x);
-    const ySpring = useSpring(yTilt);
-
-    const transform = useMotionTemplate`perspective(1000px) rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
     const handleMouseMove = (e) => {
         if (!ref.current) return;
@@ -51,7 +40,6 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
     return (
         <motion.div
             ref={ref}
-            style={{ y }}
             className={className}
         >
             <motion.div
@@ -79,14 +67,14 @@ const About2 = () => {
                     </div>
 
                     {/* Heading */}
-                    <p
+                    <div
                         className="-tracking-[0.03em] leading-relaxed font-light text-white/90"
                         style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                     >
                         <ScrollReveal size='md' enableBlur={false}>
                             Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
                         </ScrollReveal>
-                    </p>
+                    </div>
 
                 </div>
 

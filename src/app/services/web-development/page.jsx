@@ -1,26 +1,12 @@
 "use client";
 
-import React, { useRef, useLayoutEffect } from "react";
-import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import CTA from "@/app/components/CTA";
+import SmoothScroll from "@/app/components/SmoothScroll";
 
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
-import SmoothScroll from "../components/SmoothScroll";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
-import Partners from "../components/UI/Partners";
-import ScrollReveal from "@/components/lightswind/scroll-reveal";
-import TextType from "@/components/TextType";
-import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
-import { Gallery3D } from "../components/Gallery3D";
-import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
-import AboutUsCards from "../components/AboutUsCards";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function WebDevelopment() {
 
@@ -32,7 +18,7 @@ export default function WebDevelopment() {
             >
                 <Navbar />
 
-                <div className="py-30 min-h-screen flex justify-center items-end relative w-full overflow-visible">
+                <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
                     <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                         <Dither
                             waveColor={[0.01, 0.29, 0.62]}
@@ -79,7 +65,7 @@ export default function WebDevelopment() {
                     </div>
 
                     {/* Industries Hero Section */}
-                    <div className="flex max-lg:flex-col items-center justify-between gap-8">
+                    <div className="flex max-lg:flex-col items-center gap-8 mt-36">
                         <div className="z-10 ml-20 max-lg:ml-5">
                             <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                                 <div className="flex items-center gap-[3px]">
@@ -108,8 +94,9 @@ export default function WebDevelopment() {
 
                         <img
                             src="/images/services/web-development/hero.png"
-                            className="w-1/2 max-md:w-3/4 h-auto z-10"
+                            className="absolute top-20 -right-60 z-10"
                             alt="Astronaut"
+                            data-smoother-ignore
                         />
                     </div>
                 </div>
@@ -118,6 +105,7 @@ export default function WebDevelopment() {
                     <img
                         src="/images/services/web-development/sec-section.png"
                         className="h-auto w-3/4 object-cover rounded-4xl items-center"
+                        data-smoother-ignore
                     />
                 </div>
 
