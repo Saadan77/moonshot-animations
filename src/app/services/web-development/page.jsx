@@ -17,36 +17,24 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
 const data = [
     {
-        category: "Artificial Intelligence",
-        title: "You can do more with AI.",
-        src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/images/services/web-development/success-stories/image-1.png",
     },
     {
-        category: "Productivity",
-        title: "Enhance your productivity.",
-        src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/images/services/web-development/success-stories/image-2.png",
     },
     {
-        category: "Product",
-        title: "Launching the new Apple Vision Pro.",
-        src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/images/services/web-development/success-stories/image-3.png",
     },
 
     {
-        category: "Product",
-        title: "Maps for your iPhone 15 Pro Max.",
-        src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/images/services/web-development/success-stories/image-1.png",
     },
     {
-        category: "iOS",
-        title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/images/services/web-development/success-stories/image-2.png",
     },
     {
-        category: "Hiring",
-        title: "Hiring for a Staff Software Engineer",
-        src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+        src: "/images/services/web-development/success-stories/image-3.png",
+    }
 ];
 
 export function SuccessStories() {
@@ -226,9 +214,8 @@ export default function WebDevelopment() {
                     />
                 </div>
 
-                <div className="bg-top relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/layout-grid/bg-gradient.png)' }}>
-                    <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen"
-                    >
+                <div className="bg-top relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
+                    <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             {/* Image column */}
                             <div className="relative z-10 col-span-1 flex items-center justify-center">
@@ -294,7 +281,7 @@ export default function WebDevelopment() {
                         />
                     </section>
 
-                    <section id="web-dev" className="overflow-visible py-64">
+                    <section id="web-dev" className="overflow-visible pt-64 pb-20">
                         <h2 className="max-w-7xl mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                             <TextType
                                 text="Modern web dev made for"
@@ -332,9 +319,32 @@ export default function WebDevelopment() {
                         </div>
 
                         <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-[1px] h-[1px] bg-white/30"></div>
-                        
-                        <SuccessStories />
+
+                        <h2 className="max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+                            <TextType
+                                text="200+"
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={false}
+                                startOnVisible={true}
+                                loop={true}
+                            />
+                            <br />
+                            <TextType
+                                text="Success Stories"
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={false}
+                                startOnVisible={true}
+                                loop={true}
+                            />
+                        </h2>
+
+                        <div className="-mt-20">
+                            <SuccessStories />
+                        </div>
                     </section>
+
                 </div>
 
                 <CTA />
