@@ -8,87 +8,88 @@ import Dither from "@/components/Dither";
 import SmoothScroll from "../components/SmoothScroll";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 
-const cards = [
-    {
-        id: 1,
-        title: "Education",
-        thumbnail: "/images/industries/image-1.png",
-        className: "md:col-span-1",
-        content: null,
-    },
-    {
-        id: 2,
-        title: "Beauty",
-        thumbnail: "/images/industries/image-2.png",
-        className: "md:col-span-1",
-        content: null,
-    },
-    {
-        id: 3,
-        title: "Technology",
-        thumbnail: "/images/industries/image-4.png",
-        className: "md:col-span-1 md:row-span-2",
-        content: null,
-    },
-    {
-        id: 4,
-        title: "Finance",
-        thumbnail: "/images/industries/image-3.png",
-        className: "md:col-span-2",
-        content: null,
-    },
-    {
-        id: 5,
-        title: "Real Estate",
-        thumbnail: "/images/industries/image-5.png",
-        className: "md:col-span-3",
-        content: null,
-    },
-    {
-        id: 6,
-        title: "Legal",
-        thumbnail: "/images/industries/image-6.png",
-        className: "md:col-span-1 md:row-span-2",
-        content: null,
-    },
-    {
-        id: 7,
-        title: "Utilities",
-        thumbnail: "/images/industries/image-7.png",
-        className: "md:col-span-1",
-        content: null,
-    },
-    {
-        id: 8,
-        title: "Government",
-        thumbnail: "/images/industries/image-8.png",
-        className: "md:col-span-1",
-        content: null,
-    },
-    {
-        id: 9,
-        title: "Medical",
-        thumbnail: "/images/industries/image-9.png",
-        className: "md:col-span-2",
-        content: null,
-    },
-    {
-        id: 10,
-        title: "Retail and E-Commerce",
-        thumbnail: "/images/industries/image-10.png",
-        className: "md:col-span-2",
-        content: null,
-    },
-    {
-        id: 11,
-        title: "Artificial Intelligence",
-        thumbnail: "/images/industries/image-11.png",
-        className: "md:col-span-1",
-        content: null,
-    },
-];
-
 export default function Portfolio() {
+
+    const cards = [
+        {
+            id: 1,
+            title: "Education",
+            thumbnail: "/images/industries/image-1.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+        {
+            id: 2,
+            title: "Beauty",
+            thumbnail: "/images/industries/image-2.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+        {
+            id: 3,
+            title: "Technology",
+            thumbnail: "/images/industries/image-4.png",
+            className: "md:col-span-1 md:row-span-2",
+            content: null,
+        },
+        {
+            id: 4,
+            title: "Finance",
+            thumbnail: "/images/industries/image-3.png",
+            className: "md:col-span-2",
+            content: null,
+        },
+        {
+            id: 5,
+            title: "Real Estate",
+            thumbnail: "/images/industries/image-5.png",
+            className: "md:col-span-3",
+            content: null,
+        },
+        {
+            id: 6,
+            title: "Legal",
+            thumbnail: "/images/industries/image-6.png",
+            className: "md:col-span-1 md:row-span-2",
+            content: null,
+        },
+        {
+            id: 7,
+            title: "Utilities",
+            thumbnail: "/images/industries/image-7.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+        {
+            id: 8,
+            title: "Government",
+            thumbnail: "/images/industries/image-8.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+        {
+            id: 9,
+            title: "Medical",
+            thumbnail: "/images/industries/image-9.png",
+            className: "md:col-span-2",
+            content: null,
+        },
+        {
+            id: 10,
+            title: "Retail and E-Commerce",
+            thumbnail: "/images/industries/image-10.png",
+            className: "md:col-span-2",
+            content: null,
+        },
+        {
+            id: 11,
+            title: "Artificial Intelligence",
+            thumbnail: "/images/industries/image-11.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+    ];
+
     return (
         <SmoothScroll>
             <section

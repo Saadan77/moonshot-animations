@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import CTA from "@/app/components/CTA";
@@ -7,8 +10,75 @@ import SmoothScroll from "@/app/components/SmoothScroll";
 
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
+import ScrollReveal from "@/components/lightswind/scroll-reveal";
+import TextType from "@/components/TextType";
+import { LayoutGrid } from "@/components/ui/layout-grid";
 
 export default function WebDevelopment() {
+
+    const layoutImages = [
+        {
+            id: 1,
+            thumbnail: "/images/services/web-development/layout-grid/image-1.png",
+            className: "md:col-span-2 md:row-span-2",
+            content: null,
+        },
+        {
+            id: 2,
+            thumbnail: "/images/services/web-development/layout-grid/image-2.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+        {
+            id: 3,
+            thumbnail: "/images/services/web-development/layout-grid/image-3.png",
+            className: "md:col-span-1",
+            content: null,
+        },
+    ];
+
+    const webDevInfo = [
+        {
+            id: 1,
+            title: "Discovery <br /> & Requirements",
+            description:
+                "We don’t build on guesses. Our websites start with clear requirements, goals, and user journeys so the development is aligned with real business needs.",
+        },
+        {
+            id: 2,
+            title: "Architecture, <br /> Wireframes & Flows",
+            description:
+                "From simple sites to complex web apps, we plan the structure, flows, and layouts so every page has a clear purpose and leads users to action.",
+        },
+        {
+            id: 3,
+            title: "Pixel-perfect <br /> Frontend Development",
+            description:
+                "We turn designs into responsive, fast, and clean code – using modern web standards to make sure your website looks and works great on every device.",
+        },
+        {
+            id: 4,
+            title: "Scalable & <br /> Data-Driven Web Builds",
+            description:
+                "We use best practices, testing, and analytics to improve speed, stability, and conversions, so your website keeps getting better with real data over time.",
+        }
+    ];
+
+    const Card = ({ card }) => {
+        return (
+            <div
+                key={card.id}
+                className="space-y-4"
+            >
+                <p className="px-4 text-[20px] uppercase text-[#ecedcf]" dangerouslySetInnerHTML={{ __html: card.title }}>
+                </p>
+                <p
+                    className="px-4 text-[16px] text-[#ecedcf]"
+                    dangerouslySetInnerHTML={{ __html: card.description }}
+                />
+            </div>
+        );
+    };
 
     return (
         <SmoothScroll>
@@ -107,6 +177,116 @@ export default function WebDevelopment() {
                         className="h-auto w-3/4 object-cover rounded-4xl items-center"
                         data-smoother-ignore
                     />
+                </div>
+
+                <div className="bg-bottom relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/layout-grid/gradient-bg.png)' }}>
+                    <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen"
+                    >
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            {/* Image column */}
+                            <div className="relative z-10 col-span-1 flex items-center justify-center">
+                                <img
+                                    src="/images/services/web-development/section-3-laptop.png"
+                                    alt="Laptop showcasing website design"
+                                    className="h-auto"
+                                    data-smoother-ignore
+                                    style={{ mixBlendMode: "screen" }}
+                                />
+                            </div>
+
+                            {/* Text column */}
+                            <div className="col-span-1 text-white gap-4">
+                                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16">
+                                    <TextType
+                                        text="Human-centered"
+                                        typingSpeed={75}
+                                        pauseDuration={1500}
+                                        showCursor={false}
+                                        startOnVisible={true}
+                                        loop={true}
+                                    />
+                                    <br />
+                                    <TextType
+                                        text="web development Studio"
+                                        typingSpeed={75}
+                                        pauseDuration={1500}
+                                        showCursor={false}
+                                        startOnVisible={true}
+                                        loop={true}
+                                    />
+                                </h2>
+                                <div className="flex gap-16">
+                                    <div className="w-2 bg-white mt-5 mb-10">|</div>
+                                    <div
+                                        className="tracking-[-0.03em]"
+                                    >
+                                        <ScrollReveal size="sm" enableBlur={false}>
+                                            Tech With Moonshot makes use of collaborative efforts to give you a good website development services. Additionally, our professional website developers give you exclusive insights how to make user friendly, interactive, secure and speedy websites. Moreover, our front-end developers and back-end developers know how to service your web development request in agile manner.
+                                        </ScrollReveal>
+                                    </div>
+                                </div>
+                                <Link
+                                    href="#"
+                                    className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                >
+                                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Learn More About</span>
+                                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                                        <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                                    </span>
+                                </Link>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="h-screen">
+                        <img
+                            src="/images/services/web-development/section-4.png"
+                            className="h-full w-full object-cover"
+                            data-smoother-ignore
+                        />
+                    </section>
+
+                    <section id="web-dev" className="overflow-visible py-64">
+                        <h2 className="max-w-7xl mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                            <TextType
+                                text="Modern web dev made for"
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={false}
+                                startOnVisible={true}
+                                loop={true}
+                            />
+                            <br />
+                            <TextType
+                                text="Immersive website user experience"
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={false}
+                                startOnVisible={true}
+                                loop={true}
+                            />
+                        </h2>
+
+                        <LayoutGrid cards={layoutImages} />
+                        <style jsx global>{`
+                            #web-dev > div.grid {
+                                gap: 50px !important;
+                                padding: 5rem !important;
+                            }
+                        `}</style>
+
+                        <div
+                            className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[95%] mx-auto gap-12 h-full items-center"
+                        >
+                            {webDevInfo.map((card) => (
+                                <Card key={card.id} card={card} />
+                            ))}
+                        </div>
+
+                        <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-[1px] h-[1px] bg-white/30"></div>
+                    </section>
+
                 </div>
 
                 <CTA />
