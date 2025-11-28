@@ -13,6 +13,53 @@ import Dither from "@/components/Dither";
 import ScrollReveal from "@/components/lightswind/scroll-reveal";
 import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+
+const data = [
+    {
+        category: "Artificial Intelligence",
+        title: "You can do more with AI.",
+        src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+        category: "Productivity",
+        title: "Enhance your productivity.",
+        src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+        category: "Product",
+        title: "Launching the new Apple Vision Pro.",
+        src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+
+    {
+        category: "Product",
+        title: "Maps for your iPhone 15 Pro Max.",
+        src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+        category: "iOS",
+        title: "Photography just got better.",
+        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+        category: "Hiring",
+        title: "Hiring for a Staff Software Engineer",
+        src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+];
+
+export function SuccessStories() {
+    const cards = data.map((card, index) => (
+        <Card key={card.src} card={card} index={index} />
+    ));
+
+    return (
+        <div className="w-full h-full">
+            <Carousel items={cards} />
+        </div>
+    );
+}
 
 export default function WebDevelopment() {
 
@@ -64,7 +111,7 @@ export default function WebDevelopment() {
         }
     ];
 
-    const Card = ({ card }) => {
+    const WebDevCard = ({ card }) => {
         return (
             <div
                 key={card.id}
@@ -179,7 +226,7 @@ export default function WebDevelopment() {
                     />
                 </div>
 
-                <div className="bg-bottom relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/layout-grid/gradient-bg.png)' }}>
+                <div className="bg-top relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/layout-grid/bg-gradient.png)' }}>
                     <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen"
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -280,13 +327,14 @@ export default function WebDevelopment() {
                             className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[95%] mx-auto gap-12 h-full items-center"
                         >
                             {webDevInfo.map((card) => (
-                                <Card key={card.id} card={card} />
+                                <WebDevCard key={card.id} card={card} />
                             ))}
                         </div>
 
                         <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-[1px] h-[1px] bg-white/30"></div>
+                        
+                        <SuccessStories />
                     </section>
-
                 </div>
 
                 <CTA />

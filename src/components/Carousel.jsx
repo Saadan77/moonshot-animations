@@ -25,7 +25,7 @@ const DEFAULT_ITEMS = [
       { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop2.png',
+    image: '/images/proficients/laptop1.png',
     id: 2
   },
   {
@@ -49,7 +49,7 @@ const DEFAULT_ITEMS = [
       { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop2.png',
+    image: '/images/proficients/laptop1.png',
     id: 4
   }
 ];
@@ -61,7 +61,7 @@ const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
-  baseWidth = '77%',
+  baseWidth = '75%',
   autoplay = true,
   autoplayDelay = 3000,
   pauseOnHover = false,
