@@ -66,25 +66,25 @@ export const Carousel = ({
 
   return (
     <div className="relative w-full">
-      <div className="mr-10 flex justify-end gap-2">
+      <div className="mr-10 flex justify-end max-xl:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
         <Link
           href="#"
           className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
         >
-          <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Recent Projects</span>
-          <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+          <span className="relative top-[0.5px] font-sora text-[20px] max-lg:text-[14px] max-sm:text-[12px] hover-group:bg-white hover-group:text-black">Recent Projects</span>
+          <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3 max-xl:p-2">
             <ArrowRight className="w-6 h-6 group-hover:text-black" />
           </span>
         </Link>
         <div className="mx-6 min-h-max bg-white w-px"></div>
         <button
-          className="relative z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+          className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollLeft}
           disabled={!canScrollLeft}>
           <IconArrowNarrowLeft className="h-8 w-8 text-white" />
         </button>
         <button
-          className="relative z-40 flex h-16 w-16 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+          className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollRight}
           disabled={!canScrollRight}>
           <IconArrowNarrowRight className="h-8 w-8 text-white" />

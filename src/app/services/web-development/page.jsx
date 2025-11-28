@@ -170,7 +170,7 @@ export default function WebDevelopment() {
                     </div>
 
                     {/* Industries Hero Section */}
-                    <div className="flex max-lg:flex-col items-center gap-8 mt-36">
+                    <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                         <div className="z-10 ml-20 max-lg:ml-5">
                             <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                                 <div className="flex items-center gap-[3px]">
@@ -192,31 +192,53 @@ export default function WebDevelopment() {
                                 </span>
                             </h1>
 
-                            <p className="font-light text-white/70 md:text-md lg:text-lg">
+                            <p className="font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
                                 From first ideas to final code, we design and build websites that show who you are online
                             </p>
                         </div>
 
                         <img
                             src="/images/services/web-development/hero.png"
-                            className="absolute top-20 -right-60 z-10"
+                            className="absolute top-20 -right-60 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
                             alt="Astronaut"
                             data-smoother-ignore
                         />
                     </div>
                 </div>
 
-                <div className="relative p-10 max-lg:p-1 z-10 justify-center flex">
+                <div className="relative p-10 max-lg:p-5 z-10 justify-center flex">
                     <img
                         src="/images/services/web-development/sec-section.png"
-                        className="h-auto w-3/4 object-cover rounded-4xl items-center"
+                        className="h-auto w-3/4 max-lg:w-full object-cover rounded-4xl items-center"
                         data-smoother-ignore
                     />
                 </div>
 
                 <div className="bg-top relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
                     <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div className="flex justify-end max-lg:justify-center">
+                            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                                <TextType
+                                    text="Human-centered"
+                                    typingSpeed={75}
+                                    pauseDuration={1500}
+                                    showCursor={false}
+                                    startOnVisible={true}
+                                    loop={true}
+                                />
+                                <br />
+                                <TextType
+                                    text="web development Studio"
+                                    typingSpeed={75}
+                                    pauseDuration={1500}
+                                    showCursor={false}
+                                    startOnVisible={true}
+                                    loop={true}
+                                />
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                             {/* Image column */}
                             <div className="relative z-10 col-span-1 flex items-center justify-center">
                                 <img
@@ -229,27 +251,8 @@ export default function WebDevelopment() {
                             </div>
 
                             {/* Text column */}
-                            <div className="col-span-1 text-white gap-4">
-                                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16">
-                                    <TextType
-                                        text="Human-centered"
-                                        typingSpeed={75}
-                                        pauseDuration={1500}
-                                        showCursor={false}
-                                        startOnVisible={true}
-                                        loop={true}
-                                    />
-                                    <br />
-                                    <TextType
-                                        text="web development Studio"
-                                        typingSpeed={75}
-                                        pauseDuration={1500}
-                                        showCursor={false}
-                                        startOnVisible={true}
-                                        loop={true}
-                                    />
-                                </h2>
-                                <div className="flex gap-16">
+                            <div className="col-span-1 text-white space-y-4">
+                                <div className="flex gap-16 max-lg:gap-8">
                                     <div className="w-2 bg-white mt-5 mb-10">|</div>
                                     <div
                                         className="tracking-[-0.03em]"
@@ -268,7 +271,6 @@ export default function WebDevelopment() {
                                         <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                     </span>
                                 </Link>
-
                             </div>
                         </div>
                     </section>
@@ -282,7 +284,7 @@ export default function WebDevelopment() {
                     </section>
 
                     <section id="web-dev" className="overflow-visible pt-64 pb-20">
-                        <h2 className="max-w-7xl mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                        <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                             <TextType
                                 text="Modern web dev made for"
                                 typingSpeed={75}
@@ -302,23 +304,30 @@ export default function WebDevelopment() {
                             />
                         </h2>
 
-                        <LayoutGrid cards={layoutImages} />
-                        <style jsx global>{`
-                            #web-dev > div.grid {
+                        <div id="web-dev-layout" className="my-20">
+                            <LayoutGrid cards={layoutImages} />
+                            <style jsx global>{`
+                            #web-dev #web-dev-layout > div.grid {
                                 gap: 50px !important;
                                 padding: 5rem !important;
                             }
+                            @media (max-width: 1024px) {
+                                #web-dev > div.grid {
+                                    padding: 25px !important;
+                                }
+                            }
                         `}</style>
+                        </div>
 
                         <div
-                            className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[95%] mx-auto gap-12 h-full items-center"
+                            className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[90%] mx-auto gap-12 h-full items-center"
                         >
                             {webDevInfo.map((card) => (
                                 <WebDevCard key={card.id} card={card} />
                             ))}
                         </div>
 
-                        <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-[1px] h-[1px] bg-white/30"></div>
+                        <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-px h-px bg-white/30"></div>
 
                         <h2 className="max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                             <TextType
@@ -340,7 +349,7 @@ export default function WebDevelopment() {
                             />
                         </h2>
 
-                        <div className="-mt-20">
+                        <div className="-mt-20 max-xl:mt-10">
                             <SuccessStories />
                         </div>
                     </section>
