@@ -38,7 +38,7 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative bg-black px-4 py-2 rounded-full border border-white/30 hover:border-white transition-colors duration-300", tabClassName)}
+            className={cn("relative bg-black px-8 py-2 rounded-full border border-white/30 hover:border-white transition-colors duration-300", tabClassName)}
             style={{
               transformStyle: "preserve-3d",
             }}>
@@ -83,7 +83,6 @@ export const FadeInDiv = ({
           key={tab.value}
           layoutId={tab.value}
           style={{
-            scale: 1 - idx * 0.1,
             top: hovering ? idx * -50 : 0,
             zIndex: -idx,
             opacity: idx < 3 ? 1 - idx * 0.1 : 0,

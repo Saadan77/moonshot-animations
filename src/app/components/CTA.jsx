@@ -1,3 +1,5 @@
+"use client";
+
 import LiquidEther from "@/components/LiquidEther";
 import Image from "next/image";
 
@@ -63,11 +65,12 @@ export default function CTA() {
             <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" data-smoother-ignore />
 
             {/* Video container with outline */}
-            <div className="relative min-h-[75vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center border border-white/30"
+            <div className="relative py-12 min-h-[80vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center gradient-border"
                 style={{
                     borderRadius: "1333.3px",
                     transform: 'translate3d(0, 0, 0)',
-                    isolation: 'isolate'
+                    isolation: 'isolate',
+                    mixBlendMode: 'screen',
                 }}>
                 <div className="flex flex-col items-center space-y-6 py-10">
                     <video
@@ -76,28 +79,25 @@ export default function CTA() {
                         muted
                         playsInline
                         className="h-full w-full object-cover rounded-full items-center"
-                        style={{
-                            mixBlendMode: 'screen',
-                        }}
                     >
                         <source src="/videos/bg-cta-webm.webm" type="video/mp4" />
                     </video>
 
 
-                    <p className="text-center text-3xl max-sm:text-xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    <p className="mt-16 text-center text-3xl max-sm:text-xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>
             </div>
 
             {/* Small prompt + button */}
-            <div className="-mt-12 relative z-10 flex flex-col items-center">
+            <div className="-mt-16 relative z-10 flex flex-col items-center">
                 <button
                     type="button"
-                    className="mt-6 h-12 w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
+                    className="mt-6 h-18 w-18 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
                     aria-label="Start your project"
                 >
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </button>
@@ -108,13 +108,13 @@ export default function CTA() {
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"
-                    className="w-full h-auto object-contain mt-20 opacity-40"
+                    className="w-full h-auto object-contain opacity-40 -mt-36"
                     draggable={false}
                 />
             </div>
 
             {/* Bottom large gradient */}
-            <div className="-mt-64 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="-mt-70 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
                     className="w-screen h-[200px] rounded-full blur-[120px] opacity-80 in-out"
                     style={{

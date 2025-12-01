@@ -3,10 +3,10 @@ import TextType from "@/components/TextType";
 
 export default function Proficients() {
     return (
-        <section className="px-10 items-center py-52 bg-[#00080F] relative z-50">
+        <section className="px-16 items-center py-36 bg-[#00080F] relative z-50">
             {/* Heading */}
             <div className="text-center relative z-10 space-y-8">
-                <p className="text-white/60 text-2xl tracking-tight font-poppins font-light">05 <span className="-mr-2">—</span> — Profecients</p>
+                <p className="text-white/60 text-xl tracking-tight font-poppins font-light">05 <span className="-mr-2">—</span> — Profecients</p>
                 <h2 className="text-white text-7xl max-sm:text-3xl tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         <TextType
@@ -32,14 +32,19 @@ export default function Proficients() {
                 </h2>
             </div>
 
-            <div className="flex justify-center mt-16">
-                <Carousel
-                    autoplay={true}
-                    autoplayDelay={3000}
-                    pauseOnHover={true}
-                    loop={true}
-                    round={false}
-                />
+            <div className="flex justify-center max-w-[85%] mx-auto mt-20">
+                <div className="absolute inset-0 top-0 flex justify-center pointer-events-none">
+                    <img src="/images/proficients/bg-performance.png" alt="Proficients Background" className="w-[95%] h-full object-contain object-center" />
+                </div>
+                <div className="relative z-10">
+                    <Carousel
+                        autoplay={true}
+                        autoplayDelay={3000}
+                        pauseOnHover={true}
+                        loop={true}
+                        round={false}
+                    />
+                </div>
             </div>
         </section>
     );

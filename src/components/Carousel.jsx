@@ -61,7 +61,7 @@ const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
-  baseWidth = '74%',
+  baseWidth = '100%',
   autoplay = true,
   autoplayDelay = 3000,
   pauseOnHover = false,
@@ -204,7 +204,7 @@ export default function Carousel({
 
               {/* Gradient - Bottom Left */}
               <div
-                className="absolute -left-32 -bottom-32 w-150 h-96 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                className="absolute -left-32 -bottom-32 w-100 h-150 rounded-full blur-[120px] opacity-60 pointer-events-none"
                 style={{
                   background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                 }}
@@ -212,9 +212,9 @@ export default function Carousel({
 
               {/* Gradient - Top Right */}
               <div
-                className="absolute -top-2 -right-2 w-150 h-96 rounded-full blur-[120px] opacity-50 pointer-events-none"
+                className="absolute -top-2 -right-2 w-100 h-96 rounded-full blur-[120px] opacity-100 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
+                  background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 100%)'
                 }}
               />
 
@@ -222,7 +222,7 @@ export default function Carousel({
               <div className="relative z-10 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Top Section */}
                 <div className="flex flex-col justify-between space-y-6 col-span-1">
-                  <h3 className="text-3xl lg:text-6xl font-bold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                  <h3 className="text-3xl lg:text-6xl font-semibold text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                     {item.title}
                   </h3>
 

@@ -31,7 +31,7 @@ export function Tags() {
     ];
 
     return (
-        <div className="relative flex flex-col max-w-xl mx-auto w-3/4">
+        <div className="relative flex flex-col max-w-xl ml-auto w-5/6">
             <p className='w-full font-sora mb-5 text-end text-white/70'>
                 (<span className='text-white'>Filter</span> By Tag)
             </p>
@@ -42,9 +42,8 @@ export function Tags() {
 
 const Portfolio = () => {
     return (
-        <section className="relative text-white py-52 bg-[#0a0f14] z-50">
-            <div className="max-w-[90%] mx-auto px-6 lg:px-8">
-
+        <section className="relative text-white py-52 bg-[#01070B] z-50">
+            <div className="max-w-[90%] mx-auto px-4">
                 {/* 3 Column Grid - 3 Rows */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Row 1, Col 1: Section Label + Heading */}
@@ -62,9 +61,9 @@ const Portfolio = () => {
                             </h2>
                         </div>
 
-                        <button className="max-w-fit group flex items-center gap-2 bg-[#041426] hover:bg-[#FA2889] border border-[#979797] text-white pl-6 pr-2 py-2 rounded-full transition-colors">
+                        <button className="max-w-fit group flex items-center gap-2 bg-[#041426] hover:bg-[#FA2889] border border-[#979797] text-white pl-8 pr-1 py-2 rounded-full transition-colors">
                             <span className='text-[20px] font-light' style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Explore All Works</span>
-                            <div className="bg-[#FA2889] group-hover:bg-white group-hover:text-black rounded-full p-4">
+                            <div className="bg-[#FA2889] group-hover:bg-white group-hover:text-black rounded-full p-3">
                                 <ArrowRight className="w-6 h-6" />
                             </div>
                         </button>

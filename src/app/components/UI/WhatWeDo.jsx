@@ -90,10 +90,8 @@ const WhatWeDo = () => {
               <div className="relative w-full z-30">
                 <div className="relative z-20 mx-auto w-[92%] pt-16">
                   <div className="flex items-center justify-between gap-4 text-white/70">
-                    <div className="text-nowrap text-[20px] flex items-center gap-2 font-poppins font-light">
-                      <span>03</span>
-                      <span className="opacity-70">—</span>
-                      <span>What we do</span>
+                    <div className="text-[20px] text-[#808080]">
+                        <span className='text-nowrap font-poppins font-light'>03 — What We Do</span>
                     </div>
                     <div className="relative w-[92%]">
                       <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">

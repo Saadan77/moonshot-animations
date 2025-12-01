@@ -158,3 +158,18 @@
   animation: in-out 30s linear infinite;
   animation-timing-function: linear;
 }
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.333px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 58%, rgba(255,255,255,1) 100%);
+    background-size: 200% 100%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 30%;
+}

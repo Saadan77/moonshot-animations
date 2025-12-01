@@ -62,7 +62,7 @@ const About2 = () => {
             <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8">
                 <div className='mb-36 space-y-12'>
                     {/* Top label */}
-                    <div className="flex items-center gap-3 text-xl text-[#808080]">
+                    <div className="flex items-center gap-3 text-[20px] text-[#808080]">
                         <span className='text-nowrap font-poppins font-light'>04 — The Inventive Minds</span>
                     </div>
 
@@ -75,7 +75,6 @@ const About2 = () => {
                             Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
                         </ScrollReveal>
                     </div>
-
                 </div>
 
                 {/* Core Discernments Title */}

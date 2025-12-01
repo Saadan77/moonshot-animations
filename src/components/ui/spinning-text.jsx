@@ -26,7 +26,10 @@ export function SpinningText({
   transition,
   variants,
   className,
-  style
+  style,
+  centerSrc,
+  centerAlt = "",
+  centerSize = 24
 }) {
   if (typeof children !== "string" && !Array.isArray(children)) {
     throw new Error("children must be a string or an array of strings")
@@ -60,23 +63,21 @@ export function SpinningText({
   }
 
   return (
-    <motion.div
-      className={cn("relative", className)}
-      style={{
-        ...style,
-      }}
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      transition={finalTransition}>
-      {letters.map((letter, index) => (
-        <motion.span
-          aria-hidden="true"
-          key={`${index}-${letter}`}
-          variants={itemVariants}
-          className="absolute top-1/2 left-1/2 inline-block"
-          style={
-            {
+    <div className={cn("relative", className)} style={{ ...style }}>
+      <motion.div
+        className="relative w-full h-full"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        transition={finalTransition}
+      >
+        {letters.map((letter, index) => (
+          <motion.span
+            aria-hidden="true"
+            key={`${index}-${letter}`}
+            variants={itemVariants}
+            className="absolute top-1/2 left-1/2 inline-block"
+            style={{
               "--index": index,
               "--total": letters.length,
               "--radius": radius,
@@ -88,12 +89,28 @@ export function SpinningText({
                 `,
 
               transformOrigin: "center"
-            }
-          }>
-          {letter}
-        </motion.span>
-      ))}
+            }}>
+            {letter}
+          </motion.span>
+        ))}
+      </motion.div>
+
+      {centerSrc && (
+        <div
+          aria-hidden
+          className="absolute left-1/2 top-1/2 flex items-center justify-center"
+          style={{
+            transform: 'translate(-50%, -50%)',
+            width: typeof centerSize === 'number' ? `${centerSize}px` : centerSize,
+            height: typeof centerSize === 'number' ? `${centerSize}px` : centerSize,
+            zIndex: 40
+          }}
+        >
+          <img src={centerSrc} alt={centerAlt} style={{ width: '100%', height: '100%', display: 'block' , scale: "150%" }} />
+        </div>
+      )}
+
       <span className="sr-only">{children}</span>
-    </motion.div>
+    </div>
   );
 }

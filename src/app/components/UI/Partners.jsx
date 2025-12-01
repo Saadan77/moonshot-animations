@@ -13,7 +13,9 @@ export default function Partners() {
                 {/* Top meta label */}
                 <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
                     <div className="font-sora flex justify-between tracking-widest text-[#808080] text-[20px]">
-                        <p className="text-nowrap">08 — Partners</p>
+                        <div className="text-[20px] text-[#808080]">
+                            <span className='text-nowrap font-poppins font-light'>08 — Partners</span>
+                        </div>
                         <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
                             Over <span className="text-white">10 Years</span> <br /> Partnership
                         </p>

@@ -39,7 +39,7 @@ const socials = [
         label: 'X (Twitter)',
         char: '𝕏',
         href: '#',
-        gradient: 'bg-gradient-to-br from-[#0EA5E9] via-[#2563EB] to-[#1E3A8A]',
+        gradient: 'bg-[linear-gradient(135deg,#000_0%,#000_50%,#000_100%)]',
     },
     {
         key: 'linkedin',
@@ -74,7 +74,10 @@ const Hero = () => {
                 </div>
 
                 {/* Main Content Container */}
-                <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible">
+                <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible"
+                    style={{
+                        mixBlendMode: 'screen',
+                    }}>
                     <div className='w-full relative'>
                         {/* Decorative Lines */}
                         <div className="max-md:hidden block">
@@ -129,11 +132,11 @@ const Hero = () => {
 
                     {/* Video Container - Center (overflow visible) */}
                     <div className="-mt-[350px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div
-                                className="w-[600px] h-[800px] rounded-full blur-[120px] opacity-80"
+                                className="w-[600px] h-[600px] rounded-full blur-[120px] opacity-90"
                                 style={{
-                                    background: 'linear-gradient(125.65deg, rgba(40, 100, 255, 0.6) 15.91%, rgba(250, 40, 137, 0.6) 52.98%, rgba(35, 141, 250, 0.6) 73.58%, rgba(62, 95, 249, 0.6) 107.45%)'
+                                    background: 'linear-gradient(126deg, rgba(40, 100, 255, 0.60) 15.91%, rgba(250, 40, 137, 0.60) 52.98%, rgba(35, 141, 250, 0.60) 73.58%, rgba(62, 95, 249, 0.60) 107.45%)'
                                 }}
                             />
                         </div>
@@ -142,7 +145,7 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="w-full h-full object-contain opacity-40"
+                            className="relative z-10 w-full h-full object-contain opacity-90"
                             style={{
                                 mixBlendMode: 'screen',
                             }}
@@ -163,7 +166,7 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[40%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-0'
+            <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[45%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-0'
                 }`}>
                 {socials.map((s) => (
                     <Link
@@ -228,7 +231,7 @@ const Hero = () => {
                     <div
                         className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
                         style={{
-                            background: 'linear-gradient(119.09deg, #ff83bc 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)'
+                            background: 'linear-gradient(119.09deg, #3928FF 0.54%, #FA2889 41.09%, rgba(35, 141, 250, 0.8) 70.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)'
 
                         }}
                     />
