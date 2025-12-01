@@ -398,12 +398,12 @@ export default function AboutUsPage() {
                 <p className="font-bold text-lg">About Us</p>
               </div>
 
-              <h1 className="font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-                <span className="text-end items-end max-lg:text-start max-lg:items-start block">
-                  <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
+                <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                  <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Purpose & Vision
                   </AuroraText>
                 </span>

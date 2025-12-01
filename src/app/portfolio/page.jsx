@@ -79,12 +79,12 @@ export default function Portfolio() {
                                 <p className="font-bold text-lg">Portfolio</p>
                             </div>
 
-                            <h1 className="font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+                            <h1 className="font-normal font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
                                 <AuroraText colors={['#ffffff', '#d1bd73']}>
                                     DESIGNING <br /> DREAMS SHOWCASING OUR{" "}
                                 </AuroraText>
-                                <span className="text-end items-end block w-full">
-                                    <AuroraText colors={['#03499F', '#D722AF', '#03499F']}>
+                                <span className="font-extralight text-end items-end block w-full">
+                                    <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                         CREATIVE JOURNEY
                                     </AuroraText>
                                 </span>

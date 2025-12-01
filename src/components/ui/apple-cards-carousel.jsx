@@ -66,7 +66,7 @@ export const Carousel = ({
 
   return (
     <div className="relative w-full">
-      <div className="mr-10 flex justify-end max-xl:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
+      <div className="mr-20 flex justify-end max-xl:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
         <Link
           href="#"
           className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
@@ -99,7 +99,7 @@ export const Carousel = ({
 
         <div
           className={cn(
-            "max-w-[85%] mx-auto flex flex-row justify-start gap-4 pl-4",
+            "max-w-[90%] mx-auto flex flex-row justify-start gap-4 pl-4",
           )}>
           {items.map((item, index) => (
             <motion.div
@@ -125,7 +125,7 @@ export const Carousel = ({
         </div>
       </div>
       {/* Pagination: progress bar */}
-      <div className="max-w-[85%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
+      <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
         <div className="h-full bg-white rounded-full" style={{ width: `${scrollProgress * 100}%`, transition: 'width 120ms linear' }} />
       </div>
     </div>

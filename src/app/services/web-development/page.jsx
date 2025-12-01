@@ -181,12 +181,12 @@ export default function WebDevelopment() {
                                 <p className="font-bold text-lg">Website Development</p>
                             </div>
 
-                            <h1 className="font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+                            <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Building <br /> Sites That Shape Your{" "}
                                 </AuroraText>
-                                <span className="text-end items-end max-lg:text-start max-lg:items-start block">
-                                    <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
+                                <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                                    <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                         Brand & Profile
                                     </AuroraText>
                                 </span>
@@ -206,20 +206,91 @@ export default function WebDevelopment() {
                     </div>
                 </div>
 
-                <div className="relative p-10 max-lg:p-5 z-10 justify-center flex">
+                <div className="relative mt-24 p-5 max-lg:p-5 z-10 justify-center flex">
                     <img
                         src="/images/services/web-development/sec-section.png"
-                        className="h-auto w-3/4 max-lg:w-full object-cover rounded-4xl items-center"
+                        className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
                         data-smoother-ignore
                     />
                 </div>
 
-                <div className="bg-top relative z-50 oerflow-visible" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
-                    <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-                        <div className="flex justify-end max-lg:justify-center">
-                            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                <div>
+                    <div className="bg-top" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
+                        <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
+                            <div className="flex justify-end max-lg:justify-center">
+                                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                                    <TextType
+                                        text="Human-centered"
+                                        typingSpeed={75}
+                                        pauseDuration={1500}
+                                        showCursor={false}
+                                        startOnVisible={true}
+                                        loop={true}
+                                    />
+                                    <br />
+                                    <TextType
+                                        text="web development Studio"
+                                        typingSpeed={75}
+                                        pauseDuration={1500}
+                                        showCursor={false}
+                                        startOnVisible={true}
+                                        loop={true}
+                                    />
+                                </h2>
+                            </div>
+
+                            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+                                {/* Image column */}
+                                <div className="relative z-10 col-span-1 flex items-center justify-center">
+                                    <img
+                                        src="/images/services/web-development/section-3-laptop.png"
+                                        alt="Laptop showcasing website design"
+                                        className="h-auto"
+                                        data-smoother-ignore
+                                        style={{ mixBlendMode: "screen" }}
+                                    />
+                                </div>
+
+                                {/* Text column */}
+                                <div className="col-span-1 text-white space-y-4">
+                                    <div className="flex gap-16 max-lg:gap-8">
+                                        <div className="w-2 bg-white mt-5 mb-10">|</div>
+                                        <div
+                                            className="tracking-[-0.03em]"
+                                        >
+                                            <ScrollReveal size="sm" enableBlur={false}>
+                                                Tech With Moonshot makes use of collaborative efforts to give you a good website development services. Additionally, our professional website developers give you exclusive insights how to make user friendly, interactive, secure and speedy websites. Moreover, our front-end developers and back-end developers know how to service your web development request in agile manner.
+                                            </ScrollReveal>
+                                        </div>
+                                    </div>
+                                    <Link
+                                        href="#"
+                                        className="relative z-10 group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                    >
+                                        <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Get in Touch</span>
+                                        <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                                            <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                                        </span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="h-screen">
+                            <img
+                                src="/images/services/web-development/section-4.png"
+                                className="h-full w-full object-cover"
+                                data-smoother-ignore
+                            />
+                        </section>
+                    </div>
+
+
+                    <div className="bg-no-repeat" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
+                        <section id="web-dev" className="pt-64 pb-20">
+                            <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                                 <TextType
-                                    text="Human-centered"
+                                    text="Modern web dev made for"
                                     typingSpeed={75}
                                     pauseDuration={1500}
                                     showCursor={false}
@@ -228,7 +299,7 @@ export default function WebDevelopment() {
                                 />
                                 <br />
                                 <TextType
-                                    text="web development Studio"
+                                    text="Immersive website user experience"
                                     typingSpeed={75}
                                     pauseDuration={1500}
                                     showCursor={false}
@@ -236,77 +307,10 @@ export default function WebDevelopment() {
                                     loop={true}
                                 />
                             </h2>
-                        </div>
 
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                            {/* Image column */}
-                            <div className="relative z-10 col-span-1 flex items-center justify-center">
-                                <img
-                                    src="/images/services/web-development/section-3-laptop.png"
-                                    alt="Laptop showcasing website design"
-                                    className="h-auto"
-                                    data-smoother-ignore
-                                    style={{ mixBlendMode: "screen" }}
-                                />
-                            </div>
-
-                            {/* Text column */}
-                            <div className="col-span-1 text-white space-y-4">
-                                <div className="flex gap-16 max-lg:gap-8">
-                                    <div className="w-2 bg-white mt-5 mb-10">|</div>
-                                    <div
-                                        className="tracking-[-0.03em]"
-                                    >
-                                        <ScrollReveal size="sm" enableBlur={false}>
-                                            Tech With Moonshot makes use of collaborative efforts to give you a good website development services. Additionally, our professional website developers give you exclusive insights how to make user friendly, interactive, secure and speedy websites. Moreover, our front-end developers and back-end developers know how to service your web development request in agile manner.
-                                        </ScrollReveal>
-                                    </div>
-                                </div>
-                                <Link
-                                    href="#"
-                                    className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                                >
-                                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Learn More About</span>
-                                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                                        <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                                    </span>
-                                </Link>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="h-screen">
-                        <img
-                            src="/images/services/web-development/section-4.png"
-                            className="h-full w-full object-cover"
-                            data-smoother-ignore
-                        />
-                    </section>
-
-                    <section id="web-dev" className="overflow-visible pt-64 pb-20">
-                        <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                            <TextType
-                                text="Modern web dev made for"
-                                typingSpeed={75}
-                                pauseDuration={1500}
-                                showCursor={false}
-                                startOnVisible={true}
-                                loop={true}
-                            />
-                            <br />
-                            <TextType
-                                text="Immersive website user experience"
-                                typingSpeed={75}
-                                pauseDuration={1500}
-                                showCursor={false}
-                                startOnVisible={true}
-                                loop={true}
-                            />
-                        </h2>
-
-                        <div id="web-dev-layout" className="my-20">
-                            <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
+                            <div id="web-dev-layout" className="my-20">
+                                <LayoutGrid cards={layoutImages} />
+                                <style jsx global>{`
                             #web-dev #web-dev-layout > div.grid {
                                 gap: 50px !important;
                                 padding: 5rem !important;
@@ -317,42 +321,43 @@ export default function WebDevelopment() {
                                 }
                             }
                         `}</style>
-                        </div>
+                            </div>
 
-                        <div
-                            className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[90%] mx-auto gap-12 h-full items-center"
-                        >
-                            {webDevInfo.map((card) => (
-                                <WebDevCard key={card.id} card={card} />
-                            ))}
-                        </div>
+                            <div
+                                className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[90%] mx-auto gap-12 h-full items-center"
+                            >
+                                {webDevInfo.map((card) => (
+                                    <WebDevCard key={card.id} card={card} />
+                                ))}
+                            </div>
 
-                        <div className="max-w-[85%] mx-auto my-20 min-w-[85%] text-white/30 w-px h-px bg-white/30"></div>
+                            <div className="max-w-[90%] mx-auto my-20 min-w-[90%] text-white/30 w-px h-px bg-white/30"></div>
 
-                        <h2 className="max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                            <TextType
-                                text="200+"
-                                typingSpeed={75}
-                                pauseDuration={1500}
-                                showCursor={false}
-                                startOnVisible={true}
-                                loop={true}
-                            />
-                            <br />
-                            <TextType
-                                text="Success Stories"
-                                typingSpeed={75}
-                                pauseDuration={1500}
-                                showCursor={false}
-                                startOnVisible={true}
-                                loop={true}
-                            />
-                        </h2>
+                            <h2 className="max-w-[90%] mx-auto text-4xl lg:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+                                <TextType
+                                    text="200+"
+                                    typingSpeed={75}
+                                    pauseDuration={1500}
+                                    showCursor={false}
+                                    startOnVisible={true}
+                                    loop={true}
+                                />
+                                <br />
+                                <TextType
+                                    text="Success Stories"
+                                    typingSpeed={75}
+                                    pauseDuration={1500}
+                                    showCursor={false}
+                                    startOnVisible={true}
+                                    loop={true}
+                                />
+                            </h2>
 
-                        <div className="-mt-20 max-xl:mt-10">
-                            <SuccessStories />
-                        </div>
-                    </section>
+                            <div className="-mt-20 max-xl:mt-10">
+                                <SuccessStories />
+                            </div>
+                        </section>
+                    </div>
 
                 </div>
 

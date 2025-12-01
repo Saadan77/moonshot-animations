@@ -146,3 +146,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes in-out {
+  0% { background-position: -100% 50%, -100% 50%; }
+  50% { background-position: 200% 50%, 200% 50%; }
+  100% { background-position: -100% 50%, -100% 50%; }
+}
+
+.in-out {
+  background-size: 200% 100%, 200% 100%;
+  animation: in-out 30s linear infinite;
+  animation-timing-function: linear;
+}

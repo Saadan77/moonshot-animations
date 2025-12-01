@@ -4,7 +4,7 @@ import TextType from "@/components/TextType";
 
 export default function Brand() {
     return (
-        <section className="bg-[#34A5DC] py-30 relative z-50 min-h-screen flex items-center justify-center">
+        <section className="bg-[#34A5DC] py-52 relative z-50 min-h-screen flex items-center justify-center">
             <h2 className="z-20 text-[260px] max-lg:text-[120px] max-sm:text-[60px] text-center tracking-[-3%] leading-[110px] md:leading-[220px] text-white uppercase font-semibold font-sora">
                 <TextType
                     text="WE"

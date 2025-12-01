@@ -2,7 +2,6 @@
 
 import { Tabs } from '@/components/ui/tabs';
 import React from 'react';
-import { GoArrowUpRight } from 'react-icons/go';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import { ArrowRight } from 'lucide-react';
 
@@ -77,9 +76,9 @@ const Portfolio = () => {
                         className="w-full h-full col-span-1"
                         heading={<p>Branding</p>}
                     >
-                        <div className="space-y-2 font-poppins font-light text-white/80">
-                            <p className="text-2xl">#BuildYourBrand</p>
-                            <p className="text-lg">#brandwithpurpose</p>
+                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                            <p>#BuildYourBrand</p>
+                            <p>#brandwithpurpose</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -98,9 +97,9 @@ const Portfolio = () => {
                         className="w-full h-full col-span-1"
                         heading={<p>UI/UX</p>}
                     >
-                        <div className="space-y-2 font-poppins font-light text-white/80">
-                            <p className="text-2xl">#Webdesign</p>
-                            <p className="text-lg">#Creativewebsolutions</p>
+                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                            <p>#Webdesign</p>
+                            <p>#Creativewebsolutions</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -111,9 +110,9 @@ const Portfolio = () => {
                         className="w-full h-full col-span-1"
                         heading={<p>Mobile App</p>}
                     >
-                        <div className="space-y-2 font-poppins font-light text-white/80">
-                            <p className="text-2xl">#Appdesign</p>
-                            <p className="text-lg">#Mobileapps</p>
+                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                            <p>#Appdesign</p>
+                            <p>#Mobileapps</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -123,9 +122,9 @@ const Portfolio = () => {
                         className="w-full h-full col-span-1"
                         heading={<p>Animations</p>}
                     >
-                        <div className="space-y-2 font-poppins font-light text-white/80">
-                            <p className="text-2xl">#Creativemotion</p>
-                            <p className="text-lg">#Animateddesign</p>
+                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                            <p>#Creativemotion</p>
+                            <p>#Animateddesign</p>
                         </div>
                     </DirectionAwareHover>
 
@@ -139,9 +138,9 @@ const Portfolio = () => {
                         className="w-full h-full col-span-1"
                         heading={<p>Logo Design</p>}
                     >
-                        <div className="space-y-2 font-poppins font-light text-white/80">
-                            <p className="text-2xl">#Logodesign</p>
-                            <p className="text-lg">#Brandidentity</p>
+                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                            <p>#Logodesign</p>
+                            <p>#Brandidentity</p>
                         </div>
                     </DirectionAwareHover>
                 </div>

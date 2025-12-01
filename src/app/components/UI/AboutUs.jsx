@@ -31,7 +31,7 @@ const AboutUs = () => {
     return (
         <section className="relative isolate w-full overflow-visible bg-[#00060b] text-white z-50">
             {/* LiquidEther Background */}
-            <div className='block max-sm:hidden'>
+            {/* <div className='block max-sm:hidden'>
                 <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
                     <LiquidEther
                         colors={['#5227FF', '#FF9FFC', '#B19EEF']}
@@ -51,7 +51,7 @@ const AboutUs = () => {
                         autoRampDuration={0.6}
                     />
                 </div>
-            </div>
+            </div> */}
             <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
                 <div className='pb-24 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
@@ -96,10 +96,11 @@ const AboutUs = () => {
             <div className="relative">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div
-                        className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                        className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
                         style={{
                             background:
                                 "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                            backgroundSize: '200% 100%, 200% 100%'
                         }}
                     />
                 </div>

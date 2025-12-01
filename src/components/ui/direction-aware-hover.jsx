@@ -98,7 +98,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute top-8 left-4 z-40 text-2xl font-semibold font-poppins")}
+            className={cn("absolute top-12 left-8 z-40 text-3xl font-semibold font-poppins")}
           >
             {heading}
           </motion.div>
@@ -118,7 +118,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute bottom-4 right-8 z-40", childrenClassName)}
+            className={cn("absolute bottom-12 right-12 z-40 text-right", childrenClassName)}
           >
             {children}
           </motion.div>
@@ -132,22 +132,21 @@ const variants = {
   initial: {
     x: 0,
   },
-
   exit: {
     x: 0,
     y: 0,
   },
   top: {
-    y: 20,
+    y: 0,
   },
   bottom: {
-    y: -20,
+    y: 0,
   },
   left: {
-    x: 20,
+    x: 0,
   },
   right: {
-    x: -20,
+    x: 0,
   },
 };
 
@@ -163,19 +162,19 @@ const textVariants = {
     opacity: 0,
   },
   top: {
-    y: -20,
+    y: 0,
     opacity: 1,
   },
   bottom: {
-    y: 2,
+    y: 0,
     opacity: 1,
   },
   left: {
-    x: -2,
+    x: 0,
     opacity: 1,
   },
   right: {
-    x: 20,
+    x: 0,
     opacity: 1,
   },
 };

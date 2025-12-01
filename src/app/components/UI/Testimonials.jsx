@@ -1,25 +1,6 @@
 "use client";
 
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
-import { DottedMap } from '@/components/ui/dotted-map';
-
-const markers = [
-    { lat: 40.7128, lng: -74.006, size: 0.3 }, // New York
-    { lat: 34.0522, lng: -118.2437, size: 0.3 }, // Los Angeles
-    { lat: 51.5074, lng: -0.1278, size: 0.3 }, // London
-    { lat: -33.8688, lng: 151.2093, size: 0.3 }, // Sydney
-    { lat: 48.8566, lng: 2.3522, size: 0.3 }, // Paris
-    { lat: 35.6762, lng: 139.6503, size: 0.3 }, // Tokyo
-    { lat: 55.7558, lng: 37.6176, size: 0.3 }, // Moscow
-    { lat: 39.9042, lng: 116.4074, size: 0.3 }, // Beijing
-    { lat: 28.6139, lng: 77.209, size: 0.3 }, // New Delhi
-    { lat: -23.5505, lng: -46.6333, size: 0.3 }, // São Paulo
-    { lat: 1.3521, lng: 103.8198, size: 0.3 }, // Singapore
-    { lat: 25.2048, lng: 55.2708, size: 0.3 }, // Dubai
-    { lat: 52.52, lng: 13.405, size: 0.3 }, // Berlin
-    { lat: 19.4326, lng: -99.1332, size: 0.3 }, // Mexico City
-    { lat: -26.2041, lng: 28.0473, size: 0.3 }, // Johannesburg
-];
 
 export default function Testimonials() {
     const testimonials = [
@@ -28,21 +9,21 @@ export default function Testimonials() {
             designation: 'President, Newzky Jsc',
             quote:
                 '"Tech With Moonshot strategists guided us along a clear path to digital success. Their product owner crafted a detailed plan with remarkable performance."',
-            src: '/images/testimonial.png',
+            src: '/images/testimonial-image.png',
         },
         {
             name: 'Sofia Martinez',
             designation: 'Head of Product, VeloPay',
             quote:
                 '"Their team embedded seamlessly with ours, simplifying roadmaps and shipping on time. The results exceeded our projections and expectations."',
-            src: '/images/testimonial.png',
+            src: '/images/testimonial-image.png',
         },
         {
             name: 'James Patel',
             designation: 'CTO, Nimbus Cloudware',
             quote:
                 '"From UX audits to production rollout, every step felt intentional. The collaboration unlocked speed without sacrificing quality."',
-            src: '/images/testimonial.png',
+            src: '/images/testimonial-image.png',
         },
     ];
 
@@ -52,9 +33,10 @@ export default function Testimonials() {
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* DottedMap Background */}
-            <div className="absolute inset-0 opacity-30 pointer-events-none scale-140">
+            <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute inset-0" />
-                <DottedMap markers={markers} />
+                {/* <DottedMap markers={markers} /> */}
+                <img src="/images/testimonials-map.png" alt="Dotted Map" className="w-full h-full object-cover" />
             </div>
 
             {/* Content */}

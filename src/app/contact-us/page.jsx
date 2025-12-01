@@ -109,12 +109,12 @@ export default function ContactUs() {
                                 <p className="font-bold text-lg">Contact</p>
                             </div>
 
-                            <h1 className="font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
+                            <h1 className="font-normal font-sora mb-4 text-[60px] max-xl:text-[40px] max-sm:text-[30px] uppercase tracking-tight leading-none text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Let’s Start a <br /> Conversation Connect{" "}
                                 </AuroraText>
-                                <span className="text-end max-md:text-start max-md:items-start items-end block w-full">
-                                    <AuroraText colors={["#03499F", "#D722AF", "#03499F"]}>
+                                <span className="font-extralight text-end max-md:text-start max-md:items-start items-end block w-full">
+                                    <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                         With Our Team
                                     </AuroraText>
                                 </span>

@@ -52,7 +52,7 @@ export const Tabs = ({
                 )} />
             )}
 
-            <span className="relative text-white whitespace-nowrap">
+            <span className="relative text-white text-xl whitespace-nowrap">
               {tab.title}
             </span>
           </button>
