@@ -193,7 +193,7 @@ export default function WebDevelopment() {
                 </div>
 
                 <div>
-                    <div className="bg-top" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
+                    <div className="bg-top" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
                         <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
                             <div className="flex justify-end max-lg:justify-center">
                                 <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
@@ -264,7 +264,7 @@ export default function WebDevelopment() {
                     </div>
 
 
-                    <div className="bg-no-repeat" style={{ backgroundImage: 'url(/images/services/web-development/bg-gradient.png)' }}>
+                    <div className="bg-no-repeat" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
                         <section id="web-dev" className="pt-64 pb-20">
                             <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                                 <TextType
