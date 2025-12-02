@@ -5,6 +5,7 @@ import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import DecorativeLines from '../DecorativeLines';
 
 const socials = [
     {
@@ -116,7 +117,6 @@ const Hero = () => {
                                 </h1>
                             </div>
 
-                            {/* Right Side - Experts Text */}
                             <div className="text-end max-sm:text-center">
                                 <h1
                                     className="text-[200px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"

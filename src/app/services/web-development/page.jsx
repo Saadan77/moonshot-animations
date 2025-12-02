@@ -14,6 +14,7 @@ import ScrollReveal from "@/components/lightswind/scroll-reveal";
 import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import DecorativeLines from "@/app/components/DecorativeLines";
 
 const data = [
     {
@@ -144,30 +145,7 @@ export default function WebDevelopment() {
                     />
 
                     {/* Decorative Lines */}
-                    <div className="max-md:hidden block">
-                        {[
-                            '-5%',
-                            '15%',
-                            '35%',
-                            '60%',
-                            '85%',
-                            '105%'
-                        ].map((left) => (
-                            <div
-                                key={left}
-                                style={{ left }}
-                                className="absolute top-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50"
-                            >
-                                <div
-                                    className="w-px h-[150vh]"
-                                    style={{
-                                        background:
-                                            'linear-gradient(to bottom, rgba(187,187,187,0) 0%, rgba(187,187,187,0.12) 12%, rgba(187,187,187,0.12) 88%, rgba(187,187,187,0) 100%)'
-                                    }}
-                                />
-                            </div>
-                        ))}
-                    </div>
+                    <DecorativeLines />
 
                     {/* Industries Hero Section */}
                     <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
@@ -319,6 +297,10 @@ export default function WebDevelopment() {
                                 #web-dev > div.grid {
                                     padding: 25px !important;
                                 }
+                            }
+                            /* Hide the absolute overlay inside LayoutGrid cards */
+                            #web-development #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                display: none !important;
                             }
                         `}</style>
                             </div>

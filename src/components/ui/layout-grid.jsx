@@ -28,13 +28,35 @@ export const LayoutGrid = ({ cards }) => {
 const ImageComponent = ({ card }) => {
   return (
     <div className="relative h-full w-full">
-      <motion.img
-        layoutId={`image-${card.id}-image`}
-        src={card.thumbnail}
-        className={cn("object-cover object-top rounded-lg h-full w-full")}
-        alt="thumbnail"
-        style={{opacity: "0.8"}}
-      />
+      {(() => {
+        const src = card.video || card.src || card.thumbnail;
+        const isVideo = !!card.video || /\.(mp4|webm|mov|ogg|m4v)(\?|$)/i.test(src || "");
+        if (isVideo) {
+          return (
+            <motion.video
+              layoutId={`image-${card.id}-image`}
+              src={card.video || src}
+              poster={card.thumbnail}
+              className={cn("object-cover object-top rounded-lg h-full w-full")}
+              style={{ opacity: "0.8" }}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          );
+        }
+
+        return (
+          <motion.img
+            layoutId={`image-${card.id}-image`}
+            src={card.thumbnail || src}
+            className={cn("object-cover object-top rounded-lg h-full w-full")}
+            alt={card.title || "thumbnail"}
+            style={{ opacity: "0.8" }}
+          />
+        );
+      })()}
       <div
         className="absolute bottom-0 left-0 right-0 text-white p-4 font-semibold rounded-b-lg"
         style={{

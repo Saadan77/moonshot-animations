@@ -9,10 +9,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
-  containerClass = "mx-auto max-w-6xl px-6 py-24 md:py-28 lg:py-32",
+  containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
   nameClass = "text-2xl font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
-  quoteClass = "mb-8 text-4xl leading-tight text-white/70"
+  quoteClass = "mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
 }) => {
   const [active, setActive] = useState(0);
 
@@ -44,8 +44,8 @@ export const AnimatedTestimonials = ({
     <div>
       <div
         className={containerClass}>
-        <div className="relative grid grid-cols-1 md:grid-cols-3 max-lg:gap-24 max-xl:gap-36 gap-48 items-center">
-          <div className="hidden md:block relative h-full w-full">
+        <div className="relative grid grid-cols-1 max-xl:grid-cols-2 md:grid-cols-3 max-2xl:gap-24 gap-48 items-center">
+          <div className="hidden md:block relative h-full w-full col-span-1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonials[active].src}
@@ -76,7 +76,7 @@ export const AnimatedTestimonials = ({
                 className="absolute inset-0 origin-bottom"
               >
                 {/* Spinning ring text positioned top-left of the portrait */}
-                <div className="absolute -left-52 top-0 z-30 pointer-events-none md:block hidden w-44 h-44">
+                <div className="absolute -left-44 top-0 z-30 pointer-events-none lg:block hidden w-44 h-44">
                   <SpinningText
                     duration={12}
                     radius={6}
@@ -93,7 +93,7 @@ export const AnimatedTestimonials = ({
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
                   draggable={false}
-                  className="w-full h-full object-cover object-center overflow-visible scale-125"
+                  className="w-full h-full max-md:w-3/4 max-md:h-auto object-cover object-center overflow-visible scale-125"
                   data-smoother-ignore
                 />
               </motion.div>
