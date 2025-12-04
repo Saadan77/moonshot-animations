@@ -63,13 +63,13 @@ const WhatWeDo = () => {
               <div className="relative w-full z-30">
                 <div className="relative z-20 mx-auto w-[92%] pt-16">
                   <div className="flex items-center justify-between gap-4 text-white/70">
-                    <div className="text-[20px] text-[#808080]">
-                        <span className='text-nowrap font-poppins font-light'>03 — What We Do</span>
+                    <div className="text-[20px] max-sm:text-[15px] text-[#808080]">
+                      <span className='text-nowrap font-poppins font-light'>03 — What We Do</span>
                     </div>
                     <div className="relative w-[92%]">
                       <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">
                         {categories.map((item, cidx) => (
-                          <div key={item.name} className="flex items-center">
+                          <div key={item.name} className="max-sm:text-[15px] flex items-center">
                             <span
                               className={`px-1 whitespace-nowrap ${activeIdx === cidx ? "text-white" : "text-white/55"}`}
                             >
@@ -112,37 +112,44 @@ const WhatWeDo = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1%_100%,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none" />
               </div>
               {/* Title & Subtitle */}
-              <div className="ml-20 max-sm:ml-1 max-sm:mb-10 relative z-10">
-                <div className="tracking-[-0.5em] text-left max-sm:text-center">
-                  <Shuffle
-                    key={`${cat.name}-title`}
-                    text={cat.title}
-                    className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[100px]"
-                    tag="span"
-                    textAlign="left"
-                    shuffleDirection="left"
-                    duration={0.5}
-                    stagger={0.04}
-                    shuffleTimes={2}
-                    style={{ fontFamily: "var(--font-sora), sans-serif" }}
-                  />
-                  {cat.subtitle && (
-                    <>
-                      <br />
-                      <Shuffle
-                        key={`${cat.name}-subtitle`}
-                        text={cat.subtitle}
-                        className="block text-[42px] max-sm:text-[30px] md:text-[92px] lg:text-[100px]"
-                        tag="span"
-                        textAlign="left"
-                        shuffleDirection="left"
-                        duration={0.5}
-                        stagger={0.04}
-                        shuffleTimes={2}
-                        style={{ fontFamily: "var(--font-sora), sans-serif" }}
-                      />
-                    </>
-                  )}
+              <div className="ml-20 max-xl:ml-10 max-sm:ml-5 max-sm:mb-5 relative z-10">
+                <div className="lg:tracking-[-0.5em] text-left">
+                  <div className="hidden lg:block">
+                    <Shuffle
+                      key={`${cat.name}-title`}
+                      text={cat.title}
+                      className="max-sm:text-[20px] md:text-[80px] lg:text-[100px]"
+                      tag="span"
+                      textAlign="left"
+                      shuffleDirection="left"
+                      duration={0.5}
+                      stagger={0.04}
+                      shuffleTimes={2}
+                      style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                    />
+                  </div>
+                  <p className="block lg:hidden font-sora max-sm:text-[20px] md:text-[80px] lg:text-[100px]">{cat.title}</p>
+
+                  <div className="hidden lg:block">
+                    {cat.subtitle && (
+                      <>
+                        <br />
+                        <Shuffle
+                          key={`${cat.name}-subtitle`}
+                          text={cat.subtitle}
+                          className="max-sm:text-[20px] md:text-[80px] lg:text-[100px]"
+                          tag="span"
+                          textAlign="left"
+                          shuffleDirection="left"
+                          duration={0.5}
+                          stagger={0.04}
+                          shuffleTimes={2}
+                          style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                        />
+                      </>
+                    )}
+                  </div>
+                  <p className="block lg:hidden font-sora max-sm:text-[20px] md:text-[80px] lg:text-[100px]">{cat.subtitle}</p>
                 </div>
               </div>
             </div>

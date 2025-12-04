@@ -142,7 +142,7 @@ const Portfolio = () => {
                 {/* 3 Column Grid - 3 Rows */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Row 1, Col 1: Section Label + Heading */}
-                    <div className="flex flex-col justify-between space-y-6 col-span-1">
+                    <div className="flex flex-col justify-between space-y-6">
                         <div className='space-y-6'>
                             <h2 className="text-[#808080] text-[20px]">06 — Portfolio</h2>
 
@@ -167,7 +167,7 @@ const Portfolio = () => {
                     {/* Row 1, Col 2: First Portfolio Image */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-1.png"
-                        className="w-full h-full col-span-1"
+                        className="w-full h-full"
                         heading={<p>Branding</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
@@ -177,18 +177,18 @@ const Portfolio = () => {
                     </DirectionAwareHover>
 
                     {/* Row 1, Col 3: Filter Tags */}
-                    <div className="flex flex-col justify-start gap-3 col-span-1">
+                    <div className="flex flex-col justify-start gap-3">
                         <Tags />
                     </div>
 
 
                     {/* Row 2, Col 3: Empty Spacer */}
-                    <div className="col-span-1"></div>
+                    <div className="block max-lg:hidden lg:col-span-1"></div>
 
                     {/* Row 2, Col 1: Portfolio Image 2 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-2.png"
-                        className="w-full h-full col-span-1"
+                        className="w-full h-full"
                         heading={<p>UI/UX</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
@@ -201,7 +201,7 @@ const Portfolio = () => {
                     {/* Row 2, Col 2: Portfolio Image 3 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-3.png"
-                        className="w-full h-full col-span-1"
+                        className="w-full h-full"
                         heading={<p>Mobile App</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
@@ -213,7 +213,7 @@ const Portfolio = () => {
                     {/* Row 3, Col 1: Portfolio Image 4 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-4.png"
-                        className="w-full h-full col-span-1"
+                        className="w-full h-full"
                         heading={<p>Animations</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
@@ -224,12 +224,12 @@ const Portfolio = () => {
 
 
                     {/* Row 3, Col 2: Empty Spacer */}
-                    <div className="col-span-1"></div>
+                    <div className="block max-lg:hidden lg:col-span-1"></div>
 
                     {/* Row 3, Col 2: Portfolio Image 5 */}
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-5.png"
-                        className="w-full h-full col-span-1"
+                        className="w-full h-full"
                         heading={<p>Logo Design</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">

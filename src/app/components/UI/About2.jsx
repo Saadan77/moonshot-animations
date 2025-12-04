@@ -102,7 +102,7 @@ const About2 = () => {
                         />
                     </div>
                     {/* Cards Container */}
-                    <div className='max-w-[80%] max-md:max-w-full relative mx-auto z-10 -mt-[100vh]'>
+                    <div className='max-w-[80%] max-2xl:max-w-[95%] max-md:max-w-full relative mx-auto z-10 max-md:-mt-[95vh] -mt-[100vh]'>
                         {/* Card 01 */}
                         <div className="relative flex justify-end mb-10 md:mb-[-120px]">
                             <ParallaxCard
@@ -110,7 +110,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 min-w-[42%] max-w-[42%] max-md:max-w-full max-md:min-w-full min-h-[600px]',
+                                    'p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:max-w-full max-md:min-w-full min-h-[600px]',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -147,7 +147,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="relative z-10 text-2xl lg:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Forty Three Leading Digital Performance Strategists Works With Tech With Moonshot." typingSpeed={15}
@@ -164,7 +164,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -201,7 +201,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-100 relative z-10 text-2xl lg:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-100 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="It Is Independent Google Partner (Accredited By Google)" typingSpeed={15}
@@ -212,13 +212,13 @@ const About2 = () => {
                         </div>
 
                         {/* Card 03 */}
-                        <div className="relative flex justify-end mb-10 max-sm:mt-0" style={{ marginTop: "-250px" }}>
+                        <div className="relative flex justify-end mb-10 -mt-[250px] max-sm:mt-0">
                             <ParallaxCard
                                 offset={120}
                                 className={[
                                     'relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -255,7 +255,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="relative z-10 text-2xl lg:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Tech With Moonshot Is Trusted With Some Of World's Leading Digital Brands." typingSpeed={15}
@@ -273,7 +273,7 @@ const About2 = () => {
                                 className={[
                                     'relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden',
                                     'shadow-[0_30px_120px_rgba(0,0,0,0.75)]',
-                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-md:min-w-full max-md:max-w-full',
+                                    'p-8 min-h-[600px] min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full',
                                 ].join(' ')}
                             >
                                 {/* Gradient - Top Right */}
@@ -310,7 +310,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-60 relative z-10 text-2xl lg:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="mt-60 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year." typingSpeed={15}

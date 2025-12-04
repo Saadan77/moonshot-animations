@@ -200,21 +200,22 @@ const Hero = () => {
                         </span>
                     </Link>
                 ))}
-                {/* Reduced motion: users preferring reduced motion see instant fill (optional) */}
-                <style jsx>{`
-                    @media (prefers-reduced-motion: reduce) {
-                    .group span:first-child {
-                        transition: none;
-                    }
-                    .group:hover span:first-child {
-                        top: 0;
-                    }
-                    .group:hover .relative.z-10 {
-                        transition: none;
-                    }
-                    }
-                `}</style>
             </div>
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                    @media (prefers-reduced-motion: reduce) {
+                        .group span:first-child {
+                            transition: none;
+                        }
+                        .group:hover span:first-child {
+                            top: 0;
+                        }
+                        .group:hover .relative.z-10 {
+                            transition: none;
+                        }
+                    }
+                `
+            }} />
 
             {/* Bottom div */}
             <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-[232px] max-sm:-mt-[150px]">

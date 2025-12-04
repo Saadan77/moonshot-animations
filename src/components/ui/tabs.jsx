@@ -27,7 +27,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row flex-wrap items-center justify-end perspective-[1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar gap-2",
+          "flex flex-row flex-wrap items-center justify-end perspective-[1000px] relative sm:overflow-visible no-visible-scrollbar gap-2",
           containerClassName
         )}>
         {propTabs.map((tab, idx) => (

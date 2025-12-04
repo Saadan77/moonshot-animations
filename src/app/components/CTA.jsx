@@ -34,7 +34,7 @@ export default function CTA() {
             </div>
 
             {/* LiquidEther Background */}
-            <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
+            {/* <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
                 <LiquidEther
                     colors={['#5227FF', '#FF9FFC', '#B19EEF']}
                     mouseForce={20}
@@ -52,7 +52,7 @@ export default function CTA() {
                     autoResumeDelay={3000}
                     autoRampDuration={0.6}
                 />
-            </div>
+            </div> */}
 
             {/* Heading */}
             <div className="text-center relative z-10">
@@ -65,7 +65,7 @@ export default function CTA() {
             <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" data-smoother-ignore />
 
             {/* Video container with outline */}
-            <div className="relative py-12 min-h-[80vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] z-10 -mt-10 flex items-center justify-center gradient-border"
+            <div className="relative py-12 min-h-[80vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
                 style={{
                     borderRadius: "1333.3px",
                     transform: 'translate3d(0, 0, 0)',
@@ -91,13 +91,13 @@ export default function CTA() {
             </div>
 
             {/* Small prompt + button */}
-            <div className="-mt-16 relative z-10 flex flex-col items-center">
+            <div className="-mt-16 max-sm:-mt-13 relative z-10 flex flex-col items-center">
                 <button
                     type="button"
-                    className="mt-6 h-18 w-18 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
+                    className="mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
                     aria-label="Start your project"
                 >
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </button>
@@ -108,13 +108,13 @@ export default function CTA() {
                 <img
                     src="/images/cta-unique.png"
                     alt="Unique typography"
-                    className="w-full h-auto object-contain opacity-40 -mt-36"
+                    className="w-full h-auto object-contain opacity-40 -mt-36 max-sm:-mt-20"
                     draggable={false}
                 />
             </div>
 
             {/* Bottom large gradient */}
-            <div className="-mt-70 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="-mt-70 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
                     className="w-screen h-[200px] rounded-full blur-[120px] opacity-80 in-out"
                     style={{

@@ -15,6 +15,11 @@ export const AnimatedTestimonials = ({
   quoteClass = "mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
 }) => {
   const [active, setActive] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -32,7 +37,7 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+    return isClient ? Math.floor(Math.random() * 21) - 10 : 0;
   };
 
   const total = testimonials ? testimonials.length : 0;

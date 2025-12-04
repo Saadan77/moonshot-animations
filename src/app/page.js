@@ -8,24 +8,20 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Portfolio from "./components/UI/Portfolio";
 import Proficients from "./components/UI/Proficients";
-import SmoothScroll from "./components/SmoothScroll";
-
 
 export default function Home() {
   return (
     <>
-      {/* <SmoothScroll> */}
-        <Hero />
-        <AboutUs />
-        <WhatWeDo />
-        <About2 />
-        <Proficients />
-        <Portfolio />
-        <Brand />
-        <Partners />
-        <CTA />
-        <Footer />
-      {/* </SmoothScroll> */}
+      <Hero />
+      <AboutUs />
+      <WhatWeDo />
+      <About2 />
+      <Proficients />
+      <Portfolio />
+      <Brand />
+      <Partners />
+      <CTA />
+      <Footer />
     </>
   );
 }

@@ -8,9 +8,9 @@ export default function Footer() {
         >
             <div className="relative z-10 mx-auto max-w-[90%] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                 {/* Main Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-8">
+                <div className="grid grid-cols-1 lg:grid-cols-8 max-lg:gap-16">
                     {/* Left Column - Location & Inquiry */}
-                    <div className="space-y-32 lg:col-span-3">
+                    <div className="space-y-32 max-lg:space-y-16 lg:col-span-3">
                         <div className="space-y-8">
                             {/* Location */}
                             <div>
@@ -30,13 +30,13 @@ export default function Footer() {
                             <img
                                 src="/images/primary-logo.png"
                                 alt="Moonshot Tech"
-                                className="w-3/4 h-auto"
+                                className="w-3/4 max-lg:w-1/2 h-auto"
                             />
                         </div>
                     </div>
 
                     {/* Middle Column - Links */}
-                    <div className="col-span-2 space-y-32">
+                    <div className="col-span-2 space-y-32 max-lg:space-y-16">
                         {/* Inquiry */}
                         <div>
                             <p className="text-xl uppercase tracking-wider text-white/50 mb-3">
@@ -83,7 +83,7 @@ export default function Footer() {
 
                     {/* Logo + Tagline + Newsletter */}
                     <div className="col-span-2">
-                        <div className="space-y-24">
+                        <div className="space-y-24 max-lg:space-y-12">
                             {/* Company Title */}
                             <div className="space-y-12">
                                 <div>
@@ -196,15 +196,16 @@ export default function Footer() {
                                     <span className="text-white/90">Newsletter</span>
                                 </div>
 
-                                <form className="flex flex-col sm:flex-row gap-3 max-w-md">
+                                <form className="flex flex-row gap-3 max-w-md">
                                     <input
                                         type="email"
                                         placeholder="your email"
-                                        className="w-full sm:flex-1 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-colors"
+                                        className="w-full sm:flex-1 px-4 p-2.5 rounded-full bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-colors"
+                                        suppressHydrationWarning
                                     />
                                     <button
                                         type="submit"
-                                        className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors flex items-center justify-center gap-2"
+                                        className="sm:w-auto p-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors"
                                     >
                                         <svg
                                             width="16"
@@ -229,8 +230,8 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-16 pt-8 border-t border-white/10">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-lg text-white/50">
-                        <p className="col-span-1 max-sm:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-white/50">
+                        <p className="col-span-1 max-lg:col-span-2 max-lg:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
 
                         <div className="col-span-2 space-x-4 flex justify-center">
                             <a href="#" className="hover:text-white/70 transition-colors">
@@ -245,7 +246,7 @@ export default function Footer() {
                         </div>
 
                         {/* Scroll to Top */}
-                        <div className="col-span-1 flex justify-end">
+                        <div className="col-span-1 max-lg:col-span-2 flex justify-end max-lg:justify-center">
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             className="col-span-1 h-8 w-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"

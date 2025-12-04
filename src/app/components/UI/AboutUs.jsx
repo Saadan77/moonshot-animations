@@ -69,9 +69,10 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <section className="relative isolate w-full overflow-visible bg-[#00060b] text-white z-50">
+        <section className="relative isolate w-full bg-[#00060b] text-white z-50">
             <div id="smoke" ref={smokeRef}></div>
-            <style jsx global>{`
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 #smoke {
                     position: absolute;
                     top: 0;
@@ -86,11 +87,6 @@ const AboutUs = () => {
                     position: absolute;
                     width: 50px;
                     height: 50px;
-                    /* background: radial-gradient(
-                        circle,
-                        rgba(255, 255, 255, 1) 0%,
-                        rgba(0, 0, 0, 0) 80%
-                    ); */
                     background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
                     pointer-events: none;
                     animation: ripple 2s ease-out forwards;
@@ -106,7 +102,8 @@ const AboutUs = () => {
                         opacity: 0;
                     }
                 }
-            `}</style>
+                `
+            }} />
 
             <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
                 <div className='pb-24 flex items-start max-md:flex-col'>

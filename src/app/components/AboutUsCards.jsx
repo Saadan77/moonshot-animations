@@ -113,7 +113,7 @@ export default function AboutUsCards() {
 
     return (
         <div className="relative z-10 my-10 overflow-visible mt-20">
-            <div className="grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-2 2xl:grid-cols-4">
+            <div className="grid grid-cols-1 justify-items-center gap-22 lg:grid-cols-2 2xl:grid-cols-4">
                 {cards.map((c, i) => (
                     <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
                         <PinContainer
