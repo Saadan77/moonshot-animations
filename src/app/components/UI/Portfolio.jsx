@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs } from '@/components/ui/tabs';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import { ArrowRight } from 'lucide-react';
 
@@ -41,9 +41,104 @@ export function Tags() {
 }
 
 const Portfolio = () => {
+    const containerRef = useRef(null);
+    const innerRef = useRef(null);
+    const placeholderRef = useRef(null);
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const brandEl = document.getElementById('brand-section');
+        const container = containerRef.current;
+        const inner = innerRef.current;
+        const placeholder = placeholderRef.current;
+        if (!brandEl || !container || !inner || !placeholder) return;
+
+        let currentlySticky = false;
+        let lastScrollY = window.scrollY;
+        let scrollingDown = true;
+
+        let storedWidth = null;
+        const setFixed = () => {
+            const contRect = container.getBoundingClientRect();
+            const innerRect = inner.getBoundingClientRect();
+            // keep the inner element visually where it currently is in the viewport
+            const currentTop = innerRect.top; // distance from viewport top
+            const currentLeft = innerRect.left;
+            const currentWidth = innerRect.width;
+
+            storedWidth = currentWidth;
+
+            placeholder.style.display = 'block';
+            placeholder.style.height = `${innerRect.height}px`;
+            inner.style.position = 'fixed';
+            inner.style.top = `${currentTop}px`;
+            inner.style.left = `${currentLeft}px`;
+            inner.style.width = `${currentWidth}px`;
+            inner.style.zIndex = '70';
+            currentlySticky = true;
+            setIsSticky(true);
+        };
+
+        const unsetFixed = () => {
+            placeholder.style.display = 'none';
+            placeholder.style.height = '0px';
+            inner.style.position = '';
+            inner.style.top = '';
+            inner.style.left = '';
+            inner.style.width = '';
+            inner.style.zIndex = '';
+            currentlySticky = false;
+            setIsSticky(false);
+        };
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            scrollingDown = currentScrollY > lastScrollY;
+            lastScrollY = currentScrollY;
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            const ent = entries[0];
+            if (ent.isIntersecting) {
+                // Brand is intersecting — only stick if scrolling down
+                if (scrollingDown) {
+                    setFixed();
+                } else {
+                    // Scrolling up while Brand is visible — unset
+                    unsetFixed();
+                }
+            } else {
+                // Brand not intersecting — always unset
+                unsetFixed();
+            }
+        }, { threshold: 0 });
+
+        observer.observe(brandEl);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        const onResize = () => {
+            if (!currentlySticky) return;
+            // Prefer recalculating width as 90% of viewport (matches `max-w-[90%]`), then center
+            const newWidth = Math.round(window.innerWidth * 0.9);
+            const newLeft = Math.round((window.innerWidth - newWidth) / 2);
+            inner.style.width = `${newWidth}px`;
+            inner.style.left = `${newLeft}px`;
+        };
+
+        window.addEventListener('resize', onResize);
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', onResize);
+            unsetFixed();
+        };
+    }, []);
+
     return (
-        <section className="relative text-white py-52 bg-[#01070B] z-50">
-            <div className="max-w-[90%] mx-auto px-4">
+        <section ref={containerRef} className="relative text-white py-52 bg-[#01070B] z-50">
+            <div ref={placeholderRef} style={{ display: 'none', height: 0 }} />
+            <div className="max-w-[90%] mx-auto px-4" ref={innerRef}>
                 {/* 3 Column Grid - 3 Rows */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Row 1, Col 1: Section Label + Heading */}

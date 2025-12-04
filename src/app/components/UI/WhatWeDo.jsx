@@ -49,33 +49,6 @@ const WhatWeDo = () => {
 
         {/* Sticky scrolling slides for each category */}
         <div className="relative">
-          {/* Top meta label & categories (remains above slides) */}
-          {/* <div className="relative z-20 mx-auto w-[92%] pt-24 sm:pt-26">
-            <div className="flex items-center justify-between gap-4 text-white/70">
-              <div className="text-nowrap text-[20px] flex items-center gap-2 font-poppins font-light">
-                <span>03</span>
-                <span className="opacity-70">—</span>
-                <span>What we do</span>
-              </div>
-              <div className="relative w-[92%]">
-                <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">
-                  {categories.map((item, idx) => (
-                    <div key={item.name} className="flex items-center">
-                      <span
-                        className={`px-1 whitespace-nowrap ${activeIdx === idx ? "text-white" : "text-white/55"}`}
-                      >
-                        {item.name}
-                      </span>
-                      {idx < categories.length - 1 && (
-                        <span className="mx-2 text-white/25">|</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 h-px w-full bg-white/10" />
-          </div> */}
 
           {/* Slides: each category is a sticky full-screen section */}
           {categories.map((cat, idx) => (

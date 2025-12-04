@@ -222,7 +222,7 @@ export default function MobileApplications() {
 
                             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                                 {/* Image column */}
-                                <div className="-mt-70 relative z-10 col-span-1 flex items-center justify-center">
+                                <div className="max-xl:mt-0 -mt-70 relative z-10 col-span-1 flex items-center justify-center">
                                     <img
                                         src="/images/services/mobile-applications/section-3.png"
                                         alt="Laptop showcasing website design"

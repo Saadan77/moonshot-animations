@@ -8,8 +8,8 @@ import Testimonials from './Testimonials';
 
 export default function Partners() {
     return (
-        <section className="bg-[#00060B] mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
-            <div>
+        <section className="relative z-50 bg-[#00060B] mx-auto py-24 md:py-28 lg:py-32 overflow-hidden">
+            <div className=''>
                 {/* Top meta label */}
                 <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
                     <div className="font-sora flex justify-between tracking-widest text-[#808080] text-[20px]">

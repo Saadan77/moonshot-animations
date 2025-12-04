@@ -1,13 +1,11 @@
 "use client";
 
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
-import React from 'react';
-import { PinContainer } from '@/components/ui/3d-pin';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import AboutUsCards from '../AboutUsCards';
 import { ArrowRight } from 'lucide-react';
-import LiquidEther from '@/components/LiquidEther';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -28,30 +26,88 @@ const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
 
 const AboutUs = () => {
 
+    const smokeRef = useRef(null);
+
+    useEffect(() => {
+        const container = smokeRef.current;
+        if (!container) return;
+
+        function spawn(x, y) {
+            const el = document.createElement('div');
+            el.className = 'elem';
+            el.style.left = `${x - 25}px`;
+            el.style.top = `${y - 25}px`;
+            container.appendChild(el);
+            el.addEventListener('animationend', () => {
+                if (el.parentNode) el.parentNode.removeChild(el);
+            });
+        }
+
+        const interval = setInterval(() => {
+            const rect = container.getBoundingClientRect();
+            const x = Math.random() * rect.width;
+            const y = Math.random() * rect.height;
+            spawn(x, y);
+            while (container.children.length > 30) {
+                container.removeChild(container.firstChild);
+            }
+        }, 700);
+
+        const onMove = (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            spawn(x, y);
+        };
+
+        window.addEventListener('mousemove', onMove);
+
+        return () => {
+            clearInterval(interval);
+            window.removeEventListener('mousemove', onMove);
+        };
+    }, []);
+
     return (
         <section className="relative isolate w-full overflow-visible bg-[#00060b] text-white z-50">
-            {/* LiquidEther Background */}
-            {/* <div className='block max-sm:hidden'>
-                <div className="absolute inset-0 pointer-events-none opacity-40" style={{ zIndex: 0 }}>
-                    <LiquidEther
-                        colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-                        mouseForce={20}
-                        cursorSize={100}
-                        isViscous={false}
-                        viscous={30}
-                        iterationsViscous={32}
-                        iterationsPoisson={32}
-                        resolution={0.5}
-                        isBounce={false}
-                        autoDemo={true}
-                        autoSpeed={0.5}
-                        autoIntensity={2.2}
-                        takeoverDuration={0.25}
-                        autoResumeDelay={3000}
-                        autoRampDuration={0.6}
-                    />
-                </div>
-            </div> */}
+            <div id="smoke" ref={smokeRef}></div>
+            <style jsx global>{`
+                #smoke {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    overflow: hidden;
+                }
+
+                .elem {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    /* background: radial-gradient(
+                        circle,
+                        rgba(255, 255, 255, 1) 0%,
+                        rgba(0, 0, 0, 0) 80%
+                    ); */
+                    background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
+                    pointer-events: none;
+                    animation: ripple 2s ease-out forwards;
+                }
+
+                @keyframes ripple {
+                    0% {
+                        transform: scale(3) translateY(0);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(10) translateY(-10px);
+                        opacity: 0;
+                    }
+                }
+            `}</style>
+
             <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
                 <div className='pb-24 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
@@ -76,10 +132,10 @@ const AboutUs = () => {
                         </h2>
 
                         {/* CTA */}
-                        <div className="mt-8 group">
+                        <div className="mt-8">
                             <Link
                                 href="#"
-                                className="border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
                                 <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

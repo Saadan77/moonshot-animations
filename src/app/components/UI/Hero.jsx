@@ -55,7 +55,7 @@ const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <section className="relative w-full z-50 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1240px]"
+        <section className="relative w-full z-100 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1240px]"
             style={{ backgroundImage: 'url("/images/hero-bg.png")' }}>
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
