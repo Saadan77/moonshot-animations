@@ -175,7 +175,7 @@ export default function Ecommerce() {
                         </div>
 
                         <img
-                            src="/images/services/e-commerce/section-2.mp4"
+                            src="/images/services/e-commerce/hero.png"
                             className="absolute top-20 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
                             alt="E-commerce Hero"
                             data-smoother-ignore
@@ -226,8 +226,9 @@ export default function Ecommerce() {
                                     <img
                                         src="/images/services/e-commerce/section-3.png"
                                         alt="Laptop showcasing website design"
-                                        className="h-full w-full object-cover scale-150"
-                                        style={{ mixBlendMode: "screen", scale: "225%" }}
+                                        className="h-full w-full object-cover scale-200"
+                                        style={{ mixBlendMode: "screen" }}
+                                        data-smoother-ignore
                                     />
                                 </div>
 
@@ -265,8 +266,7 @@ export default function Ecommerce() {
                         </section>
                     </div>
 
-
-                    <div className="bg-no-repeat" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
+                    <div className="bg-bottom" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
                         <section id="e-commerce" className="pt-64 pb-20">
                             <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                                 <TextType

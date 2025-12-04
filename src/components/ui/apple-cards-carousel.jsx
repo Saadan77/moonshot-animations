@@ -143,11 +143,6 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden md:h-160 md:w-124">
-        {/* <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="absolute inset-0 z-10 object-cover" /> */}
         <img
           className="h-full w-full transition duration-300 blur-0"
           src={card.src}
@@ -160,31 +155,3 @@ export const Card = ({
     </>
   );
 };
-
-// export const BlurImage = ({
-//   height,
-//   width,
-//   src,
-//   className,
-//   alt,
-//   ...rest
-// }) => {
-//   const [isLoading, setLoading] = useState(true);
-//   return (
-//     <img
-//       className={cn(
-//         "h-full w-full transition duration-300",
-//         isLoading ? "blur-0" : "blur-0",
-//         className
-//       )}
-//       onLoad={() => setLoading(false)}
-//       src={src}
-//       width={width}
-//       height={height}
-//       loading="lazy"
-//       decoding="async"
-//       blurDataURL={typeof src === "string" ? src : undefined}
-//       alt={alt ? alt : "Background of a beautiful view"}
-//       {...rest} />
-//   );
-// };
