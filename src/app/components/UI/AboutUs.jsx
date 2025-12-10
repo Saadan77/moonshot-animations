@@ -69,7 +69,7 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <section className="relative isolate w-full bg-[#00060b] text-white z-50">
+        <section className="relative isolate w-full bg-[#00060b] text-white z-50 overflow-hidden">
             <div id="smoke" ref={smokeRef}></div>
             <style dangerouslySetInnerHTML={{
                 __html: `

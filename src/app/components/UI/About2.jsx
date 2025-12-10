@@ -59,7 +59,7 @@ const About2 = () => {
     return (
         <section className="relative bg-[#00060B] text-white py-48 z-50 pb-50">
             {/* Content Overlay */}
-            <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8">
+            <div className="relative z-10 max-w-[90%] mx-auto">
                 <div className='mb-36 space-y-12'>
                     {/* Top label */}
                     <div className="flex items-center gap-3 text-[20px] text-[#808080]">
@@ -68,7 +68,7 @@ const About2 = () => {
 
                     {/* Heading */}
                     <div
-                        className="-tracking-[0.03em] leading-relaxed font-light text-white/90"
+                        className="max-w-[90%] -tracking-[0.03em] leading-relaxed font-light text-white/90"
                         style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                     >
                         <ScrollReveal size='md' enableBlur={false}>

@@ -63,13 +63,13 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
-                <div className="absolute top-[20%] left-16">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
+                <div className="absolute top-[20%] left-20">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-light text-[#FFFFFF99]">
                         (creative)
                     </p>
                 </div>
-                <div className="absolute top-[20%] right-16">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
+                <div className="absolute top-[20%] right-20">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-light text-[#FFFFFF99]">
                         (agency)
                     </p>
                 </div>
@@ -156,7 +156,7 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-md:hidden block absolute right-12 top-[55%] max-2xl:top-[70%] text-right z-50">
+                <div className="max-md:hidden block absolute right-24 top-[55%] max-2xl:top-[70%] text-right z-50">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
                         <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
                         <br />
@@ -174,7 +174,7 @@ const Hero = () => {
                         href={s.href}
                         aria-label={s.label}
                         className={`
-                        group relative w-15 h-15 rounded-full
+                        group relative w-12 h-12 rounded-full
                         flex items-center justify-center text-xs font-semibold
                         bg-gray-800/80 backdrop-blur
                         text-white transition-colors duration-300
@@ -239,7 +239,7 @@ const Hero = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-12 max-sm:px-6 py-20 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-20 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>

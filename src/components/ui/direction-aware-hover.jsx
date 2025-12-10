@@ -13,6 +13,7 @@ export const DirectionAwareHover = ({
   imageClassName,
   className,
   heading,
+  number,
 }) => {
   const ref = useRef(null);
 
@@ -112,6 +113,16 @@ export const DirectionAwareHover = ({
           >
             <img src="/images/images-arrow.png" alt="arrow" className="h-full w-full" />
           </motion.div>
+           <motion.div
+            variants={numberVariants}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}
+            className={cn("font-poppins absolute -bottom-32 -left-20 z-40 text-right text-[322px]")}
+          >
+            {number}
+          </motion.div>
           <motion.div
             variants={textVariants}
             transition={{
@@ -176,5 +187,34 @@ const textVariants = {
   right: {
     x: 0,
     opacity: 1,
+  },
+};
+
+const numberVariants = {
+  initial: {
+    y: 0,
+    x: 0,
+    opacity: 0,
+  },
+  exit: {
+    y: 0,
+    x: 0,
+    opacity: 0,
+  },
+  top: {
+    y: 0,
+    opacity: 0.1,
+  },
+  bottom: {
+    y: 0,
+    opacity: 0.1,
+  },
+  left: {
+    x: 0,
+    opacity: 0.1,
+  },
+  right: {
+    x: 0,
+    opacity: 0.1,
   },
 };

@@ -98,7 +98,7 @@ export const AnimatedTestimonials = ({
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
                   draggable={false}
-                  className="w-full h-full max-md:w-3/4 max-md:h-auto object-cover object-center overflow-visible scale-125"
+                  className="w-full h-full max-md:w-3/4 max-md:h-auto object-cover object-center overflow-visible scale-150"
                   data-smoother-ignore
                 />
               </motion.div>

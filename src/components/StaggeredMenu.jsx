@@ -441,7 +441,7 @@ export const StaggeredMenu = ({
             </button>
 
             <span
-              className="-z-10 font-sora hidden md:flex text-lg max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
+              className="-z-10 font-sora hidden md:flex text-xl max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
               aria-hidden="true"
             >
               +1-972-331-5058

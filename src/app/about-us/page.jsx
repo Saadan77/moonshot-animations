@@ -19,6 +19,7 @@ import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
 import { Gallery3D } from "../components/Gallery3D";
 import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
 import AboutUsCards from "../components/AboutUsCards";
+import DecorativeLines from "../components/DecorativeLines";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -368,23 +369,7 @@ export default function AboutUsPage() {
           />
 
           {/* Decorative Lines */}
-          <div>
-            {["15%", "30%", "45%", "60%", "75%", "90%"].map((left) => (
-              <div
-                key={left}
-                style={{ left }}
-                className="absolute top-0 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 pointer-events-none z-50"
-              >
-                <div
-                  className="w-px h-screen"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(187,187,187,0) 0%, rgba(187,187,187,0.12) 12%, rgba(187,187,187,0.12) 88%, rgba(187,187,187,0) 100%)",
-                  }}
-                />
-              </div>
-            ))}
-          </div>
+          <DecorativeLines />
 
           {/* Industries Hero Section */}
           <div className="flex max-lg:flex-col items-center justify-between gap-8">
@@ -596,7 +581,7 @@ export default function AboutUsPage() {
         </div>
 
         {/* What Defines Us Section */}
-        <div className="max-w-[80%] mx-auto bg-black relative py-20 mb-20">
+        <div className="max-w-[90%] mx-auto bg-black relative py-20 mb-20">
           <div className="space-y-10">
             <div className="flex items-center gap-3 text-lg text-[#808080]">
               <span className="text-nowrap font-poppins">

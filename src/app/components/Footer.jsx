@@ -1,5 +1,7 @@
 "use client";
 
+import { ChevronUp } from "lucide-react";
+
 export default function Footer() {
     return (
         <footer
@@ -8,16 +10,16 @@ export default function Footer() {
         >
             <div className="relative z-10 mx-auto max-w-[90%] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                 {/* Main Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-8 max-lg:gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-9 max-lg:gap-16">
                     {/* Left Column - Location & Inquiry */}
-                    <div className="space-y-32 max-lg:space-y-16 lg:col-span-3">
-                        <div className="space-y-8">
+                    <div className="space-y-48 max-lg:space-y-16 lg:col-span-3">
+                        <div>
                             {/* Location */}
                             <div>
-                                <p className="text-xl uppercase tracking-wider text-white/50 mb-3">
+                                <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
                                     LOCATION
                                 </p>
-                                <p className="not-italic text-lg leading-relaxed text-white/80">
+                                <p className="not-italic text-2xl leading-relaxed text-white">
                                     1200 East Collins Boulevard
                                     <br />
                                     Suite 106 Richardson Texas 75081
@@ -39,19 +41,19 @@ export default function Footer() {
                     <div className="col-span-2 space-y-32 max-lg:space-y-16">
                         {/* Inquiry */}
                         <div>
-                            <p className="text-xl uppercase tracking-wider text-white/50 mb-3">
+                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
                                 INQUIRY
                             </p>
-                            <div className="space-y-2 text-lg text-white/80">
+                            <div className="space-y-2 text-2xl text-white">
                                 <a
                                     href="mailto:info@gmail.com"
-                                    className="block hover:text-white transition-colors"
+                                    className="block hover:text-white/80 transition-colors"
                                 >
                                     info@gmail.com
                                 </a>
                                 <a
                                     href="tel:+19723315058"
-                                    className="block hover:text-white transition-colors"
+                                    className="block hover:text-white/80 transition-colors"
                                 >
                                     +1-972-331-5058
                                 </a>
@@ -59,16 +61,16 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p className="text-xl uppercase tracking-wider text-white/50 mb-6">
+                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
-                            <ul className="space-y-3 text-lg">
+                            <ul className="space-y-3 text-xl">
                                 {['About', 'Services', 'Project', 'Case Studies', 'Industries', 'Contact'].map(
                                     (link) => (
                                         <li key={link}>
                                             <a
                                                 href="#"
-                                                className="text-white/80 hover:text-white transition-colors inline-block"
+                                                className="text-white hover:text-white/80 transition-colors inline-block"
                                             >
                                                 {link}
                                             </a>
@@ -82,7 +84,7 @@ export default function Footer() {
                     <div className="w-[0.5px] h-full bg-[#1D1D1D] col-span-1"></div>
 
                     {/* Logo + Tagline + Newsletter */}
-                    <div className="col-span-2">
+                    <div className="col-span-3">
                         <div className="space-y-24 max-lg:space-y-12">
                             {/* Company Title */}
                             <div className="space-y-12">
@@ -103,7 +105,7 @@ export default function Footer() {
                                     <div className="flex gap-3">
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Twitter/X"
                                         >
                                             <svg
@@ -117,7 +119,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Instagram"
                                         >
                                             <svg
@@ -135,7 +137,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Facebook"
                                         >
                                             <svg
@@ -149,7 +151,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="LinkedIn"
                                         >
                                             <svg
@@ -163,7 +165,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="YouTube"
                                         >
                                             <svg
@@ -181,10 +183,10 @@ export default function Footer() {
 
                             {/* Newsletter */}
                             <div className="space-y-4">
-                                <div className="flex gap-2 text-sm">
+                                <div className="flex items-center gap-2 text-lg">
                                     <svg
-                                        width="16"
-                                        height="16"
+                                        width="24"
+                                        height="24"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         stroke="currentColor"
@@ -200,27 +202,12 @@ export default function Footer() {
                                     <input
                                         type="email"
                                         placeholder="your email"
-                                        className="w-full sm:flex-1 px-4 p-2.5 rounded-full bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-colors"
+                                        className="w-full sm:flex-1 p-4 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
                                         suppressHydrationWarning
                                     />
-                                    <button
-                                        type="submit"
-                                        className="sm:w-auto p-3 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors"
-                                    >
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path d="M5 12h14m0 0l-7-7m7 7l-7 7" />
-                                        </svg>
-                                    </button>
                                 </form>
 
-                                <p className="text-lg text-white/50">
+                                <p className="text-lg text-white/50 font-extralight">
                                     By subscribing, you accept our newsletter terms and privacy policy.
                                 </p>
                             </div>
@@ -229,18 +216,18 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-16 pt-8 border-t border-white/10">
+                <div className="mt-48">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-white/50">
                         <p className="col-span-1 max-lg:col-span-2 max-lg:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
 
-                        <div className="col-span-2 space-x-4 flex justify-center">
-                            <a href="#" className="hover:text-white/70 transition-colors">
+                        <div className="col-span-2 space-x-16 flex justify-center text-white">
+                            <a href="#" className="hover:text-white/80 transition-colors">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="hover:text-white/70 transition-colors">
+                            <a href="#" className="hover:text-white/80 transition-colors">
                                 FAQ's
                             </a>
-                            <a href="#" className="hover:text-white/70 transition-colors">
+                            <a href="#" className="hover:text-white/80 transition-colors">
                                 Privacy Policy
                             </a>
                         </div>
@@ -249,19 +236,10 @@ export default function Footer() {
                         <div className="col-span-1 max-lg:col-span-2 flex justify-end max-lg:justify-center">
                         <button
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="col-span-1 h-8 w-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                            className="col-span-1 flex items-center justify-center text-white hover:text-white/80 transition-colors"
                             aria-label="Scroll to top"
                         >
-                            <svg
-                                width="14"
-                                height="14"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                            >
-                                <path d="M12 19V5m0 0l-7 7m7-7l7 7" />
-                            </svg>
+                            <ChevronUp size={36} />
                         </button>
                         </div>
                     </div>

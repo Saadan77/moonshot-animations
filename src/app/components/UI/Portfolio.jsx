@@ -32,7 +32,7 @@ export function Tags() {
 
     return (
         <div className="relative flex flex-col max-w-xl ml-auto w-5/6">
-            <p className='w-full font-sora mb-5 text-end text-white/70'>
+            <p className='text-lg font-sora mb-8 text-end text-white/70'>
                 (<span className='text-white'>Filter</span> By Tag)
             </p>
             <Tabs tabs={tabs} />
@@ -136,7 +136,7 @@ const Portfolio = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative text-white py-52 bg-[#01070B] z-50">
+        <section ref={containerRef} className="relative text-white py-52 bg-[#0a0f14] z-50">
             <div ref={placeholderRef} style={{ display: 'none', height: 0 }} />
             <div className="max-w-[90%] mx-auto px-4" ref={innerRef}>
                 {/* 3 Column Grid - 3 Rows */}
@@ -169,6 +169,7 @@ const Portfolio = () => {
                         imageUrl="/images/portfolio/portfolio-1.png"
                         className="w-full h-full"
                         heading={<p>Branding</p>}
+                        number={<p>01.</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
                             <p>#BuildYourBrand</p>
@@ -190,6 +191,7 @@ const Portfolio = () => {
                         imageUrl="/images/portfolio/portfolio-2.png"
                         className="w-full h-full"
                         heading={<p>UI/UX</p>}
+                        number={<p>02.</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
                             <p>#Webdesign</p>
@@ -203,6 +205,7 @@ const Portfolio = () => {
                         imageUrl="/images/portfolio/portfolio-3.png"
                         className="w-full h-full"
                         heading={<p>Mobile App</p>}
+                        number={<p>03.</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
                             <p>#Appdesign</p>
@@ -215,6 +218,7 @@ const Portfolio = () => {
                         imageUrl="/images/portfolio/portfolio-4.png"
                         className="w-full h-full"
                         heading={<p>Animations</p>}
+                        number={<p>04.</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
                             <p>#Creativemotion</p>
@@ -231,6 +235,7 @@ const Portfolio = () => {
                         imageUrl="/images/portfolio/portfolio-5.png"
                         className="w-full h-full"
                         heading={<p>Logo Design</p>}
+                        number={<p>05.</p>}
                     >
                         <div className="text-lg space-y-2 font-poppins font-light text-white/80">
                             <p>#Logodesign</p>
