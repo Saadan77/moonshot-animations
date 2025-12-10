@@ -36,6 +36,8 @@ const Ribbons = ({
     gl.canvas.style.left = '0';
     gl.canvas.style.width = '100%';
     gl.canvas.style.height = '100%';
+    // Important: Allow clicks to pass through the canvas
+    gl.canvas.style.pointerEvents = 'none';
     container.appendChild(gl.canvas);
 
     const scene = new Transform();
@@ -155,23 +157,31 @@ const Ribbons = ({
     resize();
 
     const mouse = new Vec3();
+
+    // UPDATED: Use window for mouse events so tracking works globally
     function updateMouse(e) {
       let x, y;
-      const rect = container.getBoundingClientRect();
+
+      // Since container is fixed full screen, we use clientX/Y directly
       if (e.changedTouches && e.changedTouches.length) {
-        x = e.changedTouches[0].clientX - rect.left;
-        y = e.changedTouches[0].clientY - rect.top;
+        x = e.changedTouches[0].clientX;
+        y = e.changedTouches[0].clientY;
       } else {
-        x = e.clientX - rect.left;
-        y = e.clientY - rect.top;
+        x = e.clientX;
+        y = e.clientY;
       }
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // Convert to normalized device coordinates (-1 to 1)
       mouse.set((x / width) * 2 - 1, (y / height) * -2 + 1, 0);
     }
-    container.addEventListener('mousemove', updateMouse);
-    container.addEventListener('touchstart', updateMouse);
-    container.addEventListener('touchmove', updateMouse);
+
+    // Listen to window instead of container
+    window.addEventListener('mousemove', updateMouse);
+    window.addEventListener('touchstart', updateMouse);
+    window.addEventListener('touchmove', updateMouse);
 
     const tmp = new Vec3();
     let frameId;
@@ -208,9 +218,9 @@ const Ribbons = ({
 
     return () => {
       window.removeEventListener('resize', resize);
-      container.removeEventListener('mousemove', updateMouse);
-      container.removeEventListener('touchstart', updateMouse);
-      container.removeEventListener('touchmove', updateMouse);
+      window.removeEventListener('mousemove', updateMouse);
+      window.removeEventListener('touchstart', updateMouse);
+      window.removeEventListener('touchmove', updateMouse);
       cancelAnimationFrame(frameId);
       if (gl.canvas && gl.canvas.parentNode === container) {
         container.removeChild(gl.canvas);
