@@ -25,7 +25,7 @@ const DEFAULT_ITEMS = [
       { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop1.png',
+    image: '/images/proficients/laptop2.png',
     id: 2
   },
   {
@@ -49,7 +49,7 @@ const DEFAULT_ITEMS = [
       { value: '65%', label: 'Seventy Two per cent increase in lead conversions.' }
     ],
     badge: 'PASSION IN BUSINESS',
-    image: '/images/proficients/laptop1.png',
+    image: '/images/proficients/laptop2.png',
     id: 4
   }
 ];

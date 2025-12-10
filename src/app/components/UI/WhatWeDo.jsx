@@ -44,7 +44,7 @@ const WhatWeDo = () => {
 
   const xSteps = [0, 14.2857, 28.5714, 42.8571, 57.1429, 71.4286, 85.7143, 100];
   
-  const yOffsets = [0, 30, 50, 80, 120, 160, 200]; 
+  const yOffsets = [0, 15, 25, 35, 45, 55, 60]; 
 
   const generateClipPath = (progress) => {
     const inverseProgress = 1 - progress;
@@ -55,10 +55,11 @@ const WhatWeDo = () => {
     for (let i = 0; i < 7; i++) {
         const xStart = xSteps[i];
         const xEnd = xSteps[i + 1];
-        
+
         let stepY = baseY + (yOffsets[i] * inverseProgress);
         
         stepY = Math.max(0, Math.min(100, stepY));
+        
         path += `${xStart}% ${stepY}%, ${xEnd}% ${stepY}%, `;
     }
 
@@ -82,7 +83,6 @@ const WhatWeDo = () => {
         const rect = card.getBoundingClientRect();
         
         let progress = (windowHeight - rect.top) / windowHeight;
-        
         progress = Math.max(0, Math.min(1, progress));
 
         const path = generateClipPath(progress);
@@ -120,7 +120,7 @@ const WhatWeDo = () => {
               onMouseEnter={() => setActiveIdx(idx)}
               onTouchStart={() => setActiveIdx(idx)}
             >
-              {/* Navigation */}
+              {/* Navigation Bar - Now visible sooner */}
               <div className="relative w-full z-30">
                 <div className="relative z-20 mx-auto w-[92%] pt-16">
                   <div className="flex items-center justify-between gap-4 text-white/70">
@@ -149,7 +149,7 @@ const WhatWeDo = () => {
                 </div>
               </div>
               
-              {/* Media */}
+              {/* Background Media */}
               <div className="absolute inset-0 z-0">
                 {cat.video ? (
                   <video
@@ -173,7 +173,7 @@ const WhatWeDo = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1%_100%,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none" />
               </div>
 
-              {/* Text Content */}
+              {/* Title & Subtitle */}
               <div className="ml-20 max-xl:ml-10 max-sm:ml-5 max-sm:mb-5 relative z-10">
                 <div className="lg:tracking-[-0.5em] text-left">
                   <div className="hidden lg:block">
