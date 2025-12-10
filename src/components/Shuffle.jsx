@@ -1,17 +1,33 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText as GSAPSplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+const splitTextIntoChars = (element) => {
+  const text = element.textContent || '';
+  const chars = [];
+  element.innerHTML = '';
+  
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    const span = document.createElement('span');
+    span.className = 'shuffle-char inline-block';
+    span.textContent = char === ' ' ? '\u00A0' : char;
+    element.appendChild(span);
+    chars.push(span);
+  }
+  
+  return { chars, revert: () => { element.textContent = text; } };
+};
 
 const Shuffle = ({
   text,
   className = '',
   style = {},
   shuffleDirection = 'right',
-  duration = 0.75,
+  duration = 0.35,
   maxDelay = 0,
   ease = 'power3.out',
   threshold = 0.1,
@@ -21,8 +37,8 @@ const Shuffle = ({
   onShuffleComplete,
   shuffleTimes = 1,
   animationMode = 'evenodd',
-  loop = true,
-  loopDelay = 2.5,
+  loop = false,
+  loopDelay = 0,
   stagger = 0.03,
   scrambleCharset = '',
   colorFrom,
@@ -41,6 +57,20 @@ const Shuffle = ({
   const playingRef = useRef(false);
   const hoverHandlerRef = useRef(null);
 
+  const userHasFont = useMemo(
+    () => (style && style.fontFamily) || (className && /font[-[]/i.test(className)),
+    [style, className]
+  );
+
+  const scrollTriggerStart = useMemo(() => {
+    const startPct = (1 - threshold) * 100;
+    const mm = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin || '');
+    const mv = mm ? parseFloat(mm[1]) : 0;
+    const mu = mm ? mm[2] || 'px' : 'px';
+    const sign = mv === 0 ? '' : mv < 0 ? `-=${Math.abs(mv)}${mu}` : `+=${mv}${mu}`;
+    return `top ${startPct}%${sign}`;
+  }, [threshold, rootMargin]);
+
   useEffect(() => {
     if ('fonts' in document) {
       if (document.fonts.status === 'loaded') setFontsLoaded(true);
@@ -50,6 +80,7 @@ const Shuffle = ({
 
   useGSAP(() => {
     if (!ref.current || !text || !fontsLoaded) return;
+
     if (respectReducedMotion && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       onShuffleComplete?.();
       return;
@@ -57,12 +88,14 @@ const Shuffle = ({
 
     const el = ref.current;
 
-    const startPct = (1 - threshold) * 100;
-    const mm = /^(-?\d+(?:\.\d+)?)(px|em|rem|%)?$/.exec(rootMargin || '');
-    const mv = mm ? parseFloat(mm[1]) : 0;
-    const mu = mm ? mm[2] || 'px' : 'px';
-    const sign = mv === 0 ? '' : mv < 0 ? `-=${Math.abs(mv)}${mu}` : `+=${mv}${mu}`;
-    const start = `top ${startPct}%${sign}`;
+    let computedFont = '';
+    if (userHasFont) {
+      computedFont = style.fontFamily || getComputedStyle(el).fontFamily || '';
+    } else {
+      computedFont = `'Press Start 2P', sans-serif`;
+    }
+
+    const start = scrollTriggerStart;
 
     const removeHover = () => {
       if (hoverHandlerRef.current && ref.current) {
@@ -96,14 +129,7 @@ const Shuffle = ({
     const build = () => {
       teardown();
 
-      splitRef.current = new GSAPSplitText(el, {
-        type: 'chars',
-        charsClass: 'shuffle-char',
-        wordsClass: 'shuffle-word',
-        linesClass: 'shuffle-line',
-        smartWrap: true,
-        reduceWhiteSpace: false
-      });
+      splitRef.current = splitTextIntoChars(el);
 
       const chars = splitRef.current.chars || [];
       wrappersRef.current = [];
@@ -130,18 +156,18 @@ const Shuffle = ({
 
         const firstOrig = ch.cloneNode(true);
         firstOrig.className = 'inline-block text-left';
-        Object.assign(firstOrig.style, { width: w + 'px' });
+        Object.assign(firstOrig.style, { width: w + 'px', fontFamily: computedFont });
 
         ch.setAttribute('data-orig', '1');
         ch.className = 'inline-block text-left';
-        Object.assign(ch.style, { width: w + 'px' });
+        Object.assign(ch.style, { width: w + 'px', fontFamily: computedFont });
 
         inner.appendChild(firstOrig);
         for (let k = 0; k < rolls; k++) {
           const c = ch.cloneNode(true);
           if (scrambleCharset) c.textContent = rand(scrambleCharset);
           c.className = 'inline-block text-left';
-          Object.assign(c.style, { width: w + 'px' });
+          Object.assign(c.style, { width: w + 'px', fontFamily: computedFont });
           inner.appendChild(c);
         }
         inner.appendChild(ch);
@@ -160,7 +186,6 @@ const Shuffle = ({
 
         gsap.set(inner, { x: startX, force3D: true });
         if (colorFrom) inner.style.color = colorFrom;
-
         inner.setAttribute('data-final-x', String(finalX));
         inner.setAttribute('data-start-x', String(startX));
 
@@ -241,12 +266,11 @@ const Shuffle = ({
       } else {
         strips.forEach(strip => {
           const d = Math.random() * maxDelay;
-          tl.to(strip, {
-            x: parseFloat(strip.getAttribute('data-final-x') || '0'),
-            duration,
-            ease,
-            force3D: true
-          }, d);
+          tl.to(
+            strip,
+            { x: parseFloat(strip.getAttribute('data-final-x') || '0'), duration, ease, force3D: true },
+            d
+          );
           if (colorFrom && colorTo) tl.fromTo(strip, { color: colorFrom }, { color: colorTo, duration, ease }, d);
         });
       }
@@ -275,12 +299,7 @@ const Shuffle = ({
       setReady(true);
     };
 
-    const st = ScrollTrigger.create({
-      trigger: el,
-      start,
-      once: triggerOnce,
-      onEnter: create
-    });
+    const st = ScrollTrigger.create({ trigger: el, start, once: triggerOnce, onEnter: create });
 
     return () => {
       st.kill();
@@ -294,8 +313,7 @@ const Shuffle = ({
       duration,
       maxDelay,
       ease,
-      threshold,
-      rootMargin,
+      scrollTriggerStart,
       fontsLoaded,
       shuffleDirection,
       shuffleTimes,
@@ -308,24 +326,20 @@ const Shuffle = ({
       colorTo,
       triggerOnce,
       respectReducedMotion,
-      triggerOnHover
+      triggerOnHover,
+      onShuffleComplete,
+      userHasFont
     ],
     scope: ref
   });
 
   const baseTw = 'inline-block whitespace-normal break-words will-change-transform uppercase text-[4rem] leading-none';
-  const commonStyle = {
-    textAlign,
-    fontFamily: `'Press Start 2P', sans-serif`,
-    ...style
-  };
-
-  // Always keep element in the layout (visible) so subtitles/titles
-  // don't disappear before the shuffle animation runs. The Shuffle
-  // animation will still be triggered by ScrollTrigger when the
-  // element enters the viewport.
-  const classes = `${baseTw} ${className}`.trim();
+  const classes = useMemo(
+    () => `${baseTw} ${ready ? 'visible' : 'invisible'} ${className}`.trim(),
+    [baseTw, ready, className]
+  );
   const Tag = tag || 'p';
+  const commonStyle = useMemo(() => ({ textAlign, ...style }), [textAlign, style]);
 
   return React.createElement(Tag, { ref: ref, className: classes, style: commonStyle }, text);
 };

@@ -206,7 +206,8 @@ const WhatWeDo = () => {
                           shuffleDirection="left"
                           duration={0.5}
                           stagger={0.04}
-                          shuffleTimes={2}
+                          shuffleTimes={1}
+                          loop={true}
                           style={{ fontFamily: "var(--font-sora), sans-serif" }}
                         />
                       </>
