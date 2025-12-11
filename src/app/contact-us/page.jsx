@@ -12,7 +12,7 @@ import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
-import { Link } from "wouter";
+import Link from "next/link";
 
 export default function ContactUs() {
     const tags = [
@@ -197,15 +197,15 @@ export default function ContactUs() {
                             </div>
 
                             <div className="flex justify-between items-center mt-8">
-                                <Link
-                                    href="#"
+                                <button
+                                    type="submit"
                                     className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
                                     <span className="relative top-[0.5px] font-sora text-[20px]">Send Message</span>
                                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
                                         <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                     </span>
-                                </Link>
+                                </button>
                                 <div className="items-end">
                                     <p className="text-[#A3A3A3]">Prefer email?</p>
                                     <p className="text-white">moonshottech@gmail.com</p>
