@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
-import SmoothScroll from "../components/SmoothScroll";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import Partners from "../components/UI/Partners";
@@ -20,6 +19,7 @@ import { Gallery3D } from "../components/Gallery3D";
 import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
 import AboutUsCards from "../components/AboutUsCards";
 import DecorativeLines from "../components/DecorativeLines";
+import Ribbons from "@/components/Ribbons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +78,7 @@ export default function AboutUsPage() {
           style={{ height: "500px" }}
         >
           <div className="absolute inset-0 z-10 grid place-content-center">
-            <p className="px-4 text-[24px] font-black uppercase text-white">
+            <p className="mb-10 px-4 text-[24px] uppercase text-white">
               {card.title}
             </p>
             <p
@@ -96,7 +96,7 @@ export default function AboutUsPage() {
     const carouselRef = useRef(null);
     const contentRef = useRef(null);
 
-    useGSAP(() => {}, { scope: carouselRef });
+    useGSAP(() => { }, { scope: carouselRef });
 
     useLayoutEffect(() => {
       const carouselEl = carouselRef.current;
@@ -147,7 +147,11 @@ export default function AboutUsPage() {
       };
 
       const setup = () => {
-        ScrollTrigger.getAll().forEach((t) => {});
+        ScrollTrigger.getAll().forEach((t) => { 
+          if (t.vars.trigger === carouselEl) {
+            t.kill();
+          }
+        });
 
         const totalWidth = contentEl.scrollWidth;
         const viewportWidth = window.innerWidth;
@@ -161,16 +165,21 @@ export default function AboutUsPage() {
         tween = gsap.to(contentEl, {
           x: () => -(contentEl.scrollWidth - window.innerWidth),
           ease: "none",
-          onUpdate: () => {},
           scrollTrigger: {
             trigger: carouselEl,
             start: "top top",
             end: () => `+=${contentEl.scrollWidth - window.innerWidth}`,
-            scrub: true,
+            scrub: 1,
             pin: true,
+            pinSpacing: true,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-            onRefresh: (self) => {
+            fastScrollEnd: true,
+            preventOverlaps: true,
+            onLeave: () => {
+              gsap.set(contentEl, { clearProps: "all" });
+            },
+            onEnterBack: () => {
               if (tween) tween.invalidate();
             },
           },
@@ -340,89 +349,141 @@ export default function AboutUsPage() {
     },
   ];
 
+  const smokeRef = useRef(null);
+
+  useEffect(() => {
+    const container = smokeRef.current;
+    if (!container) return;
+
+    function spawn(x, y) {
+      const el = document.createElement('div');
+      el.className = 'elem';
+      el.style.left = `${x - 25}px`;
+      el.style.top = `${y - 25}px`;
+      container.appendChild(el);
+      el.addEventListener('animationend', () => {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      });
+    }
+
+    const interval = setInterval(() => {
+      const rect = container.getBoundingClientRect();
+      const x = Math.random() * rect.width;
+      const y = Math.random() * rect.height;
+      spawn(x, y);
+      while (container.children.length > 30) {
+        container.removeChild(container.firstChild);
+      }
+    }, 700);
+
+    const onMove = (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      spawn(x, y);
+    };
+
+    window.addEventListener('mousemove', onMove);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('mousemove', onMove);
+    };
+  }, []);
+
   return (
-    <SmoothScroll>
-      <section
-        className="relative bg-black"
-        style={{ fontFamily: "var(--font-sora), sans-serif" }}
-      >
-        <Navbar />
+    <section
+      className="relative bg-black"
+      style={{ fontFamily: "var(--font-sora), sans-serif" }}
+    >
+      <Navbar />
 
-        <div className="py-30 min-h-screen flex justify-center items-end relative w-full overflow-visible">
-          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-            <Dither
-              waveColor={[0.01, 0.29, 0.62]}
-              backgroundColor={[0.84, 0.13, 0.69]}
-              disableAnimation={false}
-              enableMouseInteraction={true}
-              mouseRadius={0.3}
-              colorNum={4}
-              waveAmplitude={0.3}
-              waveFrequency={3}
-              waveSpeed={0.05}
-            />
-          </div>
+      <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+        <Ribbons
+          baseThickness={6}
+          colors={['#FA2889']}
+          speedMultiplier={0.4}
+          maxAge={500}
+          enableFade={true}
+        />
+      </div>
 
-          <div
-            className="absolute inset-0 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
+      <div className="py-30 min-h-screen flex justify-center items-end relative w-full overflow-visible">
+        <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+          <Dither
+            waveColor={[0.01, 0.29, 0.62]}
+            backgroundColor={[0.84, 0.13, 0.69]}
+            disableAnimation={false}
+            enableMouseInteraction={true}
+            mouseRadius={0.3}
+            colorNum={4}
+            waveAmplitude={0.3}
+            waveFrequency={3}
+            waveSpeed={0.05}
           />
+        </div>
 
-          {/* Decorative Lines */}
-          <DecorativeLines />
+        <div
+          className="absolute inset-0 brightness-125 h-[150vh]"
+          style={{ backgroundImage: "url('/images/bg-hero.png')" }}
+        />
 
-          {/* Industries Hero Section */}
-          <div className="flex max-lg:flex-col items-center justify-between gap-8">
-            <div className="z-10 ml-20 max-lg:ml-5">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
-                <div className="flex items-center gap-[3px]">
-                  <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                  <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                  <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-                </div>
-                <p className="font-bold text-lg">About Us</p>
+        {/* Decorative Lines */}
+        <DecorativeLines />
+
+        {/* Hero Section */}
+        <div className="flex max-lg:flex-col items-center justify-between gap-8">
+          <div className="z-10 ml-20 max-lg:ml-5">
+            <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+              <div className="flex items-center gap-[3px]">
+                <span className="block h-2.5 w-0.5 rounded bg-white/70" />
+                <span className="block h-2.5 w-0.5 rounded bg-white/50" />
+                <span className="block h-2.5 w-0.5 rounded bg-white/30" />
               </div>
-
-              <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
-                <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                  Shaping <br /> Ideas That Define Our{" "}
-                </AuroraText>
-                <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
-                  <AuroraText colors={["#D42290", "#2DAEEF"]}>
-                    Purpose & Vision
-                  </AuroraText>
-                </span>
-              </h1>
-
-              <p className="font-light text-white/70 md:text-md lg:text-lg">
-                From our values to our craft, this is how we shape stories that
-                define who we are with care
-              </p>
+              <p className="font-bold text-lg">About Us</p>
             </div>
 
-            <img
-              src="/images/about-us-bg.png"
-              className="w-1/2 max-md:w-3/4 h-auto z-10"
-              alt="Astronaut"
-            />
+            <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+              <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                Shaping <br /> Ideas That Define Our{" "}
+              </AuroraText>
+              <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                <AuroraText colors={["#D42290", "#2DAEEF"]}>
+                  Purpose & Vision
+                </AuroraText>
+              </span>
+            </h1>
+
+            <p className="font-light text-white/70 md:text-md lg:text-lg">
+              From our values to our craft, this is how we shape stories that
+              define who we are with care
+            </p>
           </div>
-        </div>
 
-        <div className="relative p-10 max-lg:p-1 z-10 justify-center flex">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-auto w-3/4 object-cover rounded-4xl items-center"
-          >
-            <source src="/videos/about-us-video.webm" type="video/mp4" />
-          </video>
+          <img
+            src="/images/about-us-bg.png"
+            className="w-1/2 max-md:w-3/4 h-auto z-10"
+            alt="Astronaut"
+          />
         </div>
+      </div>
 
+      <div className="relative p-10 max-lg:p-1 z-10 justify-center flex">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-auto w-3/4 object-cover rounded-4xl items-center"
+        >
+          <source src="/videos/about-us-video.webm" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="bg-top overflow-hidden" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
         {/* Who We Are Section */}
         <div>
-          <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-5">
+          <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-10 md:py-48">
             <div className="space-y-10">
               <div className="flex items-center gap-3 text-lg text-[#808080]">
                 <span className="text-nowrap font-poppins">
@@ -430,14 +491,14 @@ export default function AboutUsPage() {
                 </span>
               </div>
 
-              <div className="uppercase font-sora scale-105 ml-10">
+              <div className="w-full md:max-w-[75%] uppercase font-sora scale-105 ml-10">
                 <ScrollReveal>
                   From concept to execution, we build impactful digital
                   solutions that resonate with real people and deliver results
                 </ScrollReveal>
               </div>
 
-              <div className="flex max-lg:flex-col items-center justify-center gap-6">
+              <div className="w-full md:max-w-[90%] flex max-lg:flex-col items-center justify-between gap-6">
                 <div className="max-w-[50%] min-w-[50%] max-lg:min-w-full text-[#808080]">
                   <TextType
                     text="With expertise in areas such as web design, digital marketing, social media management, and content creation, digital agencies play a crucial role."
@@ -481,22 +542,28 @@ export default function AboutUsPage() {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="mt-10">
-            <Gallery3D images={images} />
+            <div className="mt-10">
+              {/* <Gallery3D images={images} /> */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
+                <Image src="/images/about-us-page/image1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image2.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image3.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image4.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Technologies Section */}
         <div>
-          <div className="px-10 items-center py-20 bg-black">
+          <div className="px-10 items-center py-10 md:py-48 bg-black">
             <div className="text-center relative z-10 space-y-8">
-              <p className="text-white/60 text-2xl tracking-tight">
+              <p className="font-extralight text-white/60 text-2xl tracking-tight">
                 05 - Technologies
               </p>
               <h2
-                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl md:text-4xl max-sm:text-2xl leading-tight uppercase"
+                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
                 style={{ fontFamily: "var(--font-sora), sans-serif" }}
               >
                 <TextType
@@ -510,7 +577,7 @@ export default function AboutUsPage() {
               </h2>
 
               <h2
-                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl md:text-4xl max-sm:text-2xl leading-tight uppercase"
+                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
                 style={{ fontFamily: "var(--font-sora), sans-serif" }}
               >
                 <TextType
@@ -523,45 +590,47 @@ export default function AboutUsPage() {
                 />
               </h2>
 
-              <div style={{ transform: "translate3d(0, 0, 0)" }}>
+              <div>
                 <SlidingLogoMarquee items={logos} />
               </div>
             </div>
           </div>
 
+          {/* Glow ellipse below cards */}
           <div className="relative">
-            <div
-              className="absolute -bottom-8 left-[45%] z-100"
-              style={{ transform: "translate3d(0, 0, 0)" }}
-            >
-              <Image
-                src="/images/elevate-icon.png"
-                alt="Elevate Icon"
-                width={100}
-                height={100}
-                className="w-[120px] relative z-10"
-              />
-            </div>
-          </div>
-
-          {/* Linear Gradient Background Lines */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
-                className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
                 style={{
                   background:
-                    "linear-gradient(119.09deg, #4f00ff 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                    "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                  backgroundSize: '200% 100%, 200% 100%'
                 }}
               />
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Approach Section */}
-        <div className="bg-black relative p-20 z-50 overflow-visible">
-          <div className="flex max-md:flex-col items-start">
-            <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
+      {/* Approach Section */}
+      <div>
+        <div className="relative">
+          <div
+            className="absolute -top-12 left-[45%] z-100"
+            style={{ transform: "translate3d(0, 0, 0)" }}
+          >
+            <Image
+              src="/images/elevate-icon.png"
+              alt="Elevate Icon"
+              width={100}
+              height={100}
+              className="w-[120px] relative z-10"
+            />
+          </div>
+        </div>
+        <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
+          <div className="flex max-md:flex-col items-start justify-between">
+            <div className="flex items-center gap-3 text-sm text-white/80">
               <div className="flex items-center gap-[3px]">
                 <span className="block h-2.5 w-0.5 rounded bg-white/70" />
                 <span className="block h-2.5 w-0.5 rounded bg-white/50" />
@@ -571,17 +640,55 @@ export default function AboutUsPage() {
             </div>
 
             <h2
-              className="max-w-[40%] text-[60px] lg:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal"
+              className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               Method of making better result
             </h2>
+            <div />
           </div>
-          {/* <HorizontalScrollCarousel /> */}
+          <HorizontalScrollCarousel />
         </div>
+      </div>
 
-        {/* What Defines Us Section */}
-        <div className="max-w-[90%] mx-auto bg-black relative py-20 mb-20">
+      {/* What Defines Us Section */}
+      <div className="bg-[#00050A] relative pb-20">
+        <div id="smoke" ref={smokeRef}></div>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+                #smoke {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    overflow: hidden;
+                }
+
+                .elem {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
+                    pointer-events: none;
+                    animation: ripple 2s ease-out forwards;
+                }
+
+                @keyframes ripple {
+                    0% {
+                        transform: scale(3) translateY(0);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: scale(10) translateY(-10px);
+                        opacity: 0;
+                    }
+                }
+                `
+        }} />
+
+        <div className="max-w-[90%] mx-auto relative py-20">
           <div className="space-y-10">
             <div className="flex items-center gap-3 text-lg text-[#808080]">
               <span className="text-nowrap font-poppins">
@@ -594,15 +701,31 @@ export default function AboutUsPage() {
               <ScrollReveal>ideas to a crowded world.</ScrollReveal>
             </div>
 
-            <AboutUsCards />
+            <div className="mt-50">
+              <AboutUsCards />
+            </div>
           </div>
         </div>
 
-        <Partners />
+        {/* Glow ellipse below cards */}
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div
+              className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
+              style={{
+                background:
+                  "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                backgroundSize: '200% 100%, 200% 100%'
+              }}
+            />
+          </div>
+        </div>
+      </div>
 
-        <CTA />
-        <Footer />
-      </section>
-    </SmoothScroll>
+      <Partners />
+
+      <CTA />
+      <Footer />
+    </section>
   );
 }

@@ -6,11 +6,13 @@ import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
-import { PhoneCall } from "lucide-react";
+import { ArrowRight, PhoneCall, Ribbon } from "lucide-react";
 import { GoLocation } from "react-icons/go";
 import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
 import DecorativeLines from "../components/DecorativeLines";
+import Ribbons from "@/components/Ribbons";
+import { Link } from "wouter";
 
 export default function ContactUs() {
     const tags = [
@@ -39,6 +41,16 @@ export default function ContactUs() {
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
+
+            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+                <Ribbons
+                    baseThickness={6}
+                    colors={['#FA2889']}
+                    speedMultiplier={0.4}
+                    maxAge={500}
+                    enableFade={true}
+                />
+            </div>
 
             <div className="min-h-screen flex justify-center items-end relative w-full overflow-hidden">
                 {/* Dither Background */}
@@ -112,7 +124,7 @@ export default function ContactUs() {
                             <span className="flex items-center gap-x-4">
                                 Have a <RotatingText
                                     texts={['Project?', 'Idea?', 'Vision?', 'Goal?', 'Dream?', 'Challenge?']}
-                                    mainClassName="inline-block px-3 py-2 text-white overflow-hidden justify-center rounded-lg"
+                                    mainClassName="inline-block text-white overflow-hidden justify-center rounded-lg"
                                     staggerFrom={"last"}
                                     initial={{ y: "100%" }}
                                     animate={{ y: 0 }}
@@ -129,13 +141,13 @@ export default function ContactUs() {
                             </span>
                         </h2>
 
-                        <p className="text-[#989898] text-[20px] max-w-lg leading-relaxed mb-8">
+                        <div className="text-[#989898] text-[20px] max-w-lg leading-relaxed mb-8">
                             <TextType text="Ready to take your triathlon performance to the next level? Reach out today and let's create a personalized training plan for you."
                                 typingSpeed={15}
                                 pauseDuration={1500}
                                 showCursor={true}
                                 cursorCharacter="|" startOnVisible={true} loop={true} />
-                        </p>
+                        </div>
 
                         <div className="border-t border-gray-700 my-8" />
 
@@ -184,55 +196,20 @@ export default function ContactUs() {
                                 })}
                             </div>
 
-                            <div className="mt-6">
-                                <button
-                                    type="button"
-                                    className="relative group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[linear-gradient(135deg,#1a1a2e_0%,#16213e_100%)] border border-gray-200"
-                                    style={{ fontFamily: 'var(--font-sora), sans-serif' }}
+                            <div className="flex justify-between items-center mt-8">
+                                <Link
+                                    href="#"
+                                    className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
-                                    {/* Animated gradient overlay (keeps same colors, just a gentle drift) */}
-                                    {/* <span
-                                            className="
-                                            pointer-events-none absolute inset-0 opacity-0
-                                            group-hover:opacity-100 transition-opacity duration-500
-                                            bg-[radial-gradient(circle_at_15%_20%,rgba(250,40,137,0.20),transparent_60%),radial-gradient(circle_at_85%_80%,rgba(93,126,255,0.25),transparent_65%)]
-                                            "
-                                        /> */}
-                                    <span className="text-[20px] lg:text-[15px] max-sm:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
-                                        Send Message
+                                    <span className="relative top-[0.5px] font-sora text-[20px]">Send Message</span>
+                                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                                        <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                     </span>
-                                    <div
-                                        className="
-                                            relative z-10 w-10 h-10 rounded-full bg-[#FA2889]
-                                            flex items-center justify-center
-                                            shadow-[0_0_0_0_rgba(250,40,137,0.6)]
-                                            group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
-                                            transition-all duration-400
-                                            animate-none group-hover:animate-pulsePink
-                                            "
-                                    >
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="transition-transform duration-300 group-hover:translate-x-px">
-                                            <path
-                                                d="M5 12h14m0 0l-7-7m7 7l-7 7"
-                                                stroke="white"
-                                                strokeWidth="2.5"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    </div>
-                                    {/* Soft glossy sweep */}
-                                    {/* <span
-                                            className="
-                                            pointer-events-none absolute inset-0
-                                            before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
-                                            before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
-                                            before:skew-x-25
-                                            before:transition-transform before:duration-900
-                                            group-hover:before:translate-x-[250%]
-                                            "
-                                        /> */}
-                                </button>
+                                </Link>
+                                <div className="items-end">
+                                    <p className="text-[#A3A3A3]">Prefer email?</p>
+                                    <p className="text-white">moonshottech@gmail.com</p>
+                                </div>
                             </div>
                         </div>
                     </form>

@@ -37,7 +37,7 @@ const ImageComponent = ({ card }) => {
               layoutId={`image-${card.id}-image`}
               src={card.video || src}
               poster={card.thumbnail}
-              className={cn("object-cover object-top rounded-lg h-full w-full")}
+              className={cn("object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500")}
               style={{ opacity: "0.8" }}
               autoPlay
               muted
@@ -51,7 +51,7 @@ const ImageComponent = ({ card }) => {
           <motion.img
             layoutId={`image-${card.id}-image`}
             src={card.thumbnail || src}
-            className={cn("object-cover object-top rounded-lg h-full w-full")}
+            className={cn("object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500")}
             alt={card.title || "thumbnail"}
             style={{ opacity: "0.8" }}
           />
