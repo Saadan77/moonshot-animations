@@ -117,7 +117,7 @@ export default function WebDevelopment() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
@@ -145,7 +145,7 @@ export default function WebDevelopment() {
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
+                {/* Hero Section */}
                 <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                     <div className="z-10 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
@@ -177,16 +177,14 @@ export default function WebDevelopment() {
                         src="/images/services/web-development/hero.png"
                         className="absolute top-20 -right-60 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
                         alt="Astronaut"
-                        data-smoother-ignore
                     />
                 </div>
             </div>
 
-            <div className="relative mt-24 p-5 max-lg:p-5 z-10 justify-center flex">
+            <div className="relative mt-24 p-5 md:p-20 z-10 justify-center flex">
                 <img
                     src="/images/services/web-development/sec-section.png"
-                    className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
-                    data-smoother-ignore
+                    className="h-auto w-full object-cover rounded-4xl items-center"
                 />
             </div>
 
@@ -194,7 +192,7 @@ export default function WebDevelopment() {
                 <div className="bg-top" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
                     <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
                         <div className="flex justify-end max-lg:justify-center">
-                            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-10 -ml-16 max-lg:ml-0">
                                 <TextType
                                     text="Human-centered"
                                     typingSpeed={75}
@@ -215,20 +213,19 @@ export default function WebDevelopment() {
                             </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
                             {/* Image column */}
-                            <div className="relative z-10 col-span-1 flex items-center justify-center">
+                            <div className="relative z-10 flex items-center justify-center">
                                 <img
-                                    src="/images/services/web-development/section-3-laptop.png"
+                                    src="/images/services/web-development/section-3.png"
                                     alt="Laptop showcasing website design"
-                                    className="h-auto"
-                                    data-smoother-ignore
+                                    className="h-auto w-full scale-125"
                                     style={{ mixBlendMode: "screen" }}
                                 />
                             </div>
 
                             {/* Text column */}
-                            <div className="col-span-1 text-white space-y-4">
+                            <div className="text-white space-y-4">
                                 <div className="flex gap-16 max-lg:gap-8">
                                     <div className="w-2 bg-white mt-5 mb-10">|</div>
                                     <div
@@ -256,7 +253,6 @@ export default function WebDevelopment() {
                         <img
                             src="/images/services/web-development/section-4.png"
                             className="h-full w-full object-cover"
-                            data-smoother-ignore
                         />
                     </section>
                 </div>
@@ -286,22 +282,24 @@ export default function WebDevelopment() {
 
                         <div id="web-dev-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
-                            #web-dev #web-dev-layout > div.grid {
-                                gap: 50px !important;
-                                padding: 5rem !important;
-                            }
-                            @media (max-width: 1024px) {
-                                #web-dev > div.grid {
-                                    padding: 25px !important;
-                                }
-                            }
-                            /* Hide the absolute overlay inside LayoutGrid cards */
-                            #web-development #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                display: none !important;
-                            }
-                        `}</style>
                         </div>
+                        
+                        <style dangerouslySetInnerHTML={{
+                            __html: `
+                                #web-dev #web-dev-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
+                                }
+                                @media (max-width: 1024px) {
+                                    #web-dev #web-dev-layout > div.grid {
+                                        padding: 25px !important;
+                                    }
+                                }
+                                #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                        }} />
 
                         <div
                             className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[90%] mx-auto gap-12 h-full items-center"

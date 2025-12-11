@@ -14,6 +14,7 @@ import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
+import Ribbons from "@/components/Ribbons";
 
 const data = [
     {
@@ -117,12 +118,22 @@ export default function Ecommerce() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
 
-            <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
+            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+                <Ribbons
+                    baseThickness={6}
+                    colors={['#FA2889']}
+                    speedMultiplier={0.4}
+                    maxAge={500}
+                    enableFade={true}
+                />
+            </div>
+
+            <div className="py-30 min-h-screen flex items-center max-2xl:justify-center relative w-full overflow-visible">
                 <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
@@ -144,9 +155,9 @@ export default function Ecommerce() {
 
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
-                <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
-                    <div className="z-10 ml-20 max-lg:ml-5">
+                {/* Hero Section */}
+                <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-20">
+                    <div className="z-20 ml-20 max-lg:ml-15 max-sm:ml-10">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                             <div className="flex items-center gap-[3px]">
                                 <span className="block h-2.5 w-0.5 rounded bg-white/70" />
@@ -156,11 +167,13 @@ export default function Ecommerce() {
                             <p className="font-bold text-lg">Ecommerce</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[82px] max-xl:text-[50px] max-sm:text-[30px] tracking-tight leading-none text-white">
-                            <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                Building Ecommerce <br /> That Powers Your {" "}
-                            </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                        <h1 className="font-normal font-sora uppercase mb-4 tracking-tight leading-none text-white">
+                            <div className="text-[66px] max-md:text-[50px] max-sm:text-[40px]">
+                                <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                                    Building Ecommerce <br /> That Powers Your {" "}
+                                </AuroraText>
+                            </div>
+                            <span className="text-[66px] max-md:text-[50px] max-sm:text-[40px] font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Brand & Growth
                                 </AuroraText>
@@ -174,9 +187,8 @@ export default function Ecommerce() {
 
                     <img
                         src="/images/services/e-commerce/hero.png"
-                        className="absolute top-20 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
+                        className="absolute w-1/2 max-2xl:w-full top-30 right-0 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto"
                         alt="E-commerce Hero"
-                        data-smoother-ignore
                     />
                 </div>
             </div>
@@ -259,7 +271,6 @@ export default function Ecommerce() {
                         <img
                             src="/images/services/e-commerce/section-4.png"
                             className="h-full w-full object-cover"
-                            data-smoother-ignore
                         />
                     </section>
                 </div>
@@ -288,21 +299,23 @@ export default function Ecommerce() {
 
                         <div id="e-commerce-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
+ 
+                            <style dangerouslySetInnerHTML={{
+                                __html: `
+                                #e-commerce #e-commerce-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
+                                }
+                                @media (max-width: 1024px) {
                                     #e-commerce #e-commerce-layout > div.grid {
-                                        gap: 50px !important;
-                                        padding: 5rem !important;
+                                        padding: 25px !important;
                                     }
-                                    @media (max-width: 1024px) {
-                                        #e-commerce #e-commerce-layout > div.grid {
-                                            padding: 25px !important;
-                                        }
-                                    }
-                                    /* Hide the absolute overlay inside LayoutGrid cards */
-                                    #e-commerce #e-commerce-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                        display: none !important;
-                                    }
-                                `}</style>
+                                }
+                                #e-commerce #e-commerce-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                            }} />
                         </div>
 
                         <div

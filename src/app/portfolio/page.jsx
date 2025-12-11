@@ -86,13 +86,11 @@ export default function Portfolio() {
                         </p>
                     </div>
 
-                    <div>
-                        <img
-                            src="/images/portfolio-page/portfolio-hero.png"
-                            className="absolute w-full max-2xl:scale-150 -top-20 -right-120 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"
-                            alt="Portfolio Hero"
-                        />
-                    </div>
+                    <img
+                        src="/images/portfolio-page/portfolio-hero.png"
+                        className="absolute w-full max-2xl:scale-150 -top-20 -right-120 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"
+                        alt="Portfolio Hero"
+                    />
                 </div>
             </div>
 
