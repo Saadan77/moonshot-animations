@@ -117,7 +117,7 @@ export default function SEO() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
@@ -145,7 +145,7 @@ export default function SEO() {
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
+                {/* Hero Section */}
                 <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                     <div className="z-10 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
@@ -186,7 +186,6 @@ export default function SEO() {
                 <img
                     src="/images/services/seo/section-2.png"
                     className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
-                    data-smoother-ignore
                 />
             </div>
 
@@ -216,7 +215,7 @@ export default function SEO() {
 
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                         {/* Image column */}
-                        <div className="-mt-24 relative z-10 col-span-1 flex items-center justify-center">
+                        <div className="-mt-24 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
                             <img
                                 src="/images/services/seo/section-3.png"
                                 alt="Laptop showcasing website design"
@@ -284,21 +283,23 @@ export default function SEO() {
 
                     <div id="seo-layout" className="my-20">
                         <LayoutGrid cards={layoutImages} />
-                        <style jsx global>{`
-                            #seo #seo-layout > div.grid {
-                                gap: 50px !important;
-                                padding: 5rem !important;
-                            }
-                            @media (max-width: 1024px) {
-                                #seo > div.grid {
-                                    padding: 25px !important;
+
+                        <style dangerouslySetInnerHTML={{
+                            __html: `
+                                #seo #seo-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
                                 }
-                            }
-                            /* Hide the absolute overlay inside LayoutGrid cards */
-                            #seo #seo-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                display: none !important;
-                            }
-                        `}</style>
+                                @media (max-width: 1024px) {
+                                    #seo #seo-layout > div.grid {
+                                        padding: 25px !important;
+                                    }
+                                }
+                                #seo #seo-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                        }} />
                     </div>
 
                     <div

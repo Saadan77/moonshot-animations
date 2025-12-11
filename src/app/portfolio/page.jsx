@@ -58,7 +58,7 @@ export default function Portfolio() {
 
                 {/* Hero Section */}
                 <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-50">
-                    <div className="z-20 ml-20 max-lg:ml-5">
+                    <div className="relative z-20 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                             <div className="flex items-center gap-[3px]">
                                 <span className="block h-2.5 w-0.5 rounded bg-white/70" />
@@ -85,7 +85,7 @@ export default function Portfolio() {
                             From conceptual sketches to digital experiences, here’s how we turn imagination into design
                         </p>
                     </div>
-
+                    
                     <img
                         src="/images/portfolio-page/portfolio-hero.png"
                         className="absolute w-full max-2xl:scale-150 -top-20 -right-120 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"

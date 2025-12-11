@@ -14,6 +14,7 @@ import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
+import Ribbons from "@/components/Ribbons";
 
 const data = [
     {
@@ -111,10 +112,20 @@ export default function EmailMarketing() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
+
+            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+                <Ribbons
+                    baseThickness={6}
+                    colors={['#FA2889']}
+                    speedMultiplier={0.4}
+                    maxAge={500}
+                    enableFade={true}
+                />
+            </div>
 
             <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
                 <div className="absolute inset-0 w-full h-[125vh] opacity-20">
@@ -139,7 +150,7 @@ export default function EmailMarketing() {
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
+                {/* Hero Section */}
                 <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                     <div className="z-10 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
@@ -151,7 +162,7 @@ export default function EmailMarketing() {
                             <p className="font-bold text-lg">Email Marketing</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[74px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Driving <br /> Emails That Power Your{" "}
                             </AuroraText>
@@ -162,16 +173,15 @@ export default function EmailMarketing() {
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
+                        <p className="text-wrap font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
                             From bold concepts to polished sends, we create email flows that clearly reflect who you are online
                         </p>
                     </div>
 
                     <img
                         src="/images/services/email-marketing/hero.png"
-                        className="absolute w-2/5 top-50 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
-                        alt="Astronaut"
-                        data-smoother-ignore
+                        className="absolute w-3/8 max-2xl:w-3/8 max-lg:w-3/4 -bottom-10 right-0 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto"
+                        alt="Email Marketing Hero"
                     />
                 </div>
             </div>
@@ -211,7 +221,7 @@ export default function EmailMarketing() {
 
                         <div className="grid grid-cols-1 xl:grid-cols-2 gap-24">
                             {/* Image column */}
-                            <div className="-mt-50 relative z-10 col-span-1 flex items-center justify-center">
+                            <div className="-mt-50 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
                                 <img
                                     src="/images/services/email-marketing/section-3.png"
                                     alt="Laptop showcasing website design"
@@ -279,21 +289,23 @@ export default function EmailMarketing() {
 
                         <div id="email-marketing-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
+
+                            <style dangerouslySetInnerHTML={{
+                                __html: `
+                                #email-marketing #email-marketing-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
+                                }
+                                @media (max-width: 1024px) {
                                     #email-marketing #email-marketing-layout > div.grid {
-                                        gap: 50px !important;
-                                        padding: 5rem !important;
+                                        padding: 25px !important;
                                     }
-                                    @media (max-width: 1024px) {
-                                        #email-marketing > div.grid {
-                                            padding: 25px !important;
-                                        }
-                                    }
-                                    /* Hide the absolute overlay inside LayoutGrid cards */
-                                    #email-marketing #email-marketing-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                        display: none !important;
-                                    }
-                                `}</style>
+                                }
+                                #email-marketing #email-marketing-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                            }} />
                         </div>
 
                         <div

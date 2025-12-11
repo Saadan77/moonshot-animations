@@ -117,12 +117,12 @@ export default function WebApplications() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
 
-            <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
+            <div className="py-30 min-h-screen flex items-center relative w-full">
                 <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
@@ -145,7 +145,7 @@ export default function WebApplications() {
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
+                {/* Hero Section */}
                 <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                     <div className="z-10 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
@@ -168,16 +168,15 @@ export default function WebApplications() {
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
+                        <p className="text-wrap font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
                             From initial concepts to polished code, we build web apps that express your brand online.
                         </p>
                     </div>
 
                     <img
                         src="/images/services/web-applications/hero.png"
-                        className="absolute w-3/4 top-0 -right-30 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
+                        className="absolute w-3/4 max-sm:w-full top-0 -right-30 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
                         alt="Astronaut"
-                        data-smoother-ignore
                     />
                 </div>
             </div>
@@ -221,11 +220,11 @@ export default function WebApplications() {
 
                         <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                             {/* Image column */}
-                            <div className="-mt-50 relative z-10 col-span-1 flex items-center justify-center">
+                            <div className="-mt-50 max-2xl:mt-0 relative z-10 col-span-1">
                                 <img
                                     src="/images/services/web-applications/section-3.png"
                                     alt="Laptop showcasing website design"
-                                    className="h-full w-full object-cover"
+                                    className="h-auto w-full object-cover"
                                     style={{ mixBlendMode: "screen" }}
                                 />
                             </div>
@@ -255,11 +254,10 @@ export default function WebApplications() {
                         </div>
                     </section>
 
-                    <section className="h-screen">
+                    <section className="h-screen overflow-x-hidden">
                         <img
                             src="/images/services/web-applications/section-4.png"
                             className="h-full w-full object-cover"
-                            data-smoother-ignore
                         />
                     </section>
                 </div>
@@ -289,21 +287,23 @@ export default function WebApplications() {
 
                         <div id="web-applications-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
+
+                            <style dangerouslySetInnerHTML={{
+                                __html: `
+                                #web-applications #web-applications-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
+                                }
+                                @media (max-width: 1024px) {
                                     #web-applications #web-applications-layout > div.grid {
-                                        gap: 50px !important;
-                                        padding: 5rem !important;
+                                        padding: 25px !important;
                                     }
-                                    @media (max-width: 1024px) {
-                                        #web-applications > div.grid {
-                                            padding: 25px !important;
-                                        }
-                                    }
-                                    /* Hide the absolute overlay inside LayoutGrid cards */
-                                    #web-applications #web-applications-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                        display: none !important;
-                                    }
-                                `}</style>
+                                }
+                                #web-applications #web-applications-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                            }} />
                         </div>
 
                         <div
