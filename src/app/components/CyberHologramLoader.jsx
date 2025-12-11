@@ -173,7 +173,7 @@ const CyberHologramLoader = () => {
   if (!shouldRender) return null;
 
   return (
-    <div className={`fixed inset-0 z-[9999] flex flex-col font-mono pointer-events-none`}>
+    <div className={`fixed inset-0 z-9999 flex flex-col font-mono pointer-events-none`}>
       
       {/* 3D BACKGROUND */}
       <div className={`absolute inset-0 z-0 bg-black transition-opacity duration-1000 ${isFinished ? 'opacity-0' : 'opacity-100'}`}>

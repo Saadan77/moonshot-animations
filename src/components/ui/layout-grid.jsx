@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export const LayoutGrid = ({ cards }) => {
 
   return (
-    <div className="w-full h-full p-30 grid grid-cols-1 md:grid-cols-3 mx-auto gap-4 relative">
+    <div className="w-full h-full p-5 xl:p-30 lg:p-20 sm:p-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -58,7 +58,7 @@ const ImageComponent = ({ card }) => {
         );
       })()}
       <div
-        className="absolute bottom-0 left-0 right-0 text-white p-4 font-semibold rounded-b-lg"
+        className="text-3xl absolute bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
         style={{
           background: "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
         }}

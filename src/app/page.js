@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <CyberHologramLoader />
-      <div className="fixed inset-0 z-9999 pointer-events-none">
+      <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
         <Ribbons
           baseThickness={6}
           colors={['#FA2889']}

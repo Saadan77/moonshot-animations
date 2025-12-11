@@ -15,7 +15,7 @@ export default function Portfolio() {
             className="overflow-x-hidden"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
-            <div className="fixed inset-0 z-9999 pointer-events-none">
+            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
                 <Ribbons
                     baseThickness={6}
                     colors={['#FA2889']}
@@ -58,7 +58,7 @@ export default function Portfolio() {
 
                 {/* Hero Section */}
                 <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-50">
-                    <div className="z-50 ml-20 max-lg:ml-5">
+                    <div className="z-20 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                             <div className="flex items-center gap-[3px]">
                                 <span className="block h-2.5 w-0.5 rounded bg-white/70" />
