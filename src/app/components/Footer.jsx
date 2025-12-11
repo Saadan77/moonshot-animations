@@ -19,7 +19,7 @@ export default function Footer() {
                                 <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
                                     LOCATION
                                 </p>
-                                <p className="not-italic text-2xl leading-relaxed text-white">
+                                <p className="not-italic text-2xl max-sm:text-lg leading-relaxed text-white">
                                     1200 East Collins Boulevard
                                     <br />
                                     Suite 106 Richardson Texas 75081
@@ -32,7 +32,7 @@ export default function Footer() {
                             <img
                                 src="/images/primary-logo.png"
                                 alt="Moonshot Tech"
-                                className="w-3/4 max-lg:w-1/2 h-auto"
+                                className="w-3/4 max-lg:w-1/2 max-sm:w-full h-auto"
                             />
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function Footer() {
                             <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
                                 INQUIRY
                             </p>
-                            <div className="space-y-2 text-2xl text-white">
+                            <div className="space-y-2 text-2xl max-sm:text-lg text-white">
                                 <a
                                     href="mailto:info@gmail.com"
                                     className="block hover:text-white/80 transition-colors"
@@ -64,7 +64,7 @@ export default function Footer() {
                             <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
-                            <ul className="space-y-3 text-xl">
+                            <ul className="space-y-3 text-xl max-sm:text-lg">
                                 {['About', 'Services', 'Project', 'Case Studies', 'Industries', 'Contact'].map(
                                     (link) => (
                                         <li key={link}>
@@ -216,11 +216,11 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-48">
+                <div className="mt-48 max-sm:mt-16">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-white/50">
                         <p className="col-span-1 max-lg:col-span-2 max-lg:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
 
-                        <div className="col-span-2 space-x-16 flex justify-center text-white">
+                        <div className="col-span-2 space-x-16 flex max-sm:flex-col max-sm:gap-4 justify-center text-white">
                             <a href="#" className="hover:text-white/80 transition-colors">
                                 Terms & Conditions
                             </a>

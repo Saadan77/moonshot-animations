@@ -3,6 +3,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export const StaggeredMenu = ({
   position = "right",
@@ -448,9 +449,10 @@ export const StaggeredMenu = ({
             </span>
           </div>
 
-          <div
+          <Link
             className="relative items-center select-none pointer-events-auto"
             aria-label="Logo"
+            href="/"
           >
             <img
               src={logoUrl || "/src/assets/logos/reactbits-gh-white.svg"}
@@ -460,7 +462,7 @@ export const StaggeredMenu = ({
               width={100}
               height={100}
             />
-          </div>
+          </Link>
 
           <div className="hidden md:flex  items-center gap-4 pointer-events-auto">
             <button

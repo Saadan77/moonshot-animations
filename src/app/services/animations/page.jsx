@@ -146,7 +146,7 @@ export default function Animations() {
 
                     <DecorativeLines />
 
-                    {/* Industries Hero Section */}
+                    {/* Animations Hero Section */}
                     <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
                         <div className="z-10 ml-20 max-lg:ml-5">
                             <div className="mb-16 flex items-center gap-3 text-sm text-white/80">

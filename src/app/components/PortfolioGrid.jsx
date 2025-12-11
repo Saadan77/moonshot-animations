@@ -64,13 +64,13 @@ const PortfolioGrid = () => {
         { label: 'Mobile App', value: 'mobile-app' },
     ];
 
-    const filteredItems = activeTab === 'all' 
-        ? portfolioItems 
+    const filteredItems = activeTab === 'all'
+        ? portfolioItems
         : portfolioItems.filter(item => item.category === activeTab);
 
     return (
-        <div className="min-h-screen bg-black py-16 px-6 lg:px-12">
-            <div className="max-w-[90%] mx-auto">
+        <div className="min-h-screen bg-[#00050a] py-16 px-6 lg:px-12">
+            <div className="max-w-[90%] max-sm:max-w-[95%] mx-auto">
                 {/* Header Section */}
                 <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                     {/* Filter Tabs */}
@@ -80,11 +80,10 @@ const PortfolioGrid = () => {
                                 <button
                                     key={tab.value}
                                     onClick={() => setActiveTab(tab.value)}
-                                    className={`relative z-10 px-12 py-4 rounded-full text-lg transition-all ${
-                                        activeTab === tab.value
-                                            ? 'bg-[#FA2889] text-white'
-                                            : 'bg-[#041426] text-white hover:bg-[#FA2889]'
-                                    }`}
+                                    className={`relative z-10 px-12 py-4 rounded-full text-lg transition-all ${activeTab === tab.value
+                                        ? 'bg-[#FA2889] text-white'
+                                        : 'bg-[#041426] text-white hover:bg-[#FA2889]'
+                                        }`}
                                 >
                                     {tab.label}
                                 </button>
@@ -94,19 +93,22 @@ const PortfolioGrid = () => {
                 </div>
 
                 {/* Portfolio Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-md:gap-24">
                     {filteredItems.map((item) => (
                         <div
                             key={item.id}
-                            className={`p-25 rounded-3xl overflow-hidden relative group h-screen ${
-                                item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
-                            }`}
-                            style={{
-                                backgroundImage: 'url(/images/portfolio-page/portfolio-cards-bg.png)',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                            }}
+                            className={`bg-black px-20 pt-20 pb-30 max-sm:px-5 max-sm:p-5 rounded-3xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                                }`}
                         >
+                            <div
+                                className="absolute inset-0 opacity-30"
+                                style={{
+                                    backgroundImage: 'url(/images/portfolio-page/portfolio-cards-bg.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                }}
+                            />
+
                             {item.isVideo ? (
                                 <video
                                     src={item.src}
@@ -114,20 +116,18 @@ const PortfolioGrid = () => {
                                     loop
                                     muted
                                     playsInline
-                                    className="w-full h-full object-cover rounded-4xl"
+                                    className="relative z-10 w-full h-full object-cover rounded-4xl"
                                     data-smoother-ignore
                                 />
                             ) : (
                                 <img
                                     src={item.src}
                                     alt={item.title}
-                                    className="w-full h-full object-cover rounded-4xl"
+                                    className="relative z-10 w-full h-full object-cover rounded-4xl"
                                     data-smoother-ignore
                                 />
                             )}
-                            <div className="absolute bottom-6 left-6">
-                                <h3 className="text-white text-2xl font-light">{item.title}</h3>
-                            </div>
+                            <h3 className="relative mt-10 -ml-10 max-md:ml-0 text-white text-5xl font-light">{item.title}</h3>
                         </div>
                     ))}
                 </div>
