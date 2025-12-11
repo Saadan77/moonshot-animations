@@ -393,7 +393,7 @@ export default function AboutUsPage() {
 
   return (
     <section
-      className="relative bg-black"
+      className="relative bg-black overflow-x-hidden"
       style={{ fontFamily: "var(--font-sora), sans-serif" }}
     >
       <Navbar />
@@ -546,10 +546,10 @@ export default function AboutUsPage() {
             <div className="mt-10">
               {/* <Gallery3D images={images} /> */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
-                <Image src="/images/about-us-page/image1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image2.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image3.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image4.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image-1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image-2.png" width={400} height={400} alt="Image 2" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image-3.png" width={400} height={400} alt="Image 3" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                <Image src="/images/about-us-page/image-4.png" width={400} height={400} alt="Image 4" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
               </div>
             </div>
           </div>
