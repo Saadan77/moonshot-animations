@@ -12,7 +12,6 @@ import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
-import Link from "next/link";
 
 export default function ContactUs() {
     const tags = [

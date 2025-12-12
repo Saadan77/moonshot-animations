@@ -1,3 +1,5 @@
+"use client";
+
 import About2 from "./components/UI/About2";
 import AboutUs from "./components/UI/AboutUs";
 import Brand from "./components/UI/Brand";
