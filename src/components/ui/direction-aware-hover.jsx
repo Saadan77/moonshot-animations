@@ -89,7 +89,6 @@ export const DirectionAwareHover = ({
               width="1000"
               height="1000"
               src={imageUrl}
-              data-smoother-ignore
             />
           </motion.div>
 
@@ -111,7 +110,7 @@ export const DirectionAwareHover = ({
             }}
             className={cn("absolute top-50 right-12 z-40")}
           >
-            <img src="/images/images-arrow.png" alt="arrow" className="h-full w-full" />
+            <img src="/images/images-arrow.png" alt="arrow" className="h-full w-full opacity-90" />
           </motion.div>
            <motion.div
             variants={numberVariants}

@@ -122,6 +122,16 @@ export default function WebDevelopment() {
         >
             <Navbar />
 
+            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+                <Ribbons
+                    baseThickness={6}
+                    colors={['#FA2889']}
+                    speedMultiplier={0.4}
+                    maxAge={500}
+                    enableFade={true}
+                />
+            </div>
+
             <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
                 <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                     <Dither
@@ -283,7 +293,7 @@ export default function WebDevelopment() {
                         <div id="web-dev-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
                         </div>
-                        
+
                         <style dangerouslySetInnerHTML={{
                             __html: `
                                 #web-dev #web-dev-layout > div.grid {

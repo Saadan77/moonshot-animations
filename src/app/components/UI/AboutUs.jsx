@@ -69,7 +69,7 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <section className="relative isolate w-full bg-[#00060b] text-white z-50 overflow-hidden">
+        <section id="about-us" className="relative isolate w-full bg-[#00060b] text-white z-10 overflow-hidden">
             <div id="smoke" ref={smokeRef}></div>
             <style dangerouslySetInnerHTML={{
                 __html: `
@@ -109,11 +109,7 @@ const AboutUs = () => {
                 <div className='pb-24 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
                     <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
-                        <div className="flex items-center gap-[3px]">
-                            <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                            <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                            <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-                        </div>
+                        <img src="/images/about-us/icon.png" />
                         <p className='font-bold text-nowrap text-lg'>About Us</p>
                     </div>
 

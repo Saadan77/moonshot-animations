@@ -64,7 +64,7 @@ const ScrollFillText = ({ children, className = "" }) => {
             className={`relative inline-block leading-none ${className}`}
             style={{ '--reveal-progress': 0 }}
         >
-            <span className="relative z-0 text-black whitespace-nowrap">
+            <span className="relative z-0 text-white whitespace-nowrap">
                 {children}
             </span>
 

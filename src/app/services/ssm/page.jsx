@@ -54,19 +54,19 @@ export default function SSM() {
     const layoutImages = [
         {
             id: 1,
-            thumbnail: "/images/services/ssm/layout-grid/image-1.png",
+            thumbnail: "/images/services/ssm/layout-grid/image1.png",
             className: "md:col-span-2 md:row-span-2",
             content: null,
         },
         {
             id: 2,
-            thumbnail: "/images/services/ssm/layout-grid/image-2.png",
+            thumbnail: "/images/services/ssm/layout-grid/image2.png",
             className: "md:col-span-1",
             content: null,
         },
         {
             id: 3,
-            thumbnail: "/images/services/ssm/layout-grid/image-3.png",
+            thumbnail: "/images/services/ssm/layout-grid/image3.png",
             className: "md:col-span-1",
             content: null,
         },
@@ -117,7 +117,7 @@ export default function SSM() {
 
     return (
         <section
-            className="relative bg-black"
+            className="relative bg-black overflow-x-hidden"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
         >
             <Navbar />
@@ -144,19 +144,19 @@ export default function SSM() {
 
                 <DecorativeLines />
 
-                {/* Industries Hero Section */}
+                {/* Hero Section */}
                 <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
-                    <div className="z-10 ml-20 max-lg:ml-5">
+                    <div className="relative z-10 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
                             <div className="flex items-center gap-[3px]">
                                 <span className="block h-2.5 w-0.5 rounded bg-white/70" />
                                 <span className="block h-2.5 w-0.5 rounded bg-white/50" />
                                 <span className="block h-2.5 w-0.5 rounded bg-white/30" />
                             </div>
-                            <p className="font-bold text-lg">SSM</p>
+                            <p className="font-bold text-lg">Social Media Marketing</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[82px] max-xl:text-[50px] max-sm:text-[30px] tracking-tight leading-none text-white">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Social Media <br /> That Grows Your {" "}
                             </AuroraText>
@@ -167,25 +167,23 @@ export default function SSM() {
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 text-sm md:text-md lg:text-xl max-lg:px-1">
+                        <p className="text-wrap font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
                             From ideas to final posts, we plan & manage SMM that shows who you are online!
                         </p>
                     </div>
 
                     <img
                         src="/images/services/ssm/hero.png"
-                        className="absolute top-20 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
-                        alt="SSM Hero"
-                        data-smoother-ignore
+                        className="absolute w-3/7 max-2xl:w-3/8 max-lg:w-3/4 -bottom-10 right-30 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto"
+                        alt="Social Media Marketing Hero"
                     />
                 </div>
             </div>
 
-            <div className="relative mt-24 py-5 px-24 max-lg:p-2 z-10 justify-center flex">
+            <div className="mt-5 relative p-5 max-lg:p-2 z-10 justify-center flex">
                 <img
                     src="/images/services/ssm/section-2.png"
-                    className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
-                    data-smoother-ignore
+                    className="h-auto w-[95%] max-lg:w-full object-cover rounded-4xl items-center"
                 />
             </div>
 
@@ -216,12 +214,12 @@ export default function SSM() {
 
                         <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                             {/* Image column */}
-                            <div className="-mt-54 relative z-10 col-span-1 flex items-center justify-center">
+                            <div className="-mt-54 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
                                 <img
                                     src="/images/services/ssm/section-3.png"
                                     alt="Laptop showcasing website design"
-                                    className="h-full w-full object-cover"
-                                    style={{ mixBlendMode: "screen", scale: "125%" }}
+                                    className="h-auto w-full object-cover"
+                                    style={{ mixBlendMode: "screen" }}
                                 />
                             </div>
 
@@ -254,7 +252,6 @@ export default function SSM() {
                         <img
                             src="/images/services/ssm/section-4.png"
                             className="h-full w-full object-cover"
-                            data-smoother-ignore
                         />
                     </section>
                 </div>
@@ -284,21 +281,23 @@ export default function SSM() {
 
                         <div id="ssm-layout" className="my-20">
                             <LayoutGrid cards={layoutImages} />
-                            <style jsx global>{`
+
+                            <style dangerouslySetInnerHTML={{
+                                __html: `
+                                #ssm #ssm-layout > div.grid {
+                                    gap: 50px !important;
+                                    padding: 5rem !important;
+                                }
+                                @media (max-width: 1024px) {
                                     #ssm #ssm-layout > div.grid {
-                                        gap: 50px !important;
-                                        padding: 5rem !important;
+                                        padding: 25px !important;
                                     }
-                                    @media (max-width: 1024px) {
-                                        #ssm #ssm-layout > div.grid {
-                                            padding: 25px !important;
-                                        }
-                                    }
-                                    /* Hide the absolute overlay inside LayoutGrid cards */
-                                    #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                        display: none !important;
-                                    }
-                                `}</style>
+                                }
+                                #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                                    display: none !important;
+                                }
+                            `
+                            }} />
                         </div>
 
                         <div

@@ -25,11 +25,13 @@ export default function Partners() {
                 {/* Logo Loop Section */}
                 <div className="flex size-full items-center justify-center">
                     <Marquee>
-                        <MarqueeContent>
+                        <MarqueeContent speed={150}>
                             {[
                                 '/images/partners/logo_archin.png',
                                 '/images/partners/logo_github.png',
                                 '/images/partners/logo_union.png',
+                                '/images/partners/logo_usa.png',
+                                '/images/partners/logo_squarespace.png',
                                 '/images/partners/logo_zm.png',
                             ].map((src, index) => (
                                 <MarqueeItem key={index} className="h-66 w-66 mx-0">

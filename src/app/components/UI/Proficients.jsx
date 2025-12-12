@@ -41,8 +41,8 @@ export default function Proficients() {
                         autoplay={true}
                         autoplayDelay={3000}
                         pauseOnHover={true}
-                        loop={true}
-                        round={false}
+                        loop={false}
+                        round={false}                        
                     />
                 </div>
             </div>

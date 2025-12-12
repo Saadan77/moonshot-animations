@@ -15,7 +15,7 @@ export default function Testimonials() {
             name: 'Sofia Martinez',
             designation: 'Head of Product, VeloPay',
             quote:
-                '"Their team embedded seamlessly with ours, simplifying roadmaps and shipping on time. The results exceeded our projections and expectations. A truly collaborative partnership that delivered exceptional value."',
+                '"Their team embedded seamlessly with ours, simplifying roadmaps and shipping on time. The results exceeded our projections and expectations. A truly collaborative partnership that delivered value."',
             src: '/images/testimonial-image.png',
         },
         {

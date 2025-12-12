@@ -49,7 +49,7 @@ export const AnimatedTestimonials = ({
     <div>
       <div
         className={containerClass}>
-        <div className="relative grid grid-cols-1 max-xl:grid-cols-2 md:grid-cols-3 max-2xl:gap-24 gap-48 items-center">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 max-2xl:gap-24 gap-6 items-center">
           <div className="hidden md:block relative h-full w-full col-span-1">
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,7 +81,7 @@ export const AnimatedTestimonials = ({
                 className="absolute inset-0 origin-bottom"
               >
                 {/* Spinning ring text positioned top-left of the portrait */}
-                <div className="absolute -left-44 top-0 z-30 pointer-events-none lg:block hidden w-44 h-44">
+                <div className="absolute left-0 top-0 z-10 lg:block hidden w-36 h-36">
                   <SpinningText
                     duration={12}
                     radius={6}
@@ -98,13 +98,13 @@ export const AnimatedTestimonials = ({
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
                   draggable={false}
-                  className="w-full h-full max-md:w-3/4 max-md:h-auto object-cover object-center overflow-visible scale-150"
+                  className="w-full h-full object-contain object-center overflow-visible scale-125"
                   data-smoother-ignore
                 />
               </motion.div>
             </AnimatePresence>
           </div>
-          <div className="flex flex-col justify-between py-4 col-span-2">
+          <div className="flex flex-col justify-between py-4">
             <motion.div
               key={active}
               initial={{
@@ -164,7 +164,7 @@ export const AnimatedTestimonials = ({
       {/* Progress bar */}
       <div className="w-[90%] mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <div className="text-white/70 text-lg w-12">{fractionText}</div>
+          <div className="font-poppins font-light text-white/70 text-lg w-12">{fractionText}</div>
           <div className="flex gap-4">
             <button
               onClick={handlePrev}

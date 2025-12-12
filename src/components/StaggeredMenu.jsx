@@ -471,7 +471,7 @@ export const StaggeredMenu = ({
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
-                Our Work
+                Our Works
               </span>
               <div
                 className="

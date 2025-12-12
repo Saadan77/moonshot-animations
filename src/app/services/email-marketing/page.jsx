@@ -190,7 +190,6 @@ export default function EmailMarketing() {
                 <img
                     src="/images/services/email-marketing/section-2.png"
                     className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
-                    data-smoother-ignore
                 />
             </div>
 

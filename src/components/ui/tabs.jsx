@@ -19,6 +19,14 @@ export const Tabs = ({
     newTabs.unshift(selectedTab[0]);
     setTabs(newTabs);
     setActive(newTabs[0]);
+    
+    // Scroll to the portfolio item if anchor exists
+    if (selectedTab[0].anchor) {
+      const element = document.getElementById(selectedTab[0].anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   };
 
   const [hovering, setHovering] = useState(false);

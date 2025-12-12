@@ -16,7 +16,8 @@ export default function Footer() {
                         <div>
                             {/* Location */}
                             <div>
-                                <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
+                                <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3"
+                                    style={{ fontFamily: 'Inter, sans-serif' }}>
                                     LOCATION
                                 </p>
                                 <p className="not-italic text-2xl max-sm:text-lg leading-relaxed text-white">
@@ -41,7 +42,8 @@ export default function Footer() {
                     <div className="col-span-2 space-y-32 max-lg:space-y-16">
                         {/* Inquiry */}
                         <div>
-                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3">
+                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3"
+                                style={{ fontFamily: 'Inter, sans-serif' }}>
                                 INQUIRY
                             </p>
                             <div className="space-y-2 text-2xl max-sm:text-lg text-white">
@@ -95,8 +97,8 @@ export default function Footer() {
                                 </div>
 
                                 <div className="space-y-4">
-                                    <p className="mt-3 text-xl text-white/70 max-w-md">
-                                        We hope to empower user and simplify
+                                    <p className="mt-3 text-xl text-[#bbbbbb] max-w-md">
+                                        We hope to <span className="text-white"> empower </span> user and <span className="text-white"> simplify </span>
                                         <br />
                                         their everyday lives
                                     </p>
@@ -208,7 +210,7 @@ export default function Footer() {
                                 </form>
 
                                 <p className="text-lg text-white/50 font-extralight">
-                                    By subscribing, you accept our newsletter terms and privacy policy.
+                                    By subscribing, you accept our newsletter <br /> terms and privacy policy.
                                 </p>
                             </div>
                         </div>
@@ -234,13 +236,13 @@ export default function Footer() {
 
                         {/* Scroll to Top */}
                         <div className="col-span-1 max-lg:col-span-2 flex justify-end max-lg:justify-center">
-                        <button
-                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="col-span-1 flex items-center justify-center text-white hover:text-white/80 transition-colors"
-                            aria-label="Scroll to top"
-                        >
-                            <ChevronUp size={36} />
-                        </button>
+                            <button
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                className="col-span-1 flex items-center justify-center text-white hover:text-white/80 transition-colors"
+                                aria-label="Scroll to top"
+                            >
+                                <ChevronUp size={36} />
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { PinContainer } from '@/components/ui/3d-pin';
+import { GoArrowUpRight } from 'react-icons/go';
 
 const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
     <svg
@@ -51,7 +52,8 @@ const AboutCard = ({
             <div className="absolute left-8 top-4 text-white/80 text-[20px] tracking-wide select-none">
                 {roman}
             </div>
-            <div className="font-poppins leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
+            <div className="leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
+                style={{ fontFamily: 'Urbanist, sans-serif' }}
             >
                 {titleTopLeft && <div>{titleTopLeft}</div>}
                 {titleTopRight && <div>{titleTopRight}</div>}
@@ -59,11 +61,11 @@ const AboutCard = ({
 
             {/* Bottom row: metric + arrow */}
             <div className="absolute bottom-2 left-4 right-4 flex items-end justify-between">
-                <div className="text-white text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+                <div className="text-white text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]" style={{ fontFamily: 'Urbanist, sans-serif' }}>
                     {number}
                 </div>
 
-                <ArrowUpRight className="w-16 h-16" />
+                <GoArrowUpRight className="w-20 h-24" />
             </div>
         </div>
     );

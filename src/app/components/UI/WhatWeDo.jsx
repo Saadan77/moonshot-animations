@@ -7,30 +7,35 @@ import Image from "next/image";
 const categories = [
   {
     name: "Mobile Applications",
+    id: "mobile-applications",
     image: "/images/what-we-do-bg.png",
     title: "MOBILE",
     subtitle: "APPLICATIONS",
   },
   {
     name: "UI/UX",
+    id: "ui-ux",
     image: "/images/what-we-do/ui-ux.png",
     title: "UI/UX",
     subtitle: "DESIGN",
   },
   {
     name: "Branding",
+    id: "branding",
     image: "/images/what-we-do/branding.png",
     title: "BRANDING",
     subtitle: "",
   },
   {
     name: "Web Development",
+    id: "web-development",
     image: "/images/what-we-do/web.png",
     title: "WEBSITE",
     subtitle: "DEVELOPMENT",
   },
   {
     name: "Animations",
+    id: "animations",
     video: "/images/what-we-do/animation.mp4",
     title: "ANIMATIONS",
     subtitle: "",
@@ -42,25 +47,39 @@ const WhatWeDo = () => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
 
+  const handleCategoryClick = (index) => {
+    if (!containerRef.current) return;
+    
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const containerStart = containerRect.top + window.scrollY;
+    const targetPosition = containerStart + (index * window.innerHeight);
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+    setActiveIdx(index);
+  };
+
   const xSteps = [0, 14.2857, 28.5714, 42.8571, 57.1429, 71.4286, 85.7143, 100];
-  
-  const yOffsets = [0, 30, 50, 80, 120, 160, 200]; 
+
+  const yOffsets = [0, 30, 50, 80, 120, 160, 200];
 
   const generateClipPath = (progress) => {
     const inverseProgress = 1 - progress;
     const baseY = inverseProgress * 100;
 
-    let path = "polygon(0% 100%, "; 
+    let path = "polygon(0% 100%, ";
 
     for (let i = 0; i < 7; i++) {
-        const xStart = xSteps[i];
-        const xEnd = xSteps[i + 1];
-        
-        let stepY = baseY + (yOffsets[i] * inverseProgress);
-        
-        stepY = Math.max(0, Math.min(100, stepY));
+      const xStart = xSteps[i];
+      const xEnd = xSteps[i + 1];
 
-        path += `${xStart}% ${stepY}%, ${xEnd}% ${stepY}%, `;
+      let stepY = baseY + (yOffsets[i] * inverseProgress);
+
+      stepY = Math.max(0, Math.min(100, stepY));
+
+      path += `${xStart}% ${stepY}%, ${xEnd}% ${stepY}%, `;
     }
 
     path += "100% 100%)";
@@ -74,16 +93,16 @@ const WhatWeDo = () => {
 
       cardsRef.current.forEach((card, index) => {
         if (!card) return;
-        
+
         if (index === 0) {
-            card.style.clipPath = "none";
-            return;
+          card.style.clipPath = "none";
+          return;
         }
 
         const rect = card.getBoundingClientRect();
-        
+
         let progress = (windowHeight - rect.top) / windowHeight;
-        
+
         progress = Math.max(0, Math.min(1, progress));
 
         const path = generateClipPath(progress);
@@ -94,7 +113,7 @@ const WhatWeDo = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -110,6 +129,7 @@ const WhatWeDo = () => {
           {categories.map((cat, idx) => (
             <div
               key={cat.name}
+              id={cat.id}
               ref={(el) => (cardsRef.current[idx] = el)}
               className={`pb-20 sticky top-0 h-screen flex flex-col justify-between z-10`}
               style={{ 
@@ -133,7 +153,8 @@ const WhatWeDo = () => {
                         {categories.map((item, cidx) => (
                           <div key={item.name} className="max-sm:text-[15px] flex items-center">
                             <span
-                              className={`px-1 whitespace-nowrap ${activeIdx === cidx ? "text-white" : "text-white/55"}`}
+                              onClick={() => handleCategoryClick(cidx)}
+                              className={`px-1 whitespace-nowrap cursor-pointer transition-colors duration-300 hover:text-white ${activeIdx === cidx ? "text-white" : "text-white/55"}`}
                             >
                               {item.name}
                             </span>
@@ -149,7 +170,7 @@ const WhatWeDo = () => {
                   <div className="mt-4 h-px w-full bg-white/10" />
                 </div>
               </div>
-              
+
               {/* Media */}
               <div className="absolute inset-0 z-0">
                 {cat.video ? (
@@ -184,10 +205,12 @@ const WhatWeDo = () => {
                       className="max-sm:text-[40px] md:text-[80px] lg:text-[100px]"
                       tag="span"
                       textAlign="left"
-                      shuffleDirection="left"
+                      shuffleDirection="right"
                       duration={0.5}
                       stagger={0.04}
-                      shuffleTimes={2}
+                      shuffleTimes={1}
+                      loop={false}
+                      triggerOnHover={false}
                       style={{ fontFamily: "var(--font-sora), sans-serif" }}
                     />
                   </div>
@@ -203,11 +226,12 @@ const WhatWeDo = () => {
                           className="max-sm:text-[40px] md:text-[80px] lg:text-[100px]"
                           tag="span"
                           textAlign="left"
-                          shuffleDirection="left"
+                          shuffleDirection="right"
                           duration={0.5}
-                          stagger={0.04}
+                          stagger={0.2}
                           shuffleTimes={1}
-                          loop={true}
+                          loop={false}
+                          triggerOnHover={false}
                           style={{ fontFamily: "var(--font-sora), sans-serif" }}
                         />
                       </>

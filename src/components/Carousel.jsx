@@ -257,7 +257,7 @@ export default function Carousel({
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="object-cover"
+                      className="object-cover pointer-events-none select-none"
                     />
                   )}
                 </div>

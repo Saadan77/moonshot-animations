@@ -60,7 +60,7 @@ const About2 = () => {
         <section className="relative bg-[#00060B] text-white py-48 z-50 pb-50">
             {/* Content Overlay */}
             <div className="relative z-10 max-w-[90%] mx-auto">
-                <div className='mb-36 space-y-12'>
+                <div className='mb-36 space-y-12 overflow-x-hidden'>
                     {/* Top label */}
                     <div className="flex items-center gap-3 text-[20px] text-[#808080]">
                         <span className='text-nowrap font-poppins font-light'>04 — The Inventive Minds</span>
@@ -97,8 +97,7 @@ const About2 = () => {
                         <img
                             src="/images/about-2/about-2-bg.png"
                             alt=""
-                            className="max-w-[1100px] w-[60vw] object-contain grayscale opacity-60"
-                            style={{ transform: 'translateZ(0)' }}
+                            className="max-w-[1100px] w-[60vw] object-contain grayscale opacity-100"
                         />
                     </div>
                     {/* Cards Container */}

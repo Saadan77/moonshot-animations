@@ -4,36 +4,42 @@ import { Tabs } from '@/components/ui/tabs';
 import React, { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
 
 export function Tags() {
     const tabs = [
         {
             title: "UI/UX",
             value: "ui-ux",
+            anchor: "portfolio-2"
         },
         {
             title: "Branding",
             value: "branding",
+            anchor: "portfolio-1"
         },
         {
             title: "Motion",
             value: "motion",
+            anchor: "portfolio-4"
         },
         {
             title: "Mobile Applications",
             value: "mobile-applications",
+            anchor: "portfolio-3"
         },
 
         {
             title: "All Services",
             value: "all-services",
+            anchor: "portfolio-1"
         },
     ];
 
     return (
         <div className="relative flex flex-col max-w-xl ml-auto w-5/6">
-            <p className='text-lg font-sora mb-8 text-end text-white/70'>
-                (<span className='text-white'>Filter</span> By Tag)
+            <p className='font-normal text-lg font-sora mb-8 text-end text-white/60'>
+                (<span className='text-white'>Filter</span> by Tag)
             </p>
             <Tabs tabs={tabs} />
         </div>
@@ -156,26 +162,33 @@ const Portfolio = () => {
                             </h2>
                         </div>
 
-                        <button className="max-w-fit group flex items-center gap-2 bg-[#041426] hover:bg-[#FA2889] border border-[#979797] text-white pl-8 pr-1 py-2 rounded-full transition-colors">
-                            <span className='text-[20px] font-light' style={{ fontFamily: 'var(--font-sora), sans-serif' }}>Explore All Works</span>
-                            <div className="bg-[#FA2889] group-hover:bg-white group-hover:text-black rounded-full p-3">
-                                <ArrowRight className="w-6 h-6" />
-                            </div>
-                        </button>
+                        <div className='inline-block'>
+                            <Link
+                                href="#"
+                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                            >
+                                <span className="relative top-[0.5px] font-sora text-[20px]">Explore All Works</span>
+                                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                                </span>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Row 1, Col 2: First Portfolio Image */}
+                    <div id="portfolio-1">
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-1.png"
                         className="w-full h-full"
                         heading={<p>Branding</p>}
                         number={<p>01.</p>}
                     >
-                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                        <div className="text-lg font-poppins font-light text-white/80">
                             <p>#BuildYourBrand</p>
                             <p>#brandwithpurpose</p>
                         </div>
                     </DirectionAwareHover>
+                    </div>
 
                     {/* Row 1, Col 3: Filter Tags */}
                     <div className="flex flex-col justify-start gap-3">
@@ -187,61 +200,69 @@ const Portfolio = () => {
                     <div className="block max-lg:hidden lg:col-span-1"></div>
 
                     {/* Row 2, Col 1: Portfolio Image 2 */}
+                    <div id="portfolio-2">
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-2.png"
                         className="w-full h-full"
                         heading={<p>UI/UX</p>}
                         number={<p>02.</p>}
                     >
-                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                        <div className="text-lg font-poppins font-light text-white/80">
                             <p>#Webdesign</p>
                             <p>#Creativewebsolutions</p>
                         </div>
                     </DirectionAwareHover>
+                    </div>
 
 
                     {/* Row 2, Col 2: Portfolio Image 3 */}
+                    <div id="portfolio-3">
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-3.png"
                         className="w-full h-full"
                         heading={<p>Mobile App</p>}
                         number={<p>03.</p>}
                     >
-                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                        <div className="text-lg font-poppins font-light text-white/80">
                             <p>#Appdesign</p>
                             <p>#Mobileapps</p>
                         </div>
                     </DirectionAwareHover>
+                    </div>
 
                     {/* Row 3, Col 1: Portfolio Image 4 */}
+                    <div id="portfolio-4">
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-4.png"
                         className="w-full h-full"
                         heading={<p>Animations</p>}
                         number={<p>04.</p>}
                     >
-                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                        <div className="text-lg font-poppins font-light text-white/80">
                             <p>#Creativemotion</p>
                             <p>#Animateddesign</p>
                         </div>
                     </DirectionAwareHover>
+                    </div>
 
 
                     {/* Row 3, Col 2: Empty Spacer */}
                     <div className="block max-lg:hidden lg:col-span-1"></div>
 
                     {/* Row 3, Col 2: Portfolio Image 5 */}
+                    <div id="portfolio-5">
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-5.png"
                         className="w-full h-full"
                         heading={<p>Logo Design</p>}
                         number={<p>05.</p>}
                     >
-                        <div className="text-lg space-y-2 font-poppins font-light text-white/80">
+                        <div className="text-lg font-poppins font-light text-white/80">
                             <p>#Logodesign</p>
                             <p>#Brandidentity</p>
                         </div>
                     </DirectionAwareHover>
+                    </div>
                 </div>
 
             </div>

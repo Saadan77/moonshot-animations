@@ -124,8 +124,6 @@ export default function CTA() {
             <div className="relative py-12 min-h-[80vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
                 style={{
                     borderRadius: "1333.3px",
-                    transform: 'translate3d(0, 0, 0)',
-                    isolation: 'isolate',
                     mixBlendMode: 'screen',
                 }}>
                 <div className="flex flex-col items-center space-y-6 py-10">
@@ -134,7 +132,7 @@ export default function CTA() {
                         loop
                         muted
                         playsInline
-                        className="h-full w-full object-cover rounded-full items-center"
+                        className="h-full w-full object-cover rounded-full items-center overflow-visible"
                     >
                         <source src="/videos/bg-cta-webm.webm" type="video/mp4" />
                     </video>
@@ -170,7 +168,7 @@ export default function CTA() {
             </div>
 
             {/* Bottom large gradient */}
-            <div className="-mt-70 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="-mt-78 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
                     className="w-screen h-[200px] rounded-full blur-[120px] opacity-80 in-out"
                     style={{

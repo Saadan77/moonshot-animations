@@ -75,7 +75,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Content Container */}
-                <div className="mt-[50px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible"
+                <div className="mt-[100px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible"
                     style={{
                         mixBlendMode: 'screen',
                     }}>
@@ -108,7 +108,7 @@ const Hero = () => {
 
                         {/* Left Side - Digital Text */}
                         <div className='leading-none text-white tracking-[-0.03em]'>
-                            <div className="text-left max-md:text-center max-sm:mb-5 relative z-10">
+                            <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
                                 <h1
                                     className="italic text-[220px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] "
                                     style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -247,7 +247,9 @@ const Hero = () => {
 
                     {/* Center Button */}
                     <div className='bg-white/10 rounded-[133px] py-2 px-10 hover:scale-105 transition-transform duration-300 flex justify-center items-center gap-4 cursor-pointer'>
-                        <ChevronDown className="text-white w-8 h-8" />
+                        <a href="#about-us" className="scroll-smooth">
+                            <ChevronDown className="text-white w-8 h-8" />
+                        </a>
                     </div>
 
                     {/* Bottom Right Scroll Indicator */}
