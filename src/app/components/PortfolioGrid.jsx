@@ -81,8 +81,8 @@ const PortfolioGrid = () => {
                                     key={tab.value}
                                     onClick={() => setActiveTab(tab.value)}
                                     className={`relative z-10 px-12 py-4 rounded-full text-lg transition-all ${activeTab === tab.value
-                                        ? 'bg-[#FA2889] text-white'
-                                        : 'bg-[#041426] text-white hover:bg-[#FA2889]'
+                                        ? 'bg-[#D42290] text-white'
+                                        : 'bg-[#041426] text-white hover:bg-[#D42290]'
                                         }`}
                                 >
                                     {tab.label}
