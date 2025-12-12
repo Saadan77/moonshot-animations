@@ -4,7 +4,7 @@ import { Tabs } from '@/components/ui/tabs';
 import React, { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'wouter';
+import Link from 'next/link';
 
 export function Tags() {
     const tabs = [
