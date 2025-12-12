@@ -126,7 +126,7 @@ export default function Ecommerce() {
             <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
                 <Ribbons
                     baseThickness={6}
-                    colors={['#FA2889']}
+                    colors={['#D42290']}
                     speedMultiplier={0.4}
                     maxAge={500}
                     enableFade={true}

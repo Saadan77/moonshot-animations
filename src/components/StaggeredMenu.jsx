@@ -500,7 +500,7 @@ export const StaggeredMenu = ({
 
             <button
               type="button"
-              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FA2889]/60 active:scale-[0.97] overflow-hidden bg-[#041426] border border-gray-200"
+              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D42290]/60 active:scale-[0.97] overflow-hidden bg-[#041426] border border-[#979797]"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
@@ -508,7 +508,7 @@ export const StaggeredMenu = ({
               </span>
               <div
                 className="
-                  relative z-10 w-10 h-10 rounded-full bg-[#FA2889]
+                  relative z-10 w-10 h-10 rounded-full bg-[#D42290]
                   flex items-center justify-center
                   shadow-[0_0_0_0_rgba(250,40,137,0.6)]
                   group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
