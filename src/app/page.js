@@ -33,10 +33,10 @@ export default function Home() {
       <About2 />
       <Proficients />
       <Portfolio />
-      {/* <Brand />
+      <Brand />
       <Partners />
       <CTA />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
