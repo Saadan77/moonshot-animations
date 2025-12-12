@@ -15,7 +15,6 @@ import Partners from "../components/UI/Partners";
 import ScrollReveal from "@/components/lightswind/scroll-reveal";
 import TextType from "@/components/TextType";
 import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
-import { Gallery3D } from "../components/Gallery3D";
 import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
 import AboutUsCards from "../components/AboutUsCards";
 import DecorativeLines from "../components/DecorativeLines";
