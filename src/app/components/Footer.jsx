@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUp } from "lucide-react";
+import { ArrowRight, ChevronUp } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -107,7 +107,7 @@ export default function Footer() {
                                     <div className="flex gap-3">
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Twitter/X"
                                         >
                                             <svg
@@ -121,7 +121,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Instagram"
                                         >
                                             <svg
@@ -139,7 +139,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="Facebook"
                                         >
                                             <svg
@@ -153,7 +153,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="LinkedIn"
                                         >
                                             <svg
@@ -167,7 +167,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
                                             aria-label="YouTube"
                                         >
                                             <svg
@@ -200,13 +200,16 @@ export default function Footer() {
                                     <span className="text-white/90">Newsletter</span>
                                 </div>
 
-                                <form className="flex flex-row gap-3 max-w-md">
+                                <form className="group flex flex-row gap-3 max-w-md">
                                     <input
                                         type="email"
-                                        placeholder="your email"
+                                        placeholder="Your email"
                                         className="w-full sm:flex-1 p-4 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
                                         suppressHydrationWarning
                                     />
+                                    <span className="text-black grid place-items-center rounded-full bg-white hover:bg-[#D42290] p-2.5 m-2 ml-[-63px]">
+                                        <ArrowRight className="w-6 h-6 hover:text-white" />
+                                    </span>
                                 </form>
 
                                 <p className="text-lg text-white/50 font-extralight">

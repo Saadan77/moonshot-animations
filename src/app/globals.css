@@ -178,3 +178,7 @@ html {
     pointer-events: none;
     opacity: 30%;
 }
+
+shark-icon-container {
+  display: none;
+}

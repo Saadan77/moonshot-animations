@@ -433,13 +433,9 @@ export default function AboutUsPage() {
         {/* Hero Section */}
         <div className="flex max-lg:flex-col items-center justify-between gap-8">
           <div className="z-10 ml-20 max-lg:ml-5">
-            <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
-              <div className="flex items-center gap-[3px]">
-                <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-              </div>
-              <p className="font-bold text-lg">About Us</p>
+            <div className="mb-16 flex items-center gap-3 text-sm text-white">
+              <img src="/images/about-us/icon.png" />
+              <p className="font-poppins font-medium text-lg">About Us</p>
             </div>
 
             <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
@@ -484,21 +480,21 @@ export default function AboutUsPage() {
         <div>
           <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-10 md:py-48">
             <div className="space-y-10">
-              <div className="flex items-center gap-3 text-lg text-[#808080]">
-                <span className="text-nowrap font-poppins">
+              <div className="flex items-center gap-3 text-xl text-[#808080]">
+                <span className="text-nowrap font-poppins font-normal">
                   03 — Who we are
                 </span>
               </div>
 
-              <div className="w-full md:max-w-[75%] uppercase font-sora scale-105 ml-10">
+              <div className="w-full md:max-w-[75%] uppercase font-sora scale-110 ml-15">
                 <ScrollReveal>
                   From concept to execution, we build impactful digital
                   solutions that resonate with real people and deliver results
                 </ScrollReveal>
               </div>
 
-              <div className="w-full md:max-w-[90%] flex max-lg:flex-col items-center justify-between gap-6">
-                <div className="max-w-[50%] min-w-[50%] max-lg:min-w-full text-[#808080]">
+              <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
+                <div className="lg:mt-10 max-w-[40%] min-w-[40%] max-lg:min-w-full text-[#808080]">
                   <TextType
                     text="With expertise in areas such as web design, digital marketing, social media management, and content creation, digital agencies play a crucial role."
                     typingSpeed={15}
@@ -510,9 +506,9 @@ export default function AboutUsPage() {
                   />
                 </div>
 
-                <div className="flex gap-8">
+                <div className="flex gap-16 max-lg:gap-8">
                   <div>
-                    <p className="text-[120px] xl:text-[80px] sm:text-[60px]">
+                    <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
                       <CountingNumber
                         number={400}
                         inView={true}
@@ -525,14 +521,14 @@ export default function AboutUsPage() {
                     </span>
                   </div>
                   <div>
-                    <p className="text-[120px] xl:text-[80px] sm:text-[60px]">
-                      {"<"}
+                    <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
+                      {">"}
                       <CountingNumber
                         number={95}
                         inView={true}
                         transition={{ stiffness: 100, damping: 30 }}
                       />
-                      %
+                      <span className="text-[50px]">%</span>
                     </p>
                     <span className="text-xl">
                       Projects Success <br /> Rate
@@ -542,7 +538,7 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-20">
               {/* <Gallery3D images={images} /> */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
                 <Image src="/images/about-us-page/image-1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
@@ -558,7 +554,7 @@ export default function AboutUsPage() {
         <div>
           <div className="px-10 items-center py-10 md:py-48 bg-black">
             <div className="text-center relative z-10 space-y-8">
-              <p className="font-extralight text-white/60 text-2xl tracking-tight">
+              <p className="font-extralight text-[#808080] text-2xl tracking-tight">
                 05 - Technologies
               </p>
               <h2
@@ -615,8 +611,7 @@ export default function AboutUsPage() {
       <div>
         <div className="relative">
           <div
-            className="absolute -top-12 left-[45%] z-100"
-            style={{ transform: "translate3d(0, 0, 0)" }}
+            className="absolute -top-12 left-[48%] z-100"
           >
             <Image
               src="/images/elevate-icon.png"
@@ -629,17 +624,12 @@ export default function AboutUsPage() {
         </div>
         <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
           <div className="flex max-md:flex-col items-start justify-between">
-            <div className="flex items-center gap-3 text-sm text-white/80">
-              <div className="flex items-center gap-[3px]">
-                <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-              </div>
-              <p className="text-lg">06 - Approach</p>
+            <div className="flex items-center gap-3 text-sm text-[#808080] font-poppins">
+              <p className="text-lg">04 - Approach</p>
             </div>
 
             <h2
-              className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal"
+              className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal leading-[1.2]"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
             >
               Method of making better result
