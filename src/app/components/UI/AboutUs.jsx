@@ -110,7 +110,7 @@ const AboutUs = () => {
                     {/* Small "About Us" label */}
                     <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
                         <img src="/images/about-us/icon.png" />
-                        <p className='font-bold text-nowrap text-lg'>About Us</p>
+                        <p className='font-medium text-nowrap text-lg'>About Us</p>
                     </div>
 
                     <div>
@@ -145,10 +145,10 @@ const AboutUs = () => {
             <div className="relative">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div
-                        className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
+                        className="w-screen h-[100px] rounded-full blur-[80px] in-out"
                         style={{
                             background:
-                                "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                                "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
                             backgroundSize: '200% 100%, 200% 100%'
                         }}
                     />

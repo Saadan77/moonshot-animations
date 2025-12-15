@@ -65,7 +65,7 @@ export function ScrollReveal({
   textClassName,
   enableBlur = true,
   baseOpacity = 0.1,
-  baseRotation = 3,
+  baseRotation = 0,
   blurStrength = 4,
   staggerDelay = 0.05,
   threshold = 0.5,

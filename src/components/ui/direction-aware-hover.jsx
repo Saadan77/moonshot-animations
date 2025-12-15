@@ -117,7 +117,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("font-poppins absolute -bottom-32 -left-20 z-40 text-right text-[322px]")}
+            className={cn("font-poppins absolute -bottom-32 -left-24 z-40 text-right text-[300px]")}
           >
             {number}
           </motion.div>

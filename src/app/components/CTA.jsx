@@ -134,7 +134,7 @@ export default function CTA() {
                         playsInline
                         className="h-full w-full object-cover rounded-full items-center overflow-visible"
                     >
-                        <source src="/videos/bg-cta-webm.webm" type="video/mp4" />
+                        <source src="/videos/cta-video.webm" type="video/webm" />
                     </video>
 
 
@@ -168,15 +168,14 @@ export default function CTA() {
             </div>
 
             {/* Bottom large gradient */}
-            <div className="-mt-78 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="-mt-50 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
-                    className="w-screen h-[200px] rounded-full blur-[120px] opacity-80 in-out"
+                    className="w-screen h-[100px] rounded-full blur-[80px] in-out"
                     style={{
                         background:
-                            "linear-gradient(119.09deg, #4f00ff 14.54%, #ff83bc 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                            "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
                         backgroundSize: '200% 100%, 200% 100%'
                     }}
-
                 />
             </div>
         </section>

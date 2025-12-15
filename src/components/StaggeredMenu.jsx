@@ -349,8 +349,8 @@ export const StaggeredMenu = ({
   return (
     <div
       className={`sm-scope z-50 ${isFixed
-          ? "fixed top-0 left-0 w-screen h-screen overflow-hidden"
-          : "w-full h-full"
+        ? "fixed top-0 left-0 w-screen h-screen overflow-hidden"
+        : "w-full h-full"
         }`}
     >
       <div
@@ -441,12 +441,12 @@ export const StaggeredMenu = ({
               </span>
             </button>
 
-            <span
-              className="-z-10 font-sora hidden md:flex text-xl max-lg:text-sm text-[#BBBBBB] underline text-nowrap"
-              aria-hidden="true"
+            <Link
+              className="font-sora hidden md:flex text-xl max-lg:text-sm text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
+              href="tel:+19723315058"
             >
               +1-972-331-5058
-            </span>
+            </Link>
           </div>
 
           <Link
@@ -498,38 +498,15 @@ export const StaggeredMenu = ({
               />
             </button>
 
-            <button
-              type="button"
-              className="relative group flex items-center gap-4 rounded-full pl-8 pr-2 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D42290]/60 active:scale-[0.97] overflow-hidden bg-[#041426] border border-[#979797]"
-              style={{ fontFamily: "var(--font-sora), sans-serif" }}
+            <Link
+              href="#"
+              className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
             >
-              <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
-                Let's Talk
+              <span className="relative top-[0.5px] font-sora text-[20px]">Let's Talk</span>
+              <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                <ArrowRight className="w-6 h-6 group-hover:text-black" />
               </span>
-              <div
-                className="
-                  relative z-10 w-10 h-10 rounded-full bg-[#D42290]
-                  flex items-center justify-center
-                  shadow-[0_0_0_0_rgba(250,40,137,0.6)]
-                  group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
-                  transition-all duration-400
-                  animate-none group-hover:animate-pulsePink
-                "
-              >
-                <ArrowRight className="w-6 h-6" />
-              </div>
-              {/* Soft glossy sweep */}
-              <span
-                className="
-                  pointer-events-none absolute inset-0
-                  before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
-                  before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
-                  before:skew-x-25
-                  before:transition-transform before:duration-900
-                  group-hover:before:translate-x-[250%]
-                "
-              />
-            </button>
+            </Link>
           </div>
         </header>
 

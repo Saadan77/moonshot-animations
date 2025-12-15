@@ -204,7 +204,7 @@ export default function Carousel({
 
               {/* Gradient - Bottom Left */}
               <div
-                className="absolute -left-32 -bottom-32 w-100 h-150 rounded-full blur-[120px] opacity-60 pointer-events-none"
+                className="absolute -left-32 -bottom-32 w-100 h-150 rounded-full blur-[100px] opacity-60 pointer-events-none"
                 style={{
                   background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                 }}
@@ -212,7 +212,7 @@ export default function Carousel({
 
               {/* Gradient - Top Right */}
               <div
-                className="absolute -top-2 -right-2 w-100 h-96 rounded-full blur-[120px] opacity-100 pointer-events-none"
+                className="absolute -top-2 -right-2 w-100 h-96 rounded-full blur-[100px] opacity-100 pointer-events-none"
                 style={{
                   background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 100%)'
                 }}
@@ -226,14 +226,14 @@ export default function Carousel({
                     {item.title}
                   </h3>
 
-                  <p className="text-white/70 text-md lg:text-xl max-w-lg font-light" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                  <p className="text-white/70 text-md lg:text-[22px] max-w-lg font-light" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                     {item.description}
                   </p>
 
                   {/* Statistics */}
                   <div className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-x-16 gap-y-12 max-w-2xl">
                     {item.stats?.map((stat, idx) => (
-                      <div key={idx} className={`space-y-1 ${idx === 2 ? 'col-span-1' : ''}`}>
+                      <div key={idx} className={`space-y-4 ${idx === 2 ? 'col-span-1' : ''}`}>
                         <div className="text-5xl md:text-7xl text-white" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                           {stat.value}
                         </div>
@@ -247,7 +247,7 @@ export default function Carousel({
 
                 {/* Bottom Section - Laptop Image & Badge */}
                 <div className="col-span-1 flex flex-col justify-between">
-                  <div className="hidden md:flex items-start justify-end gap-2 text-white/70 text-md font-poppins">
+                  <div className="hidden md:flex items-start justify-end gap-2 text-white/70 text-md font-inter">
                     <div className="text-right flex">
                       <p className="text-white">PASSION<span className="text-white/50">{" "} IN <br /> {item.badge?.split(' ')[2] || 'BUSINESS'}</span></p>
                     </div>
@@ -294,7 +294,7 @@ export default function Carousel({
           </button>
 
           {/* Dot Indicators */}
-          <div className="mt-4 flex w-[150px] justify-center gap-2">
+          <div className="mt-4 flex w-[150px] justify-center gap-6">
             {items.map((_, index) => (
               <motion.div
                 key={index}

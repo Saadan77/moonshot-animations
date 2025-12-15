@@ -114,7 +114,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -122,7 +122,7 @@ const About2 = () => {
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-80 h-90 rounded-full blur-[50px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
@@ -168,15 +168,15 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
+                                        background: 'linear-gradient(150deg, rgba(255, 198, 40, 0.80) 39.93%, rgba(250, 40, 137, 0.80) 60.8%, rgba(62, 95, 249, 0.80) 91.46%)'
                                     }}
                                 />
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-80 h-90 rounded-full blur-[50px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -200,7 +200,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-100 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="max-w-[95%] mt-100 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="It Is Independent Google Partner (Accredited By Google)" typingSpeed={15}
@@ -222,7 +222,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -230,7 +230,7 @@ const About2 = () => {
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-80 h-90 rounded-full blur-[50px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
@@ -254,7 +254,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="max-w-[90%] relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Tech With Moonshot Is Trusted With Some Of World's Leading Digital Brands." typingSpeed={15}
@@ -277,7 +277,7 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[50px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
                                     }}
@@ -285,7 +285,7 @@ const About2 = () => {
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-80 h-90 rounded-full blur-[50px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
                                     style={{
                                         background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
@@ -309,7 +309,7 @@ const About2 = () => {
 
                                 {/* Headline */}
                                 <div
-                                    className="mt-60 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                                    className="max-w-[90%] mt-60 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <TextType text="Our SEO And Google Ads Strategists Have Earned Numerous Industry Awards, Including Specialist Agency Of The Year." typingSpeed={15}

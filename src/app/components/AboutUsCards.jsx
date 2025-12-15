@@ -4,23 +4,6 @@ import React from 'react';
 import { PinContainer } from '@/components/ui/3d-pin';
 import { GoArrowUpRight } from 'react-icons/go';
 
-const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
-    <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        className={className}
-        aria-hidden="true"
-    >
-        <path
-            d="M7 17L17 7M9 7h8v8"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-    </svg>
-);
-
 const AboutCard = ({
     roman = 'I.',
     titleTopLeft = '',
@@ -33,7 +16,7 @@ const AboutCard = ({
     return (
         <div
             className={[
-                'group relative overflow-hidden rounded-3xl border border-white/10',
+                'group relative overflow-hidden rounded-3xl border border-[#4D4D4D]',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
                 compact ? 'h-[400px]' : 'h-[400px]',
                 'w-[min(92vw,340px)] sm:w-[min(44vw,400px)] lg:w-[400px]',
@@ -82,7 +65,7 @@ export default function AboutUsCards() {
             number: '12+',
             image: `${IMG_BASE}/about-us-1.png`,
             compact: false,
-            offset: 'lg:translate-y-6',
+            offset: 'lg:translate-y-12',
         },
         {
             roman: 'II.',
@@ -100,7 +83,7 @@ export default function AboutUsCards() {
             number: '110+',
             image: `${IMG_BASE}/about-us-3.png`,
             compact: true,
-            offset: 'lg:translate-y-10',
+            offset: 'lg:translate-y-12',
         },
         {
             roman: 'IV.',
@@ -109,7 +92,7 @@ export default function AboutUsCards() {
             number: '4M+',
             image: `${IMG_BASE}/about-us-4.png`,
             compact: false,
-            offset: 'lg:-translate-y-2',
+            offset: 'lg:-translate-y-4',
         },
     ];
 

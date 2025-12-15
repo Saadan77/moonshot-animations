@@ -202,7 +202,7 @@ const WhatWeDo = () => {
                     <Shuffle
                       key={`${cat.name}-title`}
                       text={cat.title}
-                      className="max-sm:text-[40px] md:text-[80px] lg:text-[100px]"
+                      className="max-sm:text-[40px] md:text-[60px] lg:text-[78px]"
                       tag="span"
                       textAlign="left"
                       shuffleDirection="right"
@@ -214,7 +214,7 @@ const WhatWeDo = () => {
                       style={{ fontFamily: "var(--font-sora), sans-serif" }}
                     />
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[80px] lg:text-[100px]">{cat.title}</p>
+                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[78px]">{cat.title}</p>
 
                   <div className="hidden lg:block">
                     {cat.subtitle && (
@@ -223,21 +223,21 @@ const WhatWeDo = () => {
                         <Shuffle
                           key={`${cat.name}-subtitle`}
                           text={cat.subtitle}
-                          className="max-sm:text-[40px] md:text-[80px] lg:text-[100px]"
+                          className="max-sm:text-[40px] md:text-[60px] lg:text-[78px]"
                           tag="span"
                           textAlign="left"
                           shuffleDirection="right"
                           duration={0.5}
                           stagger={0.2}
-                          shuffleTimes={1}
-                          loop={false}
-                          triggerOnHover={false}
+                          shuffleTimes={2}
+                          loop={true}
+                          triggerOnHover={true}
                           style={{ fontFamily: "var(--font-sora), sans-serif" }}
                         />
                       </>
                     )}
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[80px] lg:text-[100px]">{cat.subtitle}</p>
+                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[78px]">{cat.subtitle}</p>
                 </div>
               </div>
             </div>

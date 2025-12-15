@@ -91,7 +91,7 @@ export const AnimatedTestimonials = ({
                     centerAlt="quote"
                     centerSize={44}
                   >
-                    TESTIMONIALS - TRUSTED BY CLIENTS
+                    TESTIMONIALS - TRUSTED BY CLIENTS -
                   </SpinningText>
                 </div>
                 <img
@@ -124,7 +124,7 @@ export const AnimatedTestimonials = ({
                 ease: "easeInOut",
               }}>
               <div className="text-[20px] text-[#808080] mb-6">
-                <span className='text-nowrap font-poppins font-light'>09 — Testimonials</span>
+                <span className='text-nowrap font-sora font-light'>09 — Testimonials</span>
               </div>
               <motion.h2 className={quoteClass}>
                 {testimonials[active].quote.split(" ").map((word, index) => (

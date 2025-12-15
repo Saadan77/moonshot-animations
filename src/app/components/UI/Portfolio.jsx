@@ -220,7 +220,7 @@ const Portfolio = () => {
                     <DirectionAwareHover
                         imageUrl="/images/portfolio/portfolio-3.png"
                         className="w-full h-full"
-                        heading={<p>Mobile App</p>}
+                        heading={<p>Mobile Applications</p>}
                         number={<p>03.</p>}
                     >
                         <div className="text-lg font-poppins font-light text-white/80">
