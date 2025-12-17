@@ -32,11 +32,10 @@ const AboutCard = ({
             />
 
             {/* Corner text (Roman + Titles) */}
-            <div className="absolute left-8 top-4 text-white/80 text-[20px] tracking-wide select-none">
+            <div className="absolute left-8 top-4 text-white/80 text-[20px] select-none">
                 {roman}
             </div>
-            <div className="leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
-                style={{ fontFamily: 'Urbanist, sans-serif' }}
+            <div className="font-urbanist leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
             >
                 {titleTopLeft && <div>{titleTopLeft}</div>}
                 {titleTopRight && <div>{titleTopRight}</div>}
@@ -44,7 +43,7 @@ const AboutCard = ({
 
             {/* Bottom row: metric + arrow */}
             <div className="absolute bottom-2 left-4 right-4 flex items-end justify-between">
-                <div className="text-white text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]" style={{ fontFamily: 'Urbanist, sans-serif' }}>
+                <div className="font-urbanist text-white tracking-tighter text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
                     {number}
                 </div>
 

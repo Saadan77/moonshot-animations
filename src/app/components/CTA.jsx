@@ -87,25 +87,23 @@ export default function CTA() {
                 `
             }} />
             {/* Left Gradient */}
-            <div className="absolute -left-10 top-60 bottom-0 w-[600px] pointer-events-none">
+            <div className="absolute -left-60 top-60 bottom-0 w-[600px] pointer-events-none">
                 <div
-                    className="w-full h-1/3"
+                    className="w-2/3 h-1/3"
                     style={{
-                        background: 'linear-gradient(90deg, rgba(250, 40, 137, 0.4) 0%, rgba(62, 95, 249, 0.3) 50%, transparent 100%)',
-                        filter: 'blur(80px)',
-                        opacity: 0.6
+                        background: 'linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)',
+                        filter: 'blur(180px)',
                     }}
                 />
             </div>
 
             {/* Right Gradient */}
-            <div className="absolute -right-20 top-160 bottom-0 w-[600px] pointer-events-none">
+            <div className="absolute -right-90 top-200 bottom-0 w-[600px] pointer-events-none">
                 <div
-                    className="w-full h-1/3"
+                    className="w-2/3 h-1/3"
                     style={{
-                        background: 'linear-gradient(270deg, rgba(93, 66, 255, 0.4) 0%, rgba(255, 159, 252, 0.3) 50%, transparent 100%)',
-                        filter: 'blur(80px)',
-                        opacity: 0.6
+                        background: 'linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)',
+                        filter: 'blur(180px)',
                     }}
                 />
             </div>
@@ -121,12 +119,12 @@ export default function CTA() {
             <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[120px] relative z-10" data-smoother-ignore />
 
             {/* Video container with outline */}
-            <div className="relative py-12 min-h-[80vh] md:min-h-screen max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
+            <div className="relative py-12 min-h-[80vh] md:min-h-[95vh] max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
                 style={{
                     borderRadius: "1333.3px",
                     mixBlendMode: 'screen',
                 }}>
-                <div className="flex flex-col items-center space-y-6 py-10">
+                <div className="flex flex-col items-center">
                     <video
                         autoPlay
                         loop
@@ -138,7 +136,7 @@ export default function CTA() {
                     </video>
 
 
-                    <p className="mt-16 text-center text-3xl max-sm:text-xl text-white/70" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                    <p className="font-sora font-normal mt-6 text-center text-3xl max-sm:text-xl text-white/50">
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>
@@ -170,7 +168,7 @@ export default function CTA() {
             {/* Bottom large gradient */}
             <div className="-mt-50 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
-                    className="w-screen h-[100px] rounded-full blur-[80px] in-out"
+                    className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
                     style={{
                         background:
                             "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",

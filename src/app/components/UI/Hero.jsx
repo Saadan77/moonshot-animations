@@ -5,7 +5,6 @@ import Navbar from '../Navbar';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import DecorativeLines from '../DecorativeLines';
 
 const socials = [
     {
@@ -119,22 +118,23 @@ const Hero = () => {
 
                             <div className="text-end max-sm:text-center">
                                 <h1
-                                    className="text-[200px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
+                                    className="flex justify-end text-[200px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <AuroraText colors={['#ffffff', '#d1bd73']}>
-                                        Experts
+                                        Exp
                                     </AuroraText>
+                                    erts
                                 </h1>
                             </div>
                         </div>
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[350px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[420px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div
-                                className="w-[600px] h-[600px] rounded-full blur-[120px] opacity-90"
+                                className="w-[600px] h-[600px] rounded-full blur-[100px]"
                                 style={{
                                     background: 'linear-gradient(126deg, rgba(40, 100, 255, 0.60) 15.91%, rgba(250, 40, 137, 0.60) 52.98%, rgba(35, 141, 250, 0.60) 73.58%, rgba(62, 95, 249, 0.60) 107.45%)'
                                 }}
@@ -145,7 +145,7 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="relative z-10 w-full h-full object-contain opacity-90"
+                            className="relative z-10 w-full h-6/9 object-contain opacity-90"
                             style={{
                                 mixBlendMode: 'screen',
                             }}
@@ -175,7 +175,7 @@ const Hero = () => {
                         aria-label={s.label}
                         className={`
                         group relative w-12 h-12 rounded-full
-                        flex items-center justify-center text-xs font-semibold
+                        flex items-center justify-center text-xs font-medium
                         bg-gray-800/80 backdrop-blur
                         text-white transition-colors duration-300
                         focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
@@ -218,7 +218,7 @@ const Hero = () => {
             }} />
 
             {/* Bottom div */}
-            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-[232px] max-sm:-mt-[150px]">
+            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-[135px]">
                 {/* Bottom large background word/image */}
                 <img
                     src="/images/hero/moonshot-tech.png"
@@ -230,16 +230,16 @@ const Hero = () => {
                 {/* Background gradient */}
                 <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
                     <div
-                        className="w-screen h-[200px] rounded-full blur-[120px] opacity-80"
+                        className="w-screen h-80 rounded-full blur-[160px]"
                         style={{
-                            background: 'linear-gradient(119.09deg, #3928FF 0.54%, #FA2889 41.09%, rgba(35, 141, 250, 0.8) 70.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)'
+                            background: 'linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)'
 
                         }}
                     />
                 </div>
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-20 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-16 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>

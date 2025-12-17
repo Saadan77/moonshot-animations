@@ -146,7 +146,7 @@ const WhatWeDo = () => {
                 <div className="relative z-20 mx-auto w-[92%] pt-16">
                   <div className="flex items-center justify-between gap-4 text-white/70">
                     <div className="text-[20px] max-sm:text-[15px] text-[#808080]">
-                      <span className='text-nowrap font-poppins font-light'>03 — What We Do</span>
+                      <span className='text-nowrap font-poppins font-normal'>03 — What We Do</span>
                     </div>
                     <div className="relative w-[92%]">
                       <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">
@@ -197,12 +197,12 @@ const WhatWeDo = () => {
 
               {/* Text Content */}
               <div className="ml-20 max-xl:ml-10 max-sm:ml-5 max-sm:mb-5 relative z-10">
-                <div className="lg:tracking-[-0.5em] text-left">
+                <div className="text-left">
                   <div className="hidden lg:block">
                     <Shuffle
                       key={`${cat.name}-title`}
                       text={cat.title}
-                      className="max-sm:text-[40px] md:text-[60px] lg:text-[78px]"
+                      className="max-sm:text-[40px] md:text-[60px] lg:text-[100px]"
                       tag="span"
                       textAlign="left"
                       shuffleDirection="right"
@@ -214,7 +214,7 @@ const WhatWeDo = () => {
                       style={{ fontFamily: "var(--font-sora), sans-serif" }}
                     />
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[78px]">{cat.title}</p>
+                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[100px]">{cat.title}</p>
 
                   <div className="hidden lg:block">
                     {cat.subtitle && (
@@ -223,7 +223,7 @@ const WhatWeDo = () => {
                         <Shuffle
                           key={`${cat.name}-subtitle`}
                           text={cat.subtitle}
-                          className="max-sm:text-[40px] md:text-[60px] lg:text-[78px]"
+                          className="max-sm:text-[40px] md:text-[60px] lg:text-[100px]"
                           tag="span"
                           textAlign="left"
                           shuffleDirection="right"
@@ -237,7 +237,7 @@ const WhatWeDo = () => {
                       </>
                     )}
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[78px]">{cat.subtitle}</p>
+                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[100px]">{cat.subtitle}</p>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Sora, Playfair_Display, Poppins, Inter } from "next/font/google";
+import { Sora, Playfair_Display, Poppins, Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -20,6 +20,12 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -35,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} ${playfair.variable} ${poppins.variable} ${inter.variable} antialiased`}
+        className={`${sora.variable} ${playfair.variable} ${poppins.variable} ${inter.variable} ${urbanist.variable} antialiased`}
       >
         {children}
       </body>

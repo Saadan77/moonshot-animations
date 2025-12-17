@@ -16,7 +16,7 @@ export default function Footer() {
                         <div>
                             {/* Location */}
                             <div>
-                                <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3"
+                                <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-3"
                                     style={{ fontFamily: 'Inter, sans-serif' }}>
                                     LOCATION
                                 </p>
@@ -42,7 +42,7 @@ export default function Footer() {
                     <div className="col-span-2 space-y-32 max-lg:space-y-16">
                         {/* Inquiry */}
                         <div>
-                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-3"
+                            <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-3"
                                 style={{ fontFamily: 'Inter, sans-serif' }}>
                                 INQUIRY
                             </p>
@@ -63,7 +63,7 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p className="text-md font-extralight uppercase tracking-wider text-white/50 mb-6">
+                            <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
                             <ul className="space-y-3 text-xl max-sm:text-lg">
@@ -203,7 +203,7 @@ export default function Footer() {
                                 <form className="group flex flex-row gap-3 max-w-md">
                                     <input
                                         type="email"
-                                        placeholder="Your email"
+                                        placeholder="Your Email"
                                         className="w-full sm:flex-1 p-4 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
                                         suppressHydrationWarning
                                     />
@@ -222,7 +222,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-48 max-sm:mt-16">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-white/50">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-[#BBB]">
                         <p className="col-span-1 max-lg:col-span-2 max-lg:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
 
                         <div className="col-span-2 space-x-16 flex max-sm:flex-col max-sm:gap-4 justify-center text-white">

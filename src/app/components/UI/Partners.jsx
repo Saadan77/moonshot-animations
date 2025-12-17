@@ -27,7 +27,7 @@ export default function Partners() {
                     <Marquee>
                         <MarqueeContent speed={150}>
                             {[
-                                '/images/partners/logo_archin.png',
+                                '/images/partners/archin.png',
                                 '/images/partners/logo_github.png',
                                 '/images/partners/logo_union.png',
                                 '/images/partners/logo_usa.png',

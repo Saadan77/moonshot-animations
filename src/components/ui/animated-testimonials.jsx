@@ -12,7 +12,7 @@ export const AnimatedTestimonials = ({
   containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
   nameClass = "text-2xl font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
-  quoteClass = "mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
+  quoteClass = "w-[110%] mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
 }) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -124,7 +124,7 @@ export const AnimatedTestimonials = ({
                 ease: "easeInOut",
               }}>
               <div className="text-[20px] text-[#808080] mb-6">
-                <span className='text-nowrap font-sora font-light'>09 — Testimonials</span>
+                <span className='text-nowrap font-sora font-normal'>09 — Testimonials</span>
               </div>
               <motion.h2 className={quoteClass}>
                 {testimonials[active].quote.split(" ").map((word, index) => (

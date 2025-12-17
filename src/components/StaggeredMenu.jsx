@@ -2,7 +2,7 @@
 
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, ChevronsDown } from "lucide-react";
 import Link from "next/link";
 
 export const StaggeredMenu = ({
@@ -24,6 +24,7 @@ export const StaggeredMenu = ({
 }) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
+  const [expandedItem, setExpandedItem] = useState(null);
 
   const panelRef = useRef(null);
   const preLayersRef = useRef(null);
@@ -94,6 +95,7 @@ export const StaggeredMenu = ({
     itemEntranceTweenRef.current?.kill();
 
     const itemEls = Array.from(panel.querySelectorAll(".sm-panel-itemLabel"));
+    const chevronEls = Array.from(panel.querySelectorAll(".sm-chevron-icon"));
     const numberEls = Array.from(
       panel.querySelectorAll(".sm-panel-list[data-numbering] .sm-panel-item")
     );
@@ -107,6 +109,7 @@ export const StaggeredMenu = ({
     const panelStart = Number(gsap.getProperty(panel, "xPercent"));
 
     if (itemEls.length) gsap.set(itemEls, { yPercent: 140, rotate: 10 });
+    if (chevronEls.length) gsap.set(chevronEls, { opacity: 0, scale: 0, rotation: 270 });
     if (numberEls.length) gsap.set(numberEls, { ["--sm-num-opacity"]: 0 });
     if (socialTitle) gsap.set(socialTitle, { opacity: 0 });
     if (socialLinks.length) gsap.set(socialLinks, { y: 25, opacity: 0 });
@@ -148,6 +151,20 @@ export const StaggeredMenu = ({
         },
         itemsStart
       );
+
+      if (chevronEls.length) {
+        tl.to(
+          chevronEls,
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.6,
+            ease: "back.out(1.7)",
+            stagger: { each: 0.1, from: "start" },
+          },
+          itemsStart + 0.3
+        );
+      }
 
       if (numberEls.length) {
         tl.to(
@@ -237,6 +254,9 @@ export const StaggeredMenu = ({
           )
         );
         if (numberEls.length) gsap.set(numberEls, { ["--sm-num-opacity"]: 0 });
+
+        const chevronEls = Array.from(panel.querySelectorAll(".sm-chevron-icon"));
+        if (chevronEls.length) gsap.set(chevronEls, { opacity: 0, scale: 0, rotation: -90 });
 
         const socialTitle = panel.querySelector(".sm-socials-title");
         const socialLinks = Array.from(
@@ -331,6 +351,7 @@ export const StaggeredMenu = ({
     } else {
       onMenuClose?.();
       playClose();
+      setExpandedItem(null);
     }
 
     animateIcon(target);
@@ -532,16 +553,51 @@ export const StaggeredMenu = ({
                     className="sm-panel-itemWrap relative overflow-hidden leading-none"
                     key={it.label + idx}
                   >
-                    <a
-                      className="sm-panel-item relative text-black font-semibold text-[4rem] md:text-[3.5rem] max-sm:text-[3rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
-                      href={it.link}
-                      aria-label={it.ariaLabel}
-                      data-index={idx + 1}
-                    >
-                      <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
-                        {it.label}
-                      </span>
-                    </a>
+                    {it.hasDropdown ? (
+                      <div className="flex flex-col items-start">
+                        <button
+                          onClick={() => setExpandedItem(expandedItem === idx ? null : idx)}
+                          className="sm-panel-item relative text-white font-semibold text-[4rem] md:text-[3.5rem] max-sm:text-[3rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
+                          data-index={idx + 1}
+                        >
+                          <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
+                            {it.label}
+                          </span>
+                          <ChevronDown 
+                            className="sm-chevron-icon inline-block ml-2 w-12 h-12 -mt-2" 
+                            style={{
+                              transform: expandedItem === idx ? 'rotate(360deg)' : 'rotate(270deg)',
+                              transition: 'transform 0.3s ease'
+                            }}
+                          />
+                        </button>
+                        {expandedItem === idx && it.dropdownItems && (
+                          <ul className="list-none m-0 pl-8 mt-4 flex flex-col gap-2">
+                            {it.dropdownItems.map((dropItem, dropIdx) => (
+                              <li key={dropItem.label + dropIdx}>
+                                <a
+                                  href={dropItem.link}
+                                  className="text-white/80 hover:text-(--sm-accent,#ff0000) text-xl font-light transition-colors duration-200"
+                                >
+                                  {dropItem.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ) : (
+                      <a
+                        className="sm-panel-item relative text-white font-semibold text-[4rem] md:text-[3.5rem] max-sm:text-[3rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                        href={it.link}
+                        aria-label={it.ariaLabel}
+                        data-index={idx + 1}
+                      >
+                        <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
+                          {it.label}
+                        </span>
+                      </a>
+                    )}
                   </li>
                 ))
               ) : (
@@ -549,7 +605,7 @@ export const StaggeredMenu = ({
                   className="sm-panel-itemWrap relative overflow-hidden leading-none"
                   aria-hidden="true"
                 >
-                  <span className="sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
+                  <span className="sm-panel-item relative text-white font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
                     <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                       No items
                     </span>

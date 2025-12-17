@@ -10,7 +10,25 @@ const Navbar = ({ onMenuStateChange }) => {
         { label: 'About', link: '/about-us', ariaLabel: 'Go to About' },
         { label: 'Portfolio', link: '/portfolio', ariaLabel: 'Go to Portfolio' },
         { label: 'Industries', link: '/industries', ariaLabel: 'Go to Industries' },
-        { label: 'Services', link: '#services', ariaLabel: 'Go to Services' },
+        { 
+            label: 'Services', 
+            link: '#services', 
+            ariaLabel: 'Go to Services',
+            hasDropdown: true,
+            dropdownItems: [
+                { label: 'Animations', link: '/services/animations' },
+                { label: 'Branding', link: '/services/branding' },
+                { label: 'Digital Marketing', link: '/services/digital-marketing' },
+                { label: 'E-Commerce', link: '/services/e-commerce' },
+                { label: 'Email Marketing', link: '/services/email-marketing' },
+                { label: 'Google Ads', link: '/services/google-ads' },
+                { label: 'Mobile Applications', link: '/services/mobile-applications' },
+                { label: 'SEO', link: '/services/seo' },
+                { label: 'SSM', link: '/services/ssm' },
+                { label: 'Web Applications', link: '/services/web-applications' },
+                { label: 'Web Development', link: '/services/web-development' }
+            ]
+        },
         { label: 'Contact', link: '/contact-us', ariaLabel: 'Go to Contact' }
     ];
 
