@@ -53,8 +53,15 @@ const socials = [
 const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
-        <section className="relative w-full z-100 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1240px]"
+        <section className="relative w-full z-100 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1260px]"
             style={{ backgroundImage: 'url("/images/hero-bg.png")' }}>
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
@@ -159,9 +166,9 @@ const Hero = () => {
                 {/* Services Text - Right Bottom */}
                 <div className="max-lg:hidden block absolute right-24 top-[65%] max-2xl:top-[70%] text-right z-50">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
-                        <Link href='/#branding' className='text-gray-600 hover:text-white hover:underline'>Branding</Link> / <Link href='' className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</Link>
+                        <span onClick={() => scrollToSection('branding')} className='text-gray-600 hover:text-white hover:underline cursor-pointer'>Branding</span> / <span onClick={() => scrollToSection('mobile-applications')} className='hover:underline text-gray-600 hover:text-white cursor-pointer'>Mobile Apps</span>
                         <br />
-                        / <Link href='' className='text-gray-600 hover:text-white hover:underline'>Graphic</Link> / <Link href='' className='hover:underline text-gray-600 hover:text-white'>UI/UX</Link>
+                        / <span onClick={() => scrollToSection('animations')} className='text-gray-600 hover:text-white hover:underline cursor-pointer'>Graphic</span> / <span onClick={() => scrollToSection('ui-ux')} className='hover:underline text-gray-600 hover:text-white cursor-pointer'>UI/UX</span>
                     </p>
                 </div>
             </div>
@@ -229,7 +236,7 @@ const Hero = () => {
                 />
 
                 {/* Background gradient */}
-                <div className="mt-[290px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+                <div className="mt-[300px] absolute inset-0 flex items-center justify-center pointer-events-none z-50">
                     <div
                         className="w-screen h-80 rounded-full blur-[160px]"
                         style={{
@@ -240,7 +247,7 @@ const Hero = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-9 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-12 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>
