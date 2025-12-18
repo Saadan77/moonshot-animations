@@ -8,7 +8,7 @@ const categories = [
   {
     name: "Mobile Applications",
     id: "mobile-applications",
-    image: "/images/what-we-do-bg.png",
+    image: "/images/what-we-do/mobile-applications.png",
     title: "MOBILE",
     subtitle: "APPLICATIONS",
   },

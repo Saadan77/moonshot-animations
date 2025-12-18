@@ -66,7 +66,7 @@ export default function Footer() {
                             <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
-                            <ul className="space-y-3 text-xl max-sm:text-lg">
+                            <ul className="space-y-6 text-xl max-sm:text-lg">
                                 {['About', 'Services', 'Project', 'Case Studies', 'Industries', 'Contact'].map(
                                     (link) => (
                                         <li key={link}>
@@ -197,7 +197,7 @@ export default function Footer() {
                                         <rect x="2" y="4" width="20" height="16" rx="2" />
                                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                                     </svg>
-                                    <span className="text-white/90">Newsletter</span>
+                                    <span className="text-white">Newsletter</span>
                                 </div>
 
                                 <form className="group flex flex-row gap-3 max-w-md">

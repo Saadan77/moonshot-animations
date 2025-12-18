@@ -74,7 +74,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Content Container */}
-                <div className="mt-[100px] z-10 w-full flex flex-col justify-center items-center max-sm:items-start max-w-[75%] overflow-visible"
+                <div className="mt-[100px] z-10 w-full flex flex-col items-center max-sm:items-start max-w-[77%] overflow-visible"
                     style={{
                         mixBlendMode: 'screen',
                     }}>
@@ -106,10 +106,10 @@ const Hero = () => {
                         </div>
 
                         {/* Left Side - Digital Text */}
-                        <div className='leading-none text-white tracking-[-0.03em]'>
+                        <div className='leading-none text-white tracking-[-0.04em]'>
                             <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
                                 <h1
-                                    className="italic text-[220px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] "
+                                    className="italic text-[235px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] "
                                     style={{ fontFamily: 'var(--font-playfair), serif' }}
                                 >
                                     Digital
@@ -118,7 +118,7 @@ const Hero = () => {
 
                             <div className="text-end max-sm:text-center">
                                 <h1
-                                    className="flex justify-end text-[200px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
+                                    className="flex justify-end text-[215px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <AuroraText colors={['#ffffff', '#d1bd73']}>
@@ -131,7 +131,7 @@ const Hero = () => {
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[420px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[500px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div
                                 className="w-[600px] h-[600px] rounded-full blur-[100px]"
@@ -145,9 +145,10 @@ const Hero = () => {
                             loop
                             muted
                             playsInline
-                            className="relative z-10 w-full h-6/9 object-contain opacity-90"
+                            className="relative z-10 w-full h-auto object-contain opacity-90"
                             style={{
                                 mixBlendMode: 'screen',
+                                transform: 'rotate(2.075deg) scale(0.85)',
                             }}
                         >
                             <source src="/videos/hero/service-video.mp4" type="video/mp4" />
@@ -156,11 +157,11 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-md:hidden block absolute right-24 top-[55%] max-2xl:top-[70%] text-right z-50">
+                <div className="max-md:hidden block absolute right-24 top-[60%] max-2xl:top-[70%] text-right z-50">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
-                        <span className='text-gray-600 hover:text-white hover:underline'>Branding</span> / <span className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</span>
+                        <Link href='/#branding' className='text-gray-600 hover:text-white hover:underline'>Branding</Link> / <Link href='' className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</Link>
                         <br />
-                        / <span className='text-gray-600 hover:text-white hover:underline'>Graphic</span> / <span className='hover:underline text-gray-600 hover:text-white'>UI/UX</span>
+                        / <Link href='' className='text-gray-600 hover:text-white hover:underline'>Graphic</Link> / <Link href='' className='hover:underline text-gray-600 hover:text-white'>UI/UX</Link>
                     </p>
                 </div>
             </div>
@@ -218,13 +219,13 @@ const Hero = () => {
             }} />
 
             {/* Bottom div */}
-            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-[135px]">
+            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-40">
                 {/* Bottom large background word/image */}
                 <img
                     src="/images/hero/moonshot-tech.png"
                     alt="Unique typography"
-                    className="max-sm:hidden absolute inset-0 w-full h-full object-contain opacity-5"
-                    style={{ scale: "110%" }}
+                    className="max-sm:hidden absolute inset-0 w-full h-full object-contain opacity-3"
+                    style={{ scale: "205%" }}
                 />
 
                 {/* Background gradient */}
@@ -239,14 +240,14 @@ const Hero = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-16 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-9 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>
                     </div>
 
                     {/* Center Button */}
-                    <div className='bg-white/10 rounded-[133px] py-2 px-10 hover:scale-105 transition-transform duration-300 flex justify-center items-center gap-4 cursor-pointer'>
+                    <div className='bg-white/10 rounded-[133px] py-2 px-12 hover:scale-105 transition-transform duration-300 flex justify-center items-center gap-4 cursor-pointer'>
                         <a href="#about-us" className="scroll-smooth">
                             <ChevronDown className="text-white w-8 h-8" />
                         </a>

@@ -159,11 +159,7 @@ export default function Ecommerce() {
                 <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-20">
                     <div className="z-20 ml-20 max-lg:ml-15 max-sm:ml-10">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
-                            <div className="flex items-center gap-[3px]">
-                                <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                                <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                                <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-                            </div>
+                            <img src="/images/about-us/icon.png" />
                             <p className="font-bold text-lg">Ecommerce</p>
                         </div>
 

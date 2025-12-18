@@ -3,26 +3,8 @@
 import ScrollReveal from '@/components/lightswind/scroll-reveal';
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import AboutUsCards from '../AboutUsCards';
 import { ArrowRight } from 'lucide-react';
-
-const ArrowUpRight = ({ className = 'w-5 h-5' }) => (
-    <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        className={className}
-        aria-hidden="true"
-    >
-        <path
-            d="M7 17L17 7M9 7h8v8"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-    </svg>
-);
 
 const AboutUs = () => {
 

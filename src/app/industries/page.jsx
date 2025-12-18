@@ -140,11 +140,7 @@ export default function Portfolio() {
                 <div className="flex flex-col 2xl:flex-row items-center gap-8 max-2xl:mt-50">
                     <div className="z-20 ml-20 max-sm:ml-10">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
-                            <div className="flex items-center gap-[3px]">
-                                <span className="block h-2.5 w-0.5 rounded bg-white/70" />
-                                <span className="block h-2.5 w-0.5 rounded bg-white/50" />
-                                <span className="block h-2.5 w-0.5 rounded bg-white/30" />
-                            </div>
+                            <img src="/images/about-us/icon.png" />
                             <p className="font-bold text-lg">Industries</p>
                         </div>
 

@@ -34,11 +34,11 @@ export default function Partners() {
                                 '/images/partners/logo_squarespace.png',
                                 '/images/partners/logo_zm.png',
                             ].map((src, index) => (
-                                <MarqueeItem key={index} className="h-66 w-66 mx-0">
+                                <MarqueeItem key={index} className="group h-66 w-66 mx-0">
                                     <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
                                         <img
                                             alt={`Partner logo ${index + 1}`}
-                                            className="max-h-full max-w-full object-contain"
+                                            className="max-h-full max-w-full object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
                                             src={src}
                                         />
                                     </div>

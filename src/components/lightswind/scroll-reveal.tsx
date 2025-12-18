@@ -1,41 +1,23 @@
 "use client";
 
-import React, { useRef, useMemo } from "react"; // Added useMemo
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { cn } from "../lib/utils"; // Assuming cn utility is available
+import React, { useRef, useMemo } from "react";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface ScrollRevealProps {
   children: React.ReactNode;
-  /** Custom container className */
   containerClassName?: string;
-  /** Custom text className */
   textClassName?: string;
-  /** Enable blur animation effect */
-  enableBlur?: boolean;
-  /** Base opacity when text is out of view */
-  baseOpacity?: number;
-  /** Base rotation angle in degrees */
-  baseRotation?: number;
-  /** Blur strength in pixels */
-  blurStrength?: number;
-  /** Animation delay between words in seconds */
-  staggerDelay?: number;
-  /** Viewport threshold for triggering animation */
-  threshold?: number;
-  /** Animation duration in seconds */
-  duration?: number;
-  /** Spring animation configuration */
-  springConfig?: {
-    damping?: number;
-    stiffness?: number;
-    mass?: number;
-  };
-  /** Text size variant */
   size?: "sm" | "md" | "lg" | "xl" | "2xl";
-  /** Text alignment */
   align?: "left" | "center" | "right";
-  /** Color variant */
-  variant?: "default" | "muted" | "accent" | "primary";
+  /** Initial opacity of the text (default: 1 for visible gray text) */
+  baseOpacity?: number;
+  /** Final opacity of the text */
+  activeOpacity?: number;
+  /** Initial text color (default: #808080) */
+  baseColor?: string;
+  /** Final text color (default: #ffffff) */
+  activeColor?: string;
 }
 
 const sizeClasses = {
@@ -52,134 +34,108 @@ const alignClasses = {
   right: "text-right",
 };
 
-const variantClasses = {
-  default: "text-foreground",
-  muted: "text-muted-foreground",
-  accent: "text-accent-foreground",
-  primary: "text-primary",
+// Sub-component for individual words
+const Word = ({
+  children,
+  range,
+  progress,
+  baseOpacity,
+  activeOpacity,
+  baseColor,
+  activeColor,
+}: {
+  children: string;
+  range: [number, number];
+  progress: MotionValue<number>;
+  baseOpacity: number;
+  activeOpacity: number;
+  baseColor: string;
+  activeColor: string;
+}) => {
+  // Map the specific word's scroll range to opacity and color
+  const opacity = useTransform(progress, range, [baseOpacity, activeOpacity]);
+  const color = useTransform(progress, range, [baseColor, activeColor]);
+
+  return (
+    <motion.span
+      className="inline-block transition-colors duration-200"
+      style={{ opacity, color }}
+    >
+      {children}
+    </motion.span>
+  );
 };
 
 export function ScrollReveal({
   children,
   containerClassName,
   textClassName,
-  enableBlur = true,
-  baseOpacity = 0.1,
-  baseRotation = 0,
-  blurStrength = 4,
-  staggerDelay = 0.05,
-  threshold = 0.5,
-  duration = 0.8,
-  springConfig = { // Default spring config is always good to have
-    damping: 25,
-    stiffness: 100,
-    mass: 1,
-  },
   size = "lg",
   align = "left",
+  baseOpacity = 1,
+  activeOpacity = 1,
+  baseColor = "#808080",
+  activeColor = "#ffffff",
 }: ScrollRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, {
-    amount: threshold,
-    once: false
-  });
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start 0.9", "end 0.25"],
   });
 
-  // Transform rotation based on scroll
-  const rotation = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [baseRotation, 0, 0]
-  );
-
-  // Split text into words and spaces, ensuring each part is an object
-  const splitText = useMemo(() => { // Using useMemo is good here
+  const splitText = useMemo(() => {
     const text = typeof children === "string" ? children : "";
-    // Split by spaces, keeping the spaces as separate elements in the array.
-    // Each 'part' will either be a word or a sequence of spaces.
-    return text.split(/(\s+)/).map((part, index) => {
-      // Return an object for both words and spaces, with a 'type' property
-      // to differentiate them in the rendering loop.
-      return {
-        value: part,
-        isSpace: part.match(/^\s+$/) && part.length > 0, // Check if it's a non-empty string of only whitespace
-        originalIndex: index, // Keep original index for stable keys
-      };
-    }).filter(item => item.value.length > 0); // Filter out any empty strings that might result from split
+    return text.split(/(\s+)/).map((part, index) => ({
+      value: part,
+      isSpace: part.match(/^\s+$/) && part.length > 0,
+      originalIndex: index,
+    })).filter(item => item.value.length > 0);
   }, [children]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: staggerDelay,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const wordVariants = {
-    hidden: {
-      opacity: baseOpacity,
-      filter: enableBlur ? `blur(${blurStrength}px)` : "blur(0px)",
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      filter: "blur(0px)",
-      y: 0,
-      transition: {
-        // Removed `type: "spring"` here. Framer Motion infers "spring"
-        // when damping, stiffness, or mass are present.
-        ...springConfig,
-        duration, // This is a common property for all transition types
-      },
-    },
-  };
+  const words = splitText.filter(item => !item.isSpace);
+  const totalWords = words.length;
+  
+  let wordIndex = 0;
 
   return (
-    <motion.div
+    <div
       ref={containerRef}
-      style={{ rotate: rotation }}
-      className={cn(
-        "my-5 transform-gpu",
-        containerClassName
-      )}
+      className={cn("my-5", containerClassName)}
     >
-      <motion.p
+      <p
         className={cn(
           "leading-relaxed space-y-4",
           sizeClasses[size],
           alignClasses[align],
           textClassName
         )}
-        variants={containerVariants}
-        initial="hidden"
-        // Changed to `isInView` to match the behavior of triggering on view
-        animate={isInView ? "visible" : "hidden"}
       >
-        {splitText.map((item) => ( // Map over 'item' directly as it's always an object
-          item.isSpace ? (
-            // Render spaces as a regular span
-            <span key={`space-${item.originalIndex}`}>{item.value}</span>
-          ) : (
-            // Render words as motion.span for animation
-            <motion.span
-              key={`word-${item.originalIndex}`} // Use originalIndex for stable keys
-              className="inline-block"
-              variants={wordVariants}
+        {splitText.map((item) => {
+          if (item.isSpace) {
+            return <span key={`space-${item.originalIndex}`}>{item.value}</span>;
+          }
+
+          const start = wordIndex / totalWords;
+          const end = start + (1 / totalWords);
+          wordIndex++;
+
+          return (
+            <Word
+              key={`word-${item.originalIndex}`}
+              range={[start, end]}
+              progress={scrollYProgress}
+              baseOpacity={baseOpacity}
+              activeOpacity={activeOpacity}
+              baseColor={baseColor}
+              activeColor={activeColor}
             >
               {item.value}
-            </motion.span>
-          )
-        ))}
-      </motion.p>
-    </motion.div>
+            </Word>
+          );
+        })}
+      </p>
+    </div>
   );
 }
 

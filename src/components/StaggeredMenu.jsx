@@ -412,7 +412,7 @@ export const StaggeredMenu = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] max-sm:px-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex justify-center items-center gap-12">
             <button
               ref={toggleBtnRef}
               className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
@@ -485,39 +485,16 @@ export const StaggeredMenu = ({
             />
           </Link>
 
-          <div className="hidden md:flex  items-center gap-4 pointer-events-auto">
-            <button
-              type="button"
-              className="relative group flex items-center gap-4 rounded-full pl-8 pr-1 py-2 text-white cursor-pointer transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#041426]/60 active:scale-[0.97] overflow-hidden bg-[#2626264D]"
-              style={{ fontFamily: "var(--font-sora), sans-serif" }}
+          <div className="hidden md:flex items-center gap-4 pointer-events-auto">
+            <Link
+              href="#"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 transition-all duration-300"
             >
-              <span className="text-nowrap text-[20px] max-lg:text-[12px] relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
-                Our Works
+              <span className="relative top-[0.5px] font-sora text-[20px]">Our Works</span>
+              <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
+                <ArrowRight className="w-6 h-6 group-hover:text-black" />
               </span>
-              <div
-                className="
-                  relative z-10 w-10 h-10 rounded-full bg-[#333333]
-                  flex items-center justify-center
-                  shadow-[0_0_0_0_rgba(250,40,137,0.6)]
-                  group-hover:shadow-[0_0_0_6px_rgba(250,40,137,0.15)]
-                  transition-all duration-400
-                  animate-none group-hover:animate-pulsePink
-                "
-              >
-                <ChevronRight className="w-6 h-6" />
-              </div>
-              {/* Soft glossy sweep */}
-              <span
-                className="
-                  pointer-events-none absolute inset-0
-                  before:absolute before:top-0 before:-left-full before:h-full before:w-[50%]
-                  before:bg-linear-to-r before:from-white/0 before:via-white/20 before:to-white/0
-                  before:skew-x-25
-                  before:transition-transform before:duration-900
-                  group-hover:before:translate-x-[250%]
-                "
-              />
-            </button>
+            </Link>
 
             <Link
               href="#"

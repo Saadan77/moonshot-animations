@@ -92,7 +92,7 @@ export default function CTA() {
                     className="w-2/3 h-1/3"
                     style={{
                         background: 'linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)',
-                        filter: 'blur(180px)',
+                        filter: 'blur(150px)',
                     }}
                 />
             </div>
@@ -103,7 +103,7 @@ export default function CTA() {
                     className="w-2/3 h-1/3"
                     style={{
                         background: 'linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)',
-                        filter: 'blur(180px)',
+                        filter: 'blur(150px)',
                     }}
                 />
             </div>

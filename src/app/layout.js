@@ -35,6 +35,9 @@ const inter = Inter({
 export const metadata = {
   title: "Moonshot Animations",
   description: "Bring your ideas to life with stunning animations.",
+  icons: {
+    icon: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

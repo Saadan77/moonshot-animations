@@ -10,7 +10,7 @@ export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
   containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
-  nameClass = "text-2xl font-semibold text-white uppercase",
+  nameClass = "text-[20px] font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
   quoteClass = "w-[110%] mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
 }) => {
