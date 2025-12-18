@@ -87,7 +87,7 @@ export default function CTA() {
                 `
             }} />
             {/* Left Gradient */}
-            <div className="absolute -left-60 top-60 bottom-0 w-[600px] pointer-events-none">
+            <div className="absolute -left-70 top-60 bottom-0 w-[600px] pointer-events-none">
                 <div
                     className="w-2/3 h-1/3"
                     style={{
@@ -98,7 +98,7 @@ export default function CTA() {
             </div>
 
             {/* Right Gradient */}
-            <div className="absolute -right-90 top-200 bottom-0 w-[600px] pointer-events-none">
+            <div className="absolute -right-100 top-200 bottom-0 w-[600px] pointer-events-none">
                 <div
                     className="w-2/3 h-1/3"
                     style={{
@@ -136,7 +136,7 @@ export default function CTA() {
                     </video>
 
 
-                    <p className="font-sora font-normal mt-6 text-center text-3xl max-sm:text-xl text-white/50">
+                    <p className="font-sora font-normal mt-12 text-center text-3xl max-sm:text-xl text-white/50">
                         Ready to <span className="text-white">elevate<br /> your brand?</span>
                     </p>
                 </div>
@@ -166,7 +166,7 @@ export default function CTA() {
             </div>
 
             {/* Bottom large gradient */}
-            <div className="-mt-50 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="-mt-65 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
                 <div
                     className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
                     style={{

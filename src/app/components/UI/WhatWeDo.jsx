@@ -154,7 +154,7 @@ const WhatWeDo = () => {
                           <div key={item.name} className="max-sm:text-[15px] flex items-center">
                             <span
                               onClick={() => handleCategoryClick(cidx)}
-                              className={`px-1 whitespace-nowrap cursor-pointer transition-colors duration-300 hover:text-white ${activeIdx === cidx ? "text-white" : "text-white/55"}`}
+                              className={`font-normal px-1 whitespace-nowrap cursor-pointer transition-colors duration-300 hover:text-white ${activeIdx === cidx ? "text-white" : "text-white/55"}`}
                             >
                               {item.name}
                             </span>

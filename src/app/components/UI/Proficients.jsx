@@ -8,7 +8,7 @@ export default function Proficients() {
         <section className="px-16 items-center py-36 bg-[#00080F] relative z-50">
             {/* Heading */}
             <div className="text-center relative z-10 space-y-8">
-                <p className="text-[#808080] text-xl tracking-tight font-poppins font-light">05 <span className="-mr-2">—</span> — Profecients</p>
+                <p className="text-[#808080] text-xl tracking-tight font-poppins font-normal">05 <span className="-mr-2">—</span> — Profecients</p>
                 <h2 className="text-white text-7xl max-sm:text-3xl tracking-tight leading-tight">
                     <span className="block" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                         <TextType

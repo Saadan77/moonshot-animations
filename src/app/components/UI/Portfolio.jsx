@@ -150,7 +150,7 @@ const Portfolio = () => {
                     {/* Row 1, Col 1: Section Label + Heading */}
                     <div className="flex flex-col justify-between space-y-6">
                         <div className='space-y-6'>
-                            <h2 className="text-[#808080] text-[20px]">06 — Portfolio</h2>
+                            <h2 className="text-[#808080] text-[20px] font-normal font-poppins">06 — Portfolio</h2>
 
                             <h2 className="text-4xl lg:text-7xl max-sm:text-4xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                                 Explore <br /> Our <span
@@ -165,7 +165,7 @@ const Portfolio = () => {
                         <div className='inline-block'>
                             <Link
                                 href="#"
-                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora text-[20px]">Explore All Works</span>
                                 <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

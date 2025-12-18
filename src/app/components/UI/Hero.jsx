@@ -74,13 +74,13 @@ const Hero = () => {
                 </div>
 
                 {/* Main Content Container */}
-                <div className="mt-[100px] z-10 w-full flex flex-col items-center max-sm:items-start max-w-[77%] overflow-visible"
+                <div className="mt-[100px] max-xl:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[77%] overflow-visible"
                     style={{
                         mixBlendMode: 'screen',
                     }}>
                     <div className='w-full relative'>
                         {/* Decorative Lines */}
-                        <div className="max-md:hidden block">
+                        <div className="max-sm:hidden block">
                             {[
                                 '-5%',
                                 '15%',
@@ -107,18 +107,18 @@ const Hero = () => {
 
                         {/* Left Side - Digital Text */}
                         <div className='leading-none text-white tracking-[-0.04em]'>
-                            <div className="text-left max-sm:text-center max-sm:mb-5 relative z-10">
+                            <div className="text-left max-sm:mb-5 relative z-10">
                                 <h1
-                                    className="italic text-[235px] max-xl:text-[150px] max-md:text-[100px] max-sm:text-[80px] "
+                                    className="text-[clamp(80px,12vw,235px)] italic"
                                     style={{ fontFamily: 'var(--font-playfair), serif' }}
                                 >
                                     Digital
                                 </h1>
                             </div>
 
-                            <div className="text-end max-sm:text-center">
+                            <div className="ml-[104%] max-2xl:ml-0 text-end max-sm:text-center">
                                 <h1
-                                    className="flex justify-end text-[215px] max-xl:text-[150px] max-md:text-[90px] max-sm:text-[60px]"
+                                    className="text-[clamp(60px,12vw,215px)] flex justify-end"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                                 >
                                     <AuroraText colors={['#ffffff', '#d1bd73']}>
@@ -131,7 +131,7 @@ const Hero = () => {
                     </div>
 
                     {/* Video Container - Center (overflow visible) */}
-                    <div className="-mt-[500px] max-md:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+                    <div className="-mt-[500px] max-2xl:-mt-[250px] max-lg:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                             <div
                                 className="w-[600px] h-[600px] rounded-full blur-[100px]"
@@ -157,7 +157,7 @@ const Hero = () => {
                 </div>
 
                 {/* Services Text - Right Bottom */}
-                <div className="max-md:hidden block absolute right-24 top-[60%] max-2xl:top-[70%] text-right z-50">
+                <div className="max-lg:hidden block absolute right-24 top-[65%] max-2xl:top-[70%] text-right z-50">
                     <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300">
                         <Link href='/#branding' className='text-gray-600 hover:text-white hover:underline'>Branding</Link> / <Link href='' className='hover:underline text-gray-600 hover:text-white'>Mobile Apps</Link>
                         <br />

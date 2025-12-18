@@ -90,9 +90,9 @@ const AboutUs = () => {
             <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
                 <div className='pb-24 flex items-start max-md:flex-col'>
                     {/* Small "About Us" label */}
-                    <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white/80">
+                    <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white">
                         <img src="/images/about-us/icon.png" />
-                        <p className='font-medium text-nowrap text-lg'>About Us</p>
+                        <p className='font-poppins font-normal text-nowrap text-lg'>About Us</p>
                     </div>
 
                     <div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
                         <div className="mt-8">
                             <Link
                                 href="#"
-                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#0F172A]/60 hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
                                 <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

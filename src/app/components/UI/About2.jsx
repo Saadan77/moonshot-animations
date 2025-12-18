@@ -63,7 +63,7 @@ const About2 = () => {
                 <div className='mb-36 space-y-12 overflow-x-hidden'>
                     {/* Top label */}
                     <div className="flex items-center gap-3 text-[20px] text-[#808080]">
-                        <span className='text-nowrap font-poppins font-light'>04 — The Inventive Minds</span>
+                        <span className='text-nowrap font-poppins font-normal'>04 — The Inventive Minds</span>
                     </div>
 
                     {/* Heading */}
