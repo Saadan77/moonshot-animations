@@ -12,7 +12,8 @@ export const AnimatedTestimonials = ({
   containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
   nameClass = "text-[20px] font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
-  quoteClass = "w-[110%] mb-8 text-4xl max-2xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
+  // quoteClass = "mb-8 text-4xl max-xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
+  quoteClass = "mb-8 lg:w-[120%] text-[clamp(10px,4vw,37px)] leading-tight text-white/70"
 }) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -49,8 +50,8 @@ export const AnimatedTestimonials = ({
     <div>
       <div
         className={containerClass}>
-        <div className="relative grid grid-cols-1 md:grid-cols-2 max-2xl:gap-24 gap-6 items-center">
-          <div className="hidden md:block relative h-full w-full col-span-1">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="hidden lg:block relative h-full w-full col-span-1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonials[active].src}
@@ -89,7 +90,7 @@ export const AnimatedTestimonials = ({
                     style={{ fontSize: 22, letterSpacing: '8px', textTransform: 'uppercase' }}
                     centerSrc="/images/quote.png"
                     centerAlt="quote"
-                    centerSize={44}
+                    centerSize={36}
                   >
                     TESTIMONIALS - TRUSTED BY CLIENTS -
                   </SpinningText>
@@ -98,13 +99,13 @@ export const AnimatedTestimonials = ({
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
                   draggable={false}
-                  className="w-full h-full object-contain object-center overflow-visible scale-125"
+                  className="w-full h-full object-contain object-center overflow-visible 2xl:scale-125"
                   data-smoother-ignore
                 />
               </motion.div>
             </AnimatePresence>
           </div>
-          <div className="flex flex-col justify-between py-4">
+          <div className="flex flex-col justify-between py-4 max-lg:col-span-2">
             <motion.div
               key={active}
               initial={{

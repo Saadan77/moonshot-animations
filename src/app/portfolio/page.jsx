@@ -59,32 +59,30 @@ export default function Portfolio() {
                 {/* Hero Section */}
                 <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-50">
                     <div className="relative z-20 ml-20 max-lg:ml-5">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
-                            <p className="font-bold text-lg">Portfolio</p>
+                            <p className="font-medium font-poppins text-lg">Portfolio</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 tracking-tight leading-none text-white">
-                            <div className="text-[66px] max-xl:text-[50px] max-sm:text-[30px]">
-                                <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                    Designing  <br /> Dreams Showcasing Our {" "}
-                                </AuroraText>
-                            </div>
-                            <span className="text-[86px] max-xl:text-[60px] max-sm:text-[40px] font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,66px)] tracking-tight leading-none text-white">
+                            <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                                Designing <br /> Dreams Showcasing Our {" "}
+                            </AuroraText>
+                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Creative Journey
                                 </AuroraText>
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 text-sm md:text-md lg:text-xl max-lg:px-1">
+                        <p className="font-light text-white/70 md:text-md lg:text-xl">
                             From conceptual sketches to digital experiences, here’s how we turn imagination into design
                         </p>
                     </div>
-                    
+
                     <img
                         src="/images/portfolio-page/portfolio-hero.png"
-                        className="absolute w-full max-2xl:scale-150 -top-20 -right-120 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"
+                        className="absolute w-full max-2xl:scale-150 -top-20 -right-100 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"
                         alt="Portfolio Hero"
                     />
                 </div>

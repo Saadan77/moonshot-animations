@@ -26,43 +26,43 @@ export default function AboutUsPage() {
   const cards = [
     {
       id: 1,
-      title: "Problem discovery",
+      title: "Problem <br /> discovery",
       description:
         "Usability Studies <br /> User Interviews <br /> Stakeholder Interviews <br /> Competitive Research <br /> Insights Report <br /> User Journey",
     },
     {
       id: 2,
-      title: "Design system ready",
+      title: "Design <br /> system ready",
       description:
         "Thinking Workshops <br /> Sitemaps <br /> Concepts <br /> Designs <br /> Prototypes <br /> Usability Studies",
     },
     {
       id: 3,
-      title: "Design implementation",
+      title: "Design <br /> implementation",
       description:
         "Design <br /> Use Cases <br /> User Flows <br /> Various User Types <br /> Annotations <br /> Interactions",
     },
     {
       id: 4,
-      title: "Development phase",
+      title: "Development <br /> phase",
       description:
         "Frontend Development <br /> Backend Development <br /> API Integration <br /> Database Setup <br /> Code Reviews <br /> Version Control",
     },
     {
       id: 5,
-      title: "Quality assurance",
+      title: "Quality <br /> assurance",
       description:
         "Unit Testing <br /> Integration Testing <br /> System Testing <br /> User Acceptance Testing <br /> Bug Fixing <br /> Performance Optimization",
     },
     {
       id: 6,
-      title: "Deployment and Testing",
+      title: "Deployment <br /> and Testing",
       description:
         "Test Plans <br /> Functional Testing <br /> Usability Testing <br /> Performance Testing <br /> Security Testing <br /> Bug Tracking",
     },
     {
       id: 7,
-      title: "Maintenance and iteration",
+      title: "Maintenance <br /> and iteration",
       description:
         "Monitoring & Analytics <br /> Bug Fixes <br /> Performance Optimization <br /> Feature Enhancements <br /> User Feedback Integration <br /> Regular Updates",
     },
@@ -73,12 +73,11 @@ export default function AboutUsPage() {
       <>
         <div
           key={card.id}
-          className="group relative w-[500px] overflow-hidden"
-          style={{ height: "500px" }}
+          className="group relative w-[250px] overflow-hidden"
+          style={{ height: "275px" }}
         >
           <div className="absolute inset-0 z-10 grid place-content-center">
-            <p className="mb-10 px-4 text-[24px] uppercase text-white">
-              {card.title}
+            <p className="mb-10 px-4 text-[24px] uppercase text-white" dangerouslySetInnerHTML={{ __html: card.title }}>
             </p>
             <p
               className="px-4 text-[17px] text-white"
@@ -86,7 +85,9 @@ export default function AboutUsPage() {
             />
           </div>
         </div>
-        <img src="/images/arrow.png" alt="arrow" className="h-auto w-[207px]" />
+        <div className="w-[250px]">
+          <img src="/images/arrow.png" alt="arrow" className="-mt-[100px] h-auto w-full" />
+        </div>
       </>
     );
   };
@@ -146,7 +147,7 @@ export default function AboutUsPage() {
       };
 
       const setup = () => {
-        ScrollTrigger.getAll().forEach((t) => { 
+        ScrollTrigger.getAll().forEach((t) => {
           if (t.vars.trigger === carouselEl) {
             t.kill();
           }
@@ -407,7 +408,7 @@ export default function AboutUsPage() {
         />
       </div>
 
-      <div className="py-30 min-h-screen flex justify-center items-end relative w-full overflow-visible">
+      <div className="min-h-screen flex justify-center items-end relative w-full overflow-visible">
         <div className="absolute inset-0 w-full h-[125vh] opacity-20">
           <Dither
             waveColor={[0.01, 0.29, 0.62]}
@@ -431,14 +432,14 @@ export default function AboutUsPage() {
         <DecorativeLines />
 
         {/* Hero Section */}
-        <div className="flex max-lg:flex-col items-center justify-between gap-8">
+        <div className="flex max-lg:flex-col items-center justify-between gap-12">
           <div className="z-10 ml-20 max-lg:ml-5">
             <div className="mb-16 flex items-center gap-3 text-sm text-white">
               <img src="/images/about-us/icon.png" />
               <p className="font-poppins font-medium text-lg">About Us</p>
             </div>
 
-            <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+            <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-none text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Shaping <br /> Ideas That Define Our{" "}
               </AuroraText>
@@ -449,7 +450,7 @@ export default function AboutUsPage() {
               </span>
             </h1>
 
-            <p className="font-light text-white/70 md:text-md lg:text-lg">
+            <p className="font-light text-white/70 md:text-md lg:text-xl">
               From our values to our craft, this is how we shape stories that
               define who we are with care
             </p>
@@ -457,19 +458,19 @@ export default function AboutUsPage() {
 
           <img
             src="/images/about-us-bg.png"
-            className="w-1/2 max-md:w-3/4 h-auto z-10"
+            className="w-4/9 max-md:w-3/4 h-auto z-10"
             alt="Astronaut"
           />
         </div>
       </div>
 
-      <div className="relative p-10 max-lg:p-1 z-10 justify-center flex">
+      <div className="relative p-20 max-lg:p-1 z-10 justify-center flex">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="h-auto w-3/4 object-cover rounded-4xl items-center"
+          className="h-auto object-cover rounded-4xl items-center"
         >
           <source src="/videos/about-us-video.webm" type="video/mp4" />
         </video>
@@ -486,7 +487,7 @@ export default function AboutUsPage() {
                 </span>
               </div>
 
-              <div className="w-full md:max-w-[75%] uppercase font-sora scale-110 ml-15">
+              <div className="w-full md:max-w-[75%] uppercase font-sora scale-112 ml-20">
                 <ScrollReveal>
                   From concept to execution, we build impactful digital
                   solutions that resonate with real people and deliver results
@@ -553,8 +554,8 @@ export default function AboutUsPage() {
         {/* Technologies Section */}
         <div>
           <div className="px-10 items-center py-10 md:py-48 bg-black">
-            <div className="text-center relative z-10 space-y-8">
-              <p className="font-extralight text-[#808080] text-2xl tracking-tight">
+            <div className="text-center relative z-10">
+              <p className="font-poppins font-normal text-[#808080] text-xl tracking-tight mb-8">
                 05 - Technologies
               </p>
               <h2
@@ -585,7 +586,7 @@ export default function AboutUsPage() {
                 />
               </h2>
 
-              <div>
+              <div className="mt-8">
                 <SlidingLogoMarquee items={logos} />
               </div>
             </div>
@@ -595,10 +596,10 @@ export default function AboutUsPage() {
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
-                className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
+                className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
                 style={{
                   background:
-                    "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                    "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
                   backgroundSize: '200% 100%, 200% 100%'
                 }}
               />
@@ -624,9 +625,7 @@ export default function AboutUsPage() {
         </div>
         <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
           <div className="flex max-md:flex-col items-start justify-between">
-            <div className="flex items-center gap-3 text-sm text-[#808080] font-poppins">
-              <p className="text-lg">04 - Approach</p>
-            </div>
+            <p className="text-[#808080] font-poppins font-normal text-lg">04 - Approach</p>
 
             <h2
               className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal leading-[1.2]"
@@ -636,7 +635,7 @@ export default function AboutUsPage() {
             </h2>
             <div />
           </div>
-          <HorizontalScrollCarousel />
+          <div className="lg:ml-[33%]"><HorizontalScrollCarousel /></div>
         </div>
       </div>
 
@@ -678,19 +677,17 @@ export default function AboutUsPage() {
         }} />
 
         <div className="max-w-[90%] mx-auto relative py-20">
-          <div className="space-y-10">
-            <div className="flex items-center gap-3 text-lg text-[#808080]">
-              <span className="text-nowrap font-poppins">
-                05 — What defines us
-              </span>
-            </div>
+          <div>
+            <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
+              05 — What Defines Us
+            </span>
 
-            <div className="uppercase font-sora scale-105 ml-10">
+            <div className="mt-10 uppercase font-sora scale-110 ml-25">
               <ScrollReveal>We deliver creative</ScrollReveal>
               <ScrollReveal>ideas to a crowded world.</ScrollReveal>
             </div>
 
-            <div className="mt-50">
+            <div className="mb-30 mt-50">
               <AboutUsCards />
             </div>
           </div>
@@ -700,10 +697,10 @@ export default function AboutUsPage() {
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div
-              className="w-screen h-[100px] rounded-full blur-[120px] opacity-80 in-out"
+              className="w-[95%] h-[100px] rounded-t-full blur-[80px] in-out"
               style={{
                 background:
-                  "linear-gradient(119.09deg, #4f00ff 14.54%, #FA28F2 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%), linear-gradient(119.09deg, rgba(57, 40, 255, 0.8) 14.54%, rgba(250, 40, 137, 0.8) 41.09%, rgba(35, 141, 250, 0.8) 55.83%, rgba(62, 95, 249, 0.8) 80.08%)",
+                  "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
                 backgroundSize: '200% 100%, 200% 100%'
               }}
             />

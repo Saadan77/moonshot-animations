@@ -12,6 +12,7 @@ const PortfolioGrid = () => {
             category: 'ui-ux',
             type: 'image',
             src: '/images/portfolio-page/projects/cogni-wave.mp4',
+            bg: '/images/portfolio-page/portfolio-cards-bg/bg-1.png',
             isVideo: true,
         },
         {
@@ -20,6 +21,7 @@ const PortfolioGrid = () => {
             category: 'branding',
             type: 'image',
             src: '/images/portfolio-page/projects/archin.png',
+            bg: '/images/portfolio-page/portfolio-cards-bg/bg-2.png',
             isVideo: false,
         },
         {
@@ -28,14 +30,16 @@ const PortfolioGrid = () => {
             category: 'motion',
             type: 'image',
             src: '/images/portfolio-page/projects/yuingair.png',
+            bg: '',
             isVideo: false,
         },
         {
             id: 4,
-            title: 'Lime',
+            title: 'Lime Armadillo',
             category: 'mobile-app',
             type: 'video',
             src: '/images/portfolio-page/projects/lime.mp4',
+            bg: '/images/portfolio-page/portfolio-cards-bg/bg-4.png',
             isVideo: true,
         },
         {
@@ -44,6 +48,7 @@ const PortfolioGrid = () => {
             category: 'ui-ux',
             type: 'image',
             src: '/images/portfolio-page/projects/netomi.png',
+            bg: '/images/portfolio-page/portfolio-cards-bg/bg-5.png',
             isVideo: false,
         },
         {
@@ -52,16 +57,18 @@ const PortfolioGrid = () => {
             category: 'branding',
             type: 'image',
             src: '/images/portfolio-page/projects/visio.png',
+            bg: '/images/portfolio-page/portfolio-cards-bg/bg-6.png',
             isVideo: false,
         },
     ];
 
     const tabs = [
-        { label: 'All Services', value: 'all' },
+        { label: 'All', value: 'all' },
+        { label: 'Mobile Application', value: 'mobile-app' },
         { label: 'UI/UX', value: 'ui-ux' },
         { label: 'Branding', value: 'branding' },
-        { label: 'Motion', value: 'motion' },
-        { label: 'Mobile App', value: 'mobile-app' },
+        { label: 'Web Development', value: 'web-development' },
+        { label: 'Animations', value: 'animations' },
     ];
 
     const filteredItems = activeTab === 'all'
@@ -93,21 +100,21 @@ const PortfolioGrid = () => {
                 </div>
 
                 {/* Portfolio Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-md:gap-24">
-                    {filteredItems.map((item) => (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-md:gap-24">
+                    {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
                             className={`bg-black px-20 pt-20 pb-30 max-sm:px-5 max-sm:p-5 rounded-3xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
-                            <div
-                                className="absolute inset-0 opacity-30"
-                                style={{
-                                    backgroundImage: 'url(/images/portfolio-page/portfolio-cards-bg.png)',
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                }}
-                            />
+                            {item.bg && (
+                                <div
+                                    className={`rounded-3xl absolute inset-0 ${item.isVideo ? 'opacity-100' : 'opacity-30'} bg-cover bg-center bg-no-repeat`}
+                                    style={{
+                                        backgroundImage: `url(${item.bg})`,
+                                    }}
+                                />
+                            )}
 
                             {item.isVideo ? (
                                 <video
@@ -116,15 +123,13 @@ const PortfolioGrid = () => {
                                     loop
                                     muted
                                     playsInline
-                                    className="relative z-10 w-full h-full object-cover rounded-4xl"
-                                    data-smoother-ignore
+                                    className='relative z-10 h-full object-cover rounded-4xl w-[85%] mx-auto'
                                 />
                             ) : (
                                 <img
                                     src={item.src}
                                     alt={item.title}
-                                    className="relative z-10 w-full h-full object-cover rounded-4xl"
-                                    data-smoother-ignore
+                                    className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
                             <h3 className="relative mt-10 -ml-10 max-md:ml-0 text-white text-5xl font-light">{item.title}</h3>

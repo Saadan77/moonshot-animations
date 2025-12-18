@@ -168,17 +168,17 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-40 h-80 rounded-full blur-[75px] pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(150deg, rgba(255, 198, 40, 0.80) 39.93%, rgba(250, 40, 137, 0.80) 60.8%, rgba(62, 95, 249, 0.80) 91.46%)'
+                                        background: 'linear-gradient(50deg, rgba(255, 198, 40, 0.80) 39.93%, rgba(250, 40, 137, 0.80) 60.8%, rgba(62, 95, 249, 0.80) 91.46%)'
                                     }}
                                 />
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[75px] pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
+                                        background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 
@@ -277,17 +277,17 @@ const About2 = () => {
                             >
                                 {/* Gradient - Top Right */}
                                 <div
-                                    className="absolute top-16 -right-2 w-50 h-80 rounded-full blur-[30px] opacity-50 pointer-events-none"
+                                    className="absolute top-16 -right-2 w-50 h-70 rounded-full blur-[75px] pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
+                                        background: 'linear-gradient(rgba(255, 198, 40, 0.80) 39.93%, rgba(250, 40, 137, 0.80) 60.8%, rgba(62, 95, 249, 0.80) 91.46%)'
                                     }}
                                 />
 
                                 {/* Gradient - Bottom Left */}
                                 <div
-                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[30px] opacity-60 pointer-events-none"
+                                    className="absolute -left-32 -bottom-32 w-60 h-90 rounded-full blur-[75px] pointer-events-none"
                                     style={{
-                                        background: 'linear-gradient(179.92deg, #03499F 0.07%, #D722AF 99.93%)'
+                                        background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 99.93%)'
                                     }}
                                 />
 

@@ -63,12 +63,12 @@ const Hero = () => {
             <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
                 {/* Decorative Labels */}
                 <div className="absolute top-[20%] left-20">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-light text-[#FFFFFF99]">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
                         (creative)
                     </p>
                 </div>
                 <div className="absolute top-[20%] right-20">
-                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-light text-[#FFFFFF99]">
+                    <p style={{ fontFamily: 'var(--font-poppins), sans-serif' }} className="text-lg font-normal text-[#FFFFFF99]">
                         (agency)
                     </p>
                 </div>

@@ -164,7 +164,7 @@ export default function WebDevelopment() {
                             <p className="font-bold text-lg">Website Development</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-xl:text-[40px] max-sm:text-[30px] tracking-tight leading-none text-white">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-none text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Building <br /> Sites That Shape Your{" "}
                             </AuroraText>

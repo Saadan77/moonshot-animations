@@ -206,7 +206,7 @@ export default function Carousel({
               <div
                 className="absolute -left-32 -bottom-32 w-100 h-150 rounded-full blur-[100px] opacity-60 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(149.85deg, rgba(255, 198, 40, 0.8) 39.93%, rgba(250, 40, 137, 0.8) 60.8%, rgba(62, 95, 249, 0.8) 91.46%)'
+                  background: 'linear-gradient(150deg, rgba(255, 198, 40, 0.80) 39.93%, rgba(250, 40, 137, 0.80) 60.8%, rgba(62, 95, 249, 0.80) 91.46%)'
                 }}
               />
 
@@ -214,7 +214,7 @@ export default function Carousel({
               <div
                 className="absolute -top-2 -right-2 w-100 h-96 rounded-full blur-[100px] opacity-100 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 100%)'
+                  background: 'linear-gradient(180deg, #03499F 0.07%, #D722AF 99.93%)'
                 }}
               />
 
