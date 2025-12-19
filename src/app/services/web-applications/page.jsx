@@ -157,7 +157,7 @@ export default function WebApplications() {
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Building <br /> Web Apps that boost{" "}
                             </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Your Workflow
                                 </AuroraText>

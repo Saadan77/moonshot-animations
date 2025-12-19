@@ -59,13 +59,7 @@ export default function AboutUsPage() {
       title: "Deployment <br /> and Testing",
       description:
         "Test Plans <br /> Functional Testing <br /> Usability Testing <br /> Performance Testing <br /> Security Testing <br /> Bug Tracking",
-    },
-    {
-      id: 7,
-      title: "Maintenance <br /> and iteration",
-      description:
-        "Monitoring & Analytics <br /> Bug Fixes <br /> Performance Optimization <br /> Feature Enhancements <br /> User Feedback Integration <br /> Regular Updates",
-    },
+    }
   ];
 
   const Card = ({ card }) => {
@@ -74,20 +68,22 @@ export default function AboutUsPage() {
         <div
           key={card.id}
           className="group relative w-[250px] overflow-hidden"
-          style={{ height: "275px" }}
+          style={{ height: "350px" }}
         >
           <div className="absolute inset-0 z-10 grid place-content-center">
             <p className="mb-10 px-4 text-[24px] uppercase text-white" dangerouslySetInnerHTML={{ __html: card.title }}>
             </p>
             <p
-              className="px-4 text-[17px] text-white"
+              className="px-4 text-[17px] text-white font-light leading-loose"
               dangerouslySetInnerHTML={{ __html: card.description }}
             />
           </div>
         </div>
-        <div className="w-[250px]">
-          <img src="/images/arrow.png" alt="arrow" className="-mt-[100px] h-auto w-full" />
-        </div>
+        {card.id !== cards.length && (
+          <div className="w-[250px]">
+            <img src="/images/arrow.png" alt="arrow" className="-mt-[120px] h-auto w-full" />
+          </div>
+        )}
       </>
     );
   };
@@ -217,7 +213,7 @@ export default function AboutUsPage() {
       <section ref={carouselRef} className="relative h-[75vh]">
         <div
           ref={contentRef}
-          className="flex gap-4 absolute left-0 top-0 h-full items-center"
+          className="flex gap-4 absolute left-0 top-0 h-full items-center pr-[50vw]"
         >
           {cards.map((card) => (
             <Card key={card.id} card={card} />
@@ -439,11 +435,11 @@ export default function AboutUsPage() {
               <p className="font-poppins font-medium text-lg">About Us</p>
             </div>
 
-            <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-none text-white">
+            <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-[81px] text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Shaping <br /> Ideas That Define Our{" "}
               </AuroraText>
-              <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Purpose & Vision
                 </AuroraText>
@@ -640,7 +636,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* What Defines Us Section */}
-      <div className="bg-[#00050A] relative pb-20">
+      <div className="bg-[#00050A] relative pb-10 overflow-hidden">
         <div id="smoke" ref={smokeRef}></div>
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -682,12 +678,11 @@ export default function AboutUsPage() {
               05 — What Defines Us
             </span>
 
-            <div className="mt-10 uppercase font-sora scale-110 ml-25">
-              <ScrollReveal>We deliver creative</ScrollReveal>
-              <ScrollReveal>ideas to a crowded world.</ScrollReveal>
-            </div>
+            <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
+              We deliver creative <br /> ideas to a crowded world.
+            </p>
 
-            <div className="mb-30 mt-50">
+            <div className="mb-40 mt-50">
               <AboutUsCards />
             </div>
           </div>
@@ -697,7 +692,7 @@ export default function AboutUsPage() {
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div
-              className="w-[95%] h-[100px] rounded-t-full blur-[80px] in-out"
+              className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
               style={{
                 background:
                   "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
@@ -708,7 +703,20 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <Partners />
+      <div id="about-us-partners" className="relative z-50">
+        <div className="absolute z-10 inset-0 top-0">
+          <img src="/images/about-us-page/bg-partners.png" alt="Background Bottom" className="w-full h-auto object-cover" />
+        </div>
+
+        <Partners />
+
+        <style jsx global>{`
+            #about-us-partners .bg-\[\#00060B\] {
+              background-color: #00060b36;
+            }
+          `}
+        </style>
+      </div>
 
       <CTA />
       <Footer />

@@ -367,6 +367,33 @@ export const StaggeredMenu = ({
     onMenuClose,
   ]);
 
+  // Click outside handler
+  useLayoutEffect(() => {
+    if (!open) return;
+
+    const handleClickOutside = (e) => {
+      const panel = panelRef.current;
+      const toggleBtn = toggleBtnRef.current;
+      
+      if (!panel || !toggleBtn) return;
+      
+      // Check if click is outside both the panel and toggle button
+      if (!panel.contains(e.target) && !toggleBtn.contains(e.target)) {
+        toggleMenu();
+      }
+    };
+
+    // Add listener after a small delay to avoid immediate trigger
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open, toggleMenu]);
+
   return (
     <div
       className={`sm-scope z-50 ${isFixed
@@ -412,7 +439,7 @@ export const StaggeredMenu = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] max-sm:px-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
-          <div className="flex justify-center items-center gap-12">
+          <div className="flex justify-center items-center gap-18">
             <button
               ref={toggleBtnRef}
               className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"

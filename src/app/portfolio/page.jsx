@@ -8,6 +8,8 @@ import Dither from "@/components/Dither";
 import PortfolioGrid from "../components/PortfolioGrid";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 export default function Portfolio() {
     return (
@@ -64,11 +66,11 @@ export default function Portfolio() {
                             <p className="font-medium font-poppins text-lg">Portfolio</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,66px)] tracking-tight leading-none text-white">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,66px)] tracking-tight leading-[73px] text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Designing <br /> Dreams Showcasing Our {" "}
                             </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Creative Journey
                                 </AuroraText>
@@ -89,6 +91,19 @@ export default function Portfolio() {
             </div>
 
             <PortfolioGrid />
+
+
+            <div className='w-screen flex justify-center pt-6 pb-20 bg-[#00050a]'>
+                <Link
+                    href="#"
+                    className="group inline-flex items-center gap-3 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-white/90 transition-all duration-300"
+                >
+                    <span className="relative top-[0.5px] font-sora text-[18px] max-lg:text-[15px] whitespace-nowrap">See More</span>
+                    <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
+                        <ChevronRight className="w-6 h-6 group-hover:text-black" />
+                    </span>
+                </Link>
+            </div>
 
             <CTA />
             <Footer />

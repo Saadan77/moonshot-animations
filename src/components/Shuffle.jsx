@@ -14,6 +14,7 @@ const splitTextIntoChars = (element) => {
     const char = text[i];
     const span = document.createElement('span');
     span.className = 'shuffle-char inline-block';
+    // Use a non-breaking space for spaces to preserve width
     span.textContent = char === ' ' ? '\u00A0' : char;
     element.appendChild(span);
     chars.push(span);
@@ -56,6 +57,8 @@ const Shuffle = ({
   const tlRef = useRef(null);
   const playingRef = useRef(false);
   const hoverHandlerRef = useRef(null);
+  // Add a ref to track if we've already fired to prevent double-execution
+  const hasFiredRef = useRef(false);
 
   const userHasFont = useMemo(
     () => (style && style.fontFamily) || (className && /font[-[]/i.test(className)),
@@ -79,6 +82,9 @@ const Shuffle = ({
   }, []);
 
   useGSAP(() => {
+    // Reset fired state on new text/mount
+    hasFiredRef.current = false;
+    
     if (!ref.current || !text || !fontsLoaded) return;
 
     if (respectReducedMotion && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -144,9 +150,10 @@ const Shuffle = ({
         const w = ch.getBoundingClientRect().width;
         if (!w) return;
 
+        // Ensure proper display type for spacing
         const wrap = document.createElement('span');
-        wrap.className = 'inline-block overflow-hidden align-baseline text-left';
-        Object.assign(wrap.style, { width: w + 'px' });
+        wrap.className = 'inline-block overflow-hidden align-bottom text-left';
+        Object.assign(wrap.style, { width: w + 'px', verticalAlign: 'bottom' });
 
         const inner = document.createElement('span');
         inner.className = 'inline-block whitespace-nowrap will-change-transform origin-left transform-gpu';
@@ -292,6 +299,9 @@ const Shuffle = ({
     };
 
     const create = () => {
+      if (hasFiredRef.current && triggerOnce) return;
+      hasFiredRef.current = true;
+      
       build();
       if (scrambleCharset) randomizeScrambles();
       play();
@@ -299,13 +309,25 @@ const Shuffle = ({
       setReady(true);
     };
 
-    const st = ScrollTrigger.create({ trigger: el, start, once: triggerOnce, onEnter: create });
+    const st = ScrollTrigger.create({ 
+      trigger: el, 
+      start, 
+      once: triggerOnce, 
+      onEnter: create 
+    });
+
+    // FIX: Check immediately if we are already in the viewport (for nav jumps)
+    // 0.1 threshold matches the scrollTrigger threshold
+    if (ScrollTrigger.isInViewport(el, threshold)) {
+        create();
+    }
 
     return () => {
       st.kill();
       removeHover();
       teardown();
       setReady(false);
+      hasFiredRef.current = false;
     };
   }, {
     dependencies: [

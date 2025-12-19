@@ -31,5 +31,5 @@ export const MarqueeItem = ({
   className,
   ...props
 }) => (
-  <div className={cn('bg-[#00060B] mx-2 object-contain hover:border-2 hover:border-white/70 hover:bg-[#03182c] hover:rounded-full', className)} {...props} />
+  <div className={cn('mx-2 object-contain hover:border-2 hover:border-white/70 hover:bg-[#03182c] hover:rounded-full', className)} {...props} />
 );

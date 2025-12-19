@@ -156,7 +156,7 @@ export default function DigitalMarketing() {
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Ad Growth <br /> Campaigns That Drive {" "}
                             </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Traffic & Sales
                                 </AuroraText>

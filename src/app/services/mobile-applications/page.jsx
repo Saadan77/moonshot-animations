@@ -156,7 +156,7 @@ export default function MobileApplications() {
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Crafting <br /> Apps That Power Your {" "}
                             </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Brand & Ambition
                                 </AuroraText>

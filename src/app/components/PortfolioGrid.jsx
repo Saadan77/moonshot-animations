@@ -1,6 +1,8 @@
 "use client";
 
+import { ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'wouter';
 
 const PortfolioGrid = () => {
     const [activeTab, setActiveTab] = useState('all');
@@ -53,7 +55,7 @@ const PortfolioGrid = () => {
         },
         {
             id: 6,
-            title: 'Visio',
+            title: 'Visio AI',
             category: 'branding',
             type: 'image',
             src: '/images/portfolio-page/projects/visio.png',
@@ -104,7 +106,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className={`bg-black px-20 pt-20 pb-30 max-sm:px-5 max-sm:p-5 rounded-3xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                            className={`bg-black px-20 pt-20 pb-36 max-sm:px-5 max-sm:p-5 rounded-3xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
                             {item.bg && (
@@ -132,7 +134,7 @@ const PortfolioGrid = () => {
                                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
-                            <h3 className="relative mt-10 -ml-10 max-md:ml-0 text-white text-5xl font-light">{item.title}</h3>
+                            <h3 className="relative mt-15 -ml-10 max-md:ml-0 text-white text-5xl font-light tracking-tighter">{item.title}</h3>
                         </div>
                     ))}
                 </div>

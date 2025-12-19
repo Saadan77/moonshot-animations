@@ -168,7 +168,7 @@ export default function WebDevelopment() {
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Building <br /> Sites That Shape Your{" "}
                             </AuroraText>
-                            <span className="font-extralight text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Brand & Profile
                                 </AuroraText>

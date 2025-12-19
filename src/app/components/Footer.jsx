@@ -121,7 +121,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:bg-[linear-gradient(135deg,#FF8A00_0%,#E52E71_50%,#9B00FF_100%)] transition-colors"
                                             aria-label="Instagram"
                                         >
                                             <svg
@@ -139,7 +139,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:bg-[#0866ff] transition-colors"
                                             aria-label="Facebook"
                                         >
                                             <svg
@@ -153,7 +153,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover: hover:bg-[#0a66c2] transition-colors"
                                             aria-label="LinkedIn"
                                         >
                                             <svg
@@ -167,7 +167,7 @@ export default function Footer() {
                                         </a>
                                         <a
                                             href="#"
-                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:text-black hover:bg-white transition-colors"
+                                            className="h-14 w-14 rounded-full border border-[#494949] flex items-center justify-center text-white hover:bg-[#ff0033] transition-colors"
                                             aria-label="YouTube"
                                         >
                                             <svg

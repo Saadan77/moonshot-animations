@@ -12,7 +12,7 @@ const socials = [
         label: 'Facebook',
         char: 'f',
         href: '#',
-        gradient: 'bg-gradient-to-tr from-[#2563EB] via-[#3B82F6] to-[#93C5FD]',
+        gradient: 'bg-[#0866ff]',
     },
     {
         key: 'instagram',
@@ -39,14 +39,14 @@ const socials = [
         label: 'X (Twitter)',
         char: '𝕏',
         href: '#',
-        gradient: 'bg-[linear-gradient(135deg,#000_0%,#000_50%,#000_100%)]',
+        gradient: 'bg-white',
     },
     {
         key: 'linkedin',
         label: 'LinkedIn',
         char: 'in',
         href: '#',
-        gradient: 'bg-gradient-to-tr from-[#0A66C2] via-[#2A7BCB] to-[#60A5FA]',
+        gradient: 'bg-[#0a66c2]',
     },
 ];
 
@@ -81,7 +81,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Content Container */}
-                <div className="mt-[100px] max-xl:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[77%] overflow-visible"
+                <div className="mt-[100px] max-xl:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[73%] overflow-visible"
                     style={{
                         mixBlendMode: 'screen',
                     }}>
@@ -174,39 +174,51 @@ const Hero = () => {
             </div>
 
             {/* Social Media Icons - Left Side */}
-            <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[45%] flex flex-col gap-3 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-0'
-                }`}>
+            <div className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[45%] flex flex-col gap-5 transition-all duration-300 ${isMenuOpen ? 'z-0' : 'z-0'}`}>
                 {socials.map((s) => (
-                    <Link
-                        key={s.key}
-                        href={s.href}
-                        aria-label={s.label}
-                        className={`
-                        group relative w-12 h-12 rounded-full
-                        flex items-center justify-center text-xs font-medium
-                        bg-gray-800/80 backdrop-blur
-                        text-white transition-colors duration-300
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
-                        overflow-hidden
-                        `}
-                    >
-                        {/* Animated gradient fill layer (hidden until hover) */}
-                        <span
-                            aria-hidden="true"
+                    <div key={s.key} className="relative group/frame p-0.5 cursor-pointer">
+
+                        {/* --- CORNER BORDERS --- */}
+                        {/* Top Left */}
+                        <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-white/20 transition-colors duration-300 group-hover/frame:border-white/80" />
+                        {/* Top Right */}
+                        <span className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-white/20 transition-colors duration-300 group-hover/frame:border-white/80" />
+                        {/* Bottom Left */}
+                        <span className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-white/20 transition-colors duration-300 group-hover/frame:border-white/80" />
+                        {/* Bottom Right */}
+                        <span className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-white/20 transition-colors duration-300 group-hover/frame:border-white/80" />
+
+                        {/* --- EXISTING CIRCULAR LINK --- */}
+                        <Link
+                            href={s.href}
+                            aria-label={s.label}
                             className={`
-                                absolute left-0 top-full w-full h-full rounded-full
-                                ${s.gradient}
-                                transition-all duration-500 ease-out
-                                group-hover:top-0
-                                group-active:top-0
-                                will-change:top
+                            group relative w-12 h-12 rounded-full
+                            flex items-center justify-center text-xs font-medium
+                            bg-gray-800/80 backdrop-blur
+                            text-white transition-colors duration-300
+                            focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
+                            overflow-hidden
                             `}
-                        />
-                        {/* Glyph */}
-                        <span className="relative text-[16px] z-10 transition-colors duration-300 group-hover:text-white">
-                            {s.char}
-                        </span>
-                    </Link>
+                        >
+                            {/* Animated gradient fill layer */}
+                            <span
+                                aria-hidden="true"
+                                className={`
+                                    absolute left-0 top-full w-full h-full rounded-full
+                                    ${s.gradient}
+                                    transition-all duration-500 ease-out
+                                    group-hover:top-0
+                                    group-active:top-0
+                                    will-change:top
+                                `}
+                            />
+                            {/* Glyph */}
+                            <span className="relative text-[16px] z-10 transition-colors duration-300 group-hover:text-white">
+                                {s.char}
+                            </span>
+                        </Link>
+                    </div>
                 ))}
             </div>
             <style dangerouslySetInnerHTML={{
