@@ -30,9 +30,10 @@ export const StaggeredMenu = ({
   const preLayersRef = useRef(null);
   const preLayerElsRef = useRef([]);
 
-  const plusHRef = useRef(null);
-  const plusVRef = useRef(null);
   const iconRef = useRef(null);
+  const burgerTopRef = useRef(null);
+  const burgerMidRef = useRef(null);
+  const burgerBotRef = useRef(null);
 
   const textInnerRef = useRef(null);
   const textWrapRef = useRef(null);
@@ -54,12 +55,13 @@ export const StaggeredMenu = ({
       const panel = panelRef.current;
       const preContainer = preLayersRef.current;
 
-      const plusH = plusHRef.current;
-      const plusV = plusVRef.current;
       const icon = iconRef.current;
+      const burgerTop = burgerTopRef.current;
+      const burgerMid = burgerMidRef.current;
+      const burgerBot = burgerBotRef.current;
       const textInner = textInnerRef.current;
 
-      if (!panel || !plusH || !plusV || !icon || !textInner) return;
+      if (!panel || !icon || !burgerTop || !burgerMid || !burgerBot || !textInner) return;
 
       let preLayers = [];
       if (preContainer) {
@@ -70,9 +72,11 @@ export const StaggeredMenu = ({
       const offscreen = position === "left" ? -100 : 100;
       gsap.set([panel, ...preLayers], { xPercent: offscreen });
 
-      gsap.set(plusH, { transformOrigin: "50% 50%", rotate: 0 });
-      gsap.set(plusV, { transformOrigin: "50% 50%", rotate: 90 });
       gsap.set(icon, { rotate: 0, transformOrigin: "50% 50%" });
+      gsap.set([burgerTop, burgerMid, burgerBot], { transformOrigin: "50% 50%" });
+      gsap.set(burgerTop, { y: -5, rotate: 0 });
+      gsap.set(burgerMid, { opacity: 1, scaleX: 1 });
+      gsap.set(burgerBot, { y: 5, rotate: 0 });
 
       gsap.set(textInner, { yPercent: 0 });
 
@@ -272,9 +276,10 @@ export const StaggeredMenu = ({
 
   const animateIcon = useCallback((opening) => {
     const icon = iconRef.current;
-    const h = plusHRef.current;
-    const v = plusVRef.current;
-    if (!icon || !h || !v) return;
+    const top = burgerTopRef.current;
+    const mid = burgerMidRef.current;
+    const bot = burgerBotRef.current;
+    if (!icon || !top || !mid || !bot) return;
 
     spinTweenRef.current?.kill();
 
@@ -282,13 +287,15 @@ export const StaggeredMenu = ({
       gsap.set(icon, { rotate: 0, transformOrigin: "50% 50%" });
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: "power4.out" } })
-        .to(h, { rotate: 45, duration: 0.5 }, 0)
-        .to(v, { rotate: -45, duration: 0.5 }, 0);
+        .to(top, { y: 0, rotate: 45, duration: 0.35 }, 0)
+        .to(bot, { y: 0, rotate: -45, duration: 0.35 }, 0)
+        .to(mid, { opacity: 0, scaleX: 0.6, duration: 0.2 }, 0);
     } else {
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: "power3.inOut" } })
-        .to(h, { rotate: 0, duration: 0.35 }, 0)
-        .to(v, { rotate: 90, duration: 0.35 }, 0)
+        .to(top, { y: -5, rotate: 0, duration: 0.25 }, 0)
+        .to(bot, { y: 5, rotate: 0, duration: 0.25 }, 0)
+        .to(mid, { opacity: 1, scaleX: 1, duration: 0.2 }, 0)
         .to(icon, { rotate: 0, duration: 0.001 }, 0);
     }
   }, []);
@@ -439,10 +446,10 @@ export const StaggeredMenu = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] max-sm:px-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
-          <div className="flex justify-center items-center gap-18">
+          <div className="flex justify-center items-center gap-6">
             <button
               ref={toggleBtnRef}
-              className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full px-6 py-3 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full pl-3 pr-6 py-2 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
               style={{
                 color: "white",
                 fontFamily: "var(--font-sora), sans-serif",
@@ -455,17 +462,23 @@ export const StaggeredMenu = ({
             >
               <span
                 ref={iconRef}
-                className="sm-icon relative w-4 h-4 shrink-0 inline-flex items-center justify-center will-change-transform"
+                className="sm-icon relative shrink-0 inline-flex items-center justify-center will-change-transform"
                 aria-hidden="true"
               >
-                <span
-                  ref={plusHRef}
-                  className="sm-icon-line absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
-                />
-                <span
-                  ref={plusVRef}
-                  className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-0.5 bg-white rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change-transform"
-                />
+                <span className="relative grid place-items-center w-10 h-10 rounded-full bg-[#494949]">
+                  <span
+                    ref={burgerTopRef}
+                    className="absolute left-1/2 top-1/2 h-0.5 w-5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[2px] will-change-transform"
+                  />
+                  <span
+                    ref={burgerMidRef}
+                    className="absolute left-1/2 top-1/2 h-0.5 w-5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[2px] will-change-transform"
+                  />
+                  <span
+                    ref={burgerBotRef}
+                    className="absolute left-1/2 top-1/2 h-0.5 w-5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[2px] will-change-transform"
+                  />
+                </span>
               </span>
 
               <span
@@ -498,7 +511,7 @@ export const StaggeredMenu = ({
           </div>
 
           <Link
-            className="relative items-center select-none pointer-events-auto"
+            className="relative items-center ml-6"
             aria-label="Logo"
             href="/"
           >
@@ -654,13 +667,13 @@ export const StaggeredMenu = ({
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; height: 75px; width: auto; object-fit: contain; }
-.sm-scope .sm-toggle { position: relative; display: inline-flex; align-items: center; gap: 0.3rem; border: none; cursor: pointer; color: #e9e9ef; font-weight: 500; line-height: 1; overflow: visible; }
+.sm-scope .sm-toggle { position: relative; display: inline-flex; align-items: center; gap: 1rem; border: none; cursor: pointer; color: #e9e9ef; font-weight: 400; line-height: 1; overflow: visible; }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }
 .sm-scope .sm-line:last-of-type { margin-top: 6px; }
 .sm-scope .sm-toggle-textWrap { position: relative; display: inline-block; height: 1em; overflow: hidden; white-space: nowrap; width: var(--sm-toggle-width, auto); min-width: var(--sm-toggle-width, auto); }
 .sm-scope .sm-toggle-textInner { display: flex; flex-direction: column; line-height: 1; }
 .sm-scope .sm-toggle-line { display: block; height: 1em; line-height: 1; }
-.sm-scope .sm-icon { position: relative; width: 14px; height: 14px; flex: 0 0 14px; display: inline-flex; align-items: center; justify-content: center; will-change: transform; }
+.sm-scope .sm-icon { position: relative; width: 40px; height: 40px; flex: 0 0 40px; display: inline-flex; align-items: center; justify-content: center; will-change: transform; }
 .sm-scope .sm-panel-itemWrap { position: relative; overflow: hidden; line-height: 1; }
 .sm-scope .sm-icon-line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); will-change: transform; }
 .sm-scope .sm-line { display: none !important; }

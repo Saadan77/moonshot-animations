@@ -49,7 +49,7 @@ export default function CTA() {
 
     return (
         <section
-            className="relative flex flex-col items-center justify-start overflow-hidden bg-[#00060B] pt-28 md:pt-36"
+            className="relative z-50 flex flex-col items-center justify-start overflow-hidden bg-[#00060B] pt-28 md:pt-36"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             <div id="smoke-cta" ref={smokeRef}></div>

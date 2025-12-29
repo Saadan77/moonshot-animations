@@ -2,13 +2,12 @@
 
 import About2 from "./components/UI/About2";
 import AboutUs from "./components/UI/AboutUs";
-import Brand from "./components/UI/Brand";
 import Hero from "./components/UI/Hero";
 import Partners from "./components/UI/Partners";
 import WhatWeDo from "./components/UI/WhatWeDo";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import Portfolio from "./components/UI/Portfolio";
+import PortfolioAndBrand from "./components/UI/PortfolioAndBrand";
 import Proficients from "./components/UI/Proficients";
 import Ribbons from "@/components/Ribbons";
 import CyberHologramLoader from "./components/CyberHologramLoader";
@@ -32,8 +31,7 @@ export default function Home() {
       <WhatWeDo />
       <About2 />
       <Proficients />
-      <Portfolio />
-      <Brand />
+      <PortfolioAndBrand />
       <Partners />
       <CTA />
       <Footer />
