@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { DirectionAwareHover } from '@/components/ui/direction-aware-hover';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Partners from './Partners';
 
 export function Tags() {
     const tabs = [
@@ -412,7 +413,7 @@ const PortfolioAndBrand = () => {
                 <div className="absolute inset-0 bg-[#34A5DC]" style={{ clipPath: "inherit" }} />
             </section>
 
-            <section id="brand-section" className="bg-[#34A5DC] -mt-1 py-52 relative z-50 min-h-screen flex items-center justify-center overflow-x-hidden">
+            <section id="brand-section" className="bg-[#34A5DC] -mt-1 pt-52 pb-125 relative z-50 min-h-screen flex items-center justify-center overflow-x-hidden">
                 <h2 className="z-20 text-[260px] max-lg:text-[120px] max-sm:text-[60px] text-center tracking-[-3%] leading-[0.8] md:leading-[0.85] uppercase font-semibold font-sora flex flex-col items-center gap-2">
 
                     <ScrollFillText>WE</ScrollFillText>

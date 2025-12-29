@@ -214,7 +214,11 @@ const Hero = () => {
                                 `}
                             />
                             {/* Glyph */}
-                            <span className="relative text-[16px] z-10 transition-colors duration-300 group-hover:text-white">
+                            <span
+                                className={`relative text-[16px] z-10 transition-colors duration-300 ${
+                                    s.key === 'x' ? 'group-hover:text-black' : 'group-hover:text-white'
+                                }`}
+                            >
                                 {s.char}
                             </span>
                         </Link>
