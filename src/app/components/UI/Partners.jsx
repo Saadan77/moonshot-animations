@@ -61,9 +61,10 @@ export default function Partners() {
     }, []);
 
     return (
-        <>
+        <div>
             {/* Transition Section with Clip-Path */}
             <section
+                id="home-partners-clip-path"
                 ref={transitionRef}
                 className="relative h-[50vh] z-50 -mt-125"
                 style={{
@@ -76,7 +77,7 @@ export default function Partners() {
                 <div className="absolute inset-0 bg-[#00060B]" style={{ clipPath: "inherit" }} />
             </section>
 
-            <section className="relative z-50 -mt-15 bg-[#00060B] mx-auto pb-24 md:pb-28 lg:pb-32 overflow-hidden">
+            <section id="partners" className="relative z-50 -mt-15 bg-[#00060B] mx-auto pb-24 md:pb-28 lg:pb-32 overflow-hidden">
                 <div className=''>
                     {/* Top meta label */}
                     <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
@@ -119,6 +120,6 @@ export default function Partners() {
 
                 <Testimonials />
             </section>
-        </>
+        </div>
     );
 }

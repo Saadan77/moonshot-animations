@@ -704,6 +704,16 @@ export default function AboutUsPage() {
       </div>
 
       <div id="about-us-partners" className="relative z-50">
+        <div className="absolute -top-10 left-[48%] z-100">
+          <Image
+            src="/images/elevate-icon.png"
+            alt="Elevate Icon"
+            width={100}
+            height={100}
+            className="w-[100px] relative z-10"
+          />
+        </div>
+
         <div className="absolute z-10 inset-0 top-0">
           <img src="/images/about-us-page/bg-partners.png" alt="Background Bottom" className="w-full h-auto object-cover" />
         </div>
@@ -714,12 +724,19 @@ export default function AboutUsPage() {
             #about-us-partners .bg-\[\#00060B\] {
               background-color: #00060b36;
             }
+            #home-partners-clip-path {
+              display: none;
+            }
+            #about-us-partners #partners {
+              margin-top: 0px;
+              padding-top: 10rem;
+            }
           `}
         </style>
       </div>
 
       <CTA />
       <Footer />
-    </section>
+    </section >
   );
 }
