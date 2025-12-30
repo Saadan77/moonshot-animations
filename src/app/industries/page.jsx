@@ -108,9 +108,9 @@ export default function Portfolio() {
 
             <Navbar />
 
-            <div className="min-h-[110vh] flex justify-center items-center relative w-full overflow-hidden">
+            <div className="min-h-screen flex items-center relative w-full overflow-hidden">
                 {/* Dither Background */}
-                <div className="absolute inset-0 w-full h-full opacity-20">
+                {/* <div className="absolute inset-0 w-full h-full opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
@@ -122,51 +122,52 @@ export default function Portfolio() {
                         waveFrequency={3}
                         waveSpeed={0.05}
                     />
-                </div>
+                </div> */}
 
                 {/* Background Image */}
                 <div
-                    className="absolute inset-0 brightness-125"
-                    style={{
-                        backgroundImage:
-                            "url('/images/bg-hero.png')",
-                    }}
+                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
+                    style={{ backgroundImage: "url('/images/bg-hero.png')" }}
                 />
 
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
                 {/* Hero Section */}
-                <div className="flex flex-col 2xl:flex-row items-center gap-8 max-2xl:mt-50">
-                    <div className="z-20 ml-20 max-sm:ml-10">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+                <div>
+                    <div className="relative z-10 ml-20 max-sm:ml-10">
+                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
-                            <p className="font-bold text-lg">Industries</p>
+                            <p className="font-poppins font-medium text-lg">Industries</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 tracking-tight leading-none text-white">
+                        <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
                             <div className="text-[68px] max-xl:text-[50px] max-sm:text-[30px]">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                    Innovating Industries Demonstrating Our Multi
+                                    Innovating Industries
+                                    <br />
+                                    Demonstrating Our Multi
                                 </AuroraText>
                             </div>
-                            <span className="text-[86px] max-xl:text-[60px] max-sm:text-[40px] font-extralight text-end items-end max-2xl:text-start max-2xl:items-start block">
+                            <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-2xl:text-start max-2xl:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Sector Strength
                                 </AuroraText>
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 text-sm md:text-md lg:text-xl max-lg:px-1">
+                        <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
                             From conceptual sketches to digital experiences, here's how we turn imagination into design
                         </p>
                     </div>
 
-                    <img src="/images/industries/city-bg.png" className="w-2/5 max-md:w-3/4 h-auto z-100" alt="City" />
+                    <div className="absolute top-40 -right-50 z-10">
+                        <img src="/images/industries/city-bg.png" className="w-5/6 max-md:w-3/4 h-auto" alt="City" />
+                    </div>
                 </div>
             </div>
 
-            <div className="-mt-5 relative bg-[#00050A] rounded-[34.137px]">
+            <div className="bg-[#00050A] rounded-[34.137px]">
                 <div className="industries-grid" style={{
                     ['--img-opacity']: '0.6'
                 }}>

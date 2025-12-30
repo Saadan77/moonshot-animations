@@ -127,8 +127,8 @@ export default function EmailMarketing() {
                 />
             </div>
 
-            <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
-                <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <div className="min-h-screen flex items-center relative w-full overflow-visible">
+                {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
@@ -140,10 +140,12 @@ export default function EmailMarketing() {
                         waveFrequency={3}
                         waveSpeed={0.05}
                     />
-                </div>
+                </div> */}
 
+
+                {/* Background Image */}
                 <div
-                    className="absolute inset-0 brightness-125 h-[150vh]"
+                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
                     style={{ backgroundImage: "url('/images/bg-hero.png')" }}
                 />
 
@@ -151,32 +153,32 @@ export default function EmailMarketing() {
                 <DecorativeLines />
 
                 {/* Hero Section */}
-                <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
-                    <div className="z-10 ml-20 max-lg:ml-5">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+                <div className="">
+                    <div className="relative z-10 ml-20 max-lg:ml-5">
+                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
-                            <p className="font-bold text-lg">Email Marketing</p>
+                            <p className="font-poppins font-medium text-lg">Email Marketing</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-none text-white">
+                        <h1 className="text-[clamp(30px,12vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Driving <br /> Emails That Power Your{" "}
                             </AuroraText>
-                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Brand & Growth
                                 </AuroraText>
                             </span>
                         </h1>
 
-                        <p className="text-wrap font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
+                        <p className="text-wrap font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
                             From bold concepts to polished sends, we create email flows that clearly reflect who you are online
                         </p>
                     </div>
 
                     <img
                         src="/images/services/email-marketing/hero.png"
-                        className="absolute w-3/8 max-2xl:w-3/8 max-lg:w-3/4 -bottom-10 right-0 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto"
+                        className="absolute w-[40%] h-auto -bottom-10 right-0 z-10"
                         alt="Email Marketing Hero"
                     />
                 </div>
@@ -239,7 +241,7 @@ export default function EmailMarketing() {
                                 </div>
                                 <Link
                                     href="#"
-                                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
                                     <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Get in Touch</span>
                                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

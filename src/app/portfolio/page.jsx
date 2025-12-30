@@ -29,10 +29,10 @@ export default function Portfolio() {
 
             <Navbar />
 
-            <div className="min-h-screen flex relative w-full overflow-visible bg-black">
+            <div className="min-h-screen flex items-center relative w-full overflow-visible bg-black">
                 {/* Dither Background */}
                 <div className="absolute inset-0 w-full h-[200vh] opacity-20">
-                    <Dither
+                    {/* <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
                         disableAnimation={false}
@@ -42,35 +42,31 @@ export default function Portfolio() {
                         waveAmplitude={0.3}
                         waveFrequency={3}
                         waveSpeed={0.05}
-                    />
+                    /> */}
                 </div>
 
                 {/* Background Image */}
-                <div className="absolute inset-0 brightness-125 h-[200vh]">
-                    <div
-                        className="absolute inset-0"
-                        style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-                    />
-                    {/* Gradient fade at bottom */}
-                    <div className="absolute inset-x-0 bottom-0 h-[30%] bg-linear-to-t from-black via-black/80 to-transparent pointer-events-none" />
-                </div>
+                <div
+                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
+                    style={{ backgroundImage: "url('/images/bg-hero.png')" }}
+                />
 
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
                 {/* Hero Section */}
-                <div className="flex flex-col 2xl:flex-row items-center gap-8 mt-36 max-xl:mt-50">
+                <div>
                     <div className="relative z-20 ml-20 max-lg:ml-5">
                         <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
                             <p className="font-medium font-poppins text-lg">Portfolio</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,66px)] tracking-tight leading-[73px] text-white">
+                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,66px)] tracking-tight leading-[81px] text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Designing <br /> Dreams Showcasing Our {" "}
                             </AuroraText>
-                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="text-[clamp(40px,12vw,86px)] text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Creative Journey
                                 </AuroraText>
@@ -82,11 +78,13 @@ export default function Portfolio() {
                         </p>
                     </div>
 
-                    <img
-                        src="/images/portfolio-page/portfolio-hero.png"
-                        className="absolute w-full max-2xl:scale-150 -top-20 -right-100 z-10 max-2xl:relative max-2xl:top-0 max-2xl:right-0 h-auto rotate-[7.76deg]"
-                        alt="Portfolio Hero"
-                    />
+                    <div className="absolute top-40 -right-520 z-10">
+                        <img
+                            src="/images/portfolio-page/portfolio-hero-image.png"
+                            className="w-2/5 max-md:w-3/4 h-auto rotate-[7.76deg]"
+                            alt="Portfolio Hero"
+                        />
+                    </div>
                 </div>
             </div>
 

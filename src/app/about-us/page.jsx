@@ -404,9 +404,9 @@ export default function AboutUsPage() {
         />
       </div>
 
-      <div className="min-h-screen flex justify-center items-end relative w-full overflow-visible">
+      <div className="min-h-screen flex items-center relative w-full overflow-visible">
         <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-          <Dither
+          {/* <Dither
             waveColor={[0.01, 0.29, 0.62]}
             backgroundColor={[0.84, 0.13, 0.69]}
             disableAnimation={false}
@@ -416,11 +416,11 @@ export default function AboutUsPage() {
             waveAmplitude={0.3}
             waveFrequency={3}
             waveSpeed={0.05}
-          />
+          /> */}
         </div>
 
         <div
-          className="absolute inset-0 brightness-125 h-[150vh]"
+          className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
           style={{ backgroundImage: "url('/images/bg-hero.png')" }}
         />
 
@@ -428,8 +428,8 @@ export default function AboutUsPage() {
         <DecorativeLines />
 
         {/* Hero Section */}
-        <div className="flex max-lg:flex-col items-center justify-between gap-12">
-          <div className="z-10 ml-20 max-lg:ml-5">
+        <div className="">
+          <div className="relative z-10 ml-20 max-lg:ml-5">
             <div className="mb-16 flex items-center gap-3 text-sm text-white">
               <img src="/images/about-us/icon.png" />
               <p className="font-poppins font-medium text-lg">About Us</p>
@@ -439,7 +439,7 @@ export default function AboutUsPage() {
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Shaping <br /> Ideas That Define Our{" "}
               </AuroraText>
-              <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Purpose & Vision
                 </AuroraText>
@@ -452,11 +452,13 @@ export default function AboutUsPage() {
             </p>
           </div>
 
-          <img
-            src="/images/about-us-bg.png"
-            className="w-4/9 max-md:w-3/4 h-auto z-10"
-            alt="Astronaut"
-          />
+          <div className="absolute top-40 -right-50 z-10">
+            <img
+              src="/images/about-us-bg.png"
+              className="w-full max-md:w-3/4 h-auto"
+              alt="Astronaut"
+            />
+          </div>
         </div>
       </div>
 
@@ -479,7 +481,7 @@ export default function AboutUsPage() {
             <div className="space-y-10">
               <div className="flex items-center gap-3 text-xl text-[#808080]">
                 <span className="text-nowrap font-poppins font-normal">
-                  03 — Who we are
+                  03 — Who We Are
                 </span>
               </div>
 
@@ -636,7 +638,8 @@ export default function AboutUsPage() {
       </div>
 
       {/* What Defines Us Section */}
-      <div className="bg-[#00050A] relative pb-10 overflow-hidden">
+      <div className="bg-[#00050A] relative pb-10 overflow-hidden"
+        style={{ borderRadius: '34.137px' }}>
         <div id="smoke" ref={smokeRef}></div>
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -672,19 +675,17 @@ export default function AboutUsPage() {
                 `
         }} />
 
-        <div className="max-w-[90%] mx-auto relative py-20">
-          <div>
-            <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
-              05 — What Defines Us
-            </span>
+        <div className="max-w-[90%] mx-auto relative py-36">
+          <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
+            05 — What Defines Us
+          </span>
 
-            <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
-              We deliver creative <br /> ideas to a crowded world.
-            </p>
+          <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
+            We deliver creative <br /> ideas to a crowded world.
+          </p>
 
-            <div className="mb-40 mt-50">
-              <AboutUsCards />
-            </div>
+          <div className="mb-40 mt-50">
+            <AboutUsCards />
           </div>
         </div>
 
@@ -720,19 +721,22 @@ export default function AboutUsPage() {
 
         <Partners />
 
-        <style jsx global>{`
-            #about-us-partners .bg-\[\#00060B\] {
-              background-color: #00060b36;
-            }
-            #home-partners-clip-path {
-              display: none;
-            }
-            #about-us-partners #partners {
-              margin-top: 0px;
-              padding-top: 10rem;
-            }
-          `}
-        </style>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              #about-us-partners .bg-\\[\\#00060B\\] {
+                background-color: #00060b36;
+              }
+              #home-partners-clip-path {
+                display: none;
+              }
+              #about-us-partners #partners {
+                margin-top: 0px;
+                padding-top: 10rem;
+              }
+            `,
+          }}
+        />
       </div>
 
       <CTA />

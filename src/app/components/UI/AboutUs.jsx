@@ -110,7 +110,7 @@ const AboutUs = () => {
                         <div className="mt-8">
                             <Link
                                 href="#"
-                                className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                             >
                                 <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
                                 <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

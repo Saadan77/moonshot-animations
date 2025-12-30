@@ -51,9 +51,9 @@ export default function ContactUs() {
                 />
             </div>
 
-            <div className="min-h-screen flex justify-center items-end relative w-full overflow-hidden">
+            <div className="min-h-screen flex items-center relative w-full overflow-hidden">
                 {/* Dither Background */}
-                <div className="absolute inset-0 w-full h-full opacity-20">
+                {/* <div className="absolute inset-0 w-full h-full opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
@@ -65,51 +65,48 @@ export default function ContactUs() {
                         waveFrequency={3}
                         waveSpeed={0.05}
                     />
-                </div>
+                </div> */}
 
                 {/* Background Image */}
                 <div
-                    className="absolute inset-0 brightness-125"
-                    style={{
-                        backgroundImage:
-                            "url('/images/bg-hero.png')",
-                    }}
+                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
+                    style={{ backgroundImage: "url('/images/bg-hero.png')" }}
                 />
 
                 {/* Decorative Lines */}
                 <DecorativeLines />
 
                 {/* Hero Section */}
-                <div className="flex flex-col 2xl:flex-row items-center gap-8 max-2xl:mt-50">
-                    <div className="z-20 ml-20 max-sm:ml-10">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+                <div>
+                    <div className="relative z-10 ml-20 max-sm:ml-10">
+                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
-                            <p className="font-bold text-lg">Contact</p>
+                            <p className="font-poppins font-medium text-lg">Contact</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 tracking-tight leading-none text-white">
-                            <div className="text-[68px] max-xl:text-[50px] max-sm:text-[30px]">
-                                <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                    Let’s Start a <br /> Conversation Connect{" "}
-                                </AuroraText>
-                            </div>
-                            <span className="text-[86px] max-xl:text-[60px] max-sm:text-[40px] font-extralight text-end items-end max-2xl:text-start max-2xl:items-start block">
+                        <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
+                            <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                                Let’s Start a <br /> Conversation Connect{" "}
+                            </AuroraText>
+                            <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-2xl:text-start max-2xl:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     With Our Team
                                 </AuroraText>
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 text-sm md:text-md lg:text-xl max-lg:px-1">
+                        <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
                             From quick questions to big ideas, here’s how we turn your message into real progress
                         </p>
                     </div>
 
-                    <img src="/images/contact-us-hero.png" className="w-2/5 max-md:w-3/4 h-auto z-100" alt="City" />
+                    <div className="absolute top-10 -right-50 z-10">
+                        <img src="/images/contact-us-hero.png" className="w-2/3" alt="City" />
+                    </div>
                 </div>
             </div>
 
-            <div className="py-50 bg-[#00050A] rounded-[34.137px] -mt-10 relative z-100">
+            <div className="py-50 bg-[#00050A] rounded-[34.137px] relative z-10">
                 <div className="max-w-[80%] mx-auto grid lg:grid-cols-2 items-start gap-16">
                     {/* Left content */}
                     <div>
@@ -194,7 +191,7 @@ export default function ContactUs() {
                             <div className="flex justify-between items-center mt-8">
                                 <button
                                     type="submit"
-                                    className="group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
                                     <span className="relative top-[0.5px] font-sora text-[20px]">Send Message</span>
                                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

@@ -133,8 +133,8 @@ export default function WebDevelopment() {
                 />
             </div>
 
-            <div className="py-30 min-h-screen flex items-center relative w-full overflow-visible">
-                <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <div className="min-h-screen flex items-center relative w-full overflow-visible">
+                {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
@@ -146,10 +146,12 @@ export default function WebDevelopment() {
                         waveFrequency={3}
                         waveSpeed={0.05}
                     />
-                </div>
+                </div> */}
 
+
+                {/* Background Image */}
                 <div
-                    className="absolute inset-0 brightness-125 h-[150vh]"
+                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
                     style={{ backgroundImage: "url('/images/bg-hero.png')" }}
                 />
 
@@ -157,32 +159,32 @@ export default function WebDevelopment() {
                 <DecorativeLines />
 
                 {/* Hero Section */}
-                <div className="flex max-lg:flex-col max-lg:mt-10 items-center gap-8 mt-36">
-                    <div className="z-10 ml-20 max-lg:ml-5">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white/80">
+                <div className="">
+                    <div className="relative z-10 ml-20 max-lg:ml-5">
+                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
                             <img src="/images/about-us/icon.png" />
-                            <p className="font-bold text-lg">Website Development</p>
+                            <p className="font-poppins font-medium text-lg">Website Development</p>
                         </div>
 
-                        <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-none text-white">
+                        <h1 className="text-[clamp(30px,12vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
                             <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                 Building <br /> Sites That Shape Your{" "}
                             </AuroraText>
-                            <span className="font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                            <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                     Brand & Profile
                                 </AuroraText>
                             </span>
                         </h1>
 
-                        <p className="font-light text-white/70 md:text-md lg:text-lg max-lg:px-1">
+                        <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
                             From first ideas to final code, we design and build websites that show who you are online
                         </p>
                     </div>
 
                     <img
                         src="/images/services/web-development/hero.png"
-                        className="absolute top-20 -right-60 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
+                        className="absolute top-0 -right-90 z-10 w-full h-auto scale-110"
                         alt="Astronaut"
                     />
                 </div>
@@ -245,7 +247,7 @@ export default function WebDevelopment() {
                                 </div>
                                 <Link
                                     href="#"
-                                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-3 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
                                     <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">Get in Touch</span>
                                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

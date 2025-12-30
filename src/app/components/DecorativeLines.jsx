@@ -1,7 +1,7 @@
 export default function DecorativeLines() {
     return (
         <div className="max-md:hidden block">
-            {["15%", "30%", "45%", "60%", "75%", "90%"].map((left) => (
+            {["12%", "28%", "42%", "57%", "72%", "88%"].map((left) => (
                 <div
                     key={left}
                     style={{ left }}
