@@ -11,7 +11,7 @@ import Ribbons from "@/components/Ribbons";
 
 export default function Portfolio() {
 
-    const cards = [
+    const topCards = [
         {
             id: 1,
             title: "Education",
@@ -58,14 +58,14 @@ export default function Portfolio() {
             id: 7,
             title: "Utilities",
             thumbnail: "/images/industries/image-7.png",
-            className: "md:col-span-1",
+            className: "md:col-span-1 h-[320px] md:h-[650px]",
             content: null,
         },
         {
             id: 8,
             title: "Government",
             thumbnail: "/images/industries/image-8.png",
-            className: "md:col-span-1",
+            className: "md:col-span-1 h-[320px] md:h-[650px]",
             content: null,
         },
         {
@@ -74,43 +74,48 @@ export default function Portfolio() {
             thumbnail: "/images/industries/image-9.png",
             className: "md:col-span-2",
             content: null,
-        },
+        }
+    ];
+
+    const bottomCards = [
         {
-            id: 10,
+            id: 1,
             title: "Retail and E-Commerce",
             thumbnail: "/images/industries/image-10.png",
-            className: "md:col-span-2",
+            className: "md:col-span-2 h-[320px] md:h-[650px]",
             content: null,
         },
         {
-            id: 11,
+            id: 2,
             title: "Artificial Intelligence",
             thumbnail: "/images/industries/image-11.png",
-            className: "md:col-span-1",
+            className: "md:col-span-2 h-[320px] md:h-[650px]",
             content: null,
         },
     ];
 
     return (
-        <section
-            className="relative"
-            style={{ fontFamily: "var(--font-sora), sans-serif" }}
-        >
-            <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
-                <Ribbons
-                    baseThickness={6}
-                    colors={['#D42290']}
-                    speedMultiplier={0.4}
-                    maxAge={500}
-                    enableFade={true}
-                />
-            </div>
+        <>
+            {/* <CyberHologramLoader /> */}
+            <section
+                className="relative"
+                style={{ fontFamily: "var(--font-sora), sans-serif" }}
+            >
+                <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+                    <Ribbons
+                        baseThickness={6}
+                        colors={['#D42290']}
+                        speedMultiplier={0.4}
+                        maxAge={500}
+                        enableFade={true}
+                    />
+                </div>
 
-            <Navbar />
+                <Navbar />
 
-            <div className="min-h-screen flex items-center relative w-full overflow-hidden">
-                {/* Dither Background */}
-                {/* <div className="absolute inset-0 w-full h-full opacity-20">
+                <div className="min-h-[110vh] flex items-center relative w-full overflow-hidden">
+                    {/* Dither Background */}
+                    {/* <div className="absolute inset-0 w-full h-full opacity-20">
                     <Dither
                         waveColor={[0.01, 0.29, 0.62]}
                         backgroundColor={[0.84, 0.13, 0.69]}
@@ -124,67 +129,87 @@ export default function Portfolio() {
                     />
                 </div> */}
 
-                {/* Background Image */}
-                <div
-                    className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-                    style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-                />
+                    {/* Background Image */}
+                    <div
+                        className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
+                        style={{ backgroundImage: "url('/images/bg-hero.png')" }}
+                    />
 
-                {/* Decorative Lines */}
-                <DecorativeLines />
+                    {/* Decorative Lines */}
+                    <DecorativeLines />
 
-                {/* Hero Section */}
-                <div>
-                    <div className="relative z-10 ml-20 max-sm:ml-10">
-                        <div className="mb-16 flex items-center gap-3 text-sm text-white">
-                            <img src="/images/about-us/icon.png" />
-                            <p className="font-poppins font-medium text-lg">Industries</p>
+                    {/* Hero Section */}
+                    <div>
+                        <div className="relative z-10 ml-20 max-sm:ml-10">
+                            <div className="mb-16 flex items-center gap-3 text-sm text-white">
+                                <img src="/images/about-us/icon.png" />
+                                <p className="font-poppins font-medium text-lg">Industries</p>
+                            </div>
+
+                            <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
+                                <div className="text-[68px] max-xl:text-[50px] max-sm:text-[30px]">
+                                    <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                                        Innovating Industries
+                                        <br />
+                                        Demonstrating Our Multi
+                                    </AuroraText>
+                                </div>
+                                <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-2xl:text-start max-2xl:items-start block">
+                                    <AuroraText colors={["#D42290", "#2DAEEF"]}>
+                                        Sector Strength
+                                    </AuroraText>
+                                </span>
+                            </h1>
+
+                            <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
+                                From conceptual sketches to digital experiences, here's how we turn imagination into design
+                            </p>
                         </div>
 
-                        <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
-                            <div className="text-[68px] max-xl:text-[50px] max-sm:text-[30px]">
-                                <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                                    Innovating Industries
-                                    <br />
-                                    Demonstrating Our Multi
-                                </AuroraText>
-                            </div>
-                            <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-2xl:text-start max-2xl:items-start block">
-                                <AuroraText colors={["#D42290", "#2DAEEF"]}>
-                                    Sector Strength
-                                </AuroraText>
-                            </span>
-                        </h1>
-
-                        <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
-                            From conceptual sketches to digital experiences, here's how we turn imagination into design
-                        </p>
-                    </div>
-
-                    <div className="absolute top-40 -right-50 z-10">
-                        <img src="/images/industries/city-bg.png" className="w-5/6 max-md:w-3/4 h-auto" alt="City" />
+                        <div className="absolute top-40 -right-50 z-10">
+                            <img src="/images/industries/city-bg.png" className="w-5/6 max-md:w-3/4 h-auto" alt="City" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="bg-[#00050A] rounded-[34.137px]">
-                <div className="industries-grid" style={{
-                    ['--img-opacity']: '0.6'
-                }}>
-                    <style dangerouslySetInnerHTML={{
-                        __html: `
+                <div className="-mt-10 py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
+                    <div className="industries-grid" style={{
+                        ['--img-opacity']: '0.6'
+                    }}>
+                        <style dangerouslySetInnerHTML={{
+                            __html: `
                                 .industries-grid img,
                                 .industries-grid video {
                                     opacity: 0.6 !important;
                                 }
                             `
-                    }} />
-                    <LayoutGrid cards={cards} />
+                        }} />
+                        <LayoutGrid cards={topCards} />
+                        <div id="bottom-industries-grid">
+                            <LayoutGrid cards={bottomCards} />
+                        </div>
+                        <style
+                            dangerouslySetInnerHTML={{
+                                __html: `
+                                    @media (min-width: 768px) {
+                                        #bottom-industries-grid > .grid {
+                                            grid-template-columns: repeat(4, minmax(0, 1fr));
+                                        }
+                                        
+                                        #bottom-industries-grid > .grid {
+                                            padding-top: 0%;
+                                            padding-bottom: 0%;
+                                        }
+                                    }
+                                `
+                            }}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <CTA />
-            <Footer />
-        </section>
+                <CTA />
+                <Footer />
+            </section>
+        </>
     );
 }

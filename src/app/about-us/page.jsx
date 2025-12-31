@@ -19,6 +19,7 @@ import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
 import AboutUsCards from "../components/AboutUsCards";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
+import CyberHologramLoader from "../components/CyberHologramLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -227,97 +228,49 @@ export default function AboutUsPage() {
     {
       id: "1",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-1.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-1.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "2",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-2.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-2.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "3",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-3.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-3.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "4",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-4.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-4.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "5",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-5.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-5.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "6",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-6.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-6.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "7",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-7.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-7.png" alt="Logo" className="w-full h-auto" />
       ),
     },
     {
       id: "8",
       content: (
-        <Image
-          src="/images/about-us-page/slider-logos/logo-8.png"
-          width={200}
-          height={200}
-          alt="Logo"
-          data-smoother-ignore
-        />
+        <img src="/images/about-us-page/slider-logos/logo-8.png" alt="Logo" className="w-full h-auto" />
       ),
     },
   ];
@@ -388,25 +341,27 @@ export default function AboutUsPage() {
   }, []);
 
   return (
-    <section
-      className="relative bg-black overflow-x-hidden"
-      style={{ fontFamily: "var(--font-sora), sans-serif" }}
-    >
-      <Navbar />
+    <>
+      {/* <CyberHologramLoader /> */}
+      <section
+        className="relative bg-black overflow-x-hidden"
+        style={{ fontFamily: "var(--font-sora), sans-serif" }}
+      >
+        <Navbar />
 
-      <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
-        <Ribbons
-          baseThickness={6}
-          colors={['#D42290']}
-          speedMultiplier={0.4}
-          maxAge={500}
-          enableFade={true}
-        />
-      </div>
+        <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
+          <Ribbons
+            baseThickness={6}
+            colors={['#D42290']}
+            speedMultiplier={0.4}
+            maxAge={500}
+            enableFade={true}
+          />
+        </div>
 
-      <div className="min-h-screen flex items-center relative w-full overflow-visible">
-        <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-          {/* <Dither
+        <div className="min-h-screen flex items-center relative w-full overflow-visible">
+          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            {/* <Dither
             waveColor={[0.01, 0.29, 0.62]}
             backgroundColor={[0.84, 0.13, 0.69]}
             disableAnimation={false}
@@ -417,232 +372,232 @@ export default function AboutUsPage() {
             waveFrequency={3}
             waveSpeed={0.05}
           /> */}
-        </div>
+          </div>
 
-        <div
-          className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-          style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-        />
+          <div
+            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
+            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
+          />
 
-        {/* Decorative Lines */}
-        <DecorativeLines />
+          {/* Decorative Lines */}
+          <DecorativeLines />
 
-        {/* Hero Section */}
-        <div className="">
-          <div className="relative z-10 ml-20 max-lg:ml-5">
-            <div className="mb-16 flex items-center gap-3 text-sm text-white">
-              <img src="/images/about-us/icon.png" />
-              <p className="font-poppins font-medium text-lg">About Us</p>
-            </div>
+          {/* Hero Section */}
+          <div className="">
+            <div className="relative z-10 ml-20 max-lg:ml-5">
+              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+                <img src="/images/about-us/icon.png" />
+                <p className="font-poppins font-medium text-lg">About Us</p>
+              </div>
 
-            <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-[81px] text-white">
-              <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                Shaping <br /> Ideas That Define Our{" "}
-              </AuroraText>
-              <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
-                <AuroraText colors={["#D42290", "#2DAEEF"]}>
-                  Purpose & Vision
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-[81px] text-white">
+                <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                  Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-              </span>
-            </h1>
-
-            <p className="font-light text-white/70 md:text-md lg:text-xl">
-              From our values to our craft, this is how we shape stories that
-              define who we are with care
-            </p>
-          </div>
-
-          <div className="absolute top-40 -right-50 z-10">
-            <img
-              src="/images/about-us-bg.png"
-              className="w-full max-md:w-3/4 h-auto"
-              alt="Astronaut"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="relative p-20 max-lg:p-1 z-10 justify-center flex">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-auto object-cover rounded-4xl items-center"
-        >
-          <source src="/videos/about-us-video.webm" type="video/mp4" />
-        </video>
-      </div>
-
-      <div className="bg-top overflow-hidden" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
-        {/* Who We Are Section */}
-        <div>
-          <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-10 md:py-48">
-            <div className="space-y-10">
-              <div className="flex items-center gap-3 text-xl text-[#808080]">
-                <span className="text-nowrap font-poppins font-normal">
-                  03 — Who We Are
+                <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                  <AuroraText colors={["#D42290", "#2DAEEF"]}>
+                    Purpose & Vision
+                  </AuroraText>
                 </span>
-              </div>
+              </h1>
 
-              <div className="w-full md:max-w-[75%] uppercase font-sora scale-112 ml-20">
-                <ScrollReveal>
-                  From concept to execution, we build impactful digital
-                  solutions that resonate with real people and deliver results
-                </ScrollReveal>
-              </div>
-
-              <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
-                <div className="lg:mt-10 max-w-[40%] min-w-[40%] max-lg:min-w-full text-[#808080]">
-                  <TextType
-                    text="With expertise in areas such as web design, digital marketing, social media management, and content creation, digital agencies play a crucial role."
-                    typingSpeed={15}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </div>
-
-                <div className="flex gap-16 max-lg:gap-8">
-                  <div>
-                    <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
-                      <CountingNumber
-                        number={400}
-                        inView={true}
-                        transition={{ stiffness: 100, damping: 30 }}
-                      />
-                      +
-                    </p>
-                    <span className="text-xl">
-                      Successful Projects <br /> Delivered
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
-                      {">"}
-                      <CountingNumber
-                        number={95}
-                        inView={true}
-                        transition={{ stiffness: 100, damping: 30 }}
-                      />
-                      <span className="text-[50px]">%</span>
-                    </p>
-                    <span className="text-xl">
-                      Projects Success <br /> Rate
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-20">
-              {/* <Gallery3D images={images} /> */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
-                <Image src="/images/about-us-page/image-1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image-2.png" width={400} height={400} alt="Image 2" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image-3.png" width={400} height={400} alt="Image 3" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                <Image src="/images/about-us-page/image-4.png" width={400} height={400} alt="Image 4" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technologies Section */}
-        <div>
-          <div className="px-10 items-center py-10 md:py-48 bg-black">
-            <div className="text-center relative z-10">
-              <p className="font-poppins font-normal text-[#808080] text-xl tracking-tight mb-8">
-                05 - Technologies
+              <p className="font-light text-white/70 md:text-md lg:text-xl">
+                From our values to our craft, this is how we shape stories that
+                define who we are with care
               </p>
-              <h2
-                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
-                style={{ fontFamily: "var(--font-sora), sans-serif" }}
-              >
-                <TextType
-                  text={["Advanced Tech Stack for"]}
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
-
-              <h2
-                className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
-                style={{ fontFamily: "var(--font-sora), sans-serif" }}
-              >
-                <TextType
-                  text={["Performance, Scalability & Innovation"]}
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
-
-              <div className="mt-8">
-                <SlidingLogoMarquee items={logos} />
-              </div>
             </div>
-          </div>
 
-          {/* Glow ellipse below cards */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div
-                className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
-                style={{
-                  background:
-                    "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                  backgroundSize: '200% 100%, 200% 100%'
-                }}
+            <div className="absolute top-40 -right-50 z-10">
+              <img
+                src="/images/about-us-bg.png"
+                className="w-full max-md:w-3/4 h-auto"
+                alt="Astronaut"
               />
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Approach Section */}
-      <div>
-        <div className="relative">
-          <div
-            className="absolute -top-12 left-[48%] z-100"
+        <div className="relative p-20 max-lg:p-1 z-10 justify-center flex">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-auto object-cover rounded-4xl items-center"
           >
-            <Image
-              src="/images/elevate-icon.png"
-              alt="Elevate Icon"
-              width={100}
-              height={100}
-              className="w-[120px] relative z-10"
-            />
+            <source src="/videos/about-us-video.webm" type="video/mp4" />
+          </video>
+        </div>
+
+        <div className="bg-top overflow-hidden" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
+          {/* Who We Are Section */}
+          <div>
+            <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-10 md:py-48">
+              <div className="space-y-10">
+                <div className="flex items-center gap-3 text-xl text-[#808080]">
+                  <span className="text-nowrap font-poppins font-normal">
+                    03 — Who We Are
+                  </span>
+                </div>
+
+                <div className="w-full md:max-w-[75%] uppercase font-sora scale-112 ml-20">
+                  <ScrollReveal>
+                    From concept to execution, we build impactful digital
+                    solutions that resonate with real people and deliver results
+                  </ScrollReveal>
+                </div>
+
+                <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
+                  <div className="lg:mt-10 max-w-[40%] min-w-[40%] max-lg:min-w-full text-[#808080]">
+                    <TextType
+                      text="With expertise in areas such as web design, digital marketing, social media management, and content creation, digital agencies play a crucial role."
+                      typingSpeed={15}
+                      pauseDuration={1500}
+                      showCursor={true}
+                      cursorCharacter="|"
+                      startOnVisible={true}
+                      loop={true}
+                    />
+                  </div>
+
+                  <div className="flex gap-16 max-lg:gap-8">
+                    <div>
+                      <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
+                        <CountingNumber
+                          number={400}
+                          inView={true}
+                          transition={{ stiffness: 100, damping: 30 }}
+                        />
+                        +
+                      </p>
+                      <span className="text-xl">
+                        Successful Projects <br /> Delivered
+                      </span>
+                    </div>
+                    <div>
+                      <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
+                        {">"}
+                        <CountingNumber
+                          number={95}
+                          inView={true}
+                          transition={{ stiffness: 100, damping: 30 }}
+                        />
+                        <span className="text-[50px]">%</span>
+                      </p>
+                      <span className="text-xl">
+                        Projects Success <br /> Rate
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-20">
+                {/* <Gallery3D images={images} /> */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
+                  <Image src="/images/about-us-page/image-1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <Image src="/images/about-us-page/image-2.png" width={400} height={400} alt="Image 2" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <Image src="/images/about-us-page/image-3.png" width={400} height={400} alt="Image 3" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <Image src="/images/about-us-page/image-4.png" width={400} height={400} alt="Image 4" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Technologies Section */}
+          <div>
+            <div className="px-10 items-center py-10 md:py-48 bg-black">
+              <div className="text-center relative z-10">
+                <p className="font-poppins font-normal text-[#808080] text-xl tracking-tight mb-8">
+                  05 - Technologies
+                </p>
+                <h2
+                  className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
+                  style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                >
+                  <TextType
+                    text={["Advanced Tech Stack for"]}
+                    typingSpeed={75}
+                    pauseDuration={1500}
+                    showCursor={false}
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </h2>
+
+                <h2
+                  className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
+                  style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                >
+                  <TextType
+                    text={["Performance, Scalability & Innovation"]}
+                    typingSpeed={75}
+                    pauseDuration={1500}
+                    showCursor={false}
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </h2>
+
+                <div className="mt-8">
+                  <SlidingLogoMarquee items={logos} />
+                </div>
+              </div>
+            </div>
+
+            {/* Glow ellipse below cards */}
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div
+                  className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
+                  style={{
+                    background:
+                      "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
+                    backgroundSize: '200% 100%, 200% 100%'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
-          <div className="flex max-md:flex-col items-start justify-between">
-            <p className="text-[#808080] font-poppins font-normal text-lg">04 - Approach</p>
 
-            <h2
-              className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal leading-[1.2]"
-              style={{ fontFamily: "var(--font-sora), sans-serif" }}
+        {/* Approach Section */}
+        <div>
+          <div className="relative">
+            <div
+              className="absolute -top-12 left-[48%] z-100"
             >
-              Method of making better result
-            </h2>
-            <div />
+              <Image
+                src="/images/elevate-icon.png"
+                alt="Elevate Icon"
+                width={100}
+                height={100}
+                className="w-[120px] relative z-10"
+              />
+            </div>
           </div>
-          <div className="lg:ml-[33%]"><HorizontalScrollCarousel /></div>
-        </div>
-      </div>
+          <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
+            <div className="flex max-md:flex-col items-start justify-between">
+              <p className="text-[#808080] font-poppins font-normal text-lg">04 - Approach</p>
 
-      {/* What Defines Us Section */}
-      <div className="bg-[#00050A] relative pb-10 overflow-hidden"
-        style={{ borderRadius: '34.137px' }}>
-        <div id="smoke" ref={smokeRef}></div>
-        <style dangerouslySetInnerHTML={{
-          __html: `
+              <h2
+                className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal leading-[1.2]"
+                style={{ fontFamily: "var(--font-sora), sans-serif" }}
+              >
+                Method of making better result
+              </h2>
+              <div />
+            </div>
+            <div className="lg:ml-[33%]"><HorizontalScrollCarousel /></div>
+          </div>
+        </div>
+
+        {/* What Defines Us Section */}
+        <div className="bg-[#00050A] relative pb-10 overflow-hidden"
+          style={{ borderRadius: '34.137px' }}>
+          <div id="smoke" ref={smokeRef}></div>
+          <style dangerouslySetInnerHTML={{
+            __html: `
                 #smoke {
                     position: absolute;
                     top: 0;
@@ -673,57 +628,57 @@ export default function AboutUsPage() {
                     }
                 }
                 `
-        }} />
+          }} />
 
-        <div className="max-w-[90%] mx-auto relative py-36">
-          <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
-            05 — What Defines Us
-          </span>
+          <div className="max-w-[90%] mx-auto relative py-36">
+            <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
+              05 — What Defines Us
+            </span>
 
-          <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
-            We deliver creative <br /> ideas to a crowded world.
-          </p>
+            <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
+              We deliver creative <br /> ideas to a crowded world.
+            </p>
 
-          <div className="mb-40 mt-50">
-            <AboutUsCards />
+            <div className="mb-40 mt-50">
+              <AboutUsCards />
+            </div>
+          </div>
+
+          {/* Glow ellipse below cards */}
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div
+                className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
+                style={{
+                  background:
+                    "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
+                  backgroundSize: '200% 100%, 200% 100%'
+                }}
+              />
+            </div>
           </div>
         </div>
 
-        {/* Glow ellipse below cards */}
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div
-              className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
-              style={{
-                background:
-                  "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                backgroundSize: '200% 100%, 200% 100%'
-              }}
+        <div id="about-us-partners" className="relative z-50">
+          <div className="absolute -top-10 left-[48%] z-100">
+            <Image
+              src="/images/elevate-icon.png"
+              alt="Elevate Icon"
+              width={100}
+              height={100}
+              className="w-[100px] relative z-10"
             />
           </div>
-        </div>
-      </div>
 
-      <div id="about-us-partners" className="relative z-50">
-        <div className="absolute -top-10 left-[48%] z-100">
-          <Image
-            src="/images/elevate-icon.png"
-            alt="Elevate Icon"
-            width={100}
-            height={100}
-            className="w-[100px] relative z-10"
-          />
-        </div>
+          <div className="absolute z-10 inset-0 top-0">
+            <img src="/images/about-us-page/bg-partners.png" alt="Background Bottom" className="w-full h-auto object-cover" />
+          </div>
 
-        <div className="absolute z-10 inset-0 top-0">
-          <img src="/images/about-us-page/bg-partners.png" alt="Background Bottom" className="w-full h-auto object-cover" />
-        </div>
+          <Partners />
 
-        <Partners />
-
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
               #about-us-partners .bg-\\[\\#00060B\\] {
                 background-color: #00060b36;
               }
@@ -735,12 +690,13 @@ export default function AboutUsPage() {
                 padding-top: 10rem;
               }
             `,
-          }}
-        />
-      </div>
+            }}
+          />
+        </div>
 
-      <CTA />
-      <Footer />
-    </section >
+        <CTA />
+        <Footer />
+      </section >
+    </>
   );
 }

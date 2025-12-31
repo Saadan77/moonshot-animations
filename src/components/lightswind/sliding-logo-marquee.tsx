@@ -176,7 +176,7 @@ export function SlidingLogoMarquee({
         }
 
         .sliding-marquee-item:hover {
-          transform: scale(1.30);
+          
         }
 
         .sliding-marquee-item svg {

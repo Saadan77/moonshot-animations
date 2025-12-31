@@ -3,6 +3,37 @@
 import { useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 
+const BR_TOKEN_REGEX = /<br\s*\/?\s*>/gi;
+
+function buildTypingSequence(input, reverseMode) {
+  const raw = String(input ?? '');
+  const parts = raw.split(BR_TOKEN_REGEX);
+  const brCount = (raw.match(BR_TOKEN_REGEX) || []).length;
+
+  const tokens = [];
+  for (let i = 0; i < parts.length; i += 1) {
+    if (parts[i]) tokens.push({ type: 'text', value: parts[i] });
+    if (i < brCount) tokens.push({ type: 'br' });
+  }
+
+  if (reverseMode) {
+    tokens.reverse();
+    for (const t of tokens) {
+      if (t.type === 'text') t.value = t.value.split('').reverse().join('');
+    }
+  }
+
+  const seq = [];
+  for (const t of tokens) {
+    if (t.type === 'br') {
+      seq.push('\n');
+    } else {
+      seq.push(...t.value.split(''));
+    }
+  }
+  return seq;
+}
+
 const TextType = ({
   text,
   as: Component = 'div',
@@ -33,6 +64,11 @@ const TextType = ({
   const containerRef = useRef(null);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
+
+  const typingSequence = useMemo(() => {
+    const current = textArray[currentTextIndex] ?? '';
+    return buildTypingSequence(current, reverseMode);
+  }, [textArray, currentTextIndex, reverseMode]);
 
   const getRandomSpeed = useCallback(() => {
     if (!variableSpeed) return typingSpeed;
@@ -79,7 +115,7 @@ const TextType = ({
     let timeout;
 
     const currentText = textArray[currentTextIndex];
-    const processedText = reverseMode ? currentText.split('').reverse().join('') : currentText;
+    const processedSequence = typingSequence;
 
     const executeTypingAnimation = () => {
       if (isDeleting) {
@@ -102,9 +138,9 @@ const TextType = ({
           }, deletingSpeed);
         }
       } else {
-        if (currentCharIndex < processedText.length) {
+        if (currentCharIndex < processedSequence.length) {
           timeout = setTimeout(() => {
-            setDisplayedText(prev => prev + processedText[currentCharIndex]);
+            setDisplayedText(prev => prev + processedSequence[currentCharIndex]);
             setCurrentCharIndex(prev => prev + 1);
           }, variableSpeed ? getRandomSpeed() : typingSpeed);
         } else if (textArray.length > 1) {
@@ -140,15 +176,24 @@ const TextType = ({
     onSentenceComplete
   ]);
 
+  const effectiveLength = typingSequence.length;
   const shouldHideCursor =
-    hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+    hideCursorWhileTyping && (currentCharIndex < effectiveLength || isDeleting);
+
+  const renderedText = useMemo(() => {
+    if (!displayedText.includes('\n')) return displayedText;
+    const lines = displayedText.split('\n');
+    return lines.flatMap((line, idx) =>
+      idx < lines.length - 1 ? [line, <br key={`br-${idx}`} />] : [line]
+    );
+  }, [displayedText]);
 
   return createElement(Component, {
     ref: containerRef,
     className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
     ...props
   }, <span className="inline" style={{ color: getCurrentTextColor() || 'inherit' }}>
-    {displayedText}
+    {renderedText}
   </span>, showCursor && (
     <span
       ref={cursorRef}

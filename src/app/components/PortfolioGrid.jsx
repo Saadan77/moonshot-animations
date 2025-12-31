@@ -49,7 +49,7 @@ const PortfolioGrid = () => {
             title: 'Netomi',
             category: 'ui-ux',
             type: 'image',
-            src: '/images/portfolio-page/projects/netomi.png',
+            src: '/images/portfolio-page/projects/netomi-2.png',
             bg: '/images/portfolio-page/portfolio-cards-bg/bg-5.png',
             isVideo: false,
         },
@@ -78,13 +78,13 @@ const PortfolioGrid = () => {
         : portfolioItems.filter(item => item.category === activeTab);
 
     return (
-        <div className="min-h-screen bg-[#00050a] py-16 px-6 lg:px-12">
-            <div className="max-w-[90%] max-sm:max-w-[95%] mx-auto">
+        <div className="min-h-screen bg-[#00050a] py-16 lg:px-12">
+            <div className="max-w-[95%] mx-auto">
                 {/* Header Section */}
                 <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                     {/* Filter Tabs */}
                     <div className="flex flex-col items-end gap-4">
-                        <div className="flex flex-wrap gap-3 justify-end">
+                        <div className="flex flex-wrap gap-6 justify-end">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.value}
@@ -106,7 +106,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className={`bg-black px-20 pt-20 pb-36 max-sm:px-5 max-sm:p-5 rounded-3xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                            className={`bg-black p-30 max-sm:p-5 rounded-4xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
                             {item.bg && (
@@ -125,7 +125,7 @@ const PortfolioGrid = () => {
                                     loop
                                     muted
                                     playsInline
-                                    className='relative z-10 h-full object-cover rounded-4xl w-[85%] mx-auto'
+                                    className='relative z-10 w-full h-full object-cover rounded-4xl'
                                 />
                             ) : (
                                 <img
@@ -134,7 +134,7 @@ const PortfolioGrid = () => {
                                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
-                            <h3 className="relative mt-15 -ml-10 max-md:ml-0 text-white text-5xl font-light tracking-tighter">{item.title}</h3>
+                            <h3 className="relative mt-10 -ml-20 max-md:ml-0 text-white text-5xl font-light tracking-tighter">{item.title}</h3>
                         </div>
                     ))}
                 </div>
