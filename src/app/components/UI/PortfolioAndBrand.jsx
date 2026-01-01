@@ -276,7 +276,7 @@ const PortfolioAndBrand = () => {
         <>
             <section ref={containerRef} className="sticky -top-260 text-white py-52 bg-[#0a0f14] z-40">
                 <div ref={placeholderRef} style={{ display: 'none', height: 0 }} />
-                <div className="max-w-[90%] mx-auto px-4" ref={innerRef}>
+                <div id="portfolio" className="max-w-[90%] mx-auto px-4" ref={innerRef}>
                     {/* 3 Column Grid - 3 Rows */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Row 1, Col 1: Section Label + Heading */}

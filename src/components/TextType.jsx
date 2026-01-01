@@ -1,12 +1,29 @@
 'use client';
 
-import { useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
+import { useEffect, useRef, useState, createElement, useMemo, useCallback, isValidElement } from 'react';
 import { gsap } from 'gsap';
 
 const BR_TOKEN_REGEX = /<br\s*\/?\s*>/gi;
 
+function normalizeTextInput(input) {
+  if (input === null || input === undefined || typeof input === 'boolean') return '';
+  if (typeof input === 'string') return input;
+  if (typeof input === 'number') return String(input);
+  if (Array.isArray(input)) return input.map(normalizeTextInput).join('');
+  if (isValidElement(input)) {
+    if (input.type === 'br') return '<br />';
+    if (input.props?.children) return normalizeTextInput(input.props.children);
+    return '';
+  }
+  try {
+    return String(input);
+  } catch (err) {
+    return '';
+  }
+}
+
 function buildTypingSequence(input, reverseMode) {
-  const raw = String(input ?? '');
+  const raw = normalizeTextInput(input);
   const parts = raw.split(BR_TOKEN_REGEX);
   const brCount = (raw.match(BR_TOKEN_REGEX) || []).length;
 

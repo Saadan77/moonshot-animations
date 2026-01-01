@@ -4,6 +4,16 @@ import { ArrowRight, ChevronUp } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+
+    const urls = [
+        { name: 'About', href: '/about-us' },
+        { name: 'Services', href: '#' },
+        { name: 'Portfolio', href: '/#portfolio' },
+        { name: 'Case Studies', href: '#' },
+        { name: 'Industries', href: '/industries' },
+        { name: 'Contact', href: '/contact-us' },
+    ];
+
     return (
         <footer
             className="relative bg-[#020E1A] text-white overflow-hidden z-50"
@@ -21,11 +31,11 @@ export default function Footer() {
                                     style={{ fontFamily: 'Inter, sans-serif' }}>
                                     LOCATION
                                 </p>
-                                <p className="not-italic text-2xl max-sm:text-lg leading-relaxed text-white">
+                                <Link href="https://share.google/nZZos4GW7DTinRQbh" className="not-italic text-2xl max-sm:text-lg leading-relaxed text-white hover:underline">
                                     1200 East Collins Boulevard
                                     <br />
                                     Suite 106 Richardson Texas 75081
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
@@ -68,14 +78,14 @@ export default function Footer() {
                                 LINKS
                             </p>
                             <ul className="space-y-6 text-xl max-sm:text-lg">
-                                {['About', 'Services', 'Project', 'Case Studies', 'Industries', 'Contact'].map(
+                                {urls.map(
                                     (link) => (
-                                        <li key={link}>
+                                        <li key={link.name}>
                                             <Link
-                                                href="#"
+                                                href={link.href}
                                                 className="text-white hover:text-white/80 transition-colors inline-block"
                                             >
-                                                {link}
+                                                {link.name}
                                             </Link>
                                         </li>
                                     )
@@ -242,7 +252,7 @@ export default function Footer() {
                         <div className="col-span-1 max-lg:col-span-2 flex justify-end max-lg:justify-center">
                             <button
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                                className="col-span-1 flex items-center justify-center text-white hover:text-white/50 transition-colors"
+                                className="hover:cursor-pointer col-span-1 flex items-center justify-center text-white hover:text-white/50 transition-colors"
                                 aria-label="Scroll to top"
                             >
                                 <ChevronUp size={36} />

@@ -49,7 +49,7 @@ const PortfolioGrid = () => {
             title: 'Netomi',
             category: 'ui-ux',
             type: 'image',
-            src: '/images/portfolio-page/projects/netomi-2.png',
+            src: '/images/portfolio-page/projects/netomi-3.png',
             bg: '/images/portfolio-page/portfolio-cards-bg/bg-5.png',
             isVideo: false,
         },
@@ -84,12 +84,12 @@ const PortfolioGrid = () => {
                 <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                     {/* Filter Tabs */}
                     <div className="flex flex-col items-end gap-4">
-                        <div className="flex flex-wrap gap-6 justify-end">
+                        <div className="flex flex-wrap gap-6 max-xl:gap-4 justify-center">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.value}
                                     onClick={() => setActiveTab(tab.value)}
-                                    className={`relative z-10 px-12 py-4 rounded-full text-lg transition-all ${activeTab === tab.value
+                                    className={`relative z-10 px-12 max-xl:px-8 py-4 rounded-full text-lg max-1440:text-base max-1366:text-sm max-1280:text-xs transition-all ${activeTab === tab.value
                                         ? 'bg-[#D42290] text-white'
                                         : 'bg-[#041426] text-white hover:bg-[#D42290]'
                                         }`}
@@ -106,7 +106,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className={`bg-black p-30 max-sm:p-5 rounded-4xl relative group h-screen ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                            className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-15 max-1280:p-14 max-sm:p-5 rounded-4xl relative group h-screen max-1600:h-[85vh] max-1440:h-[80vh] max-1366:h-[75vh] max-1280:h-[65vh] max-xl:h-[50vh] ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
                             {item.bg && (
@@ -134,7 +134,7 @@ const PortfolioGrid = () => {
                                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
-                            <h3 className="relative mt-10 -ml-20 max-md:ml-0 text-white text-5xl font-light tracking-tighter">{item.title}</h3>
+                            <h3 className="relative mt-10 max-2xl:mt-5 max-1280:mt-2 -ml-20 max-2xl:-ml-10 text-white text-5xl max-1280:text-4xl max-xl:text-3xl font-light tracking-tighter">{item.title}</h3>
                         </div>
                     ))}
                 </div>

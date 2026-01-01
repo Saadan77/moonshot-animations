@@ -12,8 +12,7 @@ export const AnimatedTestimonials = ({
   containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
   nameClass = "text-[20px] font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
-  // quoteClass = "mb-8 text-4xl max-xl:text-3xl max-xl:text-2xl max-lg:text-xl leading-tight text-white/70"
-  quoteClass = "mb-8 lg:w-[120%] text-[clamp(10px,4vw,37px)] leading-tight text-white/70"
+  quoteClass = "mb-8 1600:w-[120%] max-2xl:w-[95%] max-1366:w-[90%] max-1280:w-[85%] max-lg:w-[80%] text-[clamp(10px,2vw,37px)] leading-tight text-white/70"
 }) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -82,12 +81,12 @@ export const AnimatedTestimonials = ({
                 className="absolute inset-0 origin-bottom"
               >
                 {/* Spinning ring text positioned top-left of the portrait */}
-                <div className="absolute left-0 top-0 z-10 lg:block hidden w-36 h-36">
+                <div className="absolute 2xl:-left-3 max-1366:left-6 max-xl:left-0 -top-8 z-10 lg:block hidden w-36 h-36">
                   <SpinningText
                     duration={12}
                     radius={6}
-                    className="w-full h-full text-white/80"
-                    style={{ fontSize: 22, letterSpacing: '8px', textTransform: 'uppercase' }}
+                    className="w-full h-full text-white/80 text-[clamp(10px,1.5vw,22px)] uppercase"
+                    style={{ letterSpacing: '8px' }}
                     centerSrc="/images/quote.png"
                     centerAlt="quote"
                     centerSize={36}
@@ -99,8 +98,7 @@ export const AnimatedTestimonials = ({
                   src={testimonials[active].src}
                   alt={testimonials[active].name}
                   draggable={false}
-                  className="w-full h-full object-contain object-center overflow-visible 2xl:scale-125"
-                  data-smoother-ignore
+                  className="w-full h-full object-contain object-center overflow-visible scale-150"
                 />
               </motion.div>
             </AnimatePresence>

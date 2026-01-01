@@ -17,6 +17,15 @@ html {
   color: white;
 }
 
+@theme {
+  --breakpoint-1600: 100.063rem;
+  --breakpoint-1440: 90.063rem;
+  --breakpoint-1366: 85.438rem;
+  --breakpoint-1280: 80.063rem;
+  --breakpoint-1280: 80.063rem;
+  --breakpoint-1025: 64.063rem;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

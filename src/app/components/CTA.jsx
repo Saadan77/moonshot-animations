@@ -2,6 +2,7 @@
 
 import LiquidEther from "@/components/LiquidEther";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from 'react';
 
 export default function CTA() {
@@ -144,26 +145,25 @@ export default function CTA() {
 
             {/* Small prompt + button */}
             <div className="-mt-16 max-sm:-mt-13 relative z-10 flex flex-col items-center">
-                <button
-                    type="button"
-                    className="mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
-                    aria-label="Start your project"
-                >
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </button>
+                <Link href="/contact-us">
+                    <button
+                        type="button"
+                        className="hover:cursor-pointer mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
+                    >
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </Link>
             </div>
 
             {/* Bottom large background word/image */}
-            <div data-smoother-ignore>
-                <img
-                    src="/images/cta-unique.png"
-                    alt="Unique typography"
-                    className="w-full h-auto object-contain opacity-40 -mt-36 max-sm:-mt-20"
-                    draggable={false}
-                />
-            </div>
+            <img
+                src="/images/cta-unique.png"
+                alt="Unique typography"
+                className="w-full h-auto object-contain opacity-40 -mt-36 max-sm:-mt-20"
+                draggable={false}
+            />
 
             {/* Bottom large gradient */}
             <div className="-mt-65 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">

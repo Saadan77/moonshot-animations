@@ -41,7 +41,7 @@ export function SlidingLogoMarquee({
   gap = "0.5rem",
   scale = 1,
   direction = "horizontal",
-  autoPlay = true,
+  autoPlay = false,
   backgroundColor,
   showGridBackground = false,
   className,
@@ -98,6 +98,12 @@ export function SlidingLogoMarquee({
           min-height: 150px;
           min-width: 300px;
         }
+
+        // @media (min-width: 1600px) {
+        //   .sliding-marquee-resizable {
+        //     height: 250px;
+        //   }
+        // }
 
         @media (min-width: 600px) {
           .sliding-marquee-resizable {
@@ -160,7 +166,7 @@ export function SlidingLogoMarquee({
           margin: 0;
           list-style-type: none;
           height: 100%;
-          width: fit-content;
+          width: max-content;
           pointer-events: auto;
         }
 

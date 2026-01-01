@@ -228,49 +228,49 @@ export default function AboutUsPage() {
     {
       id: "1",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-1.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-1.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "2",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-2.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-2.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "3",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-3.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-3.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "4",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-4.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-4.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "5",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-5.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-5.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "6",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-6.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-6.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "7",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-7.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-7.png" width={220} height={220}  alt="Logo" />
       ),
     },
     {
       id: "8",
       content: (
-        <img src="/images/about-us-page/slider-logos/logo-8.png" alt="Logo" className="w-full h-auto" />
+        <Image src="/images/about-us-page/slider-logos/logo-8.png" width={220} height={220}  alt="Logo" />
       ),
     },
   ];
@@ -390,27 +390,27 @@ export default function AboutUsPage() {
                 <p className="font-poppins font-medium text-lg">About Us</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,12vw,74px)] tracking-tight leading-[81px] text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Purpose & Vision
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 md:text-md lg:text-xl">
+              <p className="font-light text-white/70 text-[clamp(14px,1vw,21px)]">
                 From our values to our craft, this is how we shape stories that
                 define who we are with care
               </p>
             </div>
 
-            <div className="absolute top-40 -right-50 z-10">
+            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:top-60 max-1280:-right-110 z-10">
               <img
                 src="/images/about-us-bg.png"
-                className="w-full max-md:w-3/4 h-auto"
+                className="w-full max-1440:w-3/4 max-1280:w-3/5 h-auto"
                 alt="Astronaut"
               />
             </div>
@@ -432,7 +432,7 @@ export default function AboutUsPage() {
         <div className="bg-top overflow-hidden" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
           {/* Who We Are Section */}
           <div>
-            <div className="relative z-10 max-w-[90%] mx-auto px-6 lg:px-8 py-10 md:py-48">
+            <div className="relative z-10 max-w-[90%] mx-auto px-0 xl:px-8 py-10 md:py-48">
               <div className="space-y-10">
                 <div className="flex items-center gap-3 text-xl text-[#808080]">
                   <span className="text-nowrap font-poppins font-normal">
@@ -448,9 +448,9 @@ export default function AboutUsPage() {
                 </div>
 
                 <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
-                  <div className="lg:mt-10 max-w-[40%] min-w-[40%] max-lg:min-w-full text-[#808080]">
+                  <div className="text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
                     <TextType
-                      text="With expertise in areas such as web design, digital marketing, social media management, and content creation, digital agencies play a crucial role."
+                      text="With expertise in areas such as web design, digital marketing, social media <br /> management, and content creation, digital agencies play a crucial role."
                       typingSpeed={15}
                       pauseDuration={1500}
                       showCursor={true}
@@ -462,7 +462,7 @@ export default function AboutUsPage() {
 
                   <div className="flex gap-16 max-lg:gap-8">
                     <div>
-                      <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
+                      <p className="text-[clamp(50px,6vw,110px)]">
                         <CountingNumber
                           number={400}
                           inView={true}
@@ -475,7 +475,7 @@ export default function AboutUsPage() {
                       </span>
                     </div>
                     <div>
-                      <p className="text-[110px] max-2xl:text-[80px] max-sm:text-[60px]">
+                      <p className="text-[clamp(50px,6vw,110px)]">
                         {">"}
                         <CountingNumber
                           number={95}
@@ -512,7 +512,7 @@ export default function AboutUsPage() {
                   05 - Technologies
                 </p>
                 <h2
-                  className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
+                  className="min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -526,7 +526,7 @@ export default function AboutUsPage() {
                 </h2>
 
                 <h2
-                  className="min-h-[150px] lg:min-h-[50px] text-white font-normal text-center text-6xl max-xl:text-4xl max-sm:text-2xl leading-tight uppercase"
+                  className="min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -549,7 +549,7 @@ export default function AboutUsPage() {
             <div className="relative">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div
-                  className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
+                  className="w-[95%] h-37.5 rounded-t-full blur-[80px] in-out"
                   style={{
                     background:
                       "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
@@ -572,7 +572,7 @@ export default function AboutUsPage() {
                 alt="Elevate Icon"
                 width={100}
                 height={100}
-                className="w-[120px] relative z-10"
+                className="w-30 relative z-10"
               />
             </div>
           </div>
@@ -581,14 +581,14 @@ export default function AboutUsPage() {
               <p className="text-[#808080] font-poppins font-normal text-lg">04 - Approach</p>
 
               <h2
-                className="max-w-[40%] text-[60px] max-md:text-[40px] max-sm:text-[30px] max-md:max-w-full uppercase font-normal leading-[1.2]"
+                className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
                 style={{ fontFamily: "var(--font-sora), sans-serif" }}
               >
-                Method of making better result
+                Method of making <br /> better result
               </h2>
               <div />
             </div>
-            <div className="lg:ml-[33%]"><HorizontalScrollCarousel /></div>
+            <div className="ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]"><HorizontalScrollCarousel /></div>
           </div>
         </div>
 
@@ -635,7 +635,7 @@ export default function AboutUsPage() {
               05 — What Defines Us
             </span>
 
-            <p className="text-[clamp(30px,12vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
+            <p className="text-[clamp(50px,4vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
               We deliver creative <br /> ideas to a crowded world.
             </p>
 
@@ -648,7 +648,7 @@ export default function AboutUsPage() {
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
-                className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
+                className="w-[95%] h-37.5 rounded-t-full blur-[80px] in-out"
                 style={{
                   background:
                     "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
@@ -666,7 +666,7 @@ export default function AboutUsPage() {
               alt="Elevate Icon"
               width={100}
               height={100}
-              className="w-[100px] relative z-10"
+              className="w-25 relative z-10"
             />
           </div>
 

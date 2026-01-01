@@ -44,7 +44,7 @@ export default function Portfolio() {
             id: 5,
             title: "Real Estate",
             thumbnail: "/images/industries/image-5.png",
-            className: "md:col-span-3",
+            className: "md:col-span-3 h-[320px] md:h-[650px]",
             content: null,
         },
         {
@@ -79,14 +79,14 @@ export default function Portfolio() {
 
     const bottomCards = [
         {
-            id: 1,
+            id: 10,
             title: "Retail and E-Commerce",
             thumbnail: "/images/industries/image-10.png",
             className: "md:col-span-2 h-[320px] md:h-[650px]",
             content: null,
         },
         {
-            id: 2,
+            id: 11,
             title: "Artificial Intelligence",
             thumbnail: "/images/industries/image-11.png",
             className: "md:col-span-2 h-[320px] md:h-[650px]",
@@ -174,13 +174,13 @@ export default function Portfolio() {
 
                 <div className="-mt-10 py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
                     <div className="industries-grid" style={{
-                        ['--img-opacity']: '0.6'
+                        ['--img-opacity']: '0.8'
                     }}>
                         <style dangerouslySetInnerHTML={{
                             __html: `
                                 .industries-grid img,
                                 .industries-grid video {
-                                    opacity: 0.6 !important;
+                                    opacity: 0.8 !important;
                                 }
                             `
                         }} />

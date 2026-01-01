@@ -503,7 +503,7 @@ export const StaggeredMenu = ({
             </button>
 
             <Link
-              className="font-sora hidden lg:flex text-xl max-lg:text-sm text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
+              className="font-sora hidden lg:flex text-[20px] max-1280:text-[17px] text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
               href="tel:+19723315058"
             >
               +1-972-331-5058
@@ -511,7 +511,7 @@ export const StaggeredMenu = ({
           </div>
 
           <Link
-            className="relative items-center ml-6"
+            className="relative items-center mx-6"
             aria-label="Logo"
             href="/"
           >
@@ -530,7 +530,7 @@ export const StaggeredMenu = ({
               href="#"
               className="group inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
-              <span className="relative top-[0.5px] font-sora text-[20px] max-lg:text-[15px] whitespace-nowrap">Our Works</span>
+              <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Our Works</span>
               <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
                 <ChevronRight className="w-6 h-6 group-hover:text-black" />
               </span>
@@ -540,7 +540,7 @@ export const StaggeredMenu = ({
               href="#"
               className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
             >
-              <span className="relative top-[0.5px] font-sora text-[20px] max-lg:text-[15px] whitespace-nowrap">Let's Talk</span>
+              <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Let's Talk</span>
               <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
                 <ArrowRight className="w-6 h-6 group-hover:text-black" />
               </span>
