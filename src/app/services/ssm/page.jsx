@@ -298,19 +298,19 @@ export default function SSM() {
                 <style
                   dangerouslySetInnerHTML={{
                     __html: `
-                                #ssm #ssm-layout > div.grid {
-                                    gap: 50px !important;
-                                    padding: 5rem !important;
-                                }
-                                @media (max-width: 1024px) {
-                                    #ssm #ssm-layout > div.grid {
-                                        padding: 25px !important;
-                                    }
-                                }
-                                #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                    display: none !important;
-                                }
-                            `,
+                        #ssm #ssm-layout > div.grid {
+                            gap: 50px !important;
+                            padding: 5rem !important;
+                        }
+                        @media (max-width: 1024px) {
+                            #ssm #ssm-layout > div.grid {
+                                padding: 25px !important;
+                            }
+                        }
+                        #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                            display: none !important;
+                        }
+                    `,
                   }}
                 />
               </div>
