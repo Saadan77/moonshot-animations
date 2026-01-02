@@ -156,7 +156,7 @@ export default function MobileApplications() {
                 </p>
               </div>
 
-              <h1 className="text-[clamp(30px,3.55vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+              <h1 className="text-[clamp(30px,3.55vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Crafting <br /> Apps That Power Your{" "}
                 </AuroraText>
@@ -276,7 +276,6 @@ export default function MobileApplications() {
               <img
                 src="/images/services/mobile-applications/section-4.png"
                 className="h-full w-full object-cover bg-center"
-                data-smoother-ignore
               />
             </section>
           </div>

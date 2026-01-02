@@ -74,47 +74,46 @@ export default function WebDevelopment() {
     ];
 
     const webDevInfo = [
-        {
-            id: 1,
-            title: "Discovery <br /> & Requirements",
-            description:
-                "We don’t build on guesses. Our websites start with clear requirements, goals, and user journeys so the development is aligned with real business needs.",
-        },
-        {
-            id: 2,
-            title: "Architecture, <br /> Wireframes & Flows",
-            description:
-                "From simple sites to complex web apps, we plan the structure, flows, and layouts so every page has a clear purpose and leads users to action.",
-        },
-        {
-            id: 3,
-            title: "Pixel-perfect <br /> Frontend Development",
-            description:
-                "We turn designs into responsive, fast, and clean code – using modern web standards to make sure your website looks and works great on every device.",
-        },
-        {
-            id: 4,
-            title: "Scalable & <br /> Data-Driven Web Builds",
-            description:
-                "We use best practices, testing, and analytics to improve speed, stability, and conversions, so your website keeps getting better with real data over time.",
-        }
-    ];
+    {
+      id: 1,
+      title: "Discovery <br /> & Requirements",
+      description:
+        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+    },
+    {
+      id: 2,
+      title: "Architecture, <br /> Wireframes & Flows",
+      description:
+        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+    },
+    {
+      id: 3,
+      title: "Pixel-perfect <br /> Frontend Development",
+      description:
+        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+    },
+    {
+      id: 4,
+      title: "Scalable & <br /> Data-Driven Web Builds",
+      description:
+        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+    },
+  ];
 
-    const WebDevCard = ({ card }) => {
-        return (
-            <div
-                key={card.id}
-                className="space-y-4"
-            >
-                <p className="px-4 text-[20px] uppercase text-[#ecedcf]" dangerouslySetInnerHTML={{ __html: card.title }}>
-                </p>
-                <p
-                    className="px-4 text-[16px] text-[#ecedcf]"
-                    dangerouslySetInnerHTML={{ __html: card.description }}
-                />
-            </div>
-        );
-    };
+  const WebDevCard = ({ card }) => {
+    return (
+      <div key={card.id} className="space-y-4">
+        <p
+          className="text-[clamp(16px,1.3vw,24px)] uppercase text-[#ecedcf]"
+          dangerouslySetInnerHTML={{ __html: card.title }}
+        ></p>
+        <p
+          className="text-[clamp(10px,0.9vw,16px)] font-light text-[#ecedcf]"
+          dangerouslySetInnerHTML={{ __html: card.description }}
+        />
+      </div>
+    );
+  };
 
     return (
         <>
@@ -168,18 +167,18 @@ export default function WebDevelopment() {
                                 <p className="font-poppins font-medium text-lg">Website Development</p>
                             </div>
 
-                            <h1 className="text-[clamp(30px,12vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
+                            <h1 className="text-[clamp(30px,12vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Building <br /> Sites That Shape Your{" "}
                                 </AuroraText>
-                                <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                                     <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                         Brand & Profile
                                     </AuroraText>
                                 </span>
                             </h1>
 
-                            <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
+                            <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,19px)]">
                                 From first ideas to final code, we design and build websites that show who you are online
                             </p>
                         </div>
@@ -312,17 +311,16 @@ export default function WebDevelopment() {
                             `
                             }} />
 
-                            <div
-                                className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 flex-wrap max-w-[90%] mx-auto gap-12 h-full items-center"
-                            >
-                                {webDevInfo.map((card) => (
-                                    <WebDevCard key={card.id} card={card} />
-                                ))}
-                            </div>
+                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
+                {webDevInfo.map((card) => (
+                  <WebDevCard key={card.id} card={card} />
+                ))}
+              </div>
 
                             <div className="max-w-[90%] mx-auto my-20 min-w-[90%] text-white/30 w-px h-px bg-white/30"></div>
 
-                            <h2 className="max-w-[90%] mx-auto text-4xl lg:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+                            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+                
                                 <TextType
                                     text="200+"
                                     typingSpeed={75}
@@ -342,9 +340,9 @@ export default function WebDevelopment() {
                                 />
                             </h2>
 
-                            <div className="-mt-20 max-xl:mt-10">
-                                <SuccessStories />
-                            </div>
+                            <div className="lg:-mt-16 xl:-mt-20">
+                <SuccessStories />
+              </div>
                         </section>
                     </div>
                 </div>
