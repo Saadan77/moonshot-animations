@@ -31,7 +31,7 @@ export default function Portfolio() {
 
                 <Navbar />
 
-                <div className="min-h-screen flex items-center relative w-full overflow-visible bg-black">
+                <div className="flex items-center relative w-full overflow-visible bg-black">
                     {/* Dither Background */}
                     {/* <div className="absolute inset-0 w-full h-[200vh] opacity-20">
                         <Dither
@@ -57,7 +57,7 @@ export default function Portfolio() {
                     <DecorativeLines />
 
                     {/* Hero Section */}
-                    <div>
+                    <div className="py-[18%] max-xl:py-[15%]">
                         <div className="relative z-20 ml-20 max-lg:ml-5">
                             <div className="mb-16 flex items-center gap-3 text-sm text-white">
                                 <img src="/images/about-us/icon.png" />

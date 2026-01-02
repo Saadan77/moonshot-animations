@@ -240,13 +240,18 @@ export default function Branding() {
                     <div className="w-2 bg-white mt-5 mb-10">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to
-                        give you a good website development services.
+                        Tech With Moonshot makes use of collaborative efforts to{" "}
+                        <br />
+                        give you a good website development services. <br />
                         Additionally, our professional website developers give
-                        you exclusive insights how to make user friendly,
-                        interactive, secure and speedy websites. Moreover, our
-                        front-end developers and back-end developers know how to
-                        service your web development request in agile manner.
+                        you <br />
+                        exclusive insights how to make user friendly,
+                        interactive, <br />
+                        secure and speedy websites. Moreover, our front-end{" "}
+                        <br />
+                        developers and back-end developers know how to service{" "}
+                        <br />
+                        your web development request in agile manner.
                       </ScrollReveal>
                     </div>
                   </div>
@@ -330,10 +335,9 @@ export default function Branding() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] mx-auto my-20 min-w-[90%] text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                
                 <TextType
                   text="200+"
                   typingSpeed={75}

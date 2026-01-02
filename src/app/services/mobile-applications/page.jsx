@@ -339,7 +339,7 @@ export default function MobileApplications() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] mx-auto my-20 min-w-[90%] text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-3xl md:text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType
