@@ -56,7 +56,7 @@ const ImageComponent = ({ card }) => {
         );
       })()}
       <div
-        className="text-3xl absolute bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
+        className="text-[clamp(20px,2vw,30px)] absolute bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
         style={{
           background: "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
         }}

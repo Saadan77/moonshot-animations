@@ -401,16 +401,16 @@ export default function AboutUsPage() {
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 text-[clamp(14px,1vw,21px)]">
+            <p className="font-light text-white/70 text-[clamp(10px,1.05vw,20px)]">
                 From our values to our craft, this is how we shape stories that
                 define who we are with care
               </p>
             </div>
 
-            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:top-60 max-1280:-right-110 z-10">
+            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:top-60 max-1280:-right-110 max-xl:top-70 max-xl:-right-160 z-10">
               <img
                 src="/images/about-us-bg.png"
-                className="w-full max-1440:w-3/4 max-1280:w-3/5 h-auto"
+                className="w-full max-1440:w-3/4 max-1280:w-3/5 max-xl:w-1/2 h-auto"
                 alt="Astronaut"
               />
             </div>

@@ -64,7 +64,7 @@ export default function Portfolio() {
                                 <p className="font-medium font-poppins text-lg">Portfolio</p>
                             </div>
 
-                            <h1 className="font-normal font-sora uppercase mb-4 text-[66px] max-1600:text-6xl max-1440:text-5xl max-1336:text-4xl tracking-tight leading-20.25 max-2xl:leading-15 text-white">
+                            <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(40px,4vw,66px)] tracking-tight leading-20.25 max-2xl:leading-15 text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Designing <br /> Dreams Showcasing Our {" "}
                                 </AuroraText>
@@ -75,12 +75,12 @@ export default function Portfolio() {
                                 </span>
                             </h1>
 
-                            <p className="font-light text-white/70 text-[clamp(14px,0.9vw,21px)]">
+                            <p className="font-light text-white/70 text-[clamp(10px,1.05vw,20px)]">
                                 From conceptual sketches to digital experiences, here’s how we turn imagination into design
                             </p>
                         </div>
 
-                        <div className="absolute top-70 -right-520 max-1440:-right-540 max-1280:-right-570 z-10">
+                        <div className="absolute top-70 -right-500 max-1440:-right-540 max-1280:-right-570 z-10">
                             <img
                                 src="/images/portfolio-page/portfolio-hero-image.png"
                                 className="w-2/5 max-1440:w-3/8 max-1280:w-3/9 h-auto rotate-[7.76deg]"

@@ -86,24 +86,24 @@ export default function ContactUs() {
                                 <p className="font-poppins font-medium text-lg">Contact</p>
                             </div>
 
-                            <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
+                            <h1 className="text-[clamp(26px,3.4vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-1280:leading-12 text-white">
                                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                     Let’s Start a <br /> Conversation Connect{" "}
                                 </AuroraText>
-                                <span className="text-[clamp(40px,12vw,86px)] font-thin text-end items-end max-2xl:text-start max-2xl:items-start block">
+                                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end block">
                                     <AuroraText colors={["#D42290", "#2DAEEF"]}>
                                         With Our Team
                                     </AuroraText>
                                 </span>
                             </h1>
 
-                            <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
+                            <p className="font-sora font-medium text-white/70 text-[clamp(10px,1.05vw,20px)]">
                                 From quick questions to big ideas, here’s how we turn your message into real progress
                             </p>
                         </div>
 
-                        <div className="absolute top-10 -right-50 z-10">
-                            <img src="/images/contact-us-hero.png" className="w-2/3" alt="City" />
+                        <div className="absolute top-20 -right-50 max-1600:-right-60 max-1440:-right-80 max-1440:top-35 max-1366:-right-90 max-1280:-right-100 max-xl:top-30 max-xl:-right-130 z-10">
+                            <img src="/images/contact-us-hero.png" className="w-3/4 max-1440:w-3/5 max-xl:w-3/6" alt="City" />
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ export default function ContactUs() {
                         <div className="col-span-3">
                             <p className="text-[20px] text-[#989898] mb-4">02 — Get in Touch</p>
 
-                            <h2 style={{ fontFamily: 'Inter, sans-serif' }} className="leading-tight text-white mb-6 block text-[clamp(30px,12vw,82px)]">
+                            <h2 style={{ fontFamily: 'Inter, sans-serif' }} className="leading-tight text-white mb-6 block text-[clamp(30px,3.8vw,90px)]">
                                 <span className="flex items-center gap-x-4">
                                     Have a <RotatingText
                                         texts={['Project?', 'Idea?', 'Vision?', 'Goal?', 'Dream?']}
@@ -135,7 +135,7 @@ export default function ContactUs() {
                                 </span>
                             </h2>
 
-                            <div className="text-[#989898] text-[20px] font-poppins leading-loose tracking-widest mb-8">
+                            <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-loose tracking-widest mb-8">
                                 <TextType text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
                                     typingSpeed={15}
                                     pauseDuration={1500}
@@ -145,7 +145,7 @@ export default function ContactUs() {
 
                             <div className="border-t border-gray-700 my-12" />
 
-                            <ul className="space-y-8 text-white text-2xl max-lg:text-xl max-sm:text-lg">
+                            <ul className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
                                 <li className="flex items-center gap-4">
                                     <PhoneCall className="w-10 h-10 hover:w-12 hover:h-12 max-lg:h-8 md:h-8 transition-all transition-duration-200 text-white fill-amber-50" />
                                     <span>+1-972-331-5058</span>
@@ -174,20 +174,27 @@ export default function ContactUs() {
                                 <textarea placeholder="Tell us more about your product and goals" rows={6} className="w-full rounded-[20px] mt-4 p-4 text-white text-sm bg-[#000911] border border-[#18354D] outline-none" />
 
                                 <p className="text-white my-4">How can we help you?</p>
-                                <div className="flex flex-wrap gap-5">
-                                    {tags.map((t) => {
-                                        const isSelected = selectedTag === t;
-                                        return (
-                                            <button
-                                                key={t}
-                                                type="button"
-                                                onClick={() => toggleTag(t)}
-                                                className={`py-4 px-6 rounded-full bg-[#000911] text-[13px] transition-colors duration-200 border ${isSelected ? 'border-white/80 text-white/80' : 'border-[#18354D] text-[#999999]'} hover:border-white/80 hover:text-white/80 cursor-pointer`}
-                                            >
-                                                {t}
-                                            </button>
-                                        );
-                                    })}
+                                <div className="space-y-5">
+                                    {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map((row, rowIdx) => (
+                                        <div
+                                            key={`tag-row-${rowIdx}`}
+                                            className="w-full flex flex-wrap lg:flex-nowrap lg:justify-between"
+                                        >
+                                            {row.map((t) => {
+                                                const isSelected = selectedTag === t;
+                                                return (
+                                                    <button
+                                                        key={t}
+                                                        type="button"
+                                                        onClick={() => toggleTag(t)}
+                                                        className={`py-4 px-8 rounded-full bg-[#000911] text-[12px] leading-[-2%] transition-colors duration-200 border ${isSelected ? 'border-white/80 text-white/80' : 'border-[#18354D] text-[#999999]'} hover:border-white/80 hover:text-white/80 cursor-pointer`}
+                                                    >
+                                                        {t}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    ))}
                                 </div>
 
                                 <div className="flex justify-between items-center mt-8">

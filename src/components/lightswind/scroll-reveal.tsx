@@ -1,8 +1,38 @@
 "use client";
 
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, isValidElement } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { cn } from "@/lib/utils";
+
+const BR_TOKEN_REGEX = /<br\s*\/?\s*>/gi;
+
+type TextToken =
+  | { type: "text"; value: string }
+  | { type: "br" };
+
+function normalizeChildrenToTokens(input: React.ReactNode): TextToken[] {
+  if (input === null || input === undefined || typeof input === "boolean") return [];
+  if (typeof input === "string") {
+    const parts = input.split(BR_TOKEN_REGEX);
+    const brCount = (input.match(BR_TOKEN_REGEX) || []).length;
+
+    const tokens: TextToken[] = [];
+    for (let i = 0; i < parts.length; i += 1) {
+      if (parts[i]) tokens.push({ type: "text", value: parts[i] });
+      if (i < brCount) tokens.push({ type: "br" });
+    }
+    return tokens;
+  }
+  if (typeof input === "number") return [{ type: "text", value: String(input) }];
+  if (Array.isArray(input)) return input.flatMap(normalizeChildrenToTokens);
+  if (isValidElement(input)) {
+    if (input.type === "br") return [{ type: "br" }];
+
+    const element = input as React.ReactElement<{ children?: React.ReactNode }>;
+    return normalizeChildrenToTokens(element.props?.children);
+  }
+  return [{ type: "text", value: String(input) }];
+}
 
 export interface ScrollRevealProps {
   children: React.ReactNode;
@@ -21,7 +51,7 @@ export interface ScrollRevealProps {
 }
 
 const sizeClasses = {
-  sm: "text-lg md:text-xl",
+  sm: "text-[23px] max-1600:text-[20px] max-1440:text-[18px] max-1366:text-[16px] max-1280:text-[14px] max-xl:text-[12px]",
   md: "text-xl md:text-2xl lg:text-4xl",
   lg: "text-5xl max-1600:text-[40px] max-2xl:text-[34px] max-1280:text-[30px] max-xl:text-[25px]",
   xl: "text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
@@ -85,17 +115,41 @@ export function ScrollReveal({
   });
 
   const splitText = useMemo(() => {
-    const text = typeof children === "string" ? children : "";
-    return text.split(/(\s+)/).map((part, index) => ({
-      value: part,
-      isSpace: part.match(/^\s+$/) && part.length > 0,
-      originalIndex: index,
-    })).filter(item => item.value.length > 0);
+    const tokens = normalizeChildrenToTokens(children);
+
+    type SplitItem =
+      | { kind: "word"; value: string; key: number }
+      | { kind: "space"; value: string; key: number }
+      | { kind: "br"; key: number };
+
+    const items: SplitItem[] = [];
+    let key = 0;
+
+    for (const token of tokens) {
+      if (token.type === "br") {
+        items.push({ kind: "br", key: key++ });
+        continue;
+      }
+
+      const parts = token.value.split(/(\s+)/);
+      for (const part of parts) {
+        if (!part) continue;
+        if (/^\s+$/.test(part)) {
+          items.push({ kind: "space", value: part, key: key++ });
+        } else {
+          items.push({ kind: "word", value: part, key: key++ });
+        }
+      }
+    }
+
+    return items;
   }, [children]);
 
-  const words = splitText.filter(item => !item.isSpace);
-  const totalWords = words.length;
-  
+  const totalWords = Math.max(
+    1,
+    splitText.filter((item) => item.kind === "word").length
+  );
+
   let wordIndex = 0;
 
   return (
@@ -105,24 +159,28 @@ export function ScrollReveal({
     >
       <p
         className={cn(
-          "leading-relaxed space-y-4",
+          "space-y-2",
           sizeClasses[size],
           alignClasses[align],
           textClassName
         )}
       >
         {splitText.map((item) => {
-          if (item.isSpace) {
-            return <span key={`space-${item.originalIndex}`}>{item.value}</span>;
+          if (item.kind === "space") {
+            return <span key={`space-${item.key}`}>{item.value}</span>;
+          }
+
+          if (item.kind === "br") {
+            return <br key={`br-${item.key}`} />;
           }
 
           const start = wordIndex / totalWords;
-          const end = start + (1 / totalWords);
+          const end = start + 1 / totalWords;
           wordIndex++;
 
           return (
             <Word
-              key={`word-${item.originalIndex}`}
+              key={`word-${item.key}`}
               range={[start, end]}
               progress={scrollYProgress}
               baseOpacity={baseOpacity}

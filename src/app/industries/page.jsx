@@ -44,7 +44,7 @@ export default function Portfolio() {
             id: 5,
             title: "Real Estate",
             thumbnail: "/images/industries/image-5.png",
-            className: "md:col-span-3 h-[320px] md:h-[650px]",
+            className: "md:col-span-3 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
             content: null,
         },
         {
@@ -58,14 +58,14 @@ export default function Portfolio() {
             id: 7,
             title: "Utilities",
             thumbnail: "/images/industries/image-7.png",
-            className: "md:col-span-1 h-[320px] md:h-[650px]",
+            className: "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
             content: null,
         },
         {
             id: 8,
             title: "Government",
             thumbnail: "/images/industries/image-8.png",
-            className: "md:col-span-1 h-[320px] md:h-[650px]",
+            className: "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
             content: null,
         },
         {
@@ -82,14 +82,14 @@ export default function Portfolio() {
             id: 10,
             title: "Retail and E-Commerce",
             thumbnail: "/images/industries/image-10.png",
-            className: "md:col-span-2 h-[320px] md:h-[650px]",
+            className: "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
             content: null,
         },
         {
             id: 11,
             title: "Artificial Intelligence",
             thumbnail: "/images/industries/image-11.png",
-            className: "md:col-span-2 h-[320px] md:h-[650px]",
+            className: "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
             content: null,
         },
     ];
@@ -146,7 +146,7 @@ export default function Portfolio() {
                                 <p className="font-poppins font-medium text-lg">Industries</p>
                             </div>
 
-                            <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-[81px] text-white">
+                            <h1 className="text-[clamp(30px,12vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 text-white">
                                 <div className="text-[68px] max-xl:text-[50px] max-sm:text-[30px]">
                                     <AuroraText colors={["#ffffff", "#d1bd73"]}>
                                         Innovating Industries
@@ -161,7 +161,7 @@ export default function Portfolio() {
                                 </span>
                             </h1>
 
-                            <p className="font-sora font-medium text-white/70 md:text-md lg:text-xl max-lg:px-1">
+                            <p className="font-sora font-medium text-white/70 text-[clamp(10px,1.05vw,20px)]">
                                 From conceptual sketches to digital experiences, here's how we turn imagination into design
                             </p>
                         </div>

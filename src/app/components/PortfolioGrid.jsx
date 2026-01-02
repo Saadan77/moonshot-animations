@@ -106,7 +106,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-15 max-1280:p-14 max-sm:p-5 rounded-4xl relative group h-screen max-1600:h-[85vh] max-1440:h-[80vh] max-1366:h-[75vh] max-1280:h-[65vh] max-xl:h-[50vh] ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                            className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-15 max-1280:p-14 max-sm:p-5 rounded-4xl relative group h-[95vh] max-1600:h-[82vh] max-1440:h-[75vh] max-1366:h-[70vh] max-1280:h-[65vh] max-xl:h-[50vh] ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
                             {item.bg && (
@@ -134,7 +134,7 @@ const PortfolioGrid = () => {
                                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
-                            <h3 className="relative mt-10 max-2xl:mt-5 max-1280:mt-2 -ml-20 max-2xl:-ml-10 text-white text-5xl max-1280:text-4xl max-xl:text-3xl font-light tracking-tighter">{item.title}</h3>
+                            <h3 className="relative mt-5 max-2xl:mt-3 max-1280:mt-2 -ml-20 max-2xl:-ml-10 text-white text-[clamp(30px,3vw,48px)] font-light tracking-tighter">{item.title}</h3>
                         </div>
                     ))}
                 </div>
