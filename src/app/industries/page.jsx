@@ -143,7 +143,7 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="pt-[18%] pb-[21%] max-xl:py-[15%]">
+          <div className="pt-[18%] pb-[22%]">
             <div className="relative z-10 ml-20 max-sm:ml-10">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
@@ -169,7 +169,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="absolute top-40 -right-50 max-1600:-right-70 max-1440:top-50 max-1440:-right-90 max-1280:-right-100 max-xl:top-60 max-xl:-right-130 z-10">
+            <div className="absolute top-40 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-40 max-xl:-right-130 z-10">
               <img
                 src="/images/industries/city-bg.png"
                 className="w-5/6 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[55%] h-auto"
@@ -179,7 +179,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="-mt-10 py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
+        <div className="py-10 lg:py-20 2xl:py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
           <div
             className="industries-grid"
             style={{

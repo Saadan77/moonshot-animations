@@ -383,7 +383,7 @@ export default function AboutUsPage() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%] max-xl:py-[15%]">
+          <div className="pt-[18%] pb-[20%]">
             <div className="relative z-10 ml-20 max-lg:ml-5">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
@@ -407,7 +407,7 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:top-60 max-1280:-right-110 max-xl:top-70 max-xl:-right-160 z-10">
+            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:-right-110 max-xl:-right-160 z-10">
               <img
                 src="/images/about-us-bg.png"
                 className="w-full max-1440:w-3/4 max-1280:w-3/5 max-xl:w-1/2 h-auto"
@@ -417,7 +417,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        <div className="relative p-20 max-lg:p-1 z-10 justify-center flex">
+        <div className="relative py-10 px-20 max-lg:p-1 z-10 justify-center flex">
           <video
             autoPlay
             loop
