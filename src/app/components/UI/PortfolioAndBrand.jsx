@@ -315,7 +315,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Branding</p>}
                                 number={<p>01.</p>}
                             >
-                                <div className="text-sm lg:text-md 2xl:text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
+                                <div className="text-sm lg:text-md 2xl:text-xs lg:text-sm 2xl:text-md font-poppins font-light text-white/80">
                                     <p>#BuildYourBrand</p>
                                     <p>#brandwithpurpose</p>
                                 </div>
@@ -339,7 +339,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>UI/UX</p>}
                                 number={<p>02.</p>}
                             >
-                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-light text-white/80">
                                     <p>#Webdesign</p>
                                     <p>#Creativewebsolutions</p>
                                 </div>
@@ -355,7 +355,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Mobile Applications</p>}
                                 number={<p>03.</p>}
                             >
-                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-light text-white/80">
                                     <p>#Appdesign</p>
                                     <p>#Mobileapps</p>
                                 </div>
@@ -370,7 +370,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Animations</p>}
                                 number={<p>04.</p>}
                             >
-                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-light text-white/80">
                                     <p>#Creativemotion</p>
                                     <p>#Animateddesign</p>
                                 </div>
@@ -389,7 +389,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Logo Design</p>}
                                 number={<p>05.</p>}
                             >
-                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-light text-white/80">
                                     <p>#Logodesign</p>
                                     <p>#Brandidentity</p>
                                 </div>
