@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,7 @@ export const Tabs = ({
   containerClassName,
   activeTabClassName,
   tabClassName,
-  contentClassName
+  contentClassName,
 }) => {
   const [active, setActive] = useState(propTabs[0]);
   const [tabs, setTabs] = useState(propTabs);
@@ -19,12 +19,12 @@ export const Tabs = ({
     newTabs.unshift(selectedTab[0]);
     setTabs(newTabs);
     setActive(newTabs[0]);
-    
+
     // Scroll to the portfolio item if anchor exists
     if (selectedTab[0].anchor) {
       const element = document.getElementById(selectedTab[0].anchor);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
   };
@@ -35,10 +35,11 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row flex-wrap items-center justify-end perspective-[1000px] relative sm:overflow-visible no-visible-scrollbar gap-2",
+          "flex flex-row flex-wrap lg:flex-nowrap items-center justify-end perspective-[1000px] relative sm:overflow-visible no-visible-scrollbar gap-2",
           containerClassName
-        )}>
-        {propTabs.map((tab, idx) => (
+        )}
+      >
+        {propTabs.slice(0, 3).map((tab, idx) => (
           <button
             key={tab.title}
             onClick={() => {
@@ -46,10 +47,11 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative bg-black px-8 py-2 rounded-full border border-white/30 hover:border-white transition-colors duration-300", tabClassName)}
-            style={{
-              transformStyle: "preserve-3d",
-            }}>
+            className={cn(
+              "relative bg-black px-4.75 xl:px-8 py-2 rounded-full border border-white/30 hover:border-white transition-colors duration-300",
+              tabClassName
+            )}
+          >
             {active.value === tab.value && (
               <motion.div
                 layoutId="clickedbutton"
@@ -57,10 +59,51 @@ export const Tabs = ({
                 className={cn(
                   "absolute inset-0 block bg-black border border-white shadow-lg rounded-full",
                   activeTabClassName
-                )} />
+                )}
+              />
             )}
 
-            <span className="relative text-white text-xl whitespace-nowrap">
+            <span className="relative text-white lg:text-md 2xl:text-xl whitespace-nowrap">
+              {tab.title}
+            </span>
+          </button>
+        ))}
+      </div>
+      <div className="py-1.5"></div>
+      <div
+        className={cn(
+          "flex flex-row flex-wrap lg:flex-nowrap items-center justify-end perspective-[1000px] relative sm:overflow-visible no-visible-scrollbar gap-2",
+          containerClassName
+        )}
+      >
+        {propTabs.slice(3).map((tab, idx) => (
+          <button
+            key={tab.title}
+            onClick={() => {
+              moveSelectedTabToTop(idx);
+            }}
+            onMouseEnter={() => setHovering(true)}
+            onMouseLeave={() => setHovering(false)}
+            className={cn(
+              "relative bg-black px-4 xl:px-8 py-2 rounded-full border border-white/30 hover:border-white transition-colors duration-300",
+              tabClassName
+            )}
+            style={{
+              transformStyle: "preserve-3d",
+            }}
+          >
+            {active.value === tab.value && (
+              <motion.div
+                layoutId="clickedbutton"
+                transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+                className={cn(
+                  "absolute inset-0 block bg-black border border-white shadow-lg rounded-full",
+                  activeTabClassName
+                )}
+              />
+            )}
+
+            <span className="relative text-white lg:text-md 2xl:text-xl whitespace-nowrap">
               {tab.title}
             </span>
           </button>
@@ -71,16 +114,13 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)} />
+        className={cn("mt-32", contentClassName)}
+      />
     </>
   );
 };
 
-export const FadeInDiv = ({
-  className,
-  tabs,
-  hovering
-}) => {
+export const FadeInDiv = ({ className, tabs, hovering }) => {
   const isActive = (tab) => {
     return tab.value === tabs[0].value;
   };
@@ -98,7 +138,8 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}>
+          className={cn("w-full h-full absolute top-0 left-0", className)}
+        >
           {tab.content}
         </motion.div>
       ))}

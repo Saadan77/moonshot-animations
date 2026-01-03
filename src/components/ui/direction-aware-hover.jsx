@@ -97,7 +97,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute top-12 left-8 z-40 text-3xl font-semibold font-poppins")}
+            className={cn("absolute top-[10%] left-[10%] z-40 text-[clamp(20px,2vw,30px)] font-semibold font-poppins")}
           >
             {heading}
           </motion.div>
@@ -107,9 +107,9 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute top-50 right-12 z-40")}
+            className={cn("absolute top-1/2 -translate-y-1/2 right-8 max-2xl:right-4 z-40")}
           >
-            <img src="/images/images-arrow.png" alt="arrow" className="h-full w-full opacity-90" />
+            <img src="/images/images-arrow.png" alt="arrow" className="h-auto max-2xl:w-3/4 w-full opacity-90" />
           </motion.div>
            <motion.div
             variants={numberVariants}
@@ -117,7 +117,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("font-poppins absolute -bottom-32 -left-24 z-40 text-right text-[300px]")}
+            className={cn("font-poppins absolute -bottom-[24%] -left-[20%] z-40 text-right text-[clamp(180px,12vw,300px)]")}
           >
             {number}
           </motion.div>
@@ -127,7 +127,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute bottom-12 right-12 z-40 text-right", childrenClassName)}
+            className={cn("absolute bottom-12 right-[10%] z-40 text-right", childrenClassName)}
           >
             {children}
           </motion.div>

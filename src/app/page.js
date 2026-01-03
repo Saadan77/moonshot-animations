@@ -15,7 +15,7 @@ import CyberHologramLoader from "./components/CyberHologramLoader";
 export default function Home() {
   return (
     <>
-      <CyberHologramLoader />
+      {/* <CyberHologramLoader /> */}
       <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
         <Ribbons
           baseThickness={6}

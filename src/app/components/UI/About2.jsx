@@ -68,11 +68,11 @@ const About2 = () => {
 
                     {/* Heading */}
                     <div
-                        className="max-w-[90%] -tracking-[0.03em] leading-relaxed font-light text-white/90"
+                        className="-tracking-[0.03em] leading-relaxed font-light text-white/90"
                         style={{ fontFamily: 'var(--font-sora), sans-serif' }}
                     >
                         <ScrollReveal size='md' enableBlur={false}>
-                            Tech With Moonshot strategists drive impactful digital growth for your brand. By analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email marketing, websites, e-commerce, animations, and more. More than a digital agency, we make your brand stand out. That's the Tech With Moonshot difference.
+                            Tech With Moonshot strategists drive impactful digital growth for your brand. By <br /> analyzing data, trends, and audience insights, they deliver tailored solutions, SEO, email <br /> marketing, websites, e-commerce, animations, and more. More than a digital agency,<br /> we make your brand stand out. That's the Tech With Moonshot difference.
                         </ScrollReveal>
                     </div>
                 </div>

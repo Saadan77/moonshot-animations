@@ -202,7 +202,7 @@ const WhatWeDo = () => {
                     <Shuffle
                       key={`${cat.name}-title`}
                       text={cat.title}
-                      className="max-sm:text-[40px] md:text-[60px] lg:text-[100px]"
+                      className="text-[clamp(40px,6vw,100px)]"
                       tag="span"
                       textAlign="left"
                       shuffleDirection="right"
@@ -214,7 +214,7 @@ const WhatWeDo = () => {
                       style={{ fontFamily: "var(--font-sora), sans-serif" }}
                     />
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[100px]">{cat.title}</p>
+                  <p className="block lg:hidden font-sora uppercase text-[clamp(40px,6vw,100px)]">{cat.title}</p>
 
                   <div className="hidden lg:block">
                     {cat.subtitle && (
@@ -223,7 +223,7 @@ const WhatWeDo = () => {
                         <Shuffle
                           key={`${cat.name}-subtitle`}
                           text={cat.subtitle}
-                          className="max-sm:text-[40px] md:text-[60px] lg:text-[100px]"
+                          className="text-[clamp(40px,6vw,100px)]"
                           tag="span"
                           textAlign="left"
                           shuffleDirection="right"
@@ -237,7 +237,7 @@ const WhatWeDo = () => {
                       </>
                     )}
                   </div>
-                  <p className="block lg:hidden font-sora uppercase max-sm:text-[40px] md:text-[60px] lg:text-[100px]">{cat.subtitle}</p>
+                  <p className="block lg:hidden font-sora uppercase text-[clamp(40px,6vw,100px)]">{cat.subtitle}</p>
                 </div>
               </div>
             </div>

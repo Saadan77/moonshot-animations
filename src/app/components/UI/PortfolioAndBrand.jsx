@@ -282,9 +282,9 @@ const PortfolioAndBrand = () => {
                         {/* Row 1, Col 1: Section Label + Heading */}
                         <div className="flex flex-col justify-between space-y-6">
                             <div className='space-y-6'>
-                                <h2 className="text-[#808080] text-[20px] font-normal font-poppins">06 — Portfolio</h2>
+                                <h2 className="text-[#808080] text-[17px] xl:text-[20px] font-normal font-poppins">06 — Portfolio</h2>
 
-                                <h2 className="text-4xl lg:text-7xl max-sm:text-4xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
+                                <h2 className="text-4xl lg:text-5xl xl:text-7xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                                     Explore <br /> Our <span
                                         className="italic"
                                         style={{ fontFamily: 'var(--font-playfair), serif' }}
@@ -299,7 +299,7 @@ const PortfolioAndBrand = () => {
                                     href="#"
                                     className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                                 >
-                                    <span className="relative top-[0.5px] font-sora text-[20px]">Explore All Works</span>
+                                    <span className="relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">Explore All Works</span>
                                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
                                         <ArrowRight className="w-6 h-6 group-hover:text-black" />
                                     </span>
@@ -311,11 +311,11 @@ const PortfolioAndBrand = () => {
                         <div id="portfolio-1">
                             <DirectionAwareHover
                                 imageUrl="/images/portfolio/portfolio-1.png"
-                                className="w-full h-full"
+                                className="relative w-full h-full"
                                 heading={<p>Branding</p>}
                                 number={<p>01.</p>}
                             >
-                                <div className="text-lg font-poppins font-light text-white/80">
+                                <div className="text-sm lg:text-md 2xl:text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
                                     <p>#BuildYourBrand</p>
                                     <p>#brandwithpurpose</p>
                                 </div>
@@ -339,7 +339,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>UI/UX</p>}
                                 number={<p>02.</p>}
                             >
-                                <div className="text-lg font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
                                     <p>#Webdesign</p>
                                     <p>#Creativewebsolutions</p>
                                 </div>
@@ -355,7 +355,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Mobile Applications</p>}
                                 number={<p>03.</p>}
                             >
-                                <div className="text-lg font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
                                     <p>#Appdesign</p>
                                     <p>#Mobileapps</p>
                                 </div>
@@ -370,7 +370,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Animations</p>}
                                 number={<p>04.</p>}
                             >
-                                <div className="text-lg font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
                                     <p>#Creativemotion</p>
                                     <p>#Animateddesign</p>
                                 </div>
@@ -389,7 +389,7 @@ const PortfolioAndBrand = () => {
                                 heading={<p>Logo Design</p>}
                                 number={<p>05.</p>}
                             >
-                                <div className="text-lg font-poppins font-light text-white/80">
+                                <div className="text-xs lg:text-sm 2xl:text-md font-poppins font-poppins font-light text-white/80">
                                     <p>#Logodesign</p>
                                     <p>#Brandidentity</p>
                                 </div>
@@ -414,7 +414,7 @@ const PortfolioAndBrand = () => {
             </section>
 
             <section id="brand-section" className="bg-[#34A5DC] -mt-1 pt-52 pb-125 relative z-50 min-h-screen flex items-center justify-center overflow-x-hidden">
-                <h2 className="z-20 text-[260px] max-lg:text-[120px] max-sm:text-[60px] text-center tracking-[-3%] leading-[0.8] md:leading-[0.85] uppercase font-semibold font-sora flex flex-col items-center gap-2">
+                <h2 className="z-20 text-[clamp(60px,12vw,260px)] text-center tracking-[-3%] leading-[0.8] md:leading-[0.85] uppercase font-semibold font-sora flex flex-col items-center gap-2">
 
                     <ScrollFillText>WE</ScrollFillText>
                     <ScrollFillText>MAKE</ScrollFillText>

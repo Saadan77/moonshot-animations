@@ -123,7 +123,7 @@ const Hero = () => {
                                 </h1>
                             </div>
 
-                            <div className="ml-[104%] max-2xl:ml-0 text-end max-sm:text-center">
+                            <div className="ml-[104%] text-end max-lg:text-center">
                                 <h1
                                     className="text-[clamp(60px,12vw,215px)] flex justify-end"
                                     style={{ fontFamily: 'var(--font-sora), sans-serif' }}

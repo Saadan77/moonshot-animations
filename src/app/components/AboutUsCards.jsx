@@ -18,8 +18,8 @@ const AboutCard = ({
             className={[
                 'group relative overflow-hidden rounded-3xl border border-[#4D4D4D]',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
-                compact ? 'h-[400px]' : 'h-[400px]',
-                'w-[min(92vw,340px)] sm:w-[min(44vw,400px)] lg:w-[400px]',
+                compact ? 'h-[400px] w-[400px]' : 'h-[400px] w-[400px]',
+                'max-1600:w-[330px] max-1600:h-[330px] max-1440:w-[300px] max-1440:h-[300px] max-1280:w-[280px] max-1280:h-[280px] max-xl:w-[230px] max-xl:h-[230px]',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
                 className,
@@ -32,10 +32,10 @@ const AboutCard = ({
             />
 
             {/* Corner text (Roman + Titles) */}
-            <div className="absolute left-8 top-4 text-white/80 text-[20px] select-none">
+            <div className="absolute left-8 top-4 text-white/80 text-[clamp(12px,4vw,20px)] select-none">
                 {roman}
             </div>
-            <div className="font-urbanist leading-10 absolute right-8 top-4 text-right text-white/85 text-[26px]"
+            <div className="font-urbanist leading-10 absolute right-8 top-4 text-right text-white/85 text-[clamp(16px,4vw,26px)]"
             >
                 {titleTopLeft && <div>{titleTopLeft}</div>}
                 {titleTopRight && <div>{titleTopRight}</div>}
@@ -43,7 +43,7 @@ const AboutCard = ({
 
             {/* Bottom row: metric + arrow */}
             <div className="absolute bottom-2 left-4 right-4 flex items-end justify-between">
-                <div className="font-urbanist text-white tracking-tighter text-[80px] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+                <div className="font-urbanist text-white tracking-tighter text-[clamp(40px,4vw,80px)] drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
                     {number}
                 </div>
 
@@ -97,7 +97,7 @@ export default function AboutUsCards() {
 
     return (
         <div className="relative z-10 my-10 overflow-visible mt-20">
-            <div className="grid grid-cols-1 justify-items-center gap-22 lg:grid-cols-2 2xl:grid-cols-4">
+            <div className="grid grid-cols-1 justify-items-center gap-22 lg:grid-cols-4">
                 {cards.map((c, i) => (
                     <div key={i} className={['w-full flex justify-center', c.offset].join(' ')}>
                         <PinContainer

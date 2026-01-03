@@ -1,60 +1,63 @@
 "use client";
 
-import ScrollReveal from '@/components/lightswind/scroll-reveal';
-import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
-import AboutUsCards from '../AboutUsCards';
-import { ArrowRight } from 'lucide-react';
+import ScrollReveal from "@/components/lightswind/scroll-reveal";
+import React, { useEffect, useRef } from "react";
+import Link from "next/link";
+import AboutUsCards from "../AboutUsCards";
+import { ArrowRight } from "lucide-react";
 
 const AboutUs = () => {
+  const smokeRef = useRef(null);
 
-    const smokeRef = useRef(null);
+  useEffect(() => {
+    const container = smokeRef.current;
+    if (!container) return;
 
-    useEffect(() => {
-        const container = smokeRef.current;
-        if (!container) return;
+    function spawn(x, y) {
+      const el = document.createElement("div");
+      el.className = "elem";
+      el.style.left = `${x - 25}px`;
+      el.style.top = `${y - 25}px`;
+      container.appendChild(el);
+      el.addEventListener("animationend", () => {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      });
+    }
 
-        function spawn(x, y) {
-            const el = document.createElement('div');
-            el.className = 'elem';
-            el.style.left = `${x - 25}px`;
-            el.style.top = `${y - 25}px`;
-            container.appendChild(el);
-            el.addEventListener('animationend', () => {
-                if (el.parentNode) el.parentNode.removeChild(el);
-            });
-        }
+    const interval = setInterval(() => {
+      const rect = container.getBoundingClientRect();
+      const x = Math.random() * rect.width;
+      const y = Math.random() * rect.height;
+      spawn(x, y);
+      while (container.children.length > 30) {
+        container.removeChild(container.firstChild);
+      }
+    }, 700);
 
-        const interval = setInterval(() => {
-            const rect = container.getBoundingClientRect();
-            const x = Math.random() * rect.width;
-            const y = Math.random() * rect.height;
-            spawn(x, y);
-            while (container.children.length > 30) {
-                container.removeChild(container.firstChild);
-            }
-        }, 700);
+    const onMove = (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      spawn(x, y);
+    };
 
-        const onMove = (e) => {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            spawn(x, y);
-        };
+    window.addEventListener("mousemove", onMove);
 
-        window.addEventListener('mousemove', onMove);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("mousemove", onMove);
+    };
+  }, []);
 
-        return () => {
-            clearInterval(interval);
-            window.removeEventListener('mousemove', onMove);
-        };
-    }, []);
-
-    return (
-        <section id="about-us" className="relative isolate w-full bg-[#00060b] text-white z-10 overflow-hidden">
-            <div id="smoke" ref={smokeRef}></div>
-            <style dangerouslySetInnerHTML={{
-                __html: `
+  return (
+    <section
+      id="about-us"
+      className="relative isolate w-full bg-[#00060b] text-white z-10 overflow-hidden"
+    >
+      <div id="smoke" ref={smokeRef}></div>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
                 #smoke {
                     position: absolute;
                     top: 0;
@@ -84,60 +87,84 @@ const AboutUs = () => {
                         opacity: 0;
                     }
                 }
-                `
-            }} />
+                `,
+        }}
+      />
 
-            <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
-                <div className='pb-24 flex items-start max-md:flex-col'>
-                    {/* Small "About Us" label */}
-                    <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white">
-                        <img src="/images/about-us/icon.png" />
-                        <p className='font-poppins font-normal text-nowrap text-lg'>About Us</p>
-                    </div>
+      <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
+        <div className="pb-24 flex items-start max-md:flex-col">
+          {/* Small "About Us" label */}
+          <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white">
+            <img src="/images/about-us/icon.png" />
+            <p className="font-poppins font-normal text-nowrap text-lg">
+              About Us
+            </p>
+          </div>
 
-                    <div>
-                        {/* Heading */}
-                        <h2
-                            className="tracking-[-0.03em] font-normal"
-                            style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
-                        >
-                            <ScrollReveal enableBlur={false}>
-                                Tech With Moonshot delivers smart digital design and strategy, navigating trends and metrics to craft powerful, tailored solutions for your brand.
-                            </ScrollReveal>
-                        </h2>
+          <div>
+            {/* Heading */}
+            <h2
+              id="about-us-index-scroll-reveal"
+              className="tracking-[-0.03em] font-normal"
+              style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+            >
+              <ScrollReveal enableBlur={false}>
+                Tech With Moonshot delivers smart digital <br /> design and
+                strategy, navigating trends and metrics <br /> to craft
+                powerful, tailored solutions for your brand.
+              </ScrollReveal>
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    @media screen and (min-width: 1366px) and (max-width: 1366px) {
+                        #about-us-index-scroll-reveal p {
+                           font-size: 33px;
+                        }
+                    }
+                    @media screen and (min-width: 1024px) and (max-width: 1024px) {
+                        #about-us-index-scroll-reveal p {
+                           font-size: 21px;
+                        }
+                    }
+                  `,
+                }}
+              />
+            </h2>
 
-                        {/* CTA */}
-                        <div className="mt-8">
-                            <Link
-                                href="#"
-                                className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                            >
-                                <span className="relative top-[0.5px] font-sora text-[20px]">Learn More About</span>
-                                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                                </span>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <AboutUsCards />
+            {/* CTA */}
+            <div className="mt-8">
+              <Link
+                href="#"
+                className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+              >
+                <span className="relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">
+                  Learn More About
+                </span>
+                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                  <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                </span>
+              </Link>
             </div>
-            {/* Glow ellipse below cards */}
-            <div className="relative">
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div
-                        className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
-                        style={{
-                            background:
-                                "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                            backgroundSize: '200% 100%, 200% 100%'
-                        }}
-                    />
-                </div>
-            </div>
-        </section>
-    );
+          </div>
+        </div>
+
+        <AboutUsCards />
+      </div>
+      {/* Glow ellipse below cards */}
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div
+            className="w-[95%] h-[150px] rounded-t-full blur-[80px] in-out"
+            style={{
+              background:
+                "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
+              backgroundSize: "200% 100%, 200% 100%",
+            }}
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AboutUs;

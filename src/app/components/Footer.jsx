@@ -31,7 +31,7 @@ export default function Footer() {
                                     style={{ fontFamily: 'Inter, sans-serif' }}>
                                     LOCATION
                                 </p>
-                                <Link href="https://share.google/nZZos4GW7DTinRQbh" className="not-italic text-2xl max-sm:text-lg leading-relaxed text-white hover:underline">
+                                <Link href="https://share.google/nZZos4GW7DTinRQbh" className="not-italic text-sm lg:text-md xl:text-[18px] 1366:text-xl 2xl:text-2xl leading-relaxed text-white hover:underline">
                                     1200 East Collins Boulevard
                                     <br />
                                     Suite 106 Richardson Texas 75081
@@ -57,7 +57,7 @@ export default function Footer() {
                                 style={{ fontFamily: 'Inter, sans-serif' }}>
                                 INQUIRY
                             </p>
-                            <div className="space-y-2 text-2xl max-sm:text-lg text-white">
+                            <div className="space-y-2 text-sm lg:text-md xl:text-[18px] 1366:text-xl 2xl:text-2xl text-white leading-snug">
                                 <Link
                                     href="mailto:info@gmail.com"
                                     className="block hover:text-white/80 transition-colors"
@@ -77,7 +77,7 @@ export default function Footer() {
                             <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-6">
                                 LINKS
                             </p>
-                            <ul className="space-y-6 text-xl max-sm:text-lg">
+                            <ul className="space-y-3 xl:space-y-6 text-sm xl:text-[18px] 1366:text-xl">
                                 {urls.map(
                                     (link) => (
                                         <li key={link.name}>
@@ -102,13 +102,13 @@ export default function Footer() {
                             {/* Company Title */}
                             <div className="space-y-12">
                                 <div>
-                                    <h2 className="text-4xl font-semibold tracking-tight">
+                                    <h2 className="text-2xl xl:text-4xl font-semibold tracking-tight">
                                         MOONSHOT TECH
                                     </h2>
                                 </div>
 
                                 <div className="space-y-4">
-                                    <p className="mt-3 text-xl text-[#bbbbbb] max-w-md">
+                                    <p className="mt-3 text-sm xl:text-base 1366:text-xl text-[#bbbbbb]">
                                         We hope to <span className="text-white"> empower </span> user and <span className="text-white"> simplify </span>
                                         <br />
                                         their everyday lives
@@ -223,7 +223,7 @@ export default function Footer() {
                                     </span>
                                 </form>
 
-                                <p className="text-lg text-white/50 font-extralight">
+                                <p className="text-xs xl:text-base 1366:text-lg text-white/50 font-extralight">
                                     By subscribing, you accept our newsletter <br /> terms and privacy policy.
                                 </p>
                             </div>
@@ -233,10 +233,10 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="mt-48 max-sm:mt-16">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-lg text-[#BBB]">
-                        <p className="col-span-1 max-lg:col-span-2 max-lg:text-center">© 2025 Moonshot Tech. All Rights Reserved</p>
+                    <div className="grid grid-cols-4 max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 1600:grid-cols-3 gap-4 text-sm xl:text-[18px] 1366:text-xl text-nowrap text-[#BBB]">
+                        <p className="col-span-1 lg:col-span-2 1600:col-span-1 max-lg:text-center text-nowrap">© 2025 Moonshot Tech. All Rights Reserved</p>
 
-                        <div className="col-span-2 space-x-16 flex max-sm:flex-col max-sm:gap-4 justify-center text-white">
+                        <div className="col-span-1 lg:col-span-2 1600:col-span-1 space-x-6 1366:space-x-12 flex max-sm:flex-col max-sm:gap-4 max-1600:justify-center text-white">
                             <Link href="#" className="hover:text-white/80 transition-colors">
                                 Terms & Conditions
                             </Link>
@@ -249,10 +249,10 @@ export default function Footer() {
                         </div>
 
                         {/* Scroll to Top */}
-                        <div className="col-span-1 max-lg:col-span-2 flex justify-end max-lg:justify-center">
+                        <div className="col-span-1 flex justify-end max-lg:justify-center">
                             <button
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                                className="hover:cursor-pointer col-span-1 flex items-center justify-center text-white hover:text-white/50 transition-colors"
+                                className="hover:cursor-pointer flex items-center justify-center text-white hover:text-white/50 transition-colors"
                                 aria-label="Scroll to top"
                             >
                                 <ChevronUp size={36} />
