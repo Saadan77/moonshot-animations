@@ -128,21 +128,19 @@ export default function EmailMarketing() {
         </div>
 
         <div className="flex items-center relative w-full overflow-visible">
-          {/* 
-                <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-                    <Dither
-                        waveColor={[0.01, 0.29, 0.62]}
-                        backgroundColor={[0.84, 0.13, 0.69]}
-                        disableAnimation={false}
-                        enableMouseInteraction={true}
-                        mouseRadius={0.3}
-                        colorNum={4}
-                        waveAmplitude={0.3}
-                        waveFrequency={3}
-                        waveSpeed={0.05}
-                    />
-                </div> 
-            */}
+          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div
@@ -239,7 +237,7 @@ export default function EmailMarketing() {
                   <div className="flex gap-16 max-lg:gap-8">
                     <div className="w-2 bg-white mt-5 mb-10">|</div>
                     <div className="tracking-[-0.03em]">
-                       <ScrollReveal size="sm" enableBlur={false}>
+                      <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to{" "}
                         <br />
                         give you a good website development services. <br />

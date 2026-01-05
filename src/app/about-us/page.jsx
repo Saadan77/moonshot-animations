@@ -275,29 +275,6 @@ export default function AboutUsPage() {
     },
   ];
 
-  const images = [
-    {
-      position: [0.8, 0, 2.5],
-      rotation: [0, 0, 0],
-      url: "/images/about-us-page/image-1.png",
-    },
-    {
-      position: [-0.6, 0, 2.5],
-      rotation: [0, 0, 0],
-      url: "/images/about-us-page/image-2.png",
-    },
-    {
-      position: [-1.75, 0, 3.25],
-      rotation: [0, Math.PI / 2.5, 0],
-      url: "/images/about-us-page/image-3.png",
-    },
-    {
-      position: [1.75, 0, 3.25],
-      rotation: [0, -Math.PI / 2.5, 0],
-      url: "/images/about-us-page/image-4.png",
-    },
-  ];
-
   const smokeRef = useRef(null);
 
   useEffect(() => {
@@ -361,7 +338,7 @@ export default function AboutUsPage() {
 
         <div className="flex items-center relative w-full overflow-visible">
           <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-            {/* <Dither
+            <Dither
             waveColor={[0.01, 0.29, 0.62]}
             backgroundColor={[0.84, 0.13, 0.69]}
             disableAnimation={false}
@@ -371,7 +348,7 @@ export default function AboutUsPage() {
             waveAmplitude={0.3}
             waveFrequency={3}
             waveSpeed={0.05}
-          /> */}
+          />
           </div>
 
           <div
@@ -440,10 +417,10 @@ export default function AboutUsPage() {
                   </span>
                 </div>
 
-                <div className="w-full md:max-w-[75%] uppercase font-sora lg:scale-112 mx-5 lg:ml-20">
+                <div className="uppercase font-sora lg:scale-115 max-lg:mx-5 lg:ml-20 xl:ml-25 2xl:ml-35">
                   <ScrollReveal>
-                    From concept to execution, we build impactful digital
-                    solutions that resonate with real people and deliver results
+                    From concept to execution, we build <br /> impactful digital
+                    solutions that resonate <br /> with real people and deliver results
                   </ScrollReveal>
                 </div>
 
@@ -639,7 +616,7 @@ export default function AboutUsPage() {
               We deliver creative <br /> ideas to a crowded world.
             </p>
 
-            <div className="mb-40 mt-50">
+            <div className="lg:mb-10 lg:mt-20 xl:mb-30 xl:mt-40 2xl:mb-40 2xl:mt-50">
               <AboutUsCards />
             </div>
           </div>

@@ -124,20 +124,19 @@ export default function Animations() {
 
         <div className="min-h-screen flex items-center relative w-full overflow-visible">
           {/* Dither Background */}
-          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-                            <Dither
-                                waveColor={[0.01, 0.29, 0.62]}
-                                backgroundColor={[0.84, 0.13, 0.69]}
-                                disableAnimation={false}
-                                enableMouseInteraction={true}
-                                mouseRadius={0.3}
-                                colorNum={4}
-                                waveAmplitude={0.3}
-                                waveFrequency={3}
-                                waveSpeed={0.05}
-                            />
-                        </div> 
-                    */}
+          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div
@@ -319,26 +318,30 @@ export default function Animations() {
 
               <div id="animations-layout" className="my-20">
                 <LayoutGrid cards={layoutImages} />
-                <style jsx global>{`
-                  #animations #animations-layout > div.grid {
-                    gap: 50px !important;
-                    padding: 5rem !important;
-                  }
-                  @media (max-width: 1024px) {
-                    #animations #animations-layout > div.grid {
-                      padding: 25px !important;
-                    }
-                  }
-                  /* Hide the absolute overlay inside LayoutGrid cards */
-                  #animations
-                    #animations-layout
-                    .grid
-                    > div
-                    > div
-                    .absolute.bottom-0.left-0.right-0 {
-                    display: none !important;
-                  }
-                `}</style>
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      #animations #animations-layout > div.grid {
+                        gap: 50px !important;
+                        padding: 5rem !important;
+                      }
+                      @media (max-width: 1024px) {
+                        #animations #animations-layout > div.grid {
+                          padding: 25px !important;
+                        }
+                      }
+                      /* Hide the absolute overlay inside LayoutGrid cards */
+                      #animations
+                        #animations-layout
+                        .grid
+                        > div
+                        > div
+                        .absolute.bottom-0.left-0.right-0 {
+                        display: none !important;
+                      }
+                    `,
+                  }}
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">

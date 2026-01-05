@@ -123,21 +123,19 @@ export default function SSM() {
         <Navbar />
 
         <div className="min-h-screen flex items-center relative w-full overflow-visible">
-          {/* 
-            <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-                <Dither
-                    waveColor={[0.01, 0.29, 0.62]}
-                    backgroundColor={[0.84, 0.13, 0.69]}
-                    disableAnimation={false}
-                    enableMouseInteraction={true}
-                    mouseRadius={0.3}
-                    colorNum={4}
-                    waveAmplitude={0.3}
-                    waveFrequency={3}
-                    waveSpeed={0.05}
-                />
-            </div> 
-        */}
+          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div

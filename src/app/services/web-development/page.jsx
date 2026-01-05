@@ -134,19 +134,19 @@ export default function WebDevelopment() {
         </div>
 
         <div className="flex items-center relative w-full overflow-visible">
-          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
-                    <Dither
-                        waveColor={[0.01, 0.29, 0.62]}
-                        backgroundColor={[0.84, 0.13, 0.69]}
-                        disableAnimation={false}
-                        enableMouseInteraction={true}
-                        mouseRadius={0.3}
-                        colorNum={4}
-                        waveAmplitude={0.3}
-                        waveFrequency={3}
-                        waveSpeed={0.05}
-                    />
-                </div> */}
+          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div
@@ -309,19 +309,19 @@ export default function WebDevelopment() {
               <style
                 dangerouslySetInnerHTML={{
                   __html: `
-                                #web-dev #web-dev-layout > div.grid {
-                                    gap: 50px !important;
-                                    padding: 5rem !important;
-                                }
-                                @media (max-width: 1024px) {
-                                    #web-dev #web-dev-layout > div.grid {
-                                        padding: 25px !important;
-                                    }
-                                }
-                                #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                                    display: none !important;
-                                }
-                            `,
+                      #web-dev #web-dev-layout > div.grid {
+                          gap: 50px !important;
+                          padding: 5rem !important;
+                      }
+                      @media (max-width: 1024px) {
+                          #web-dev #web-dev-layout > div.grid {
+                              padding: 25px !important;
+                          }
+                      }
+                      #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                          display: none !important;
+                      }
+                  `,
                 }}
               />
 
