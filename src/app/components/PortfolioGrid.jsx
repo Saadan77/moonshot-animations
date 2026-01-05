@@ -77,7 +77,7 @@ const PortfolioGrid = () => {
 
     return (
         <div className="min-h-screen bg-[#00050a] py-16 lg:px-12">
-            <div className="max-w-[80%] md:max-w-[85%] lg:max-w-[95%] mx-auto">
+            <div className="max-w-[90%] sm:max-w-[80%] md:max-w-[85%] lg:max-w-[95%] mx-auto">
                 {/* Header Section */}
                 <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                     {/* Filter Tabs */}

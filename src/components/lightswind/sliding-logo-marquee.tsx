@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 export interface SlidingLogoMarqueeItem {
   id: string;
@@ -32,7 +32,7 @@ export interface SlidingLogoMarqueeProps {
 
 export function SlidingLogoMarquee({
   items,
-  speed = 60,
+  speed = 20,
   pauseOnHover = false,
   enableBlur = true,
   blurIntensity = 1,
@@ -52,19 +52,8 @@ export function SlidingLogoMarquee({
 }: SlidingLogoMarqueeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-  useEffect(() => {
-    const updateDimensions = () => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        setDimensions({ width: rect.width, height: rect.height });
-      }
-    };
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  const marqueeItems = [...items, ...items, ...items, ...items];
 
   const handleItemClick = (item: SlidingLogoMarqueeItem) => {
     if (item.href) {
@@ -73,17 +62,12 @@ export function SlidingLogoMarquee({
     onItemClick?.(item);
   };
 
-  const togglePlayState = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   return (
     <>
       <style>
         {`
         .sliding-marquee-container {
-          --speed: ${speed};
-          --count: ${items.length};
+          --speed: ${speed}s;
           --scale: ${scale};
           --blur: ${blurIntensity};
           --blurs: ${animationSteps};
@@ -97,145 +81,66 @@ export function SlidingLogoMarquee({
           height: ${height};
           min-height: 150px;
           min-width: 300px;
+          display: flex;
+          align-items: center;/
         }
 
-        // @media (min-width: 1600px) {
-        //   .sliding-marquee-resizable {
-        //     height: 250px;
-        //   }
-        // }
-
-        @media (min-width: 600px) {
-          .sliding-marquee-resizable {
-            min-width: 500px;
-          }
+        /* --- MARQUEE TRACK --- */
+        .sliding-marquee-inner {
+          display: flex;
+          align-items: center;
+          width: max-content;
+          animation: scroll var(--speed) linear infinite;
         }
 
-        @media (min-width: 1024px) {
-          .sliding-marquee-resizable {
-            min-width: 800px;
-          }
-        }
-
-        .sliding-marquee-resizable[data-spill="true"] .sliding-marquee-inner::after {
-          content: "";
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          width: calc(var(--scale) * 10000vw);
-          height: calc(var(--scale) * 10000vh);
-          pointer-events: none;
-          translate: -50% -50%;
-          mask-composite: exclude;
-        }
-
-        .sliding-marquee-blur {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 25%;
-          z-index: 2;
-          pointer-events: none;
-        }
-
-        .sliding-marquee-blur--right {
-          right: 0;
-        }
-
-        .sliding-marquee-blur--left {
-          left: 0;
-          rotate: 180deg;
-        }
-
-        .sliding-marquee-blur div {
-          position: absolute;
-          inset: 0;
-          z-index: var(--index);
-          mask: linear-gradient(90deg,
-              transparent calc(var(--index) * calc((100 / var(--blurs)) * 1%)),
-              black calc((var(--index) + 1) * calc((100 / var(--blurs)) * 1%)),
-              black calc((var(--index) + 2) * calc((100 / var(--blurs)) * 1%)),
-              transparent calc((var(--index) + 3) * calc((100 / var(--blurs)) * 1%)));
-          backdrop-filter: blur(calc((var(--index, 0) * var(--blur, 0)) * 1px));
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-25%); }
         }
 
         .sliding-marquee-list {
           display: flex;
+          align-items: center;
           gap: ${gap};
           padding: 0;
           margin: 0;
           list-style-type: none;
-          height: 100%;
-          width: max-content;
-          pointer-events: auto;
+          padding-right: ${gap}; 
         }
 
         .sliding-marquee-item {
-          padding: 0 15px;
-          transition: transform 0.3s ease-in-out;
+          height: 50%;
+          aspect-ratio: 1 / 1;
+          flex-shrink: 0;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
         }
 
-        .sliding-marquee-item:hover {
-          transform: translateY(20%) scale(1.5);
+        .sliding-marquee-item img {
+          transition: all 0.3s ease-in-out;
+        }
+
+        .sliding-marquee-item:hover img {
+          width: 300px;
+          transform: translateY(15%);
         }
 
         .sliding-marquee-item svg {
           height: 65%;
+          width: 65%;
+          object-fit: contain;
         }
 
+        /* --- RESPONSIVE --- */
         @media (max-width: 767px) {
-          .sliding-marquee-list {
-            gap: 0.25rem !important;
-          }
-
-          .sliding-marquee-item {
-            height: 60% !important;
-            font-size: 0.875rem !important;
-          }
-
-          .sliding-marquee-item svg {
-            height: 45% !important;
-          }
+          .sliding-marquee-list { gap: 1rem !important; padding-right: 1rem !important; }
+          .sliding-marquee-item { height: 40%; }
+          .sliding-marquee-item:hover { height: 60%; }
         }
 
-        [data-play-state="running"] .sliding-marquee-list,
-        [data-play-state="running"] .sliding-marquee-item {
-          animation-play-state: running !important;
-        }
-
-        [data-play-state="paused"] .sliding-marquee-list,
-        [data-play-state="paused"] .sliding-marquee-item {
+        [data-play-state="paused"] .sliding-marquee-inner {
           animation-play-state: paused !important;
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-          [data-translate="items"] .sliding-marquee-list {
-            gap: 0;
-          }
-
-          [data-translate="items"][data-direction="horizontal"] .sliding-marquee-inner {
-            padding-inline: 0;
-          }
-
-          [data-translate="items"] .sliding-marquee-item {
-            --duration: calc(var(--speed) * 1s);
-            --delay: calc((var(--duration) / var(--count)) * (var(--index, 0) * -1));
-            animation: slide var(--duration) var(--delay) infinite linear paused;
-            translate: var(--origin-x) var(--origin-y);
-          }
-
-          [data-translate="items"][data-direction="horizontal"] .sliding-marquee-item {
-            --origin-x: calc(((var(--count) - var(--index)) + var(--inset, 0)) * 100%);
-            --origin-y: 0;
-            --destination-x: calc(calc((var(--index) + 1 + var(--outset, 0)) * -100%));
-            --destination-y: 0;
-          }
-
-          @keyframes slide {
-            100% {
-              translate: var(--destination-x) var(--destination-y);
-            }
-          }
         }
         `}
       </style>
@@ -252,27 +157,21 @@ export function SlidingLogoMarquee({
 
         <div
           className="sliding-marquee-resizable"
-          data-translate="items"
-          data-direction={direction}
           data-blurring={enableBlur}
           data-play-state={isPlaying ? "running" : "paused"}
           data-spill={enableSpillEffect}
         >
+          {/* Track moves left */}
           <div className="sliding-marquee-inner">
             <ul className="sliding-marquee-list text-foreground">
-              {items.map((item, index) => (
+              {marqueeItems.map((item, index) => (
                 <li
-                  key={item.id}
+                  // Use index in key to handle duplicates safely
+                  key={`${item.id}-${index}`}
                   className="sliding-marquee-item text-foreground"
-                  style={{ "--index": index } as React.CSSProperties}
                   onClick={() => handleItemClick(item)}
                   role="button"
                   tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      handleItemClick(item);
-                    }
-                  }}
                 >
                   {item.content}
                 </li>

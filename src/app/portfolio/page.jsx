@@ -64,18 +64,18 @@ export default function Portfolio() {
                 <p className="font-medium font-poppins text-lg">Portfolio</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(14px,4.5vw,40px)] sm:text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 max-sm:leading-snug text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Designing <br /> Dreams Showcasing Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end items-end block">
+                <span className="text-[clamp(20px,5vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end items-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Creative Journey
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 text-[clamp(10px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
+              <p className="font-light text-white/70 text-[clamp(9px,2vw,20px)] sm:text-[clamp(10px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
                 From conceptual sketches to digital experiences, here’s how we
                 turn imagination into design
               </p>
