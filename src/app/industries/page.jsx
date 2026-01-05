@@ -119,19 +119,19 @@ export default function Portfolio() {
 
         <div className="flex items-center relative w-full overflow-hidden">
           {/* Dither Background */}
-          {/* <div className="absolute inset-0 w-full h-full opacity-20">
-                    <Dither
-                        waveColor={[0.01, 0.29, 0.62]}
-                        backgroundColor={[0.84, 0.13, 0.69]}
-                        disableAnimation={false}
-                        enableMouseInteraction={true}
-                        mouseRadius={0.3}
-                        colorNum={4}
-                        waveAmplitude={0.3}
-                        waveFrequency={3}
-                        waveSpeed={0.05}
-                    />
-                </div> */}
+          <div className="absolute inset-0 w-full h-full opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div
@@ -143,14 +143,14 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="pt-[18%] pb-[22%]">
+          <div className="py-[18%] lg:pb-[22%]">
             <div className="relative z-10 ml-20 max-sm:ml-10">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
                 <p className="font-poppins font-medium text-lg">Industries</p>
               </div>
 
-              <h1 className="text-[clamp(26px,3.4vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1660:leading-17 max-1440:leading-15 max-1280:leading-13 text-white">
+              <h1 className="text-[clamp(26px,3.4vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-17 max-1440:leading-15 max-1280:leading-13 max-xl:leading-10 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Innovating Industries
                   <br />
@@ -169,17 +169,17 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="absolute top-40 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-40 max-xl:-right-130 z-10">
+            <div className="hidden lg:block absolute top-40 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10">
               <img
                 src="/images/industries/city-bg.png"
-                className="w-5/6 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[55%] h-auto"
+                className="w-5/6 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[50%] h-auto"
                 alt="City"
               />
             </div>
           </div>
         </div>
 
-        <div className="py-10 lg:py-20 2xl:py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
+        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
           <div
             className="industries-grid"
             style={{
@@ -189,33 +189,33 @@ export default function Portfolio() {
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                                .industries-grid img,
-                                .industries-grid video {
-                                    opacity: 0.8 !important;
-                                }
-                            `,
+                    .industries-grid img,
+                    .industries-grid video {
+                        opacity: 0.8 !important;
+                    }
+                `,
               }}
             />
             <LayoutGrid cards={topCards} />
             <div id="bottom-industries-grid">
               <LayoutGrid cards={bottomCards} />
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    @media (min-width: 768px) {
+                        #bottom-industries-grid > .grid {
+                            grid-template-columns: repeat(4, minmax(0, 1fr));
+                        }
+                        
+                        #bottom-industries-grid > .grid {
+                            padding-top: 0%;
+                            padding-bottom: 0%;
+                        }
+                    }
+                `,
+                }}
+              />
             </div>
-            <style
-              dangerouslySetInnerHTML={{
-                __html: `
-                                    @media (min-width: 768px) {
-                                        #bottom-industries-grid > .grid {
-                                            grid-template-columns: repeat(4, minmax(0, 1fr));
-                                        }
-                                        
-                                        #bottom-industries-grid > .grid {
-                                            padding-top: 0%;
-                                            padding-bottom: 0%;
-                                        }
-                                    }
-                                `,
-              }}
-            />
           </div>
         </div>
 

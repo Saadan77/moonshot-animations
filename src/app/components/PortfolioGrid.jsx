@@ -49,7 +49,7 @@ const PortfolioGrid = () => {
             title: 'Netomi',
             category: 'ui-ux',
             type: 'image',
-            src: '/images/portfolio-page/projects/netomi-3.png',
+            src: '/images/portfolio-page/projects/netomi-5.png',
             bg: '/images/portfolio-page/portfolio-cards-bg/bg-5.png',
             isVideo: false,
         },
@@ -106,7 +106,7 @@ const PortfolioGrid = () => {
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-15 max-1280:p-14 max-sm:p-5 rounded-4xl relative group h-[95vh] max-1600:h-[82vh] max-1440:h-[75vh] max-1366:h-[70vh] max-1280:h-[65vh] max-xl:h-[50vh] ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
+                            className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-16 max-xl:p-14 max-sm:p-5 rounded-4xl relative group h-[95vh] max-1440:h-[85vh] max-1366:h-[80vh] max-1280:h-[75vh] max-xl:h-[60vh] ${item.isVideo ? 'col-span-1 lg:col-span-2' : 'col-span-1'
                                 }`}
                         >
                             {item.bg && (

@@ -53,19 +53,19 @@ export default function ContactUs() {
 
         <div className="flex items-center relative w-full overflow-hidden">
           {/* Dither Background */}
-          {/* <div className="absolute inset-0 w-full h-full opacity-20">
-                        <Dither
-                            waveColor={[0.01, 0.29, 0.62]}
-                            backgroundColor={[0.84, 0.13, 0.69]}
-                            disableAnimation={false}
-                            enableMouseInteraction={true}
-                            mouseRadius={0.3}
-                            colorNum={4}
-                            waveAmplitude={0.3}
-                            waveFrequency={3}
-                            waveSpeed={0.05}
-                        />
-                    </div> */}
+          <div className="absolute inset-0 w-full h-full opacity-20">
+            <Dither
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div>
 
           {/* Background Image */}
           <div
@@ -84,7 +84,7 @@ export default function ContactUs() {
                 <p className="font-poppins font-medium text-lg">Contact</p>
               </div>
 
-              <h1 className="text-[clamp(26px,3.5vw,72px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-1280:leading-12 text-white">
+              <h1 className="text-[clamp(26px,3.5vw,72px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-1280:leading-13 max-xl:leading-11 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Let’s Start a <br /> Conversation Connect{" "}
                 </AuroraText>
@@ -103,7 +103,7 @@ export default function ContactUs() {
 
             <img
               src="/images/contact-us-hero.png"
-              className="w-[38.5%] h-auto absolute bottom-2 right-30 max-1600:right-30 max-xl:right-10 z-10"
+              className="hidden lg:block w-[38.5%] h-auto absolute bottom-2 right-30 max-1600:right-30 max-xl:right-10 z-10"
               alt="City"
             />
           </div>
@@ -179,10 +179,7 @@ export default function ContactUs() {
 
             {/* Right form */}
             <form className="col-span-4">
-              <div
-                style={{ background: "#011322" }}
-                className="rounded-2xl mx-6 p-18 max-lg:p-8 max-sm:p-5"
-              >
+              <div className="bg-[#011322] rounded-2xl xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-18 max-sm:p-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Email"
@@ -211,7 +208,8 @@ export default function ContactUs() {
                   className="w-full rounded-[20px] mt-4 p-4 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                 />
 
-                <p className="text-white my-4">How can we help you?</p>
+                <p className="text-white my-4 text-sm 1366:text-base">How can we help you?</p>
+
                 <div className="space-y-5">
                   {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                     (row, rowIdx) => (
@@ -226,7 +224,7 @@ export default function ContactUs() {
                               key={t}
                               type="button"
                               onClick={() => toggleTag(t)}
-                              className={`py-4 px-8 rounded-full bg-[#000911] text-[12px] leading-[-2%] transition-colors duration-200 border ${
+                              className={`py-4 px-8 max-1600:px-6 max-1440:px-5 max-1366:px-4.5 max-xl:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[12px] max-1600:text-[10px] max-1280:text-[9px] leading-[-2%] transition-colors duration-200 border ${
                                 isSelected
                                   ? "border-white/80 text-white/80"
                                   : "border-[#18354D] text-[#999999]"
@@ -244,16 +242,16 @@ export default function ContactUs() {
                 <div className="flex justify-between items-center mt-8">
                   <button
                     type="submit"
-                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
                   >
-                    <span className="relative top-[0.5px] font-sora text-[20px]">
+                    <span className="relative top-[0.5px] font-sora text-[clamp(12px,1vw,20px)] whitespace-nowrap">
                       Send Message
                     </span>
                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                      <ArrowRight className="lg:w-4 lg:h-4 1366:w-6 1366:h-6 group-hover:text-black" />
                     </span>
                   </button>
-                  <div className="text-sm text-end">
+                  <div className="lg:text-xs 1366:text-sm text-end">
                     <p className="text-[#A3A3A3]">Prefer email?</p>
                     <p className="text-white">moonshottech@gmail.com</p>
                   </div>
