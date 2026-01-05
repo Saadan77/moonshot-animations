@@ -384,30 +384,30 @@ export default function AboutUsPage() {
 
           {/* Hero Section */}
           <div className="pt-[18%] pb-[20%]">
-            <div className="relative z-10 ml-20 max-lg:ml-5">
+            <div className="relative z-10 lg:ml-20 max-lg:py-[2em] max-lg:pl-[5em]">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
                 <p className="font-poppins font-medium text-lg">About Us</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-13 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(40px,4vw,50px)] lg:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Purpose & Vision
                   </AuroraText>
                 </span>
               </h1>
 
-            <p className="font-light text-white/70 text-[clamp(10px,1.05vw,20px)]">
+              <p className="font-light text-white/70 text-xs lg:text-[clamp(12px,1.08vw,20px)]">
                 From our values to our craft, this is how we shape stories that
                 define who we are with care
               </p>
             </div>
 
-            <div className="absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:-right-110 max-xl:-right-160 z-10">
+            <div className="hidden lg:block lg:absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:-right-110 max-xl:-right-160 z-10">
               <img
                 src="/images/about-us-bg.png"
                 className="w-full max-1440:w-3/4 max-1280:w-3/5 max-xl:w-1/2 h-auto"
@@ -417,7 +417,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        <div className="relative py-10 px-20 max-lg:p-1 z-10 justify-center flex">
+        <div className="relative py-10 px-20 max-lg:p-5 z-10 justify-center flex">
           <video
             autoPlay
             loop
@@ -440,7 +440,7 @@ export default function AboutUsPage() {
                   </span>
                 </div>
 
-                <div className="w-full md:max-w-[75%] uppercase font-sora scale-112 ml-20">
+                <div className="w-full md:max-w-[75%] uppercase font-sora lg:scale-112 mx-5 lg:ml-20">
                   <ScrollReveal>
                     From concept to execution, we build impactful digital
                     solutions that resonate with real people and deliver results

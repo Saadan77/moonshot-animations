@@ -381,23 +381,44 @@ export const StaggeredMenu = ({
     const handleClickOutside = (e) => {
       const panel = panelRef.current;
       const toggleBtn = toggleBtnRef.current;
-      
+
       if (!panel || !toggleBtn) return;
-      
+
       // Check if click is outside both the panel and toggle button
       if (!panel.contains(e.target) && !toggleBtn.contains(e.target)) {
         toggleMenu();
       }
     };
 
-    // Add listener after a small delay to avoid immediate trigger
+    const handleScrollOutside = (e) => {
+      const panel = panelRef.current;
+      const toggleBtn = toggleBtnRef.current;
+      if (!panel || !toggleBtn) return;
+
+      const target = e.target;
+      // If the scroll/wheel/touchmove started inside panel or toggle button, ignore
+      if (panel.contains(target) || toggleBtn.contains(target)) return;
+
+      // Only close on downward wheel scroll; for touchmove just close
+      if (e.type === 'wheel') {
+        if (e.deltaY && e.deltaY > 0) toggleMenu();
+      } else {
+        toggleMenu();
+      }
+    };
+
+    // Add listeners after a small delay to avoid immediate trigger from the opening click
     const timeoutId = setTimeout(() => {
       document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('wheel', handleScrollOutside, { passive: true });
+      document.addEventListener('touchmove', handleScrollOutside, { passive: true });
     }, 100);
 
     return () => {
       clearTimeout(timeoutId);
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('wheel', handleScrollOutside);
+      document.removeEventListener('touchmove', handleScrollOutside);
     };
   }, [open, toggleMenu]);
 
@@ -574,7 +595,7 @@ export const StaggeredMenu = ({
                       <div className="flex flex-col items-start">
                         <button
                           onClick={() => setExpandedItem(expandedItem === idx ? null : idx)}
-                          className="sm-panel-item relative text-white font-semibold text-[4rem] md:text-[3.5rem] max-sm:text-[3rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
+                          className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
                           data-index={idx + 1}
                         >
                           <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
@@ -605,7 +626,7 @@ export const StaggeredMenu = ({
                       </div>
                     ) : (
                       <a
-                        className="sm-panel-item relative text-white font-semibold text-[4rem] md:text-[3.5rem] max-sm:text-[3rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                        className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                         href={it.link}
                         aria-label={it.ariaLabel}
                         data-index={idx + 1}
@@ -622,7 +643,7 @@ export const StaggeredMenu = ({
                   className="sm-panel-itemWrap relative overflow-hidden leading-none"
                   aria-hidden="true"
                 >
-                  <span className="sm-panel-item relative text-white font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
+                  <span className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
                     <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                       No items
                     </span>
@@ -700,7 +721,7 @@ export const StaggeredMenu = ({
 .sm-scope .sm-panel-itemLabel { display: inline-block; will-change: transform; transform-origin: 50% 100%; }
 .sm-scope .sm-panel-item:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
-.sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 2.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
+// .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 2.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
 @media (max-width: 1024px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); } }
 @media (max-width: 640px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); } }
       `}</style>
