@@ -12,6 +12,7 @@ import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
+import Button from "../components/button/button";
 
 export default function ContactUs() {
   const tags = [
@@ -240,17 +241,7 @@ export default function ContactUs() {
                 </div>
 
                 <div className="flex justify-between items-center mt-8">
-                  <button
-                    type="submit"
-                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[clamp(12px,1vw,20px)] whitespace-nowrap">
-                      Send Message
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="lg:w-4 lg:h-4 1366:w-6 1366:h-6 group-hover:text-black" />
-                    </span>
-                  </button>
+                  <Button text="Send Message" href="#" />
                   <div className="lg:text-xs 1366:text-sm text-end">
                     <p className="text-[#A3A3A3]">Prefer email?</p>
                     <p className="text-white">moonshottech@gmail.com</p>

@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import AboutUsCards from "../AboutUsCards";
 import { ArrowRight } from "lucide-react";
+import Button from "../button/button";
 
 const AboutUs = () => {
   const smokeRef = useRef(null);
@@ -58,36 +59,36 @@ const AboutUs = () => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-                #smoke {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    pointer-events: none;
-                    overflow: hidden;
-                }
+            #smoke {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                overflow: hidden;
+            }
 
-                .elem {
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;
-                    background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
-                    pointer-events: none;
-                    animation: ripple 2s ease-out forwards;
-                }
+            .elem {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
+                pointer-events: none;
+                animation: ripple 2s ease-out forwards;
+            }
 
-                @keyframes ripple {
-                    0% {
-                        transform: scale(3) translateY(0);
-                        opacity: 1;
-                    }
-                    100% {
-                        transform: scale(10) translateY(-10px);
-                        opacity: 0;
-                    }
+            @keyframes ripple {
+                0% {
+                    transform: scale(3) translateY(0);
+                    opacity: 1;
                 }
-                `,
+                100% {
+                    transform: scale(10) translateY(-10px);
+                    opacity: 0;
+                }
+            }
+          `,
         }}
       />
 
@@ -131,19 +132,8 @@ const AboutUs = () => {
               />
             </h2>
 
-            {/* CTA */}
             <div className="mt-8">
-              <Link
-                href="#"
-                className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-              >
-                <span className="relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">
-                  Learn More About
-                </span>
-                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                  <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                </span>
-              </Link>
+              <Button text="Learn More" href="/about-us" />
             </div>
           </div>
         </div>

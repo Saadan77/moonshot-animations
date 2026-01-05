@@ -4,6 +4,7 @@ import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ArrowRight, ChevronDown, ChevronRight, ChevronsDown } from "lucide-react";
 import Link from "next/link";
+import Button from "@/app/components/button/button";
 
 export const StaggeredMenu = ({
   position = "right",
@@ -557,15 +558,7 @@ export const StaggeredMenu = ({
               </span>
             </Link>
 
-            <Link
-              href="#"
-              className="group border border-[#979797] inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-            >
-              <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Let's Talk</span>
-              <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                <ArrowRight className="w-6 h-6 group-hover:text-black" />
-              </span>
-            </Link>
+            <Button text="Let's Talk" href="/contact-us" />
           </div>
         </header>
 

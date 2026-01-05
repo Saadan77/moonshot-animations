@@ -33,7 +33,7 @@ export default function Portfolio() {
 
         <div className="flex items-center relative w-full overflow-visible bg-black">
           {/* Dither Background */}
-          <div className="absolute inset-0 w-full h-[200vh] opacity-20">
+          {/* <div className="absolute inset-0 w-full h-[200vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -45,7 +45,7 @@ export default function Portfolio() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -57,7 +57,7 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%] max-lg:py-[22%] max-sm:py-[24%]">
+          <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%]">
             <div className="relative z-20 lg:ml-20 max-lg:px-[5em] max-sm:px-[3em]">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
