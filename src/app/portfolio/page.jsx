@@ -95,7 +95,7 @@ export default function Portfolio() {
                 <div className='w-screen flex justify-center pt-6 pb-20 bg-[#00050a]'>
                     <Link
                         href="#"
-                        className="group inline-flex items-center gap-3 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-6 py-1.5 text-white/90 transition-all duration-300"
+                        className="group inline-flex items-center gap-6 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
                     >
                         <span className="relative top-[0.5px] font-sora text-[18px] max-lg:text-[15px] whitespace-nowrap">See More</span>
                         <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">

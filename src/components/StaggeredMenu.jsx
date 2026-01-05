@@ -528,7 +528,7 @@ export const StaggeredMenu = ({
           <div className="hidden md:flex items-center gap-4 pointer-events-auto">
             <Link
               href="#"
-              className="group inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
+              className="group inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
               <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Our Works</span>
               <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
@@ -538,7 +538,7 @@ export const StaggeredMenu = ({
 
             <Link
               href="#"
-              className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+              className="group border border-[#979797] inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
             >
               <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Let's Talk</span>
               <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

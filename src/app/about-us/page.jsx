@@ -423,20 +423,20 @@ export default function AboutUsPage() {
             loop
             muted
             playsInline
-            className="h-auto object-cover rounded-4xl items-center"
+            className="h-auto object-cover rounded-[34.137px] items-center"
           >
             <source src="/videos/about-us-video.webm" type="video/mp4" />
           </video>
         </div>
 
-        <div className="bg-top overflow-hidden" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
+        <div className="bg-top overflow-hidden brightness-[1.2]" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
           {/* Who We Are Section */}
           <div>
             <div className="relative z-10 max-w-[90%] mx-auto px-0 xl:px-8 py-10 md:py-48">
               <div className="space-y-10">
                 <div className="flex items-center gap-3 text-xl text-[#808080]">
                   <span className="text-nowrap font-poppins font-normal">
-                    03 — Who We Are
+                    01 — Who We Are
                   </span>
                 </div>
 
@@ -509,7 +509,7 @@ export default function AboutUsPage() {
             <div className="px-10 items-center py-10 md:py-48 bg-black">
               <div className="text-center relative z-10">
                 <p className="font-poppins font-normal text-[#808080] text-xl tracking-tight mb-8">
-                  05 - Technologies
+                  02 - Technologies
                 </p>
                 <h2
                   className="min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
@@ -578,7 +578,7 @@ export default function AboutUsPage() {
           </div>
           <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
             <div className="flex max-md:flex-col items-start justify-between">
-              <p className="text-[#808080] font-poppins font-normal text-lg">04 - Approach</p>
+              <p className="text-[#808080] font-poppins font-normal text-lg">03 - Approach</p>
 
               <h2
                 className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
@@ -632,7 +632,7 @@ export default function AboutUsPage() {
 
           <div className="max-w-[90%] mx-auto relative py-36">
             <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
-              05 — What Defines Us
+              04 — What Defines Us
             </span>
 
             <p className="text-[clamp(50px,4vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
@@ -688,6 +688,31 @@ export default function AboutUsPage() {
               #about-us-partners #partners {
                 margin-top: 0px;
                 padding-top: 10rem;
+              }
+
+              /* About Us page-only section number overrides */
+              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal {
+                position: relative;
+                display: inline-block;
+                color: transparent;
+              }
+              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal::before {
+                content: "05 — Partners";
+                position: absolute;
+                inset: 0;
+                color: #808080;
+              }
+
+              #about-us-partners #partners .mb-6 > span.text-nowrap.font-sora.font-normal {
+                position: relative;
+                display: inline-block;
+                color: transparent;
+              }
+              #about-us-partners #partners .mb-6 > span.text-nowrap.font-sora.font-normal::before {
+                content: "06 — Testimonials";
+                position: absolute;
+                inset: 0;
+                color: #808080;
               }
             `,
             }}
