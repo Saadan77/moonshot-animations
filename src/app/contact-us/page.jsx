@@ -88,7 +88,7 @@ export default function ContactUs() {
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Let’s Start a <br /> Conversation Connect{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4vw,86px)] font-thin text-end items-end block">
+                <span className="text-[clamp(45px,4vw,86px)] font-thin text-end items-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     With Our Team
                   </AuroraText>

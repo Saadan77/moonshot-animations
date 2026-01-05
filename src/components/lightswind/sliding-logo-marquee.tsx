@@ -41,7 +41,7 @@ export function SlidingLogoMarquee({
   gap = "0.5rem",
   scale = 1,
   direction = "horizontal",
-  autoPlay = false,
+  autoPlay = true,
   backgroundColor,
   showGridBackground = false,
   className,
@@ -171,18 +171,12 @@ export function SlidingLogoMarquee({
         }
 
         .sliding-marquee-item {
-          height: 45%;
-          aspect-ratio: 16 / 9;
-          font-size: clamp(1rem, 3vw + 0.5rem, 4rem);
-          display: grid;
-          place-items: center;
-          cursor: pointer;
-          transition: transform 0.2s ease;
-          pointer-events: auto;
+          padding: 0 15px;
+          transition: transform 0.3s ease-in-out;
         }
 
         .sliding-marquee-item:hover {
-          
+          transform: translateY(20%) scale(1.5);
         }
 
         .sliding-marquee-item svg {

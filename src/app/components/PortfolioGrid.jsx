@@ -1,8 +1,6 @@
 "use client";
 
-import { ChevronRight } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'wouter';
 
 const PortfolioGrid = () => {
     const [activeTab, setActiveTab] = useState('all');
@@ -79,7 +77,7 @@ const PortfolioGrid = () => {
 
     return (
         <div className="min-h-screen bg-[#00050a] py-16 lg:px-12">
-            <div className="max-w-[95%] mx-auto">
+            <div className="max-w-[80%] md:max-w-[85%] lg:max-w-[95%] mx-auto">
                 {/* Header Section */}
                 <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                     {/* Filter Tabs */}
@@ -134,7 +132,7 @@ const PortfolioGrid = () => {
                                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                                 />
                             )}
-                            <h3 className="relative mt-5 max-2xl:mt-3 max-1280:mt-2 -ml-20 max-2xl:-ml-10 text-white text-[clamp(30px,3vw,48px)] font-light tracking-tighter">{item.title}</h3>
+                            <h3 className="relative mt-5 max-2xl:mt-3 max-1280:mt-2 -ml-15 max-2xl:-ml-10 max-xl:-ml-5 text-white text-[clamp(30px,3vw,48px)] font-light tracking-tighter">{item.title}</h3>
                         </div>
                     ))}
                 </div>

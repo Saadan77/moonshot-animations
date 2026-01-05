@@ -1,6 +1,6 @@
 export default function DecorativeLines() {
     return (
-        <div className="max-md:hidden block">
+        <div className="block">
             {["12%", "28%", "42%", "57%", "72%", "88%"].map((left) => (
                 <div
                     key={left}

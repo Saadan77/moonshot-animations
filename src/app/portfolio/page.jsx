@@ -57,34 +57,34 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="pt-[18%] pb-[20%]">
-            <div className="relative z-20 ml-20 max-lg:ml-5">
+          <div className="py-[18%] max-lg:py-[22%] max-sm:py-[24%]">
+            <div className="relative z-20 lg:ml-20 max-lg:px-[5em] max-sm:px-[3em]">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
                 <p className="font-medium font-poppins text-lg">Portfolio</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,3.5vw,66px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Designing <br /> Dreams Showcasing Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end items-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Creative Journey
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 text-[clamp(10px,1.1vw,20px)]">
+              <p className="font-light text-white/70 text-[clamp(10px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
                 From conceptual sketches to digital experiences, here’s how we
                 turn imagination into design
               </p>
             </div>
 
-            <div className="hidden lg:block absolute top-50 -right-500 max-1600:-right-550 max-1600:top-60 max-1440:top-35 max-1440:-right-560 max-1280:top-50 max-1280:-right-590 max-xl:-right-620 z-10">
+            <div className="hidden lg:block absolute top-50 -right-500 max-1600:-right-550 max-1440:top-35 max-1440:-right-570 max-1366:top-50 max-1366:-right-580 max-1280:top-40 max-1280:-right-590 max-xl:top-35 max-xl:-right-620 z-10">
               <img
                 src="/images/portfolio-page/portfolio-hero-image.png"
-                className="w-[45%] max-1600:w-3/8 max-1280:w-[30%] max-xl:w-[25%] h-auto rotate-[7.76deg]"
+                className="w-[45%] max-1600:w-3/8 max-1440:w-[35%] max-1366:w-[30%] max-xl:w-[25%] h-auto rotate-[7.76deg]"
                 alt="Portfolio Hero"
               />
             </div>

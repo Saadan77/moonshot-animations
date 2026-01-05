@@ -60,7 +60,7 @@ export default function AboutUsPage() {
       title: "Deployment <br /> and Testing",
       description:
         "Test Plans <br /> Functional Testing <br /> Usability Testing <br /> Performance Testing <br /> Security Testing <br /> Bug Tracking",
-    }
+    },
   ];
 
   const Card = ({ card }) => {
@@ -72,8 +72,10 @@ export default function AboutUsPage() {
           style={{ height: "350px" }}
         >
           <div className="absolute inset-0 z-10 grid place-content-center">
-            <p className="mb-10 px-4 text-[24px] uppercase text-white" dangerouslySetInnerHTML={{ __html: card.title }}>
-            </p>
+            <p
+              className="mb-10 px-4 text-[24px] uppercase text-white"
+              dangerouslySetInnerHTML={{ __html: card.title }}
+            ></p>
             <p
               className="px-4 text-[17px] text-white font-light leading-loose"
               dangerouslySetInnerHTML={{ __html: card.description }}
@@ -82,7 +84,11 @@ export default function AboutUsPage() {
         </div>
         {card.id !== cards.length && (
           <div className="w-[250px]">
-            <img src="/images/arrow.png" alt="arrow" className="-mt-[120px] h-auto w-full" />
+            <img
+              src="/images/arrow.png"
+              alt="arrow"
+              className="-mt-[120px] h-auto w-full"
+            />
           </div>
         )}
       </>
@@ -93,7 +99,7 @@ export default function AboutUsPage() {
     const carouselRef = useRef(null);
     const contentRef = useRef(null);
 
-    useGSAP(() => { }, { scope: carouselRef });
+    useGSAP(() => {}, { scope: carouselRef });
 
     useLayoutEffect(() => {
       const carouselEl = carouselRef.current;
@@ -228,49 +234,89 @@ export default function AboutUsPage() {
     {
       id: "1",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-1.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-1.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "2",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-2.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-2.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "3",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-3.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-3.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "4",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-4.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-4.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "5",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-5.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-5.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "6",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-6.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-6.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "7",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-7.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-7.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
     {
       id: "8",
       content: (
-        <Image src="/images/about-us-page/slider-logos/logo-8.png" width={220} height={220}  alt="Logo" />
+        <Image
+          src="/images/about-us-page/slider-logos/logo-8.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
       ),
     },
   ];
@@ -282,12 +328,12 @@ export default function AboutUsPage() {
     if (!container) return;
 
     function spawn(x, y) {
-      const el = document.createElement('div');
-      el.className = 'elem';
+      const el = document.createElement("div");
+      el.className = "elem";
       el.style.left = `${x - 25}px`;
       el.style.top = `${y - 25}px`;
       container.appendChild(el);
-      el.addEventListener('animationend', () => {
+      el.addEventListener("animationend", () => {
         if (el.parentNode) el.parentNode.removeChild(el);
       });
     }
@@ -309,11 +355,11 @@ export default function AboutUsPage() {
       spawn(x, y);
     };
 
-    window.addEventListener('mousemove', onMove);
+    window.addEventListener("mousemove", onMove);
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener("mousemove", onMove);
     };
   }, []);
 
@@ -329,7 +375,7 @@ export default function AboutUsPage() {
         <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
           <Ribbons
             baseThickness={6}
-            colors={['#D42290']}
+            colors={["#D42290"]}
             speedMultiplier={0.4}
             maxAge={500}
             enableFade={true}
@@ -337,19 +383,19 @@ export default function AboutUsPage() {
         </div>
 
         <div className="flex items-center relative w-full overflow-visible">
-          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
-            waveColor={[0.01, 0.29, 0.62]}
-            backgroundColor={[0.84, 0.13, 0.69]}
-            disableAnimation={false}
-            enableMouseInteraction={true}
-            mouseRadius={0.3}
-            colorNum={4}
-            waveAmplitude={0.3}
-            waveFrequency={3}
-            waveSpeed={0.05}
-          />
-          </div>
+              waveColor={[0.01, 0.29, 0.62]}
+              backgroundColor={[0.84, 0.13, 0.69]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+          </div> */}
 
           <div
             className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
@@ -406,7 +452,10 @@ export default function AboutUsPage() {
           </video>
         </div>
 
-        <div className="bg-top overflow-hidden brightness-[1.2]" style={{ backgroundImage: 'url(/images/services/bg-gradient.png)' }}>
+        <div
+          className="bg-top overflow-hidden brightness-[1.2]"
+          style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
+        >
           {/* Who We Are Section */}
           <div>
             <div className="relative z-10 max-w-[90%] mx-auto px-0 xl:px-8 py-10 md:py-48">
@@ -420,7 +469,8 @@ export default function AboutUsPage() {
                 <div className="uppercase font-sora lg:scale-115 max-lg:mx-5 lg:ml-20 xl:ml-25 2xl:ml-35">
                   <ScrollReveal>
                     From concept to execution, we build <br /> impactful digital
-                    solutions that resonate <br /> with real people and deliver results
+                    solutions that resonate <br /> with real people and deliver
+                    results
                   </ScrollReveal>
                 </div>
 
@@ -472,10 +522,34 @@ export default function AboutUsPage() {
               <div className="mt-20">
                 {/* <Gallery3D images={images} /> */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-end gap-6">
-                  <Image src="/images/about-us-page/image-1.png" width={400} height={400} alt="Image 1" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                  <Image src="/images/about-us-page/image-2.png" width={400} height={400} alt="Image 2" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                  <Image src="/images/about-us-page/image-3.png" width={400} height={400} alt="Image 3" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
-                  <Image src="/images/about-us-page/image-4.png" width={400} height={400} alt="Image 4" className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <Image
+                    src="/images/about-us-page/image-1.png"
+                    width={400}
+                    height={400}
+                    alt="Image 1"
+                    className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
+                  />
+                  <Image
+                    src="/images/about-us-page/image-2.png"
+                    width={400}
+                    height={400}
+                    alt="Image 2"
+                    className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
+                  />
+                  <Image
+                    src="/images/about-us-page/image-3.png"
+                    width={400}
+                    height={400}
+                    alt="Image 3"
+                    className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
+                  />
+                  <Image
+                    src="/images/about-us-page/image-4.png"
+                    width={400}
+                    height={400}
+                    alt="Image 4"
+                    className="w-full h-auto object-cover rounded-lg p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
+                  />
                 </div>
               </div>
             </div>
@@ -530,7 +604,7 @@ export default function AboutUsPage() {
                   style={{
                     background:
                       "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                    backgroundSize: '200% 100%, 200% 100%'
+                    backgroundSize: "200% 100%, 200% 100%",
                   }}
                 />
               </div>
@@ -541,9 +615,7 @@ export default function AboutUsPage() {
         {/* Approach Section */}
         <div>
           <div className="relative">
-            <div
-              className="absolute -top-12 left-[48%] z-100"
-            >
+            <div className="absolute -top-12 left-[48%] z-100">
               <Image
                 src="/images/elevate-icon.png"
                 alt="Elevate Icon"
@@ -553,9 +625,17 @@ export default function AboutUsPage() {
               />
             </div>
           </div>
-          <div className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48" style={{ backgroundImage: 'url(/images/about-us-page/bg-gradient.png)', backgroundAttachment: 'fixed' }}>
+          <div
+            className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48"
+            style={{
+              backgroundImage: "url(/images/about-us-page/bg-gradient.png)",
+              backgroundAttachment: "fixed",
+            }}
+          >
             <div className="flex max-md:flex-col items-start justify-between">
-              <p className="text-[#808080] font-poppins font-normal text-lg">03 - Approach</p>
+              <p className="text-[#808080] font-poppins font-normal text-lg">
+                03 - Approach
+              </p>
 
               <h2
                 className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
@@ -565,16 +645,21 @@ export default function AboutUsPage() {
               </h2>
               <div />
             </div>
-            <div className="ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]"><HorizontalScrollCarousel /></div>
+            <div className="ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+              <HorizontalScrollCarousel />
+            </div>
           </div>
         </div>
 
         {/* What Defines Us Section */}
-        <div className="bg-[#00050A] relative pb-10 overflow-hidden"
-          style={{ borderRadius: '34.137px' }}>
+        <div
+          className="bg-[#00050A] relative pb-10 overflow-hidden"
+          style={{ borderRadius: "34.137px" }}
+        >
           <div id="smoke" ref={smokeRef}></div>
-          <style dangerouslySetInnerHTML={{
-            __html: `
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
                 #smoke {
                     position: absolute;
                     top: 0;
@@ -604,8 +689,9 @@ export default function AboutUsPage() {
                         opacity: 0;
                     }
                 }
-                `
-          }} />
+                `,
+            }}
+          />
 
           <div className="max-w-[90%] mx-auto relative py-36">
             <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
@@ -629,7 +715,7 @@ export default function AboutUsPage() {
                 style={{
                   background:
                     "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                  backgroundSize: '200% 100%, 200% 100%'
+                  backgroundSize: "200% 100%, 200% 100%",
                 }}
               />
             </div>
@@ -648,7 +734,11 @@ export default function AboutUsPage() {
           </div>
 
           <div className="absolute z-10 inset-0 top-0">
-            <img src="/images/about-us-page/bg-partners.png" alt="Background Bottom" className="w-full h-auto object-cover" />
+            <img
+              src="/images/about-us-page/bg-partners.png"
+              alt="Background Bottom"
+              className="w-full h-auto object-cover"
+            />
           </div>
 
           <Partners />
@@ -698,7 +788,7 @@ export default function AboutUsPage() {
 
         <CTA />
         <Footer />
-      </section >
+      </section>
     </>
   );
 }
