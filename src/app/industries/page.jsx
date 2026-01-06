@@ -28,7 +28,7 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Technology",
-      thumbnail: "/images/industries/image4.png",
+      thumbnail: "/images/industries/image-4.png",
       className: "md:col-span-1 md:row-span-2 technology",
       content: null,
     },
