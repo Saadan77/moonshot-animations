@@ -26,7 +26,9 @@ const data = [
   {
     src: "/images/services/web-development/success-stories/image-3.png",
   },
-
+  {
+    src: "/images/services/web-development/success-stories/image-4.png",
+  },
   {
     src: "/images/services/web-development/success-stories/image-1.png",
   },
@@ -35,6 +37,9 @@ const data = [
   },
   {
     src: "/images/services/web-development/success-stories/image-3.png",
+  },
+  {
+    src: "/images/services/web-development/success-stories/image-4.png",
   },
 ];
 
@@ -55,19 +60,19 @@ export default function WebDevelopment() {
     {
       id: 1,
       thumbnail: "/images/services/web-development/layout-grid/image-1.png",
-      className: "md:col-span-2 md:row-span-2",
+      className: "md:col-span-3 md:row-span-2",
       content: null,
     },
     {
       id: 2,
       thumbnail: "/images/services/web-development/layout-grid/image-2.png",
-      className: "md:col-span-1",
+      className: "md:col-span-2",
       content: null,
     },
     {
       id: 3,
       thumbnail: "/images/services/web-development/layout-grid/image-3.png",
-      className: "md:col-span-1",
+      className: "md:col-span-2",
       content: null,
     },
   ];
@@ -101,13 +106,13 @@ export default function WebDevelopment() {
 
   const WebDevCard = ({ card }) => {
     return (
-      <div key={card.id} className="space-y-4">
+      <div key={card.id} className="space-y-8">
         <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-[#ecedcf]"
+          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
         ></p>
         <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-[#ecedcf]"
+          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
           dangerouslySetInnerHTML={{ __html: card.description }}
         />
       </div>
@@ -194,8 +199,8 @@ export default function WebDevelopment() {
 
         <div className="relative p-5 md:p-20 z-10 justify-center flex">
           <img
-            src="/images/services/web-development/sec-section.png"
-            className="h-auto w-full object-cover rounded-4xl items-center"
+            src="/images/services/web-development/sec-2.png"
+            className="h-auto w-full object-cover rounded-[34.137px] items-center"
           />
         </div>
 
@@ -204,9 +209,9 @@ export default function WebDevelopment() {
             className="bg-top"
             style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
           >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
+            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom">
               <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-10 -ml-16 max-lg:ml-0">
+                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-20 -ml-16 max-lg:ml-0">
                   <TextType
                     text="Human-centered"
                     typingSpeed={75}
@@ -229,7 +234,7 @@ export default function WebDevelopment() {
 
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
                 {/* Image column */}
-                <div className="relative z-10 flex items-center justify-center">
+                <div className="-mt-20 relative z-10 flex items-center justify-center">
                   <img
                     src="/images/services/web-development/section-3.png"
                     alt="Laptop showcasing website design"
@@ -239,9 +244,9 @@ export default function WebDevelopment() {
                 </div>
 
                 {/* Text column */}
-                <div className="text-white space-y-4">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-2 bg-white mt-5 mb-10">|</div>
+                <div className="text-white space-y-12">
+                  <div className="flex items-center gap-16 max-lg:gap-8">
+                    <div className="w-1 bg-white min-h-[316px]">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to
@@ -281,7 +286,7 @@ export default function WebDevelopment() {
             className="bg-no-repeat"
             style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
           >
-            <section id="web-dev" className="pt-64 pb-20">
+            <section id="web-dev" className="pt-64">
               <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                 <TextType
                   text="Modern web dev made for"
@@ -302,28 +307,35 @@ export default function WebDevelopment() {
                 />
               </h2>
 
-              <div id="web-dev-layout" className="my-20">
+              <div id="web-dev-layout">
                 <LayoutGrid cards={layoutImages} />
-              </div>
-
-              <style
-                dangerouslySetInnerHTML={{
-                  __html: `
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
                       #web-dev #web-dev-layout > div.grid {
                           gap: 50px !important;
                           padding: 5rem !important;
+                      }
+                      #web-dev #web-dev-layout img {
+                          border-radius: 25.788px !important;
                       }
                       @media (max-width: 1024px) {
                           #web-dev #web-dev-layout > div.grid {
                               padding: 25px !important;
                           }
                       }
+                      @media (min-width: 48rem) { 
+                          #web-dev #web-dev-layout .grid {
+                              grid-template-columns: repeat(5, minmax(0, 1fr));
+                          }
+                      }
                       #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
                           display: none !important;
                       }
                   `,
-                }}
-              />
+                  }}
+                />
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
                 {webDevInfo.map((card) => (
@@ -331,7 +343,7 @@ export default function WebDevelopment() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType

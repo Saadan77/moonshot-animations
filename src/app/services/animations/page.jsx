@@ -14,6 +14,7 @@ import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -25,7 +26,6 @@ const data = [
   {
     src: "/images/services/animations/success-stories/image-3.png",
   },
-
   {
     src: "/images/services/animations/success-stories/image-1.png",
   },
@@ -34,7 +34,7 @@ const data = [
   },
   {
     src: "/images/services/animations/success-stories/image-3.png",
-  },
+  }
 ];
 
 export function SuccessStories() {
@@ -100,13 +100,13 @@ export default function Animations() {
 
   const WebDevCard = ({ card }) => {
     return (
-      <div key={card.id} className="space-y-4">
+      <div key={card.id} className="space-y-8">
         <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-[#ecedcf]"
+          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
         ></p>
         <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-[#ecedcf]"
+          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
           dangerouslySetInnerHTML={{ __html: card.description }}
         />
       </div>
@@ -237,9 +237,9 @@ export default function Animations() {
                 </div>
 
                 {/* Text column */}
-                <div className="col-span-1 text-white space-y-4">
+                <div className="col-span-1 text-white space-y-12">
                   <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-2 bg-white mt-5 mb-10">|</div>
+                    <div className="w-1 bg-white min-h-[316px]">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to{" "}
@@ -257,17 +257,7 @@ export default function Animations() {
                       </ScrollReveal>
                     </div>
                   </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
+                  <Button text="Get in Touch" href="/contact-us" />
                 </div>
               </div>
             </section>
@@ -279,7 +269,6 @@ export default function Animations() {
                 muted
                 playsInline
                 className="relative z-50 w-full h-full rounded-[34.137px] object-cover opacity-100"
-                data-smoother-ignore
               >
                 <source
                   src="/images/services/animations/section-4.mp4"
@@ -293,7 +282,7 @@ export default function Animations() {
             className="bg-no-repeat"
             style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
           >
-            <section id="animations" className="pt-64 pb-20">
+            <section id="animations" className="pt-64">
               <div className="flex flex-col items-center">
                 <h2 className="text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                   <TextType
@@ -316,7 +305,7 @@ export default function Animations() {
                 </h2>
               </div>
 
-              <div id="animations-layout" className="my-20">
+              <div id="animations-layout">
                 <LayoutGrid cards={layoutImages} />
                 <style
                   dangerouslySetInnerHTML={{
@@ -325,18 +314,16 @@ export default function Animations() {
                         gap: 50px !important;
                         padding: 5rem !important;
                       }
+                      #animations #animations-layout img {
+                          border-radius: 25.788px !important;
+                      }
                       @media (max-width: 1024px) {
                         #animations #animations-layout > div.grid {
                           padding: 25px !important;
                         }
                       }
                       /* Hide the absolute overlay inside LayoutGrid cards */
-                      #animations
-                        #animations-layout
-                        .grid
-                        > div
-                        > div
-                        .absolute.bottom-0.left-0.right-0 {
+                      #animations #animations-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
                         display: none !important;
                       }
                     `,
@@ -350,7 +337,7 @@ export default function Animations() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-3xl md:text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType

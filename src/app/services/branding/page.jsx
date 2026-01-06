@@ -100,13 +100,13 @@ export default function Branding() {
 
   const WebDevCard = ({ card }) => {
     return (
-      <div key={card.id} className="space-y-4">
+      <div key={card.id} className="space-y-8">
         <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-[#ecedcf]"
+          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
         ></p>
         <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-[#ecedcf]"
+          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
           dangerouslySetInnerHTML={{ __html: card.description }}
         />
       </div>
@@ -235,9 +235,9 @@ export default function Branding() {
                 </div>
 
                 {/* Text column */}
-                <div className="col-span-1 text-white space-y-4">
+                <div className="col-span-1 text-white space-y-12">
                   <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-2 bg-white mt-5 mb-10">|</div>
+                    <div className="w-1 bg-white min-h-[316px]">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to{" "}
@@ -282,7 +282,7 @@ export default function Branding() {
             className="bg-no-repeat"
             style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
           >
-            <section id="branding" className="pt-64 pb-20">
+            <section id="branding" className="pt-64">
               <div className="flex flex-col items-center">
                 <h2 className="text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                   <TextType
@@ -305,7 +305,7 @@ export default function Branding() {
                 </h2>
               </div>
 
-              <div id="branding-layout" className="my-20">
+              <div id="branding-layout">
                 <LayoutGrid cards={layoutImages} />
                 <style
                     dangerouslySetInnerHTML={{
@@ -313,6 +313,9 @@ export default function Branding() {
                     #branding #branding-layout > div.grid {
                       gap: 50px !important;
                       padding: 5rem !important;
+                    }
+                    #branding #branding-layout img {
+                        border-radius: 25.788px !important;
                     }
                     @media (max-width: 1024px) {
                       #branding #branding-layout > div.grid {
@@ -339,7 +342,7 @@ export default function Branding() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType

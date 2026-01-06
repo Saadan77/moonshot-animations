@@ -3,14 +3,10 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Button from "@/app/components/button/button";
 
 export const Carousel = ({
   items,
@@ -21,6 +17,12 @@ export const Carousel = ({
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  const progressMin = 0.08;
+  const progressDisplay = Math.min(
+    1,
+    progressMin + (1 - progressMin) * scrollProgress
+  );
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -67,27 +69,20 @@ export const Carousel = ({
   return (
     <div className="relative w-full">
       <div className="mr-20 flex justify-end max-lg:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
-        <Link
-          href="#"
-          className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-        >
-          <span className="relative top-[0.5px] font-sora text-[20px] xl:text-[17px] hover-group:bg-white hover-group:text-black">Recent Projects</span>
-          <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-            <ArrowRight className="w-6 h-6 group-hover:text-black" />
-          </span>
-        </Link>
+        <Button text="Recent Projects" href="/portfolio" />
+
         <div className="mx-6 min-h-max bg-white w-px"></div>
         <button
           className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollLeft}
           disabled={!canScrollLeft}>
-          <IconArrowNarrowLeft className="h-8 w-8 text-white" />
+          <ChevronLeft className="h-8 w-8 text-white" />
         </button>
         <button
           className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollRight}
           disabled={!canScrollRight}>
-          <IconArrowNarrowRight className="h-8 w-8 text-white" />
+          <ChevronRight className="h-8 w-8 text-white" />
         </button>
       </div>
       <div
@@ -95,7 +90,7 @@ export const Carousel = ({
         ref={carouselRef}
         onScroll={checkScrollability}>
         <div
-          className={cn("absolute right-0 z-1000 h-auto w-[5%] overflow-hidden bg-linear-to-l")}></div>
+          className={cn("absolute right-0 z-1000 h-auto w-[5%] overflow-hidden")}></div>
 
         <div
           className={cn(
@@ -126,7 +121,7 @@ export const Carousel = ({
       </div>
       {/* Pagination: progress bar */}
       <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full bg-white rounded-full" style={{ width: `${scrollProgress * 100}%`, transition: 'width 120ms linear' }} />
+        <div className="h-full bg-white rounded-full" style={{ width: `${progressDisplay * 100}%`, transition: 'width 120ms linear' }} />
       </div>
     </div>
   );

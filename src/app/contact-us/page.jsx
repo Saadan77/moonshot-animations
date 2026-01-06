@@ -24,13 +24,13 @@ export default function ContactUs() {
     "Animations",
     "Mobile Applications",
     "SEO",
-    "SSM",
+    "SMM",
     "Google Adwords",
     "Email Marketing",
     "Digital Marketing",
   ];
 
-  const [selectedTag, setSelectedTag] = useState(tags[0]);
+  const [selectedTag, setSelectedTag] = useState(false);
 
   const toggleTag = (t) => {
     setSelectedTag(t);
