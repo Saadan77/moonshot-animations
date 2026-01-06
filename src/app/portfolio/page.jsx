@@ -75,7 +75,7 @@ export default function Portfolio() {
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 text-[clamp(9px,2vw,20px)] sm:text-[clamp(10px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
+              <p className="font-normal font-sora text-white/70 text-[clamp(9px,2vw,20px)] sm:text-[clamp(10px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
                 From conceptual sketches to digital experiences, here’s how we
                 turn imagination into design
               </p>

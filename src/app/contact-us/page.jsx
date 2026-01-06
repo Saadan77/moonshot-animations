@@ -55,7 +55,7 @@ export default function ContactUs() {
 
         <div className="flex items-center relative w-full overflow-hidden">
           {/* Dither Background */}
-          <div className="absolute inset-0 w-full h-full opacity-20">
+          {/* <div className="absolute inset-0 w-full h-full opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -67,7 +67,7 @@ export default function ContactUs() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -112,10 +112,10 @@ export default function ContactUs() {
         </div>
 
         <div className="-mt-10 py-50 bg-[#00050A] rounded-[34.137px] relative z-10">
-          <div className="max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-7 items-start gap-16">
+          <div className="max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-7 items-center gap-16">
             {/* Left content */}
             <div className="col-span-3">
-              <p className="text-[20px] text-[#989898] mb-4">
+              <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
                 01 — Get in Touch
               </p>
 
@@ -149,7 +149,7 @@ export default function ContactUs() {
                 </span>
               </h2>
 
-              <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-loose tracking-widest mb-8">
+              <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
                 <TextType
                   text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
                   typingSpeed={15}
@@ -161,7 +161,7 @@ export default function ContactUs() {
                 />
               </div>
 
-              <div className="border-t-2 border-gray-700 my-12" />
+              <div className="h-[1.5px] bg-[#888] my-12" />
 
               <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
                 <div className="flex items-center gap-4">
@@ -181,40 +181,40 @@ export default function ContactUs() {
 
             {/* Right form */}
             <form className="col-span-4">
-              <div className="bg-[#011322] rounded-2xl xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-18 max-sm:p-5">
+              <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-18 max-sm:p-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Email"
-                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                   />
                   <input
                     placeholder="Full Name"
-                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Project Budget"
-                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                   />
                   <input
                     placeholder="Business Name"
-                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                   />
                 </div>
 
                 <textarea
                   placeholder="Tell us more about your product and goals"
                   rows={6}
-                  className="w-full rounded-[20px] mt-4 p-6 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
+                  className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                 />
 
-                <p className="text-white my-4 text-sm 1366:text-base">
+                <p className="text-white my-6 text-sm 1366:text-base">
                   How can we help you?
                 </p>
 
-                <div className="space-y-5">
+                <div className="space-y-6">
                   {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                     (row, rowIdx) => (
                       <div

@@ -73,13 +73,13 @@ export const Carousel = ({
 
         <div className="mx-6 min-h-max bg-white w-px"></div>
         <button
-          className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+          className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollLeft}
           disabled={!canScrollLeft}>
           <ChevronLeft className="h-8 w-8 text-white" />
         </button>
         <button
-          className="relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+          className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
           onClick={scrollRight}
           disabled={!canScrollRight}>
           <ChevronRight className="h-8 w-8 text-white" />

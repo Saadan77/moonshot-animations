@@ -24,7 +24,7 @@ const Navbar = ({ onMenuStateChange }) => {
                 { label: 'Google Ads', link: '/services/google-ads' },
                 { label: 'Mobile Applications', link: '/services/mobile-applications' },
                 { label: 'SEO', link: '/services/seo' },
-                { label: 'SSM', link: '/services/ssm' },
+                { label: 'SMM', link: '/services/smm' },
                 { label: 'Web Applications', link: '/services/web-applications' },
                 { label: 'Web Development', link: '/services/web-development' }
             ]

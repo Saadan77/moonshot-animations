@@ -128,7 +128,7 @@ export default function EmailMarketing() {
         </div>
 
         <div className="flex items-center relative w-full overflow-visible">
-          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -140,7 +140,7 @@ export default function EmailMarketing() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -172,7 +172,7 @@ export default function EmailMarketing() {
                 </span>
               </h1>
 
-              <p className="text-wrap font-sora font-medium text-white/70 text-[clamp(10px,1vw,20px)]">
+              <p className="text-wrap font-sora font-normal text-white/70 text-[clamp(10px,1vw,20px)]">
                 From bold concepts to polished sends, we create email flows that
                 clearly reflect who you are online
               </p>

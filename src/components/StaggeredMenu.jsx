@@ -471,7 +471,7 @@ export const StaggeredMenu = ({
           <div className="flex justify-center items-center gap-6">
             <button
               ref={toggleBtnRef}
-              className="bg-[#262626]/30 sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full pl-3 pr-6 py-2 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              className="sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full pl-3 pr-6 py-2 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
               style={{
                 color: "white",
                 fontFamily: "var(--font-sora), sans-serif",
@@ -608,7 +608,7 @@ export const StaggeredMenu = ({
                               <li key={dropItem.label + dropIdx}>
                                 <a
                                   href={dropItem.link}
-                                  className="text-white/80 hover:text-(--sm-accent,#ff0000) text-xl font-light transition-colors duration-200"
+                                  className="text-white/80 hover:text-(--sm-accent,#ff0000) text-base leading-relaxed uppercase font-light transition-colors duration-200"
                                 >
                                   {dropItem.label}
                                 </a>

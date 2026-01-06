@@ -119,7 +119,7 @@ export default function Portfolio() {
 
         <div className="flex items-center relative w-full overflow-hidden">
           {/* Dither Background */}
-          <div className="absolute inset-0 w-full h-full opacity-20">
+          {/* <div className="absolute inset-0 w-full h-full opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -131,7 +131,7 @@ export default function Portfolio() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -201,8 +201,11 @@ export default function Portfolio() {
                     top: 0 !important;
                     bottom: auto !important;
                   }
-                  #industries-grid .technology #industry-layout-grid-top-overlay, #industries-grid .legal #industry-layout-grid-top-overlay {
+                  #industries-grid #industries-grid .legal #industry-layout-grid-top-overlay {
                     background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%) !important;
+                  }
+                  #industries-grid .technology #industry-layout-grid-top-overlay {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
                   }
                 `,
               }}
@@ -218,7 +221,7 @@ export default function Portfolio() {
                         }
                         
                         #bottom-industries-grid > .grid {
-                            padding-top: 0%;
+                            padding-top: 1.5%;
                             padding-bottom: 0%;
                         }
                     }

@@ -53,7 +53,7 @@ export default function AboutUsPage() {
       id: 5,
       title: "Quality <br /> assurance",
       description:
-        "Unit Testing <br /> Integration Testing <br /> System Testing <br /> User Acceptance Testing <br /> Bug Fixing <br /> Optimization",
+        "Unit Testing <br /> Integration Testing <br /> System Testing <br /> User Acceptance Testing <br /> Bug Fixing <br /> Performance Optimization",
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ export default function AboutUsPage() {
           className="group relative w-[250px] overflow-hidden"
           style={{ height: "350px" }}
         >
-          <div className="absolute inset-0 z-10 grid place-content-center">
+          <div className="absolute inset-0 z-10 grid place-content-start">
             <p
               className="mb-10 px-4 text-[24px] uppercase text-white"
               dangerouslySetInnerHTML={{ __html: card.title }}
@@ -87,7 +87,7 @@ export default function AboutUsPage() {
             <img
               src="/images/arrow.png"
               alt="arrow"
-              className="-mt-[120px] h-auto w-full"
+              className="-mt-[140px] h-auto w-full"
             />
           </div>
         )}
@@ -424,7 +424,7 @@ export default function AboutUsPage() {
                 </span>
               </h1>
 
-              <p className="font-light text-white/70 text-xs lg:text-[clamp(12px,1.08vw,20px)]">
+              <p className="font-normal font-sora text-white/70 text-xs lg:text-[clamp(12px,1.08vw,20px)]">
                 From our values to our craft, this is how we shape stories that
                 define who we are with care
               </p>
@@ -653,7 +653,7 @@ export default function AboutUsPage() {
               </h2>
               <div />
             </div>
-            <div className="-mt-24 ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+            <div className="-mt-24 ml-[33.5%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
               <HorizontalScrollCarousel />
             </div>
           </div>

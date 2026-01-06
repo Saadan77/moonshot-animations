@@ -61,7 +61,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative w-full z-100 bg-[#00060B] rounded-b-[64px] overflow-hidden max-h-[1260px]"
+        <section className="relative w-full z-100 bg-[#00060B] rounded-b-[64px] overflow-hidden"
             style={{ backgroundImage: 'url("/images/hero-bg.png")' }}>
             {/* Navbar */}
             <Navbar onMenuStateChange={setIsMenuOpen} />
@@ -242,7 +242,7 @@ const Hero = () => {
             }} />
 
             {/* Bottom div */}
-            <div className="relative z-100 w-full max-sm:py-4 max-sm:min-h-0 min-h-[50px] -mt-40">
+            <div className="relative z-100 w-full max-sm:py-4 -mt-30">
                 {/* Bottom large background word/image */}
                 <img
                     src="/images/hero/moonshot-tech.png"
@@ -263,7 +263,7 @@ const Hero = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 py-12 gap-8">
+                <div className="relative flex justify-between items-center max-sm:justify-center px-20 max-sm:px-6 pt-22 pb-12 gap-8">
                     {/* Bottom Left Scroll Text */}
                     <div className="flex justify-center items-center gap-4 max-sm:hidden">
                         <p style={{ fontFamily: 'var(--font-sora), sans-serif' }} className="text-md max-sm:text-sm text-white text-nowrap">(Scroll Down)</p>

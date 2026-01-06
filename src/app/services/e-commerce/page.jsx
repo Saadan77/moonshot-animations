@@ -135,7 +135,7 @@ export default function Ecommerce() {
 
         <div className="flex items-center relative w-full overflow-visible">
           {/* Dither Background */}
-          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -147,7 +147,7 @@ export default function Ecommerce() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -162,12 +162,12 @@ export default function Ecommerce() {
             <div className="relative z-10 ml-20 max-lg:ml-15 max-sm:ml-10">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">Ecommerce</p>
+                <p className="font-poppins font-medium text-lg">E-commerce</p>
               </div>
 
               <h1 className="text-[clamp(40px,4vw,82px)] font-normal max-lg:text-start max-lg:items-start blockfont-thin font-sora uppercase mb-4 tracking-tight leading-none text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
-                  Building Ecommerce <br /> That Powers Your{" "}
+                  Building E-commerce <br /> That Powers Your{" "}
                 </AuroraText>
                 <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
@@ -223,7 +223,7 @@ export default function Ecommerce() {
                   />
                   <br />
                   <TextType
-                    text="Ecommerce development"
+                    text="E-commerce development"
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={false}
@@ -297,7 +297,7 @@ export default function Ecommerce() {
               <div className="flex flex-col items-center">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                   <TextType
-                    text="Modern ecommerce built for"
+                    text="Modern e-commerce built for"
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={false}

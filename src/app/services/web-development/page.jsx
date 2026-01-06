@@ -108,11 +108,11 @@ export default function WebDevelopment() {
     return (
       <div key={card.id} className="space-y-8">
         <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
+          className="text-[clamp(16px,1.3vw,24px)] leading-tight uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
         ></p>
         <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
+          className="text-[clamp(10px,0.9vw,16px)] leading-relaxed font-light text-white"
           dangerouslySetInnerHTML={{ __html: card.description }}
         />
       </div>
@@ -139,7 +139,7 @@ export default function WebDevelopment() {
         </div>
 
         <div className="flex items-center relative w-full overflow-visible">
-          <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+          {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -151,7 +151,7 @@ export default function WebDevelopment() {
               waveFrequency={3}
               waveSpeed={0.05}
             />
-          </div>
+          </div> */}
 
           {/* Background Image */}
           <div
@@ -234,7 +234,7 @@ export default function WebDevelopment() {
 
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
                 {/* Image column */}
-                <div className="-mt-20 relative z-10 flex items-center justify-center">
+                <div className="-mt-10 relative z-10 flex items-center justify-center">
                   <img
                     src="/images/services/web-development/section-3.png"
                     alt="Laptop showcasing website design"
@@ -245,8 +245,8 @@ export default function WebDevelopment() {
 
                 {/* Text column */}
                 <div className="text-white space-y-12">
-                  <div className="flex items-center gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-[316px]">|</div>
+                  <div className="flex items-stretch gap-16 max-lg:gap-8">
+                    <div className="w-1 bg-white self-stretch mt-7 mb-8.5" />
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to
@@ -274,7 +274,7 @@ export default function WebDevelopment() {
               </div>
             </section>
 
-            <section className="h-screen">
+            <section className="h-[125vh]">
               <img
                 src="/images/services/web-development/section-4.png"
                 className="h-full w-full object-cover"
@@ -343,7 +343,7 @@ export default function WebDevelopment() {
                 ))}
               </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div>
 
               <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType

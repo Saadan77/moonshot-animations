@@ -4,6 +4,7 @@ import LiquidEther from "@/components/LiquidEther";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 export default function CTA() {
     const smokeRef = useRef(null);
@@ -150,9 +151,7 @@ export default function CTA() {
                         type="button"
                         className="hover:cursor-pointer mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
                     >
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        <LiaLongArrowAltRightSolid className="w-8 h-8" />
                     </button>
                 </Link>
             </div>
