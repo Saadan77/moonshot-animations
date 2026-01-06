@@ -12,7 +12,7 @@ export const LayoutGrid = ({ cards }) => {
           <motion.div
             className={cn(
               card.className,
-              "relative overflow-hidden rounded-xl h-full w-full"
+              "relative overflow-hidden rounded-[18.105px] h-full w-full"
             )}
             layoutId={`card-${card.id}`}
           >
@@ -33,12 +33,10 @@ const ImageComponent = ({ card }) => {
           !!card.video || /\.(mp4|webm|mov|ogg|m4v)(\?|$)/i.test(src || "");
         if (isVideo) {
           return (
-            <motion.video
-              layoutId={`image-${card.id}-image`}
-              src={card.video || src}
-              poster={card.thumbnail}
+            <video
+              src={src}
               className={cn(
-                "object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500"
+                "object-cover object-top h-full w-full hover:scale-110 transition-transform duration-500"
               )}
               autoPlay
               muted
@@ -49,19 +47,29 @@ const ImageComponent = ({ card }) => {
         }
 
         return (
-          <motion.img
-            layoutId={`image-${card.id}-image`}
-            src={card.thumbnail || src}
-            className={cn(
-              "object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500"
-            )}
-            alt={card.title || "thumbnail"}
-          />
+          <div className="relative w-full h-full">
+            <div
+              id="industry-layout-grid-top-overlay"
+              className="layout-grid-top-overlay hidden absolute inset-0 top-0 z-10"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%)",
+              }}
+            ></div>
+            <motion.img
+              layoutId={`image-${card.id}-image`}
+              src={card.thumbnail || src}
+              className={cn(
+                "object-cover object-top h-full w-full hover:scale-110 transition-transform duration-500"
+              )}
+              alt={card.title || "thumbnail"}
+            />
+          </div>
         );
       })()}
       <div
         id="card-title-overlay"
-        className="text-[clamp(20px,2vw,30px)] absolute bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
+        className="text-[clamp(20px,2vw,30px)] absolute z-10 bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
         style={{
           background:
             "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",

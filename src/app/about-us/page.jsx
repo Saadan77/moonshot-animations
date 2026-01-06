@@ -53,7 +53,7 @@ export default function AboutUsPage() {
       id: 5,
       title: "Quality <br /> assurance",
       description:
-        "Unit Testing <br /> Integration Testing <br /> System Testing <br /> User Acceptance Testing <br /> Bug Fixing <br /> Performance Optimization",
+        "Unit Testing <br /> Integration Testing <br /> System Testing <br /> User Acceptance Testing <br /> Bug Fixing <br /> Optimization",
     },
     {
       id: 6,
@@ -653,7 +653,7 @@ export default function AboutUsPage() {
               </h2>
               <div />
             </div>
-            <div className="ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+            <div className="-mt-24 ml-[33%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
               <HorizontalScrollCarousel />
             </div>
           </div>

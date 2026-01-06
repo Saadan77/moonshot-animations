@@ -169,7 +169,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="hidden lg:block absolute top-40 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10">
+            <div className="hidden lg:block absolute top-50 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10">
               <img
                 src="/images/industries/city-bg.png"
                 className="w-5/6 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[50%] h-auto"
@@ -179,7 +179,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
+        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00050A] relative z-10">
           <div
             id="industries-grid"
             style={{
@@ -190,18 +190,20 @@ export default function Portfolio() {
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                    #industries-grid img,
-                    #industries-grid video {
-                      opacity: 0.7 !important;
-                    }
-                    #industries-grid .real-estate img, #industries-grid .technology img {
-                      object-position: center !important;
-                    }
-                    #industries-grid .technology #card-title-overlay, #industries-grid .legal #card-title-overlay {
-                      background: none !important;
-                      top: 0 !important;
-                      bottom: auto !important;
-                    }
+                  #industries-grid .layout-grid-top-overlay {
+                    display: block !important;
+                  }
+                  #industries-grid .real-estate img, #industries-grid .technology img {
+                    object-position: center !important;
+                  }
+                  #industries-grid .technology #card-title-overlay, #industries-grid .legal #card-title-overlay {
+                    background: none !important;
+                    top: 0 !important;
+                    bottom: auto !important;
+                  }
+                  #industries-grid .technology #industry-layout-grid-top-overlay, #industries-grid .legal #industry-layout-grid-top-overlay {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%) !important;
+                  }
                 `,
               }}
             />

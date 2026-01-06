@@ -29,7 +29,7 @@ export default function Testimonials() {
 
     return (
         <section
-            className="relative mt-60"
+            className="relative mt-40"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
             {/* DottedMap Background */}

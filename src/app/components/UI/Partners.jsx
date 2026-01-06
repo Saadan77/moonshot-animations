@@ -80,7 +80,7 @@ export default function Partners() {
             <section id="partners" className="relative z-50 -mt-15 bg-[#00060B] mx-auto pb-24 md:pb-28 lg:pb-32 overflow-hidden">
                 <div className=''>
                     {/* Top meta label */}
-                    <div className="relative mx-auto w-[92%] pt-16 sm:pt-20 pb-12">
+                    <div className="relative mx-auto w-[92%] py-16">
                         <div className="font-sora flex justify-between text-[#808080] text-[20px]">
                             <div className="text-[20px] text-[#808080]">
                                 <span className='text-nowrap font-sora font-normal'>08 — Partners</span>
