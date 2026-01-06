@@ -286,7 +286,7 @@ export default function MobileApplications() {
           >
             <section id="mobile-applications" className="pt-64">
               <div className="flex flex-col items-center">
-                <h2 className="text-5xl xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                   <TextType
                     text="Modern mobile apps made for"
                     typingSpeed={75}

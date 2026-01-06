@@ -106,9 +106,9 @@ export default function WebDevelopment() {
 
   const WebDevCard = ({ card }) => {
     return (
-      <div key={card.id} className="space-y-8">
+      <div key={card.id} className="1440:pt-10 space-y-8">
         <p
-          className="text-[clamp(16px,1.3vw,24px)] leading-tight uppercase text-white"
+          className="text-[clamp(16px,1.4vw,27px)] leading-tight uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
         ></p>
         <p
@@ -204,90 +204,90 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <div>
-          <div
-            className="bg-top"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-20 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Human-centered"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="web development Studio"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
+        <div
+          className="bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}
+        >
+          <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-20 -ml-16 max-lg:ml-0">
+                <TextType
+                  text="Human-centered"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="web development Studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
+              {/* Image column */}
+              <div className="-mt-10 relative z-10 flex items-center justify-center">
+                <img
+                  src="/images/services/web-development/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-auto w-full scale-125"
+                  style={{ mixBlendMode: "screen" }}
+                />
               </div>
 
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
-                {/* Image column */}
-                <div className="-mt-10 relative z-10 flex items-center justify-center">
-                  <img
-                    src="/images/services/web-development/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-auto w-full scale-125"
-                    style={{ mixBlendMode: "screen" }}
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="text-white space-y-12">
-                  <div className="flex items-stretch gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white self-stretch mt-7 mb-8.5" />
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to
-                        give you a good website development services.
-                        Additionally, our professional website developers give
-                        you exclusive insights how to make user friendly,
-                        interactive, secure and speedy websites. Moreover, our
-                        front-end developers and back-end developers know how to
-                        service your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
+              {/* Text column */}
+              <div className="text-white space-y-12">
+                <div className="flex items-stretch gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white self-stretch mt-7 mb-8.5" />
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to
+                      give you a good website development services.
+                      Additionally, our professional website developers give you
+                      exclusive insights how to make user friendly, interactive,
+                      secure and speedy websites. Moreover, our front-end
+                      developers and back-end developers know how to service
+                      your web development request in agile manner.
+                    </ScrollReveal>
                   </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
                 </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <section className="h-[125vh]">
-              <img
-                src="/images/services/web-development/section-4.png"
-                className="h-full w-full object-cover"
-              />
-            </section>
-          </div>
+          <section className="h-[125vh]">
+            <img
+              src="/images/services/web-development/section-4.png"
+              className="h-[85%] w-full object-cover"
+            />
+          </section>
+        </div>
 
-          <div
-            className="bg-no-repeat"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="web-dev" className="pt-64">
-              <h2 className="max-w-7xl max-xl:max-w-[85%] mx-auto text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+        <div
+          className="bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}
+        >
+          <section id="web-dev">
+            <div className="flex flex-col items-center">
+              <h2 className="text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
                 <TextType
                   text="Modern web dev made for"
                   typingSpeed={75}
@@ -306,12 +306,13 @@ export default function WebDevelopment() {
                   loop={true}
                 />
               </h2>
+            </div>
 
-              <div id="web-dev-layout">
-                <LayoutGrid cards={layoutImages} />
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
+            <div id="web-dev-layout">
+              <LayoutGrid cards={layoutImages} />
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
                       #web-dev #web-dev-layout > div.grid {
                           gap: 50px !important;
                           padding: 5rem !important;
@@ -333,18 +334,20 @@ export default function WebDevelopment() {
                           display: none !important;
                       }
                   `,
-                  }}
-                />
-              </div>
+                }}
+              />
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
+              {webDevInfo.map((card) => (
+                <WebDevCard key={card.id} card={card} />
+              ))}
+            </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div>
 
+            {/* Success Stories Section */}
+            <div>
               <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
                 <TextType
                   text="200+"
@@ -368,8 +371,8 @@ export default function WebDevelopment() {
               <div className="lg:-mt-16 xl:-mt-20">
                 <SuccessStories />
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
 
         <CTA />

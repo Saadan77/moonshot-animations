@@ -112,16 +112,16 @@ export default function ContactUs() {
         </div>
 
         <div className="-mt-10 py-50 bg-[#00050A] rounded-[34.137px] relative z-10">
-          <div className="max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-7 items-center gap-16">
+          <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
             {/* Left content */}
-            <div className="col-span-3">
+            <div className="col-span-4">
               <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
                 01 — Get in Touch
               </p>
 
               <h2
                 style={{ fontFamily: "Inter, sans-serif" }}
-                className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,90px)]"
+                className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
               >
                 <span className="flex items-center gap-x-4">
                   Have a{" "}
@@ -180,8 +180,8 @@ export default function ContactUs() {
             </div>
 
             {/* Right form */}
-            <form className="col-span-4">
-              <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-18 max-sm:p-5">
+            <form className="col-span-5">
+              <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-16 max-sm:p-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Email"
@@ -210,7 +210,7 @@ export default function ContactUs() {
                   className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                 />
 
-                <p className="text-white my-6 text-sm 1366:text-base">
+                <p className="text-white my-4 text-sm 1366:text-base">
                   How can we help you?
                 </p>
 
@@ -228,7 +228,7 @@ export default function ContactUs() {
                               key={t}
                               type="button"
                               onClick={() => toggleTag(t)}
-                              className={`py-4 px-8 max-1600:px-6 max-1440:px-5 max-1366:px-4.5 max-xl:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[12px] max-1600:text-[10px] max-1280:text-[9px] leading-[-2%] transition-colors duration-200 border ${
+                              className={`py-4 px-8 max-1600:px-5 max-1366:px-4.5 max-xl:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[13px] max-1600:text-[12px] max-1440:text-[11px] max-1336:text-[10px] max-1280:text-[9px] transition-colors duration-200 border ${
                                 isSelected
                                   ? "border-white/80 text-white/80"
                                   : "border-[#18354D] text-[#999999]"
