@@ -164,7 +164,7 @@ export default function GoogleAds() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
                 We run clever Google Ads campaigns that drive targeted traffic
                 and real online growth
               </p>

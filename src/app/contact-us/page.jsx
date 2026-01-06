@@ -13,12 +13,13 @@ import TextType from "@/components/TextType";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Button from "../components/button/button";
+import Link from "next/link";
 
 export default function ContactUs() {
   const tags = [
     "UI/UX Design",
     "Website Development",
-    "Ecommerce",
+    "E-commerce",
     "Branding",
     "Web Applications",
     "Animations",
@@ -96,7 +97,7 @@ export default function ContactUs() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1.08vw,22px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.08vw,22px)]">
                 From quick questions to big ideas, here’s how we turn your
                 message into real progress
               </p>
@@ -115,12 +116,12 @@ export default function ContactUs() {
             {/* Left content */}
             <div className="col-span-3">
               <p className="text-[20px] text-[#989898] mb-4">
-                02 — Get in Touch
+                01 — Get in Touch
               </p>
 
               <h2
                 style={{ fontFamily: "Inter, sans-serif" }}
-                className="leading-tight text-white mb-6 block text-[clamp(30px,3.8vw,90px)]"
+                className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,90px)]"
               >
                 <span className="flex items-center gap-x-4">
                   Have a{" "}
@@ -160,22 +161,22 @@ export default function ContactUs() {
                 />
               </div>
 
-              <div className="border-t border-gray-700 my-12" />
+              <div className="border-t-2 border-gray-700 my-12" />
 
-              <ul className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
-                <li className="flex items-center gap-4">
-                  <PhoneCall className="w-10 h-10 hover:w-12 hover:h-12 max-lg:h-8 md:h-8 transition-all transition-duration-200 text-white fill-amber-50" />
-                  <span>+1-972-331-5058</span>
-                </li>
+              <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
+                <div className="flex items-center gap-4">
+                  <PhoneCall className="w-10 h-10 max-lg:h-8 md:h-8 fill-white" />
+                  <Link href="tel:+19723315058" className="hover:underline">+1-972-331-5058</Link>
+                </div>
 
-                <li className="flex items-center gap-4">
-                  <GoLocation className="w-10 h-10 hover:w-12 hover:h-12 max-lg:h-8 md:h-8 transition-all transition-duration-200 text-white fill-white" />
-                  <span>
+                <div className="flex items-center gap-4">
+                  <GoLocation className="w-10 h-10 max-lg:h-8 md:h-8" />
+                  <Link href="https://share.google/nqL7znJrG0VweAWyG" className="hover:underline" target="_blank" rel="noopener noreferrer">
                     1200 East Collins Boulevard <br /> Suite 106 Richardson
                     Texas 75081
-                  </span>
-                </li>
-              </ul>
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Right form */}
@@ -184,32 +185,34 @@ export default function ContactUs() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Email"
-                    className="w-full rounded-[90px] py-3 px-4 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
                   />
                   <input
                     placeholder="Full Name"
-                    className="w-full rounded-[90px] py-3 px-4 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-sm">
                   <input
                     placeholder="Project Budget"
-                    className="w-full rounded-[90px] py-3 px-4 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
                   />
                   <input
                     placeholder="Business Name"
-                    className="w-full rounded-[90px] py-3 px-4 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-6 bg-[#000911] border border-[#18354D] outline-none"
                   />
                 </div>
 
                 <textarea
                   placeholder="Tell us more about your product and goals"
                   rows={6}
-                  className="w-full rounded-[20px] mt-4 p-4 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
+                  className="w-full rounded-[20px] mt-4 p-6 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                 />
 
-                <p className="text-white my-4 text-sm 1366:text-base">How can we help you?</p>
+                <p className="text-white my-4 text-sm 1366:text-base">
+                  How can we help you?
+                </p>
 
                 <div className="space-y-5">
                   {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
@@ -244,7 +247,7 @@ export default function ContactUs() {
                   <Button text="Send Message" href="#" />
                   <div className="lg:text-xs 1366:text-sm text-end">
                     <p className="text-[#A3A3A3]">Prefer email?</p>
-                    <p className="text-white">moonshottech@gmail.com</p>
+                    <Link href="mailto:moonshottech@gmail.com" className="text-white hover:underline">moonshottech@gmail.com</Link>
                   </div>
                 </div>
               </div>

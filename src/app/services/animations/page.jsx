@@ -165,7 +165,7 @@ export default function Animations() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
                 From concept frames to final render, we craft motion that brings
                 your brand story to life
               </p>

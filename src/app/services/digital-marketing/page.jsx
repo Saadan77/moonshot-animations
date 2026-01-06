@@ -166,7 +166,7 @@ export default function DigitalMarketing() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,0.9vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,0.9vw,19px)]">
                 From strategy to launch, we plan, run and optimize campaigns
                 that grow your brand online.
               </p>

@@ -167,7 +167,7 @@ export default function WebApplications() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
                 From initial concepts to polished code, we build web apps that
                 express your brand online.
               </p>

@@ -28,8 +28,8 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Technology",
-      thumbnail: "/images/industries/image-4.png",
-      className: "md:col-span-1 md:row-span-2",
+      thumbnail: "/images/industries/image4.png",
+      className: "md:col-span-1 md:row-span-2 technology",
       content: null,
     },
     {
@@ -44,14 +44,14 @@ export default function Portfolio() {
       title: "Real Estate",
       thumbnail: "/images/industries/image-5.png",
       className:
-        "md:col-span-3 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
+        "md:col-span-3 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px] real-estate",
       content: null,
     },
     {
       id: 6,
       title: "Legal",
       thumbnail: "/images/industries/image-6.png",
-      className: "md:col-span-1 md:row-span-2",
+      className: "md:col-span-1 md:row-span-2 legal",
       content: null,
     },
     {
@@ -163,7 +163,7 @@ export default function Portfolio() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1.05vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.05vw,20px)]">
                 From conceptual sketches to digital experiences, here's how we
                 turn imagination into design
               </p>
@@ -181,22 +181,30 @@ export default function Portfolio() {
 
         <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00050A] rounded-[34.137px] relative z-10">
           <div
-            className="industries-grid"
+            id="industries-grid"
             style={{
               ["--img-opacity"]: "0.8",
             }}
           >
+            <LayoutGrid cards={topCards} />
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                    .industries-grid img,
-                    .industries-grid video {
-                        opacity: 0.8 !important;
+                    #industries-grid img,
+                    #industries-grid video {
+                      opacity: 0.7 !important;
+                    }
+                    #industries-grid .real-estate img, #industries-grid .technology img {
+                      object-position: center !important;
+                    }
+                    #industries-grid .technology #card-title-overlay, #industries-grid .legal #card-title-overlay {
+                      background: none !important;
+                      top: 0 !important;
+                      bottom: auto !important;
                     }
                 `,
               }}
             />
-            <LayoutGrid cards={topCards} />
             <div id="bottom-industries-grid">
               <LayoutGrid cards={bottomCards} />
               <style

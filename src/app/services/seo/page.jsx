@@ -165,7 +165,7 @@ export default function SEO() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(11px,1.1vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(11px,1.1vw,20px)]">
                 From audits to content strategy, we plan and deliver SEO that
                 boosts your visibility online
               </p>

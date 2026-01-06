@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowRight, ChevronUp } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 export default function Footer() {
 
@@ -219,7 +220,7 @@ export default function Footer() {
                                         suppressHydrationWarning
                                     />
                                     <span className="text-black grid place-items-center rounded-full bg-white hover:bg-[#D42290] p-2.5 m-2 ml-[-63px]">
-                                        <ArrowRight className="w-6 h-6 hover:text-white" />
+                                        <LiaLongArrowAltRightSolid className="w-6 h-6 hover:text-white" />
                                     </span>
                                 </form>
 

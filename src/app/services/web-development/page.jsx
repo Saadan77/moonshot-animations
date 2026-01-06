@@ -183,7 +183,7 @@ export default function WebDevelopment() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1.1vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.1vw,20px)]">
                 From first ideas to final code, we design and build websites
                 that show who you are online
               </p>

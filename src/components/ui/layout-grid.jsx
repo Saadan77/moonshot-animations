@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const LayoutGrid = ({ cards }) => {
-
   return (
     <div className="w-full h-full p-5 xl:px-30 px:pt-30 lg:px-20 lg:pt-20 sm:px-10 sm:pt-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-12 relative">
       {cards.map((card, i) => (
@@ -30,14 +29,17 @@ const ImageComponent = ({ card }) => {
     <div className="relative h-full w-full">
       {(() => {
         const src = card.video || card.src || card.thumbnail;
-        const isVideo = !!card.video || /\.(mp4|webm|mov|ogg|m4v)(\?|$)/i.test(src || "");
+        const isVideo =
+          !!card.video || /\.(mp4|webm|mov|ogg|m4v)(\?|$)/i.test(src || "");
         if (isVideo) {
           return (
             <motion.video
               layoutId={`image-${card.id}-image`}
               src={card.video || src}
               poster={card.thumbnail}
-              className={cn("object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500")}
+              className={cn(
+                "object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500"
+              )}
               autoPlay
               muted
               loop
@@ -50,15 +52,19 @@ const ImageComponent = ({ card }) => {
           <motion.img
             layoutId={`image-${card.id}-image`}
             src={card.thumbnail || src}
-            className={cn("object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500")}
+            className={cn(
+              "object-cover object-top rounded-lg h-full w-full hover:scale-110 transition-transform duration-500"
+            )}
             alt={card.title || "thumbnail"}
           />
         );
       })()}
       <div
+        id="card-title-overlay"
         className="text-[clamp(20px,2vw,30px)] absolute bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
         style={{
-          background: "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
+          background:
+            "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
         }}
       >
         {card.title}

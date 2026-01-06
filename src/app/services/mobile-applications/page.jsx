@@ -167,7 +167,7 @@ export default function MobileApplications() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
                 From ideas to app release we design and build mobile apps that
                 show who you are on screen
               </p>

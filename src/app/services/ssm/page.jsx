@@ -164,7 +164,7 @@ export default function SSM() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,17px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,17px)]">
                 From ideas to final posts, we plan & manage SMM that shows who
                 you are online!
               </p>

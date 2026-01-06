@@ -176,7 +176,7 @@ export default function Ecommerce() {
                 </span>
               </h1>
 
-              <p className="font-sora font-medium text-white/70 text-[clamp(10px,1vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,20px)]">
                 From first idea to live launch, we design and build websites
                 that fuel your growth online
               </p>
