@@ -533,7 +533,7 @@ export const StaggeredMenu = ({
           </div>
 
           <Link
-            className="relative items-center mx-6"
+            className="relative items-center"
             aria-label="Logo"
             href="/"
           >
@@ -606,12 +606,12 @@ export const StaggeredMenu = ({
                           <ul className="list-none m-0 pl-8 mt-4 flex flex-col gap-2">
                             {it.dropdownItems.map((dropItem, dropIdx) => (
                               <li key={dropItem.label + dropIdx}>
-                                <a
+                                <Link
                                   href={dropItem.link}
                                   className="text-white/80 hover:text-(--sm-accent,#ff0000) text-base leading-relaxed uppercase font-light transition-colors duration-200"
                                 >
                                   {dropItem.label}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>

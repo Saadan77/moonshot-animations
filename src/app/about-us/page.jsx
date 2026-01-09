@@ -466,7 +466,7 @@ export default function AboutUsPage() {
                   </span>
                 </div>
 
-                <div className="uppercase font-sora lg:scale-115 max-lg:mx-5 lg:ml-20 xl:ml-25 2xl:ml-35">
+                <div className="uppercase font-sora lg:scale-115 max-lg:mx-5 lg:ml-20 xl:ml-27">
                   <ScrollReveal>
                     From concept to execution, we build <br /> impactful digital
                     solutions that resonate <br /> with real people and deliver
@@ -477,7 +477,7 @@ export default function AboutUsPage() {
                 <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
                   <div className="text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
                     <TextType
-                      text="With expertise in areas such as web design, digital marketing, social media <br /> management, and content creation, digital agencies play a crucial role."
+                      text="With expertise in areas such as web design, digital marketing, social media <br />management, and content creation, digital agencies play a crucial role."
                       typingSpeed={15}
                       pauseDuration={1500}
                       showCursor={true}

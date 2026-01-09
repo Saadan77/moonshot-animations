@@ -36,7 +36,7 @@ export function SlidingLogoMarquee({
   pauseOnHover = false,
   enableBlur = true,
   blurIntensity = 1,
-  height = "325px",
+  height = "400px",
   width = "100%",
   gap = "0.5rem",
   scale = 1,
