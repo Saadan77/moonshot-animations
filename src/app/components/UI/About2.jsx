@@ -7,7 +7,7 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
   return (
     <div className={className}>
       <div className="w-full h-full">
-        <div className="flex flex-col justify-between h-full">{children}</div>
+        <div className="flex flex-col justify-between min-h-150">{children}</div>
       </div>
     </div>
   );
@@ -87,7 +87,7 @@ const About2 = () => {
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:max-w-full max-md:min-w-full min-h-150",
+                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:max-w-full max-md:min-w-full",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -148,7 +148,7 @@ const About2 = () => {
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-h-150 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -187,7 +187,7 @@ const About2 = () => {
 
                 {/* Headline */}
                 <div
-                  className="max-w-[95%] mt-100 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -208,7 +208,7 @@ const About2 = () => {
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-h-150 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -270,7 +270,7 @@ const About2 = () => {
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-h-150 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -309,7 +309,7 @@ const About2 = () => {
 
                 {/* Headline */}
                 <div
-                  className="max-w-[90%] mt-60 relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="max-w-[90%] relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
