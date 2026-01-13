@@ -466,18 +466,20 @@ export default function AboutUsPage() {
                   </span>
                 </div>
 
-                <div className="uppercase font-sora lg:scale-115 max-lg:mx-5 lg:ml-20 xl:ml-27">
-                  <ScrollReveal>
-                    From concept to execution, we build <br /> impactful digital
-                    solutions that resonate <br /> with real people and deliver
-                    results
+                <div className="uppercase font-sora">
+                  <ScrollReveal size="md">
+                    ‘Tech With Moonshot’ is a competent digital design and
+                    strategic development agency specializing in digital
+                    performance across numerous channels viz. SEO, Google ad
+                    words, social media marketing, website design and
+                    development, digital advertising, and remarketing.
                   </ScrollReveal>
                 </div>
 
                 <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
                   <div className="text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
                     <TextType
-                      text="With expertise in areas such as web design, digital marketing, social media <br />management, and content creation, digital agencies play a crucial role."
+                      text="Our business pursuit seeks to cement long term relationship with our consumers. Essentially speaking, our digital strategists make use of data analytics to complement our partners’ brand image and ROI."
                       typingSpeed={15}
                       pauseDuration={1500}
                       showCursor={true}
@@ -598,6 +600,28 @@ export default function AboutUsPage() {
                   />
                 </h2>
 
+                <div id="technologies-description" className="w-3/4 mx-auto mt-8">
+                  <ScrollReveal size="sm">
+                    ‘Tech With Moonshot’ makes use of contemporary technology to
+                    deliver promised results. Our technical and digital pundits
+                    leverage artificial intelligence, machine learning, complex
+                    algorithms, predictive data analysis and process automation
+                    to ratchet up business profitability.
+                    <br />
+                    <br />
+                    Moreover, state-of-the-art designing and development devices
+                    shoot the productivity and creativity of digital performance
+                    team. Accordingly, our clientele witness matchless digital
+                    performance service, worthwhile SEO, Google ad words, and
+                    e-mail marketing facility resulting in hefty ROI.
+                  </ScrollReveal>
+                  <style dangerouslySetInnerHTML={{__html: `
+                    #technologies-description p {
+                      text-align: center;
+                    }
+                  `}} />
+                </div>
+
                 <div className="mt-8">
                   <SlidingLogoMarquee items={logos} />
                 </div>
@@ -620,7 +644,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        {/* Approach Section */}
+        {/* How It Works Section */}
         <div>
           <div className="relative">
             <div className="absolute -top-12 left-[48%] z-100">
@@ -642,18 +666,39 @@ export default function AboutUsPage() {
           >
             <div className="flex max-md:flex-col items-start justify-between">
               <p className="text-[#808080] font-poppins font-normal text-lg">
-                03 - Approach
+                03 - How It Works
               </p>
 
               <h2
-                className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
+                className="text-white -ml-22 text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
                 style={{ fontFamily: "var(--font-sora), sans-serif" }}
               >
                 Method of making <br /> better result
               </h2>
               <div />
             </div>
-            <div className="-mt-24 ml-[33.5%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+            <div className="flex max-md:flex-col items-start justify-between">
+              <div />
+              <div />
+              <p className="w-1/2 text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
+                We start by communicating with our clients via online chat,
+                email, or phone. After getting required information by asking
+                certain set of questions, we go for a mockup or a prototype
+                design by letting it go through several iterative stages as per
+                your feedback.
+                <br />
+                <br />
+                Once the final thing approved, the static designs are converted
+                to dynamic models with actual features and functionalities with
+                the help of extensive research and coding. We test and test
+                until it is free of all bugs or errors and of course until it
+                works as per your business needs. After everything is in place,
+                we finally deliver it to you with post deployment support and
+                maintenance offered.
+              </p>
+              <div />
+            </div>
+            <div className="-mt-24 ml-[32.5%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
               <HorizontalScrollCarousel />
             </div>
           </div>
@@ -741,13 +786,13 @@ export default function AboutUsPage() {
             />
           </div>
 
-          <div className="absolute z-10 inset-0 top-0">
+          {/* <div className="absolute z-10 inset-0 top-0">
             <img
               src="/images/about-us-page/bg-partners.png"
               alt="Background Bottom"
               className="w-full h-auto object-cover"
             />
-          </div>
+          </div> */}
 
           <Partners />
 
@@ -761,21 +806,7 @@ export default function AboutUsPage() {
                 display: none;
               }
               #about-us-partners #partners {
-                margin-top: 0px;
-                padding-top: 10rem;
-              }
-
-              /* About Us page-only section number overrides */
-              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal {
-                position: relative;
-                display: inline-block;
-                color: transparent;
-              }
-              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal::before {
-                content: "05 — Partners";
-                position: absolute;
-                inset: 0;
-                color: #808080;
+                display: none;
               }
 
               #about-us-partners #partners .mb-6 > span.text-nowrap.font-sora.font-normal {
