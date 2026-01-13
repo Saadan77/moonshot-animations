@@ -489,7 +489,7 @@ export default function AboutUsPage() {
                     />
                   </div>
 
-                  <div className="flex gap-16 max-lg:gap-8">
+                  <div className="flex gap-16 max-lg:gap-8 text-white">
                     <div>
                       <p className="text-[clamp(50px,6vw,110px)]">
                         <CountingNumber
@@ -600,7 +600,10 @@ export default function AboutUsPage() {
                   />
                 </h2>
 
-                <div id="technologies-description" className="w-3/4 mx-auto mt-8">
+                <div
+                  id="technologies-description"
+                  className="w-3/4 mx-auto mt-8"
+                >
                   <ScrollReveal size="sm">
                     ‘Tech With Moonshot’ makes use of contemporary technology to
                     deliver promised results. Our technical and digital pundits
@@ -615,11 +618,15 @@ export default function AboutUsPage() {
                     performance service, worthwhile SEO, Google ad words, and
                     e-mail marketing facility resulting in hefty ROI.
                   </ScrollReveal>
-                  <style dangerouslySetInnerHTML={{__html: `
+                  <style
+                    dangerouslySetInnerHTML={{
+                      __html: `
                     #technologies-description p {
                       text-align: center;
                     }
-                  `}} />
+                  `,
+                    }}
+                  />
                 </div>
 
                 <div className="mt-8">
@@ -746,17 +753,42 @@ export default function AboutUsPage() {
             }}
           />
 
-          <div className="max-w-[90%] mx-auto relative py-36">
-            <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
-              04 — What Defines Us
-            </span>
+          <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
+            <div className="col-span-1">
+              <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
+                04 — What Defines Us
+              </span>
 
-            <p className="text-[clamp(50px,4vw,60px)] mt-5 uppercase font-sora ml-5 leading-tight">
-              We deliver creative <br /> ideas to a crowded world.
-            </p>
+              <p className="text-white text-[clamp(30px,3vw,50px)] mt-5 uppercase font-sora leading-tight">
+                We deliver creative ideas to a crowded world.
+              </p>
 
-            <div className="lg:mb-10 lg:mt-20 xl:mb-30 xl:mt-40 2xl:mb-40 2xl:mt-50">
-              <AboutUsCards />
+              <div className="">
+                <ScrollReveal size="sm">
+                  Our experience proves that there is no single digital strategy
+                  that remains successful over time. Intuitively, our digital
+                  design, marketing and development strategists too dislike
+                  maintaining status quo.
+                  <br />
+                  <br />
+                  Importantly, our digital advertising experts and web
+                  application professionals continuously improve, test and
+                  refine strategies. Furthermore, our SEO and Google ad words
+                  pundits constantly adopt contemporary technologies and
+                  theorems to engender matchless financial results for our
+                  priceless partners.
+                </ScrollReveal>
+              </div>
+            </div>
+
+            <div className="w-full relative mx-auto h-auto overflow-hidden">
+              <Image
+                src="/images/about-us-page/what-defines-us.jpg"
+                alt="What Defines Us"
+                width={1200}
+                height={600}
+                className="w-full h-auto relative z-0 transition-all duration-600 hover:scale-105"
+              />
             </div>
           </div>
 
@@ -799,14 +831,31 @@ export default function AboutUsPage() {
           <style
             dangerouslySetInnerHTML={{
               __html: `
-              #about-us-partners .bg-\\[\\#00060B\\] {
-                background-color: #00060b36;
+              #about-us-partners {
+                background-color: #00060B;
               }
               #home-partners-clip-path {
                 display: none;
               }
               #about-us-partners #partners {
+                margin-top: 0px;
+              }
+
+              #about-us-partners #partners #partners-slider {
                 display: none;
+              }
+
+              /* About Us page-only section number overrides */
+              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal {
+                position: relative;
+                display: inline-block;
+                color: transparent;
+              }
+              #about-us-partners #partners .font-sora.flex.justify-between span.text-nowrap.font-sora.font-normal::before {
+                content: "05 — Partners";
+                position: absolute;
+                inset: 0;
+                color: #808080;
               }
 
               #about-us-partners #partners .mb-6 > span.text-nowrap.font-sora.font-normal {

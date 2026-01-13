@@ -83,7 +83,7 @@ export default function Partners() {
         id="partners"
         className="relative z-50 -mt-15 bg-[#00060B] mx-auto pb-24 md:pb-28 lg:pb-32 overflow-hidden"
       >
-        <div className="">
+        <div id="partners-slider">
           {/* Top meta label */}
           <div className="relative mx-auto w-[92%] py-16">
             <div className="font-sora flex justify-between text-[#808080] text-[20px]">
@@ -125,8 +125,8 @@ export default function Partners() {
             </Marquee>
           </div>
         </div>
+        <Testimonials />
       </section>
-      <Testimonials />
     </div>
   );
 }
