@@ -68,26 +68,26 @@ export default function AboutUsPage() {
       <>
         <div
           key={card.id}
-          className="group relative w-[250px] overflow-hidden"
+          className="group relative w-62.5 overflow-hidden"
           style={{ height: "350px" }}
         >
           <div className="absolute inset-0 z-10 grid place-content-start">
             <p
-              className="mb-10 px-4 text-[24px] uppercase text-white"
+              className="mb-10 px-4 text-[24px] uppercase"
               dangerouslySetInnerHTML={{ __html: card.title }}
             ></p>
             <p
-              className="px-4 text-[17px] text-white font-light leading-loose"
+              className="px-4 text-[17px] font-light leading-loose"
               dangerouslySetInnerHTML={{ __html: card.description }}
             />
           </div>
         </div>
         {card.id !== cards.length && (
-          <div className="w-[250px]">
+          <div className="w-62.5">
             <img
               src="/images/arrow.png"
               alt="arrow"
-              className="-mt-[140px] h-auto w-full"
+              className="-mt-35 h-auto w-full"
             />
           </div>
         )}
@@ -397,10 +397,15 @@ export default function AboutUsPage() {
             />
           </div> */}
 
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -408,12 +413,12 @@ export default function AboutUsPage() {
           {/* Hero Section */}
           <div className="pt-[18%] pb-[20%]">
             <div className="relative z-10 lg:ml-20 max-lg:py-[2em] max-lg:pl-[5em]">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+              <div className="mb-16 flex items-center gap-3 text-sm">
                 <img src="/images/about-us/icon.png" />
                 <p className="font-poppins font-medium text-lg">About Us</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-13 text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-13">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
@@ -489,7 +494,7 @@ export default function AboutUsPage() {
                     />
                   </div>
 
-                  <div className="flex gap-16 max-lg:gap-8 text-white">
+                  <div className="flex gap-16 max-lg:gap-8">
                     <div>
                       <p className="text-[clamp(50px,6vw,110px)]">
                         <CountingNumber
@@ -573,7 +578,7 @@ export default function AboutUsPage() {
                   02 - Technologies
                 </p>
                 <h2
-                  className="min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="min-h-37.5 lg:min-h-12.5 font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -587,7 +592,7 @@ export default function AboutUsPage() {
                 </h2>
 
                 <h2
-                  className="min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="min-h-37.5 lg:min-h-12.5 font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -677,7 +682,7 @@ export default function AboutUsPage() {
               </p>
 
               <h2
-                className="text-white -ml-22 text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
+                className="-ml-22 text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
                 style={{ fontFamily: "var(--font-sora), sans-serif" }}
               >
                 Method of making <br /> better result
@@ -759,7 +764,7 @@ export default function AboutUsPage() {
                 04 — What Defines Us
               </span>
 
-              <p className="text-white text-[clamp(30px,3vw,50px)] mt-5 uppercase font-sora leading-tight">
+              <p className="text-[clamp(30px,3vw,50px)] mt-5 uppercase font-sora leading-tight">
                 We deliver creative ideas to a crowded world.
               </p>
 

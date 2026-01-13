@@ -14,7 +14,6 @@ import {
 
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import CTA from "@/app/components/CTA";
 
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
@@ -24,9 +23,9 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
-import Form from "@/app/components/Form";
 import Image from "next/image";
 import ServiceCard from "@/app/components/ServiceCard";
+import FormCTA from "@/app/components/FormCTA";
 
 const data = [
   {
@@ -118,7 +117,10 @@ export default function WebDevelopment() {
 
   const WebDevCard = ({ card }) => {
     return (
-      <div key={card.id} className="relative z-50 1440:pt-10 flex flex-col gap-8 min-h-60">
+      <div
+        key={card.id}
+        className="relative z-50 1440:pt-10 flex flex-col gap-8 min-h-60"
+      >
         <p
           className="text-[clamp(16px,1.4vw,27px)] leading-tight uppercase text-white"
           dangerouslySetInnerHTML={{ __html: card.title }}
@@ -166,10 +168,15 @@ export default function WebDevelopment() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -188,7 +195,7 @@ export default function WebDevelopment() {
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Building <br /> Sites That Shape Your{" "}
                 </AuroraText>
-                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(40px,4.5vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Brand & Profile
                   </AuroraText>
@@ -216,11 +223,8 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <div
-          className="relative bg-no-repeat bg-cover bg-center"
-          // style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}
-        >
-          <div className="absolute inset-0 bg-no-repeat bg-cover bg-center z-0">
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[20%]">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -294,48 +298,55 @@ export default function WebDevelopment() {
             </div>
           </section>
 
-          {/* <section className="h-[125vh]">
+          <section className="h-[125vh]">
             <img
               src="/images/services/web-development/section-4.png"
               className="h-[85%] w-full object-cover"
             />
-          </section> */}
+          </section>
         </div>
 
-        <div
-          className="bg-no-repeat bg-cover bg-center"
-          // style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}
-        >
-          <section id="web-dev" className="pb-50">
-            <div className="flex flex-col items-center">
-              <h2 className="relative z-50 text-white text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                <TextType
-                  text="Multifaceted Web Development Services"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
-              <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
-                <TextType
-                  text="‘Tech With Moonshot’ allows a range of software development services. Interestingly, our professional programmers work with you to deliver customized and meaningful web development services."
-                  typingSpeed={15}
-                  pauseDuration={1500}
-                  showCursor={true}
-                  cursorCharacter="|"
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </div>
-            </div>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[20%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
 
-            <div id="web-dev-layout">
-              <LayoutGrid cards={layoutImages} />
-              <style
-                dangerouslySetInnerHTML={{
-                  __html: `
+          <section id="web-dev" className="pt-20">
+            <div>
+              <div className="flex flex-col items-center">
+                <h2 className="relative z-50 text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                  <TextType
+                    text="Multifaceted Web Development Services"
+                    typingSpeed={75}
+                    pauseDuration={1500}
+                    showCursor={false}
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="‘Tech With Moonshot’ allows a range of software development services. Interestingly, our professional programmers work with you to deliver customized and meaningful web development services."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
+              </div>
+
+              <div id="web-dev-layout">
+                <LayoutGrid cards={layoutImages} />
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
                       #web-dev #web-dev-layout > div.grid {
                           gap: 50px !important;
                           padding: 5rem !important;
@@ -357,111 +368,125 @@ export default function WebDevelopment() {
                           display: none !important;
                       }
                   `,
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
               {webDevInfo.map((card) => (
                 <WebDevCard key={card.id} card={card} />
               ))}
-            </div>
-
-            <section className="pt-20 px-20">
-              <h2
-                className=" relative z-50 my-8 min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
-                style={{ fontFamily: "var(--font-sora), sans-serif" }}
-              >
-                <TextType
-                  text={["Specialties"]}
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <ServiceCard
-                  title="Responsive Design"
-                  description="Responsive websites are workable across multiple platforms to increase the reach of your brand."
-                  icon={<Laptop />}
-                />
-
-                <ServiceCard
-                  title="Conversion-driven Design"
-                  description="Our web applications are fabricated in a way that promotes lead conversion."
-                  icon={<TrendingUp />}
-                />
-
-                <ServiceCard
-                  title="Search Engine Optimized"
-                  description="Tech With Moonshot professionals give our partners optimized and keyword loaded web applications."
-                  icon={<Search />}
-                />
-
-                <ServiceCard
-                  title="Safety and security"
-                  description="Our team fashions web applications that are secured with SSL certification."
-                  icon={<ShieldCheck />}
-                />
-
-                <ServiceCard
-                  title="Mobile Ready"
-                  description="It is advantageous for our partners to build applications that are also mobile-ready and convertible."
-                  icon={<Smartphone />}
-                />
-
-                <ServiceCard
-                  title="User Experience"
-                  description="Without proper induction of efficacious user experience, no web application is worthy for your brand."
-                  icon={<User />}
-                />
-
-                <div className="md:col-start-2">
-                  <ServiceCard
-                    title="Speed"
-                    description="Google algorithms pick up those web applications that are easily loadable and speedy. Fortunately, our web developers have abundant skills to accelerate the web speed."
-                    icon={<Gauge />}
-                  />
-                </div>
-              </div>
             </section>
 
-            {/* <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div> */}
-
-            {/* Success Stories Section */}
-            {/* <div>
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                <TextType
-                  text="200+"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Success Stories"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
-
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
-              </div>
-            </div> */}
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div>
           </section>
         </div>
 
-        <Form />
-        <CTA />
+        {/* Success Stories Section */}
+        <section>
+          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            <TextType
+              text="200+"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+            <br />
+            <TextType
+              text="Success Stories"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+          </h2>
+
+          <div className="lg:-mt-16 xl:-mt-20">
+            <SuccessStories />
+          </div>
+        </section>
+
+        <section className="py-20 px-20">
+          <h2
+            className="relative z-50 my-8 min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+            style={{ fontFamily: "var(--font-sora), sans-serif" }}
+          >
+            <TextType
+              text={["Specialties"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+          </h2>
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ServiceCard
+              title="Responsive Design"
+              description="Responsive websites are workable across multiple platforms to increase the reach of your brand."
+              icon={<Laptop />}
+            />
+
+            <ServiceCard
+              title="Conversion-driven Design"
+              description="Our web applications are fabricated in a way that promotes lead conversion."
+              icon={<TrendingUp />}
+            />
+
+            <ServiceCard
+              title="Search Engine Optimized"
+              description="Tech With Moonshot professionals give our partners optimized and keyword loaded web applications."
+              icon={<Search />}
+            />
+
+            <ServiceCard
+              title="Safety and security"
+              description="Our team fashions web applications that are secured with SSL certification."
+              icon={<ShieldCheck />}
+            />
+
+            <ServiceCard
+              title="Mobile Ready"
+              description="It is advantageous for our partners to build applications that are also mobile-ready and convertible."
+              icon={<Smartphone />}
+            />
+
+            <ServiceCard
+              title="User Experience"
+              description="Without proper induction of efficacious user experience, no web application is worthy for your brand."
+              icon={<User />}
+            />
+
+            <div className="md:col-start-2">
+              <ServiceCard
+                title="Speed"
+                description="Google algorithms pick up those web applications that are easily loadable and speedy. Fortunately, our web developers have abundant skills to accelerate the web speed."
+                icon={<Gauge />}
+              />
+            </div>
+          </div>
+
+          {/* Glow ellipse below cards */}
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div
+                className="min-w-screen h-37.5 rounded-t-full blur-[80px] in-out"
+                style={{
+                  background:
+                    "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
+                  backgroundSize: "200% 100%, 200% 100%",
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
+        <FormCTA />
         <Footer />
       </section>
     </>

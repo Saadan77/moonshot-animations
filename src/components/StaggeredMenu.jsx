@@ -608,7 +608,7 @@ export const StaggeredMenu = ({
                               <li key={dropItem.label + dropIdx}>
                                 <Link
                                   href={dropItem.link}
-                                  className="text-white/80 hover:text-(--sm-accent,#ff0000) text-base leading-relaxed uppercase font-light transition-colors duration-200"
+                                  className="text-white/80 hover:text-(--sm-accent,#ff0000) text-lg leading-relaxed font-light transition-colors duration-200"
                                 >
                                   {dropItem.label}
                                 </Link>

@@ -2,21 +2,21 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"; // Assuming you have this, otherwise remove cn()
+import { cn } from "@/lib/utils";
 
 export default function ServiceCard({
   title,
   description,
   icon,
-  activeColor = "#181438", // Default pink color from your image
+  activeColor = "#D42290",
   className,
 }) {
   return (
     <motion.div
       className={cn(
         "relative flex flex-col items-center justify-center text-center",
-        "w-full h-75 p-8", // Fixed height ensures consistency, adjust as needed
-        "border-2 border-black rounded-xl cursor-pointer overflow-hidden",
+        "w-full h-75 p-8",
+        "rounded-[18px] cursor-pointer overflow-hidden",
         "bg-[#3B1347] transition-colors",
         className
       )}
@@ -38,7 +38,6 @@ export default function ServiceCard({
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center gap-6">
         {/* Icon & Title Group */}
-        {/* We animate the color of this specific wrapper to affect SVG fill/stroke via currentColor */}
         <motion.div
           className="flex flex-col items-center gap-6"
           variants={{
@@ -49,7 +48,6 @@ export default function ServiceCard({
         >
           {/* Icon Wrapper */}
           <div className="text-4xl">
-            {/* Clone icon to enforce currentColor if needed, or just render it */}
             {React.isValidElement(icon)
               ? React.cloneElement(icon, {
                   className: "w-12 h-12 stroke-[1.5]",
@@ -61,7 +59,7 @@ export default function ServiceCard({
           <h3 className="text-2xl font-bold font-sora">{title}</h3>
         </motion.div>
 
-        {/* Description (Reveals on Hover) */}
+        {/* Description */}
         <motion.p
           className="text-sm font-medium leading-relaxed max-w-[90%]"
           variants={{

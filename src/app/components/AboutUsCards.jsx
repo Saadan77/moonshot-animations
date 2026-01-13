@@ -18,8 +18,8 @@ const AboutCard = ({
             className={[
                 'group relative overflow-hidden rounded-3xl border border-[#4D4D4D]',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
-                compact ? 'h-[400px] w-[400px]' : 'h-[400px] w-[400px]',
-                'max-1600:w-[330px] max-1600:h-[330px] max-1440:w-[300px] max-1440:h-[300px] max-1280:w-[280px] max-1280:h-[280px] max-xl:w-[230px] max-xl:h-[230px]',
+                compact ? 'h-100 w-100' : 'h-100 w-100',
+                'max-1600:w-82.5 max-1600:h-82.5 max-1440:w-75 max-1440:h-75 max-1280:w-70 max-1280:h-70 max-xl:w-57.5 max-xl:h-57.5',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
                 className,

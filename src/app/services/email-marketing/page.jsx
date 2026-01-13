@@ -15,6 +15,8 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
+import Image from "next/image";
+import FormCTA from "@/app/components/FormCTA";
 
 const data = [
   {
@@ -143,10 +145,15 @@ export default function EmailMarketing() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -235,7 +242,7 @@ export default function EmailMarketing() {
                 {/* Text column */}
                 <div className="col-span-1 text-white space-y-12">
                   <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-[316px]">|</div>
+                    <div className="w-1 bg-white min-h-79">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to{" "}
@@ -364,7 +371,7 @@ export default function EmailMarketing() {
           </div>
         </div>
 
-        <CTA />
+        <FormCTA />
         <Footer />
       </section>
     </>

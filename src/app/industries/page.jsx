@@ -8,12 +8,15 @@ import Dither from "@/components/Dither";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
+import Image from "next/image";
 
 export default function Portfolio() {
   const topCards = [
     {
       id: 1,
       title: "Education",
+      description:
+        "We specialise in putting education providers front and centre so they attract the right pupils and parents.",
       thumbnail: "/images/industries/image-1.png",
       className: "md:col-span-1",
       content: null,
@@ -21,6 +24,8 @@ export default function Portfolio() {
     {
       id: 2,
       title: "Beauty",
+      description:
+        "Beauty is no longer confined to magazines or in-stores. Understanding where your customers are spending their time and money online is vital.",
       thumbnail: "/images/industries/image-2.png",
       className: "md:col-span-1",
       content: null,
@@ -28,6 +33,8 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Technology",
+      description:
+        "Being an innovative technology company means your needs are constantly changing. Our team are experienced in creating strategies that adapt and evolve with you.",
       thumbnail: "/images/industries/image-4.png",
       className: "md:col-span-1 md:row-span-2 technology",
       content: null,
@@ -35,6 +42,8 @@ export default function Portfolio() {
     {
       id: 4,
       title: "Finance",
+      description:
+        "We know you like numbers. We do too. In a heavily contested digital marketplace, Tech With Moonshot can create truly optimised campaigns that deliver on the business metrics that matter.",
       thumbnail: "/images/industries/image-3.png",
       className: "md:col-span-2",
       content: null,
@@ -42,6 +51,8 @@ export default function Portfolio() {
     {
       id: 5,
       title: "Real Estate",
+      description:
+        "Real estate isn't the only industry all about location, location, location. Be found when it matters most.",
       thumbnail: "/images/industries/image-5.png",
       className:
         "md:col-span-3 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px] real-estate",
@@ -50,6 +61,8 @@ export default function Portfolio() {
     {
       id: 6,
       title: "Legal",
+      description:
+        "The care and ethics you take with your business should flow into your online strategy. Our team understand both.",
       thumbnail: "/images/industries/image-6.png",
       className: "md:col-span-1 md:row-span-2 legal",
       content: null,
@@ -57,6 +70,8 @@ export default function Portfolio() {
     {
       id: 7,
       title: "Utilities",
+      description:
+        "Working with brands, such as Water Corporation, means we understand the digital marketing needs of large-scale utilities.",
       thumbnail: "/images/industries/image-7.png",
       className:
         "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
@@ -65,6 +80,8 @@ export default function Portfolio() {
     {
       id: 8,
       title: "Government",
+      description:
+        "We create proposals and respond to tenders in a way that enables government departments to understand their return on investment.",
       thumbnail: "/images/industries/image-8.png",
       className:
         "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
@@ -73,6 +90,8 @@ export default function Portfolio() {
     {
       id: 9,
       title: "Medical",
+      description:
+        "The medical industry has a lot of nuances surrounding privacy and confidentiality. Tech With Moonshot has experience successfully navigating these.",
       thumbnail: "/images/industries/image-9.png",
       className: "md:col-span-2",
       content: null,
@@ -83,6 +102,8 @@ export default function Portfolio() {
     {
       id: 10,
       title: "Retail and E-Commerce",
+      description:
+        "We understand what makes an e-commerce strategy truly effective.",
       thumbnail: "/images/industries/image-10.png",
       className:
         "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
@@ -91,6 +112,8 @@ export default function Portfolio() {
     {
       id: 11,
       title: "Artificial Intelligence",
+      description:
+        "We help AI brands simplify complex ideas into clear digital experiences that drive awareness, trust, and adoption.",
       thumbnail: "/images/industries/image-11.png",
       className:
         "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
@@ -134,10 +157,15 @@ export default function Portfolio() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -186,7 +214,7 @@ export default function Portfolio() {
               ["--img-opacity"]: "0.8",
             }}
           >
-            <LayoutGrid cards={topCards} />
+            <LayoutGrid cards={topCards} showDescriptions={true} />
             <style
               dangerouslySetInnerHTML={{
                 __html: `
@@ -211,7 +239,7 @@ export default function Portfolio() {
               }}
             />
             <div id="bottom-industries-grid">
-              <LayoutGrid cards={bottomCards} />
+              <LayoutGrid cards={bottomCards} showDescriptions={true} />
               <style
                 dangerouslySetInnerHTML={{
                   __html: `

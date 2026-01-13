@@ -14,6 +14,7 @@ import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Button from "../components/button/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactUs() {
   const tags = [
@@ -70,10 +71,15 @@ export default function ContactUs() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />

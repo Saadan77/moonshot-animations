@@ -14,6 +14,8 @@ import TextType from "@/components/TextType";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
+import Image from "next/image";
+import FormCTA from "@/app/components/FormCTA";
 
 const data = [
   {
@@ -138,10 +140,15 @@ export default function SEO() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[150vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0 -mt-[10%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{filter: "brightness(1.25)"}}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -354,7 +361,7 @@ export default function SEO() {
           </section>
         </div>
 
-        <CTA />
+        <FormCTA />
         <Footer />
       </section>
     </>

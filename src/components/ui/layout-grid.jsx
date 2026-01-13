@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import TextType from "../TextType";
 
-export const LayoutGrid = ({ cards }) => {
+export const LayoutGrid = ({ cards, showDescriptions = false }) => {
   return (
     <div className="w-full h-full p-5 xl:px-30 px:pt-30 lg:px-20 lg:pt-20 sm:px-10 sm:pt-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-12 relative">
       {cards.map((card, i) => (
@@ -16,7 +17,7 @@ export const LayoutGrid = ({ cards }) => {
             )}
             layoutId={`card-${card.id}`}
           >
-            <ImageComponent card={card} />
+            <ImageComponent card={card} showDescriptions={showDescriptions} />
           </motion.div>
         </div>
       ))}
@@ -24,9 +25,17 @@ export const LayoutGrid = ({ cards }) => {
   );
 };
 
-const ImageComponent = ({ card }) => {
+const ImageComponent = ({ card, showDescriptions }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="relative h-full w-full">
+    <div
+      className="group relative h-full w-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
+    >
       {(() => {
         const src = card.video || card.src || card.thumbnail;
         const isVideo =
@@ -60,7 +69,7 @@ const ImageComponent = ({ card }) => {
               layoutId={`image-${card.id}-image`}
               src={card.thumbnail || src}
               className={cn(
-                "object-cover object-top h-full w-full hover:scale-110 transition-transform duration-500"
+                "group-hover:scale-110 object-cover object-top h-full w-full transition-transform duration-500"
               )}
               alt={card.title || "thumbnail"}
             />
@@ -69,13 +78,29 @@ const ImageComponent = ({ card }) => {
       })()}
       <div
         id="card-title-overlay"
-        className="text-[clamp(20px,2vw,30px)] absolute z-10 bottom-0 left-0 right-0 text-white p-6 rounded-b-lg"
+        className="absolute z-10 bottom-0 left-0 right-0 text-white p-6 rounded-b-lg text-left"
         style={{
           background:
             "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
         }}
       >
-        {card.title}
+        <div className="text-[clamp(20px,2vw,30px)] font-sora font-semibold">
+          {card.title}
+        </div>
+        {showDescriptions && card.description ? (
+          <div
+            className={cn(
+              "mt-2 text-[clamp(12px,0.9vw,16px)] font-sora font-light leading-snug text-white/85 max-w-[95%]",
+              "opacity-0 translate-y-2 max-h-0 overflow-hidden",
+              "group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-50",
+              "transition-all duration-300"
+            )}
+          >
+            {isHovered ? (
+              <TextType key={card.id} typingSpeed={30} text={card.description} />
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );
