@@ -16,6 +16,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -76,49 +77,46 @@ export default function GoogleAds() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Discovery <br /> & Requirements",
+      title: "Ad <br /> Tracking",
       description:
-        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+        "Tracking allows brands to easily <br />measure the effectiveness of ad <br />placement. As a result, our digital <br />consultants engage with your brand <br />team to modify any sort of aspect <br />that can yield better output.",
     },
     {
       id: 2,
-      title: "Architecture, <br /> Wireframes & Flows",
+      title: "PPC <br /> Component",
       description:
-        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+        "Linking ad words with PPC give you <br />instant speed to reach the top slot <br />in search engine. It provides more <br />impactful results compared to SEO <br />given the strategy is well-equipped.",
     },
     {
       id: 3,
-      title: "Pixel-perfect <br /> Frontend Development",
+      title: "Focused <br /> Keywords",
       description:
-        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+        "Our keyword strategy concentrates <br />on essential keywords used by your <br />potential customers. Keywords <br />specialists at Tech With Moonshot <br />give you an opportunity to expand <br />your keyword lists to attract more <br />traffic.",
     },
     {
       id: 4,
-      title: "Scalable & <br /> Data-Driven Web Builds",
+      title: "Manage <br /> Cost",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "At Tech With Moonshot, brands are <br />given flexibility to control their <br />advertising expense. We make sure <br />you never cross your budget when <br />things can be managed efficiently.",
+    },
+    {
+      id: 5,
+      title: "Integrated <br /> Campaigns",
+      description:
+        "Google algorithms judge your ad <br />words campaign by ‘Quality Scores.’ <br />That's why our ad words experts <br />make certain that keywords are <br />integrated with your overall online <br />marketing to increase your Quality <br />Score.",
+    },
+    {
+      id: 6,
+      title: "Engaging Ad <br /> Formats",
+      description:
+        "Google has fabricated newer ad <br />formats such as product listing ads <br />and in-video ads on YouTube. The <br />reason being these formats are more <br />engaging leading to more web <br />traffic and lead generation.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div key={card.id} className="space-y-8">
-        <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
+      <div
         className="relative bg-black"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
@@ -200,169 +198,21 @@ export default function GoogleAds() {
           </video>
         </div>
 
-        <div>
-          <div
-            className="bg-top"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Google Ads Pros"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="Google Ads That Convert"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                {/* Image column */}
-                <div className="-mt-30 relative z-10 col-span-1 flex items-center justify-center">
-                  <img
-                    src="/images/services/google-ads/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-full w-full object-cover"
-                    style={{ mixBlendMode: "screen" }}
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="col-span-1 text-white space-y-12">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-79">|</div>
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to{" "}
-                        <br />
-                        give you a good website development services. <br />
-                        Additionally, our professional website developers give
-                        you <br />
-                        exclusive insights how to make user friendly,
-                        interactive, <br />
-                        secure and speedy websites. Moreover, our front-end{" "}
-                        <br />
-                        developers and back-end developers know how to service{" "}
-                        <br />
-                        your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </section>
-
-            <section className="h-screen">
-              <img
-                src="/images/services/google-ads/section-4.png"
-                className="h-full w-full object-cover bg-center"
-              />
-            </section>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
 
-          <div
-            className="bg-no-repeat"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="google-ads" className="pt-64">
-              <div className="flex flex-col items-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                  <TextType
-                    text="Google Ads made to grow"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="Quality clicks that bring you sales"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
-                  <TextType
-                    text="Google Ad Words is the golden key to unlock business treasure trove. It is twice as much faster than SEO and generates more website traffic. Additionally, digital marketing revolving around Google Ad words generate ad infinitum leads."
-                    typingSpeed={15}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </div>
-              </div>
-
-              <div id="google-ads-layout">
-                <LayoutGrid cards={layoutImages} />
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
-                      #google-ads #google-ads-layout > div.grid {
-                        gap: 50px !important;
-                        padding: 5rem !important;
-                      }
-                      @media (max-width: 1024px) {
-                        #google-ads #google-ads-layout > div.grid {
-                          padding: 25px !important;
-                        }
-                      }
-                      #google-ads #google-ads-layout img {
-                          border-radius: 25.788px !important;
-                      }
-                      /* Hide the absolute overlay inside LayoutGrid cards */
-                      #google-ads
-                        #google-ads-layout
-                        .grid
-                        > div
-                        > div
-                        .absolute.bottom-0.left-0.right-0 {
-                        display: none !important;
-                      }
-                    `,
-                  }}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div>
-
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
-
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36 bg-bottom min-h-screen">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
                 <TextType
-                  text="200+"
+                  text="Google Ads Pros"
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={false}
@@ -371,7 +221,7 @@ export default function GoogleAds() {
                 />
                 <br />
                 <TextType
-                  text="Success Stories"
+                  text="Google Ads That Convert"
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={false}
@@ -379,17 +229,177 @@ export default function GoogleAds() {
                   loop={true}
                 />
               </h2>
+            </div>
 
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+              {/* Image column */}
+              <div className="-mt-30 relative z-10 col-span-1 flex items-center justify-center">
+                <img
+                  src="/images/services/google-ads/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-full w-full object-cover"
+                  style={{ mixBlendMode: "screen" }}
+                />
               </div>
-            </section>
+
+              {/* Text column */}
+              <div className="col-span-1 text-white space-y-12">
+                <div className="flex gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white min-h-79">|</div>
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to{" "}
+                      <br />
+                      give you a good website development services. <br />
+                      Additionally, our professional website developers give you{" "}
+                      <br />
+                      exclusive insights how to make user friendly, interactive,{" "}
+                      <br />
+                      secure and speedy websites. Moreover, our front-end <br />
+                      developers and back-end developers know how to service{" "}
+                      <br />
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
+                </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <img
+            src="/images/services/google-ads/section-4.png"
+            className="relative z-10 h-full w-full"
+          />
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
+
+          <section id="google-ads" className="relative z-10 pt-64">
+            <div className="flex flex-col">
+              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Google Ads made to grow"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="Quality clicks that bring you sales"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="mx-20 relative w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+                <TextType
+                  text="Google Ad Words is the golden key to unlock business treasure trove. It is twice as much faster than SEO and generates more website traffic. Additionally, digital marketing revolving around Google Ad words generate ad infinitum leads."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
+            </div>
+
+            <div id="google-ads-layout">
+              <LayoutGrid cards={layoutImages} />
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    #google-ads #google-ads-layout > div.grid {
+                      gap: 50px !important;
+                      padding: 5rem !important;
+                    }
+                    @media (max-width: 1024px) {
+                      #google-ads #google-ads-layout > div.grid {
+                        padding: 25px !important;
+                      }
+                    }
+                    #google-ads #google-ads-layout img {
+                        border-radius: 25.788px !important;
+                    }
+                    /* Hide the absolute overlay inside LayoutGrid cards */
+                    #google-ads
+                      #google-ads-layout
+                      .grid
+                      > div
+                      > div
+                      .absolute.bottom-0.left-0.right-0 {
+                      display: none !important;
+                    }
+                  `,
+                }}
+              />
+            </div>
+          </section>
+        </div>
+
+        <div
+          className="relative bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url(/images/services/bg-gradient-1.png)",
+          }}
+        >
+          <section className="relative">
+            <HorizontalScrollCards cards={webDevInfo} />
+          </section>
+
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+
+          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            <TextType
+              text="200+"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+            <br />
+            <TextType
+              text="Success Stories"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+          </h2>
+
+          <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+            <SuccessStories />
+          </section>
         </div>
 
         <FormCTA />
         <Footer />
-      </section>
+      </div>
     </>
   );
 }
