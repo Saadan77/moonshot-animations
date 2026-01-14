@@ -392,7 +392,12 @@ export default function Ecommerce() {
                 ))}
               </div> */}
 
-          <div className="relative bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}>
+          <div
+            className="relative bg-center bg-no-repeat bg-cover"
+            style={{
+              backgroundImage: "url(/images/services/bg-gradient-1.png)",
+            }}
+          >
             <section className="relative">
               <HorizontalScrollCards cards={webDevInfo} />
             </section>

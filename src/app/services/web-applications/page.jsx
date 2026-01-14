@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import CTA from "@/app/components/CTA";
 
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
@@ -16,6 +15,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -76,44 +76,41 @@ export default function WebApplications() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Discovery <br /> & Requirements",
+      title: "Conversion-driven Design",
       description:
-        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+        "Our web applications are fabricated in a way that promotes lead conversion.",
     },
     {
       id: 2,
-      title: "Architecture, <br /> Wireframes & Flows",
+      title: "Search Engine Optimized",
       description:
-        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+        "Our web application professionals give our partners optimized and keyword loaded web applications.",
     },
     {
       id: 3,
-      title: "Pixel-perfect <br /> Frontend Development",
+      title: "Safety and security",
       description:
-        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+        "Our team fashions web applications that are secured with SSL certification.",
     },
     {
       id: 4,
-      title: "Scalable & <br /> Data-Driven Web Builds",
+      title: "Mobile Ready",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "It is advantageous for our partners to build applications that are also mobile-ready and convertible.",
+    },
+    {
+      id: 5,
+      title: "User Experience",
+      description:
+        "Without proper induction of efficacious user experience, no web application is worthy for your brand.",
+    },
+    {
+      id: 6,
+      title: "Speed",
+      description:
+        "Google algorithms pick up those web applications that are easily loadable and speedy. Fortunately, our web developers have abundant skills to accelerate the web speed.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div key={card.id} className="space-y-8">
-        <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
@@ -140,13 +137,13 @@ export default function WebApplications() {
           </div> */}
 
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 -mt-[10%]">
+          <div className="absolute inset-0 z-0">
             <Image
               alt="linear-gradient-bg"
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -203,122 +200,141 @@ export default function WebApplications() {
           </video>
         </div>
 
-        <div>
-          <div
-            className="bg-bottom"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Human-centered"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="web development Studio"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                {/* Image column */}
-                <div className="-mt-50 max-2xl:mt-0 relative z-10 col-span-1">
-                  <img
-                    src="/images/services/web-applications/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-auto w-full object-cover"
-                    style={{ mixBlendMode: "screen" }}
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="col-span-1 text-white space-y-12">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-[316px]">|</div>
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to{" "}
-                        <br />
-                        give you a good website development services. <br />
-                        Additionally, our professional website developers give
-                        you <br />
-                        exclusive insights how to make user friendly,
-                        interactive, <br />
-                        secure and speedy websites. Moreover, our front-end{" "}
-                        <br />
-                        developers and back-end developers know how to service{" "}
-                        <br />
-                        your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </section>
-
-            <section className="h-screen overflow-x-hidden">
-              <img
-                src="/images/services/web-applications/section-4.png"
-                className="h-full w-full object-cover"
-              />
-            </section>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
 
-          <div
-            className="bg-no-repeat"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="web-applications" className="pt-64">
-              <div className="flex flex-col items-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                  <TextType
-                    text="Modern web apps built for"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="Immersive digital user experiences"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
+          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36 bg-bottom min-h-screen">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                <TextType
+                  text="Human-centered"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="web development Studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+              {/* Image column */}
+              <div className="-mt-50 max-2xl:mt-0 relative z-10 col-span-1">
+                <img
+                  src="/images/services/web-applications/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-auto w-full object-cover"
+                  style={{ mixBlendMode: "screen" }}
+                />
               </div>
 
-              <div id="web-applications-layout">
-                <LayoutGrid cards={layoutImages} />
+              {/* Text column */}
+              <div className="col-span-1 text-white space-y-12">
+                <div className="flex gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white min-h-79">|</div>
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to{" "}
+                      <br />
+                      give you a good website development services. <br />
+                      Additionally, our professional website developers give you{" "}
+                      <br />
+                      exclusive insights how to make user friendly, interactive,{" "}
+                      <br />
+                      secure and speedy websites. Moreover, our front-end <br />
+                      developers and back-end developers know how to service{" "}
+                      <br />
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
+                </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
 
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
+          <img
+            src="/images/services/web-applications/section-4.png"
+            className="relative z-10 h-[125vh] w-full object-cover"
+          />
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
+          <section id="web-applications" className="relative z-10 pt-64">
+            <div className="flex flex-col items-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                <TextType
+                  text="Modern web apps built for"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="Immersive digital user experiences"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="relative z-50 w-[60%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                <TextType
+                  text="‘Tech With Moonshot’ allows you to choose from multiple e-commerce development platforms. Importantly, our e-commerce consultants recommend you a platform as per your brand requirements and demands."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
+            </div>
+
+            <div id="web-applications-layout">
+              <LayoutGrid cards={layoutImages} />
+
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
                         #web-applications #web-applications-layout > div.grid {
                             gap: 50px !important;
                             padding: 5rem !important;
@@ -335,42 +351,46 @@ export default function WebApplications() {
                             display: none !important;
                         }
                     `,
-                  }}
-                />
-              </div>
+                }}
+              />
+            </div>
+          </section>
+        </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div>
+        <div
+          className="relative bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url(/images/services/bg-gradient-1.png)",
+          }}
+        >
+          <section className="relative">
+            <HorizontalScrollCards cards={webDevInfo} />
+          </section>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                <TextType
-                  text="200+"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Success Stories"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
+          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            <TextType
+              text="200+"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+            <br />
+            <TextType
+              text="Success Stories"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+          </h2>
 
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
-              </div>
-            </section>
+          <div className="lg:-mt-16 xl:-mt-20">
+            <SuccessStories />
           </div>
         </div>
 
