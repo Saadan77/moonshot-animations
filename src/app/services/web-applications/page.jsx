@@ -296,8 +296,8 @@ export default function WebApplications() {
           </div>
 
           <section id="web-applications" className="relative z-10 pt-64">
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+            <div className="flex flex-col">
+              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern web apps built for"
                   typingSpeed={75}
@@ -316,9 +316,9 @@ export default function WebApplications() {
                   loop={true}
                 />
               </h2>
-              <div className="relative z-50 w-[60%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
-                  text="‘Tech With Moonshot’ allows you to choose from multiple e-commerce development platforms. Importantly, our e-commerce consultants recommend you a platform as per your brand requirements and demands."
+                  text="Tech With Moonshot understands that digital brand is flawed without web applications. In fact, experience tells us that websites are necessary to capture online, or perhaps global, market share. For instance, web-based landing pages is the point of converting potential leads into users."
                   typingSpeed={15}
                   pauseDuration={1500}
                   showCursor={true}

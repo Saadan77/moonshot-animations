@@ -403,7 +403,7 @@ export default function AboutUsPage() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -615,13 +615,6 @@ export default function AboutUsPage() {
                     leverage artificial intelligence, machine learning, complex
                     algorithms, predictive data analysis and process automation
                     to ratchet up business profitability.
-                    <br />
-                    <br />
-                    Moreover, state-of-the-art designing and development devices
-                    shoot the productivity and creativity of digital performance
-                    team. Accordingly, our clientele witness matchless digital
-                    performance service, worthwhile SEO, Google ad words, and
-                    e-mail marketing facility resulting in hefty ROI.
                   </ScrollReveal>
                   <style
                     dangerouslySetInnerHTML={{
@@ -676,23 +669,20 @@ export default function AboutUsPage() {
               backgroundAttachment: "fixed",
             }}
           >
-            <div className="flex max-md:flex-col items-start justify-between">
-              <p className="text-[#808080] font-poppins font-normal text-lg">
-                03 - How It Works
-              </p>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2">
+                <p className="text-[#808080] font-poppins font-normal text-xl mb-6">
+                  03 - How It Works
+                </p>
 
-              <h2
-                className="-ml-22 text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
-                style={{ fontFamily: "var(--font-sora), sans-serif" }}
-              >
-                Method of making <br /> better result
-              </h2>
-              <div />
-            </div>
-            <div className="flex max-md:flex-col items-start justify-between">
-              <div />
-              <div />
-              <p className="w-1/2 text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
+                <h2
+                  className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
+                  style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                >
+                  Method of making <br /> better result
+                </h2>
+              </div>
+              <p className="col-span-3 text-[23px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] leading-relaxed text-white/80">
                 We start by communicating with our clients via online chat,
                 email, or phone. After getting required information by asking
                 certain set of questions, we go for a mockup or a prototype
@@ -704,11 +694,8 @@ export default function AboutUsPage() {
                 to dynamic models with actual features and functionalities with
                 the help of extensive research and coding. We test and test
                 until it is free of all bugs or errors and of course until it
-                works as per your business needs. After everything is in place,
-                we finally deliver it to you with post deployment support and
-                maintenance offered.
+                works as per your business needs.
               </p>
-              <div />
             </div>
             <div className="-mt-24 ml-[32.5%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
               <HorizontalScrollCarousel />

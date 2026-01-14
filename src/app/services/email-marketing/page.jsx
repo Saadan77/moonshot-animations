@@ -300,8 +300,8 @@ export default function EmailMarketing() {
           </div>
 
           <section id="email-marketing" className="pt-64">
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+            <div className="flex flex-col">
+              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern email flows made for"
                   typingSpeed={75}
@@ -320,7 +320,7 @@ export default function EmailMarketing() {
                   loop={true}
                 />
               </h2>
-              <div className="relative z-50 w-[58.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
                   text="E-mail is a powerful tool to connect with masses as it sends them personalized messages. The research clarifies the fact that email marketing is more effective than SMM. Additionally, it is used to convert web surfers into members and eventually loyal patrons."
                   typingSpeed={15}

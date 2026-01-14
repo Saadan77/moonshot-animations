@@ -16,6 +16,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -76,44 +77,59 @@ export default function SEO() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Discovery <br /> & Requirements",
+      title: "Sustainable High <br /> Performance",
       description:
-        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+        "Sustainable performance is at the heart <br />of Tech With Moonshot. Our SEO strategy <br />has unique performance platform making <br />certain that performance remains high.",
     },
     {
       id: 2,
-      title: "Architecture, <br /> Wireframes & Flows",
+      title: "Competitive <br /> Audit",
       description:
-        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+        "Our SEO strategists analyze your <br />competitors and the industry to make <br />a pattern out of this analysis. The <br />reason being it helps pushing the <br />brand up within specific industry.",
     },
     {
       id: 3,
-      title: "Pixel-perfect <br /> Frontend Development",
+      title: "Content <br /> Strategy",
       description:
-        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+        "SEO works productively when there is a <br />whole content strategy behind it. Tech <br />With Moonshot SEO specialists initiate <br />the project with content strategy to <br />make a success out of SEO marketing.",
     },
     {
       id: 4,
-      title: "Scalable & <br /> Data-Driven Web Builds",
+      title: "Information Architecture <br /> Development",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "Our digital analytical gurus create <br />keyword infrastructure that works in <br />sync with SEO marketing.",
+    },
+    {
+      id: 5,
+      title: "Site <br /> Migration",
+      description:
+        "Site migration impacts your search <br />rankings. But fortunately, our SEO <br />experts do so without nose-diving <br />page ranking.",
+    },
+    {
+      id: 6,
+      title: "Penalty <br /> Recovery",
+      description:
+        "Tech With Moonshot makes use of <br />principled and organic SEO techniques <br />making sure your brand enter good <br />books of Google algorithms.",
+    },
+    {
+      id: 7,
+      title: "Hyper-Local <br /> SEO",
+      description:
+        "Tech With Moonshot specializes in <br />creating niche keywords to boost brand <br />value in a specific locality or industry.",
+    },
+    {
+      id: 8,
+      title: "Mobile First <br /> Strategy",
+      description:
+        "Our experts fabricate SEO scheme that <br />complements your mobile first strategy <br />giving you more business advantage.",
+    },
+    {
+      id: 9,
+      title: "Technical <br /> SEO",
+      description:
+        "Technical SEO gives your brand <br />preferential status in Google page <br />placement. Importantly, technical SEO <br />is necessary to connect with Google <br />algorithms.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div key={card.id} className="space-y-8">
-        <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
@@ -193,11 +209,17 @@ export default function SEO() {
           />
         </div>
 
-        <div
-          className="bg-top"
-          style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-        >
-          <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
+          <section className="relative py-24 lg:py-52 px-6 lg:px-36">
             <div className="flex justify-end max-lg:justify-center">
               <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-10 -ml-16 max-lg:ml-0">
                 <TextType
@@ -234,7 +256,7 @@ export default function SEO() {
               {/* Text column */}
               <div className="col-span-1 text-white space-y-12">
                 <div className="flex gap-16 max-lg:gap-8">
-                  <div className="w-1 bg-white min-h-[316px]">|</div>
+                  <div className="w-1 bg-white min-h-79">|</div>
                   <div className="tracking-[-0.03em]">
                     <ScrollReveal size="sm" enableBlur={false}>
                       Tech With Moonshot makes use of collaborative efforts to{" "}
@@ -266,21 +288,25 @@ export default function SEO() {
             </div>
           </section>
 
-          <section className="h-screen">
-            <img
-              src="/images/services/seo/section-4.png"
-              className="h-full w-full object-cover"
-            />
-          </section>
+          <img
+            src="/images/services/seo/section-4.png"
+            className="relative z-10 h-[125vh] w-full object-cover"
+          />
         </div>
 
-        <div
-          className="bg-no-repeat"
-          style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-        >
-          <section id="seo" className="pt-64">
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
+          <section id="seo" className="relative z-10 pt-64">
+            <div className="flex flex-col">
+              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern SEO made for stronger"
                   typingSpeed={75}
@@ -299,7 +325,7 @@ export default function SEO() {
                   loop={true}
                 />
               </h2>
-              <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
                   text="Search Engine Optimization is crucial digital marketing tool to enhance the bottom-line. SEO sets itself off the ground with the help of keywords. Interestingly, the more organic these keywords are, the more organic people find your business online."
                   typingSpeed={15}
@@ -337,12 +363,17 @@ export default function SEO() {
                 }}
               />
             </div>
+          </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-              {webDevInfo.map((card) => (
-                <WebDevCard key={card.id} card={card} />
-              ))}
-            </div>
+          <div
+            className="relative bg-center bg-no-repeat bg-cover"
+            style={{
+              backgroundImage: "url(/images/services/bg-gradient-1.png)",
+            }}
+          >
+            <section className="relative">
+              <HorizontalScrollCards cards={webDevInfo} />
+            </section>
 
             <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
@@ -366,10 +397,10 @@ export default function SEO() {
               />
             </h2>
 
-            <div className="lg:-mt-16 xl:-mt-20">
+            <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
               <SuccessStories />
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
 
         <FormCTA />

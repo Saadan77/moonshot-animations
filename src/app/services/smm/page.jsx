@@ -192,133 +192,137 @@ export default function SSM() {
           />
         </div>
 
-        <div>
-          <div
-            className="bg-top"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Modern social"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="media experience studio"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                {/* Image column */}
-                <div className="-mt-54 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
-                  <img
-                    src="/images/services/ssm/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-auto w-full object-cover"
-                    style={{ mixBlendMode: "screen" }}
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="col-span-1 text-white space-y-12">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-79">|</div>
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to{" "}
-                        <br />
-                        give you a good website development services. <br />
-                        Additionally, our professional website developers give
-                        you <br />
-                        exclusive insights how to make user friendly,
-                        interactive, <br />
-                        secure and speedy websites. Moreover, our front-end{" "}
-                        <br />
-                        developers and back-end developers know how to service{" "}
-                        <br />
-                        your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </section>
-
-            <section className="max-h-screen overflow-hidden">
-              <img
-                src="/images/services/ssm/section-4.png"
-                className="h-full w-full object-cover"
-              />
-            </section>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
 
-          <div
-            className="bg-no-repeat"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="ssm" className="pt-64">
-              <div className="flex flex-col items-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                  <TextType
-                    text="Modern social media made"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="for engaging audience connection"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
-                  <TextType
-                    text="Social media advertising is one of the most pronounced and useful means to give wings to your profitability. The paid advertisements on Facebook, Instagram, Snap Chat, YouTube, TikTok, and other potential platforms are consequential in this digitized globe to give sustenance to brands."
-                    typingSpeed={15}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </div>
+          <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                <TextType
+                  text="Modern social"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="media experience studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+              {/* Image column */}
+              <div className="-mt-54 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
+                <img
+                  src="/images/services/ssm/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-auto w-full object-cover"
+                  style={{ mixBlendMode: "screen" }}
+                />
               </div>
 
-              <div id="ssm-layout">
-                <LayoutGrid cards={layoutImages} />
+              {/* Text column */}
+              <div className="col-span-1 text-white space-y-12">
+                <div className="flex gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white min-h-79">|</div>
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to{" "}
+                      <br />
+                      give you a good website development services. <br />
+                      Additionally, our professional website developers give you{" "}
+                      <br />
+                      exclusive insights how to make user friendly, interactive,{" "}
+                      <br />
+                      secure and speedy websites. Moreover, our front-end <br />
+                      developers and back-end developers know how to service{" "}
+                      <br />
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
+                </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
 
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
+          <section className="max-h-screen overflow-hidden">
+            <img
+              src="/images/services/ssm/section-4.png"
+              className="h-full w-full object-cover"
+            />
+          </section>
+        </div>
+
+        <div
+          className="bg-no-repeat"
+          style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
+        >
+          <section id="ssm" className="pt-64">
+            <div className="flex flex-col">
+              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Modern social media made"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="for engaging audience connection"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+                <TextType
+                  text="Social media advertising is one of the most pronounced and useful means to give wings to your profitability. The paid advertisements on Facebook, Instagram, Snap Chat, YouTube, TikTok, and other potential platforms are consequential in this digitized globe to give sustenance to brands."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
+            </div>
+
+            <div id="ssm-layout">
+              <LayoutGrid cards={layoutImages} />
+
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
                         #ssm #ssm-layout > div.grid {
                             gap: 50px !important;
                             padding: 5rem !important;
@@ -335,43 +339,42 @@ export default function SSM() {
                             display: none !important;
                         }
                     `,
-                  }}
-                />
-              </div>
+                }}
+              />
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
+              {webDevInfo.map((card) => (
+                <WebDevCard key={card.id} card={card} />
+              ))}
+            </div>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                <TextType
-                  text="200+"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Success Stories"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
+            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+              <TextType
+                text="200+"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+              <br />
+              <TextType
+                text="Success Stories"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+            </h2>
 
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
-              </div>
-            </section>
-          </div>
+            <div className="lg:-mt-16 xl:-mt-20">
+              <SuccessStories />
+            </div>
+          </section>
         </div>
 
         <FormCTA />

@@ -43,7 +43,7 @@ export default function HorizontalScrollCards({ cards }) {
   );
 
   return (
-    <section
+    <div
       ref={sectionRef}
       className="relative w-full overflow-hidden flex items-center"
     >
@@ -72,6 +72,6 @@ export default function HorizontalScrollCards({ cards }) {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
