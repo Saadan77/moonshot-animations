@@ -177,9 +177,9 @@ export default function Branding() {
           </p>
         </div>
 
-        <div className="absolute w-4/6 max-1600:w-3/4 max-1280:w-4/6 top-40 -right-60 max-1440:-right-52.5 max-1280:-right-35 z-10">
+        <div className="absolute w-1/2 max-1600:w-3/4 max-1280:w-4/6 top-40 right-0 z-10">
           <img
-            src="/images/services/branding/hero.png"
+            src="/images/services/branding/hero-cropped.png"
             className=""
             alt="Branding Hero"
           />
@@ -300,7 +300,7 @@ export default function Branding() {
 
         <div id="branding" className="relative z-10 pt-64">
           <div>
-            <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+            <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="Modern web dev made for"
                 typingSpeed={75}
@@ -319,7 +319,7 @@ export default function Branding() {
                 loop={true}
               />
             </h2>
-            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
               <TextType
                 text="Branding is mandatory for businesses, as it changes how target audience perceive your brand; it increases brand awareness, and it drives sales. Branding gives your business competitive advantage and grows business value."
                 typingSpeed={15}

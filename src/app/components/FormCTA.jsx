@@ -76,7 +76,7 @@ export default function FormCTA() {
   }, []);
 
   return (
-    <section className="bg-[#00050A] relative z-50">
+    <section className="bg-[#00050A] relative z-50 overflow-hidden">
       <div id="service-smoke-form-cta" ref={smokeRef}></div>
       <style
         dangerouslySetInnerHTML={{
