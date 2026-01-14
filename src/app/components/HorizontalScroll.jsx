@@ -18,20 +18,23 @@ export default function HorizontalScrollCards({ cards }) {
 
       if (!section || !strip) return;
 
-      // Helper to calculate how far to move
-      // (Total Width of Strip - Viewport Width)
-      const getScrollAmount = () => -(strip.scrollWidth - window.innerWidth);
+      const stripWidth = strip.scrollWidth;
+      const viewportWidth = window.innerWidth;
+
+      if (stripWidth <= viewportWidth) return;
+
+      const getScrollAmount = () => -(stripWidth - viewportWidth);
 
       const tween = gsap.to(strip, {
         x: getScrollAmount,
         ease: "none",
         scrollTrigger: {
           trigger: section,
-          start: "center center", // Start animation when center of section hits center of viewport
-          end: () => `+=${strip.scrollWidth}`, // Duration of scroll equals width of content
-          pin: true, // Pin the section in place
-          scrub: 1, // Smooth scrubbing
-          invalidateOnRefresh: true, // Recalculate on resize
+          start: "center center",
+          end: () => `+=${stripWidth - viewportWidth}`,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
         },
       });
 
@@ -44,17 +47,13 @@ export default function HorizontalScrollCards({ cards }) {
 
   const formatTitle = (title) => {
     if (!title) return title;
-
     if (/<br\s*\/?>/i.test(title)) {
       return title;
     }
-
     const words = title.trim().split(/\s+/);
-
     if (words.length === 2) {
       return `${words[0]}<br />${words[1]}`;
     }
-
     return title;
   };
 
@@ -63,16 +62,16 @@ export default function HorizontalScrollCards({ cards }) {
       ref={sectionRef}
       className="relative w-full overflow-hidden flex items-center"
     >
-      {/* The Moving Strip */}
-      <div ref={stripRef} className="flex flex-nowrap w-max px-10 lg:px-20">
+      <div
+        ref={stripRef}
+        className="flex flex-nowrap w-max px-10 lg:px-20 mx-auto"
+      >
         {cards.map((card, index) => (
           <div
             key={card.id || index}
-            className="w-[85vw] md:w-[45vw] lg:w-[23vw] shrink-0 py-8 box-border"
+            className="w-[85vw] md:w-[45vw] lg:w-[23vw] shrink-0 box-border"
           >
-            {/* Card Content Structure */}
             <div className="flex flex-col h-full justify-start space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
-              {/* Index Number for visual flair */}
               <div className="text-[#D42290] font-mono text-xl">
                 {(index + 1).toString().padStart(2, "0")}
               </div>

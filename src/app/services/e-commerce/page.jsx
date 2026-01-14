@@ -393,7 +393,7 @@ export default function Ecommerce() {
               </div> */}
 
           <div
-            className="relative bg-center bg-no-repeat bg-cover"
+            className="relative bg-top bg-no-repeat bg-cover"
             style={{
               backgroundImage: "url(/images/services/bg-gradient-1.png)",
             }}

@@ -353,7 +353,7 @@ export default function WebDevelopment() {
       </div>
 
       <div
-        className="relative bg-center bg-no-repeat bg-cover"
+        className="relative bg-top bg-no-repeat bg-cover"
         style={{
           backgroundImage: "url(/images/services/bg-gradient-1.png)",
         }}
@@ -362,7 +362,7 @@ export default function WebDevelopment() {
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
 
-        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-20 1440:my-30 text-white/30 w-px h-px bg-white/30"></div>
+        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         {/* Success Stories Section */}
         <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
