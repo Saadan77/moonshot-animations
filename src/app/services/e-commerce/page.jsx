@@ -346,7 +346,7 @@ export default function Ecommerce() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-2.5 leading-relaxed text-white/80">
+              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-2.5 leading-relaxed text-white/80">
                 <TextType
                   text="‘Tech With Moonshot’ allows you to choose from multiple e-commerce development platforms. Importantly, our e-commerce consultants recommend you a platform as per your brand requirements and demands."
                   typingSpeed={15}

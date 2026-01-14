@@ -325,7 +325,7 @@ export default function SEO() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
                   text="Search Engine Optimization is crucial digital marketing tool to enhance the bottom-line. SEO sets itself off the ground with the help of keywords. Interestingly, the more organic these keywords are, the more organic people find your business online."
                   typingSpeed={15}

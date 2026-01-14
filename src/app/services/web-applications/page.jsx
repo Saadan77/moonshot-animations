@@ -316,7 +316,7 @@ export default function WebApplications() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 relative z-50 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
                   text="Tech With Moonshot understands that digital brand is flawed without web applications. In fact, experience tells us that websites are necessary to capture online, or perhaps global, market share. For instance, web-based landing pages is the point of converting potential leads into users."
                   typingSpeed={15}

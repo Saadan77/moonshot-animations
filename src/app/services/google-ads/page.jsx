@@ -116,10 +116,7 @@ export default function GoogleAds() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <div
-        className="relative bg-black"
-        style={{ fontFamily: "var(--font-sora), sans-serif" }}
-      >
+      <div className="relative bg-black font-sora">
         <Navbar />
 
         <div className="min-h-screen flex items-center relative w-full overflow-visible">
@@ -314,7 +311,7 @@ export default function GoogleAds() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 relative w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
                 <TextType
                   text="Google Ad Words is the golden key to unlock business treasure trove. It is twice as much faster than SEO and generates more website traffic. Additionally, digital marketing revolving around Google Ad words generate ad infinitum leads."
                   typingSpeed={15}
