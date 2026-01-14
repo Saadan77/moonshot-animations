@@ -59,13 +59,13 @@ export default function HorizontalScrollCards({ cards }) {
             className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 p-8 box-border"
           >
             {/* Card Content Structure */}
-            <div className="flex flex-col h-full justify-center space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
+            <div className="flex flex-col h-full justify-start space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
               <div
-                className="text-[clamp(24px,1.5vw,36px)] uppercase text-white leading-[1.1] font-sora"
+                className="w-[60%] text-[clamp(24px,1.5vw,36px)] uppercase text-white leading-[1.1] font-sora"
                 dangerouslySetInnerHTML={{ __html: card.title }}
               />
               <div
-                className="text-[clamp(14px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
+                className="w-4/5 text-[clamp(14px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
                 dangerouslySetInnerHTML={{ __html: card.description }}
               />
               {/* Optional Index Number for visual flair */}
