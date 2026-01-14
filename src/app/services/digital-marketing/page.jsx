@@ -148,7 +148,7 @@ export default function DigitalMarketing() {
           <DecorativeLines />
 
           {/* Industries Hero Section */}
-          <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex items-center justify-between">
+          <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex">
             <div className="relative z-10 ml-20 max-lg:ml-5">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
