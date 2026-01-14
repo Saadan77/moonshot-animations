@@ -88,7 +88,7 @@ export default function WebApplications() {
     },
     {
       id: 3,
-      title: "Safety and security",
+      title: "Safety <br /> and security",
       description:
         "Our team fashions web applications that are secured with SSL certification.",
     },

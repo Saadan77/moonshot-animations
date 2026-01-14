@@ -79,55 +79,49 @@ export default function SEO() {
       id: 1,
       title: "Sustainable High <br /> Performance",
       description:
-        "Sustainable performance is at the heart <br />of Tech With Moonshot. Our SEO strategy <br />has unique performance platform making <br />certain that performance remains high.",
+        "Sustainable performance is at the heart of Tech With Moonshot. Our SEO strategy has unique performance platform making certain that performance remains high.",
     },
     {
       id: 2,
       title: "Competitive <br /> Audit",
       description:
-        "Our SEO strategists analyze your <br />competitors and the industry to make <br />a pattern out of this analysis. The <br />reason being it helps pushing the <br />brand up within specific industry.",
+        "Our SEO strategists analyze your competitors and the industry to make a pattern out of this analysis. The reason being it helps pushing the brand up within specific industry.",
     },
     {
       id: 3,
       title: "Content <br /> Strategy",
       description:
-        "SEO works productively when there is a <br />whole content strategy behind it. Tech <br />With Moonshot SEO specialists initiate <br />the project with content strategy to <br />make a success out of SEO marketing.",
+        "Tech With Moonshot SEO specialists initiate the project with content strategy to make a success out of SEO marketing.",
     },
     {
       id: 4,
-      title: "Information Architecture <br /> Development",
+      title: "Site <br /> Migration",
       description:
-        "Our digital analytical gurus create <br />keyword infrastructure that works in <br />sync with SEO marketing.",
+        "Site migration impacts your search rankings. But fortunately, our SEO experts do so without nose-diving page ranking.",
     },
     {
       id: 5,
-      title: "Site <br /> Migration",
+      title: "Penalty <br /> Recovery",
       description:
-        "Site migration impacts your search <br />rankings. But fortunately, our SEO <br />experts do so without nose-diving <br />page ranking.",
+        "Tech With Moonshot makes use of principled and organic SEO techniques making sure your brand enter good books of Google algorithms.",
     },
     {
       id: 6,
-      title: "Penalty <br /> Recovery",
+      title: "Hyper-Local <br /> SEO",
       description:
-        "Tech With Moonshot makes use of <br />principled and organic SEO techniques <br />making sure your brand enter good <br />books of Google algorithms.",
+        "Tech With Moonshot specializes in creating niche keywords to boost brand value in a specific locality or industry.",
     },
     {
       id: 7,
-      title: "Hyper-Local <br /> SEO",
+      title: "Mobile First <br /> Strategy",
       description:
-        "Tech With Moonshot specializes in <br />creating niche keywords to boost brand <br />value in a specific locality or industry.",
+        "Our experts fabricate SEO scheme that complements your mobile first strategy giving you more business advantage.",
     },
     {
       id: 8,
-      title: "Mobile First <br /> Strategy",
-      description:
-        "Our experts fabricate SEO scheme that <br />complements your mobile first strategy <br />giving you more business advantage.",
-    },
-    {
-      id: 9,
       title: "Technical <br /> SEO",
       description:
-        "Technical SEO gives your brand <br />preferential status in Google page <br />placement. Importantly, technical SEO <br />is necessary to connect with Google <br />algorithms.",
+        "Technical SEO gives your brand preferential status in Google page placement. Importantly, technical SEO is necessary to connect with Google algorithms.",
     },
   ];
 

@@ -100,7 +100,7 @@ export default function Ecommerce() {
       id: 4,
       title: "Payment Gateway",
       description:
-        "Our e-commerce website designers deploy highly secure payment gateways using unbreakable payment modules. Integrate 50+ payment modules to reach maximum customers.",
+        "Our e-commerce website designers deploy highly secure payment gateways using unbreakable payment modules to reach maximum customers.",
     },
     {
       id: 5,

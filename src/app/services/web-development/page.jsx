@@ -104,7 +104,7 @@ export default function WebDevelopment() {
     },
     {
       id: 3,
-      title: "E-Commerce <br /> Website Development",
+      title: "E-Commerce Web <br /> Development",
       description:
         "Our expert team develops economical and affordable e-commerce websites for you.",
     },
@@ -112,27 +112,9 @@ export default function WebDevelopment() {
       id: 4,
       title: "Enterprise <br /> Web Development",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "We use best practices, testing, and analytics to improve speed, stability, and conversions, so your website keeps getting better with real data over time.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div
-        key={card.id}
-        className="relative z-50 1440:pt-10 flex flex-col gap-8 min-h-60"
-      >
-        <p
-          className="text-[clamp(16px,1.4vw,27px)] leading-tight uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] leading-relaxed font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
@@ -295,7 +277,7 @@ export default function WebDevelopment() {
           </div>
         </section>
 
-        <section className="h-[125vh]">
+        <section className="relative z-10 h-[125vh]">
           <img
             src="/images/services/web-development/section-4.png"
             className="h-[85%] w-full object-cover"

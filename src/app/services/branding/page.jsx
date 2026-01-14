@@ -79,43 +79,43 @@ export default function Branding() {
       id: 1,
       title: "Logo Ownership <br /> Right",
       description:
-        "It is our religion to give our <br />partners outright copyrights <br />of all products they co-opt.",
+        "It is our religion to give our partners outright copyrights of all products they co-opt.",
     },
     {
       id: 2,
       title: "Social Media <br /> Expertise",
       description:
-        "Our team fabricates impressive <br />social media banners and posts <br />to illuminate different facets of <br />your brand across the globe.",
+        "Our team fabricates impressive social media banners and posts to illuminate different facets of your brand across the globe.",
     },
     {
       id: 3,
       title: "Best Stationery <br /> Designing",
       description:
-        "Our team invents expressive <br />stationery designs to highlight <br />brand identity and values.",
+        "Our team invents expressive stationery designs to highlight brand identity and values.",
     },
     {
       id: 4,
       title: "ROI Boost via <br /> Landing Pages",
       description:
-        "Make effective use of advertising <br />investment with our UX/UI designed <br />landing pages.",
+        "Make effective use of advertising investment with our UX/UI designed landing pages.",
     },
     {
       id: 5,
       title: "Money Back <br /> Guarantee",
       description:
-        "All our branding services feature <br />money back guarantee to give you <br />convenience at our cost.",
+        "All our branding services feature money back guarantee to give you convenience at our cost.",
     },
     {
       id: 6,
       title: "Industry Specific <br /> Designs",
       description:
-        "Our expert strategists make use of <br />industry-specific trends to create <br />insurmountable value for your brand.",
+        "Our expert strategists make use of industry-specific trends to create insurmountable value for your brand.",
     },
     {
       id: 7,
       title: "Unique <br /> Designs",
       description:
-        "Uncommon designs allow our partners <br />to develop exclusive brand <br />positioning.",
+        "Uncommon designs allow our partners to develop exclusive brand positioning.",
     },
   ];
 

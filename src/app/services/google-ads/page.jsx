@@ -77,39 +77,39 @@ export default function GoogleAds() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Ad <br /> Tracking",
+      title: "Ad Tracking",
       description:
-        "Tracking allows brands to easily <br />measure the effectiveness of ad <br />placement. As a result, our digital <br />consultants engage with your brand <br />team to modify any sort of aspect <br />that can yield better output.",
+        "We track ad performance to accurately measure effectiveness. Our consultants continuously optimize campaigns to improve overall results.",
     },
     {
       id: 2,
-      title: "PPC <br /> Component",
+      title: "PPC Component",
       description:
-        "Linking ad words with PPC give you <br />instant speed to reach the top slot <br />in search engine. It provides more <br />impactful results compared to SEO <br />given the strategy is well-equipped.",
+        "PPC enables instant visibility in top search positions. When executed correctly, it delivers faster and stronger results than SEO.",
     },
     {
       id: 3,
-      title: "Focused <br /> Keywords",
+      title: "Focused Keywords",
       description:
-        "Our keyword strategy concentrates <br />on essential keywords used by your <br />potential customers. Keywords <br />specialists at Tech With Moonshot <br />give you an opportunity to expand <br />your keyword lists to attract more <br />traffic.",
+        "We target high-intent keywords used by potential customers. Our specialists also expand keyword lists to drive more qualified traffic.",
     },
     {
       id: 4,
-      title: "Manage <br /> Cost",
+      title: "Manage Cost",
       description:
-        "At Tech With Moonshot, brands are <br />given flexibility to control their <br />advertising expense. We make sure <br />you never cross your budget when <br />things can be managed efficiently.",
+        "We help brands control advertising spend efficiently. Campaigns are optimized to stay within budget without sacrificing performance.",
     },
     {
       id: 5,
-      title: "Integrated <br /> Campaigns",
+      title: "Integrated Campaigns",
       description:
-        "Google algorithms judge your ad <br />words campaign by ‘Quality Scores.’ <br />That's why our ad words experts <br />make certain that keywords are <br />integrated with your overall online <br />marketing to increase your Quality <br />Score.",
+        "We align keywords with your overall marketing strategy. This improves Quality Scores and enhances campaign effectiveness.",
     },
     {
       id: 6,
-      title: "Engaging Ad <br /> Formats",
+      title: "Engaging Ad Formats",
       description:
-        "Google has fabricated newer ad <br />formats such as product listing ads <br />and in-video ads on YouTube. The <br />reason being these formats are more <br />engaging leading to more web <br />traffic and lead generation.",
+        "We use modern ad formats like product listings and video ads. These formats boost engagement, traffic, and lead generation.",
     },
   ];
 

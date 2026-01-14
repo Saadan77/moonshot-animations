@@ -74,43 +74,43 @@ export default function EmailMarketing() {
       id: 1,
       title: "Conversion-driven <br /> Layout",
       description:
-        "Our e-mail marketing has built-in layout <br />that seeks lead conversion. <br />Additionally, it is optimized, user <br />interactive and mobile friendly.",
+        "Our e-mail marketing has built-in layout that seeks lead conversion. Additionally, it is optimized, user interactive and mobile friendly.",
     },
     {
       id: 2,
       title: "Error Free <br /> E-mails",
       description:
-        "Error filled emails hurt brand image. <br />That's why 'Tech With Moonshot' <br />makes sure our email-marketing is <br />impeccable from every angle.",
+        "Error filled emails hurt brand image. That's why 'Tech With Moonshot' makes sure our email-marketing is impeccable from every angle.",
     },
     {
       id: 3,
       title: "Data-Driven <br /> Content",
       description:
-        "Tech With Moonshot' emailing specialists <br />make use of data-driven content to <br />make email promotions search engine <br />optimized.",
+        "Tech With Moonshot' emailing specialists make use of data-driven content to make email promotions search engine optimized.",
     },
     {
       id: 4,
       title: "Targeted <br /> Emails",
       description:
-        "Segmented email marketing produce <br />better results in terms of reach <br />and lead generation.",
+        "Segmented email marketing produce better results in terms of reach and lead generation.",
     },
     {
       id: 5,
       title: "Personalization",
       description:
-        "Email-marketing is more effectual <br />when they deliver personalized <br />messages to targeted niche.",
+        "Email-marketing is more effectual when they deliver personalized messages to targeted niche.",
     },
     {
       id: 6,
       title: "AI <br /> embedded",
       description:
-        "AI embedded email marketing strategies <br />are more productive, as they use <br />algorithm to predict sophisticated <br />taglines for target audience.",
+        "AI embedded email marketing strategies are more productive, as they use algorithm to predict sophisticated taglines for target audience.",
     },
     {
       id: 7,
       title: "Go beyond <br /> text",
       description:
-        "Send images, videos, apps, and emoji <br />to tell your story and drive action <br />in the most powerful way possible.",
+        "Send images, videos, apps, and emoji to tell your story and drive action in the most powerful way possible.",
     },
   ];
 

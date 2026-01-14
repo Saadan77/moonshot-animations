@@ -79,37 +79,37 @@ export default function Animations() {
       id: 1,
       title: "Whiteboard <br /> Animation",
       description:
-        "Whiteboard videos seek to involve <br />and engage customers on wide <br />array of topics.",
+        "Whiteboard videos seek to involve and engage customers on wide array of topics.",
     },
     {
       id: 2,
       title: "Character <br /> Animation",
       description:
-        "Characters revolutionize your <br />products/services as they inject <br />emotions into videos.",
+        "Characters revolutionize your products/services as they inject emotions into videos.",
     },
     {
       id: 3,
       title: "2D <br /> Animation",
       description:
-        "2D Animations are eye-catchy, <br />efficient and customer oriented.",
+        "2D Animations are eye-catchy, efficient and customer oriented.",
     },
     {
       id: 4,
       title: "3D <br /> Animation",
       description:
-        "3D characters are user-friendly <br />as well as effective tool to grab <br />customer attention.",
+        "3D characters are user-friendly as well as effective tool to grab customer attention.",
     },
     {
       id: 5,
       title: "Explainer <br /> Videos",
       description:
-        "Short video aims at explaining <br />your product/service to your <br />potential customers.",
+        "Short video aims at explaining your product/service to your potential customers.",
     },
     {
       id: 6,
       title: "Motion <br /> Graphics",
       description:
-        "Motion animation is crucial, for it <br />disseminate your brand’s story <br />effectively.",
+        "Motion animation is crucial, for it disseminate your brand’s story effectively.",
     },
   ];
 

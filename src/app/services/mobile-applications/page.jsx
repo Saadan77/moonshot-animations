@@ -77,39 +77,39 @@ export default function MobileApplications() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Mobile Application <br /> Strategy",
+      title: "Mobile Application Strategy",
       description:
-        "Tech With Moonshot put weight <br />behind strategy-making before <br />getting to work. It is crucial for <br />us to take care of every detail of <br />customer requirements to come <br />up with workable way forward. <br />Importantly, our agile project <br />management philosophy is guided <br />with a mix of data analytics to <br />fabricate customer-focused <br />mobile applications.",
+        "Tech With Moonshot focuses on strategy-making before development. We analyze customer requirements using data-driven agile methods.",
     },
     {
       id: 2,
-      title: "User Experience <br /> Design",
+      title: "User Experience Design",
       description:
-        "Tech With Moonshot develops <br />intuitive and creative mobile app <br />designs. Our UI/UX designers and <br />prototype engineers incorporate <br />engaging and aesthetic experience <br />to promote mobile application <br />traffic. All in all, our mobile <br />application development team <br />focuses on increasing downloads, <br />retention rate and lead generation.",
+        "We design intuitive and engaging mobile app experiences. Our UI/UX experts focus on increasing downloads, retention, and leads.",
     },
     {
       id: 3,
-      title: "Mobile Application <br /> Development",
+      title: "Mobile Application Development",
       description:
-        "Data-driven mobile app <br />development allows your brand <br />to increase your profitability. <br />Importantly, our pragmatic app <br />developers have worked on <br />innumerable mobile app <br />development, giving them <br />substantial experience how to <br />develop customer-focused and <br />profit generating mobile <br />applications.",
+        "Our data-driven development approach helps build profitable mobile apps. Experienced developers create customer-focused applications.",
     },
     {
       id: 4,
       title: "Testing",
       description:
-        "Development without testing <br />leads to unimaginable loss to <br />the developer and client. For <br />this reason, our quality assurance <br />department tests the final <br />product to give you flawless <br />mobile applications. On the <br />whole, Tech With Moonshot <br />assures quality leading to your <br />delight and satisfaction.",
+        "Our QA team rigorously tests every application to ensure quality, stability, and reliability.",
     },
     {
       id: 5,
-      title: "Mobile Application <br /> Launch",
+      title: "Mobile Application Launch",
       description:
-        "Tech With Moonshot assist our <br />partners in launching mobile <br />applications on App Store and <br />Play Store. Additionally, our <br />application developers make <br />certain you get all the <br />functionalities to further your <br />brand goals. To your delight, we <br />offer you installation guide, test <br />cases and user guide.",
+        "We assist in launching apps on the App Store and Play Store, providing full functionality, guides, and test documentation.",
     },
     {
       id: 6,
-      title: "Support and <br /> Maintenance",
+      title: "Support and Maintenance",
       description:
-        "Tech With Moonshot assures that <br />you get frictionless support <br />services for their mobile <br />applications. Importantly, you <br />can contact us 24/7 even after <br />your project is delivered. <br />Besides our maintenance staff <br />provide you with periodic <br />services to let your customers <br />enjoy your mobile application <br />without flaws.",
+        "We provide continuous support and maintenance services. Our team is available 24/7 to keep your app running smoothly.",
     },
   ];
 

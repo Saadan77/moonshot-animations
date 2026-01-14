@@ -42,6 +42,22 @@ export default function HorizontalScrollCards({ cards }) {
     { scope: sectionRef, dependencies: [cards] }
   );
 
+  const formatTitle = (title) => {
+    if (!title) return title;
+
+    if (/<br\s*\/?>/i.test(title)) {
+      return title;
+    }
+
+    const words = title.trim().split(/\s+/);
+
+    if (words.length === 2) {
+      return `${words[0]}<br />${words[1]}`;
+    }
+
+    return title;
+  };
+
   return (
     <div
       ref={sectionRef}
@@ -52,7 +68,7 @@ export default function HorizontalScrollCards({ cards }) {
         {cards.map((card, index) => (
           <div
             key={card.id || index}
-            className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 p-8 box-border"
+            className="w-[85vw] md:w-[45vw] lg:w-[23vw] shrink-0 py-8 box-border"
           >
             {/* Card Content Structure */}
             <div className="flex flex-col h-full justify-start space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
@@ -61,11 +77,13 @@ export default function HorizontalScrollCards({ cards }) {
                 {(index + 1).toString().padStart(2, "0")}
               </div>
               <div
-                className="w-[60%] text-[clamp(24px,1.5vw,36px)] uppercase text-white leading-[1.1] font-sora"
-                dangerouslySetInnerHTML={{ __html: card.title }}
+                className="w-[85%] min-h-18 text-[clamp(24px,1.5vw,30px)] uppercase text-white leading-[1.1] font-sora"
+                dangerouslySetInnerHTML={{
+                  __html: formatTitle(card.title),
+                }}
               />
               <div
-                className="w-4/5 text-[clamp(14px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
+                className="w-[92.5%] text-[clamp(14px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
                 dangerouslySetInnerHTML={{ __html: card.description }}
               />
             </div>

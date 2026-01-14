@@ -79,37 +79,37 @@ export default function SSM() {
       id: 1,
       title: "Target <br /> Audience",
       description:
-        "Our Social marketing starts with target <br />audience in order to target right <br />customers for your brand.",
+        "Our Social marketing starts with target audience in order to target right customers for your brand.",
     },
     {
       id: 2,
       title: "Practical <br /> Optimization",
       description:
-        "Our social media marketing scheme <br />involves practical optimization of <br />social media campaigns, advertisements <br />and paid promotions.",
+        "Our social media marketing scheme involves practical optimization of social media campaigns, advertisements and paid promotions.",
     },
     {
       id: 3,
       title: "Inventive <br /> Content",
       description:
-        "Tech With Moonshot put its weight <br />behind inventive content, as it is <br />crucial to lure customers towards <br />your brand.",
+        "Tech With Moonshot put its weight behind inventive content, as it is crucial to lure customers towards your brand.",
     },
     {
       id: 4,
       title: "Advanced <br /> Reporting",
       description:
-        "Using the Facebook pixels and Google <br />analytics, Tech With Moonshot allows <br />you to measure campaign performance.",
+        "Using the Facebook pixels and Google analytics, Tech With Moonshot allows you to measure campaign performance.",
     },
     {
       id: 5,
       title: "Machine <br /> learning",
       description:
-        "'Tech With Moonshot' utilizes machine <br />learning to boost social media <br />marketing of your brand.",
+        "'Tech With Moonshot' utilizes machine learning to boost social media marketing of your brand.",
     },
     {
       id: 6,
       title: "ROI-based <br /> Reporting",
       description:
-        "Our team knows ROI is important for <br />your business. That's why our digital <br />specialists give you ROI reports <br />regularly.",
+        "Our team knows ROI is important for your business. That's why our digital specialists give you ROI reports regularly.",
     },
   ];
 
