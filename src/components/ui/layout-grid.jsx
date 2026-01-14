@@ -45,7 +45,7 @@ const ImageComponent = ({ card, showDescriptions }) => {
             <video
               src={src}
               className={cn(
-                "object-cover object-top h-full w-full hover:scale-110 transition-transform duration-500"
+                "object-cover object-top h-full w-full transition-transform duration-500"
               )}
               autoPlay
               muted
