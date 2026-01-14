@@ -389,9 +389,9 @@ export default function WebApplications() {
             />
           </h2>
 
-          <div className="lg:-mt-16 xl:-mt-20">
+          <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
             <SuccessStories />
-          </div>
+          </section>
         </div>
 
         <FormCTA />

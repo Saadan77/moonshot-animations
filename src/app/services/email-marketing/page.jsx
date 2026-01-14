@@ -17,6 +17,7 @@ import DecorativeLines from "@/app/components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -71,44 +72,47 @@ export default function EmailMarketing() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Discovery <br /> & Requirements",
+      title: "Conversion-driven <br /> Layout",
       description:
-        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+        "Our e-mail marketing has built-in layout <br />that seeks lead conversion. <br />Additionally, it is optimized, user <br />interactive and mobile friendly.",
     },
     {
       id: 2,
-      title: "Architecture, <br /> Wireframes & Flows",
+      title: "Error Free <br /> E-mails",
       description:
-        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+        "Error filled emails hurt brand image. <br />That's why 'Tech With Moonshot' <br />makes sure our email-marketing is <br />impeccable from every angle.",
     },
     {
       id: 3,
-      title: "Pixel-perfect <br /> Frontend Development",
+      title: "Data-Driven <br /> Content",
       description:
-        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+        "Tech With Moonshot' emailing specialists <br />make use of data-driven content to <br />make email promotions search engine <br />optimized.",
     },
     {
       id: 4,
-      title: "Scalable & <br /> Data-Driven Web Builds",
+      title: "Targeted <br /> Emails",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "Segmented email marketing produce <br />better results in terms of reach <br />and lead generation.",
+    },
+    {
+      id: 5,
+      title: "Personalization",
+      description:
+        "Email-marketing is more effectual <br />when they deliver personalized <br />messages to targeted niche.",
+    },
+    {
+      id: 6,
+      title: "AI <br /> embedded",
+      description:
+        "AI embedded email marketing strategies <br />are more productive, as they use <br />algorithm to predict sophisticated <br />taglines for target audience.",
+    },
+    {
+      id: 7,
+      title: "Go beyond <br /> text",
+      description:
+        "Send images, videos, apps, and emoji <br />to tell your story and drive action <br />in the most powerful way possible.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div key={card.id} className="space-y-8">
-        <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
@@ -187,7 +191,7 @@ export default function EmailMarketing() {
 
             <img
               src="/images/services/email-marketing/hero.png"
-              className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-30 max-xl:bottom-50 right-0 z-10"
+              className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-0 max-xl:bottom-50 right-0 z-10"
               alt="Email Marketing Hero"
             />
           </div>
@@ -196,137 +200,145 @@ export default function EmailMarketing() {
         <div className="relative p-5 max-lg:p-5 z-10 justify-center flex">
           <img
             src="/images/services/email-marketing/section-2.png"
-            className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
+            className="h-auto w-[95%] max-lg:w-full object-cover rounded-4xl items-center"
           />
         </div>
 
-        <div>
-          <div
-            className="bg-bottom"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Performance-driven"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="Email Marketing Studio"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-24">
-                {/* Image column */}
-                <div className="-mt-50 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
-                  <img
-                    src="/images/services/email-marketing/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-full w-full object-cover"
-                    style={{ mixBlendMode: "screen" }}
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="col-span-1 text-white space-y-12">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-79">|</div>
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to{" "}
-                        <br />
-                        give you a good website development services. <br />
-                        Additionally, our professional website developers give
-                        you <br />
-                        exclusive insights how to make user friendly,
-                        interactive, <br />
-                        secure and speedy websites. Moreover, our front-end{" "}
-                        <br />
-                        developers and back-end developers know how to service{" "}
-                        <br />
-                        your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </section>
-
-            <section className="h-screen">
-              <img
-                src="/images/services/email-marketing/section-4.png"
-                className="h-full w-full object-cover"
-              />
-            </section>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
 
-          <div
-            className="bg-no-repeat"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="email-marketing" className="pt-64">
-              <div className="flex flex-col items-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                  <TextType
-                    text="Modern email flows made for"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="immersive customer engagement"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
-                  <TextType
-                    text="E-mail is a powerful tool to connect with masses as it sends them personalized messages. The research clarifies the fact that email marketing is more effective than SMM. Additionally, it is used to convert web surfers into members and eventually loyal patrons."
-                    typingSpeed={15}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </div>
+          <section className="relative py-24 lg:py-52 px-6 lg:px-36">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                <TextType
+                  text="Performance-driven"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="Email Marketing Studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-24">
+              {/* Image column */}
+              <div className="-mt-50 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
+                <img
+                  src="/images/services/email-marketing/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-full w-full object-cover"
+                  style={{ mixBlendMode: "screen" }}
+                />
               </div>
 
-              <div id="email-marketing-layout">
-                <LayoutGrid cards={layoutImages} />
+              {/* Text column */}
+              <div className="col-span-1 text-white space-y-12">
+                <div className="flex gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white min-h-79">|</div>
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to{" "}
+                      <br />
+                      give you a good website development services. <br />
+                      Additionally, our professional website developers give you{" "}
+                      <br />
+                      exclusive insights how to make user friendly, interactive,{" "}
+                      <br />
+                      secure and speedy websites. Moreover, our front-end <br />
+                      developers and back-end developers know how to service{" "}
+                      <br />
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
+                </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
 
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
+          <img
+            src="/images/services/email-marketing/section-4.png"
+            className="relative z-10 h-[110vh] w-full object-cover"
+          />
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[20%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
+          <section id="email-marketing" className="pt-64">
+            <div className="flex flex-col items-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                <TextType
+                  text="Modern email flows made for"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="immersive customer engagement"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="relative z-50 w-[58.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                <TextType
+                  text="E-mail is a powerful tool to connect with masses as it sends them personalized messages. The research clarifies the fact that email marketing is more effective than SMM. Additionally, it is used to convert web surfers into members and eventually loyal patrons."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
+            </div>
+
+            <div id="email-marketing-layout">
+              <LayoutGrid cards={layoutImages} />
+
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
                         #email-marketing #email-marketing-layout > div.grid {
                             gap: 50px !important;
                             padding: 5rem !important;
@@ -343,41 +355,45 @@ export default function EmailMarketing() {
                             display: none !important;
                         }
                     `,
-                  }}
-                />
-              </div>
+                }}
+              />
+            </div>
+          </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div>
+          <div
+            className="relative bg-center bg-no-repeat bg-cover"
+            style={{
+              backgroundImage: "url(/images/services/bg-gradient-1.png)",
+            }}
+          >
+            <section className="relative">
+              <HorizontalScrollCards cards={webDevInfo} />
+            </section>
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                <TextType
-                  text="200+"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Success Stories"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
+            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+              <TextType
+                text="200+"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+              <br />
+              <TextType
+                text="Success Stories"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+            </h2>
 
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
-              </div>
+            <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+              <SuccessStories />
             </section>
           </div>
         </div>
