@@ -134,7 +134,7 @@ export default function SEO() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
+      <div
         className="relative bg-black overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
@@ -405,7 +405,7 @@ export default function SEO() {
 
         <FormCTA />
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

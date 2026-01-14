@@ -117,7 +117,7 @@ export default function EmailMarketing() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
+      <div
         className="relative bg-black overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
@@ -400,7 +400,7 @@ export default function EmailMarketing() {
 
         <FormCTA />
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

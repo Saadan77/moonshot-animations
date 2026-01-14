@@ -115,7 +115,7 @@ export default function WebApplications() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
+      <div
         className="relative bg-black overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
@@ -396,7 +396,7 @@ export default function WebApplications() {
 
         <FormCTA />
         <Footer />
-      </section>
+      </div>
     </>
   );
 }

@@ -16,6 +16,7 @@ import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -76,49 +77,46 @@ export default function SSM() {
   const webDevInfo = [
     {
       id: 1,
-      title: "Discovery <br /> & Requirements",
+      title: "Target <br /> Audience",
       description:
-        "We don't build on guesses. <br />Our websites start with clear requirements, <br />goals, and user journeys so the development <br />is aligned with real business needs.",
+        "Our Social marketing starts with target <br />audience in order to target right <br />customers for your brand.",
     },
     {
       id: 2,
-      title: "Architecture, <br /> Wireframes & Flows",
+      title: "Practical <br /> Optimization",
       description:
-        "From simple sites to complex <br />web apps, we plan the structure, flows, <br />and layouts so every page has a clear <br />purpose and leads users to action.",
+        "Our social media marketing scheme <br />involves practical optimization of <br />social media campaigns, advertisements <br />and paid promotions.",
     },
     {
       id: 3,
-      title: "Pixel-perfect <br /> Frontend Development",
+      title: "Inventive <br /> Content",
       description:
-        "We turn designs into responsive, <br />fast, and clean code – using modern web <br />standards to make sure your website looks <br />and works great on every device.",
+        "Tech With Moonshot put its weight <br />behind inventive content, as it is <br />crucial to lure customers towards <br />your brand.",
     },
     {
       id: 4,
-      title: "Scalable & <br /> Data-Driven Web Builds",
+      title: "Advanced <br /> Reporting",
       description:
-        "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
+        "Using the Facebook pixels and Google <br />analytics, Tech With Moonshot allows <br />you to measure campaign performance.",
+    },
+    {
+      id: 5,
+      title: "Machine <br /> learning",
+      description:
+        "'Tech With Moonshot' utilizes machine <br />learning to boost social media <br />marketing of your brand.",
+    },
+    {
+      id: 6,
+      title: "ROI-based <br /> Reporting",
+      description:
+        "Our team knows ROI is important for <br />your business. That's why our digital <br />specialists give you ROI reports <br />regularly.",
     },
   ];
-
-  const WebDevCard = ({ card }) => {
-    return (
-      <div key={card.id} className="space-y-8">
-        <p
-          className="text-[clamp(16px,1.3vw,24px)] uppercase text-white"
-          dangerouslySetInnerHTML={{ __html: card.title }}
-        ></p>
-        <p
-          className="text-[clamp(10px,0.9vw,16px)] font-light text-white"
-          dangerouslySetInnerHTML={{ __html: card.description }}
-        />
-      </div>
-    );
-  };
 
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
+      <div
         className="relative bg-black overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
@@ -185,12 +183,10 @@ export default function SSM() {
           </div>
         </div>
 
-        <div className="mt-5 relative p-5 max-lg:p-2 z-10 justify-center flex">
-          <img
-            src="/images/services/ssm/section-2.png"
-            className="h-auto w-[95%] max-lg:w-full object-cover rounded-4xl items-center"
-          />
-        </div>
+        <img
+          src="/images/services/ssm/section-2.png"
+          className="relative z-10 h-auto w-[90%] mx-auto max-lg:w-full object-cover rounded-4xl items-center"
+        />
 
         <div className="relative">
           <div className="absolute inset-0 z-0 -mt-[30%]">
@@ -202,7 +198,7 @@ export default function SSM() {
             />
           </div>
 
-          <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
+          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36">
             <div className="flex justify-end max-lg:justify-center">
               <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
                 <TextType
@@ -273,16 +269,22 @@ export default function SSM() {
 
           <section className="max-h-screen overflow-hidden">
             <img
-              src="/images/services/ssm/section-4.png"
-              className="h-full w-full object-cover"
+              src="/images/services/ssm/sec-4.png"
+              className="relative z-10 h-full w-full object-cover"
             />
           </section>
         </div>
 
-        <div
-          className="bg-no-repeat"
-          style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-        >
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
           <section id="ssm" className="pt-64">
             <div className="flex flex-col">
               <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
@@ -342,44 +344,49 @@ export default function SSM() {
                 }}
               />
             </div>
+          </section>
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-              {webDevInfo.map((card) => (
-                <WebDevCard key={card.id} card={card} />
-              ))}
-            </div>
+        <div
+          className="relative bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url(/images/services/bg-gradient-1.png)",
+          }}
+        >
+          <section className="relative">
+            <HorizontalScrollCards cards={webDevInfo} />
+          </section>
+          
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            <TextType
+              text="200+"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+            <br />
+            <TextType
+              text="Success Stories"
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+              startOnVisible={true}
+              loop={true}
+            />
+          </h2>
 
-            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-              <TextType
-                text="200+"
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={false}
-                startOnVisible={true}
-                loop={true}
-              />
-              <br />
-              <TextType
-                text="Success Stories"
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={false}
-                startOnVisible={true}
-                loop={true}
-              />
-            </h2>
-
-            <div className="lg:-mt-16 xl:-mt-20">
-              <SuccessStories />
-            </div>
+          <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+            <SuccessStories />
           </section>
         </div>
 
         <FormCTA />
         <Footer />
-      </section>
+      </div>
     </>
   );
 }
