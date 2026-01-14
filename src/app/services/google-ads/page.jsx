@@ -146,7 +146,7 @@ export default function GoogleAds() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -308,6 +308,17 @@ export default function GoogleAds() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="Google Ad Words is the golden key to unlock business treasure trove. It is twice as much faster than SEO and generates more website traffic. Additionally, digital marketing revolving around Google Ad words generate ad infinitum leads."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="google-ads-layout">

@@ -312,6 +312,17 @@ export default function MobileApplications() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="Data-driven digital marketing services that deliver “real” business growth. The kind that can be measured. The kind that transforms brands."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="mobile-applications-layout">

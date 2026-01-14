@@ -146,7 +146,7 @@ export default function DigitalMarketing() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -302,6 +302,17 @@ export default function DigitalMarketing() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="It is a simple that there is no hope without digital marketing, for the latter takes your brand to platforms where people send their time and money. According to Gary Vaynerchuk, there is no second thought about digital marketing; it is the future of brand survival."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="digital-marketing-layout">

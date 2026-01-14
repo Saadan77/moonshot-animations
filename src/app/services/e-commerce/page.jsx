@@ -17,6 +17,9 @@ import DecorativeLines from "@/app/components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
+import HorizontalScroll from "@/app/components/HorizontalScroll";
+import HorizontalContainerAnimation from "@/app/components/HorizontalScroll";
+import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 
 const data = [
   {
@@ -99,6 +102,18 @@ export default function Ecommerce() {
       description:
         "We use best practices, testing, <br />and analytics to improve speed, stability, <br />and conversions, so your website keeps <br />getting better with real data over time.",
     },
+    {
+      id: 5,
+      title: "Seamless <br /> API Integrations",
+      description:
+        "Connect your tools effortlessly. <br />We integrate payment gateways, CRMs, <br />and third-party APIs to ensure your <br />ecosystem works as one unified engine.",
+    },
+    {
+      id: 6,
+      title: "Post-Launch <br /> Support & Growth",
+      description:
+        "Launch is just day one. <br />We provide ongoing maintenance, security <br />updates, and feature enhancements to <br />keep your platform ahead of the curve.",
+    },
   ];
 
   const WebDevCard = ({ card }) => {
@@ -158,7 +173,7 @@ export default function Ecommerce() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -197,13 +212,13 @@ export default function Ecommerce() {
           </div>
         </div>
 
-        <div className="relative py-10 px-24 max-lg:p-2 z-10 justify-center flex">
+        <div className="relative z-10 py-10 px-24 max-lg:p-2 justify-center flex">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="relative z-10 w-full h-full rounded-[34.137px] object-contain opacity-90"
+            className="w-full h-full rounded-[34.137px] object-contain opacity-90"
           >
             <source
               src="/images/services/e-commerce/section-2.mp4"
@@ -212,118 +227,138 @@ export default function Ecommerce() {
           </video>
         </div>
 
-        <div>
-          <div
-            className="bg-bottom"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom min-h-screen">
-              <div className="flex justify-end max-lg:justify-center">
-                <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
-                  <TextType
-                    text="Customer-focused"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="E-commerce development"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-                {/* Image column */}
-                <div className="-mt-26 relative z-10 col-span-1 flex items-center justify-center">
-                  <img
-                    src="/images/services/e-commerce/section-3.png"
-                    alt="Laptop showcasing website design"
-                    className="h-full w-full object-cover scale-200"
-                    style={{ mixBlendMode: "screen" }}
-                    data-smoother-ignore
-                  />
-                </div>
-
-                {/* Text column */}
-                <div className="col-span-1 text-white space-y-12">
-                  <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-79">|</div>
-                    <div className="tracking-[-0.03em]">
-                      <ScrollReveal size="sm" enableBlur={false}>
-                        Tech With Moonshot makes use of collaborative efforts to{" "}
-                        <br />
-                        give you a good website development services. <br />
-                        Additionally, our professional website developers give
-                        you <br />
-                        exclusive insights how to make user friendly,
-                        interactive, <br />
-                        secure and speedy websites. Moreover, our front-end{" "}
-                        <br />
-                        developers and back-end developers know how to service{" "}
-                        <br />
-                        your web development request in agile manner.
-                      </ScrollReveal>
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                      Get in Touch
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </section>
-
-            <section className="h-screen">
-              <img
-                src="/images/services/e-commerce/section-4.png"
-                className="h-full w-full object-cover"
-              />
-            </section>
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[50%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
           </div>
 
-          <div
-            className="bg-bottom"
-            style={{ backgroundImage: "url(/images/services/bg-gradient.png)" }}
-          >
-            <section id="e-commerce" className="pt-64">
-              <div className="flex flex-col items-center">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
-                  <TextType
-                    text="Modern e-commerce built for"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                  <br />
-                  <TextType
-                    text="immersive online shopping journeys"
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={false}
-                    startOnVisible={true}
-                    loop={true}
-                  />
-                </h2>
+          <section className="relative z-10 py-24 lg:py-32 px-6 lg:px-36">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+                <TextType
+                  text="Customer-focused"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="E-commerce development"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+              {/* Image column */}
+              <div className="-mt-26 relative z-10 col-span-1 flex items-center justify-center">
+                <img
+                  src="/images/services/e-commerce/section-3.png"
+                  alt="Laptop showcasing website design"
+                  className="h-full w-full object-cover scale-200"
+                  style={{ mixBlendMode: "screen" }}
+                  data-smoother-ignore
+                />
               </div>
 
-              <div id="e-commerce-layout">
+              {/* Text column */}
+              <div className="col-span-1 text-white space-y-12">
+                <div className="flex gap-16 max-lg:gap-8">
+                  <div className="w-1 bg-white min-h-79">|</div>
+                  <div className="tracking-[-0.03em]">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to{" "}
+                      <br />
+                      give you a good website development services. <br />
+                      Additionally, our professional website developers give you{" "}
+                      <br />
+                      exclusive insights how to make user friendly, interactive,{" "}
+                      <br />
+                      secure and speedy websites. Moreover, our front-end <br />
+                      developers and back-end developers know how to service{" "}
+                      <br />
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
+                </div>
+                <Link
+                  href="#"
+                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
+                    Get in Touch
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <section className="relative z-10 h-[125vh]">
+            <img
+              src="/images/services/e-commerce/section-4.png"
+              className="h-full w-full object-cover"
+            />
+          </section>
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-gradient-1.png"
+            />
+          </div>
+
+          <section id="e-commerce" className="pt-64">
+            <div className="relative flex flex-col items-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-snug">
+                <TextType
+                  text="Multiple E-commerce"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="Development Platforms"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                <TextType
+                  text="‘Tech With Moonshot’ allows you to choose from multiple e-commerce development platforms. Importantly, our e-commerce consultants recommend you a platform as per your brand requirements and demands."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
+
+              <div id="e-commerce-layout" className="relative">
                 <LayoutGrid cards={layoutImages} />
 
                 <style
@@ -348,38 +383,44 @@ export default function Ecommerce() {
                   }}
                 />
               </div>
+            </div>
+          </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
                 {webDevInfo.map((card) => (
                   <WebDevCard key={card.id} card={card} />
                 ))}
-              </div>
+              </div> */}
 
-              <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="relative bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url(/images/services/bg-gradient-1.png)" }}>
+            <section className="relative">
+              <HorizontalScrollCards cards={webDevInfo} />
+            </section>
 
-              <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
-                <TextType
-                  text="200+"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Success Stories"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </h2>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-              <div className="lg:-mt-16 xl:-mt-20">
-                <SuccessStories />
-              </div>
+            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+              <TextType
+                text="200+"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+              <br />
+              <TextType
+                text="Success Stories"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+            </h2>
+
+            <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+              <SuccessStories />
             </section>
           </div>
         </div>

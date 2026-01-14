@@ -146,7 +146,7 @@ export default function Branding() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -310,13 +310,24 @@ export default function Branding() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="Branding is mandatory for businesses, as it changes how target audience perceive your brand; it increases brand awareness, and it drives sales. Branding gives your business competitive advantage and grows business value."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="branding-layout">
                 <LayoutGrid cards={layoutImages} />
                 <style
-                    dangerouslySetInnerHTML={{
-                      __html: `
+                  dangerouslySetInnerHTML={{
+                    __html: `
                     #branding #branding-layout > div.grid {
                       gap: 50px !important;
                       padding: 5rem !important;

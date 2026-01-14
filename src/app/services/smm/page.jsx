@@ -146,7 +146,7 @@ export default function SSM() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -234,7 +234,7 @@ export default function SSM() {
                 {/* Text column */}
                 <div className="col-span-1 text-white space-y-12">
                   <div className="flex gap-16 max-lg:gap-8">
-                    <div className="w-1 bg-white min-h-[316px]">|</div>
+                    <div className="w-1 bg-white min-h-79">|</div>
                     <div className="tracking-[-0.03em]">
                       <ScrollReveal size="sm" enableBlur={false}>
                         Tech With Moonshot makes use of collaborative efforts to{" "}
@@ -300,6 +300,17 @@ export default function SSM() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="Social media advertising is one of the most pronounced and useful means to give wings to your profitability. The paid advertisements on Facebook, Instagram, Snap Chat, YouTube, TikTok, and other potential platforms are consequential in this digitized globe to give sustenance to brands."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="ssm-layout">

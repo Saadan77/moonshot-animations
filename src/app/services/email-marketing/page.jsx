@@ -151,7 +151,7 @@ export default function EmailMarketing() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -308,6 +308,17 @@ export default function EmailMarketing() {
                     loop={true}
                   />
                 </h2>
+                <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                  <TextType
+                    text="E-mail is a powerful tool to connect with masses as it sends them personalized messages. The research clarifies the fact that email marketing is more effective than SMM. Additionally, it is used to convert web surfers into members and eventually loyal patrons."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
               </div>
 
               <div id="email-marketing-layout">

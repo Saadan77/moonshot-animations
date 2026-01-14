@@ -146,7 +146,7 @@ export default function SEO() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -189,7 +189,7 @@ export default function SEO() {
         <div className="relative p-5 max-lg:p-5 z-50 justify-center flex">
           <img
             src="/images/services/seo/section-2.png"
-            className="h-auto w-5/6 max-lg:w-full object-cover rounded-4xl items-center"
+            className="h-auto w-[90%] max-lg:w-full object-cover rounded-4xl items-center"
           />
         </div>
 
@@ -299,6 +299,17 @@ export default function SEO() {
                   loop={true}
                 />
               </h2>
+              <div className="relative z-50 w-[72.5%] text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-[#808080]">
+                <TextType
+                  text="Search Engine Optimization is crucial digital marketing tool to enhance the bottom-line. SEO sets itself off the ground with the help of keywords. Interestingly, the more organic these keywords are, the more organic people find your business online."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
             </div>
 
             <div id="seo-layout">
