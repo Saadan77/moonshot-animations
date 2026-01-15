@@ -397,7 +397,7 @@ export default function AboutUsPage() {
             />
           </div> */}
 
-          <div className="absolute inset-0 z-0 -mt-[10%]">
+          <div className="absolute inset-0 z-0">
             <Image
               alt="linear-gradient-bg"
               width={1920}

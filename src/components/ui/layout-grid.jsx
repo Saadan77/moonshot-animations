@@ -59,7 +59,8 @@ const ImageComponent = ({ card, showDescriptions }) => {
           <div className="relative w-full h-full">
             <div
               id="industry-layout-grid-top-overlay"
-              className="layout-grid-top-overlay hidden absolute inset-0 top-0 z-10"
+              data-industry-overlay
+              className="layout-grid-top-overlay hidden absolute inset-0 top-0 z-10 transition-all duration-300"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%)",
@@ -77,14 +78,10 @@ const ImageComponent = ({ card, showDescriptions }) => {
         );
       })()}
       <div
-        id="card-title-overlay"
+        id="card-title"
         className="absolute z-10 bottom-0 left-0 right-0 text-white p-6 rounded-b-lg text-left"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0, 0, 0, 0) -1.25%, rgba(0, 0, 0, 1) 100.17%)",
-        }}
       >
-        <div className="text-[clamp(20px,2vw,30px)] font-sora font-semibold">
+        <div className="text-[clamp(20px,2vw,30px)] font-sora font-normal">
           {card.title}
         </div>
         {showDescriptions && card.description ? (
@@ -97,7 +94,7 @@ const ImageComponent = ({ card, showDescriptions }) => {
             )}
           >
             {isHovered ? (
-              <TextType key={card.id} typingSpeed={30} text={card.description} />
+              <TextType key={card.id} typingSpeed={20} text={card.description} />
             ) : null}
           </div>
         ) : null}

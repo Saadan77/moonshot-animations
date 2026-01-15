@@ -1,17 +1,11 @@
-"use client";;
-import React, {
-  useEffect,
-  useState,
-} from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "@/app/components/button/button";
 
-export const Carousel = ({
-  items,
-  initialScroll = 0
-}) => {
+export const Carousel = ({ items, initialScroll = 0 }) => {
   const carouselRef = React.useRef(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -67,77 +61,89 @@ export const Carousel = ({
   };
 
   return (
-    <div className="relative w-full">
-      <div className="mr-20 flex justify-end max-lg:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
-        <Button text="Recent Projects" href="/portfolio" />
+    <div className="relative">
+      <div className="relative z-10 w-full">
+        <div className="mr-20 flex justify-end max-lg:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
+          <Button text="Recent Projects" href="/portfolio" />
 
-        <div className="mx-6 min-h-max bg-white w-px"></div>
-        <button
-          className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
-          onClick={scrollLeft}
-          disabled={!canScrollLeft}>
-          <ChevronLeft className="h-8 w-8 text-white" />
-        </button>
-        <button
-          className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
-          onClick={scrollRight}
-          disabled={!canScrollRight}>
-          <ChevronRight className="h-8 w-8 text-white" />
-        </button>
-      </div>
-      <div
-        className="flex w-full overflow-x-scroll overscroll-x-hidden scroll-smooth py-10 [scrollbar-width:none] md:py-20"
-        ref={carouselRef}
-        onScroll={checkScrollability}>
-        <div
-          className={cn("absolute right-0 z-1000 h-auto w-[5%] overflow-hidden")}></div>
-
-        <div
-          className={cn(
-            "max-w-[90%] mx-auto flex flex-row justify-start gap-4 pl-4",
-          )}>
-          {items.map((item, index) => (
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.5,
-                  delay: 0.2 * index,
-                  ease: "easeOut",
-                  once: true,
-                },
-              }}
-              key={"card" + index}
-              className="last:pr-[5%]">
-              {item}
-            </motion.div>
-          ))}
+          <div className="mx-6 min-h-max bg-white w-px"></div>
+          <button
+            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+          >
+            <ChevronLeft className="h-8 w-8 text-white" />
+          </button>
+          <button
+            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+          >
+            <ChevronRight className="h-8 w-8 text-white" />
+          </button>
         </div>
-      </div>
-      {/* Pagination: progress bar */}
-      <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full bg-white rounded-full" style={{ width: `${progressDisplay * 100}%`, transition: 'width 120ms linear' }} />
+        <div
+          className="flex w-full overflow-x-scroll overscroll-x-hidden scroll-smooth pt-10 [scrollbar-width:none] md:pt-20"
+          ref={carouselRef}
+          onScroll={checkScrollability}
+        >
+          <div
+            className={cn(
+              "absolute right-0 z-1000 h-auto w-[5%] overflow-hidden"
+            )}
+          ></div>
+
+          <div
+            className={cn(
+              "max-w-[90%] mx-auto flex flex-row justify-start gap-4 pl-4"
+            )}
+          >
+            {items.map((item, index) => (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0.2 * index,
+                    ease: "easeOut",
+                    once: true,
+                  },
+                }}
+                key={"card" + index}
+                className="last:pr-[5%]"
+              >
+                {item}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        {/* Pagination: progress bar */}
+        <div className="my-35 max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-white rounded-full"
+            style={{
+              width: `${progressDisplay * 100}%`,
+              transition: "width 120ms linear",
+            }}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export const Card = ({
-  card,
-  layout = false,
-  ...rest
-}) => {
-
+export const Card = ({ card, layout = false, ...rest }) => {
   return (
     <>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden md:h-160 md:w-124">
+        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden md:h-160 md:w-124"
+      >
         <img
           className="h-full w-full transition duration-300 blur-0"
           src={card.src}

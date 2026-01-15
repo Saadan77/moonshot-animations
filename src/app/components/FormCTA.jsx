@@ -35,6 +35,7 @@ export default function FormCTA() {
   const [businessName, setBusinessName] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const toggleTag = (t) => {
     setSelectedTag(t);
@@ -51,12 +52,13 @@ export default function FormCTA() {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
+    setSubmitSuccess(false);
     const e = validate();
     setErrors(e);
     if (Object.keys(e).length === 0) {
       // placeholder for submit
       console.log({ email, fullName, budget, businessName, message, selectedTag });
-      alert("Message sent — (demo).");
+      setSubmitSuccess(true);
       setEmail("");
       setFullName("");
       setBudget("");
@@ -158,7 +160,7 @@ export default function FormCTA() {
               style={{ fontFamily: "Inter, sans-serif" }}
               className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
             >
-              <span className="flex items-center gap-x-4">
+              <span className="flex items-baseline gap-x-4">
                 Have a{" "}
                 <RotatingText
                   texts={["Project?", "Idea?", "Vision?", "Goal?", "Dream?"]}
@@ -311,6 +313,12 @@ export default function FormCTA() {
                   <Link href="mailto:moonshottech@gmail.com" className="text-white hover:underline">moonshottech@gmail.com</Link>
                 </div>
               </div>
+
+              {submitSuccess ? (
+                <p className="mt-6 font-poppins text-sm text-white/80">
+                  Thanks — we’ve received your message. Our team will reach out shortly.
+                </p>
+              ) : null}
             </div>
           </form>
         </div>

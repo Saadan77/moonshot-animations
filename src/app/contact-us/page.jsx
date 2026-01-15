@@ -39,6 +39,7 @@ export default function ContactUs() {
   const [businessName, setBusinessName] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const toggleTag = (t) => {
     setSelectedTag(t);
@@ -56,18 +57,20 @@ export default function ContactUs() {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
+    setSubmitSuccess(false);
     const e = validate();
     setErrors(e);
     if (Object.keys(e).length === 0) {
       // TODO: replace with actual submit logic
       console.log({ email, fullName, budget, businessName, message, selectedTag });
-      alert("Message sent — (demo).");
+      setSubmitSuccess(true);
       setEmail("");
       setFullName("");
       setBudget("");
       setBusinessName("");
       setMessage("");
       setSelectedTag(false);
+      setSubmitSuccess(true);
     }
   };
 
@@ -104,7 +107,7 @@ export default function ContactUs() {
           </div> */}
 
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 -mt-[10%]">
+          <div className="absolute inset-0 z-0">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -162,7 +165,7 @@ export default function ContactUs() {
                 style={{ fontFamily: "Inter, sans-serif" }}
                 className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
               >
-                <span className="flex items-center gap-x-4">
+                <span className="flex items-baseline gap-x-4">
                   Have a{" "}
                   <RotatingText
                     texts={["Project?", "Idea?", "Vision?", "Goal?", "Dream?"]}
@@ -229,7 +232,7 @@ export default function ContactUs() {
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                     />
-                    {errors.email ? <p className="text-red-400 text-sm mt-2">{errors.email}</p> : null}
+                    {errors.email ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.email}</p> : null}
                   </div>
                   <div>
                     <input
@@ -238,7 +241,7 @@ export default function ContactUs() {
                       onChange={(e) => setFullName(e.target.value)}
                       className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                     />
-                    {errors.fullName ? <p className="text-red-400 text-sm mt-2">{errors.fullName}</p> : null}
+                    {errors.fullName ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.fullName}</p> : null}
                   </div>
                 </div>
 
@@ -265,7 +268,7 @@ export default function ContactUs() {
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                   />
-                  {errors.message ? <p className="text-red-400 text-sm mt-2">{errors.message}</p> : null}
+                  {errors.message ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.message}</p> : null}
                 </div>
 
                 <p className="text-white my-4 text-sm 1366:text-base">How can we help you?</p>
@@ -308,6 +311,12 @@ export default function ContactUs() {
                     <Link href="mailto:moonshottech@gmail.com" className="text-white hover:underline">moonshottech@gmail.com</Link>
                   </div>
                 </div>
+
+                {submitSuccess ? (
+                  <p className="mt-6 font-poppins text-sm text-white/80">
+                    Thanks — we’ve received your message. Our team will reach out shortly.
+                  </p>
+                ) : null}
               </div>
             </form>
           </div>

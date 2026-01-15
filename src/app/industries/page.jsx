@@ -124,10 +124,7 @@ export default function Portfolio() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
-        className="relative"
-        style={{ fontFamily: "var(--font-sora), sans-serif" }}
-      >
+      <section>
         <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
           <Ribbons
             baseThickness={6}
@@ -163,7 +160,7 @@ export default function Portfolio() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -207,7 +204,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00050A] relative z-10">
+        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
           <div
             id="industries-grid"
             style={{
@@ -221,10 +218,13 @@ export default function Portfolio() {
                   #industries-grid .layout-grid-top-overlay {
                     display: block !important;
                   }
+                  #industries-grid .group:hover [data-industry-overlay] {
+                    background: linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 1) 100%) !important;
+                  }
                   #industries-grid .real-estate img, #industries-grid .technology img {
                     object-position: center !important;
                   }
-                  #industries-grid .technology #card-title-overlay, #industries-grid .legal #card-title-overlay {
+                  #industries-grid .technology #card-title, #industries-grid .legal #card-title {
                     background: none !important;
                     top: 0 !important;
                     bottom: auto !important;
@@ -234,6 +234,9 @@ export default function Portfolio() {
                   }
                   #industries-grid .technology #industry-layout-grid-top-overlay {
                     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%) !important;
+                  }
+                  #industries-grid .technology:hover #industry-layout-grid-top-overlay {
+                    background: linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.5) 100%) !important;
                   }
                 `,
               }}

@@ -147,7 +147,7 @@ export default function WebDevelopment() {
           </div> */}
 
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 -mt-[10%]">
+        <div className="absolute inset-0 z-0">
           <Image
             alt="linear-gradient-bg"
             width={1920}
@@ -203,7 +203,7 @@ export default function WebDevelopment() {
       </div>
 
       <div className="relative">
-        <div className="absolute inset-0 z-0 -mt-[20%]">
+        <div className="absolute inset-0 z-0 -mt-[30%]">
           <Image
             alt="linear-gradient-bg"
             width={1920}
@@ -212,7 +212,7 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <section className="py-24 lg:py-32 px-6 lg:px-36 bg-bottom">
+        <section className="relative z-10 py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
           <div className="flex justify-end max-lg:justify-center">
             <h2 className="text-white text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-20 -ml-16 max-lg:ml-0">
               <TextType
@@ -249,16 +249,16 @@ export default function WebDevelopment() {
             {/* Text column */}
             <div className="text-white space-y-12">
               <div className="flex items-stretch gap-16 max-lg:gap-8">
-                <div className="w-1 bg-white self-stretch mt-7 mb-8.5" />
-                <div className="tracking-[-0.03em]">
+                <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
+                <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
                     Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
+                    give you a good website development services. <br />{" "}
+                    Additionally, our professional website developers give you
+                    exclusive insights how to make user friendly, interactive,
+                    secure and speedy websites. Moreover, our front-end
+                    developers and back-end developers know how to service your
+                    web development request in agile manner.
                   </ScrollReveal>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function WebDevelopment() {
       </div>
 
       <div className="relative">
-        <div className="absolute inset-0 z-0 -mt-[20%]">
+        <div className="absolute inset-0 z-0 -mt-[10%]">
           <Image
             alt="linear-gradient-bg"
             width={1920}
@@ -299,7 +299,16 @@ export default function WebDevelopment() {
           <div>
             <h2 className="mx-20 text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
-                text="Multifaceted Web Development Services"
+                text="Multifaceted Web"
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                startOnVisible={true}
+                loop={true}
+              />
+              <br />
+              <TextType
+                text="Development Services"
                 typingSpeed={75}
                 pauseDuration={1500}
                 showCursor={false}
@@ -352,12 +361,7 @@ export default function WebDevelopment() {
         </div>
       </div>
 
-      <div
-        className="relative bg-top bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: "url(/images/services/bg-gradient-1.png)",
-        }}
-      >
+      <div>
         <section className="relative">
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
@@ -365,7 +369,7 @@ export default function WebDevelopment() {
         <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         {/* Success Stories Section */}
-        <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+        <h2 className="relative z-10 max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
           <TextType
             text="200+"
             typingSpeed={75}
@@ -385,7 +389,7 @@ export default function WebDevelopment() {
           />
         </h2>
 
-        <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+        <section className="relative lg:-mt-16 xl:-mt-20">
           <SuccessStories />
         </section>
       </div>

@@ -140,7 +140,7 @@ export default function Branding() {
           </div> */}
 
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 -mt-[10%]">
+      <div className="absolute inset-0 z-0">
         <Image
           alt="linear-gradient-bg"
           width={1920}
@@ -248,20 +248,16 @@ export default function Branding() {
             {/* Text column */}
             <div className="col-span-1 text-white space-y-12">
               <div className="flex gap-16 max-lg:gap-8">
-                <div className="w-1 bg-white min-h-79">|</div>
-                <div className="tracking-[-0.03em]">
+                <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
+                <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
-                    Tech With Moonshot makes use of collaborative efforts to{" "}
-                    <br />
-                    give you a good website development services. <br />
-                    Additionally, our professional website developers give you{" "}
-                    <br />
-                    exclusive insights how to make user friendly, interactive,{" "}
-                    <br />
-                    secure and speedy websites. Moreover, our front-end <br />
-                    developers and back-end developers know how to service{" "}
-                    <br />
-                    your web development request in agile manner.
+                    Tech With Moonshot makes use of collaborative efforts to
+                    give you a good website development services. <br /> Additionally,
+                    our professional website developers give you exclusive
+                    insights how to make user friendly, interactive, secure and
+                    speedy websites. Moreover, our front-end developers and
+                    back-end developers know how to service your web development
+                    request in agile manner.
                   </ScrollReveal>
                 </div>
               </div>

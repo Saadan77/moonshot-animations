@@ -167,7 +167,7 @@ export default function Ecommerce() {
           </div> */}
 
           {/* Background Image */}
-          <div className="absolute inset-0 z-0 -mt-[10%]">
+          <div className="absolute inset-0 z-0">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -228,7 +228,7 @@ export default function Ecommerce() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 z-0 -mt-[50%]">
+          <div className="absolute inset-0 z-0 -mt-[30%]">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -237,7 +237,7 @@ export default function Ecommerce() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:py-32 px-6 lg:px-36">
+          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36">
             <div className="flex justify-end max-lg:justify-center">
               <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
                 <TextType
@@ -262,32 +262,27 @@ export default function Ecommerce() {
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
               {/* Image column */}
-              <div className="-mt-26 relative z-10 col-span-1 flex items-center justify-center">
+              <div className="-mt-26 col-span-1 flex items-center justify-center">
                 <img
                   src="/images/services/e-commerce/section-3.png"
                   alt="Laptop showcasing website design"
                   className="h-full w-full object-cover scale-200"
                   style={{ mixBlendMode: "screen" }}
-                  data-smoother-ignore
                 />
               </div>
 
               {/* Text column */}
               <div className="col-span-1 text-white space-y-12">
                 <div className="flex gap-16 max-lg:gap-8">
-                  <div className="w-1 bg-white min-h-79">|</div>
-                  <div className="tracking-[-0.03em]">
+                  <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
+                  <div className="tracking-[-0.03em] font-nomal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
-                      Tech With Moonshot makes use of collaborative efforts to{" "}
-                      <br />
-                      give you a good website development services. <br />
-                      Additionally, our professional website developers give you{" "}
-                      <br />
-                      exclusive insights how to make user friendly, interactive,{" "}
-                      <br />
-                      secure and speedy websites. Moreover, our front-end <br />
-                      developers and back-end developers know how to service{" "}
-                      <br />
+                      Tech With Moonshot makes use of collaborative efforts to
+                      give you a good website development services. <br />{" "}
+                      Additionally, our professional website developers give you
+                      exclusive insights how to make user friendly, interactive,
+                      secure and speedy websites. Moreover, our front-end
+                      developers and back-end developers know how to service
                       your web development request in agile manner.
                     </ScrollReveal>
                   </div>
@@ -316,7 +311,7 @@ export default function Ecommerce() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 z-0 -mt-[30%]">
+          <div className="absolute inset-0 z-0 -mt-[10%]">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -325,7 +320,7 @@ export default function Ecommerce() {
             />
           </div>
 
-          <section id="e-commerce" className="pt-64">
+          <section id="e-commerce" className="relative pt-64">
             <div className="relative flex flex-col">
               <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
@@ -424,13 +419,33 @@ export default function Ecommerce() {
               />
             </h2>
 
-            <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+            {/* 1. Success Stories Section */}
+            <section className="relative lg:-mt-16 xl:-mt-20 z-50">
               <SuccessStories />
             </section>
+
+            {/* 2. LARGE GRADIENT BRIDGE 
+                Increased height to 800px and large negative margin to 
+                start the fade smoothly behind the carousel content. 
+            */}
+            <div
+              className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+              }}
+            />
+
+            {/* 3. CTA Section 
+                Added solid background to catch any remaining pixels
+            */}
+            <div className="relative z-30 -mt-32 bg-[#00050A]">
+              <FormCTA />
+            </div>
           </div>
         </div>
-
-        <FormCTA />
+        {/* 
+        <FormCTA /> */}
         <Footer />
       </div>
     </>
