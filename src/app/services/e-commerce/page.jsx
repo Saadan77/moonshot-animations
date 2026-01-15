@@ -198,17 +198,24 @@ export default function Ecommerce() {
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.1vw,22px)]">
                 From first idea to live launch, we design and build websites
                 that fuel your growth online
               </p>
             </div>
 
-            <img
-              src="/images/services/e-commerce/hero.png"
-              className="absolute w-1/2 top-20 right-10 z-10 h-auto"
-              alt="E-commerce Hero"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/e-commerce/hero.png"
+                className="absolute w-1/2 top-20 right-10 z-10 h-auto"
+                alt="E-commerce Hero"
+              />
+            </div>
           </div>
         </div>
 

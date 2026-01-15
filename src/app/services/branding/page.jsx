@@ -171,16 +171,21 @@ export default function Branding() {
             </span>
           </h1>
 
-          <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
+          <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.05vw,22px)]">
             From early spark to brand logo, we create and shape profiles that
             show who you are online
           </p>
         </div>
 
-        <div className="absolute w-1/2 max-1600:w-3/4 max-1280:w-4/6 top-40 right-0 z-10">
+        <div>
+          <img
+            className="absolute inset-0 w-full h-auto"
+            src="/images/services/bg-service-banner.png"
+            alt="Hero Background Gradient"
+          />
           <img
             src="/images/services/branding/hero-cropped.png"
-            className=""
+            className="absolute w-1/2 max-1600:w-3/4 max-1280:w-4/6 top-40 right-0 z-10"
             alt="Branding Hero"
           />
         </div>

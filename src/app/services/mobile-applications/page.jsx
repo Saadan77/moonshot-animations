@@ -174,11 +174,18 @@ export default function MobileApplications() {
             </p>
           </div>
 
-          <img
-            src="/images/services/mobile-applications/hero.png"
-            className="absolute w-[45%] top-50 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
-            alt="mobile-applications Hero"
-          />
+          <div>
+            <img
+              className="absolute inset-0 w-full h-auto"
+              src="/images/services/bg-service-banner.png"
+              alt="Hero Background Gradient"
+            />
+            <img
+              src="/images/services/mobile-applications/hero.png"
+              className="absolute w-[45%] top-50 right-0 z-10 max-lg:relative max-lg:top-0 max-lg:right-0 h-auto"
+              alt="mobile-applications Hero"
+            />
+          </div>
         </div>
       </section>
 
@@ -407,7 +414,7 @@ export default function MobileApplications() {
           <FormCTA />
         </div>
       </div>
-      
+
       <Footer />
     </>
   );

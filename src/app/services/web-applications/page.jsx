@@ -177,11 +177,18 @@ export default function WebApplications() {
               </p>
             </div>
 
-            <img
-              src="/images/services/web-applications/hero.png"
-              className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1600:top-20 max-1440:top-10 -right-35 max-xl:-right-25 z-10 max-lg:relative max-lg:top-0 max-lg:right-0"
-              alt="Astronaut"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/web-applications/hero.png"
+                className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1600:top-20 max-1440:top-10 -right-50 max-xl:-right-25 z-10 max-lg:relative max-lg:top-0 max-lg:right-0"
+                alt="Astronaut"
+              />
+            </div>
           </div>
         </div>
 

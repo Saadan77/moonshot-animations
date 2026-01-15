@@ -172,8 +172,14 @@ export default function Animations() {
             </p>
           </div>
 
-          <div className="absolute w-1/2 top-40 right-0 z-10">
+          <div>
             <img
+              className="absolute inset-0 w-full h-auto"
+              src="/images/services/bg-service-banner.png"
+              alt="Hero Background Gradient"
+            />
+            <img
+              className="absolute w-1/2 top-40 right-0 z-10"
               src="/images/services/animations/hero.png"
               alt="animations Hero"
             />

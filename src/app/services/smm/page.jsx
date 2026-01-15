@@ -175,11 +175,18 @@ export default function SSM() {
               </p>
             </div>
 
-            <img
-              src="/images/services/ssm/hero.png"
-              className="absolute w-[45%] h-auto -bottom-15 right-30 max-xl:right-10"
-              alt="Social Media Marketing Hero"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/ssm/hero.png"
+                className="absolute w-[45%] h-auto -bottom-15 right-30 max-xl:right-10"
+                alt="Social Media Marketing Hero"
+              />
+            </div>
           </div>
         </div>
 

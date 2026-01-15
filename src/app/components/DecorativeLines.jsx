@@ -5,7 +5,7 @@ export default function DecorativeLines() {
                 <div
                     key={left}
                     style={{ left }}
-                    className="absolute top-0 -translate-x-1/2 -translate-y-1/4 flex flex-col"
+                    className="absolute z-10 top-0 -translate-x-1/2 -translate-y-1/4 flex flex-col"
                 >
                     <div
                         className="w-px h-screen"

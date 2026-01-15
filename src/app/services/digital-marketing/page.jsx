@@ -157,7 +157,7 @@ export default function DigitalMarketing() {
                 </p>
               </div>
 
-              <h1 className="text-[clamp(30px,3.6vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
+              <h1 className="text-[clamp(40px,3.7vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Ad Growth <br /> Campaigns That Drive{" "}
                 </AuroraText>
@@ -168,21 +168,28 @@ export default function DigitalMarketing() {
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,192px)]">
                 From strategy to launch, we plan, run and optimize campaigns
                 that grow your brand online.
               </p>
             </div>
 
-            <img
-              src="/images/services/digital-marketing/hero.png"
-              className="absolute bottom-0 right-0 max-1600:w-1/2 max-xl:w-[45%] z-10 h-auto"
-              alt="Digital Marketing Hero"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/digital-marketing/hero.png"
+                className="absolute bottom-0 right-0 max-1600:w-1/2 max-xl:w-[45%] z-10 h-auto"
+                alt="Digital Marketing Hero"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="relative px-24 max-lg:p-2 z-10 justify-center flex">
+        <div className="relative px-24 max-lg:p-2 z-10">
           <img
             src="/images/services/digital-marketing/section-2.png"
             className="w-full h-full"

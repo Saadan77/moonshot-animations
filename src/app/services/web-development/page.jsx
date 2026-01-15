@@ -187,11 +187,18 @@ export default function WebDevelopment() {
             </p>
           </div>
 
-          <img
-            src="/images/services/web-development/hero-cropped.png"
-            className="absolute -top-10 max-1600:top-15 right-0 z-10 w-[90%] h-auto"
-            alt="Astronaut"
-          />
+          <div>
+            <img
+              className="absolute inset-0 w-full h-auto"
+              src="/images/services/bg-service-banner.png"
+              alt="Hero Background Gradient"
+            />
+            <img
+              src="/images/services/web-development/hero-cropped.png"
+              className="absolute -top-10 max-1600:top-15 right-0 z-10 w-[90%] h-auto"
+              alt="Astronaut"
+            />
+          </div>
         </div>
       </section>
 

@@ -188,11 +188,18 @@ export default function SEO() {
               </p>
             </div>
 
-            <img
-              src="/images/services/seo/hero.png"
-              className="absolute w-[80%] -bottom-50 -right-90 max-1600:w-[85%] max-1600:-bottom-40 max-1280:-bottom-30 max-2xl:-right-80 max-xl:-right-60"
-              alt="SEO Hero Image"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/seo/hero.png"
+                className="absolute w-[80%] -bottom-50 -right-90 max-1600:w-[85%] max-1600:-bottom-40 max-1280:-bottom-30 max-2xl:-right-80 max-xl:-right-60"
+                alt="SEO Hero Image"
+              />
+            </div>
           </div>
         </div>
 

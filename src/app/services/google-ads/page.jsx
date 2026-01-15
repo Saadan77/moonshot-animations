@@ -172,11 +172,18 @@ export default function GoogleAds() {
               </p>
             </div>
 
-            <img
-              src="/images/services/google-ads/hero.png"
-              className="absolute top-40 right-10 max-1600:w-[45%] max-xl:w-[40%] z-10 h-auto"
-              alt="Google Ads Hero"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/google-ads/hero.png"
+                className="absolute top-50 right-10 max-1600:w-[45%] max-xl:w-[40%] z-10 h-auto"
+                alt="Google Ads Hero"
+              />
+            </div>
           </div>
         </div>
 

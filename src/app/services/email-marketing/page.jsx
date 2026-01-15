@@ -189,11 +189,18 @@ export default function EmailMarketing() {
               </p>
             </div>
 
-            <img
-              src="/images/services/email-marketing/hero.png"
-              className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-0 max-xl:bottom-50 right-0 z-10"
-              alt="Email Marketing Hero"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/services/email-marketing/hero.png"
+                className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-0 max-xl:bottom-50 right-0 z-10"
+                alt="Email Marketing Hero"
+              />
+            </div>
           </div>
         </div>
 
