@@ -419,15 +419,11 @@ export default function Ecommerce() {
               />
             </h2>
 
-            {/* 1. Success Stories Section */}
+            {/* Success Stories Section */}
             <section className="relative lg:-mt-16 xl:-mt-20 z-50">
               <SuccessStories />
             </section>
 
-            {/* 2. LARGE GRADIENT BRIDGE 
-                Increased height to 800px and large negative margin to 
-                start the fade smoothly behind the carousel content. 
-            */}
             <div
               className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
               style={{
@@ -436,16 +432,12 @@ export default function Ecommerce() {
               }}
             />
 
-            {/* 3. CTA Section 
-                Added solid background to catch any remaining pixels
-            */}
             <div className="relative z-30 -mt-32 bg-[#00050A]">
               <FormCTA />
             </div>
           </div>
         </div>
-        {/* 
-        <FormCTA /> */}
+
         <Footer />
       </div>
     </>

@@ -389,9 +389,21 @@ export default function WebDevelopment() {
           />
         </h2>
 
-        <section className="relative lg:-mt-16 xl:-mt-20">
+        <section className="relative lg:-mt-16 xl:-mt-20 z-50">
           <SuccessStories />
         </section>
+
+        <div
+          className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+          }}
+        />
+
+        <div className="relative z-30 -mt-32 bg-[#00050A]">
+          <FormCTA />
+        </div>
       </div>
 
       {/* <section className="py-20 px-20">
@@ -469,7 +481,6 @@ export default function WebDevelopment() {
         </div>
       </section> */}
 
-      <FormCTA />
       <Footer />
     </>
   );
