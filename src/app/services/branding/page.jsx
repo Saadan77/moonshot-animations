@@ -186,13 +186,13 @@ export default function Branding() {
         </div>
       </section>
 
-      <section className="relative px-24 max-lg:p-2 z-10 justify-center flex">
+      <section className="relative px-24 max-lg:p-2 z-10">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="relative z-10 w-full h-full rounded-[34.137px] object-contain opacity-90"
+          className="relative z-10 w-full h-full rounded-[34.137px] opacity-90"
         >
           <source
             src="/images/services/branding/section-2.mp4"
@@ -252,12 +252,12 @@ export default function Branding() {
                 <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
                     Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. <br /> Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
+                    give you a good website development services. <br />{" "}
+                    Additionally, our professional website developers give you
+                    exclusive insights how to make user friendly, interactive,
+                    secure and speedy websites. Moreover, our front-end
+                    developers and back-end developers know how to service your
+                    web development request in agile manner.
                   </ScrollReveal>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function Branding() {
         <section>
           <img
             src="/images/services/branding/section-4.png"
-            className="relative z-10 h-full w-full object-cover bg-center"
+            className="max-h-[95vh] object-cover object-denter relative z-10 h-full w-full"
           />
         </section>
       </div>
@@ -392,13 +392,24 @@ export default function Branding() {
             />
           </h2>
 
-          <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
+
+          <div
+            className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+            }}
+          />
+
+          <div className="relative z-30 -mt-32 bg-[#00050A]">
+            <FormCTA />
+          </div>
         </div>
       </div>
 
-      <FormCTA />
       <Footer />
     </>
   );

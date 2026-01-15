@@ -157,11 +157,11 @@ export default function MobileApplications() {
               </p>
             </div>
 
-            <h1 className="text-[clamp(30px,3.55vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
+            <h1 className="text-[clamp(30px,3.7vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Crafting <br /> Apps That Power Your{" "}
               </AuroraText>
-              <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Brand & Ambition
                 </AuroraText>
@@ -188,7 +188,7 @@ export default function MobileApplications() {
           loop
           muted
           playsInline
-          className="w-full h-full rounded-[34.137px] object-contain"
+          className="w-full h-[95vh] rounded-[34.137px] object-cover object-center"
         >
           <source
             src="/images/services/mobile-applications/section-2.mp4"
@@ -207,7 +207,7 @@ export default function MobileApplications() {
           />
         </div>
 
-        <section className="py-36 px-6 xl:px-20 lg:px-16 bg-bottom">
+        <section className="relative z-10 py-36 px-6 xl:px-20 lg:px-16">
           <div className="flex justify-end max-lg:justify-center mr-20">
             <h2 className="text-[clamp(20px,3vw,60px)] font-sora font-light uppercase tracking-tight leading-snug mb-16 max-1440:mb-5 max-2xl:mb-4">
               <TextType
@@ -230,30 +230,30 @@ export default function MobileApplications() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-9 gap-12">
             {/* Image column */}
-            <div className="-mt-70 max-1440:-mt-50 relative z-10 col-span-1 flex items-center justify-center">
+            <div className="-mt-70 max-1440:-mt-50 relative z-10 col-span-5 flex items-center justify-center">
               <img
                 src="/images/services/mobile-applications/section-3.png"
                 alt="Laptop showcasing website design"
-                className="h-auto w-full max-1440:w-4/5 object-cover"
+                className="h-auto w-4/5 object-cover"
                 style={{ mixBlendMode: "screen" }}
               />
             </div>
 
             {/* Text column */}
-            <div className="col-span-1 text-white space-y-12">
+            <div className="col-span-4 text-white space-y-12">
               <div className="flex gap-16 max-lg:gap-8">
                 <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                 <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
                     Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. <br /> Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
+                    give you a good website development services. <br />{" "}
+                    Additionally, our professional website developers give you
+                    exclusive insights how to make user friendly, interactive,
+                    secure and speedy websites. Moreover, our front-end
+                    developers and back-end developers know how to service your
+                    web development request in agile manner.
                   </ScrollReveal>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function MobileApplications() {
         <section>
           <img
             src="/images/services/mobile-applications/section-4.png"
-            className="relative z-10 h-full w-full"
+            className="relative z-10 h-[95vh] w-full object-center object-cover"
           />
         </section>
       </div>
@@ -391,12 +391,23 @@ export default function MobileApplications() {
           />
         </h2>
 
-        <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+        <section className="relative lg:-mt-16 xl:-mt-20 z-50">
           <SuccessStories />
         </section>
-      </div>
 
-      <FormCTA />
+        <div
+          className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+          }}
+        />
+
+        <div className="relative z-30 -mt-32 bg-[#00050A]">
+          <FormCTA />
+        </div>
+      </div>
+      
       <Footer />
     </>
   );

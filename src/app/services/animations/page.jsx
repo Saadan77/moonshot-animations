@@ -57,19 +57,19 @@ export default function Animations() {
     {
       id: 1,
       thumbnail: "/images/services/animations/layout-grid/video-1.mp4",
-      className: "md:col-span-2 md:row-span-2",
+      className: "md:col-span-3 md:row-span-2",
       content: null,
     },
     {
       id: 2,
       thumbnail: "/images/services/animations/layout-grid/video-2.webm",
-      className: "md:col-span-1",
+      className: "md:col-span-2",
       content: null,
     },
     {
       id: 3,
       thumbnail: "/images/services/animations/layout-grid/video-3.mp4",
-      className: "md:col-span-1",
+      className: "md:col-span-2",
       content: null,
     },
   ];
@@ -159,7 +159,7 @@ export default function Animations() {
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Smooth Animations <br /> That Grow Your{" "}
               </AuroraText>
-              <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Brand Reach
                 </AuroraText>
@@ -181,7 +181,7 @@ export default function Animations() {
         </div>
       </section>
 
-      <div className="relative mt-20 py-5 px-24 max-lg:p-2 z-10 justify-center flex">
+      <div className="relative px-24 max-lg:p-2 z-10">
         <video
           autoPlay
           loop
@@ -207,9 +207,9 @@ export default function Animations() {
           />
         </div>
 
-        <section className="relative py-24 lg:py-52 px-6 lg:px-36">
-          <div className="flex justify-end max-lg:justify-center">
-            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-36 max-lg:ml-0">
+        <section className="relative py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
+          <div className="flex justify-center">
+            <h2 className="ml-[30%] text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 max-lg:ml-0">
               <TextType
                 text="Expressive visual"
                 typingSpeed={75}
@@ -248,12 +248,12 @@ export default function Animations() {
                 <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
                     Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. <br /> Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
+                    give you a good website development services. <br />{" "}
+                    Additionally, our professional website developers give you
+                    exclusive insights how to make user friendly, interactive,
+                    secure and speedy websites. Moreover, our front-end
+                    developers and back-end developers know how to service your
+                    web development request in agile manner.
                   </ScrollReveal>
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function Animations() {
             loop
             muted
             playsInline
-            className="relative z-10 w-full h-full rounded-[34.137px] object-cover opacity-100"
+            className="relative z-10 w-full h-full"
           >
             <source
               src="/images/services/animations/section-4.mp4"
@@ -289,8 +289,8 @@ export default function Animations() {
         </div>
 
         <section id="animations" className="relative z-10 pt-64">
-          <div className="flex flex-col items-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+          <div>
+            <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="High-impact animation"
                 typingSpeed={75}
@@ -309,7 +309,7 @@ export default function Animations() {
                 loop={true}
               />
             </h2>
-            <div className="mx-auto text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
               <TextType
                 text="‘Tech With Moonshot’ recognizes the worth of video animation. The reason being it evokes customer interest and lead them to buy goods and services. In order to help our clients, our animators combine creative design, 3D special effects, live action and visual effects to give your concept a life."
                 typingSpeed={15}
@@ -337,6 +337,11 @@ export default function Animations() {
                       @media (max-width: 1024px) {
                         #animations #animations-layout > div.grid {
                           padding: 25px !important;
+                        }
+                      }
+                      @media (min-width: 48rem) { 
+                        #animations #animations-layout .grid {
+                            grid-template-columns: repeat(5, minmax(0, 1fr));
                         }
                       }
                       /* Hide the absolute overlay inside LayoutGrid cards */
@@ -382,12 +387,23 @@ export default function Animations() {
           />
         </h2>
 
-        <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+        <section className="relative lg:-mt-16 xl:-mt-20 z-50">
           <SuccessStories />
         </section>
+
+        <div
+          className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+          }}
+        />
+
+        <div className="relative z-30 -mt-32 bg-[#00050A]">
+          <FormCTA />
+        </div>
       </div>
 
-      <FormCTA />
       <Footer />
     </>
   );

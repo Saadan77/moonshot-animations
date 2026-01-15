@@ -252,17 +252,17 @@ export default function EmailMarketing() {
               <div className="col-span-1 text-white space-y-12">
                 <div className="flex gap-16 max-lg:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                <div className="tracking-[-0.03em] font-nomal font-sora">
-                  <ScrollReveal size="sm" enableBlur={false}>
-                    Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. <br /> Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
-                  </ScrollReveal>
-                </div>
+                  <div className="tracking-[-0.03em] font-nomal font-sora">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to
+                      give you a good website development services. <br />{" "}
+                      Additionally, our professional website developers give you
+                      exclusive insights how to make user friendly, interactive,
+                      secure and speedy websites. Moreover, our front-end
+                      developers and back-end developers know how to service
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
                 </div>
                 <Link
                   href="#"
@@ -388,13 +388,24 @@ export default function EmailMarketing() {
               />
             </h2>
 
-            <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+            <section className="relative lg:-mt-16 xl:-mt-20 z-50">
               <SuccessStories />
             </section>
+
+            <div
+              className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+              }}
+            />
+
+            <div className="relative z-30 -mt-32 bg-[#00050A]">
+              <FormCTA />
+            </div>
           </div>
         </div>
 
-        <FormCTA />
         <Footer />
       </div>
     </>

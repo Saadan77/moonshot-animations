@@ -161,14 +161,14 @@ export default function DigitalMarketing() {
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Ad Growth <br /> Campaigns That Drive{" "}
                 </AuroraText>
-                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Traffic & Sales
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,0.9vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
                 From strategy to launch, we plan, run and optimize campaigns
                 that grow your brand online.
               </p>
@@ -183,18 +183,11 @@ export default function DigitalMarketing() {
         </div>
 
         <div className="relative px-24 max-lg:p-2 z-10 justify-center flex">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative z-10 w-full h-full rounded-[34.137px] object-contain opacity-90"
-          >
-            <source
-              src="/images/services/digital-marketing/section-2.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <img
+            src="/images/services/digital-marketing/section-2.png"
+            className="w-full h-full"
+            alt="Digital Marketing Section 2"
+          />
         </div>
 
         <div className="relative">
@@ -207,9 +200,9 @@ export default function DigitalMarketing() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36">
+          <section className="relative z-10 py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-16 mr-20 max-lg:ml-0">
                 <TextType
                   text="Results-driven"
                   typingSpeed={75}
@@ -230,32 +223,32 @@ export default function DigitalMarketing() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-9 gap-12">
               {/* Image column */}
-              <div className="-mt-54 relative z-10 col-span-1 flex items-center justify-center">
+              <div className="-mt-30 relative z-10 col-span-5 flex items-center justify-center">
                 <img
                   src="/images/services/digital-marketing/section-3.png"
                   alt="Laptop showcasing website design"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                   style={{ mixBlendMode: "screen" }}
                 />
               </div>
 
               {/* Text column */}
-              <div className="col-span-1 text-white space-y-12">
+              <div className="col-span-4 text-white space-y-12">
                 <div className="flex gap-16 max-lg:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                <div className="tracking-[-0.03em] font-nomal font-sora">
-                  <ScrollReveal size="sm" enableBlur={false}>
-                    Tech With Moonshot makes use of collaborative efforts to
-                    give you a good website development services. <br /> Additionally,
-                    our professional website developers give you exclusive
-                    insights how to make user friendly, interactive, secure and
-                    speedy websites. Moreover, our front-end developers and
-                    back-end developers know how to service your web development
-                    request in agile manner.
-                  </ScrollReveal>
-                </div>
+                  <div className="tracking-[-0.03em] font-nomal font-sora">
+                    <ScrollReveal size="sm" enableBlur={false}>
+                      Tech With Moonshot makes use of collaborative efforts to
+                      give you a good website development services. <br />{" "}
+                      Additionally, our professional website developers give you
+                      exclusive insights how to make user friendly, interactive,
+                      secure and speedy websites. Moreover, our front-end
+                      developers and back-end developers know how to service
+                      your web development request in agile manner.
+                    </ScrollReveal>
+                  </div>
                 </div>
                 <Link
                   href="#"
@@ -389,13 +382,24 @@ export default function DigitalMarketing() {
             />
           </h2>
 
-          <section className="relative pb-20 lg:-mt-16 xl:-mt-20">
+          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
+
+          <div
+            className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
+            }}
+          />
+
+          <div className="relative z-30 -mt-32 bg-[#00050A]">
+            <FormCTA />
+          </div>
         </div>
       </div>
 
-      <FormCTA />
       <Footer />
     </>
   );
