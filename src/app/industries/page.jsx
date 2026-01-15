@@ -9,6 +9,7 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Image from "next/image";
+import Smoke from "../components/smoke/smoke";
 
 export default function Portfolio() {
   const topCards = [
@@ -210,8 +211,10 @@ export default function Portfolio() {
         </div>
 
         <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
+          <Smoke />
+          
           <div
-            id="industries-grid"
+            id="industries-grid" className="relative z-50"
             style={{
               ["--img-opacity"]: "0.8",
             }}

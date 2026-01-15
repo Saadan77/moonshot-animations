@@ -53,7 +53,7 @@ const AboutUs = () => {
   return (
     <section
       id="about-us"
-      className="relative isolate w-full bg-[#00060b] text-white z-10 overflow-hidden"
+      className="relative isolate w-full bg-[#00060b] -mt-15 pt-15 text-white z-10 overflow-hidden"
     >
       <div id="smoke" ref={smokeRef}></div>
       <style

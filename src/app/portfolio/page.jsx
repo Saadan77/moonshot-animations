@@ -11,6 +11,7 @@ import Ribbons from "@/components/Ribbons";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Smoke from "../components/smoke/smoke";
 
 export default function Portfolio() {
   return (
@@ -30,23 +31,8 @@ export default function Portfolio() {
         <Navbar />
 
         <div className="flex items-center relative w-full overflow-visible">
-          {/* Dither Background */}
-          {/* <div className="absolute inset-0 w-full h-[200vh] opacity-20">
-            <Dither
-              waveColor={[0.01, 0.29, 0.62]}
-              backgroundColor={[0.84, 0.13, 0.69]}
-              disableAnimation={false}
-              enableMouseInteraction={true}
-              mouseRadius={0.3}
-              colorNum={4}
-              waveAmplitude={0.3}
-              waveFrequency={3}
-              waveSpeed={0.05}
-            />
-          </div> */}
-
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
+          {/* Background Image Container */}
+          <div className="absolute inset-0 z-10">
             <Image
               alt="linear-gradient-bg"
               width={1920}
@@ -54,6 +40,8 @@ export default function Portfolio() {
               src="/images/services/bg-service-banner.png"
               style={{ filter: "brightness(1.25)" }}
             />
+            {/* FIX: Add this Gradient Overlay to blend into the next section */}
+            <div className="absolute bottom-0 w-full h-64 bg-linear-to-b from-transparent to-[#00050a33]" />
           </div>
 
           {/* Decorative Lines */}
@@ -99,23 +87,12 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <PortfolioGrid />
-
-        <div className="w-screen flex justify-center pt-6 pb-20 bg-[#00050a]">
-          <Link
-            href="#"
-            className="group inline-flex items-center gap-6 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
-          >
-            <span className="relative top-[0.5px] font-sora text-[18px] max-lg:text-[15px] whitespace-nowrap">
-              See More
-            </span>
-            <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
-              <ChevronRight className="w-6 h-6 group-hover:text-black" />
-            </span>
-          </Link>
+        {/* Next Section (Background matches the fade to color) */}
+        <div className="relative bg-[#00050a]">
+          <Smoke />
+          <PortfolioGrid />
         </div>
 
-        <CTA />
         <Footer />
       </section>
     </>
