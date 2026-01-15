@@ -372,14 +372,15 @@ export default function WebDevelopment() {
 
       <div className="relative">
         <Smoke />
+
         <section className="relative">
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
 
-        <div className="relative max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
+        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         {/* Success Stories Section */}
-        <h2 className="relative z-10 max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+        <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
           <TextType
             text="200+"
             typingSpeed={75}
@@ -413,82 +414,7 @@ export default function WebDevelopment() {
 
         <FormCTA />
       </div>
-
-      {/* <section className="py-20 px-20">
-        <h2
-          className="relative z-50 my-8 min-h-37.5 lg:min-h-12.5 text-white font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
-          style={{ fontFamily: "var(--font-sora), sans-serif" }}
-        >
-          <TextType
-            text={["Specialties"]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={false}
-            startOnVisible={true}
-            loop={true}
-          />
-        </h2>
-
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ServiceCard
-            title="Responsive Design"
-            description="Responsive websites are workable across multiple platforms to increase the reach of your brand."
-            icon={<Laptop />}
-          />
-
-          <ServiceCard
-            title="Conversion-driven Design"
-            description="Our web applications are fabricated in a way that promotes lead conversion."
-            icon={<TrendingUp />}
-          />
-
-          <ServiceCard
-            title="Search Engine Optimized"
-            description="Tech With Moonshot professionals give our partners optimized and keyword loaded web applications."
-            icon={<Search />}
-          />
-
-          <ServiceCard
-            title="Safety and security"
-            description="Our team fashions web applications that are secured with SSL certification."
-            icon={<ShieldCheck />}
-          />
-
-          <ServiceCard
-            title="Mobile Ready"
-            description="It is advantageous for our partners to build applications that are also mobile-ready and convertible."
-            icon={<Smartphone />}
-          />
-
-          <ServiceCard
-            title="User Experience"
-            description="Without proper induction of efficacious user experience, no web application is worthy for your brand."
-            icon={<User />}
-          />
-
-          <div className="md:col-start-2">
-            <ServiceCard
-              title="Speed"
-              description="Google algorithms pick up those web applications that are easily loadable and speedy. Fortunately, our web developers have abundant skills to accelerate the web speed."
-              icon={<Gauge />}
-            />
-          </div>
-        </div>
-
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div
-              className="min-w-screen h-37.5 rounded-t-full blur-[80px] in-out"
-              style={{
-                background:
-                  "linear-gradient(119deg, rgba(57, 40, 255, 0.80) 14.54%, rgba(250, 40, 242, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%), linear-gradient(119deg, rgba(255, 198, 40, 0.80) 14.54%, rgba(250, 40, 137, 0.80) 41.09%, rgba(35, 141, 250, 0.80) 55.83%, rgba(62, 95, 249, 0.80) 80.08%)",
-                backgroundSize: "200% 100%, 200% 100%",
-              }}
-            />
-          </div>
-        </div>
-      </section> */}
-
+      
       <Footer />
     </>
   );

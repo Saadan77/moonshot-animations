@@ -47,7 +47,7 @@ export default function Smoke() {
 
   return (
     <>
-      <div id="smoke" ref={smokeRef}></div>
+      <div id="smoke" className="hidden lg:block" ref={smokeRef}></div>
       <style
         dangerouslySetInnerHTML={{
           __html: `

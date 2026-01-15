@@ -17,6 +17,7 @@ import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -288,7 +289,9 @@ export default function SSM() {
             />
           </div>
 
-          <section id="ssm" className="pt-64">
+          <section id="ssm" className="relative z-10 pt-50">
+            <Smoke />
+
             <div className="flex flex-col">
               <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
@@ -322,33 +325,33 @@ export default function SSM() {
               </div>
             </div>
 
-            <div id="ssm-layout">
+            <div id="ssm-layout" className="relative z-50">
               <LayoutGrid cards={layoutImages} />
 
               <style
                 dangerouslySetInnerHTML={{
                   __html: `
-                        #ssm #ssm-layout > div.grid {
-                            gap: 50px !important;
-                            padding: 5rem !important;
-                        }
-                        #ssm #ssm-layout img {
-                            border-radius: 25.788px !important;
-                        }
-                        @media (max-width: 1024px) {
-                            #ssm #ssm-layout > div.grid {
-                                padding: 25px !important;
-                            }
-                        }
-                        @media (min-width: 48rem) { 
-                          #ssm #ssm-layout .grid {
-                            grid-template-columns: repeat(5, minmax(0, 1fr));
+                      #ssm #ssm-layout > div.grid {
+                          gap: 50px !important;
+                          padding: 5rem !important;
+                      }
+                      #ssm #ssm-layout img {
+                          border-radius: 25.788px !important;
+                      }
+                      @media (max-width: 1024px) {
+                          #ssm #ssm-layout > div.grid {
+                              padding: 25px !important;
                           }
+                      }
+                      @media (min-width: 48rem) { 
+                        #ssm #ssm-layout .grid {
+                          grid-template-columns: repeat(5, minmax(0, 1fr));
                         }
-                        #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                            display: none !important;
-                        }
-                    `,
+                      }
+                      #ssm #ssm-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                          display: none !important;
+                      }
+                  `,
                 }}
               />
             </div>
@@ -361,6 +364,8 @@ export default function SSM() {
             backgroundImage: "url(/images/services/bg-gradient-1.png)",
           }}
         >
+          <Smoke />
+
           <section className="relative">
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
@@ -399,9 +404,7 @@ export default function SSM() {
             }}
           />
 
-          <div className="relative z-30 -mt-32 bg-[#00050A]">
-            <FormCTA />
-          </div>
+          <FormCTA />
         </div>
 
         <Footer />

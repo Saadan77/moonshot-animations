@@ -17,6 +17,7 @@ import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -297,7 +298,9 @@ export default function MobileApplications() {
           />
         </div>
 
-        <div id="mobile-applications" className="relative z-10 pt-64">
+        <div id="mobile-applications" className="relative z-10 pt-50">
+          <Smoke />
+
           <div>
             <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
@@ -331,35 +334,35 @@ export default function MobileApplications() {
             </div>
           </div>
 
-          <div id="mobile-applications-layout">
+          <div id="mobile-applications-layout" className="relative z-50">
             <LayoutGrid cards={layoutImages} />
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                      #mobile-applications #mobile-applications-layout > div.grid {
-                        gap: 50px !important;
-                        padding: 5rem !important;
-                      }
-                      @media (max-width: 1024px) {
-                        #mobile-applications
-                          #mobile-applications-layout
-                          > div.grid {
-                          padding: 25px !important;
-                        }
-                      }
-                      #mobile-applications #mobile-applications-layout img {
-                          border-radius: 25.788px !important;
-                      }
-                      /* Hide the absolute overlay inside LayoutGrid cards */
-                      #mobile-applications
-                        #mobile-applications-layout
-                        .grid
-                        > div
-                        > div
-                        .absolute.bottom-0.left-0.right-0 {
-                        display: none !important;
-                      }
-                    `,
+                  #mobile-applications #mobile-applications-layout > div.grid {
+                    gap: 50px !important;
+                    padding: 5rem !important;
+                  }
+                  @media (max-width: 1024px) {
+                    #mobile-applications
+                      #mobile-applications-layout
+                      > div.grid {
+                      padding: 25px !important;
+                    }
+                  }
+                  #mobile-applications #mobile-applications-layout img {
+                      border-radius: 25.788px !important;
+                  }
+                  /* Hide the absolute overlay inside LayoutGrid cards */
+                  #mobile-applications
+                    #mobile-applications-layout
+                    .grid
+                    > div
+                    > div
+                    .absolute.bottom-0.left-0.right-0 {
+                    display: none !important;
+                  }
+                `,
               }}
             />
           </div>
@@ -372,6 +375,8 @@ export default function MobileApplications() {
           backgroundImage: "url(/images/services/bg-gradient-1.png)",
         }}
       >
+        <Smoke />
+
         <section className="relative">
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
@@ -410,9 +415,7 @@ export default function MobileApplications() {
           }}
         />
 
-        <div className="relative z-30 -mt-32 bg-[#00050A]">
-          <FormCTA />
-        </div>
+        <FormCTA />
       </div>
 
       <Footer />

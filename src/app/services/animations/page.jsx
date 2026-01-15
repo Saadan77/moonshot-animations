@@ -18,6 +18,7 @@ import Button from "@/app/components/button/button";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -194,7 +195,6 @@ export default function Animations() {
           muted
           playsInline
           className="relative z-50 w-full h-full rounded-[34.137px] object-contain opacity-100"
-          data-smoother-ignore
         >
           <source
             src="/images/services/animations/section-2.mp4"
@@ -294,8 +294,10 @@ export default function Animations() {
           />
         </div>
 
-        <section id="animations" className="relative z-10 pt-64">
+        <section id="animations" className="relative z-10 pt-50">
           <div>
+            <Smoke />
+
             <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="High-impact animation"
@@ -328,33 +330,33 @@ export default function Animations() {
             </div>
           </div>
 
-          <div id="animations-layout">
+          <div id="animations-layout" className="relative z-50">
             <LayoutGrid cards={layoutImages} />
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                      #animations #animations-layout > div.grid {
-                        gap: 50px !important;
-                        padding: 5rem !important;
-                      }
-                      #animations #animations-layout img {
-                          border-radius: 25.788px !important;
-                      }
-                      @media (max-width: 1024px) {
-                        #animations #animations-layout > div.grid {
-                          padding: 25px !important;
-                        }
-                      }
-                      @media (min-width: 48rem) { 
-                        #animations #animations-layout .grid {
-                            grid-template-columns: repeat(5, minmax(0, 1fr));
-                        }
-                      }
-                      /* Hide the absolute overlay inside LayoutGrid cards */
-                      #animations #animations-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                        display: none !important;
-                      }
-                    `,
+                  #animations #animations-layout > div.grid {
+                    gap: 50px !important;
+                    padding: 5rem !important;
+                  }
+                  #animations #animations-layout img {
+                      border-radius: 25.788px !important;
+                  }
+                  @media (max-width: 1024px) {
+                    #animations #animations-layout > div.grid {
+                      padding: 25px !important;
+                    }
+                  }
+                  @media (min-width: 48rem) { 
+                    #animations #animations-layout .grid {
+                        grid-template-columns: repeat(5, minmax(0, 1fr));
+                    }
+                  }
+                  /* Hide the absolute overlay inside LayoutGrid cards */
+                  #animations #animations-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                    display: none !important;
+                  }
+                `,
               }}
             />
           </div>
@@ -367,6 +369,8 @@ export default function Animations() {
           backgroundImage: "url(/images/services/bg-gradient-1.png)",
         }}
       >
+        <Smoke />
+
         <section className="relative">
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
@@ -405,9 +409,7 @@ export default function Animations() {
           }}
         />
 
-        <div className="relative z-30 -mt-32 bg-[#00050A]">
-          <FormCTA />
-        </div>
+        <FormCTA />
       </div>
 
       <Footer />

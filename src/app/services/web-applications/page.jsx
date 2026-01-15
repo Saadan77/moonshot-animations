@@ -16,6 +16,7 @@ import DecorativeLines from "@/app/components/DecorativeLines";
 import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -298,7 +299,9 @@ export default function WebApplications() {
             />
           </div>
 
-          <section id="web-applications" className="relative z-10 pt-64">
+          <section id="web-applications" className="relative z-10 pt-50">
+            <Smoke />
+
             <div className="flex flex-col">
               <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
@@ -332,7 +335,7 @@ export default function WebApplications() {
               </div>
             </div>
 
-            <div id="web-applications-layout">
+            <div id="web-applications-layout"  className="relative z-50">
               <LayoutGrid cards={layoutImages} />
 
               <style
@@ -366,6 +369,8 @@ export default function WebApplications() {
             backgroundImage: "url(/images/services/bg-gradient-1.png)",
           }}
         >
+          <Smoke />
+
           <section className="relative">
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
@@ -405,9 +410,7 @@ export default function WebApplications() {
             }}
           />
 
-          <div className="relative z-30 -mt-32 bg-[#00050A]">
-            <FormCTA />
-          </div>
+          <FormCTA />
         </div>
 
         <Footer />

@@ -219,7 +219,7 @@ export default function Footer() {
                                         className="w-full sm:flex-1 p-4 pr-16 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
                                         suppressHydrationWarning
                                     />
-                                    <span className="text-black grid place-items-center rounded-full bg-white hover:bg-[#D42290] p-2.5 m-2 ml-[-63px]">
+                                    <span className="text-black grid place-items-center rounded-full bg-white hover:bg-[#D42290] p-2.5 m-2 -ml-15.75">
                                         <LiaLongArrowAltRightSolid className="w-6 h-6 hover:text-white" />
                                     </span>
                                 </form>

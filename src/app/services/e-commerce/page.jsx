@@ -20,6 +20,7 @@ import FormCTA from "@/app/components/FormCTA";
 import HorizontalScroll from "@/app/components/HorizontalScroll";
 import HorizontalContainerAnimation from "@/app/components/HorizontalScroll";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -327,7 +328,9 @@ export default function Ecommerce() {
             />
           </div>
 
-          <section id="e-commerce" className="relative pt-64">
+          <section id="e-commerce" className="relative pt-50">
+            <Smoke />
+            
             <div className="relative flex flex-col">
               <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
@@ -360,7 +363,7 @@ export default function Ecommerce() {
                 />
               </div>
 
-              <div id="e-commerce-layout" className="relative">
+              <div id="e-commerce-layout" className="relative z-50">
                 <LayoutGrid cards={layoutImages} />
 
                 <style
@@ -388,18 +391,14 @@ export default function Ecommerce() {
             </div>
           </section>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-wrap max-w-[95%] xl:max-w-[90%] mx-auto gap-4 xl:gap-8 2xl:gap-12 h-full items-center">
-                {webDevInfo.map((card) => (
-                  <WebDevCard key={card.id} card={card} />
-                ))}
-              </div> */}
-
           <div
             className="relative bg-top bg-no-repeat bg-cover"
             style={{
               backgroundImage: "url(/images/services/bg-gradient-1.png)",
             }}
           >
+            <Smoke />
+
             <section className="relative">
               <HorizontalScrollCards cards={webDevInfo} />
             </section>
@@ -439,9 +438,7 @@ export default function Ecommerce() {
               }}
             />
 
-            <div className="relative z-30 -mt-32 bg-[#00050A]">
-              <FormCTA />
-            </div>
+            <FormCTA />
           </div>
         </div>
 
