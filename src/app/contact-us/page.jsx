@@ -62,7 +62,14 @@ export default function ContactUs() {
     setErrors(e);
     if (Object.keys(e).length === 0) {
       // TODO: replace with actual submit logic
-      console.log({ email, fullName, budget, businessName, message, selectedTag });
+      console.log({
+        email,
+        fullName,
+        budget,
+        businessName,
+        message,
+        selectedTag,
+      });
       setSubmitSuccess(true);
       setEmail("");
       setFullName("");
@@ -113,7 +120,7 @@ export default function ContactUs() {
               width={1920}
               height={1080}
               src="/images/services/bg-service-banner.png"
-              style={{filter: "brightness(1.25)"}}
+              style={{ filter: "brightness(1.25)" }}
             />
           </div>
 
@@ -145,11 +152,18 @@ export default function ContactUs() {
               </p>
             </div>
 
-            <img
-              src="/images/contact-us-hero.png"
-              className="hidden lg:block w-[38.5%] h-auto absolute bottom-2 right-30 max-1600:right-30 max-xl:right-10 z-10"
-              alt="City"
-            />
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
+              <img
+                src="/images/contact-us-hero.png"
+                className="hidden lg:block w-[38.5%] h-auto absolute bottom-2 right-30 max-1600:right-30 max-xl:right-10 z-10"
+                alt="City"
+              />
+            </div>
           </div>
         </div>
 
@@ -208,12 +222,19 @@ export default function ContactUs() {
               <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
                 <div className="flex items-center gap-4">
                   <PhoneCall className="w-10 h-10 max-lg:h-8 md:h-8 fill-white" />
-                  <Link href="tel:+19723315058" className="hover:underline">+1-972-331-5058</Link>
+                  <Link href="tel:+19723315058" className="hover:underline">
+                    +1-972-331-5058
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <GoLocation className="w-10 h-10 max-lg:h-8 md:h-8" />
-                  <Link href="https://share.google/nqL7znJrG0VweAWyG" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href="https://share.google/nqL7znJrG0VweAWyG"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     1200 East Collins Boulevard <br /> Suite 106 Richardson
                     Texas 75081
                   </Link>
@@ -232,7 +253,11 @@ export default function ContactUs() {
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                     />
-                    {errors.email ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.email}</p> : null}
+                    {errors.email ? (
+                      <p className="text-red-400 text-sm mt-2 ml-5">
+                        {errors.email}
+                      </p>
+                    ) : null}
                   </div>
                   <div>
                     <input
@@ -241,7 +266,11 @@ export default function ContactUs() {
                       onChange={(e) => setFullName(e.target.value)}
                       className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
                     />
-                    {errors.fullName ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.fullName}</p> : null}
+                    {errors.fullName ? (
+                      <p className="text-red-400 text-sm mt-2 ml-5">
+                        {errors.fullName}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
 
@@ -268,15 +297,24 @@ export default function ContactUs() {
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
                   />
-                  {errors.message ? <p className="text-red-400 text-sm mt-2 ml-5">{errors.message}</p> : null}
+                  {errors.message ? (
+                    <p className="text-red-400 text-sm mt-2 ml-5">
+                      {errors.message}
+                    </p>
+                  ) : null}
                 </div>
 
-                <p className="text-white my-4 text-sm 1366:text-base">How can we help you?</p>
+                <p className="text-white my-4 text-sm 1366:text-base">
+                  How can we help you?
+                </p>
 
                 <div className="space-y-6">
                   {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                     (row, rowIdx) => (
-                      <div key={`tag-row-${rowIdx}`} className="w-full flex flex-wrap lg:flex-nowrap lg:justify-between">
+                      <div
+                        key={`tag-row-${rowIdx}`}
+                        className="w-full flex flex-wrap lg:flex-nowrap lg:justify-between"
+                      >
                         {row.map((t) => {
                           const isSelected = selectedTag === t;
                           return (
@@ -300,21 +338,32 @@ export default function ContactUs() {
                 </div>
 
                 <div className="flex justify-between items-center mt-8">
-                  <button type="submit" className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30">
-                    <span className="text-nowrap relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">Send Message</span>
+                  <button
+                    type="submit"
+                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                  >
+                    <span className="text-nowrap relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">
+                      Send Message
+                    </span>
                     <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
                       <ArrowRight className="w-6 h-6 group-hover:text-black" />
                     </span>
                   </button>
                   <div className="lg:text-xs 1366:text-sm text-end">
                     <p className="text-[#A3A3A3]">Prefer email?</p>
-                    <Link href="mailto:moonshottech@gmail.com" className="text-white hover:underline">moonshottech@gmail.com</Link>
+                    <Link
+                      href="mailto:moonshottech@gmail.com"
+                      className="text-white hover:underline"
+                    >
+                      moonshottech@gmail.com
+                    </Link>
                   </div>
                 </div>
 
                 {submitSuccess ? (
                   <p className="mt-6 font-poppins text-sm text-white/80">
-                    Thanks — we’ve received your message. Our team will reach out shortly.
+                    Thanks — we’ve received your message. Our team will reach
+                    out shortly.
                   </p>
                 ) : null}
               </div>

@@ -194,10 +194,15 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="hidden lg:block absolute top-50 -right-50 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10">
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
               <img
                 src="/images/industries/city-bg.png"
-                className="w-5/6 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[50%] h-auto"
+                className="hidden lg:block absolute top-50 right-0 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10 w-2/5 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[50%] h-auto"
                 alt="City"
               />
             </div>

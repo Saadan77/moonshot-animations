@@ -549,7 +549,7 @@ export const StaggeredMenu = ({
 
           <div className="hidden md:flex items-center gap-4 pointer-events-auto">
             <Link
-              href="#"
+              href="/portfolio"
               className="group inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
               <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Our Works</span>

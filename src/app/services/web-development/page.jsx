@@ -27,6 +27,7 @@ import Image from "next/image";
 import ServiceCard from "@/app/components/ServiceCard";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
+import Smoke from "@/app/components/smoke/smoke";
 
 const data = [
   {
@@ -284,10 +285,10 @@ export default function WebDevelopment() {
           </div>
         </section>
 
-        <section className="relative z-10 h-[125vh]">
+        <section className="relative z-10">
           <img
             src="/images/services/web-development/section-4.png"
-            className="h-[85%] w-full object-cover"
+            className="max-h-[110vh] w-full object-cover object-center"
           />
         </section>
       </div>
@@ -302,8 +303,9 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <div id="web-dev" className="relative z-10 pt-20">
-          <div>
+        <div id="web-dev" className="relative z-10 pt-50">
+          <Smoke />
+          <div className="relative">
             <h2 className="mx-20 text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="Multifaceted Web"
@@ -336,7 +338,7 @@ export default function WebDevelopment() {
             </div>
           </div>
 
-          <div id="web-dev-layout">
+          <div id="web-dev-layout" className="relative z-50">
             <LayoutGrid cards={layoutImages} />
             <style
               dangerouslySetInnerHTML={{
@@ -368,12 +370,13 @@ export default function WebDevelopment() {
         </div>
       </div>
 
-      <div>
+      <div className="relative">
+        <Smoke />
         <section className="relative">
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
 
-        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
+        <div className="relative max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         {/* Success Stories Section */}
         <h2 className="relative z-10 max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
@@ -401,16 +404,14 @@ export default function WebDevelopment() {
         </section>
 
         <div
-          className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
+          className="w-full h-130 -mt-150 relative z-10"
           style={{
             background:
               "linear-gradient(to bottom, transparent 0%, #00050A 50%)",
           }}
         />
 
-        <div className="relative z-30 -mt-32 bg-[#00050A]">
-          <FormCTA />
-        </div>
+        <FormCTA />
       </div>
 
       {/* <section className="py-20 px-20">

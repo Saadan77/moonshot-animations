@@ -10,6 +10,7 @@ import { GoLocation } from "react-icons/go";
 import CTA from "./CTA";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import Image from "next/image";
+import Smoke from "./smoke/smoke";
 
 export default function FormCTA() {
   const tags = [
@@ -111,44 +112,8 @@ export default function FormCTA() {
   }, []);
 
   return (
-    <section className="bg-[#00050A] relative z-50 overflow-hidden">
-      <div id="service-smoke-form-cta" ref={smokeRef}></div>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            #service-smoke-form-cta {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                overflow: hidden;
-            }
-
-            #service-smoke-form-cta .elem {
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
-                pointer-events: none;
-                animation: ripple-cta 2s ease-out forwards;
-            }
-
-            @keyframes ripple-cta {
-                0% {
-                    transform: scale(3) translateY(0);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scale(10) translateY(-10px);
-                    opacity: 0;
-                }
-            }
-          `,
-        }}
-      />
-      <div className="py-50 rounded-[34.137px]">
+    <section className="bg-[#00050A] overflow-hidden">
+      <div className="pb-50 pt-25 rounded-[34.137px]">
         <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
           <div className="col-span-4">

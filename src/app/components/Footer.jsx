@@ -9,7 +9,7 @@ export default function Footer() {
     const urls = [
         { name: 'About', href: '/about-us' },
         { name: 'Services', href: '#' },
-        { name: 'Portfolio', href: '/#portfolio' },
+        { name: 'Portfolio', href: '/portfolio' },
         { name: 'Case Studies', href: '#' },
         { name: 'Industries', href: '/industries' },
         { name: 'Contact', href: '/contact-us' },

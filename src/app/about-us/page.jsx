@@ -435,10 +435,15 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            <div className="hidden lg:block lg:absolute top-40 -right-60 max-1440:top-50 max-1440:-right-90 max-1280:-right-110 max-xl:-right-160 z-10">
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
               <img
                 src="/images/about-us-bg.png"
-                className="w-full max-1440:w-3/4 max-1280:w-3/5 max-xl:w-1/2 h-auto"
+                className="hidden lg:block lg:absolute z-10 w-1/2 h-auto top-50 -right-40 max-1440:-right-30"
                 alt="Astronaut"
               />
             </div>
@@ -697,7 +702,7 @@ export default function AboutUsPage() {
                 works as per your business needs.
               </p>
             </div>
-            <div className="-mt-24 ml-[32.5%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+            <div className="-mt-24 ml-[39%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
               <HorizontalScrollCarousel />
             </div>
           </div>

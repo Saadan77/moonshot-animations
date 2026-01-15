@@ -10,15 +10,13 @@ import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section
-        className="overflow-x-hidden"
-        style={{ fontFamily: "var(--font-sora), sans-serif" }}
-      >
+      <section className="overflow-x-hidden">
         <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
           <Ribbons
             baseThickness={6}
@@ -31,7 +29,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <div className="flex items-center relative w-full overflow-visible bg-black">
+        <div className="flex items-center relative w-full overflow-visible">
           {/* Dither Background */}
           {/* <div className="absolute inset-0 w-full h-[200vh] opacity-20">
             <Dither
@@ -48,10 +46,15 @@ export default function Portfolio() {
           </div> */}
 
           {/* Background Image */}
-          <div
-            className="absolute inset-0 col-span-1 brightness-125 h-[175vh]"
-            style={{ backgroundImage: "url('/images/bg-hero.png')" }}
-          />
+          <div className="absolute inset-0 z-0">
+            <Image
+              alt="linear-gradient-bg"
+              width={1920}
+              height={1080}
+              src="/images/services/bg-service-banner.png"
+              style={{ filter: "brightness(1.25)" }}
+            />
+          </div>
 
           {/* Decorative Lines */}
           <DecorativeLines />
@@ -81,10 +84,15 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="hidden lg:block absolute top-50 -right-500 max-1600:-right-550 max-1440:top-35 max-1440:-right-570 max-1366:top-50 max-1366:-right-580 max-1280:top-40 max-1280:-right-590 max-xl:top-35 max-xl:-right-620 z-10">
+            <div>
+              <img
+                className="absolute inset-0 w-full h-auto"
+                src="/images/services/bg-service-banner.png"
+                alt="Hero Background Gradient"
+              />
               <img
                 src="/images/portfolio-page/portfolio-hero-image.png"
-                className="w-[45%] max-1600:w-3/8 max-1440:w-[35%] max-1366:w-[30%] max-xl:w-[25%] h-auto rotate-[7.76deg]"
+                className="hidden lg:block absolute top-50 -right-80 z-10 w-[70%] max-1600:w-3/8 max-1440:w-[35%] max-1366:w-[30%] max-xl:w-[25%] h-auto rotate-[7.76deg] max-1600:-right-550 max-1440:top-35 max-1440:-right-570 max-1366:top-50 max-1366:-right-580 max-1280:top-40 max-1280:-right-590 max-xl:top-35 max-xl:-right-620"
                 alt="Portfolio Hero"
               />
             </div>

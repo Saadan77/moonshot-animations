@@ -123,14 +123,16 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           </div>
         </div>
         {/* Pagination: progress bar */}
-        <div className="my-35 max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-white rounded-full"
-            style={{
-              width: `${progressDisplay * 100}%`,
-              transition: "width 120ms linear",
-            }}
-          />
+        <div className="relative py-35">
+          <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-white rounded-full"
+              style={{
+                width: `${progressDisplay * 100}%`,
+                transition: "width 120ms linear",
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

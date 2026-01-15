@@ -16,17 +16,17 @@ const Navbar = ({ onMenuStateChange }) => {
             ariaLabel: 'Go to Services',
             hasDropdown: true,
             dropdownItems: [
-                { label: 'Animations', link: '/services/animations' },
                 { label: 'Branding', link: '/services/branding' },
-                { label: 'Digital Marketing', link: '/services/digital-marketing' },
+                { label: 'Animations', link: '/services/animations' },
+                { label: 'Web Development', link: '/services/web-development' },
+                { label: 'Web Applications', link: '/services/web-applications' },
                 { label: 'E-Commerce', link: '/services/e-commerce' },
+                { label: 'Mobile Applications', link: '/services/mobile-applications' },
+                { label: 'Digital Marketing', link: '/services/digital-marketing' },
                 { label: 'Email Marketing', link: '/services/email-marketing' },
                 { label: 'Google Ads', link: '/services/google-ads' },
-                { label: 'Mobile Applications', link: '/services/mobile-applications' },
                 { label: 'SEO', link: '/services/seo' },
-                { label: 'SMM', link: '/services/smm' },
-                { label: 'Web Applications', link: '/services/web-applications' },
-                { label: 'Web Development', link: '/services/web-development' }
+                { label: 'SMM', link: '/services/smm' }
             ]
         },
         { label: 'Contact', link: '/contact-us', ariaLabel: 'Go to Contact' }
