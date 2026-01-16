@@ -7,7 +7,7 @@ import TextType from "../TextType";
 
 export const LayoutGrid = ({ cards, showDescriptions = false }) => {
   return (
-    <div className="w-full h-full p-5 xl:px-30 px:pt-30 lg:px-20 lg:pt-20 sm:px-10 sm:pt-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-12 relative">
+    <div className="w-full h-full p-5 xl:px-30 px:pt-30 lg:px-20 lg:pt-20 sm:px-10 sm:pt-10 grid grid-cols-1 md:grid-cols-3 mx-auto gap-6 1366:gap-12 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -87,7 +87,7 @@ const ImageComponent = ({ card, showDescriptions }) => {
         {showDescriptions && card.description ? (
           <div
             className={cn(
-              "my-2 text-[clamp(12px,0.9vw,16px)] font-sora font-light leading-snug text-white/85 max-w-[95%]",
+              "my-2 text-[clamp(9px,0.9vw,16px)] font-sora font-light leading-snug text-white/85 max-w-[95%]",
               "opacity-0 translate-y-2 max-h-0 overflow-hidden",
               "group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-50",
               "transition-all duration-300"
