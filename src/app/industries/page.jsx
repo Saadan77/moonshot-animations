@@ -169,7 +169,7 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%] lg:pb-[22%]">
+          <div className="pt-[18%] pb-[22%]">
             <div className="relative z-10 ml-20 max-sm:ml-10">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
@@ -182,7 +182,7 @@ export default function Portfolio() {
                   <br />
                   Demonstrating Our Multi
                 </AuroraText>
-                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end block">
+                <span className="text-[clamp(40px,4vw,86px)] font-thin text-end items-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Sector Strength
                   </AuroraText>
@@ -203,14 +203,14 @@ export default function Portfolio() {
               />
               <img
                 src="/images/industries/city-bg.png"
-                className="hidden lg:block absolute top-50 right-0 max-1600:-right-70 max-1440:top-40 max-1440:-right-90 max-1280:-right-100 max-xl:top-35 max-xl:-right-130 z-10 w-2/5 max-1600:w-3/4 max-1440:w-4/6 max-1280:w-5/8 max-xl:w-[50%] h-auto"
+                className="hidden lg:block absolute z-10 w-[45%] h-auto top-40 -right-10"
                 alt="City"
               />
             </div>
           </div>
         </div>
 
-        <div className="-mt-10 py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
+        <div className="-mt-10 rounded-[34.137px] py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
           <Smoke />
           
           <div

@@ -79,15 +79,15 @@ const ImageComponent = ({ card, showDescriptions }) => {
       })()}
       <div
         id="card-title"
-        className="absolute z-10 bottom-0 left-0 right-0 text-white p-6 rounded-b-lg text-left"
+        className="absolute z-10 -bottom-5 left-0 right-0 text-white p-6 rounded-b-lg text-left"
       >
-        <div className="text-[clamp(20px,2vw,30px)] font-sora font-normal">
+        <div className="text-[clamp(12px,1.8vw,30px)] font-sora font-normal">
           {card.title}
         </div>
         {showDescriptions && card.description ? (
           <div
             className={cn(
-              "mt-2 text-[clamp(12px,0.9vw,16px)] font-sora font-light leading-snug text-white/85 max-w-[95%]",
+              "my-2 text-[clamp(12px,0.9vw,16px)] font-sora font-light leading-snug text-white/85 max-w-[95%]",
               "opacity-0 translate-y-2 max-h-0 overflow-hidden",
               "group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-50",
               "transition-all duration-300"

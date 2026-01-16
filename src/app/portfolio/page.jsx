@@ -46,7 +46,7 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%]">
+          <div className="py-[18%]">
             <div className="relative z-20 lg:ml-20 max-lg:px-[5em] max-sm:px-[3em]">
               <div className="mb-16 flex items-center gap-3 text-sm text-white">
                 <img src="/images/about-us/icon.png" />
