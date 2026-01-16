@@ -106,112 +106,34 @@ export default function AboutUsPage() {
       const contentEl = contentRef.current;
       if (!carouselEl || !contentEl) return;
 
-      let tween;
-      let st;
+      const totalWidth = contentEl.scrollWidth;
+      const viewportWidth = window.innerWidth;
 
-      const waitForMedia = () => {
-        const media = Array.from(
-          contentEl.querySelectorAll("img, video, picture, source")
-        );
-        if (!media.length) return Promise.resolve();
-        const pending = media.map((m) => {
-          // images
-          if (m.tagName.toLowerCase() === "img") {
-            if (m.complete && m.naturalWidth !== 0) return Promise.resolve();
-            return new Promise((resolve) => {
-              const onLoad = () => {
-                m.removeEventListener("load", onLoad);
-                m.removeEventListener("error", onLoad);
-                resolve();
-              };
-              m.addEventListener("load", onLoad);
-              m.addEventListener("error", onLoad);
-            });
-          }
-          if (
-            m.tagName.toLowerCase() === "video" ||
-            m.tagName.toLowerCase() === "source"
-          ) {
-            if (m.readyState >= 1) return Promise.resolve();
-            return new Promise((resolve) => {
-              const onLoaded = () => {
-                m.removeEventListener("loadedmetadata", onLoaded);
-                m.removeEventListener("loadeddata", onLoaded);
-                resolve();
-              };
-              m.addEventListener("loadedmetadata", onLoaded);
-              m.addEventListener("loadeddata", onLoaded);
-              setTimeout(resolve, 2000);
-            });
-          }
-          return Promise.resolve();
-        });
-        return Promise.all(pending);
-      };
+      if (totalWidth <= viewportWidth) return;
 
-      const setup = () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.vars.trigger === carouselEl) {
-            t.kill();
-          }
-        });
+      const getScrollAmount = () =>
+        -(contentEl.scrollWidth - window.innerWidth);
 
-        const totalWidth = contentEl.scrollWidth;
-        const viewportWidth = window.innerWidth;
-
-        if (totalWidth <= viewportWidth) {
-          if (tween) tween.kill();
-          if (st) st.kill();
-          return;
-        }
-
-        tween = gsap.to(contentEl, {
-          x: () => -(contentEl.scrollWidth - window.innerWidth),
-          ease: "none",
-          scrollTrigger: {
-            trigger: carouselEl,
-            start: "top top",
-            end: () => `+=${contentEl.scrollWidth - window.innerWidth}`,
-            scrub: 1,
-            pin: true,
-            pinSpacing: true,
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-            fastScrollEnd: true,
-            preventOverlaps: true,
-            onLeave: () => {
-              gsap.set(contentEl, { clearProps: "all" });
-            },
-            onEnterBack: () => {
-              if (tween) tween.invalidate();
-            },
-          },
-        });
-
-        st = tween.scrollTrigger;
-      };
-
-      let cancelled = false;
-      waitForMedia().then(() => {
-        if (cancelled) return;
-        requestAnimationFrame(() => {
-          if (cancelled) return;
-          setup();
-          window.addEventListener("load", () => ScrollTrigger.refresh());
-        });
+      const tween = gsap.to(contentEl, {
+        x: getScrollAmount,
+        ease: "none",
+        scrollTrigger: {
+          trigger: carouselEl,
+          start: "center center",
+          end: () => `+=${contentEl.scrollWidth - window.innerWidth}`,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
       });
 
       const ro = new ResizeObserver(() => {
-        if (tween && tween.scrollTrigger) {
-          ScrollTrigger.refresh();
-        }
+        ScrollTrigger.refresh();
       });
       ro.observe(contentEl);
 
       return () => {
-        cancelled = true;
-        if (tween) tween.kill();
-        if (st) st.kill();
+        tween.kill();
         ro.disconnect();
       };
     }, []);
@@ -659,59 +581,65 @@ export default function AboutUsPage() {
           <div className="relative">
             <div className="absolute -top-10 left-[48%] z-100">
               <Image
-              src="/images/elevate-icon.png"
-              alt="Elevate Icon"
-              width={100}
-              height={100}
-              className="w-25 relative z-10"
-            />
+                src="/images/elevate-icon.png"
+                alt="Elevate Icon"
+                width={100}
+                height={100}
+                className="w-25 relative z-10"
+              />
             </div>
           </div>
           <div
-            className="bg-bottom bg-no-repeat bg-fixed px-5 md:px-20 py-10 md:py-48"
-            style={{
-              backgroundImage: "url(/images/about-us-page/bg-gradient.png)",
-              backgroundAttachment: "fixed",
-            }}
+            className="relative px-5 md:px-20 py-10 md:pt-48"
           >
-            <div className="grid grid-cols-5">
-              <div className="col-span-2">
-                <p className="text-[#808080] font-poppins font-normal text-xl mb-6">
-                  03 - How It Works
-                </p>
-
-                <h2
-                  className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
-                  style={{ fontFamily: "var(--font-sora), sans-serif" }}
-                >
-                  Method of making <br /> better result
-                </h2>
-              </div>
-              <p className="col-span-3 text-[23px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] leading-relaxed text-white/80">
-                We start by communicating with our clients via online chat,
-                email, or phone. After getting required information by asking
-                certain set of questions, we go for a mockup or a prototype
-                design by letting it go through several iterative stages as per
-                your feedback.
-                <br />
-                <br />
-                Once the final thing approved, the static designs are converted
-                to dynamic models with actual features and functionalities with
-                the help of extensive research and coding. We test and test
-                until it is free of all bugs or errors and of course until it
-                works as per your business needs.
-              </p>
+            <div className="absolute inset-0 z-0 -mt-[15%]">
+              <Image
+                alt="linear-gradient-bg"
+                width={1920}
+                height={1080}
+                src="/images/services/bg-gradient-1.png"
+              />
             </div>
-            <div className="-mt-24 ml-[39%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
-              <HorizontalScrollCarousel />
+
+            <div className="relative">
+              <div className="grid grid-cols-5">
+                <div className="col-span-2">
+                  <p className="text-[#808080] font-poppins font-normal text-xl mb-6">
+                    03 - How It Works
+                  </p>
+
+                  <h2
+                    className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
+                    style={{ fontFamily: "var(--font-sora), sans-serif" }}
+                  >
+                    Method of making <br /> better result
+                  </h2>
+                </div>
+                <p className="col-span-3 text-[23px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] leading-relaxed text-white/80">
+                  We start by communicating with our clients via online chat,
+                  email, or phone. After getting required information by asking
+                  certain set of questions, we go for a mockup or a prototype
+                  design by letting it go through several iterative stages as
+                  per your feedback.
+                  <br />
+                  <br />
+                  Once the final thing approved, the static designs are
+                  converted to dynamic models with actual features and
+                  functionalities with the help of extensive research and
+                  coding. We test and test until it is free of all bugs or
+                  errors and of course until it works as per your business
+                  needs.
+                </p>
+              </div>
+              <div className="-mt-24 ml-[39%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
+                <HorizontalScrollCarousel />
+              </div>
             </div>
           </div>
         </div>
 
         {/* What Defines Us Section */}
-        <div
-          className="bg-[#00050A] relative pb-10 overflow-hidden"
-        >
+        <div className="bg-[#00050A] relative pb-10 overflow-hidden">
           <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
             <div className="col-span-1">
               <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">

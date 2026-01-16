@@ -9,6 +9,7 @@ import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import Image from "next/image";
 import Smoke from "../components/smoke/smoke";
+import CTA from "../components/CTA";
 
 export default function Portfolio() {
   return (
@@ -77,17 +78,17 @@ export default function Portfolio() {
               />
               <img
                 src="/images/portfolio-page/portfolio-hero-image.png"
-                className="hidden lg:block absolute top-50 -right-80 z-10 w-[70%] max-1600:w-3/8 max-1440:w-[35%] max-1366:w-[30%] max-xl:w-[25%] h-auto rotate-[7.76deg] max-1600:-right-550 max-1440:top-35 max-1440:-right-570 max-1366:top-50 max-1366:-right-580 max-1280:top-40 max-1280:-right-590 max-xl:top-35 max-xl:-right-620"
+                className="hidden lg:block absolute top-50 -right-80 z-10 w-[70%] h-auto rotate-[7.76deg] max-1280:-right-60 max-xl:-right-45"
                 alt="Portfolio Hero"
               />
             </div>
           </div>
         </div>
 
-        {/* Next Section (Background matches the fade to color) */}
-        <div className="relative bg-[#00050a]">
+        <div className="relative">
           <Smoke />
           <PortfolioGrid />
+          <CTA />
         </div>
 
         <Footer />

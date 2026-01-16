@@ -552,9 +552,9 @@ export const StaggeredMenu = ({
               href="/portfolio"
               className="group inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
-              <span className="relative top-[0.5px] font-sora text-[20px] max-1280:text-[17px] whitespace-nowrap">Our Works</span>
+              <span className="relative top-[0.5px] font-sora text-[14px] xl:text-[20px] whitespace-nowrap">Our Works</span>
               <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
-                <ChevronRight className="w-6 h-6 group-hover:text-black" />
+                <ChevronRight className="lg:w-4 lg:h-4 xl:w-6 xl:h-6 group-hover:text-black" />
               </span>
             </Link>
 
