@@ -168,7 +168,7 @@ export default function ContactUs() {
         </div>
 
         <div className="-mt-10 py-50 bg-[#00050A] rounded-[34.137px] relative z-10">
-          <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
+          <div className="max-w-[85%] max-1600:max-w-[90%]  mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
             {/* Left content */}
             <div className="col-span-4">
               <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
@@ -292,7 +292,7 @@ export default function ContactUs() {
                 <div>
                   <textarea
                     placeholder="Tell us more about your product and goals"
-                    rows={6}
+                    rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"

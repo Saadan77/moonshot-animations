@@ -64,7 +64,7 @@ export default function Partners() {
   return (
     <div className="relative">
       {/* Transition Section with Clip-Path */}
-      <section
+      {/* <section
         id="home-partners-clip-path"
         ref={transitionRef}
         className="relative h-[50vh] z-50 -mt-110"
@@ -81,11 +81,28 @@ export default function Partners() {
         />
 
         <Smoke />
-      </section>
+      </section> */}
 
       <div className="relative">
         <Smoke />
-        
+
+        <section
+          id="home-partners-clip-path"
+          ref={transitionRef}
+          className="relative h-[50vh] z-15 -mt-110"
+          style={{
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+            willChange: "clip-path",
+            transform: "translate3d(0,0,0)",
+            background: "transparent",
+          }}
+        >
+          <div
+            className="absolute inset-0 bg-[#00060B]"
+            style={{ clipPath: "inherit" }}
+          />
+        </section>
+
         <section
           id="partners"
           className="relative z-10 -mt-15 bg-[#00060B] mx-auto overflow-hidden"
