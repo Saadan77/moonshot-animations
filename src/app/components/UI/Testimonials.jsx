@@ -29,6 +29,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="testimonials"
       className="relative mt-40"
       style={{ fontFamily: "var(--font-sora), sans-serif" }}
     >

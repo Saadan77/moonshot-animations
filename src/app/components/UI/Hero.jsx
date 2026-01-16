@@ -268,18 +268,18 @@ const Hero = () => {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-                    @media (prefers-reduced-motion: reduce) {
-                        .group span:first-child {
-                            transition: none;
-                        }
-                        .group:hover span:first-child {
-                            top: 0;
-                        }
-                        .group:hover .relative.z-10 {
-                            transition: none;
-                        }
-                    }
-                `,
+              @media (prefers-reduced-motion: reduce) {
+                  .group span:first-child {
+                      transition: none;
+                  }
+                  .group:hover span:first-child {
+                      top: 0;
+                  }
+                  .group:hover .relative.z-10 {
+                      transition: none;
+                  }
+              }
+          `,
         }}
       />
 

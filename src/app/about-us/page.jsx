@@ -657,14 +657,14 @@ export default function AboutUsPage() {
         {/* How It Works Section */}
         <div>
           <div className="relative">
-            <div className="absolute -top-12 left-[48%] z-100">
+            <div className="absolute -top-10 left-[48%] z-100">
               <Image
-                src="/images/elevate-icon.png"
-                alt="Elevate Icon"
-                width={100}
-                height={100}
-                className="w-30 relative z-10"
-              />
+              src="/images/elevate-icon.png"
+              alt="Elevate Icon"
+              width={100}
+              height={100}
+              className="w-25 relative z-10"
+            />
             </div>
           </div>
           <div
@@ -711,7 +711,6 @@ export default function AboutUsPage() {
         {/* What Defines Us Section */}
         <div
           className="bg-[#00050A] relative pb-10 overflow-hidden"
-          style={{ borderRadius: "34.137px" }}
         >
           <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
             <div className="col-span-1">
@@ -829,6 +828,11 @@ export default function AboutUsPage() {
                 position: absolute;
                 inset: 0;
                 color: #808080;
+              }
+
+              #about-us-partners #testimonials {
+                margin-top: 60px;
+                padding-top: 180px;
               }
             `,
               }}

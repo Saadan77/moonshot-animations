@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-export default function Smoke() {
+export default function Smoke({ className = "", zIndex = 20 }) {
   const smokeRef = useRef(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Smoke() {
 
     function spawn(x, y) {
       const el = document.createElement("div");
-      el.className = "elem";
+      el.className = "smoke-elem";
       el.style.left = `${x - 25}px`;
       el.style.top = `${y - 25}px`;
       container.appendChild(el);
@@ -47,22 +47,22 @@ export default function Smoke() {
 
   return (
     <>
-      <div id="smoke" className="hidden lg:block" ref={smokeRef}></div>
+      <div
+        ref={smokeRef}
+        className={`smoke-layer hidden lg:block ${className}`}
+        style={{ zIndex }}
+      ></div>
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            #smoke {
+            .smoke-layer {
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 20;
+                inset: 0;
                 pointer-events: none;
                 overflow: hidden;
             }
 
-            #smoke .elem {
+            .smoke-layer .smoke-elem {
                 position: absolute;
                 width: 50px;
                 height: 50px;

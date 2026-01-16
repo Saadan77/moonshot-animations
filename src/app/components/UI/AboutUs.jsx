@@ -6,6 +6,7 @@ import Link from "next/link";
 import AboutUsCards from "../AboutUsCards";
 import { ArrowRight } from "lucide-react";
 import Button from "../button/button";
+import Smoke from "../smoke/smoke";
 
 const AboutUs = () => {
   const smokeRef = useRef(null);
@@ -55,42 +56,7 @@ const AboutUs = () => {
       id="about-us"
       className="relative isolate w-full bg-[#00060b] -mt-15 pt-15 text-white z-10 overflow-hidden"
     >
-      <div id="smoke" ref={smokeRef}></div>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            #smoke {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                overflow: hidden;
-            }
-
-            .elem {
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
-                pointer-events: none;
-                animation: ripple 2s ease-out forwards;
-            }
-
-            @keyframes ripple {
-                0% {
-                    transform: scale(3) translateY(0);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scale(10) translateY(-10px);
-                    opacity: 0;
-                }
-            }
-          `,
-        }}
-      />
+      <Smoke />
 
       <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
         <div className="pb-24 flex items-start max-md:flex-col">
