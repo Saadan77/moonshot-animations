@@ -33,7 +33,6 @@ export default function Home() {
       <Proficients />
       <PortfolioAndBrand />
       <Partners />
-      <CTA />
       <Footer />
     </>
   );

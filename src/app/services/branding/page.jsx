@@ -18,6 +18,7 @@ import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -267,17 +268,7 @@ export default function Branding() {
                   </ScrollReveal>
                 </div>
               </div>
-              <Link
-                href="#"
-                className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-              >
-                <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                  Get in Touch
-                </span>
-                <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                  <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                </span>
-              </Link>
+              <Button text="Get in Touch" href="/contact-us" />
             </div>
           </div>
         </section>

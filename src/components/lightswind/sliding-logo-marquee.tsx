@@ -147,7 +147,6 @@ export function SlidingLogoMarquee({
 
       <div
         ref={containerRef}
-        data-smoother-ignore
         className={cn("sliding-marquee-container relative", className)}
         style={{ width, background: backgroundColor }}
         onMouseEnter={() => pauseOnHover && setIsPlaying(false)}

@@ -450,7 +450,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        <div className="relative py-10 px-20 max-lg:p-5 z-10 justify-center flex">
+        <div className="relative px-20 z-10 justify-center flex">
           <video
             autoPlay
             loop
@@ -713,43 +713,6 @@ export default function AboutUsPage() {
           className="bg-[#00050A] relative pb-10 overflow-hidden"
           style={{ borderRadius: "34.137px" }}
         >
-          <div id="smoke" ref={smokeRef}></div>
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-                #smoke {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    pointer-events: none;
-                    overflow: hidden;
-                }
-
-                .elem {
-                    position: absolute;
-                    width: 50px;
-                    height: 50px;
-                    background: radial-gradient(circle,rgba(53, 160, 214, 0.14) 0%, rgba(0, 89, 255, 0) 80%);
-                    pointer-events: none;
-                    animation: ripple 2s ease-out forwards;
-                }
-
-                @keyframes ripple {
-                    0% {
-                        transform: scale(3) translateY(0);
-                        opacity: 1;
-                    }
-                    100% {
-                        transform: scale(10) translateY(-10px);
-                        opacity: 0;
-                    }
-                }
-                `,
-            }}
-          />
-
           <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
             <div className="col-span-1">
               <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
@@ -823,11 +786,12 @@ export default function AboutUsPage() {
             />
           </div> */}
 
-          <Partners />
+          <div className="relative">
+            <Partners />
 
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
               #about-us-partners {
                 background-color: #00060B;
               }
@@ -867,11 +831,11 @@ export default function AboutUsPage() {
                 color: #808080;
               }
             `,
-            }}
-          />
+              }}
+            />
+          </div>
         </div>
 
-        <CTA />
         <Footer />
       </section>
     </>

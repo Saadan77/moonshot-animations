@@ -279,7 +279,7 @@ export default function Carousel({
               }
             }}
             disabled={!loop && currentIndex === 0}
-            className="h-10 w-10 flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="h-10 w-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Previous">
             <svg
               width="24"
@@ -294,7 +294,7 @@ export default function Carousel({
           </button>
 
           {/* Dot Indicators */}
-          <div className="mt-4 flex w-[150px] justify-center gap-6">
+          <div className="mt-4 flex w-37.5 justify-center gap-6">
             {items.map((_, index) => (
               <motion.div
                 key={index}

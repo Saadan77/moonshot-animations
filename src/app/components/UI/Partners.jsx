@@ -8,6 +8,8 @@ import {
   MarqueeItem,
 } from "@/components/ui/shadcn-io/marquee";
 import Testimonials from "./Testimonials";
+import CTA from "../CTA";
+import Smoke from "../smoke/smoke";
 
 export default function Partners() {
   const transitionRef = useRef(null);
@@ -60,12 +62,12 @@ export default function Partners() {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       {/* Transition Section with Clip-Path */}
       <section
         id="home-partners-clip-path"
         ref={transitionRef}
-        className="relative h-[50vh] z-50 -mt-125"
+        className="relative h-[50vh] z-50 -mt-110"
         style={{
           clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
           willChange: "clip-path",
@@ -77,56 +79,64 @@ export default function Partners() {
           className="absolute inset-0 bg-[#00060B]"
           style={{ clipPath: "inherit" }}
         />
+
+        <Smoke />
       </section>
 
-      <section
-        id="partners"
-        className="relative z-50 -mt-15 bg-[#00060B] mx-auto pb-24 md:pb-28 lg:pb-32 overflow-hidden"
-      >
-        <div id="partners-slider">
-          {/* Top meta label */}
-          <div className="relative mx-auto w-[92%] py-16">
-            <div className="font-sora flex justify-between text-[#808080] text-[20px]">
-              <div className="text-[20px] text-[#808080]">
-                <span className="text-nowrap font-sora font-normal">
-                  08 — Partners
-                </span>
+      <div className="relative">
+        <Smoke />
+        
+        <section
+          id="partners"
+          className="relative z-10 -mt-15 bg-[#00060B] mx-auto overflow-hidden"
+        >
+          <div id="partners-slider">
+            {/* Top meta label */}
+            <div className="relative mx-auto w-[92%] py-16">
+              <div className="font-sora flex justify-between text-[#808080] text-[20px]">
+                <div className="text-[20px] text-[#808080]">
+                  <span className="text-nowrap font-sora font-normal">
+                    08 — Partners
+                  </span>
+                </div>
+                <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
+                  Over <span className="text-white">10 Years</span> <br />{" "}
+                  Partnership
+                </p>
               </div>
-              <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
-                Over <span className="text-white">10 Years</span> <br />{" "}
-                Partnership
-              </p>
+            </div>
+
+            {/* Logo Loop Section */}
+            <div className="flex size-full items-center justify-center">
+              <Marquee>
+                <MarqueeContent speed={150}>
+                  {[
+                    "/images/partners/archin.png",
+                    "/images/partners/logo_github.png",
+                    "/images/partners/logo_union.png",
+                    "/images/partners/logo_usa.png",
+                    "/images/partners/logo_squarespace.png",
+                    "/images/partners/logo_zm.png",
+                  ].map((src, index) => (
+                    <MarqueeItem key={index} className="group h-66 w-66 mx-0">
+                      <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
+                        <img
+                          alt={`Partner logo ${index + 1}`}
+                          className="max-h-full max-w-full object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                          src={src}
+                        />
+                      </div>
+                    </MarqueeItem>
+                  ))}
+                </MarqueeContent>
+              </Marquee>
             </div>
           </div>
 
-          {/* Logo Loop Section */}
-          <div className="flex size-full items-center justify-center">
-            <Marquee>
-              <MarqueeContent speed={150}>
-                {[
-                  "/images/partners/archin.png",
-                  "/images/partners/logo_github.png",
-                  "/images/partners/logo_union.png",
-                  "/images/partners/logo_usa.png",
-                  "/images/partners/logo_squarespace.png",
-                  "/images/partners/logo_zm.png",
-                ].map((src, index) => (
-                  <MarqueeItem key={index} className="group h-66 w-66 mx-0">
-                    <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
-                      <img
-                        alt={`Partner logo ${index + 1}`}
-                        className="max-h-full max-w-full object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
-                        src={src}
-                      />
-                    </div>
-                  </MarqueeItem>
-                ))}
-              </MarqueeContent>
-            </Marquee>
-          </div>
-        </div>
-        <Testimonials />
-      </section>
+          <Testimonials />
+          <CTA />
+        </section>
+      </div>
     </div>
   );
 }

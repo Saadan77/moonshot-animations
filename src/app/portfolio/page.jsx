@@ -2,14 +2,11 @@
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import PortfolioGrid from "../components/PortfolioGrid";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Smoke from "../components/smoke/smoke";
 
