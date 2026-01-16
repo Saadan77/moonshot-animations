@@ -212,9 +212,10 @@ export default function Portfolio() {
 
         <div className="-mt-10 rounded-[34.137px] py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
           <Smoke />
-          
+
           <div
-            id="industries-grid" className="relative z-50"
+            id="industries-grid"
+            className="relative z-50"
             style={{
               ["--img-opacity"]: "0.8",
             }}
@@ -269,9 +270,10 @@ export default function Portfolio() {
               />
             </div>
           </div>
+          
+          <CTA />
         </div>
 
-        <CTA />
         <Footer />
       </section>
     </>

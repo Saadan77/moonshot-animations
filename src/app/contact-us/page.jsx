@@ -15,6 +15,7 @@ import Ribbons from "@/components/Ribbons";
 import Button from "../components/button/button";
 import Link from "next/link";
 import Image from "next/image";
+import Smoke from "../components/smoke/smoke";
 
 export default function ContactUs() {
   const tags = [
@@ -167,150 +168,171 @@ export default function ContactUs() {
           </div>
         </div>
 
-        <div className="-mt-10 py-50 bg-[#00050A] rounded-[34.137px] relative z-10">
-          <div className="max-w-[85%] max-1600:max-w-[90%]  mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
-            {/* Left content */}
-            <div className="col-span-4">
-              <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
-                01 — Get in Touch
-              </p>
-
-              <h2
-                style={{ fontFamily: "Inter, sans-serif" }}
-                className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
-              >
-                <span className="flex items-baseline gap-x-4">
-                  Have a{" "}
-                  <RotatingText
-                    texts={["Project?", "Idea?", "Vision?", "Goal?", "Dream?"]}
-                    mainClassName="inline-block text-white overflow-hidden justify-center rounded-lg"
-                    staggerFrom={"last"}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-120%" }}
-                    staggerDuration={0.025}
-                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                    rotationInterval={5000}
-                  />{" "}
-                  <br />
-                </span>
-                Let’s
-                <span
-                  className="italic"
-                  style={{ fontFamily: "Playfair Display, serif" }}
-                >
-                  {" "}
-                  Talk!
-                </span>
-              </h2>
-
-              <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
-                <TextType
-                  text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
-                  typingSpeed={15}
-                  pauseDuration={1500}
-                  showCursor={true}
-                  cursorCharacter="|"
-                  startOnVisible={true}
-                  loop={true}
-                />
-              </div>
-
-              <div className="h-[1.5px] bg-[#888] my-12" />
-
-              <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
-                <div className="flex items-center gap-4">
-                  <PhoneCall className="w-10 h-10 max-lg:h-8 md:h-8 fill-white" />
-                  <Link href="tel:+19723315058" className="hover:underline">
-                    +1-972-331-5058
-                  </Link>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <GoLocation className="w-10 h-10 max-lg:h-8 md:h-8" />
-                  <Link
-                    href="https://share.google/nqL7znJrG0VweAWyG"
-                    className="hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    1200 East Collins Boulevard <br /> Suite 106 Richardson
-                    Texas 75081
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Right form */}
-            <form className="col-span-5" onSubmit={handleSubmit} noValidate>
-              <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-16 max-sm:p-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
-                  <div>
-                    <input
-                      placeholder="Email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
-                    />
-                    {errors.email ? (
-                      <p className="text-red-400 text-sm mt-2 ml-5">
-                        {errors.email}
-                      </p>
-                    ) : null}
-                  </div>
-                  <div>
-                    <input
-                      placeholder="Full Name"
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
-                    />
-                    {errors.fullName ? (
-                      <p className="text-red-400 text-sm mt-2 ml-5">
-                        {errors.fullName}
-                      </p>
-                    ) : null}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-sm">
-                  <input
-                    placeholder="Project Budget"
-                    value={budget}
-                    onChange={(e) => setBudget(e.target.value)}
-                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
-                  />
-                  <input
-                    placeholder="Business Name"
-                    value={businessName}
-                    onChange={(e) => setBusinessName(e.target.value)}
-                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    placeholder="Tell us more about your product and goals"
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
-                  />
-                  {errors.message ? (
-                    <p className="text-red-400 text-sm mt-2 ml-5">
-                      {errors.message}
-                    </p>
-                  ) : null}
-                </div>
-
-                <p className="text-white my-4 text-sm 1366:text-base">
-                  How can we help you?
+        <div className="relative z-10">
+          <div className="absolute inset-0 rounded-[34.137px] overflow-hidden pointer-events-none">
+            <Smoke />
+          </div>
+          <div className="-mt-10 py-50 relative bg-[#00050A] rounded-[34.137px]">
+            <div className="max-w-[85%] max-1600:max-w-[90%]  mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
+              {/* Left content */}
+              <div className="col-span-4">
+                <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
+                  01 — Get in Touch
                 </p>
 
-                <div className="space-y-6">
-                  {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
-                    (row, rowIdx) => (
+                <h2
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                  className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
+                >
+                  <span className="flex items-baseline gap-x-4">
+                    Have a{" "}
+                    <RotatingText
+                      texts={[
+                        "Project?",
+                        "Idea?",
+                        "Vision?",
+                        "Goal?",
+                        "Dream?",
+                      ]}
+                      mainClassName="inline-block text-white overflow-hidden justify-center rounded-lg"
+                      staggerFrom={"last"}
+                      initial={{ y: "100%" }}
+                      animate={{ y: 0 }}
+                      exit={{ y: "-120%" }}
+                      staggerDuration={0.025}
+                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                      transition={{
+                        type: "spring",
+                        damping: 30,
+                        stiffness: 400,
+                      }}
+                      rotationInterval={5000}
+                    />{" "}
+                    <br />
+                  </span>
+                  Let’s
+                  <span
+                    className="italic"
+                    style={{ fontFamily: "Playfair Display, serif" }}
+                  >
+                    {" "}
+                    Talk!
+                  </span>
+                </h2>
+
+                <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
+                  <TextType
+                    text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
+                    typingSpeed={15}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    startOnVisible={true}
+                    loop={true}
+                  />
+                </div>
+
+                <div className="h-[1.5px] bg-[#888] my-12" />
+
+                <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
+                  <div className="flex items-center gap-4">
+                    <PhoneCall className="w-10 h-10 max-lg:h-8 md:h-8 fill-white" />
+                    <Link href="tel:+19723315058" className="hover:underline">
+                      +1-972-331-5058
+                    </Link>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <GoLocation className="w-10 h-10 max-lg:h-8 md:h-8" />
+                    <Link
+                      href="https://share.google/nqL7znJrG0VweAWyG"
+                      className="hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      1200 East Collins Boulevard <br /> Suite 106 Richardson
+                      Texas 75081
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right form */}
+              <form
+                className="relative z-50 col-span-5"
+                onSubmit={handleSubmit}
+                noValidate
+              >
+                <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-16 max-sm:p-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
+                    <div>
+                      <input
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                      />
+                      {errors.email ? (
+                        <p className="text-red-400 text-sm mt-2 ml-5">
+                          {errors.email}
+                        </p>
+                      ) : null}
+                    </div>
+                    <div>
+                      <input
+                        placeholder="Full Name"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                      />
+                      {errors.fullName ? (
+                        <p className="text-red-400 text-sm mt-2 ml-5">
+                          {errors.fullName}
+                        </p>
+                      ) : null}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-sm">
+                    <input
+                      placeholder="Project Budget"
+                      value={budget}
+                      onChange={(e) => setBudget(e.target.value)}
+                      className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                    />
+                    <input
+                      placeholder="Business Name"
+                      value={businessName}
+                      onChange={(e) => setBusinessName(e.target.value)}
+                      className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <textarea
+                      placeholder="Tell us more about your product and goals"
+                      rows={4}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
+                    />
+                    {errors.message ? (
+                      <p className="text-red-400 text-sm mt-2 ml-5">
+                        {errors.message}
+                      </p>
+                    ) : null}
+                  </div>
+
+                  <p className="text-white my-4 text-sm 1366:text-base">
+                    How can we help you?
+                  </p>
+
+                  <div className="space-y-6">
+                    {[
+                      tags.slice(0, 4),
+                      tags.slice(4, 8),
+                      tags.slice(8, 12),
+                    ].map((row, rowIdx) => (
                       <div
                         key={`tag-row-${rowIdx}`}
                         className="w-full flex flex-wrap lg:flex-nowrap lg:justify-between"
@@ -333,45 +355,46 @@ export default function ContactUs() {
                           );
                         })}
                       </div>
-                    )
-                  )}
-                </div>
-
-                <div className="flex justify-between items-center mt-8">
-                  <button
-                    type="submit"
-                    className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                  >
-                    <span className="text-nowrap relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">
-                      Send Message
-                    </span>
-                    <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                      <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                    </span>
-                  </button>
-                  <div className="lg:text-xs 1366:text-sm text-end">
-                    <p className="text-[#A3A3A3]">Prefer email?</p>
-                    <Link
-                      href="mailto:moonshottech@gmail.com"
-                      className="text-white hover:underline"
-                    >
-                      moonshottech@gmail.com
-                    </Link>
+                    ))}
                   </div>
-                </div>
 
-                {submitSuccess ? (
-                  <p className="mt-6 font-poppins text-sm text-white/80">
-                    Thanks — we’ve received your message. Our team will reach
-                    out shortly.
-                  </p>
-                ) : null}
-              </div>
-            </form>
+                  <div className="flex justify-between items-center mt-8">
+                    <button
+                      type="submit"
+                      className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                    >
+                      <span className="text-nowrap relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">
+                        Send Message
+                      </span>
+                      <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
+                        <ArrowRight className="w-6 h-6 group-hover:text-black" />
+                      </span>
+                    </button>
+                    <div className="lg:text-xs 1366:text-sm text-end">
+                      <p className="text-[#A3A3A3]">Prefer email?</p>
+                      <Link
+                        href="mailto:moonshottech@gmail.com"
+                        className="text-white hover:underline"
+                      >
+                        moonshottech@gmail.com
+                      </Link>
+                    </div>
+                  </div>
+
+                  {submitSuccess ? (
+                    <p className="mt-6 font-poppins text-sm text-white/80">
+                      Thanks — we’ve received your message. Our team will reach
+                      out shortly.
+                    </p>
+                  ) : null}
+                </div>
+              </form>
+            </div>
           </div>
+
+          <CTA />
         </div>
 
-        <CTA />
         <Footer />
       </section>
     </>

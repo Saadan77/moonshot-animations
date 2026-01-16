@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
 import {
   Marquee,
   MarqueeContent,
@@ -28,7 +27,6 @@ export default function Partners() {
       const xEnd = xSteps[i + 1];
 
       let stepY = baseY + yOffsets[i] * inverseProgress;
-
       stepY = Math.max(0, Math.min(100, stepY));
 
       path += `${xStart}% ${stepY}%, ${xEnd}% ${stepY}%, `;
@@ -62,12 +60,12 @@ export default function Partners() {
   }, []);
 
   return (
-    <div className="relative">
-      {/* Transition Section with Clip-Path */}
-      {/* <section
+    <div className="relative overflow-visible">
+      {/* 1. Transition Section: Smoke is inside here, so it gets clipped! */}
+      <section
         id="home-partners-clip-path"
         ref={transitionRef}
-        className="relative h-[50vh] z-50 -mt-110"
+        className="relative h-[50vh] z-10 -mt-110"
         style={{
           clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
           willChange: "clip-path",
@@ -75,85 +73,83 @@ export default function Partners() {
           background: "transparent",
         }}
       >
+        {/* Background Color */}
         <div
           className="absolute inset-0 bg-[#00060B]"
           style={{ clipPath: "inherit" }}
         />
 
-        <Smoke />
-      </section> */}
-
-      <div className="relative">
-        <Smoke />
-
-        <section
-          id="home-partners-clip-path"
-          ref={transitionRef}
-          className="relative h-[50vh] z-15 -mt-110"
-          style={{
-            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-            willChange: "clip-path",
-            transform: "translate3d(0,0,0)",
-            background: "transparent",
-          }}
-        >
-          <div
-            className="absolute inset-0 bg-[#00060B]"
-            style={{ clipPath: "inherit" }}
+        {/* FIX: Smoke is now inside the clip-path container */}
+        <div className="absolute inset-0 z-0">
+          <Smoke />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+              #home-partners-clip-path .smoke-layer {
+                  overflow: visible;
+              }
+            `,
+            }}
           />
-        </section>
+        </div>
+      </section>
 
-        <section
-          id="partners"
-          className="relative z-10 -mt-15 bg-[#00060B] mx-auto overflow-hidden"
-        >
-          <div id="partners-slider">
-            {/* Top meta label */}
-            <div className="relative mx-auto w-[92%] py-16">
-              <div className="font-sora flex justify-between text-[#808080] text-[20px]">
-                <div className="text-[20px] text-[#808080]">
-                  <span className="text-nowrap font-sora font-normal">
-                    08 — Partners
-                  </span>
-                </div>
-                <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
-                  Over <span className="text-white">10 Years</span> <br />{" "}
-                  Partnership
-                </p>
+      {/* 2. Main Partners Section */}
+      <section
+        id="partners"
+        className="relative z-10 -mt-25 pt-25 mx-auto bg-[#00060B]"
+      >
+        {/* FIX: Smoke added here for the main body */}
+        <div className="absolute inset-0 z-0">
+          <Smoke />
+        </div>
+
+        <div id="partners-slider" className="relative">
+          {/* Top meta label */}
+          <div className="relative mx-auto w-[92%] py-16">
+            <div className="font-sora flex justify-between text-[#808080] text-[20px]">
+              <div className="text-[20px] text-[#808080]">
+                <span className="text-nowrap font-sora font-normal">
+                  08 — Partners
+                </span>
               </div>
-            </div>
-
-            {/* Logo Loop Section */}
-            <div className="flex size-full items-center justify-center">
-              <Marquee>
-                <MarqueeContent speed={150}>
-                  {[
-                    "/images/partners/archin.png",
-                    "/images/partners/logo_github.png",
-                    "/images/partners/logo_union.png",
-                    "/images/partners/logo_usa.png",
-                    "/images/partners/logo_squarespace.png",
-                    "/images/partners/logo_zm.png",
-                  ].map((src, index) => (
-                    <MarqueeItem key={index} className="group h-66 w-66 mx-0">
-                      <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
-                        <img
-                          alt={`Partner logo ${index + 1}`}
-                          className="max-h-full max-w-full object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
-                          src={src}
-                        />
-                      </div>
-                    </MarqueeItem>
-                  ))}
-                </MarqueeContent>
-              </Marquee>
+              <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
+                Over <span className="text-white">10 Years</span> <br />{" "}
+                Partnership
+              </p>
             </div>
           </div>
 
-          <Testimonials />
-          <CTA />
-        </section>
-      </div>
+          {/* Logo Loop Section */}
+          <div className="flex size-full items-center justify-center">
+            <Marquee>
+              <MarqueeContent speed={150}>
+                {[
+                  "/images/partners/archin.png",
+                  "/images/partners/logo_github.png",
+                  "/images/partners/logo_union.png",
+                  "/images/partners/logo_usa.png",
+                  "/images/partners/logo_squarespace.png",
+                  "/images/partners/logo_zm.png",
+                ].map((src, index) => (
+                  <MarqueeItem key={index} className="group h-66 w-66 mx-0">
+                    <div className="h-full w-full rounded-full bg-[#03182c] flex items-center justify-center">
+                      <img
+                        alt={`Partner logo ${index + 1}`}
+                        className="max-h-full max-w-full object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                        src={src}
+                      />
+                    </div>
+                  </MarqueeItem>
+                ))}
+              </MarqueeContent>
+            </Marquee>
+          </div>
+        </div>
+
+        <Testimonials />
+        <CTA />
+      </section>
     </div>
   );
 }

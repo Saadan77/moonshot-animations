@@ -20,16 +20,6 @@ export default function Smoke({ className = "", zIndex = 20 }) {
       });
     }
 
-    const interval = setInterval(() => {
-      const rect = container.getBoundingClientRect();
-      const x = Math.random() * rect.width;
-      const y = Math.random() * rect.height;
-      spawn(x, y);
-      while (container.children.length > 30) {
-        container.removeChild(container.firstChild);
-      }
-    }, 700);
-
     const onMove = (e) => {
       const rect = container.getBoundingClientRect();
       const x = e.clientX - rect.left;
