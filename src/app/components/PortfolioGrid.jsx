@@ -81,7 +81,7 @@ const PortfolioGrid = () => {
       : portfolioItems.filter((item) => item.category === activeTab);
 
   return (
-    <div className="relative bg-[#00060B]">
+    <div className="relative bg-[#00050A]">
       <div className=" py-16 lg:px-12">
         <div className="max-w-[90%] sm:max-w-[80%] md:max-w-[85%] lg:max-w-[95%] mx-auto">
           {/* Header Section */}

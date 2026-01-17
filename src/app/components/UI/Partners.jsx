@@ -75,7 +75,7 @@ export default function Partners() {
       >
         {/* Background Color */}
         <div
-          className="absolute inset-0 bg-[#00060B]"
+          className="absolute inset-0 bg-[#00050A]"
           style={{ clipPath: "inherit" }}
         />
 
@@ -97,7 +97,7 @@ export default function Partners() {
       {/* 2. Main Partners Section */}
       <section
         id="partners"
-        className="relative z-10 -mt-25 pt-25 mx-auto bg-[#00060B]"
+        className="relative z-10 -mt-25 pt-25 mx-auto bg-[#00050A]"
       >
         {/* FIX: Smoke added here for the main body */}
         <div className="absolute inset-0 z-0">
@@ -148,7 +148,15 @@ export default function Partners() {
         </div>
 
         <Testimonials />
-        <CTA />
+
+        <div className="relative">
+          <div className="absolute inset-0">
+            <Smoke />
+          </div>
+          <div className="relative z-10">
+            <CTA />
+          </div>
+        </div>
       </section>
     </div>
   );

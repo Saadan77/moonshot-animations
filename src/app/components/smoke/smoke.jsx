@@ -30,7 +30,6 @@ export default function Smoke({ className = "", zIndex = 20 }) {
     window.addEventListener("mousemove", onMove);
 
     return () => {
-      clearInterval(interval);
       window.removeEventListener("mousemove", onMove);
     };
   }, []);

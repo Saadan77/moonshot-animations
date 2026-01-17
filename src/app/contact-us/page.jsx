@@ -169,10 +169,10 @@ export default function ContactUs() {
         </div>
 
         <div className="relative z-10">
-          <div className="absolute inset-0 rounded-[34.137px] overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 rounded-t-[34.137px] overflow-hidden pointer-events-none">
             <Smoke />
           </div>
-          <div className="-mt-10 py-50 relative bg-[#00050A] rounded-[34.137px]">
+          <div className="-mt-10 py-50 relative bg-[#00050A] rounded-t-[34.137px]">
             <div className="max-w-[85%] max-1600:max-w-[90%]  mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
               {/* Left content */}
               <div className="col-span-4">

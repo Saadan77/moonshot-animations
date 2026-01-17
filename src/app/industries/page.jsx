@@ -210,8 +210,8 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="-mt-10 rounded-[34.137px] py-10 lg:py-20 2xl:py-30 bg-[#00060B] relative z-10">
-          <div className="absolute inset-0 rounded-[34.137px] overflow-hidden pointer-events-none">
+        <div className="-mt-10 rounded-t-[34.137px] pt-10 lg:pt-20 2xl:pt-30 bg-[#00050A] relative z-10">
+          <div className="absolute inset-0 rounded-t-[34.137px] overflow-hidden pointer-events-none">
             <Smoke />
           </div>
 
