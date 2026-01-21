@@ -20,7 +20,7 @@ export default function Footer() {
             className="relative bg-[#020E1A] text-white overflow-hidden z-50"
             style={{ fontFamily: 'var(--font-sora), sans-serif' }}
         >
-            <div className="relative z-10 mx-auto max-w-[90%] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+            <div className="relative z-10 mx-auto max-w-[90%] py-16 lg:py-24">
                 {/* Main Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-9 max-lg:gap-16">
                     {/* Left Column - Location & Inquiry */}

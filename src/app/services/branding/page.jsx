@@ -162,11 +162,11 @@ export default function Branding() {
             <p className="font-poppins font-medium text-lg">Branding</p>
           </div>
 
-          <h1 className="text-[clamp(30px,3.6vw,70px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
+          <h1 className="text-[clamp(30px,3.6vw,70px)] font-normal font-sora uppercase mb-4 tracking-tight leading-12 1280:leading-15 1600:leading-20.25 text-white">
             <AuroraText colors={["#ffffff", "#d1bd73"]}>
               Branding <br /> Brands That Shape You{" "}
             </AuroraText>
-            <span className="text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+            <span className="text-[clamp(40px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
               <AuroraText colors={["#D42290", "#2DAEEF"]}>
                 Brand & Persona
               </AuroraText>
@@ -187,7 +187,7 @@ export default function Branding() {
           />
           <img
             src="/images/services/branding/hero-cropped.png"
-            className="absolute w-1/2 max-1600:w-3/4 max-1280:w-4/6 top-40 right-0 z-10"
+            className="absolute w-[55%] top-40 right-0 z-10"
             alt="Branding Hero"
           />
         </div>
@@ -218,9 +218,9 @@ export default function Branding() {
           />
         </div>
 
-        <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36">
+        <section className="relative z-10 py-24 1440:py-40 1920:py-52 px-6 lg:px-24 xl:px-36">
           <div className="flex justify-end max-lg:justify-center">
-            <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+            <h2 className="text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
               <TextType
                 text="Identity-first"
                 typingSpeed={75}
@@ -241,14 +241,14 @@ export default function Branding() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image column */}
             <div className="-mt-54 relative z-10 col-span-1 flex items-center justify-center">
               <img
                 src="/images/services/branding/section-3.png"
                 alt="Laptop showcasing website design"
-                className="h-full w-full object-cover"
-                style={{ mixBlendMode: "screen", scale: "150%" }}
+                className="h-full w-full lg:object-contain xl:object-cover lg:scale-150 1280:scale-100 1366:scale-110 1600:scale-125 1920:scale-150"
+                style={{ mixBlendMode: "screen"}}
               />
             </div>
 

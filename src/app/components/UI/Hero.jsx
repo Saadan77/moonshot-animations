@@ -287,12 +287,12 @@ const Hero = () => {
       <div className="relative z-100 w-full max-sm:py-4 -mt-30">
         {/* Bottom large background word/image */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-0 pointer-events-none"
           style={{
             fontSize: "clamp(80px,18vw,350px)",
             fontFamily: "Inter",
             marginTop: "-180px",
-            opacity: 0.01,
+            opacity: 0.05,
           }}
         >
           <TextScrollMarquee

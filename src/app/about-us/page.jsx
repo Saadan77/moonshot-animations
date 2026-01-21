@@ -73,11 +73,11 @@ export default function AboutUsPage() {
         >
           <div className="absolute inset-0 z-10 grid place-content-start">
             <p
-              className="mb-10 px-4 text-[24px] uppercase"
+              className="mb-10 text-[clamp(10px,1.5vw,24px)] uppercase"
               dangerouslySetInnerHTML={{ __html: card.title }}
             ></p>
             <p
-              className="px-4 text-[17px] font-light leading-loose"
+              className="text-[clamp(10px,1.1vw,17px)] font-light leading-loose"
               dangerouslySetInnerHTML={{ __html: card.description }}
             />
           </div>
@@ -335,12 +335,12 @@ export default function AboutUsPage() {
           {/* Hero Section */}
           <div className="pt-[18%] pb-[20%]">
             <div className="relative z-10 lg:ml-20 max-lg:py-[2em] max-lg:pl-[5em]">
-              <div className="mb-16 flex items-center gap-3 text-sm">
+              <div className="mb-16 flex items-center gap-3">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">About Us</p>
+                <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">About Us</p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-13">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
@@ -390,9 +390,9 @@ export default function AboutUsPage() {
         >
           {/* Who We Are Section */}
           <div>
-            <div className="relative z-10 max-w-[90%] mx-auto px-0 xl:px-8 py-10 md:py-48">
+            <div className="relative z-10 max-w-[90%] mx-auto py-10 md:py-48">
               <div className="space-y-10">
-                <div className="flex items-center gap-3 text-xl text-[#808080]">
+                <div className="flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
                   <span className="text-nowrap font-poppins font-normal">
                     01 — Who We Are
                   </span>
@@ -408,8 +408,8 @@ export default function AboutUsPage() {
                   </ScrollReveal>
                 </div>
 
-                <div className="w-full md:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
-                  <div className="text-[17px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] lg:mt-10 text-[#808080]">
+                <div className="w-full lg:max-w-[90%] flex max-lg:flex-col justify-between gap-6">
+                  <div className="text-[17px] max-1440:text-[14px] max-1280:text-[12px] lg:mt-10 text-[#808080]">
                     <TextType
                       text="Our business pursuit seeks to cement long term relationship with our consumers. Essentially speaking, our digital strategists make use of data analytics to complement our partners’ brand image and ROI."
                       typingSpeed={15}
@@ -431,7 +431,7 @@ export default function AboutUsPage() {
                         />
                         +
                       </p>
-                      <span className="text-xl">
+                      <span className="text-base xl:text-lg 1440:text-xl">
                         Successful Projects <br /> Delivered
                       </span>
                     </div>
@@ -445,7 +445,7 @@ export default function AboutUsPage() {
                         />
                         <span className="text-[50px]">%</span>
                       </p>
-                      <span className="text-xl">
+                      <span className="text-base xl:text-lg 1440:text-xl">
                         Projects Success <br /> Rate
                       </span>
                     </div>
@@ -501,7 +501,7 @@ export default function AboutUsPage() {
           <div>
             <div className="px-10 items-center py-10 md:py-48 bg-black">
               <div className="text-center relative z-10">
-                <p className="font-poppins font-normal text-[#808080] text-xl tracking-tight mb-8">
+                <p className="font-poppins font-normal text-[#808080] text-sm 1366:text-base 1440:text-lg 1600:text-xl tracking-tight mb-8">
                   02 - Technologies
                 </p>
                 <h2
@@ -590,7 +590,7 @@ export default function AboutUsPage() {
             </div>
           </div>
           <div
-            className="relative px-5 md:px-20 py-10 md:pt-48"
+            className="relative py-10 md:pt-48"
           >
             <div className="absolute inset-0 z-0 -mt-[15%]">
               <Image
@@ -601,21 +601,21 @@ export default function AboutUsPage() {
               />
             </div>
 
-            <div className="relative">
+            <div className="max-w-[90%] mx-auto relative">
               <div className="grid grid-cols-5">
                 <div className="col-span-2">
-                  <p className="text-[#808080] font-poppins font-normal text-xl mb-6">
+                  <p className="text-[#808080] font-poppins font-normal text-sm 1366:text-base 1440:text-lg 1600:text-xl mb-6">
                     03 - How It Works
                   </p>
 
                   <h2
-                    className="text-[clamp(30px,4vw,60px)] uppercase font-normal leading-[1.2]"
+                    className="text-[clamp(30px,3vw,60px)] uppercase font-normal leading-[1.2]"
                     style={{ fontFamily: "var(--font-sora), sans-serif" }}
                   >
                     Method of making <br /> better result
                   </h2>
                 </div>
-                <p className="col-span-3 text-[23px] max-1440:text-[14px] max-1280:text-[12px] max-xl:text-[10px] leading-relaxed text-white/80">
+                <p className="col-span-3 text-[clamp(10px,1.1vw,23px)] leading-relaxed text-white/80">
                   We start by communicating with our clients via online chat,
                   email, or phone. After getting required information by asking
                   certain set of questions, we go for a mockup or a prototype
@@ -631,8 +631,13 @@ export default function AboutUsPage() {
                   needs.
                 </p>
               </div>
-              <div className="-mt-24 ml-[39%] max-1600:ml-[30.7%] max-1440:ml-[29%]">
-                <HorizontalScrollCarousel />
+
+              {/* Align carousel with the right (col-span-3) text column */}
+              <div className="grid grid-cols-5">
+                <div className="col-span-2" aria-hidden="true" />
+                <div className="col-span-3 -mt-24">
+                  <HorizontalScrollCarousel />
+                </div>
               </div>
             </div>
           </div>
@@ -642,11 +647,11 @@ export default function AboutUsPage() {
         <div className="bg-[#00050A] relative pb-10 overflow-hidden">
           <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
             <div className="col-span-1">
-              <span className="text-lg text-[#808080] text-nowrap font-poppins font-normal">
+              <span className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080] text-nowrap font-poppins font-normal">
                 04 — What Defines Us
               </span>
 
-              <p className="text-[clamp(30px,3vw,50px)] mt-5 uppercase font-sora leading-tight">
+              <p className="text-[clamp(20px,2vw,50px)] mt-5 uppercase font-sora leading-tight">
                 We deliver creative ideas to a crowded world.
               </p>
 
@@ -752,7 +757,7 @@ export default function AboutUsPage() {
                 color: transparent;
               }
               #about-us-partners #partners .mb-6 > span.text-nowrap.font-sora.font-normal::before {
-                content: "06 — Testimonials";
+                content: "05 — Testimonials";
                 position: absolute;
                 inset: 0;
                 color: #808080;

@@ -76,13 +76,13 @@ export default function HorizontalScrollCards({ cards }) {
                 {(index + 1).toString().padStart(2, "0")}
               </div>
               <div
-                className="w-[85%] min-h-18 text-[clamp(24px,1.5vw,30px)] uppercase text-white leading-[1.1] font-sora"
+                className="w-[85%] min-h-18 text-[clamp(16px,1.25vw,30px)] uppercase text-white leading-[1.1] font-sora"
                 dangerouslySetInnerHTML={{
                   __html: formatTitle(card.title),
                 }}
               />
               <div
-                className="w-[92.5%] text-[clamp(14px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
+                className="w-[92.5%] text-[clamp(10px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
                 dangerouslySetInnerHTML={{ __html: card.description }}
               />
             </div>
