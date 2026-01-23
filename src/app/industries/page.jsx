@@ -75,7 +75,7 @@ export default function Portfolio() {
         "Working with brands, such as Water Corporation, means we understand the digital marketing needs of large-scale utilities.",
       thumbnail: "/images/industries/image-7.png",
       className:
-        "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
+        "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px] max-lg:h-[250px]",
       content: null,
     },
     {
@@ -85,7 +85,7 @@ export default function Portfolio() {
         "We create proposals and respond to tenders in a way that enables government departments to understand their return on investment.",
       thumbnail: "/images/industries/image-8.png",
       className:
-        "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
+        "md:col-span-1 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px] max-lg:h-[250px]",
       content: null,
     },
     {
@@ -125,7 +125,7 @@ export default function Portfolio() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section>
+      <section className="max-sm:bg-[#00050A]">
         <div className="max-sm:hidden fixed inset-0 z-9999 pointer-events-none">
           <Ribbons
             baseThickness={6}
@@ -169,27 +169,27 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="pt-[18%] pb-[22%]">
-            <div className="relative z-10 ml-20 max-sm:ml-10">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:py-[40%] max-lg:pt-[30%] max-md:py-[30%] lg:pt-[18%] lg:pb-[22%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-white">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">Industries</p>
+                <p className="font-poppins font-medium text-sm lg:text-lg">Industries</p>
               </div>
 
-              <h1 className="text-[clamp(26px,3.4vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-17 max-1440:leading-15 max-1280:leading-13 max-xl:leading-10 text-white">
+              <h1 className="text-[clamp(22px,5vw,40px)] sm:text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.25vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-7 sm:leading-10 1280:leading-13 1366:leading-15 1600:leading-18 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Innovating Industries
-                  <br />
+                  <br className="hidden md:block" />{" "}
                   Demonstrating Our Multi
                 </AuroraText>
-                <span className="text-[clamp(40px,4vw,86px)] font-thin text-end items-end block">
+                <span className="text-[clamp(30px,6vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(40px,4.25vw,86px)] font-thin text-end lg:block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Sector Strength
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.05vw,20px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] lg:text-[clamp(10px,1vw,20px)]">
                 From conceptual sketches to digital experiences, here's how we
                 turn imagination into design
               </p>
@@ -204,6 +204,14 @@ export default function Portfolio() {
               <img
                 src="/images/industries/city-bg.png"
                 className="hidden lg:block absolute z-10 w-[45%] h-auto top-40 -right-10"
+                alt="City"
+              />
+            </div>
+
+            <div className="py-10 max-md:hidden lg:hidden flex items-center justify-center relative z-20">
+              <img
+                src="/images/industries/city-bg.png"
+                className="w-3/5 h-auto"
                 alt="City"
               />
             </div>

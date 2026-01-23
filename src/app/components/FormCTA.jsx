@@ -46,7 +46,8 @@ export default function FormCTA() {
     const e = {};
     if (!fullName.trim()) e.fullName = "Full name is required.";
     if (!email.trim()) e.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = "Enter a valid email.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      e.email = "Enter a valid email.";
     if (!message.trim()) e.message = "Please tell us about your project.";
     return e;
   };
@@ -58,7 +59,14 @@ export default function FormCTA() {
     setErrors(e);
     if (Object.keys(e).length === 0) {
       // placeholder for submit
-      console.log({ email, fullName, budget, businessName, message, selectedTag });
+      console.log({
+        email,
+        fullName,
+        budget,
+        businessName,
+        message,
+        selectedTag,
+      });
       setSubmitSuccess(true);
       setEmail("");
       setFullName("");
@@ -116,14 +124,14 @@ export default function FormCTA() {
       <div className="pb-50 pt-25 rounded-[34.137px]">
         <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
-          <div className="col-span-4">
-            <p className="font-poppins font-normal text-[20px] text-[#989898] mb-4">
-              Get in Touch
+          <div className="lg:col-span-4">
+            <p className="font-poppins font-normal text-sm lg:text-lg text-[#989898] mb-4">
+              01 — Get in Touch
             </p>
 
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
-              className="leading-tight text-white mb-6 block text-[clamp(50px,4.2vw,75px)]"
+              className="leading-tight text-white mb-6 block text-[clamp(40px,5vw,75px)] md:text-[clamp(55px,5vw,75px)] lg:text-[clamp(45px,4.2vw,75px)]"
             >
               <span className="flex items-baseline gap-x-4">
                 Have a{" "}
@@ -136,7 +144,11 @@ export default function FormCTA() {
                   exit={{ y: "-120%" }}
                   staggerDuration={0.025}
                   splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  transition={{
+                    type: "spring",
+                    damping: 30,
+                    stiffness: 400,
+                  }}
                   rotationInterval={5000}
                 />{" "}
                 <br />
@@ -151,7 +163,7 @@ export default function FormCTA() {
               </span>
             </h2>
 
-            <div className="1600:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
+            <div className="hidden lg:block min-h-14 lg:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
               <TextType
                 text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
                 typingSpeed={15}
@@ -163,9 +175,21 @@ export default function FormCTA() {
               />
             </div>
 
-            <div className="h-[1.5px] bg-[#888] my-12" />
+            <div className="lg:hidden block min-h-14 lg:min-h-26.5 text-[#989898] text-[clamp(14px,1.5vw,20px)] lg:text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
+              <TextType
+                text="Ready to take your triathlon performance to the next level? Reach out today and let's create a personalized training plan for you."
+                typingSpeed={15}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                startOnVisible={true}
+                loop={true}
+              />
+            </div>
 
-            <div className="space-y-8 text-white text-[clamp(10px,1.4vw,24px)]">
+            <div className="hidden lg:block h-[1.5px] bg-[#888] my-12" />
+
+            <div className="space-y-8 text-white text-[clamp(14px,2vw,24px)] lg:text-[clamp(10px,1.4vw,24px)]">
               <div className="flex items-center gap-4">
                 <PhoneCall className="w-10 h-10 max-lg:h-8 md:h-8 fill-white" />
                 <Link href="tel:+19723315058" className="hover:underline">
@@ -189,61 +213,82 @@ export default function FormCTA() {
           </div>
 
           {/* Right form */}
-          <form className=" relative z-50 col-span-5" onSubmit={handleSubmit} noValidate>
-            <div className="bg-[#011322] rounded-[25px] xl:mx-6 p-8 xl:p-10 1366:p-14 2xl:p-16 max-sm:p-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-sm">
+          <form
+            className="mx-auto max-lg:max-w-125 relative z-50 lg:col-span-5"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            <div className="bg-[#011322] rounded-[25px] p-12 xl:mx-6 1366:p-14 2xl:p-16 max-sm:p-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-poppins font-normal text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]">
                 <div>
                   <input
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]"
                   />
-                  {errors.email ? <p className="text-red-400 text-sm mt-2">{errors.email}</p> : null}
+                  {errors.email ? (
+                    <p className="text-red-400 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] mt-2 ml-5">
+                      {errors.email}
+                    </p>
+                  ) : null}
                 </div>
                 <div>
                   <input
                     placeholder="Full Name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                    className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]"
                   />
-                  {errors.fullName ? <p className="text-red-400 text-sm mt-2">{errors.fullName}</p> : null}
+                  {errors.fullName ? (
+                    <p className="text-red-400 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] mt-2 ml-5">
+                      {errors.fullName}
+                    </p>
+                  ) : null}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 font-poppins font-normal text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]">
                 <input
                   placeholder="Project Budget"
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
-                  className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                  className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]"
                 />
                 <input
                   placeholder="Business Name"
                   value={businessName}
                   onChange={(e) => setBusinessName(e.target.value)}
-                  className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none"
+                  className="w-full rounded-[90px] py-3 px-8 bg-[#000911] border border-[#18354D] outline-none text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]"
                 />
               </div>
 
               <div>
                 <textarea
                   placeholder="Tell us more about your product and goals"
-                  rows={6}
+                  rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full rounded-[25px] mt-6 p-8 text-white text-sm bg-[#000911] border border-[#18354D] outline-none"
+                  className="w-full rounded-[25px] mt-6 p-8 text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] bg-[#000911] border border-[#18354D] outline-none"
                 />
-                {errors.message ? <p className="text-red-400 text-sm mt-2">{errors.message}</p> : null}
+                {errors.message ? (
+                  <p className="text-red-400 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] mt-2 ml-5">
+                    {errors.message}
+                  </p>
+                ) : null}
               </div>
 
-              <p className="text-white my-4 text-sm 1366:text-base">How can we help you?</p>
+              <p className="text-white my-4 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px]">
+                How can we help you?
+              </p>
 
               <div className="space-y-6">
                 {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                   (row, rowIdx) => (
-                    <div key={`tag-row-${rowIdx}`} className="w-full flex flex-wrap lg:flex-nowrap lg:justify-between">
+                    <div
+                      key={`tag-row-${rowIdx}`}
+                      className="w-full grid grid-cols-2 max-sm:gap-3 sm:flex sm:flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
+                    >
                       {row.map((t) => {
                         const isSelected = selectedTag === t;
                         return (
@@ -251,7 +296,7 @@ export default function FormCTA() {
                             key={t}
                             type="button"
                             onClick={() => toggleTag(t)}
-                            className={`py-4 px-8 max-1600:px-5 max-1366:px-4.5 max-xl:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[13px] max-1600:text-[12px] max-1440:text-[11px] max-1336:text-[10px] max-1280:text-[9px] transition-colors duration-200 border ${
+                            className={`max-sm:w-full py-4 px-4 1920:px-8 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[10px] md:text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] transition-colors duration-200 border ${
                               isSelected
                                 ? "border-white/80 text-white/80"
                                 : "border-[#18354D] text-[#999999]"
@@ -262,33 +307,45 @@ export default function FormCTA() {
                         );
                       })}
                     </div>
-                  )
+                  ),
                 )}
               </div>
 
-              <div className="flex justify-between items-center mt-8">
-                <button type="submit" className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30">
-                  <span className="text-nowrap relative top-[0.5px] font-sora text-[17px] xl:text-[20px]">Send Message</span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <LiaLongArrowAltRightSolid className="w-6 h-6 group-hover:text-black" />
+              <div className="md:flex justify-between items-center mt-8">
+                <button
+                  type="submit"
+                  className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
+                >
+                  <span className="text-nowrap relative top-[0.5px] font-sora text-[clamp(14px,1.04vw,21px)]">
+                    Send Message
+                  </span>
+                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-2 lg:p-3">
+                    <ArrowRight className="w-4 h-4 1366:w-6 1366:h-6 group-hover:text-black" />
                   </span>
                 </button>
-                <div className="lg:text-xs 1366:text-sm text-end">
+                <div className="text-xs 1366:text-sm max-sm:space-y-3 max-sm:pt-6 md:text-end 1920:text-[13px] 1600:text-[14px]">
                   <p className="text-[#A3A3A3]">Prefer email?</p>
-                  <Link href="mailto:moonshottech@gmail.com" className="text-white hover:underline">moonshottech@gmail.com</Link>
+                  <Link
+                    href="mailto:moonshottech@gmail.com"
+                    className="text-white hover:underline"
+                  >
+                    moonshottech@gmail.com
+                  </Link>
                 </div>
               </div>
 
               {submitSuccess ? (
-                <p className="mt-6 font-poppins text-sm text-white/80">
-                  Thanks — we’ve received your message. Our team will reach out shortly.
+                <p className="mt-6 font-poppins 1920:text-[13px] 1600:text-[14px] text-[11px] text-white/80">
+                  Thanks — we’ve received your message. Our team will reach out
+                  shortly.
                 </p>
               ) : null}
             </div>
           </form>
         </div>
       </div>
-      <div className="mix-blend-screen font-sora relative z-50 flex flex-col items-center justify-start pt-28 md:pt-36">
+
+      <div className="mix-blend-screen font-sora relative z-50 flex flex-col items-center justify-start md:pt-20 lg:pt-36">
         {/* Left Gradient */}
         <div className="absolute z-50 -left-70 top-60 bottom-0 w-150 pointer-events-none">
           <div
@@ -315,10 +372,10 @@ export default function FormCTA() {
 
         {/* Heading */}
         <div className="text-center relative z-10">
-          <p className="text-white/60 text-6xl mb-2 tracking-tight font-sora font-light">
+          <p className="text-white/60 text-[clamp(30px,2vw,80px)] lg:text-[clamp(30px,4vw,80px)] mb-4 lg:mb-2 tracking-tight font-sora font-light">
             Let’s start
           </p>
-          <h2 className="text-white text-9xl max-sm:text-5xl font-medium tracking-tight leading-tight">
+          <h2 className="text-white text-[clamp(60px,6vw,138px)] lg:text-[clamp(60px,8vw,138px)] -mt-8 mb-2 font-medium tracking-tight leading-tight">
             <span
               className="block"
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
@@ -339,12 +396,12 @@ export default function FormCTA() {
           alt="Elevate Icon"
           width={100}
           height={100}
-          className="w-30 relative z-10"
+          className="w-30 max-1280:w-20 max-1280:pb-3 max-1440:w-25 relative z-10"
         />
 
         {/* Video container with outline */}
         <div
-          className="relative py-12 min-h-[80vh] md:min-h-[95vh] max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
+          className="relative py-12 max-1280:min-h-[55vh] max-1366:min-h-[60vh] max-1440:min-h-[65vh] max-1600:min-h-[70vh] min-h-[95vh] max-1440:max-w-[32.5%] max-1600:max-w-[30%] max-w-[35%] max-lg:max-w-[45%] max-sm:max-w-[70%] z-10 -mt-10 flex items-center justify-center gradient-border"
           style={{
             borderRadius: "1333.3px",
             mixBlendMode: "screen",
@@ -356,16 +413,12 @@ export default function FormCTA() {
               loop
               muted
               playsInline
-              className="h-full w-full rounded-full"
+              className="h-full w-full object-cover rounded-full items-center overflow-visible"
             >
-              <source
-                src="/videos/cta-video.webm"
-                type="video/webm"
-                className="mix-blend-screen"
-              />
+              <source src="/videos/cta-video.webm" type="video/webm" />
             </video>
 
-            <p className="font-sora font-normal mt-12 text-center text-3xl max-sm:text-xl text-white/50">
+            <p className="font-sora font-normal mt-12 text-center text-lg lg:text-xl 1366:text-2xl 1600:text-3xl text-white/50">
               Ready to{" "}
               <span className="text-white">
                 elevate
@@ -382,7 +435,7 @@ export default function FormCTA() {
               type="button"
               className="hover:cursor-pointer mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
             >
-              <LiaLongArrowAltRightSolid className="w-8 h-8" />
+              <LiaLongArrowAltRightSolid className="w-4 h-4 1440:w-6 1440:h-6 1600:w-8 1600:h-8" />
             </button>
           </Link>
         </div>
@@ -391,12 +444,12 @@ export default function FormCTA() {
         <img
           src="/images/cta-unique.png"
           alt="Unique typography"
-          className="w-full h-auto object-contain opacity-40 -mt-36 max-sm:-mt-20"
+          className="w-full h-auto object-contain opacity-40 -mt-10 md:-mt-15 lg:-mt-36"
           draggable={false}
         />
 
         {/* Bottom large gradient */}
-        <div className="-mt-65 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+        <div className="max-sm:-mt-43 -mt-50 lg:-mt-53 1280:-mt-56 1366:-mt-60 1920:-mt-65 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
           <div
             className="w-[95%] h-37.5 rounded-t-full blur-[80px] in-out"
             style={{

@@ -225,7 +225,7 @@ export default function Footer() {
                                 </form>
 
                                 <p className="text-xs xl:text-base 1366:text-lg text-white/50 font-extralight">
-                                    By subscribing, you accept our newsletter <br /> terms and privacy policy.
+                                    By subscribing, you accept our newsletter <br className="hidden md:block" /> terms and privacy policy.
                                 </p>
                             </div>
                         </div>
@@ -235,7 +235,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-48 max-sm:mt-16">
                     <div className="grid grid-cols-4 max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 1600:grid-cols-3 gap-4 text-sm xl:text-[18px] 1366:text-xl text-nowrap text-[#BBB]">
-                        <p className="col-span-1 lg:col-span-2 1600:col-span-1 max-lg:text-center text-nowrap">© 2025 Moonshot Tech. All Rights Reserved</p>
+                        <p className="col-span-1 lg:col-span-2 1600:col-span-1 text-nowrap">© 2025 Moonshot Tech. All Rights Reserved</p>
 
                         <div className="col-span-1 lg:col-span-2 1600:col-span-1 space-x-6 1366:space-x-12 flex max-sm:flex-col max-sm:gap-4 max-1600:justify-center text-white">
                             <Link href="#" className="hover:text-white/80 transition-colors">

@@ -50,7 +50,7 @@ export default function CTA() {
   }, []);
 
   return (
-    <section className="font-sora relative z-10 flex flex-col items-center justify-start overflow-hidden bg-[#00050A] pt-28 md:pt-36">
+    <section className="font-sora relative z-10 flex flex-col items-center justify-start overflow-hidden bg-[#00050A] md:pt-20 lg:pt-36">
       {/* Left Gradient */}
       <div className="absolute -left-70 top-80 bottom-0 w-150 pointer-events-none">
         <div
@@ -77,10 +77,10 @@ export default function CTA() {
 
       {/* Heading */}
       <div className="text-center relative z-10">
-        <p className="text-white/60 text-6xl mb-2 tracking-tight font-sora font-light">
+        <p className="text-white/60 text-[clamp(30px,2vw,80px)] lg:text-[clamp(30px,4vw,80px)] mb-4 lg:mb-2 tracking-tight font-sora font-light">
           Let’s start
         </p>
-        <h2 className="text-white text-9xl max-sm:text-5xl font-medium tracking-tight leading-tight">
+        <h2 className="text-white text-[clamp(60px,6vw,138px)] lg:text-[clamp(60px,8vw,138px)] -mt-8 mb-2 font-medium tracking-tight leading-tight">
           <span
             className="block"
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
@@ -101,13 +101,12 @@ export default function CTA() {
         alt="Elevate Icon"
         width={100}
         height={100}
-        className="w-30 relative z-10"
-        data-smoother-ignore
+        className="w-30 max-1280:w-20 max-1280:pb-3 max-1440:w-25 relative z-10"
       />
 
       {/* Video container with outline */}
       <div
-        className="relative py-12 min-h-[80vh] md:min-h-[95vh] max-w-[35%] max-xl:max-w-[50%] max-sm:max-w-[75%] z-10 -mt-10 flex items-center justify-center gradient-border"
+        className="relative py-12 max-1280:min-h-[55vh] max-1366:min-h-[60vh] max-1440:min-h-[65vh] max-1600:min-h-[70vh] min-h-[95vh] max-1440:max-w-[32.5%] max-1600:max-w-[30%] max-w-[35%] max-lg:max-w-[45%] max-sm:max-w-[70%] z-10 -mt-10 flex items-center justify-center gradient-border"
         style={{
           borderRadius: "1333.3px",
           mixBlendMode: "screen",
@@ -124,7 +123,7 @@ export default function CTA() {
             <source src="/videos/cta-video.webm" type="video/webm" />
           </video>
 
-          <p className="font-sora font-normal mt-12 text-center text-3xl max-sm:text-xl text-white/50">
+          <p className="font-sora font-normal mt-12 text-center text-lg lg:text-xl 1366:text-2xl 1600:text-3xl text-white/50">
             Ready to{" "}
             <span className="text-white">
               elevate
@@ -150,12 +149,12 @@ export default function CTA() {
       <img
         src="/images/cta-unique.png"
         alt="Unique typography"
-        className="w-full h-auto object-contain opacity-40 -mt-36 max-sm:-mt-20"
+        className="w-full h-auto object-contain opacity-40 -mt-10 md:-mt-15 lg:-mt-36"
         draggable={false}
       />
 
       {/* Bottom large gradient */}
-      <div className="-mt-65 max-sm:-mt-40 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
+      <div className="max-sm:-mt-43 -mt-50 lg:-mt-53 1280:-mt-56 1366:-mt-60 1920:-mt-65 relative w-screen inset-0 flex items-center justify-center pointer-events-none z-50">
         <div
           className="w-[95%] h-37.5 rounded-t-full blur-[80px] in-out"
           style={{

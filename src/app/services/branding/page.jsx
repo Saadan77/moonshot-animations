@@ -162,7 +162,7 @@ export default function Branding() {
             <p className="font-poppins font-medium text-lg">Branding</p>
           </div>
 
-          <h1 className="text-[clamp(30px,3.6vw,70px)] font-normal font-sora uppercase mb-4 tracking-tight leading-12 1280:leading-15 1600:leading-20.25 text-white">
+          <h1 className="text-[clamp(30px,3.6vw,70px)] font-normal font-sora uppercase mb-4 tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25 text-white">
             <AuroraText colors={["#ffffff", "#d1bd73"]}>
               Branding <br /> Brands That Shape You{" "}
             </AuroraText>

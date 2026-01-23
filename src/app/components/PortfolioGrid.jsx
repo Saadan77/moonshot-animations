@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Smoke from "./smoke/smoke";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import CTA from "./CTA";
 
 const PortfolioGrid = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -87,7 +85,7 @@ const PortfolioGrid = () => {
           {/* Header Section */}
           <div className="mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
             {/* Filter Tabs */}
-            <div className="relative z-50 flex flex-col items-end gap-4">
+            <div className="relative md:z-20 lg:z-50 flex flex-col items-end gap-4">
               <div className="flex flex-wrap gap-6 max-xl:gap-4 justify-center">
                 {tabs.map((tab) => (
                   <button
@@ -107,11 +105,11 @@ const PortfolioGrid = () => {
           </div>
 
           {/* Portfolio Grid */}
-          <div className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-12 max-md:gap-24">
+          <div className="relative z-50 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 lg:gap-24">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-16 max-xl:p-14 max-sm:p-5 rounded-4xl relative group h-[95vh] max-1600:h-[80vh] max-1440:h-[70vh] max-1366:h-[65vh] max-1280:h-[60vh] max-xl:h-[50vh] ${
+                className={`bg-black p-27 max-1600:p-25 max-1440:p-20 max-1336:p-16 max-xl:p-14 max-sm:px-5 max-sm:py-12 rounded-4xl relative group h-[95vh] max-1600:h-[80vh] max-1440:h-[70vh] max-1366:h-[65vh] max-1280:h-[60vh] max-lg:h-full ${
                   item.isVideo ? "col-span-1 lg:col-span-2" : "col-span-1"
                 }`}
               >
@@ -142,7 +140,7 @@ const PortfolioGrid = () => {
                     className={`relative z-10 w-full h-full object-cover rounded-4xl`}
                   />
                 )}
-                <h3 className="font-sora relative mt-5 max-2xl:mt-3 max-1280:mt-2 -ml-15 max-2xl:-ml-10 max-xl:-ml-5 text-white text-[clamp(30px,2.7vw,48px)] font-light tracking-tighter">
+                <h3 className="font-sora relative mt-5 max-2xl:mt-3 max-1280:mt-2 -ml-15 max-2xl:-ml-10 max-xl:-ml-5 max-sm:ml-0 text-white text-[clamp(20px,2.7vw,40px)] md:text-[clamp(30px,2.7vw,48px)] font-light tracking-tighter">
                   {item.title}
                 </h3>
               </div>
@@ -150,7 +148,7 @@ const PortfolioGrid = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center py-20 relative z-50">
+        <div className="w-full flex justify-center py-20 relative md:z-20 lg:z-50">
           <Link
             href="#"
             className="group inline-flex items-center gap-6 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"

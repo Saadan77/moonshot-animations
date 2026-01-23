@@ -465,13 +465,13 @@ export const StaggeredMenu = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[4em] max-sm:px-[2em] bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[5em] max-lg:px-[3em] max-md:px-[2em] bg-transparent pointer-events-none z-20"
           aria-label="Main navigation header"
         >
           <div className="flex justify-center items-center gap-6">
             <button
               ref={toggleBtnRef}
-              className="sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full pl-3 pr-6 py-2 cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              className="sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
               style={{
                 color: "white",
                 fontFamily: "var(--font-sora), sans-serif",
@@ -540,7 +540,7 @@ export const StaggeredMenu = ({
             <img
               src={logoUrl || "/src/assets/logos/reactbits-gh-white.svg"}
               alt="Logo"
-              className="sm-logo-img block h-50 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              className="sm-logo-img block h-15 md:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
               draggable={false}
               width={100}
               height={100}
@@ -550,7 +550,7 @@ export const StaggeredMenu = ({
           <div className="hidden md:flex items-center gap-4 pointer-events-auto">
             <Link
               href="/portfolio"
-              className="group inline-flex items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
+              className="hidden lg:inline-flex group items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
               <span className="relative top-[0.5px] font-sora text-[14px] xl:text-[20px] whitespace-nowrap">Our Works</span>
               <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
@@ -588,7 +588,7 @@ export const StaggeredMenu = ({
                       <div className="flex flex-col items-start">
                         <button
                           onClick={() => setExpandedItem(expandedItem === idx ? null : idx)}
-                          className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
+                          className="sm-panel-item relative text-white font-semibold text-[clamp(2rem,4vw,3.8rem)] md:text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
                           data-index={idx + 1}
                         >
                           <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
@@ -619,7 +619,7 @@ export const StaggeredMenu = ({
                       </div>
                     ) : (
                       <a
-                        className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                        className="sm-panel-item relative text-white font-semibold text-[clamp(2rem,4vw,3.8rem)] md:text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                         href={it.link}
                         aria-label={it.ariaLabel}
                         data-index={idx + 1}
@@ -636,7 +636,7 @@ export const StaggeredMenu = ({
                   className="sm-panel-itemWrap relative overflow-hidden leading-none"
                   aria-hidden="true"
                 >
-                  <span className="sm-panel-item relative text-white font-semibold text-[clamp(1rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
+                  <span className="sm-panel-item relative text-white font-semibold text-[clamp(2rem,4vw,3.8rem)] md:text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
                     <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                       No items
                     </span>
@@ -680,7 +680,7 @@ export const StaggeredMenu = ({
 .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; background: transparent; pointer-events: none; z-index: 20; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
-.sm-scope .sm-logo-img { display: block; height: 75px; width: auto; object-fit: contain; }
+.sm-scope .sm-logo-img { display: block; width: auto; object-fit: contain; }
 .sm-scope .sm-toggle { position: relative; display: inline-flex; align-items: center; gap: 1rem; border: none; cursor: pointer; color: #e9e9ef; font-weight: 400; line-height: 1; overflow: visible; }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }
 .sm-scope .sm-line:last-of-type { margin-top: 6px; }
