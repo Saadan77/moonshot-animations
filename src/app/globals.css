@@ -17,12 +17,13 @@ html {
 }
 
 @theme {
-  --breakpoint-1600: 100.063rem;
-  --breakpoint-1440: 90.063rem;
-  --breakpoint-1366: 85.438rem;
-  --breakpoint-1280: 80.063rem;
-  --breakpoint-1280: 80.063rem;
-  --breakpoint-1025: 64.063rem;
+  --breakpoint-1920: 112.5rem;
+  --breakpoint-1600: 100rem;
+  --breakpoint-1440: 90rem;
+  --breakpoint-1366: 85rem;
+  --breakpoint-1280: 80rem;
+  --breakpoint-1280: 80rem;
+  --breakpoint-1025: 64rem;
 }
 
 @theme inline {

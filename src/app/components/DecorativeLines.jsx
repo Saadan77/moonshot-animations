@@ -1,6 +1,6 @@
 export default function DecorativeLines() {
     return (
-        <div className="block">
+        <div className="hidden md:block">
             {["12%", "28%", "42%", "57%", "72%", "88%"].map((left) => (
                 <div
                     key={left}

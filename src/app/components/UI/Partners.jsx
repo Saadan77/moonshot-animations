@@ -61,11 +61,10 @@ export default function Partners() {
 
   return (
     <div className="relative overflow-visible">
-      {/* 1. Transition Section: Smoke is inside here, so it gets clipped! */}
-      <section
+      <div
         id="home-partners-clip-path"
         ref={transitionRef}
-        className="relative h-[50vh] z-10 -mt-110"
+        className="absolute top-0 inset-0 h-[50vh] z-10 -mt-110"
         style={{
           clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
           willChange: "clip-path",
@@ -73,33 +72,19 @@ export default function Partners() {
           background: "transparent",
         }}
       >
-        {/* Background Color */}
         <div
           className="absolute inset-0 bg-[#00050A]"
           style={{ clipPath: "inherit" }}
         />
 
-        {/* FIX: Smoke is now inside the clip-path container */}
-        <div className="absolute inset-0 z-0">
-          <Smoke />
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-              #home-partners-clip-path .smoke-layer {
-                  overflow: visible;
-              }
-            `,
-            }}
-          />
-        </div>
-      </section>
+        <Smoke />
+      </div>
 
       {/* 2. Main Partners Section */}
-      <section
+      <div
         id="partners"
-        className="relative z-10 -mt-25 pt-25 mx-auto bg-[#00050A]"
+        className="relative z-15 -mt-25 pt-25 mx-auto bg-[#00050A]"
       >
-        {/* FIX: Smoke added here for the main body */}
         <div className="absolute inset-0 z-0">
           <Smoke />
         </div>
@@ -157,7 +142,7 @@ export default function Partners() {
             <CTA />
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
