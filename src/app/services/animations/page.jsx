@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import CTA from "@/app/components/CTA";
+import Image from "next/image";
 
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
@@ -15,7 +14,6 @@ import { LayoutGrid } from "@/components/ui/layout-grid";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import DecorativeLines from "@/app/components/DecorativeLines";
 import Button from "@/app/components/button/button";
-import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
