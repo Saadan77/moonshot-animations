@@ -5,7 +5,7 @@ import Link from "next/link";
 import Button from "./button/button";
 import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, ArrowRight } from "lucide-react";
 import { GoLocation } from "react-icons/go";
 import CTA from "./CTA";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";

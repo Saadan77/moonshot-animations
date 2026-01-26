@@ -122,7 +122,7 @@ export const AnimatedTestimonials = ({
                 ease: "easeInOut",
               }}
             >
-              <div className="text-[20px] text-[#808080] mb-6">
+              <div className="text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080] mb-6">
                 <span className="text-nowrap font-sora font-normal">
                   09 — Testimonials
                 </span>

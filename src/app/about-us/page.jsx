@@ -289,7 +289,7 @@ export default function AboutUsPage() {
     <>
       {/* <CyberHologramLoader /> */}
       <section
-        className="relative bg-black overflow-x-hidden"
+        className="relative bg-black max-lg:bg-[#00050A] overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
         <Navbar />
@@ -337,21 +337,23 @@ export default function AboutUsPage() {
             <div className="relative z-10 lg:ml-20 max-lg:py-[2em] max-lg:pl-[5em]">
               <div className="mb-16 flex items-center gap-3">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">About Us</p>
+                <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">
+                  About Us
+                </p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(35px,4vw,45px)] lg:text-[clamp(45px,4vw,74px)] tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25">
+              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(22px,5vw,40px)] md:text-[clamp(45px,4vw,74px)] tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(40px,4vw,50px)] lg:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-[clamp(40px,4vw,50px)] md:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Purpose & Vision
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-normal font-sora text-white/70 text-xs lg:text-[clamp(12px,1.08vw,20px)]">
+              <p className="font-normal font-sora text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(12px,1.08vw,20px)]">
                 From our values to our craft, this is how we shape stories that
                 define who we are with care
               </p>
@@ -367,6 +369,14 @@ export default function AboutUsPage() {
                 src="/images/about-us-bg.png"
                 className="hidden lg:block lg:absolute z-10 w-1/2 h-auto top-50 -right-40 max-1440:-right-30"
                 alt="Astronaut"
+              />
+            </div>
+
+            <div className="py-10 max-md:hidden lg:hidden flex items-end justify-end relative z-20">
+              <img
+                src="/images/about-us-bg.png"
+                className="w-3/4 h-auto"
+                alt="City"
               />
             </div>
           </div>
@@ -392,7 +402,7 @@ export default function AboutUsPage() {
           <div>
             <div className="relative z-10 max-w-[90%] mx-auto py-10 md:py-48">
               <div className="space-y-10">
-                <div className="flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
+                <div className="flex items-center gap-3 text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080]">
                   <span className="text-nowrap font-poppins font-normal">
                     01 — Who We Are
                   </span>
@@ -423,7 +433,7 @@ export default function AboutUsPage() {
 
                   <div className="flex gap-16 max-lg:gap-8">
                     <div>
-                      <p className="text-[clamp(50px,6vw,110px)]">
+                      <p className="text-[clamp(30px,6vw,60px)] sm:text-[clamp(40px,6vw,80px)] lg:text-[clamp(50px,6vw,110px)]">
                         <CountingNumber
                           number={400}
                           inView={true}
@@ -436,7 +446,7 @@ export default function AboutUsPage() {
                       </span>
                     </div>
                     <div>
-                      <p className="text-[clamp(50px,6vw,110px)]">
+                      <p className="text-[clamp(30px,6vw,60px)] sm:text-[clamp(40px,6vw,80px)] lg:text-[clamp(50px,6vw,110px)]">
                         {">"}
                         <CountingNumber
                           number={95}
@@ -501,11 +511,11 @@ export default function AboutUsPage() {
           <div>
             <div className="px-10 items-center py-10 md:py-48 bg-black">
               <div className="text-center relative z-10">
-                <p className="font-poppins font-normal text-[#808080] text-sm 1366:text-base 1440:text-lg 1600:text-xl tracking-tight mb-8">
+                <p className="font-poppins font-normal text-[#808080] text-xs lg:text-sm 1366:text-base 1440:text-lg tracking-tight mb-8">
                   02 - Technologies
                 </p>
                 <h2
-                  className="min-h-37.5 lg:min-h-12.5 font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -519,7 +529,7 @@ export default function AboutUsPage() {
                 </h2>
 
                 <h2
-                  className="min-h-37.5 lg:min-h-12.5 font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -579,19 +589,17 @@ export default function AboutUsPage() {
         {/* How It Works Section */}
         <div>
           <div className="relative">
-            <div className="absolute -top-10 left-[48%] z-100">
+            <div className="absolute -top-5.5 1280:-top-7 1600:-top-9 left-[48%] z-100">
               <Image
                 src="/images/elevate-icon.png"
                 alt="Elevate Icon"
                 width={100}
                 height={100}
-                className="w-25 relative z-10"
+                className="w-15 1280:w-20 1600:w-25 1920:w-30 relative z-10"
               />
             </div>
           </div>
-          <div
-            className="relative py-10 md:pt-48"
-          >
+          <div className="relative py-10 md:pt-48">
             <div className="absolute inset-0 z-0 -mt-[15%]">
               <Image
                 alt="linear-gradient-bg"
@@ -604,7 +612,7 @@ export default function AboutUsPage() {
             <div className="max-w-[90%] mx-auto relative">
               <div className="grid grid-cols-5">
                 <div className="col-span-2">
-                  <p className="text-[#808080] font-poppins font-normal text-sm 1366:text-base 1440:text-lg 1600:text-xl mb-6">
+                  <p className="text-[#808080] font-poppins font-normal text-xs lg:text-sm 1366:text-base 1440:text-lg mb-6">
                     03 - How It Works
                   </p>
 
@@ -647,7 +655,7 @@ export default function AboutUsPage() {
         <div className="bg-[#00050A] relative pb-10 overflow-hidden">
           <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
             <div className="col-span-1">
-              <span className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080] text-nowrap font-poppins font-normal">
+              <span className="text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080] text-nowrap font-poppins font-normal">
                 04 — What Defines Us
               </span>
 
