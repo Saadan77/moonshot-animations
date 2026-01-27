@@ -525,7 +525,7 @@ export const StaggeredMenu = ({
             </button>
 
             <Link
-              className="font-sora hidden lg:flex text-[20px] max-1280:text-[17px] text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
+              className="font-sora hidden lg:flex text-[14px] xl:text-[20px] text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
               href="tel:+19723315058"
             >
               +1-972-331-5058

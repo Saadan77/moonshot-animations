@@ -127,7 +127,8 @@ export default function Branding() {
 
       <Navbar />
 
-      {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
+      <section className="lg:flex items-center relative w-full overflow-visible">
+        {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
               backgroundColor={[0.84, 0.13, 0.69]}
@@ -141,59 +142,68 @@ export default function Branding() {
             />
           </div> */}
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          alt="linear-gradient-bg"
-          width={1920}
-          height={1080}
-          src="/images/services/bg-service-banner.png"
-          style={{ filter: "brightness(1.25)" }}
-        />
-      </div>
-
-      <DecorativeLines />
-
-      {/* Industries Hero Section */}
-      <section className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex items-center">
-        <div className="relative z-10 ml-20 max-lg:ml-5">
-          <div className="mb-16 flex items-center gap-3 text-sm text-white">
-            <img src="/images/about-us/icon.png" />
-            <p className="font-poppins font-medium text-lg">Branding</p>
-          </div>
-
-          <h1 className="text-[clamp(30px,3.6vw,70px)] font-normal font-sora uppercase mb-4 tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25 text-white">
-            <AuroraText colors={["#ffffff", "#d1bd73"]}>
-              Branding <br /> Brands That Shape You{" "}
-            </AuroraText>
-            <span className="text-[clamp(40px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
-              <AuroraText colors={["#D42290", "#2DAEEF"]}>
-                Brand & Persona
-              </AuroraText>
-            </span>
-          </h1>
-
-          <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.05vw,22px)]">
-            From early spark to brand logo, we create and shape profiles that
-            show who you are online
-          </p>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            alt="linear-gradient-bg"
+            width={1920}
+            height={1080}
+            src="/images/services/bg-service-banner.png"
+            style={{ filter: "brightness(1.25)" }}
+          />
         </div>
 
-        <div>
+        <DecorativeLines />
+
+        {/* Branding Hero Section */}
+        <section className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[18%] lg:pb-[22%]">
+          <div className="relative z-10">
+            <div className="mb-8 md:mb-16 flex items-center gap-3">
+              <img src="/images/about-us/icon.png" />
+              <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">Branding</p>
+            </div>
+
+            <h1 className="text-2xl sm:text-4xl md:text-[clamp(45px,4vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25 text-white">
+              <AuroraText colors={["#ffffff", "#d1bd73"]}>
+                Branding <br /> Brands That Shape You{" "}
+              </AuroraText>
+              <span className="text-3xl md:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <AuroraText colors={["#D42290", "#2DAEEF"]}>
+                  Brand & Persona
+                </AuroraText>
+              </span>
+            </h1>
+
+            <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(12px,1.08vw,20px)]">
+              From early spark to brand logo, we create and shape profiles that
+              show who you are online
+            </p>
+          </div>
+
+          <div className="hidden lg:block">
+            <img
+              className="absolute inset-0 w-full h-auto"
+              src="/images/services/bg-service-banner.png"
+              alt="Hero Background Gradient"
+            />
+            <img
+              src="/images/services/branding/hero-cropped.png"
+              className="absolute w-[55%] top-40 right-0 z-10"
+              alt="Branding Hero"
+            />
+          </div>
+        </section>
+
+        <div className="max-md:hidden lg:hidden relative z-20">
           <img
-            className="absolute inset-0 w-full h-auto"
-            src="/images/services/bg-service-banner.png"
-            alt="Hero Background Gradient"
-          />
-          <img
-            src="/images/services/branding/hero-cropped.png"
-            className="absolute w-[55%] top-40 right-0 z-10"
+            src="/images/services/branding/hero.png"
+            className="w-3/4 mx-auto h-auto"
             alt="Branding Hero"
           />
         </div>
       </section>
 
-      <section className="relative px-24 max-lg:p-2 z-10">
+      <section className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
         <video
           autoPlay
           loop
@@ -218,9 +228,9 @@ export default function Branding() {
           />
         </div>
 
-        <section className="relative z-10 py-24 1440:py-40 1920:py-52 px-6 lg:px-24 xl:px-36">
+        <section className="relative z-10 py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
           <div className="flex justify-end max-lg:justify-center">
-            <h2 className="text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
+            <h2 className="text-3xl lg:text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
               <TextType
                 text="Identity-first"
                 typingSpeed={75}
@@ -243,12 +253,19 @@ export default function Branding() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image column */}
-            <div className="-mt-54 relative z-10 col-span-1 flex items-center justify-center">
+            <div className="lg:-mt-54 relative z-10 col-span-1 flex items-center justify-center">
               <img
                 src="/images/services/branding/section-3.png"
                 alt="Laptop showcasing website design"
-                className="h-full w-full lg:object-contain xl:object-cover lg:scale-150 1280:scale-100 1366:scale-110 1600:scale-125 1920:scale-150"
-                style={{ mixBlendMode: "screen"}}
+                className="hidden lg:block h-full w-full lg:object-contain xl:object-cover lg:scale-150 1280:scale-100 1366:scale-110 1600:scale-125 1920:scale-150"
+                style={{ mixBlendMode: "screen" }}
+              />
+
+              <img
+                src="/images/services/branding/section-3-sm.png"
+                alt="Laptop showcasing website design"
+                className="block lg:hidden h-full w-2/3"
+                style={{ mixBlendMode: "screen" }}
               />
             </div>
 
@@ -291,11 +308,11 @@ export default function Branding() {
           />
         </div>
 
-        <section id="branding" className="relative z-10 pt-50">
+        <section id="branding" className="relative z-10 pt-20 sm:pt-30 md:pt-40 lg:pt-50">
           <Smoke />
 
-          <div>
-            <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+          <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="Modern web dev made for"
                 typingSpeed={75}
@@ -314,7 +331,7 @@ export default function Branding() {
                 loop={true}
               />
             </h2>
-            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+            <div className="text-[24px] max-1440:text-[20px] max-1366:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
               <TextType
                 text="Branding is mandatory for businesses, as it changes how target audience perceive your brand; it increases brand awareness, and it drives sales. Branding gives your business competitive advantage and grows business value."
                 typingSpeed={15}
@@ -342,6 +359,7 @@ export default function Branding() {
                   @media (max-width: 1024px) {
                     #branding #branding-layout > div.grid {
                       padding: 25px !important;
+                      gap: 20px !important;
                     }
                   }
                   /* Hide the absolute overlay inside LayoutGrid cards */
@@ -371,9 +389,9 @@ export default function Branding() {
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
 
-          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <h2 className="relative z-20 max-w-[90%] mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
               typingSpeed={75}
@@ -393,7 +411,7 @@ export default function Branding() {
             />
           </h2>
 
-          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+          <section className="relative mt-6 lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
 

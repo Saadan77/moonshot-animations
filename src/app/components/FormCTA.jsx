@@ -2,15 +2,12 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import Button from "./button/button";
+import Image from "next/image";
 import RotatingText from "@/components/RotatingText";
 import TextType from "@/components/TextType";
 import { PhoneCall, ArrowRight } from "lucide-react";
 import { GoLocation } from "react-icons/go";
-import CTA from "./CTA";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import Image from "next/image";
-import Smoke from "./smoke/smoke";
 
 export default function FormCTA() {
   const tags = [
@@ -131,7 +128,7 @@ export default function FormCTA() {
 
             <h2
               style={{ fontFamily: "Inter, sans-serif" }}
-              className="leading-tight text-white mb-6 block text-[clamp(40px,5vw,75px)] md:text-[clamp(55px,5vw,75px)] lg:text-[clamp(45px,4.2vw,75px)]"
+              className="leading-tight text-white mb-6 block text-[clamp(40px,5vw,75px)] md:text-[clamp(55px,5vw,75px)] lg:text-[clamp(40px,4.2vw,75px)]"
             >
               <span className="flex items-baseline gap-x-4">
                 Have a{" "}
@@ -163,7 +160,7 @@ export default function FormCTA() {
               </span>
             </h2>
 
-            <div className="hidden lg:block min-h-14 lg:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
+            <div className="hidden lg:block min-h-14 1920:min-h-26.5 text-[#989898] text-[clamp(10px,1.04vw,20px)] font-poppins leading-relaxed tracking-widest mb-8">
               <TextType
                 text="Ready to take your triathlon performance to the next <br />level? Reach out today and let's create a personalized training <br />plan for you."
                 typingSpeed={15}
@@ -269,7 +266,7 @@ export default function FormCTA() {
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full rounded-[25px] mt-6 p-8 text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] bg-[#000911] border border-[#18354D] outline-none"
+                  className="font-poppins font-normal w-full rounded-[25px] mt-6 p-8 text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] bg-[#000911] border border-[#18354D] outline-none"
                 />
                 {errors.message ? (
                   <p className="text-red-400 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] mt-2 ml-5">
@@ -282,12 +279,12 @@ export default function FormCTA() {
                 How can we help you?
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-3 lg:space-y-6">
                 {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                   (row, rowIdx) => (
                     <div
                       key={`tag-row-${rowIdx}`}
-                      className="w-full grid grid-cols-2 max-sm:gap-3 sm:flex sm:flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
+                      className="w-full grid grid-cols-2 max-lg:gap-3 lg:flex flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
                     >
                       {row.map((t) => {
                         const isSelected = selectedTag === t;
@@ -296,7 +293,7 @@ export default function FormCTA() {
                             key={t}
                             type="button"
                             onClick={() => toggleTag(t)}
-                            className={`max-sm:w-full py-4 px-4 1920:px-8 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[10px] md:text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] transition-colors duration-200 border ${
+                            className={`max-sm:w-full py-4 px-3 1920:px-8 1600:px-6 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[11px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] 1280:text-[10px] lg:text-[9px] transition-colors duration-200 border ${
                               isSelected
                                 ? "border-white/80 text-white/80"
                                 : "border-[#18354D] text-[#999999]"

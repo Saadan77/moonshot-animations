@@ -8,7 +8,6 @@ import { useGSAP } from "@gsap/react";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CTA from "../components/CTA";
 import { AuroraText } from "@/components/ui/aurora-text";
 import Dither from "@/components/Dither";
 import Partners from "../components/UI/Partners";
@@ -16,7 +15,6 @@ import ScrollReveal from "@/components/lightswind/scroll-reveal";
 import TextType from "@/components/TextType";
 import { CountingNumber } from "@/components/ui/shadcn-io/counting-number";
 import SlidingLogoMarquee from "@/components/lightswind/sliding-logo-marquee";
-import AboutUsCards from "../components/AboutUsCards";
 import DecorativeLines from "../components/DecorativeLines";
 import Ribbons from "@/components/Ribbons";
 import CyberHologramLoader from "../components/CyberHologramLoader";
@@ -289,7 +287,7 @@ export default function AboutUsPage() {
     <>
       {/* <CyberHologramLoader /> */}
       <section
-        className="relative bg-black max-lg:bg-[#00050A] overflow-x-hidden"
+        className="relative bg-[#00050A] overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
         <Navbar />
@@ -333,20 +331,20 @@ export default function AboutUsPage() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="pt-[18%] pb-[20%]">
-            <div className="relative z-10 lg:ml-20 max-lg:py-[2em] max-lg:pl-[5em]">
-              <div className="mb-16 flex items-center gap-3">
+          <section className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[18%] lg:pb-[22%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3">
                 <img src="/images/about-us/icon.png" />
                 <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                   About Us
                 </p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(22px,5vw,40px)] md:text-[clamp(45px,4vw,74px)] tracking-tight leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25">
+              <h1 className="font-normal font-sora uppercase mb-4 text-2xl sm:text-4xl md:text-[clamp(45px,4vw,74px)] tracking-tight leading-8 sm:leading-13 1366:leading-15 1600:leading-18">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Shaping <br /> Ideas That Define Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(40px,4vw,50px)] md:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-3xl md:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Purpose & Vision
                   </AuroraText>
@@ -372,17 +370,17 @@ export default function AboutUsPage() {
               />
             </div>
 
-            <div className="py-10 max-md:hidden lg:hidden flex items-end justify-end relative z-20">
+            <div className="py-10 max-md:hidden lg:hidden relative z-20">
               <img
                 src="/images/about-us-bg.png"
                 className="w-3/4 h-auto"
                 alt="City"
               />
             </div>
-          </div>
+          </section>
         </div>
 
-        <div className="relative px-20 z-10 justify-center flex">
+        <div className="relative z-10 px-[5em] max-lg:px-[3em] max-md:px-[2em]">
           <video
             autoPlay
             loop
@@ -400,9 +398,9 @@ export default function AboutUsPage() {
         >
           {/* Who We Are Section */}
           <div>
-            <div className="relative z-10 max-w-[90%] mx-auto py-10 md:py-48">
+            <div className="relative z-10 max-w-[90%] mx-auto py-10 md:py-24 lg:py-36 1440:py-48">
               <div className="space-y-10">
-                <div className="flex items-center gap-3 text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080]">
+                <div className="flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
                   <span className="text-nowrap font-poppins font-normal">
                     01 — Who We Are
                   </span>
@@ -453,7 +451,7 @@ export default function AboutUsPage() {
                           inView={true}
                           transition={{ stiffness: 100, damping: 30 }}
                         />
-                        <span className="text-[50px]">%</span>
+                        %
                       </p>
                       <span className="text-base xl:text-lg 1440:text-xl">
                         Projects Success <br /> Rate
@@ -509,13 +507,13 @@ export default function AboutUsPage() {
 
           {/* Technologies Section */}
           <div>
-            <div className="px-10 items-center py-10 md:py-48 bg-black">
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] items-center py-10 md:py-48 bg-black">
               <div className="text-center relative z-10">
-                <p className="font-poppins font-normal text-[#808080] text-xs lg:text-sm 1366:text-base 1440:text-lg tracking-tight mb-8">
+                <p className="font-poppins font-normal text-[#808080] text-sm 1366:text-base 1440:text-lg 1600:text-xl tracking-tight mb-8">
                   02 - Technologies
                 </p>
                 <h2
-                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl max-lg:text-2xl max-md:text-xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -529,7 +527,7 @@ export default function AboutUsPage() {
                 </h2>
 
                 <h2
-                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl leading-tight uppercase"
+                  className="font-normal text-center text-6xl max-2xl:text-5xl max-xl:text-4xl max-lg:text-2xl max-md:text-xl leading-tight uppercase"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -544,7 +542,7 @@ export default function AboutUsPage() {
 
                 <div
                   id="technologies-description"
-                  className="w-3/4 mx-auto mt-8"
+                  className="lg:w-3/4 mx-auto mt-8"
                 >
                   <ScrollReveal size="sm">
                     ‘Tech With Moonshot’ makes use of contemporary technology to
@@ -589,13 +587,13 @@ export default function AboutUsPage() {
         {/* How It Works Section */}
         <div>
           <div className="relative">
-            <div className="absolute -top-5.5 1280:-top-7 1600:-top-9 left-[48%] z-100">
+            <div className="absolute -top-3.5 md:-top-5.5 1280:-top-7 1600:-top-9 left-[48%] z-100">
               <Image
                 src="/images/elevate-icon.png"
                 alt="Elevate Icon"
                 width={100}
                 height={100}
-                className="w-15 1280:w-20 1600:w-25 1920:w-30 relative z-10"
+                className="w-10 md:w-15 1280:w-20 1600:w-25 1920:w-30 relative z-10"
               />
             </div>
           </div>
@@ -610,9 +608,9 @@ export default function AboutUsPage() {
             </div>
 
             <div className="max-w-[90%] mx-auto relative">
-              <div className="grid grid-cols-5">
+              <div className="grid grid-cols-1 md:grid-cols-5">
                 <div className="col-span-2">
-                  <p className="text-[#808080] font-poppins font-normal text-xs lg:text-sm 1366:text-base 1440:text-lg mb-6">
+                  <p className="text-[#808080] font-poppins font-normal text-sm 1366:text-base 1440:text-lg 1600:text-xl mb-6">
                     03 - How It Works
                   </p>
 
@@ -623,7 +621,7 @@ export default function AboutUsPage() {
                     Method of making <br /> better result
                   </h2>
                 </div>
-                <p className="col-span-3 text-[clamp(10px,1.1vw,23px)] leading-relaxed text-white/80">
+                <p className="max-sm:mt-6 md:col-span-3 text-[clamp(10px,1.1vw,23px)] leading-relaxed text-white/80">
                   We start by communicating with our clients via online chat,
                   email, or phone. After getting required information by asking
                   certain set of questions, we go for a mockup or a prototype
@@ -641,9 +639,9 @@ export default function AboutUsPage() {
               </div>
 
               {/* Align carousel with the right (col-span-3) text column */}
-              <div className="grid grid-cols-5">
-                <div className="col-span-2" aria-hidden="true" />
-                <div className="col-span-3 -mt-24">
+              <div className="grid grid-cols-1 md:grid-cols-5">
+                <div className="md:col-span-2" aria-hidden="true" />
+                <div className="md:col-span-3 md:-mt-24">
                   <HorizontalScrollCarousel />
                 </div>
               </div>
@@ -653,9 +651,9 @@ export default function AboutUsPage() {
 
         {/* What Defines Us Section */}
         <div className="bg-[#00050A] relative pb-10 overflow-hidden">
-          <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-2 justify-center items-center gap-10">
-            <div className="col-span-1">
-              <span className="text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080] text-nowrap font-poppins font-normal">
+          <div className="max-w-[90%] mx-auto relative py-36 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-10">
+            <div>
+              <span className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080] text-nowrap font-poppins font-normal">
                 04 — What Defines Us
               </span>
 
@@ -708,13 +706,13 @@ export default function AboutUsPage() {
         </div>
 
         <div id="about-us-partners" className="relative z-50">
-          <div className="absolute -top-10 left-[48%] z-100">
+          <div className="absolute -top-3.5 md:-top-5.5 1280:-top-7 1600:-top-9 left-[48%] z-100">
             <Image
               src="/images/elevate-icon.png"
               alt="Elevate Icon"
               width={100}
               height={100}
-              className="w-25 relative z-10"
+              className="w-10 md:w-15 1280:w-20 1600:w-25 1920:w-30 relative z-10"
             />
           </div>
 
@@ -772,8 +770,14 @@ export default function AboutUsPage() {
               }
 
               #about-us-partners #testimonials {
-                margin-top: 60px;
-                padding-top: 180px;
+                margin-top: 0px;
+                padding-top: 10px;
+              }
+
+              @media (max-width: 1024px) {
+                #partners {
+                  padding-top: 0px;
+                }
               }
             `,
               }}

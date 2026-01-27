@@ -85,7 +85,10 @@ export default function ContactUs() {
   return (
     <>
       {/* <CyberHologramLoader /> */}
-      <section className="max-md:bg-[#00050A]" style={{ fontFamily: "var(--font-sora), sans-serif" }}>
+      <section
+        className="max-md:bg-[#00050A]"
+        style={{ fontFamily: "var(--font-sora), sans-serif" }}
+      >
         <Navbar />
 
         <div className="max-md:hidden fixed inset-0 z-9999 pointer-events-none">
@@ -133,7 +136,9 @@ export default function ContactUs() {
             <div className="relative z-10">
               <div className="mb-8 md:mb-16 flex items-center gap-3 text-white">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-sm lg:text-lg">Contact</p>
+                <p className="font-poppins font-medium text-sm lg:text-lg">
+                  Contact
+                </p>
               </div>
 
               <h1 className="text-[clamp(24px,6vw,40px)] md:text-[clamp(45px,3.5vw,72px)] lg:text-[clamp(26px,3.5vw,72px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 sm:leading-10 md:leading-15 1280:leading-13 1366:leading-15 1600:leading-18 1920:leading-20.25 text-white">
@@ -334,7 +339,7 @@ export default function ContactUs() {
                       rows={4}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="w-full rounded-[25px] mt-6 p-8 text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] bg-[#000911] border border-[#18354D] outline-none"
+                      className="font-poppins font-normal w-full rounded-[25px] mt-6 p-8 text-white text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] bg-[#000911] border border-[#18354D] outline-none"
                     />
                     {errors.message ? (
                       <p className="text-red-400 text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] mt-2 ml-5">
@@ -347,7 +352,7 @@ export default function ContactUs() {
                     How can we help you?
                   </p>
 
-                  <div className="space-y-6">
+                  <div className="space-y-3 lg:space-y-6">
                     {[
                       tags.slice(0, 4),
                       tags.slice(4, 8),
@@ -355,7 +360,7 @@ export default function ContactUs() {
                     ].map((row, rowIdx) => (
                       <div
                         key={`tag-row-${rowIdx}`}
-                        className="w-full grid grid-cols-2 max-sm:gap-3 sm:flex sm:flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
+                        className="w-full grid grid-cols-2 max-lg:gap-3 lg:flex flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
                       >
                         {row.map((t) => {
                           const isSelected = selectedTag === t;
@@ -364,7 +369,7 @@ export default function ContactUs() {
                               key={t}
                               type="button"
                               onClick={() => toggleTag(t)}
-                              className={`max-sm:w-full py-4 px-4 1920:px-8 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[10px] md:text-[12px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] lg:text-[10px] transition-colors duration-200 border ${
+                              className={`max-sm:w-full py-4 px-3 1920:px-8 1600:px-6 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[11px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] 1280:text-[10px] lg:text-[9px] transition-colors duration-200 border ${
                                 isSelected
                                   ? "border-white/80 text-white/80"
                                   : "border-[#18354D] text-[#999999]"

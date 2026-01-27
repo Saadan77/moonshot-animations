@@ -123,7 +123,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           </div>
         </div>
         {/* Pagination: progress bar */}
-        <div className="relative py-35">
+        <div className="relative py-15 sm:py-20 md:py-25 lg:py-30 1366:py-35">
           <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
             <div
               className="h-full bg-white rounded-full"
@@ -144,10 +144,10 @@ export const Card = ({ card, layout = false, ...rest }) => {
     <>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden md:h-160 md:w-124"
+        className="relative z-10 flex flex-col items-start justify-start overflow-hidden h-60 w-40 md:h-80 md:w-56 lg:h-100 lg:w-80 1440:h-160 1440:w-124"
       >
         <img
-          className="h-full w-full transition duration-300 blur-0"
+          className="h-auto w-full transition duration-300 blur-0"
           src={card.src}
           width={card.width}
           height={card.height}
