@@ -22,9 +22,9 @@ export default function Footer() {
         >
             <div className="relative z-10 mx-auto max-w-[90%] py-16 lg:py-24">
                 {/* Main Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-9 max-lg:gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-9 max-lg:gap-16">
                     {/* Left Column - Location & Inquiry */}
-                    <div className="space-y-48 max-lg:space-y-16 lg:col-span-3">
+                    <div className="space-y-48 max-lg:space-y-16 md:col-span-3">
                         <div>
                             {/* Location */}
                             <div>
@@ -45,13 +45,13 @@ export default function Footer() {
                             <img
                                 src="/images/primary-logo.png"
                                 alt="Moonshot Tech"
-                                className="w-3/4 max-lg:w-1/2 max-sm:w-full h-auto"
+                                className="w-3/4 h-auto"
                             />
                         </Link>
                     </div>
 
                     {/* Middle Column - Links */}
-                    <div className="col-span-2 space-y-32 max-lg:space-y-16">
+                    <div className="md:col-span-2 space-y-32 max-lg:space-y-16">
                         {/* Inquiry */}
                         <div>
                             <p className="text-md font-normal uppercase tracking-wider text-white/50 mb-3"
@@ -95,11 +95,11 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="w-[0.5px] h-full bg-[#1D1D1D] col-span-1"></div>
+                    <div className="hidden lg:block w-[0.5px] h-full bg-[#1D1D1D] col-span-1"></div>
 
                     {/* Logo + Tagline + Newsletter */}
-                    <div className="col-span-3">
-                        <div className="space-y-24 max-lg:space-y-12">
+                    <div className="md:col-span-5 lg:col-span-3">
+                        <div className="space-y-24 max-lg:space-y-12 lg:block md:flex md:justify-between md:items-start md:gap-16">
                             {/* Company Title */}
                             <div className="space-y-12">
                                 <div>
@@ -233,7 +233,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-48 max-sm:mt-16">
+                <div className="mt-10 md:mt-20 lg:mt-48">
                     <div className="grid grid-cols-4 max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 1600:grid-cols-3 gap-4 text-sm xl:text-[18px] 1366:text-xl text-nowrap text-[#BBB]">
                         <p className="col-span-1 lg:col-span-2 1600:col-span-1 text-nowrap">© 2025 Moonshot Tech. All Rights Reserved</p>
 
@@ -250,7 +250,7 @@ export default function Footer() {
                         </div>
 
                         {/* Scroll to Top */}
-                        <div className="col-span-1 flex justify-end max-lg:justify-center">
+                        <div className="md:col-span-2 lg:col-span-1 flex justify-end max-lg:justify-center">
                             <button
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                 className="hover:cursor-pointer flex items-center justify-center text-white hover:text-white/50 transition-colors"

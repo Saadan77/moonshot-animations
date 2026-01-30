@@ -118,7 +118,7 @@ export default function FormCTA() {
 
   return (
     <section className="bg-[#00050A] overflow-hidden">
-      <div className="pb-50 pt-25 rounded-[34.137px]">
+      <div className="pb-20 md:pb-30 lg:pb-40 1366:pb-50 pt-25 rounded-[34.137px]">
         <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
           <div className="lg:col-span-4">

@@ -63,7 +63,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
   return (
     <div className="relative">
       <div className="relative z-10 w-full">
-        <div className="mr-20 flex justify-end max-lg:justify-start max-xl:max-w-[85%] max-xl:mx-auto gap-2">
+        <div className="mr-20 flex justify-start md:justify-end max-xl:max-w-[85%] max-xl:mx-auto gap-2">
           <Button text="Recent Projects" href="/portfolio" />
 
           <div className="mx-6 min-h-max bg-white w-px"></div>

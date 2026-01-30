@@ -147,46 +147,54 @@ export default function Animations() {
         <DecorativeLines />
 
         {/* Animations Hero Section */}
-        <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex">
-          <div className="relative z-10 ml-20 max-lg:ml-5">
-            <div className="mb-16 flex items-center gap-3 text-sm text-white">
+        <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[25%] lg:pb-[16%] 1366:pt-[22%] 1366:pb-[19%] 1920:py-[18%]">
+          <div className="relative z-10">
+            <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
               <img src="/images/about-us/icon.png" />
               <p className="font-poppins font-medium text-lg">Animations</p>
             </div>
 
-            <h1 className="text-[clamp(30px,3.9vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
+            <h1 className="text-2xl sm:text-4xl md:text-[clamp(55px,4vw,78px)] lg:text-[clamp(36px,3.75vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Smooth Animations <br /> That Grow Your{" "}
               </AuroraText>
-              <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-3xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(40px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Brand Reach
                 </AuroraText>
               </span>
             </h1>
 
-            <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
+            <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(14px,1.08vw,20px)] lg:text-[clamp(10px,0.95vw,20px)]">
               From concept frames to final render, we craft motion that brings
               your brand story to life
             </p>
           </div>
 
-          <div>
+          <div className="hidden lg:block">
             <img
               className="absolute inset-0 w-full h-auto"
               src="/images/services/bg-service-banner.png"
               alt="Hero Background Gradient"
             />
             <img
-              className="absolute w-1/2 top-40 right-0 z-10"
+              className="absolute w-1/2 lg:top-50 1280:top-55 1600:top-60 1920:top-40 right-0 z-10"
               src="/images/services/animations/hero.png"
               alt="animations Hero"
             />
           </div>
         </div>
+
+        <div className="max-md:hidden lg:hidden relative z-20 py-10">
+          <img
+            src="/images/services/animations/hero.png"
+            className="w-1/2 mx-auto h-auto"
+            alt="Animations Hero"
+          />
+        </div>
       </section>
 
-      <div className="relative px-24 max-lg:p-2 z-10">
+      <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
         <video
           autoPlay
           loop
@@ -211,9 +219,9 @@ export default function Animations() {
           />
         </div>
 
-        <section className="relative py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
-          <div className="flex justify-center">
-            <h2 className="ml-[30%] text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 max-lg:ml-0">
+        <section className="relative z-10 py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
+          <div className="flex justify-end max-lg:justify-center">
+            <h2 className="text-3xl lg:text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
               <TextType
                 text="Expressive visual"
                 typingSpeed={75}
@@ -236,12 +244,12 @@ export default function Animations() {
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
             {/* Image column */}
-            <div className="-mt-54 relative z-10 col-span-1 flex items-center justify-center">
+            <div className="lg:-mt-54 relative z-10 col-span-1 flex items-center justify-center">
               <img
                 src="/images/services/animations/section-3.png"
                 alt="Laptop showcasing website design"
-                className="h-full w-full object-cover"
-                style={{ mixBlendMode: "screen", scale: "125%" }}
+                className="h-full w-full object-cover 1920:scale-125"
+                style={{ mixBlendMode: "screen" }}
               />
             </div>
 
@@ -292,39 +300,45 @@ export default function Animations() {
           />
         </div>
 
-        <section id="animations" className="relative z-10 pt-50">
+        <section
+          id="animations"
+          className="relative z-10 pt-20 sm:pt-30 md:pt-40 lg:pt-50"
+        >
           <div>
             <Smoke />
 
-            <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
-              <TextType
-                text="High-impact animation"
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={false}
-                startOnVisible={true}
-                loop={true}
-              />
-              <br />
-              <TextType
-                text="crafted to captivate every audience"
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={false}
-                startOnVisible={true}
-                loop={true}
-              />
-            </h2>
-            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-lg:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
-              <TextType
-                text="‘Tech With Moonshot’ recognizes the worth of video animation. The reason being it evokes customer interest and lead them to buy goods and services. In order to help our clients, our animators combine creative design, 3D special effects, live action and visual effects to give your concept a life."
-                typingSpeed={15}
-                pauseDuration={1500}
-                showCursor={true}
-                cursorCharacter="|"
-                startOnVisible={true}
-                loop={true}
-              />
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="High-impact animation"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+                <br />
+                <TextType
+                  text="crafted to captivate every audience"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+
+              <div className="text-[24px] max-1440:text-[20px] max-1366:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+                <TextType
+                  text="‘Tech With Moonshot’ recognizes the worth of video animation. The reason being it evokes customer interest and lead them to buy goods and services. In order to help our clients, our animators combine creative design, 3D special effects, live action and visual effects to give your concept a life."
+                  typingSpeed={15}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </div>
             </div>
           </div>
 
@@ -343,6 +357,7 @@ export default function Animations() {
                   @media (max-width: 1024px) {
                     #animations #animations-layout > div.grid {
                       padding: 25px !important;
+                      gap: 20px !important;
                     }
                   }
                   @media (min-width: 48rem) { 
@@ -373,7 +388,7 @@ export default function Animations() {
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
 
-        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         <h2 className="max-w-[90%] mx-auto text-3xl md:text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
           <TextType
@@ -395,7 +410,7 @@ export default function Animations() {
           />
         </h2>
 
-        <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+        <section className="relative md:-mt-16 xl:-mt-20 z-50">
           <SuccessStories />
         </section>
 

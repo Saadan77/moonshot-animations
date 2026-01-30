@@ -156,25 +156,25 @@ export default function Branding() {
         <DecorativeLines />
 
         {/* Branding Hero Section */}
-        <section className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[18%] lg:pb-[22%]">
+        <section className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:py-[25%] 1366:py-[22%] 1920:pt-[18%] 1920:pb-[22%]">
           <div className="relative z-10">
             <div className="mb-8 md:mb-16 flex items-center gap-3">
               <img src="/images/about-us/icon.png" />
               <p className="font-poppins font-medium text-sm 1366:text-base 1440:text-lg 1600:text-xl">Branding</p>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl md:text-[clamp(45px,4vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-12 1280:leading-13 1600:leading-18 1920:leading-20.25 text-white">
+            <h1 className="text-2xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(36px,3.5vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Branding <br /> Brands That Shape You{" "}
               </AuroraText>
-              <span className="text-3xl md:text-[clamp(50px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-3xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(45px,4vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Brand & Persona
                 </AuroraText>
               </span>
             </h1>
 
-            <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(12px,1.08vw,20px)]">
+            <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(14px,1.08vw,20px)] lg:text-[clamp(10px,1vw,20px)]">
               From early spark to brand logo, we create and shape profiles that
               show who you are online
             </p>
