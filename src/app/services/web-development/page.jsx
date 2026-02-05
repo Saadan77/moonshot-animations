@@ -163,33 +163,31 @@ export default function WebDevelopment() {
         <DecorativeLines />
 
         {/* Hero Section */}
-        <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex">
-          <div className="relative z-10 ml-20 max-lg:ml-5">
-            <div className="mb-16 flex items-center gap-3 text-sm text-white">
+        <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[25%] lg:pb-[16%] 1366:pt-[22%] 1366:pb-[19%] 1920:py-[18%]">
+          <div className="relative z-10">
+            <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
               <img src="/images/about-us/icon.png" />
-              <p className="font-poppins font-medium text-lg">
-                Website Development
-              </p>
+              <p className="font-poppins font-medium">Website Development</p>
             </div>
 
-            <h1 className="text-[clamp(30px,4vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,4vw,74px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
               <AuroraText colors={["#ffffff", "#d1bd73"]}>
                 Building <br /> Sites That Shape Your{" "}
               </AuroraText>
-              <span className="text-[clamp(40px,4.5vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+              <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(40px,4.5vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                 <AuroraText colors={["#D42290", "#2DAEEF"]}>
                   Brand & Profile
                 </AuroraText>
               </span>
             </h1>
 
-            <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.1vw,20px)]">
+            <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(14px,1.08vw,20px)] lg:text-[clamp(10px,0.95vw,20px)]">
               From first ideas to final code, we design and build websites that
               show who you are online
             </p>
           </div>
 
-          <div>
+          <div className="hidden lg:block">
             <img
               className="absolute inset-0 w-full h-auto"
               src="/images/services/bg-service-banner.png"
@@ -202,9 +200,17 @@ export default function WebDevelopment() {
             />
           </div>
         </div>
+
+        <div className="max-md:hidden lg:hidden relative z-20">
+          <img
+            src="/images/services/web-development/hero-cropped.png"
+            className="w-full h-auto"
+            alt="Animations Hero"
+          />
+        </div>
       </section>
 
-      <div className="relative px-5 md:px-20 z-10">
+      <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
         <img
           src="/images/services/web-development/sec-2.png"
           className="h-auto w-full object-cover rounded-[34.137px]"
@@ -221,9 +227,9 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <section className="relative z-10 py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
+        <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
           <div className="flex justify-end max-lg:justify-center">
-            <h2 className="text-white text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-20 -ml-16 max-lg:ml-0">
+            <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
               <TextType
                 text="Human-centered"
                 typingSpeed={75}
@@ -244,9 +250,9 @@ export default function WebDevelopment() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-36 max-xl:gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 1366:gap-36 gap-12">
             {/* Image column */}
-            <div className="-mt-10 relative z-10 flex items-center justify-center">
+            <div className="hidden 1280:block -mt-10 relative z-10">
               <img
                 src="/images/services/web-development/section-3.png"
                 alt="Laptop showcasing website design"
@@ -255,9 +261,18 @@ export default function WebDevelopment() {
               />
             </div>
 
+            <div className="block 1280:hidden mt-10 relative z-10">
+              <img
+                src="/images/services/web-development/section-3-laptop.png"
+                alt="Laptop showcasing website design"
+                className="h-auto w-full"
+                style={{ mixBlendMode: "screen" }}
+              />
+            </div>
+
             {/* Text column */}
-            <div className="text-white space-y-12">
-              <div className="flex items-stretch gap-16 max-lg:gap-8">
+            <div className="col-span-1 text-white space-y-12">
+              <div className="flex gap-16 max-1366:gap-8">
                 <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                 <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
@@ -294,10 +309,13 @@ export default function WebDevelopment() {
           />
         </div>
 
-        <div id="web-dev" className="relative z-10 pt-50">
+        <div
+          id="web-dev"
+          className="relative z-10 pt-20 sm:pt-30 lg:pt-50"
+        >
           <Smoke />
-          <div className="relative">
-            <h2 className="mx-20 text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+          <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+            <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="Multifaceted Web"
                 typingSpeed={75}
@@ -316,7 +334,7 @@ export default function WebDevelopment() {
                 loop={true}
               />
             </h2>
-            <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+            <div className="text-base sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
               <TextType
                 text="‘Tech With Moonshot’ allows a range of software development services. Interestingly, our professional programmers work with you to deliver customized and meaningful web development services."
                 typingSpeed={15}
@@ -334,27 +352,28 @@ export default function WebDevelopment() {
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                      #web-dev #web-dev-layout > div.grid {
-                          gap: 50px !important;
-                          padding: 5rem !important;
-                      }
-                      #web-dev #web-dev-layout img {
-                          border-radius: 25.788px !important;
-                      }
-                      @media (max-width: 1024px) {
-                          #web-dev #web-dev-layout > div.grid {
-                              padding: 25px !important;
-                          }
-                      }
-                      @media (min-width: 48rem) { 
-                          #web-dev #web-dev-layout .grid {
-                              grid-template-columns: repeat(5, minmax(0, 1fr));
-                          }
-                      }
-                      #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
-                          display: none !important;
-                      }
-                  `,
+                    #web-dev #web-dev-layout > div.grid {
+                        gap: 50px !important;
+                        padding: 5rem !important;
+                    }
+                    #web-dev #web-dev-layout img {
+                        border-radius: 25.788px !important;
+                    }
+                    @media (max-width: 1024px) {
+                        #web-dev #web-dev-layout > div.grid {
+                            padding: 25px !important;
+                            gap: 20px !important;
+                        }
+                    }
+                    @media (min-width: 48rem) { 
+                        #web-dev #web-dev-layout .grid {
+                            grid-template-columns: repeat(5, minmax(0, 1fr));
+                        }
+                    }
+                    #web-dev #web-dev-layout .grid > div > div .absolute.bottom-0.left-0.right-0 {
+                        display: none !important;
+                    }
+                `,
               }}
             />
           </div>
@@ -368,7 +387,7 @@ export default function WebDevelopment() {
           <HorizontalScrollCards cards={webDevInfo} />
         </section>
 
-        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-10 1440:my-35 text-white/30 w-px h-px bg-white/30"></div>
+        <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
         {/* Success Stories Section */}
         <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
@@ -391,12 +410,12 @@ export default function WebDevelopment() {
           />
         </h2>
 
-        <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+        <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
           <SuccessStories />
         </section>
 
         <div
-          className="w-full h-130 -mt-150 relative z-10"
+          className="w-full h-130 -mt-150 relative z-10 pointer-events-none"
           style={{
             background:
               "linear-gradient(to bottom, transparent 0%, #00050A 50%)",

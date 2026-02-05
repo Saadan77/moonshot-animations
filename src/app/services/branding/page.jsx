@@ -308,7 +308,7 @@ export default function Branding() {
           />
         </div>
 
-        <section id="branding" className="relative z-10 pt-20 sm:pt-30 md:pt-40 lg:pt-50">
+        <section id="branding" className="relative z-10 pt-20 sm:pt-30 lg:pt-50">
           <Smoke />
 
           <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
@@ -391,7 +391,7 @@ export default function Branding() {
 
           <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-          <h2 className="relative z-20 max-w-[90%] mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
               typingSpeed={75}
@@ -411,7 +411,7 @@ export default function Branding() {
             />
           </h2>
 
-          <section className="relative mt-6 lg:-mt-16 xl:-mt-20 z-50">
+          <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
 

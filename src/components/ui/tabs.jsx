@@ -80,7 +80,7 @@ export const Tabs = ({
           <button
             key={tab.title}
             onClick={() => {
-              moveSelectedTabToTop(idx);
+              moveSelectedTabToTop(idx + 3);
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}

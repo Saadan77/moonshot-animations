@@ -118,8 +118,8 @@ export default function FormCTA() {
 
   return (
     <section className="bg-[#00050A] overflow-hidden">
-      <div className="pb-20 md:pb-30 lg:pb-40 1366:pb-50 pt-25 rounded-[34.137px]">
-        <div className="max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
+      <div className="pb-20 lg:pb-30 1366:pb-50 pt-25 rounded-[34.137px]">
+        <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
           <div className="lg:col-span-4">
             <p className="font-poppins font-normal text-sm lg:text-lg text-[#989898] mb-4">
@@ -211,7 +211,7 @@ export default function FormCTA() {
 
           {/* Right form */}
           <form
-            className="mx-auto max-lg:max-w-125 relative z-50 lg:col-span-5"
+            className="mx-auto max-md:max-w-125 max-sm:min-w-[80vw] relative z-50 lg:col-span-5"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -426,11 +426,11 @@ export default function FormCTA() {
         </div>
 
         {/* Small prompt + button */}
-        <div className="-mt-16 max-sm:-mt-13 relative z-10 flex flex-col items-center">
+        <div className="-mt-16 max-lg:-mt-12 max-sm:-mt-13 relative z-10 flex flex-col items-center">
           <Link href="/contact-us">
             <button
               type="button"
-              className="hover:cursor-pointer mt-6 h-18 w-18 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
+              className="hover:cursor-pointer mt-6 h-18 w-18 max-lg:w-12 max-lg:h-12 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
             >
               <LiaLongArrowAltRightSolid className="w-4 h-4 1440:w-6 1440:h-6 1600:w-8 1600:h-8" />
             </button>

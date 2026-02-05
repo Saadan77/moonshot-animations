@@ -83,7 +83,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           </button>
         </div>
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-hidden scroll-smooth pt-10 [scrollbar-width:none] md:pt-20"
+          className="flex w-full overflow-x-scroll overscroll-x-hidden scroll-smooth pt-10 [scrollbar-width:none] lg:pt-20"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -123,7 +123,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           </div>
         </div>
         {/* Pagination: progress bar */}
-        <div className="relative py-15 sm:py-20 md:py-25 lg:py-30 1366:py-35">
+        <div className="relative py-15 sm:py-20 lg:py-30 1366:py-35">
           <div className="max-w-[90%] mx-auto w-full h-1 bg-white/10 rounded-full overflow-hidden">
             <div
               className="h-full bg-white rounded-full"
@@ -144,7 +144,7 @@ export const Card = ({ card, layout = false, ...rest }) => {
     <>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="relative z-10 flex flex-col items-start justify-start overflow-hidden h-60 w-40 md:h-80 md:w-56 lg:h-100 lg:w-80 1440:h-160 1440:w-124"
+        className="relative z-10 flex flex-col items-start justify-start overflow-hidden h-80 w-60 lg:h-100 lg:w-80 1440:h-160 1440:w-124"
       >
         <img
           className="h-auto w-full transition duration-300 blur-0"

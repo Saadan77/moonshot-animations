@@ -58,37 +58,64 @@ export default function HorizontalScrollCards({ cards }) {
   };
 
   return (
-    <div
-      ref={sectionRef}
-      className="relative w-full overflow-hidden flex items-center"
-    >
+    <>
       <div
-        ref={stripRef}
-        className="flex flex-nowrap w-max px-10 lg:px-20 mx-auto"
+        ref={sectionRef}
+        className="relative w-full overflow-hidden items-center hidden lg:flex"
       >
+        <div
+          ref={stripRef}
+          className="flex flex-nowrap w-max px-10 lg:px-20 mx-auto"
+        >
+          {cards.map((card, index) => (
+            <div
+              key={card.id || index}
+              className="w-[85vw] md:w-[45vw] lg:w-[23vw] shrink-0 box-border"
+            >
+              <div className="flex flex-col h-full justify-start space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
+                <div className="text-[#D42290] font-mono text-xl">
+                  {(index + 1).toString().padStart(2, "0")}
+                </div>
+                <div
+                  className="w-[85%] min-h-18 text-[clamp(16px,1.25vw,30px)] uppercase text-white leading-[1.1] font-sora"
+                  dangerouslySetInnerHTML={{
+                    __html: formatTitle(card.title),
+                  }}
+                />
+                <div
+                  className="w-[92.5%] text-[clamp(10px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
+                  dangerouslySetInnerHTML={{ __html: card.description }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="px-[1.5em] lg:hidden grid grid-cols-1 md:grid-cols-2 gap-12">
         {cards.map((card, index) => (
           <div
             key={card.id || index}
-            className="w-[85vw] md:w-[45vw] lg:w-[23vw] shrink-0 box-border"
+            className="w-full box-border"
           >
             <div className="flex flex-col h-full justify-start space-y-6 border-l-2 border-white/20 pl-8 transition-colors duration-300 hover:border-[#D42290]">
               <div className="text-[#D42290] font-mono text-xl">
                 {(index + 1).toString().padStart(2, "0")}
               </div>
               <div
-                className="w-[85%] min-h-18 text-[clamp(16px,1.25vw,30px)] uppercase text-white leading-[1.1] font-sora"
+                className="w-[85%] text-[clamp(18px,1.25vw,30px)] uppercase text-white leading-[1.1] font-sora"
                 dangerouslySetInnerHTML={{
                   __html: formatTitle(card.title),
                 }}
               />
               <div
-                className="w-[92.5%] text-[clamp(10px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
+                className="w-[92.5%] text-[clamp(12px,1vw,16px)] font-light text-white/70 leading-[1.8] font-sora"
                 dangerouslySetInnerHTML={{ __html: card.description }}
               />
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
