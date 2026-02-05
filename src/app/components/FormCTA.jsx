@@ -118,7 +118,7 @@ export default function FormCTA() {
 
   return (
     <section className="bg-[#00050A] overflow-hidden">
-      <div className="pb-20 lg:pb-30 1366:pb-50 pt-25 rounded-[34.137px]">
+      <div className="1366:pb-50 pt-25 rounded-[34.137px]">
         <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
           <div className="lg:col-span-4">
@@ -426,13 +426,13 @@ export default function FormCTA() {
         </div>
 
         {/* Small prompt + button */}
-        <div className="-mt-16 max-lg:-mt-12 max-sm:-mt-13 relative z-10 flex flex-col items-center">
+        <div className="-mt-16 max-1440:-mt-14 max-sm:-mt-13 relative z-10 flex flex-col items-center">
           <Link href="/contact-us">
             <button
               type="button"
-              className="hover:cursor-pointer mt-6 h-18 w-18 max-lg:w-12 max-lg:h-12 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
+              className="hover:cursor-pointer mt-6 h-18 w-18 max-1440:w-16 max-1440:h-16 max-lg:w-12 max-lg:h-12 max-sm:h-12 max-sm:w-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:scale-105 hover:rotate-270 transition"
             >
-              <LiaLongArrowAltRightSolid className="w-4 h-4 1440:w-6 1440:h-6 1600:w-8 1600:h-8" />
+              <LiaLongArrowAltRightSolid className="w-6 h-6 1600:w-8 1600:h-8" />
             </button>
           </Link>
         </div>

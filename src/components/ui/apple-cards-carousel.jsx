@@ -63,19 +63,19 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
   return (
     <div className="relative">
       <div className="relative z-10 w-full">
-        <div className="mr-20 flex justify-start md:justify-end max-xl:max-w-[85%] max-xl:mx-auto gap-2">
+        <div className="flex justify-start md:justify-end items-center max-xl:max-w-[85%] max-xl:mx-auto gap-2">
           <Button text="Recent Projects" href="/portfolio" />
 
-          <div className="mx-6 min-h-max bg-white w-px"></div>
+          <div className="mx-6 bg-white w-px" style={{ minHeight: "-webkit-fill-available"}}></div>
           <button
-            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-1366:h-12 max-1366:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
             <ChevronLeft className="h-8 w-8 text-white" />
           </button>
           <button
-            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-lg:h-12 max-lg:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-1366:h-12 max-1366:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >

@@ -19,6 +19,7 @@ import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -119,7 +120,7 @@ export default function EmailMarketing() {
     <>
       {/* <CyberHologramLoader /> */}
       <div
-        className="relative bg-black overflow-x-hidden"
+        className="relative bg-black max-sm:bg-[#00050A] overflow-x-hidden"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
         <Navbar />
@@ -134,7 +135,7 @@ export default function EmailMarketing() {
           />
         </div>
 
-        <div className="flex items-center relative w-full overflow-visible">
+        <section className="relative">
           {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
@@ -164,33 +165,33 @@ export default function EmailMarketing() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%] max-2xl:py-[22%]">
-            <div className="relative z-10 ml-20 max-lg:ml-5">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[18%] lg:pb-[12%] 1280:pb-[16%] 1920:py-[18%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">
+                <p className="font-poppins font-medium">
                   Email Marketing
                 </p>
               </div>
 
-              <h1 className="text-[clamp(40px,3.8vw,72px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(40px,3.8vw,72px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Driving <br /> Emails That Power Your{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Brand & Growth
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="text-wrap font-sora font-normal text-white/70 text-[clamp(10px,1vw,20px)]">
+              <p className="text-wrap font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(13px,1.08vw,20px)] lg:text-[clamp(11px,1.02vw,20px)]">
                 From bold concepts to polished sends, we create email flows that
                 clearly reflect who you are online
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -198,17 +199,25 @@ export default function EmailMarketing() {
               />
               <img
                 src="/images/services/email-marketing/hero.png"
-                className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-0 max-xl:bottom-50 right-0 z-10"
+                className="absolute w-[40%] max-xl:w-[35%] h-auto bottom-0 right-0 z-10"
                 alt="Email Marketing Hero"
               />
             </div>
           </div>
-        </div>
 
-        <div className="relative p-5 max-lg:p-5 z-10 justify-center flex">
+          <div className="max-md:hidden lg:hidden relative z-20 my-10">
+            <img
+              src="/images/services/email-marketing/hero.png"
+              className="w-3/5 ml-auto h-auto"
+              alt="email-marketing Hero"
+            />
+          </div>
+        </section>
+
+        <div className="mt-10 relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
           <img
             src="/images/services/email-marketing/section-2.png"
-            className="h-auto w-[95%] max-lg:w-full object-cover rounded-4xl items-center"
+            className="h-auto w-full object-cover rounded-4xl items-center"
           />
         </div>
 
@@ -222,9 +231,9 @@ export default function EmailMarketing() {
             />
           </div>
 
-          <section className="relative py-24 lg:py-52 px-6 lg:px-36">
+          <section className="relative z-10 py-16 md:py-24 1440:py-40 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(36px,3.25vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-16 1920:mb-24">
                 <TextType
                   text="Performance-driven"
                   typingSpeed={75}
@@ -243,22 +252,31 @@ export default function EmailMarketing() {
                   loop={true}
                 />
               </h2>
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-snug mb-8">
+                <TextType
+                  text="Performance-driven Email Marketing Studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
               {/* Image column */}
-              <div className="-mt-50 max-xl:mt-0 relative z-10 col-span-1 flex items-center justify-center">
+              <div className="-mt-40 1920:-mt-50 mr-10 max-lg:mt-10 relative z-10">
                 <img
                   src="/images/services/email-marketing/section-3.png"
                   alt="Laptop showcasing website design"
-                  className="h-full w-full object-cover"
-                  style={{ mixBlendMode: "screen" }}
+                  className="h-full w-3/4 mx-auto lg:w-full object-contain"
                 />
               </div>
 
               {/* Text column */}
-              <div className="col-span-1 text-white space-y-12">
-                <div className="flex gap-16 max-lg:gap-8">
+              <div className="space-y-4 1440:space-y-8 1920:space-y-12">
+                <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                   <div className="tracking-[-0.03em] font-nomal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
@@ -272,24 +290,14 @@ export default function EmailMarketing() {
                     </ScrollReveal>
                   </div>
                 </div>
-                <Link
-                  href="#"
-                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                >
-                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                    Get in Touch
-                  </span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                  </span>
-                </Link>
+                <Button text="Get in Touch" href="/contact-us" />
               </div>
             </div>
           </section>
 
           <img
             src="/images/services/email-marketing/section-4.png"
-            className="relative z-10 h-[110vh] w-full object-cover"
+            className="relative z-10 h-[75vh] lg:h-[110vh] w-full object-cover"
           />
         </div>
 
@@ -303,11 +311,14 @@ export default function EmailMarketing() {
             />
           </div>
 
-          <section id="email-marketing" className="relative z-10 pt-50">
+          <section
+            id="email-marketing"
+            className="relative z-10 pt-20 sm:pt-30 lg:pt-40 1366:pt-50"
+          >
             <Smoke />
 
-            <div className="flex flex-col">
-              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern email flows made for"
                   typingSpeed={75}
@@ -326,7 +337,17 @@ export default function EmailMarketing() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Modern email flows made for immersive customer engagement"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="E-mail is a powerful tool to connect with masses as it sends them personalized messages. The research clarifies the fact that email marketing is more effective than SMM. Additionally, it is used to convert web surfers into members and eventually loyal patrons."
                   typingSpeed={15}
@@ -378,9 +399,9 @@ export default function EmailMarketing() {
               <HorizontalScrollCards cards={webDevInfo} />
             </section>
 
-            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
               <TextType
                 text="200+"
                 typingSpeed={75}
@@ -400,7 +421,7 @@ export default function EmailMarketing() {
               />
             </h2>
 
-            <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+            <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
               <SuccessStories />
             </section>
 

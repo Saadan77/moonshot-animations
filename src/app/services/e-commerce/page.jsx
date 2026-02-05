@@ -256,7 +256,7 @@ export default function Ecommerce() {
 
           <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="hidden lg:block text-[clamp(36px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(36px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16">
                 <TextType
                   text="Customer-focused"
                   typingSpeed={75}

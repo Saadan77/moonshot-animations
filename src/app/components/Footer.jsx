@@ -229,7 +229,7 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full sm:flex-1 p-4 pr-16 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
+                    className="w-4/5 md:w-full sm:flex-1 p-4 pr-16 rounded-full border border-white/25 text-md text-white placeholder:text-[#949494] focus:outline-none focus:border-white/30 transition-colors"
                     suppressHydrationWarning
                   />
                   <span className="text-black grid place-items-center rounded-full bg-white hover:bg-[#D42290] p-2.5 m-2 -ml-15.75">

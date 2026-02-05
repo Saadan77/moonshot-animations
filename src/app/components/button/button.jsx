@@ -8,11 +8,11 @@ export default function Button({ text, href }) {
         href={href}
         className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
       >
-        <span className="text-nowrap relative top-[0.5px] font-sora text-[14px] xl:text-[20px]">
+        <span className="text-nowrap relative top-[0.5px] font-sora text-sm 1366:text-base 1440:text-lg 1600:text-xl">
           {text}
         </span>
         <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-          <LiaLongArrowAltRightSolid className="lg:w-4 lg:h-4 xl:w-6 xl:h-6 group-hover:text-black" />
+          <LiaLongArrowAltRightSolid className="w-5 h-5 1366:w-6 1366:h-6 group-hover:text-black" />
         </span>
       </Link>
     </button>

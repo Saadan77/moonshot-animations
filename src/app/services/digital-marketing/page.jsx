@@ -18,6 +18,7 @@ import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -120,7 +121,7 @@ export default function DigitalMarketing() {
       <div className="relative bg-black font-sora">
         <Navbar />
 
-        <div className="flex items-center relative w-full">
+        <section className="relative">
           {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
@@ -148,34 +149,34 @@ export default function DigitalMarketing() {
 
           <DecorativeLines />
 
-          {/* Industries Hero Section */}
-          <div className="py-[18%] max-lg:py-0 max-lg:pt-[24%] max-lg:pb-[10%] w-full flex">
-            <div className="relative z-10 ml-20 max-lg:ml-5">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          {/* Digital Marketing Hero Section */}
+          <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[18%] lg:pb-[12%] 1280:pb-[16%] 1920:py-[18%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">
+                <p className="font-poppins font-medium">
                   Digital Marketing
                 </p>
               </div>
 
-              <h1 className="text-[clamp(40px,3.7vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-15 max-xl:leading-12 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(32px,3.65vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Ad Growth <br /> Campaigns That Drive{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(40px,4.25vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Traffic & Sales
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,192px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(13px,1.08vw,20px)] lg:text-[clamp(10px,1vw,19px)]">
                 From strategy to launch, we plan, run and optimize campaigns
-                that grow your brand online.
+                that grow your brand online
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -183,14 +184,22 @@ export default function DigitalMarketing() {
               />
               <img
                 src="/images/services/digital-marketing/hero.png"
-                className="absolute bottom-0 right-0 max-1600:w-1/2 max-xl:w-[45%] z-10 h-auto"
+                className="absolute bottom-0 right-0 w-[45%] 1280:w-[47.5%] 1920:w-1/2 z-10 h-auto"
                 alt="Digital Marketing Hero"
               />
             </div>
           </div>
-        </div>
 
-        <div className="relative px-24 max-lg:p-2 z-10">
+          <div className="max-md:hidden lg:hidden relative z-20 mt-10">
+            <img
+              src="/images/services/digital-marketing/hero.png"
+              className="w-full h-auto"
+              alt="digital-marketing Hero"
+            />
+          </div>
+        </section>
+
+        <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
           <img
             src="/images/services/digital-marketing/section-2.png"
             className="w-full h-full"
@@ -208,9 +217,9 @@ export default function DigitalMarketing() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
+          <section className="relative z-10 py-16 md:py-24 1440:py-40 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-16 mr-20 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(36px,3.25vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24">
                 <TextType
                   text="Results-driven"
                   typingSpeed={75}
@@ -229,11 +238,21 @@ export default function DigitalMarketing() {
                   loop={true}
                 />
               </h2>
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-snug mb-8">
+                <TextType
+                  text="Results-driven digital marketing team"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-9 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Image column */}
-              <div className="-mt-30 relative z-10 col-span-5 flex items-center justify-center">
+              <div className="-mt-30 relative z-10 flex items-center justify-center">
                 <img
                   src="/images/services/digital-marketing/section-3.png"
                   alt="Laptop showcasing website design"
@@ -243,8 +262,8 @@ export default function DigitalMarketing() {
               </div>
 
               {/* Text column */}
-              <div className="col-span-4 text-white space-y-12">
-                <div className="flex gap-16 max-lg:gap-8">
+              <div className="space-y-6 lg:space-y-12">
+                <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                   <div className="tracking-[-0.03em] font-nomal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
@@ -258,22 +277,12 @@ export default function DigitalMarketing() {
                     </ScrollReveal>
                   </div>
                 </div>
-                <Link
-                  href="#"
-                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                >
-                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                    Get in Touch
-                  </span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                  </span>
-                </Link>
+                <Button text="Get in Touch" href="/contact-us" />
               </div>
             </div>
           </section>
 
-          <section className="relative z-10 h-screen">
+          <section className="relative z-10 h-full lg:h-screen">
             <img
               src="/images/services/digital-marketing/section-4.png"
               className="h-full w-full"
@@ -291,11 +300,14 @@ export default function DigitalMarketing() {
             />
           </div>
 
-          <section id="digital-marketing" className="relative z-10 pt-50">
+          <section
+            id="digital-marketing"
+            className="relative z-10 pt-20 sm:pt-30 lg:pt-50"
+          >
             <Smoke />
 
-            <div className="flex flex-col">
-              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern web dev made for"
                   typingSpeed={75}
@@ -314,7 +326,17 @@ export default function DigitalMarketing() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Modern web dev made for immersive website user experience"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="It is a simple that there is no hope without digital marketing, for the latter takes your brand to platforms where people send their time and money. According to Gary Vaynerchuk, there is no second thought about digital marketing; it is the future of brand survival."
                   typingSpeed={15}
@@ -372,9 +394,9 @@ export default function DigitalMarketing() {
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
 
-          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
               typingSpeed={75}
@@ -394,7 +416,7 @@ export default function DigitalMarketing() {
             />
           </h2>
 
-          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+          <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
 
