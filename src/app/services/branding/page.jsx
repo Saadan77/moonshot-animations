@@ -312,7 +312,7 @@ export default function Branding() {
           <Smoke />
 
           <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
               <TextType
                 text="Modern web dev made for"
                 typingSpeed={75}
@@ -331,7 +331,7 @@ export default function Branding() {
                 loop={true}
               />
             </h2>
-            <div className="text-[24px] max-1440:text-[20px] max-1366:text-[16px] max-xl:text-[12px] lg:mt-10 text-white/80 leading-relaxed">
+            <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
               <TextType
                 text="Branding is mandatory for businesses, as it changes how target audience perceive your brand; it increases brand awareness, and it drives sales. Branding gives your business competitive advantage and grows business value."
                 typingSpeed={15}

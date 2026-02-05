@@ -123,7 +123,7 @@ export default function WebApplications() {
       >
         <Navbar />
 
-        <div className="flex items-center relative w-full">
+        <section>
           {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
@@ -162,18 +162,18 @@ export default function WebApplications() {
                 </p>
               </div>
 
-              <h1 className="text-[clamp(30px,4vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-2xl:leading-15 max-xl:leading-12 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,4vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Building <br /> Web Apps that boost{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,4.5vw,82px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Your Workflow
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,19px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(14px,1.08vw,20px)] lg:text-[clamp(10px,1vw,19px)]">
                 From initial concepts to polished code, we build web apps that
                 express your brand online.
               </p>
@@ -187,7 +187,7 @@ export default function WebApplications() {
               />
               <img
                 src="/images/services/web-applications/hero.png"
-                className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1920:top-30 max-1600:top-10 -right-50 max-xl:-right-25 z-10 max-lg:relative max-lg:top-0 max-lg:right-0"
+                className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1920:top-30 max-1600:top-10 max-1366:top-20 max-1280:top-25 -right-50 max-1920:-right-40 max-1366:-right-30 z-10"
                 alt="Astronaut"
               />
             </div>
@@ -200,7 +200,7 @@ export default function WebApplications() {
               alt="Animations Hero"
             />
           </div>
-        </div>
+        </section>
 
         <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
           <video
@@ -229,7 +229,7 @@ export default function WebApplications() {
 
           <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
                 <TextType
                   text="Human-centered"
                   typingSpeed={75}
@@ -241,6 +241,16 @@ export default function WebApplications() {
                 <br />
                 <TextType
                   text="web development Studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-snug mb-8">
+                <TextType
+                  text="Human-centered web development Studio"
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={false}
@@ -305,7 +315,7 @@ export default function WebApplications() {
             <Smoke />
 
             <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
-              <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern web apps built for"
                   typingSpeed={75}
@@ -324,7 +334,17 @@ export default function WebApplications() {
                   loop={true}
                 />
               </h2>
-              <div className="text-base sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Modern web apps built for immersive digital user experiences"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="Tech With Moonshot understands that digital brand is flawed without web applications. In fact, experience tells us that websites are necessary to capture online, or perhaps global, market share. For instance, web-based landing pages is the point of converting potential leads into users."
                   typingSpeed={15}
@@ -378,9 +398,9 @@ export default function WebApplications() {
           </section>
 
           <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
-
+          
           {/* Success Stories Section */}
-          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
               typingSpeed={75}

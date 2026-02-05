@@ -21,6 +21,7 @@ import HorizontalScroll from "@/app/components/HorizontalScroll";
 import HorizontalContainerAnimation from "@/app/components/HorizontalScroll";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -151,7 +152,7 @@ export default function Ecommerce() {
           />
         </div>
 
-        <div className="flex items-center relative w-full overflow-visible">
+        <section>
           {/* Dither Background */}
           {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
@@ -181,31 +182,31 @@ export default function Ecommerce() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%]">
-            <div className="relative z-10 ml-20 max-lg:ml-15 max-sm:ml-10">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[25%] lg:pb-[20%] 1366:pt-[22%] 1366:pb-[19%] 1920:py-[18%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">E-commerce</p>
+                <p className="font-poppins font-medium">E-commerce</p>
               </div>
 
-              <h1 className="text-[clamp(40px,4vw,82px)] font-normal max-lg:text-start max-lg:items-start blockfont-thin font-sora uppercase mb-4 tracking-tight leading-none text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(40px,4vw,82px)] font-normal max-lg:text-start max-lg:items-start blockfont-thin font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Building E-commerce <br /> That Powers Your{" "}
                 </AuroraText>
-                <span className="text-[clamp(32px,3.6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,4.5vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Brand & Growth
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1.1vw,22px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(14px,1.08vw,20px)] lg:text-[clamp(10px,1.1vw,22px)]">
                 From first idea to live launch, we design and build websites
                 that fuel your growth online
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -213,14 +214,22 @@ export default function Ecommerce() {
               />
               <img
                 src="/images/services/e-commerce/hero.png"
-                className="absolute w-1/2 top-20 right-10 z-10 h-auto"
+                className="absolute w-1/2 top-50 1366:top-40 1920:top-20 right-10 z-10 h-auto"
                 alt="E-commerce Hero"
               />
             </div>
           </div>
-        </div>
 
-        <div className="relative z-10 py-10 px-24 max-lg:p-2 justify-center flex">
+          <div className="max-md:hidden lg:hidden relative z-20">
+            <img
+              src="/images/services/e-commerce/hero.png"
+              className="w-3/4 mx-auto h-auto"
+              alt="Animations Hero"
+            />
+          </div>
+        </section>
+
+        <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
           <video
             autoPlay
             loop
@@ -245,9 +254,9 @@ export default function Ecommerce() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36">
+          <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(36px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
                 <TextType
                   text="Customer-focused"
                   typingSpeed={75}
@@ -266,22 +275,32 @@ export default function Ecommerce() {
                   loop={true}
                 />
               </h2>
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-snug mb-8">
+                <TextType
+                  text="Customer-focused E-commerce development"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Image column */}
-              <div className="-mt-26 col-span-1 flex items-center justify-center">
+              <div className="lg:-mt-26 col-span-1">
                 <img
                   src="/images/services/e-commerce/section-3.png"
                   alt="Laptop showcasing website design"
-                  className="h-full w-full object-cover scale-200"
+                  className="h-full w-full object-cover lg:scale-150 1600:scale-200 max-lg:scale-200"
                   style={{ mixBlendMode: "screen" }}
                 />
               </div>
 
               {/* Text column */}
               <div className="col-span-1 text-white space-y-12">
-                <div className="flex gap-16 max-lg:gap-8">
+                <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                   <div className="tracking-[-0.03em] font-nomal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
@@ -295,22 +314,12 @@ export default function Ecommerce() {
                     </ScrollReveal>
                   </div>
                 </div>
-                <Link
-                  href="#"
-                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                >
-                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                    Get in Touch
-                  </span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                  </span>
-                </Link>
+                <Button text="Get in Touch" href="/contact-us" />
               </div>
             </div>
           </section>
 
-          <section className="relative z-10 h-[125vh]">
+          <section className="relative z-10 1366:h-[125vh]">
             <img
               src="/images/services/e-commerce/section-4.png"
               className="h-full w-full object-cover"
@@ -328,11 +337,14 @@ export default function Ecommerce() {
             />
           </div>
 
-          <section id="e-commerce" className="relative pt-50">
+          <section
+            id="e-commerce"
+            className="relative z-10 pt-20 sm:pt-30 lg:pt-50"
+          >
             <Smoke />
-            
-            <div className="relative flex flex-col">
-              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Multiple E-commerce"
                   typingSpeed={75}
@@ -351,7 +363,17 @@ export default function Ecommerce() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-2.5 leading-relaxed text-white/80">
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Multiple E-commerce Development Platforms"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="‘Tech With Moonshot’ allows you to choose from multiple e-commerce development platforms. Importantly, our e-commerce consultants recommend you a platform as per your brand requirements and demands."
                   typingSpeed={15}
@@ -403,9 +425,10 @@ export default function Ecommerce() {
               <HorizontalScrollCards cards={webDevInfo} />
             </section>
 
-            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+            <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-            <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+            {/* Success Stories Section */}
+            <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
               <TextType
                 text="200+"
                 typingSpeed={75}
@@ -425,8 +448,7 @@ export default function Ecommerce() {
               />
             </h2>
 
-            {/* Success Stories Section */}
-            <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+            <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
               <SuccessStories />
             </section>
 

@@ -51,7 +51,7 @@ export interface ScrollRevealProps {
 }
 
 const sizeClasses = {
-  sm: "text-base sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)]",
+  sm: "text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)]",
   md: "text-[clamp(16px,2vw,36px)]",
   lg: "text-5xl max-1600:text-[40px] max-2xl:text-[34px] max-1280:text-[30px] max-xl:text-[25px]",
   xl: "text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
