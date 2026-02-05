@@ -16,8 +16,6 @@ export const StaggeredMenu = ({
   className,
   logoUrl = "/src/assets/logos/reactbits-gh-white.svg",
   menuButtonColor = "#fff",
-  openMenuButtonColor = "#fff",
-  changeMenuColorOnOpen = true,
   isFixed = false,
   accentColor = "#5227FF",
   onMenuOpen,
@@ -465,13 +463,13 @@ export const StaggeredMenu = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[5em] max-lg:px-[3em] max-md:px-[2em] bg-transparent pointer-events-none z-20"
+          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between py-[2em] px-[5em] max-lg:px-[3em] max-md:px-[2em] bg-transparent pointer-events-none"
           aria-label="Main navigation header"
         >
           <div className="flex justify-center items-center gap-6">
             <button
               ref={toggleBtnRef}
-              className="sm-toggle relative inline-flex items-center gap-4 border border-white/20 rounded-full cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
+              className="sm-toggle relative z-20 inline-flex items-center gap-4 border border-white/20 rounded-full cursor-pointer text-white font-medium leading-none overflow-visible pointer-events-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm"
               style={{
                 color: "white",
                 fontFamily: "var(--font-sora), sans-serif",
@@ -588,7 +586,7 @@ export const StaggeredMenu = ({
                       <div className="flex flex-col items-start">
                         <button
                           onClick={() => setExpandedItem(expandedItem === idx ? null : idx)}
-                          className="sm-panel-item relative text-white font-semibold text-[clamp(2rem,4vw,3.8rem)] md:text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
+                          className="sm-panel-item relative text-white font-semibold text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em] bg-transparent border-0"
                           data-index={idx + 1}
                         >
                           <span className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
@@ -619,7 +617,7 @@ export const StaggeredMenu = ({
                       </div>
                     ) : (
                       <a
-                        className="sm-panel-item relative text-white font-semibold text-[clamp(2rem,4vw,3.8rem)] md:text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                        className="sm-panel-item relative text-white font-semibold text-[clamp(3rem,4vw,3.8rem)] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                         href={it.link}
                         aria-label={it.ariaLabel}
                         data-index={idx + 1}
@@ -677,7 +675,7 @@ export const StaggeredMenu = ({
       </div>
       <style>{`
 .sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 40; }
-.sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; background: transparent; pointer-events: none; z-index: 20; }
+.sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; background: transparent; pointer-events: none; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; width: auto; object-fit: contain; }
@@ -691,7 +689,7 @@ export const StaggeredMenu = ({
 .sm-scope .sm-panel-itemWrap { position: relative; overflow: hidden; line-height: 1; }
 .sm-scope .sm-icon-line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); will-change: transform; }
 .sm-scope .sm-line { display: none !important; }
-.sm-scope .staggered-menu-panel { position: fixed; top: 0; right: 0; width: clamp(260px, 38vw, 500px); height: 100%; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; padding: 6em 2em 2em 2em; overflow-y: visible; z-index: 10; }
+.sm-scope .staggered-menu-panel { position: fixed; top: 0; right: 0; width: 500px; height: 100%; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; padding: 6em 2em 2em 2em; overflow-y: visible; z-index: 10; }
 .sm-scope [data-position='left'] .staggered-menu-panel { right: auto; left: 0; }
 .sm-scope .sm-prelayers { position: absolute; top: 0; right: 0; bottom: 0; width: clamp(260px, 38vw, 420px); pointer-events: none; z-index: 5; }
 .sm-scope [data-position='left'] .sm-prelayers { right: auto; left: 0; }
@@ -714,9 +712,7 @@ export const StaggeredMenu = ({
 .sm-scope .sm-panel-itemLabel { display: inline-block; will-change: transform; transform-origin: 50% 100%; }
 .sm-scope .sm-panel-item:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
-// .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 2.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
-@media (max-width: 1024px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); } }
-@media (max-width: 640px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); } }
+@media (max-width: 1024px) { .sm-scope .staggered-menu-panel { width: auto; left: 0; right: 0; } }
       `}</style>
     </div>
   );

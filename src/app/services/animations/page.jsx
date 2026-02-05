@@ -255,7 +255,7 @@ export default function Animations() {
 
             {/* Text column */}
             <div className="col-span-1 text-white space-y-12">
-              <div className="flex gap-16 max-lg:gap-8">
+              <div className="flex gap-16 max-1366:gap-8">
                 <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                 <div className="tracking-[-0.03em] font-nomal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>

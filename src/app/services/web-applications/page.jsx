@@ -17,6 +17,7 @@ import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -152,11 +153,11 @@ export default function WebApplications() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="py-[18%]">
-            <div className="relative z-10 ml-20 max-lg:ml-5">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[25%] lg:pb-[16%] 1366:pt-[22%] 1366:pb-[19%] 1920:py-[18%]">
+            <div className="relative z-10">
+             <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">
+                <p className="font-poppins font-medium">
                   Website Applications
                 </p>
               </div>
@@ -178,7 +179,7 @@ export default function WebApplications() {
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -186,14 +187,22 @@ export default function WebApplications() {
               />
               <img
                 src="/images/services/web-applications/hero.png"
-                className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1600:top-20 max-1440:top-10 -right-50 max-xl:-right-25 z-10 max-lg:relative max-lg:top-0 max-lg:right-0"
+                className="absolute w-3/4 h-auto max-2xl:w-[80%] max-sm:w-full top-10 max-1920:top-30 max-1600:top-10 -right-50 max-xl:-right-25 z-10 max-lg:relative max-lg:top-0 max-lg:right-0"
                 alt="Astronaut"
               />
             </div>
           </div>
+
+          <div className="max-md:hidden lg:hidden relative z-20">
+            <img
+              src="/images/services/web-applications/hero.png"
+              className="w-full h-auto"
+              alt="Animations Hero"
+            />
+          </div>
         </div>
 
-        <div className="relative py-5 px-24 max-lg:p-2 z-10 justify-center flex">
+        <div className="relative px-[5em] max-lg:px-[3em] max-md:px-[2em] z-10">
           <video
             autoPlay
             loop
@@ -218,9 +227,9 @@ export default function WebApplications() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:py-52 px-6 lg:px-36 bg-bottom min-h-screen">
+          <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
                 <TextType
                   text="Human-centered"
                   typingSpeed={75}
@@ -241,7 +250,7 @@ export default function WebApplications() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Image column */}
               <div className="-mt-50 max-2xl:mt-0 relative z-10 col-span-1">
                 <img
@@ -254,7 +263,7 @@ export default function WebApplications() {
 
               {/* Text column */}
               <div className="col-span-1 text-white space-y-12">
-                <div className="flex gap-16 max-lg:gap-8">
+                <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
                   <div className="tracking-[-0.03em] font-nomal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
@@ -268,17 +277,7 @@ export default function WebApplications() {
                     </ScrollReveal>
                   </div>
                 </div>
-                <Link
-                  href="#"
-                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                >
-                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                    Get in Touch
-                  </span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                  </span>
-                </Link>
+                <Button text="Get in Touch" href="/contact-us" />
               </div>
             </div>
           </section>
@@ -299,11 +298,14 @@ export default function WebApplications() {
             />
           </div>
 
-          <section id="web-applications" className="relative z-10 pt-50">
+          <section
+            id="web-applications"
+            className="relative z-10 pt-20 sm:pt-30 lg:pt-50"
+          >
             <Smoke />
 
-            <div className="flex flex-col">
-              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern web apps built for"
                   typingSpeed={75}
@@ -322,7 +324,7 @@ export default function WebApplications() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <div className="text-base sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="Tech With Moonshot understands that digital brand is flawed without web applications. In fact, experience tells us that websites are necessary to capture online, or perhaps global, market share. For instance, web-based landing pages is the point of converting potential leads into users."
                   typingSpeed={15}
@@ -335,7 +337,7 @@ export default function WebApplications() {
               </div>
             </div>
 
-            <div id="web-applications-layout"  className="relative z-50">
+            <div id="web-applications-layout" className="relative z-50">
               <LayoutGrid cards={layoutImages} />
 
               <style
@@ -375,8 +377,9 @@ export default function WebApplications() {
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
 
-          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
+          {/* Success Stories Section */}
           <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
@@ -397,8 +400,7 @@ export default function WebApplications() {
             />
           </h2>
 
-          {/* Success Stories Section */}
-          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+          <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
 
