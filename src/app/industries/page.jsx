@@ -107,7 +107,7 @@ export default function Portfolio() {
         "We understand what makes an e-commerce strategy truly effective.",
       thumbnail: "/images/industries/image-10.png",
       className:
-        "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
+        "md:col-span-2 1600:h-[500px] 2xl:h-[450px] max-xl:h-[300px]",
       content: null,
     },
     {
@@ -117,7 +117,7 @@ export default function Portfolio() {
         "We help AI brands simplify complex ideas into clear digital experiences that drive awareness, trust, and adoption.",
       thumbnail: "/images/industries/image-11.png",
       className:
-        "md:col-span-2 h-[320px] 1600:h-[650px] 2xl:h-[550px] xl:h-[450px] max-xl:h-[350px]",
+        "md:col-span-2 1600:h-[500px] 2xl:h-[450px] max-xl:h-[300px]",
       content: null,
     },
   ];
@@ -171,18 +171,18 @@ export default function Portfolio() {
           {/* Hero Section */}
           <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:py-[40%] max-lg:pt-[30%] max-md:py-[30%] lg:pt-[18%] lg:pb-[22%]">
             <div className="relative z-10">
-              <div className="mb-8 md:mb-16 flex items-center gap-3 text-white">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-sm lg:text-lg">Industries</p>
+                <p className="font-poppins font-medium">Industries</p>
               </div>
 
-              <h1 className="text-[clamp(22px,5vw,40px)] sm:text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.25vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-7 sm:leading-10 1280:leading-13 1366:leading-15 1600:leading-18 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,3.25vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Innovating Industries
                   <br className="hidden md:block" />{" "}
                   Demonstrating Our Multi
                 </AuroraText>
-                <span className="text-[clamp(30px,6vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(40px,4.25vw,86px)] font-thin text-end lg:block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(40px,4.25vw,86px)] font-thin text-end lg:block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Sector Strength
                   </AuroraText>
