@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative bg-[#020E1A] text-white overflow-hidden z-50"
+      className="relative bg-[#020E1A] rounded-t-[34.137px] -mt-10 pt-10 text-white overflow-hidden z-50"
       style={{ fontFamily: "var(--font-sora), sans-serif" }}
     >
       <div className="relative z-10 mx-auto max-w-[90%] py-16 lg:py-24">

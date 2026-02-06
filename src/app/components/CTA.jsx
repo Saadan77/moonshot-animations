@@ -50,7 +50,7 @@ export default function CTA() {
   }, []);
 
   return (
-    <section className="font-sora relative z-10 flex flex-col items-center justify-start overflow-hidden bg-[#00050A] pt-20 lg:pt-36">
+    <section className="font-sora relative z-10 flex flex-col items-center justify-start overflow-hidden bg-[#00050A] pb-10 pt-20 lg:pt-36">
       {/* Left Gradient */}
       <div className="absolute -left-70 top-80 bottom-0 w-150 pointer-events-none">
         <div
