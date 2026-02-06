@@ -50,7 +50,7 @@ export default function Footer() {
               <img
                 src="/images/primary-logo.png"
                 alt="Moonshot Tech"
-                className="w-3/4 h-auto"
+                className="w-4/6 md:w-3/4 h-auto"
               />
             </Link>
           </div>

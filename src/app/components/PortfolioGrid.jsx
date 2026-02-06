@@ -148,7 +148,7 @@ const PortfolioGrid = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center py-20 relative md:z-20 lg:z-50">
+        <div className="w-full flex justify-center pt-20 pb-0 1920:py-20 relative md:z-20 lg:z-50">
           <Link
             href="#"
             className="group inline-flex items-center gap-6 rounded-full bg-[#2626264D] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"

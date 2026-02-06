@@ -30,7 +30,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <div className="flex items-center relative w-full overflow-visible">
+        <section className="flex items-center relative">
           {/* Background Image Container */}
           <div className="absolute inset-0 z-10">
             <Image
@@ -47,18 +47,20 @@ export default function Portfolio() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:py-[40%] max-lg:pt-[30%] max-md:py-[30%] lg:pt-[18%] lg:pb-[22%]">
+          <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] max-md:py-[30%] lg:pt-[18%] lg:pb-[22%]">
             <div className="relative z-10">
               <div className="mb-8 md:mb-16 flex items-center gap-3 text-white">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-medium font-poppins text-sm lg:text-lg">Portfolio</p>
+                <p className="font-medium font-poppins text-sm lg:text-lg">
+                  Portfolio
+                </p>
               </div>
 
               <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(20px,5.5vw,40px)] sm:text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-7 sm:leading-10 1280:leading-13 1366:leading-15 1600:leading-18 1920:leading-20.25 text-white">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Designing <br /> Dreams Showcasing Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(30px,6vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end lg:block">
+                <span className="text-[clamp(30px,6vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Creative Journey
                   </AuroraText>
@@ -71,7 +73,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -79,20 +81,20 @@ export default function Portfolio() {
               />
               <img
                 src="/images/portfolio-page/portfolio-hero-image.png"
-                className="hidden lg:block absolute top-50 -right-80 z-20 w-[70%] h-auto rotate-[7.76deg] max-xl:-right-45"
-                alt="Portfolio Hero"
-              />
-            </div>
-
-            <div className="max-md:hidden lg:hidden flex items-center justify-center relative z-20">
-              <img
-                src="/images/portfolio-page/portfolio-hero-tablet.png"
-                className="w-3/4 h-auto rotate-[7.76deg]"
+                className="absolute top-50 -right-80 z-20 w-[70%] h-auto rotate-[7.76deg] max-xl:-right-45"
                 alt="Portfolio Hero"
               />
             </div>
           </div>
-        </div>
+
+          <div className="max-md:hidden lg:hidden flex items-center justify-center relative z-20">
+            <img
+              src="/images/portfolio-page/portfolio-hero-tablet.png"
+              className="w-3/4 h-auto rotate-[7.76deg]"
+              alt="Portfolio Hero"
+            />
+          </div>
+        </section>
 
         <PortfolioGrid />
         <CTA />
