@@ -8,7 +8,7 @@ const BR_TOKEN_REGEX = /<br\s*\/?\s*>/gi;
 
 type TextToken =
   | { type: "text"; value: string }
-  | { type: "br" };
+  | { type: "br"; className?: string };
 
 function normalizeChildrenToTokens(input: React.ReactNode): TextToken[] {
   if (input === null || input === undefined || typeof input === "boolean") return [];
@@ -26,7 +26,10 @@ function normalizeChildrenToTokens(input: React.ReactNode): TextToken[] {
   if (typeof input === "number") return [{ type: "text", value: String(input) }];
   if (Array.isArray(input)) return input.flatMap(normalizeChildrenToTokens);
   if (isValidElement(input)) {
-    if (input.type === "br") return [{ type: "br" }];
+    if (input.type === "br") {
+      const element = input as React.ReactElement<{ className?: string }>;
+      return [{ type: "br", className: element.props?.className }];
+    }
 
     const element = input as React.ReactElement<{ children?: React.ReactNode }>;
     return normalizeChildrenToTokens(element.props?.children);
@@ -120,14 +123,14 @@ export function ScrollReveal({
     type SplitItem =
       | { kind: "word"; value: string; key: number }
       | { kind: "space"; value: string; key: number }
-      | { kind: "br"; key: number };
+      | { kind: "br"; key: number; className?: string };
 
     const items: SplitItem[] = [];
     let key = 0;
 
     for (const token of tokens) {
       if (token.type === "br") {
-        items.push({ kind: "br", key: key++ });
+        items.push({ kind: "br", key: key++, className: token.className });
         continue;
       }
 
@@ -171,7 +174,7 @@ export function ScrollReveal({
           }
 
           if (item.kind === "br") {
-            return <br key={`br-${item.key}`} />;
+            return <br key={`br-${item.key}`} className={item.className} />;
           }
 
           const start = wordIndex / totalWords;

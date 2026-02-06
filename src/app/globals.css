@@ -23,7 +23,10 @@ html {
   --breakpoint-1366: 85rem;
   --breakpoint-1280: 80rem;
   --breakpoint-1280: 80rem;
-  --breakpoint-1025: 64rem;
+  --breakpoint-840: 52.5rem;
+  --breakpoint-480: 30rem;
+  --breakpoint-390: 24.375rem;
+  --breakpoint-360: 22.5rem;
 }
 
 @theme inline {

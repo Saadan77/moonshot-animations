@@ -272,7 +272,7 @@ const PortfolioAndBrand = () => {
 
     return (
         <>
-            <section ref={containerRef} className="sticky -top-260 text-white py-52 bg-[#0a0f14] z-10">
+            <section ref={containerRef} className="sticky -top-360 390:-top-400 480:-top-480 md:-top-180 840:-top-200 lg:-top-60 1280:-top-120 1366:-top-160 1440:-top-180 1600:-top-240 1920:-top-260 text-white py-24 1366:py-36 1600:py-48 bg-[#0a0f14] z-10">
                 <div ref={placeholderRef} style={{ display: 'none', height: 0 }} />
                 <div id="portfolio" className="max-w-[90%] mx-auto px-4" ref={innerRef}>
                     {/* 3 Column Grid - 3 Rows */}
@@ -403,7 +403,7 @@ const PortfolioAndBrand = () => {
                 <div className="absolute inset-0 bg-[#34A5DC]" style={{ clipPath: "inherit" }} />
             </section>
 
-            <section id="brand-section" className="bg-[#34A5DC] -mt-1 pt-52 pb-125 relative z-10 min-h-screen flex items-center justify-center overflow-x-hidden">
+            <section id="brand-section" className="bg-[#34A5DC] -mt-1 pt-20 lg:pt-36 1366:pt-52 pb-125 relative z-10 min-h-screen flex items-center justify-center overflow-x-hidden">
                 <h2 className="z-20 text-[clamp(60px,12vw,260px)] text-center tracking-[-3%] leading-[0.8] md:leading-[0.85] uppercase font-semibold font-sora flex flex-col items-center gap-2">
 
                     <ScrollFillText>WE</ScrollFillText>

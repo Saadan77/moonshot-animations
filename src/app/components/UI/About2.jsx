@@ -7,7 +7,7 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
   return (
     <div className={className}>
       <div className="w-full h-full">
-        <div className="flex flex-col justify-between min-h-150">{children}</div>
+        <div className="flex flex-col justify-between min-h-100 1366:min-h-110 1440:min-h-125 1920:min-h-150">{children}</div>
       </div>
     </div>
   );
@@ -15,10 +15,10 @@ const ParallaxCard = ({ children, className, offset = 0 }) => {
 
 const About2 = () => {
   return (
-    <section className="relative bg-[#00060B] text-white py-48 z-50 pb-50">
+    <section className="relative bg-[#00060B] text-white py-24 1366:py-36 1600:py-48 z-50">
       {/* Content Overlay */}
       <div className="relative z-10 max-w-[90%] mx-auto">
-        <div className="mb-36 space-y-12 overflow-x-hidden">
+        <div className="mb-8 lg:mb-16 1366:mb-24 1600:mb-36 space-y-12 overflow-x-hidden">
           {/* Top label */}
           <div className="flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
             <span className="text-nowrap font-poppins font-normal">
@@ -33,11 +33,11 @@ const About2 = () => {
           >
             <ScrollReveal size="md" enableBlur={false}>
               Tech With Moonshot strategists drive impactful digital growth for
-              your brand. By <br /> analyzing data, trends, and audience
-              insights, they deliver tailored solutions, SEO, email <br />{" "}
+              your brand. By <br className="hidden md:block" /> analyzing data, trends, and audience
+              insights, they deliver tailored solutions, SEO, email <br className="hidden md:block" />{" "}
               marketing, websites, e-commerce, animations, and more. More than a
               digital agency,
-              <br /> we make your brand stand out. That's the Tech With Moonshot
+              <br className="hidden md:block" /> we make your brand stand out. That's the Tech With Moonshot
               difference.
             </ScrollReveal>
           </div>
@@ -79,15 +79,15 @@ const About2 = () => {
             />
           </div>
           {/* Cards Container */}
-          <div className="max-w-[80%] max-2xl:max-w-[95%] max-md:max-w-full relative mx-auto z-10 max-md:-mt-[95vh] -mt-[100vh]">
+          <div className="max-w-[80%] max-1366:max-w-[85%] max-1280:max-w-[90%] max-lg:max-w-full relative mx-auto z-10 max-md:-mt-[95vh] -mt-[100vh]">
             {/* Card 01 */}
-            <div className="relative flex justify-end mb-10 md:-mb-30">
+            <div className="relative flex justify-center md:justify-end mb-10 md:-mb-30">
               <ParallaxCard
                 offset={-150}
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:max-w-full max-md:min-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-1280:max-w-[45%] max-1280:min-w-[45%] max-md:max-w-4/5 max-md:min-w-4/5",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -120,13 +120,13 @@ const About2 = () => {
                   <img
                     src="/images/about-2/balls/ball-1.png"
                     alt="Ball 1"
-                    className="pointer-events-none absolute -top-30 -right-37.5 w-100 h-100 object-contain"
+                    className="pointer-events-none absolute -top-30 -right-37.5 w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Headline */}
                 <div
-                  className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="relative z-10 text-xl lg:text-[clamp(22px,1.85vw,36px)] uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -143,12 +143,12 @@ const About2 = () => {
             </div>
 
             {/* Card 02 */}
-            <div className="relative mb-10 md:-mb-30">
+            <div className="relative mb-10 md:-mb-30 max-md:flex max-md:justify-center">
               <ParallaxCard
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-1280:max-w-[45%] max-1280:min-w-[45%] max-md:max-w-4/5 max-md:min-w-4/5",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -181,13 +181,13 @@ const About2 = () => {
                   <img
                     src="/images/about-2/balls/ball-2.png"
                     alt="Ball 1"
-                    className="pointer-events-none absolute -top-30 -right-37.5 w-100 h-100 object-contain"
+                    className="pointer-events-none absolute -top-30 -right-37.5 w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Headline */}
                 <div
-                  className="relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="lg:w-[95%] 1440:w-[90%] 1600:w-[95%] relative z-10 text-xl lg:text-[clamp(22px,1.85vw,36px)] uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -202,13 +202,12 @@ const About2 = () => {
             </div>
 
             {/* Card 03 */}
-            <div className="relative flex justify-end mb-10 -mt-62.5 max-sm:mt-0">
+            <div className="relative flex justify-center md:justify-end mb-10 -mt-62.5 max-sm:mt-0">
               <ParallaxCard
-                offset={120}
                 className={[
                   "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-1280:max-w-[45%] max-1280:min-w-[45%] max-md:max-w-4/5 max-md:min-w-4/5",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -241,13 +240,13 @@ const About2 = () => {
                   <img
                     src="/images/about-2/balls/ball-3.png"
                     alt="Ball 3"
-                    className="pointer-events-none absolute -top-30 -right-37.5 w-100 h-100 object-contain"
+                    className="pointer-events-none absolute -top-30 -right-37.5 w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Headline */}
                 <div
-                  className="max-w-[90%] relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="lg:max-w-[90%] relative z-10 text-xl lg:text-[clamp(22px,1.85vw,36px)] uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType
@@ -264,13 +263,12 @@ const About2 = () => {
             </div>
 
             {/* Card 04 */}
-            <div className="relative">
+            <div className="relative max-md:flex max-md:justify-center">
               <ParallaxCard
-                offset={-240}
                 className={[
-                  "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden",
+                  "relative rounded-[28px] border border-[#2e2e2e]/60 bg-[#030303] overflow-hidden -mt-30 max-sm:mt-0",
                   "shadow-[0_30px_120px_rgba(0,0,0,0.75)]",
-                  "p-8 min-w-[42%] max-w-[42%] max-2xl:max-w-[48%] max-2xl:min-w-[48%] max-md:min-w-full max-md:max-w-full",
+                  "p-8 min-w-[42%] max-w-[42%] max-1280:max-w-[45%] max-1280:min-w-[45%] max-md:max-w-4/5 max-md:min-w-4/5",
                 ].join(" ")}
               >
                 {/* Gradient - Top Right */}
@@ -303,13 +301,13 @@ const About2 = () => {
                   <img
                     src="/images/about-2/balls/ball-4.png"
                     alt="Ball 4"
-                    className="pointer-events-none absolute -top-30 -right-37.5 w-100 h-100 object-contain"
+                    className="pointer-events-none absolute -top-30 -right-37.5 w-full h-auto object-contain"
                   />
                 </div>
 
                 {/* Headline */}
                 <div
-                  className="max-w-[90%] relative z-10 text-xl lg:text-2xl 2xl:text-4xl uppercase leading-tight tracking-[0.01em] text-white"
+                  className="lg:max-w-[90%] relative z-10 text-xl lg:text-[clamp(22px,1.85vw,36px)] uppercase leading-tight tracking-[0.01em] text-white"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <TextType

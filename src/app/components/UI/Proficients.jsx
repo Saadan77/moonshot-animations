@@ -5,7 +5,7 @@ import TextType from "@/components/TextType";
 
 export default function Proficients() {
     return (
-        <section className="px-16 items-center py-36 bg-[#00080F] relative z-50">
+        <section className="px-6 lg:px-10 1366:px-16 items-center py-24 1366:py-36 bg-[#00080F] relative z-50">
             {/* Heading */}
             <div className="text-center relative z-10 space-y-8">
                 <p className="text-[#808080] text-sm 1366:text-base 1440:text-lg 1600:text-xl tracking-tight font-poppins font-normal">05 <span className="-mr-2">—</span> — Profecients</p>

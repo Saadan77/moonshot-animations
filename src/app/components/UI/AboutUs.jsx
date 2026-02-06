@@ -58,7 +58,7 @@ const AboutUs = () => {
     >
       <Smoke />
 
-      <div className="mx-auto max-w-[90%] px-6 pt-10 1366:pt-16 1600:pt-24 pb-20 1366:pb-24 1600:pb-56">
+      <div className="mx-auto max-w-[90%] px-6 pt-10 1366:pt-16 1600:pt-24 pb-20 1280:pb-30 1366:pb-40 1600:pb-56">
         <div className="pb-10 1366:pb-16 1600:pb-24 lg:flex lg:items-start">
           {/* Small "About Us" label */}
           <div className="lg:mr-40 1366:mr-50 1600:mr-60 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">

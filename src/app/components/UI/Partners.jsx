@@ -64,7 +64,7 @@ export default function Partners() {
       <div
         id="home-partners-clip-path"
         ref={transitionRef}
-        className="absolute top-0 inset-0 h-[50vh] z-10 -mt-110"
+        className="absolute top-0 inset-0 h-[60vh] 1920:h-[50vh] z-10 -mt-110"
         style={{
           clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
           willChange: "clip-path",
