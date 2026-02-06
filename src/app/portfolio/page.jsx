@@ -30,7 +30,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <section className="flex items-center relative">
+        <section className="relative">
           {/* Background Image Container */}
           <div className="absolute inset-0 z-10">
             <Image
@@ -56,18 +56,18 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-[clamp(20px,5.5vw,40px)] sm:text-[clamp(30px,5vw,50px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-7 sm:leading-10 1280:leading-13 1366:leading-15 1600:leading-18 1920:leading-20.25 text-white">
+              <h1 className="font-normal font-sora uppercase mb-4 text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Designing <br /> Dreams Showcasing Our{" "}
                 </AuroraText>
-                <span className="text-[clamp(30px,6vw,50px)] sm:text-[clamp(40px,5vw,60px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,5vw,86px)] font-thin lg:text-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Creative Journey
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-normal font-sora text-white/70 text-[clamp(12px,2vw,20px)] sm:text-[clamp(9px,1.55vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
+              <p className="font-normal font-sora text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(13px,1.08vw,20px)] lg:text-[clamp(10px,1.08vw,20px)]">
                 From conceptual sketches to digital experiences, here’s how we
                 turn imagination into design
               </p>
