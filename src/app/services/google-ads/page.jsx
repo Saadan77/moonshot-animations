@@ -235,7 +235,7 @@ export default function GoogleAds() {
 
           <section className="relative z-10 py-16 md:py-24 1440:py-40 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="text-[clamp(36px,3.25vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-16 1920:mb-24">
+              <h2 className="text-[clamp(36px,3.25vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-16">
                 <TextType
                   text="Google Ads Pros"
                   typingSpeed={75}
@@ -270,7 +270,7 @@ export default function GoogleAds() {
               <div className="space-y-4 1440:space-y-8 1920:space-y-12">
                 <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                  <div className="tracking-[-0.03em] font-nomal font-sora">
+                  <div className="sec-3-para tracking-[-0.03em] font-normal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
                       Tech With Moonshot makes use of collaborative efforts to
                       give you a good website development services. <br />{" "}
@@ -280,6 +280,15 @@ export default function GoogleAds() {
                       developers and back-end developers know how to service
                       your web development request in agile manner.
                     </ScrollReveal>
+                    <style
+                      dangerouslySetInnerHTML={{
+                        __html: `
+                      .sec-3-para p {
+                        width: 90% !important;
+                      }
+                    `,
+                      }}
+                    />
                   </div>
                 </div>
                 <Button text="Get in Touch" href="/contact-us" />

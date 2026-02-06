@@ -230,7 +230,7 @@ export default function Branding() {
 
         <section className="relative z-10 py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
           <div className="flex justify-end max-lg:justify-center">
-            <h2 className="text-3xl lg:text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
+            <h2 className="text-3xl lg:text-[clamp(30px,3vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-14">
               <TextType
                 text="Identity-first"
                 typingSpeed={75}
@@ -273,7 +273,7 @@ export default function Branding() {
             <div className="col-span-1 text-white space-y-12">
               <div className="flex gap-16 max-1366:gap-8">
                 <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                <div className="tracking-[-0.03em] font-nomal font-sora">
+                <div className="sec-3-para tracking-[-0.03em] font-normal font-sora">
                   <ScrollReveal size="sm" enableBlur={false}>
                     Tech With Moonshot makes use of collaborative efforts to
                     give you a good website development services. <br />{" "}
@@ -283,6 +283,13 @@ export default function Branding() {
                     developers and back-end developers know how to service your
                     web development request in agile manner.
                   </ScrollReveal>
+                  <style dangerouslySetInnerHTML={{
+                    __html: `
+                      .sec-3-para p {
+                        width: 90% !important;
+                      }
+                    `
+                  }} />
                 </div>
               </div>
               <Button text="Get in Touch" href="/contact-us" />

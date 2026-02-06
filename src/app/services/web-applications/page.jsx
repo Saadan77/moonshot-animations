@@ -155,11 +155,9 @@ export default function WebApplications() {
           {/* Hero Section */}
           <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[25%] lg:pb-[16%] 1366:pt-[22%] 1366:pb-[19%] 1920:py-[18%]">
             <div className="relative z-10">
-             <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium">
-                  Website Applications
-                </p>
+                <p className="font-poppins font-medium">Website Applications</p>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,4vw,78px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25 text-white">
@@ -229,7 +227,7 @@ export default function WebApplications() {
 
           <section className="relative z-10 py-16 md:py-24 1440:py-40 1920:py-52 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
             <div className="flex justify-end max-lg:justify-center">
-              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1366:mb-14 1920:mb-24 -ml-16 max-lg:ml-0">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-14">
                 <TextType
                   text="Human-centered"
                   typingSpeed={75}
@@ -275,7 +273,7 @@ export default function WebApplications() {
               <div className="col-span-1 text-white space-y-12">
                 <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                  <div className="tracking-[-0.03em] font-nomal font-sora">
+                  <div className="sec-3-para tracking-[-0.03em] font-normal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
                       Tech With Moonshot makes use of collaborative efforts to
                       give you a good website development services. <br />{" "}
@@ -285,6 +283,15 @@ export default function WebApplications() {
                       developers and back-end developers know how to service
                       your web development request in agile manner.
                     </ScrollReveal>
+                    <style
+                      dangerouslySetInnerHTML={{
+                        __html: `
+                      .sec-3-para p {
+                        width: 90% !important;
+                      }
+                    `,
+                      }}
+                    />
                   </div>
                 </div>
                 <Button text="Get in Touch" href="/contact-us" />
