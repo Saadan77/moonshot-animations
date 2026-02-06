@@ -22,6 +22,9 @@ import CyberHologramLoader from "../components/CyberHologramLoader";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutUsPage() {
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const cards = [
     {
       id: 1,

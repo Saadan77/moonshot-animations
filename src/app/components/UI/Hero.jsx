@@ -72,9 +72,9 @@ const Hero = () => {
       <Navbar onMenuStateChange={setIsMenuOpen} />
 
       {/* Hero Content */}
-      <div className="relative min-h-screen flex items-center justify-center pt-30 overflow-visible">
+      <div className="relative flex items-center justify-center pt-30 overflow-visible">
         {/* Decorative Labels */}
-        <div className="absolute top-[20%] left-20">
+        <div className="absolute lg:top-[25%] 1280:top-[20%] left-20">
           <p
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             className="text-lg font-normal text-[#FFFFFF99]"
@@ -82,7 +82,7 @@ const Hero = () => {
             (creative)
           </p>
         </div>
-        <div className="absolute top-[20%] right-20">
+        <div className="absolute lg:top-[25%] 1280:top-[20%] right-20">
           <p
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             className="text-lg font-normal text-[#FFFFFF99]"
@@ -93,7 +93,7 @@ const Hero = () => {
 
         {/* Main Content Container */}
         <div
-          className="mt-25 max-xl:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[73%] overflow-visible"
+          className="mt-25 max-lg:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[73%] overflow-visible"
           style={{
             mixBlendMode: "screen",
           }}
@@ -122,7 +122,7 @@ const Hero = () => {
             <div className="leading-none text-white tracking-[-0.04em]">
               <div className="text-left max-sm:mb-5 relative z-10">
                 <h1
-                  className="text-[clamp(80px,12vw,235px)] italic"
+                  className="text-[clamp(80px,11.5vw,235px)] italic"
                   style={{ fontFamily: "var(--font-playfair), serif" }}
                 >
                   Digital
@@ -131,7 +131,7 @@ const Hero = () => {
 
               <div className="ml-[104%] text-end max-lg:text-center">
                 <h1
-                  className="text-[clamp(60px,12vw,215px)] flex justify-end"
+                  className="text-[clamp(60px,11.5vw,215px)] flex justify-end"
                   style={{ fontFamily: "var(--font-sora), sans-serif" }}
                 >
                   <AuroraText colors={["#ffffff", "#d1bd73"]}>Exp</AuroraText>
@@ -142,7 +142,7 @@ const Hero = () => {
           </div>
 
           {/* Video Container - Center (overflow visible) */}
-          <div className="-mt-125 max-2xl:-mt-62.5 max-lg:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+          <div className="-mt-125 max-2xl:-mt-100 max-1280:-mt-70 max-lg:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
                 className="w-150 h-150 rounded-full blur-[100px]"
@@ -169,10 +169,10 @@ const Hero = () => {
         </div>
 
         {/* Services Text - Right Bottom */}
-        <div className="max-lg:hidden block absolute right-24 top-[65%] max-2xl:top-[70%] text-right z-50">
+        <div className="max-lg:hidden block absolute right-24 top-[70%] 1920:top-[65%] text-right z-50">
           <p
             style={{ fontFamily: "var(--font-sora), sans-serif" }}
-            className="text-gray-600 text-2xl max-xl:text-xl leading-relaxed transition-colors duration-300"
+            className="text-gray-600 text-base 1280:text-lg 1440:text-xl 1600:text-2xl leading-relaxed transition-colors duration-300"
           >
             <span
               onClick={() => scrollToSection("branding")}
@@ -287,18 +287,16 @@ const Hero = () => {
       <div className="relative z-100 w-full max-sm:py-4 -mt-30">
         {/* Bottom large background word/image */}
         <div
-          className="absolute inset-0 z-0 pointer-events-none"
+          className="absolute inset-0 z-0 -mt-12 pointer-events-none"
           style={{
-            fontSize: "clamp(80px,18vw,350px)",
             fontFamily: "Inter",
-            marginTop: "-180px",
             opacity: 0.05,
           }}
         >
           <TextScrollMarquee
             baseVelocity={3}
             direction="left"
-            className="text-[350px] font-medium tracking-tighter text-white/20 select-none pointer-events-none"
+            className="text-[clamp(200px,12vw,350px)] font-medium tracking-tighter text-white/20 select-none pointer-events-none"
             scrollDependent={false}
             delay={500}
           >

@@ -8,7 +8,7 @@ export default function Button({ text, href }) {
         href={href}
         className="group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-5 md:pl-8 py-1.5 text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
       >
-        <span className="text-nowrap relative top-[0.5px] font-sora text-sm 1366:text-base 1440:text-lg 1600:text-xl">
+        <span className="text-nowrap relative top-[0.5px] font-sora text-sm 1280:text-base 1440:text-lg 1600:text-xl">
           {text}
         </span>
         <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">

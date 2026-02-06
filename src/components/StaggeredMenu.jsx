@@ -523,7 +523,7 @@ export const StaggeredMenu = ({
             </button>
 
             <Link
-              className="font-sora hidden lg:flex text-[14px] xl:text-[20px] text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
+              className="font-sora hidden lg:flex text-sm 1280:text-base 1440:text-lg 1600:text-xl text-[#BBBBBB] underline text-nowrap hover:text-white transition-colors"
               href="tel:+19723315058"
             >
               +1-972-331-5058
@@ -550,7 +550,7 @@ export const StaggeredMenu = ({
               href="/portfolio"
               className="hidden lg:inline-flex group items-center gap-6 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-white/90 transition-all duration-300"
             >
-              <span className="relative top-[0.5px] font-sora text-[14px] xl:text-[20px] whitespace-nowrap">Our Works</span>
+              <span className="relative top-[0.5px] font-sora text-sm 1280:text-base 1440:text-lg 1600:text-xl whitespace-nowrap">Our Works</span>
               <span className="grid place-items-center rounded-full bg-[#333333] group-hover:bg-white p-3">
                 <ChevronRight className="lg:w-4 lg:h-4 xl:w-6 xl:h-6 group-hover:text-black" />
               </span>
