@@ -138,7 +138,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <div className="flex items-center relative w-full overflow-hidden">
+        <div className="flex items-center relative w-full">
           {/* Dither Background */}
           {/* <div className="absolute inset-0 w-full h-full opacity-20">
             <Dither
@@ -176,7 +176,7 @@ export default function Portfolio() {
                 <p className="font-poppins font-medium">Industries</p>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,3.25vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(45px,4vw,74px)] lg:text-[clamp(30px,3.25vw,66px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Innovating Industries
                   <br className="hidden md:block" />{" "}
