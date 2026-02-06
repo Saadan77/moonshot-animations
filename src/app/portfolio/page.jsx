@@ -30,7 +30,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <section className="lg:flex items-center relative w-full overflow-hidden">
+        <section className="lg:flex items-center relative w-full">
           {/* Background Image Container */}
           <div className="absolute inset-0 z-10">
             <Image
@@ -56,11 +56,11 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <h1 className="font-normal font-sora uppercase mb-4 text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
+              <h1 className="font-normal font-sora uppercase mb-4 text-3xl sm:text-4xl md:text-[clamp(45px,4vw,74px)] lg:text-[clamp(30px,3.5vw,66px)] tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Designing <br /> Dreams Showcasing Our{" "}
                 </AuroraText>
-                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,5vw,86px)] font-thin lg:text-end block">
+                <span className="text-3xl 480:text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,5vw,86px)] font-thin lg:text-end block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Creative Journey
                   </AuroraText>
@@ -81,7 +81,7 @@ export default function Portfolio() {
               />
               <img
                 src="/images/portfolio-page/portfolio-hero-image.png"
-                className="absolute top-50 -right-80 z-20 w-[70%] h-auto rotate-[7.76deg] max-xl:-right-45"
+                className="absolute top-50 -right-80 z-20 w-[70%] h-auto rotate-[7.76deg] max-xl:-right-50"
                 alt="Portfolio Hero"
               />
             </div>
