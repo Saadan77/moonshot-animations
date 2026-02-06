@@ -18,6 +18,7 @@ import Image from "next/image";
 import FormCTA from "@/app/components/FormCTA";
 import HorizontalScrollCards from "@/app/components/HorizontalScroll";
 import Smoke from "@/app/components/smoke/smoke";
+import Button from "@/app/components/button/button";
 
 const data = [
   {
@@ -123,7 +124,7 @@ export default function SSM() {
       >
         <Navbar />
 
-        <div className="min-h-screen flex items-center relative w-full overflow-visible">
+        <section className="lg:flex items-center relative overflow-visible">
           {/* <div className="absolute inset-0 w-full h-[125vh] opacity-20">
             <Dither
               waveColor={[0.01, 0.29, 0.62]}
@@ -152,31 +153,31 @@ export default function SSM() {
           <DecorativeLines />
 
           {/* Hero Section */}
-          <div className="">
-            <div className="relative z-10 ml-20 max-lg:ml-5">
-              <div className="mb-16 flex items-center gap-3 text-sm text-white">
+          <div className="flex px-[5em] max-lg:px-[3em] max-md:px-[2em] max-sm:pt-[40%] max-sm:pb-[10%] max-lg:pt-[30%] lg:pt-[22%] lg:pb-[16%] 1920:py-[18%]">
+            <div className="relative z-10">
+              <div className="mb-8 md:mb-16 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
                 <img src="/images/about-us/icon.png" />
-                <p className="font-poppins font-medium text-lg">SMM</p>
+                <p className="font-poppins font-medium">SMM</p>
               </div>
 
-              <h1 className="text-[clamp(50px,3.6vw,82px)] font-normal font-sora uppercase mb-4 tracking-tight leading-20.25 max-1600:leading-17 max-xl:leading-15 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-[clamp(50px,4vw,74px)] lg:text-[clamp(50px,3.6vw,82px)] font-normal font-sora uppercase mb-4 tracking-tight leading-8 md:leading-15 lg:leading-12 1280:leading-15 1600:leading-18 1920:leading-20.25">
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Social Media <br /> That Grows Your{" "}
                 </AuroraText>
-                <span className="text-[clamp(50px,6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Brand Reach
                   </AuroraText>
                 </span>
               </h1>
 
-              <p className="font-sora font-normal text-white/70 text-[clamp(10px,1vw,17px)]">
+              <p className="font-sora font-normal text-white/70 text-[clamp(12px,1.5vw,20px)] md:text-[clamp(13px,1.08vw,20px)] lg:text-[clamp(10px,1vw,17px)]">
                 From ideas to final posts, we plan & manage SMM that shows who
                 you are online!
               </p>
             </div>
 
-            <div>
+            <div className="hidden lg:block">
               <img
                 className="absolute inset-0 w-full h-auto"
                 src="/images/services/bg-service-banner.png"
@@ -189,12 +190,22 @@ export default function SSM() {
               />
             </div>
           </div>
-        </div>
 
-        <img
-          src="/images/services/ssm/section-2.png"
-          className="relative z-10 max-h-[95vh] w-[90%] mx-auto max-lg:w-full object-cover rounded-4xl items-center"
-        />
+          <div className="max-md:hidden lg:hidden relative z-20 my-10">
+            <img
+              src="/images/services/seo/hero.png"
+              className="w-4/5 mx-auto h-auto"
+              alt="SEO Hero"
+            />
+          </div>
+        </section>
+
+        <div className="relative z-10 px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+          <img
+            src="/images/services/ssm/section-2.png"
+            className="relative z-10 max-h-[95vh] w-full object-cover rounded-4xl items-center"
+          />
+        </div>
 
         <div className="relative">
           <div className="absolute inset-0 z-0 -mt-[30%]">
@@ -206,9 +217,9 @@ export default function SSM() {
             />
           </div>
 
-          <section className="relative z-10 py-24 lg:pt-52 lg:pb-24 px-6 lg:px-36">
-            <div className="flex justify-end">
-              <h2 className="text-4xl lg:text-6xl font-sora font-light uppercase tracking-tight leading-snug mb-24 mr-24 max-lg:ml-0">
+          <section className="relative z-10 py-16 md:py-24 1440:py-40 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36">
+            <div className="flex justify-end max-lg:justify-center">
+              <h2 className="hidden lg:block text-[clamp(36px,3.25vw,63px)] font-sora font-light uppercase tracking-tight leading-snug mb-8 1440:mb-16">
                 <TextType
                   text="Modern social"
                   typingSpeed={75}
@@ -227,11 +238,21 @@ export default function SSM() {
                   loop={true}
                 />
               </h2>
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-snug mb-8">
+                <TextType
+                  text="Modern social media experience studio"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-9 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Image column */}
-              <div className="-mt-54 max-xl:mt-0 relative z-10 col-span-5 flex items-center justify-center">
+              <div className="-mt-54 max-xl:mt-0 relative z-10 flex items-center justify-center">
                 <img
                   src="/images/services/ssm/section-3.png"
                   alt="Laptop showcasing website design"
@@ -241,10 +262,10 @@ export default function SSM() {
               </div>
 
               {/* Text column */}
-              <div className="col-span-4 text-white space-y-12">
-                <div className="flex gap-16 max-lg:gap-8">
+              <div className="space-y-4 1440:space-y-8 1920:space-y-12">
+                <div className="flex gap-16 max-1366:gap-8">
                   <div className="w-4 bg-white self-stretch mt-7 mb-8.5" />
-                  <div className="tracking-[-0.03em] font-nomal font-sora">
+                  <div className="sec-3-para tracking-[-0.03em] font-normal font-sora">
                     <ScrollReveal size="sm" enableBlur={false}>
                       Tech With Moonshot makes use of collaborative efforts to
                       give you a good website development services. <br />{" "}
@@ -254,19 +275,18 @@ export default function SSM() {
                       developers and back-end developers know how to service
                       your web development request in agile manner.
                     </ScrollReveal>
+                    <style
+                      dangerouslySetInnerHTML={{
+                        __html: `
+                          .sec-3-para p {
+                            width: 90% !important;
+                          }
+                        `,
+                      }}
+                    />
                   </div>
                 </div>
-                <Link
-                  href="#"
-                  className="relative z-10 group border border-[#979797] inline-flex items-center gap-5 rounded-full bg-[#041426] hover:bg-[#D42290] pr-1.5 pl-8 py-1.5 text-[15px] text-white/90 ring-1 ring-white/15 transition hover:ring-white/30"
-                >
-                  <span className="relative top-[0.5px] font-sora text-[20px] hover-group:bg-white hover-group:text-black">
-                    Get in Touch
-                  </span>
-                  <span className="grid place-items-center rounded-full bg-[#D42290] group-hover:bg-white p-3">
-                    <ArrowRight className="w-6 h-6 group-hover:text-black" />
-                  </span>
-                </Link>
+                <Button text="Get in Touch" href="/contact-us" />
               </div>
             </div>
           </section>
@@ -289,11 +309,14 @@ export default function SSM() {
             />
           </div>
 
-          <section id="ssm" className="relative z-10 pt-50">
+          <section
+            id="ssm"
+            className="relative z-10 pt-20 sm:pt-30 lg:pt-40 1366:pt-50"
+          >
             <Smoke />
 
-            <div className="flex flex-col">
-              <h2 className="mx-20 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sora font-light uppercase tracking-tight leading-tight">
+            <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em]">
+              <h2 className="hidden lg:block text-[clamp(40px,3.5vw,63px)] font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
                   text="Modern social media made"
                   typingSpeed={75}
@@ -312,7 +335,17 @@ export default function SSM() {
                   loop={true}
                 />
               </h2>
-              <div className="mx-20 text-[24px] max-1440:text-[20px] max-1280:text-[16px] max-xl:text-[12px] lg:mt-10 leading-relaxed text-white/80">
+              <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
+                <TextType
+                  text="Modern social media made for engaging audience connection"
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={false}
+                  startOnVisible={true}
+                  loop={true}
+                />
+              </h2>
+              <div className="text-sm sm:text-lg md:text-base lg:text-[clamp(10px,1.1vw,23px)] mt-5 lg:mt-10 text-white/80 leading-relaxed">
                 <TextType
                   text="Social media advertising is one of the most pronounced and useful means to give wings to your profitability. The paid advertisements on Facebook, Instagram, Snap Chat, YouTube, TikTok, and other potential platforms are consequential in this digitized globe to give sustenance to brands."
                   typingSpeed={15}
@@ -370,9 +403,9 @@ export default function SSM() {
             <HorizontalScrollCards cards={webDevInfo} />
           </section>
 
-          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] mx-auto my-35 text-white/30 w-px h-px bg-white/30"></div>
+          <div className="max-w-[90%] min-w-[90%] max-xl:max-w-[95%] max-xl:min-w-[95%] max-lg:max-w-[90%] max-lg:min-w-[90%] mx-auto my-15 sm:my-20 md:my-25 lg:my-30 1366:my-35 text-white/30 w-px h-px bg-white/30"></div>
 
-          <h2 className="max-w-[90%] mx-auto text-4xl xl:text-6xl font-sora uppercase font-light tracking-tight leading-snug">
+          <h2 className="relative z-20 max-w-[90%] mx-auto text-3xl md:text-4xl lg:text-[clamp(40px,3.5vw,63px)] font-sora uppercase font-light tracking-tight leading-snug">
             <TextType
               text="200+"
               typingSpeed={75}
@@ -392,7 +425,7 @@ export default function SSM() {
             />
           </h2>
 
-          <section className="relative lg:-mt-16 xl:-mt-20 z-50">
+          <section className="relative mt-8 lg:-mt-16 xl:-mt-20 z-50">
             <SuccessStories />
           </section>
 
