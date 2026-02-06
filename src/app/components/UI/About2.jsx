@@ -20,7 +20,7 @@ const About2 = () => {
       <div className="relative z-10 max-w-[90%] mx-auto">
         <div className="mb-36 space-y-12 overflow-x-hidden">
           {/* Top label */}
-          <div className="flex items-center gap-3 text-[20px] text-[#808080]">
+          <div className="flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
             <span className="text-nowrap font-poppins font-normal">
               04 — The Inventive Minds
             </span>

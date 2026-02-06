@@ -202,7 +202,7 @@ export default function GoogleAds() {
           <div className="max-md:hidden lg:hidden relative z-20 my-10">
             <img
               src="/images/services/google-ads/hero.png"
-              className="w-3/4 ml-auto h-auto"
+              className="w-3/4 mx-auto h-auto"
               alt="Google Ads Hero"
             />
           </div>
@@ -331,16 +331,7 @@ export default function GoogleAds() {
               </h2>
               <h2 className="block lg:hidden text-3xl md:text-4xl font-sora font-light uppercase tracking-tight leading-tight">
                 <TextType
-                  text="Google Ads made to grow"
-                  typingSpeed={75}
-                  pauseDuration={1500}
-                  showCursor={false}
-                  startOnVisible={true}
-                  loop={true}
-                />
-                <br />
-                <TextType
-                  text="Quality clicks that bring you sales"
+                  text="Google Ads made to grow quality clicks that bring you sales"
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={false}

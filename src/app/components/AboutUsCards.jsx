@@ -19,7 +19,7 @@ const AboutCard = ({
                 'group relative overflow-hidden rounded-3xl border border-[#4D4D4D]',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
                 compact ? 'h-100 w-100' : 'h-100 w-100',
-                'max-1600:w-82.5 max-1600:h-82.5 max-1440:w-75 max-1440:h-75 max-1280:w-70 max-1280:h-70 max-xl:w-57.5 max-xl:h-57.5',
+                'max-1920:w-82.5 max-1920:h-82.5 max-1600:w-78.5 max-1600:h-78.5 max-1440:w-75 max-1440:h-75 max-1366:w-70 max-1366:h-70 max-1280:w-55 max-1280:h-55',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
                 className,
@@ -35,7 +35,7 @@ const AboutCard = ({
             <div className="absolute left-8 top-4 text-white/80 text-[clamp(12px,4vw,20px)] select-none">
                 {roman}
             </div>
-            <div className="font-urbanist leading-10 absolute right-8 top-4 text-right text-white/85 text-[clamp(16px,4vw,26px)]"
+            <div className="font-urbanist leading-10 absolute right-8 top-4 text-right text-white/85 text-[clamp(14px,2vw,26px)]"
             >
                 {titleTopLeft && <div>{titleTopLeft}</div>}
                 {titleTopRight && <div>{titleTopRight}</div>}
@@ -47,7 +47,7 @@ const AboutCard = ({
                     {number}
                 </div>
 
-                <GoArrowUpRight className="w-20 h-24" />
+                <GoArrowUpRight className="w-10 h-14 1280:w-14 1280:h-18 1600:w-20 1600:h-24" />
             </div>
         </div>
     );

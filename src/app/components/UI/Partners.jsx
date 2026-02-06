@@ -92,13 +92,13 @@ export default function Partners() {
         <div id="partners-slider" className="relative">
           {/* Top meta label */}
           <div className="relative mx-auto w-[92%] py-16">
-            <div className="font-sora flex justify-between text-[#808080] text-[20px]">
-              <div className="text-[20px] text-[#808080]">
+            <div className="font-sora flex justify-between">
+              <div className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
                 <span className="text-nowrap font-sora font-normal">
                   08 — Partners
                 </span>
               </div>
-              <p className="text-[#41454a] text-end text-[26px] tracking-[-0.03em]">
+              <p className="text-[#41454a] text-end text-lg 1366:text-xl 1600:text-2xl tracking-[-0.03em]">
                 Over <span className="text-white">10 Years</span> <br />{" "}
                 Partnership
               </p>

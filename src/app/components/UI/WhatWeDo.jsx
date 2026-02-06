@@ -119,10 +119,10 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div data-smoother-ignore ref={containerRef}>
-      <section className="bg-black relative z-50 text-white">
-        <div className="absolute -top-8 left-[48%] z-100" data-smoother-ignore>
-          <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-[90px] relative z-10" />
+    <div ref={containerRef}>
+      <section className="bg-black relative z-50">
+        <div className="absolute -top-8 left-[48%] z-100">
+          <Image src="/images/elevate-icon.png" alt="Elevate Icon" width={100} height={100} className="w-22.5 relative z-10" />
         </div>
 
         <div className="relative">
@@ -145,13 +145,13 @@ const WhatWeDo = () => {
               <div className="relative w-full z-30">
                 <div className="relative z-20 mx-auto w-[92%] pt-16">
                   <div className="flex items-center justify-between gap-4 text-white/70">
-                    <div className="text-[20px] max-sm:text-[15px] text-[#808080]">
+                    <div className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080]">
                       <span className='text-nowrap font-poppins font-normal'>03 — What We Do</span>
                     </div>
                     <div className="relative w-[92%]">
                       <div className="w-full flex flex-wrap justify-end gap-1 font-sora font-light">
                         {categories.map((item, cidx) => (
-                          <div key={item.name} className="max-sm:text-[15px] flex items-center">
+                          <div key={item.name} className="text-sm 1366:text-base 1440:text-lg 1600:text-xl flex items-center">
                             <span
                               onClick={() => handleCategoryClick(cidx)}
                               className={`font-normal px-1 whitespace-nowrap cursor-pointer transition-colors duration-300 hover:text-white ${activeIdx === cidx ? "text-white" : "text-white/55"}`}

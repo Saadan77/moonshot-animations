@@ -54,16 +54,16 @@ const AboutUs = () => {
   return (
     <section
       id="about-us"
-      className="relative isolate w-full bg-[#00060b] -mt-15 pt-15 text-white z-10 overflow-hidden"
+      className="relative isolate w-full bg-[#00060b] -mt-15 pt-15 z-10 overflow-hidden"
     >
       <Smoke />
 
-      <div className="mx-auto max-w-[90%] px-6 pt-24 pb-56">
-        <div className="pb-24 flex items-start max-md:flex-col">
+      <div className="mx-auto max-w-[90%] px-6 pt-10 1366:pt-16 1600:pt-24 pb-20 1366:pb-24 1600:pb-56">
+        <div className="pb-10 1366:pb-16 1600:pb-24 lg:flex lg:items-start">
           {/* Small "About Us" label */}
-          <div className="mr-60 max-sm:mr-30 flex items-center gap-3 text-sm text-white">
+          <div className="lg:mr-40 1366:mr-50 1600:mr-60 flex items-center gap-3 text-sm 1366:text-base 1440:text-lg 1600:text-xl">
             <img src="/images/about-us/icon.png" />
-            <p className="font-poppins font-normal text-nowrap text-lg">
+            <p className="font-poppins font-normal text-nowrap">
               About Us
             </p>
           </div>
@@ -83,14 +83,24 @@ const AboutUs = () => {
               <style
                 dangerouslySetInnerHTML={{
                   __html: `
-                    @media screen and (min-width: 1366px) and (max-width: 1366px) {
+                    @media screen and (min-width: 1600px) and (max-width: 1600px) {
+                        #about-us-index-scroll-reveal p {
+                           font-size: 40px;
+                        }
+                    }
+                    @media screen and (min-width: 1440px) and (max-width: 1440px) {
+                        #about-us-index-scroll-reveal p {
+                           font-size: 35px;
+                        }
+                    }
+                    @media screen and (min-width: 1280px) and (max-width: 1366px) {
                         #about-us-index-scroll-reveal p {
                            font-size: 33px;
                         }
                     }
                     @media screen and (min-width: 1024px) and (max-width: 1024px) {
                         #about-us-index-scroll-reveal p {
-                           font-size: 21px;
+                           font-size: 25px;
                         }
                     }
                   `,
@@ -98,7 +108,7 @@ const AboutUs = () => {
               />
             </h2>
 
-            <div className="mt-8">
+            <div className="1440:mt-8">
               <Button text="Learn More" href="/about-us" />
             </div>
           </div>

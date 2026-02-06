@@ -118,8 +118,8 @@ export default function FormCTA() {
 
   return (
     <section className="bg-[#00050A] overflow-hidden">
-      <div className="pb-20 1366:pb-50 pt-25 rounded-[34.137px]">
-        <div className="px-[5em] max-lg:px-[3em] max-md:px-[2em] grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
+      <div className="pb-20 1366:pb-40 pt-25 rounded-[34.137px]">
+        <div className="px-8 sm:px-10 md:px-16 lg:px-24 xl:px-36 grid grid-cols-1 lg:grid-cols-9 items-center gap-16">
           {/* Left content */}
           <div className="lg:col-span-4">
             <p className="font-poppins font-normal text-sm lg:text-lg text-[#989898] mb-4">
@@ -211,7 +211,7 @@ export default function FormCTA() {
 
           {/* Right form */}
           <form
-            className="mx-auto max-md:max-w-125 max-sm:min-w-[80vw] relative z-50 lg:col-span-5"
+            className="relative z-50 lg:col-span-5"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -284,7 +284,7 @@ export default function FormCTA() {
                   (row, rowIdx) => (
                     <div
                       key={`tag-row-${rowIdx}`}
-                      className="w-full grid grid-cols-2 max-lg:gap-3 lg:flex flex-wrap lg:flex-nowrap sm:gap-3 lg:gap-0 lg:justify-between"
+                      className="w-full grid grid-cols-2 lg:flex flex-wrap lg:flex-nowrap gap-3 lg:justify-between"
                     >
                       {row.map((t) => {
                         const isSelected = selectedTag === t;

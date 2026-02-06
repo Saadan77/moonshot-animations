@@ -12,7 +12,7 @@ export const AnimatedTestimonials = ({
   containerClass = "mx-auto max-w-7xl px-6 py-24 md:py-28 lg:py-32",
   nameClass = "text-[20px] font-semibold text-white uppercase",
   designationClass = "text-lg text-white/70",
-  quoteClass = "mb-8 1600:w-[120%] max-2xl:w-[95%] max-1366:w-[90%] max-1280:w-[85%] max-lg:w-[80%] text-[clamp(10px,2vw,37px)] leading-tight text-white/70",
+  quoteClass = "mb-8 1920:w-[120%] max-1920:w-[100%] max-1600:w-[95%] max-1440:w-[90%] max-1366:w-[85%] max-lg:w-[80%] text-[clamp(10px,2vw,37px)] leading-tight text-white/70",
 }) => {
   const [active, setActive] = useState(0);
   const [isClient, setIsClient] = useState(false);
@@ -122,7 +122,7 @@ export const AnimatedTestimonials = ({
                 ease: "easeInOut",
               }}
             >
-              <div className="text-xs lg:text-sm 1366:text-base 1440:text-lg text-[#808080] mb-6">
+              <div className="text-sm 1366:text-base 1440:text-lg 1600:text-xl text-[#808080] mb-6">
                 <span className="text-nowrap font-sora font-normal">
                   09 — Testimonials
                 </span>

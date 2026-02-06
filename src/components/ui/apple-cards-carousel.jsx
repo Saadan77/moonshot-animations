@@ -63,23 +63,23 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
   return (
     <div className="relative">
       <div className="relative z-10 w-full">
-        <div className="flex justify-start md:justify-end items-center max-xl:max-w-[85%] max-xl:mx-auto gap-2">
+        <div className="flex flex-wrap justify-start md:justify-end items-center gap-4 md:gap-2 max-w-[90%] mx-auto">
           <Button text="Recent Projects" href="/portfolio" />
 
-          <div className="mx-6 bg-white w-px" style={{ minHeight: "-webkit-fill-available"}}></div>
+          <div className="hidden md:block mx-2 sm:mx-4 md:mx-6 bg-white w-px" style={{ minHeight: "-webkit-fill-available"}}></div>
           <button
-            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-1366:h-12 max-1366:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            className="hover:cursor-pointer relative z-40 flex h-12 w-12 max-sm:h-10 max-sm:w-10 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <ChevronLeft className="h-8 w-8 text-white" />
+            <ChevronLeft className="h-6 w-6 max-sm:h-5 max-sm:w-5 text-white" />
           </button>
           <button
-            className="hover:cursor-pointer relative z-40 flex h-16 w-16 max-1366:h-12 max-1366:w-12 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
+            className="hover:cursor-pointer relative z-40 flex h-12 w-12 max-sm:h-10 max-sm:w-10 items-center justify-center rounded-full bg-[#D42290] disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <ChevronRight className="h-8 w-8 text-white" />
+            <ChevronRight className="h-6 w-6 max-sm:h-5 max-sm:w-5 text-white" />
           </button>
         </div>
         <div
@@ -95,7 +95,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
 
           <div
             className={cn(
-              "max-w-[90%] mx-auto flex flex-row justify-start gap-4 pl-4"
+              "max-w-[90%] mx-auto flex flex-row justify-start gap-4"
             )}
           >
             {items.map((item, index) => (

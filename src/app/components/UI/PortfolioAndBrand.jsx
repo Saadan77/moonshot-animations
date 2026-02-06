@@ -280,7 +280,7 @@ const PortfolioAndBrand = () => {
                         {/* Row 1, Col 1: Section Label + Heading */}
                         <div className="flex flex-col justify-between space-y-6">
                             <div className='space-y-6'>
-                                <h2 className="text-[#808080] text-[17px] xl:text-[20px] font-normal font-poppins">06 — Portfolio</h2>
+                                <h2 className="text-[#808080] text-sm 1366:text-base 1440:text-lg 1600:text-xl font-normal font-poppins">06 — Portfolio</h2>
 
                                 <h2 className="text-4xl lg:text-5xl xl:text-7xl block font-normal" style={{ fontFamily: 'var(--font-sora), sans-serif' }}>
                                     Explore <br /> Our <span
