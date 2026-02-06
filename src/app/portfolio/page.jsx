@@ -30,7 +30,7 @@ export default function Portfolio() {
 
         <Navbar />
 
-        <section className="relative">
+        <section className="lg:flex items-center relative w-full overflow-hidden">
           {/* Background Image Container */}
           <div className="absolute inset-0 z-10">
             <Image
