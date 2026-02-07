@@ -192,7 +192,13 @@ const WhatWeDo = () => {
                   />
                 )}
                 <div className="absolute inset-x-0 top-0 h-[45%] pointer-events-none bg-linear-to-b from-black to-transparent" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_1%_100%,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)] pointer-events-none" />
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)",
+                  }}
+                />
               </div>
 
               {/* Text Content */}
