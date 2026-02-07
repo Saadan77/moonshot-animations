@@ -19,7 +19,7 @@ const AboutCard = ({
                 'group relative overflow-hidden rounded-3xl border border-[#4D4D4D]',
                 'bg-zinc-900/20 shadow-[0_8px_60px_rgba(0,0,0,0.55)]',
                 compact ? 'h-100 w-100' : 'h-100 w-100',
-                '1920:w-100 1920:h-100 1600:w-82.5 1600:h-82.5 1440:w-78.5 1440:h-78.5 1366:w-75 1366:h-75 1280:w-70 1280:h-70 lg:w-55 lg:h-55',
+                'md:w-80 md:h-80 1920:w-100 1920:h-100 1600:w-82.5 1600:h-82.5 1440:w-78.5 1440:h-78.5 1366:w-75 1366:h-75 1280:w-70 1280:h-70 lg:w-55 lg:h-55',
                 'transition-transform duration-300 will-change-transform',
                 'hover:-translate-y-1',
                 className,

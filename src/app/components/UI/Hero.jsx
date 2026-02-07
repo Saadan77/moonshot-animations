@@ -74,7 +74,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative flex items-center justify-center pt-30 overflow-visible">
         {/* Decorative Labels */}
-        <div className="absolute lg:top-[25%] 1280:top-[20%] left-20">
+        <div className="hidden log:block absolute lg:top-[25%] 1280:top-[20%] left-20">
           <p
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             className="text-lg font-normal text-[#FFFFFF99]"
@@ -82,7 +82,7 @@ const Hero = () => {
             (creative)
           </p>
         </div>
-        <div className="absolute lg:top-[25%] 1280:top-[20%] right-20">
+        <div className="hidden log:block absolute lg:top-[25%] 1280:top-[20%] right-20">
           <p
             style={{ fontFamily: "var(--font-poppins), sans-serif" }}
             className="text-lg font-normal text-[#FFFFFF99]"
@@ -93,7 +93,7 @@ const Hero = () => {
 
         {/* Main Content Container */}
         <div
-          className="mt-25 max-lg:mt-0 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[73%] overflow-visible"
+          className="mt-25 z-10 w-full flex flex-col items-center max-sm:items-start max-w-[73%] overflow-visible"
           style={{
             mixBlendMode: "screen",
           }}
@@ -142,7 +142,7 @@ const Hero = () => {
           </div>
 
           {/* Video Container - Center (overflow visible) */}
-          <div className="-mt-125 max-2xl:-mt-100 max-1280:-mt-70 max-lg:mt-0 relative w-[70%] max-sm:w-full overflow-visible">
+          <div className="-mt-125 max-2xl:-mt-100 max-1280:-mt-70 max-lg:-mt-50 relative w-[70%] max-sm:w-full overflow-visible">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
                 className="w-150 h-150 rounded-full blur-[100px]"
@@ -207,7 +207,7 @@ const Hero = () => {
 
       {/* Social Media Icons - Left Side */}
       <div
-        className={`max-sm:hidden absolute left-16 max-lg:left-6 pl-3 top-[45%] flex flex-col gap-5 transition-all duration-300 ${
+        className={`max-lg:hidden absolute left-16 max-lg:left-6 pl-3 top-[45%] flex flex-col gap-5 transition-all duration-300 ${
           isMenuOpen ? "z-0" : "z-0"
         }`}
       >
@@ -321,7 +321,7 @@ const Hero = () => {
           <div className="flex justify-center items-center gap-4 max-sm:hidden">
             <p
               style={{ fontFamily: "var(--font-sora), sans-serif" }}
-              className="text-md max-sm:text-sm text-white text-nowrap"
+              className="text-md max-sm:text-sm whitespace-nowrap"
             >
               (Scroll Down)
             </p>
@@ -330,7 +330,7 @@ const Hero = () => {
           {/* Center Button */}
           <div className="bg-white/10 rounded-[133px] py-2 px-12 hover:scale-105 transition-transform duration-300 flex justify-center items-center gap-4 cursor-pointer">
             <a href="#about-us" className="scroll-smooth">
-              <ChevronDown className="text-white w-8 h-8" />
+              <ChevronDown className="w-8 h-8" />
             </a>
           </div>
 
