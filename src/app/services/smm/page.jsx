@@ -119,7 +119,7 @@ export default function SSM() {
     <>
       {/* <CyberHologramLoader /> */}
       <div
-        className="relative bg-black overflow-x-hidden"
+        className="relative bg-[#00050A]"
         style={{ fontFamily: "var(--font-sora), sans-serif" }}
       >
         <Navbar />
@@ -164,7 +164,7 @@ export default function SSM() {
                 <AuroraText colors={["#ffffff", "#d1bd73"]}>
                   Social Media <br /> That Grows Your{" "}
                 </AuroraText>
-                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,6vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
+                <span className="text-4xl md:text-[clamp(60px,4vw,86px)] lg:text-[clamp(50px,5vw,86px)] font-thin text-end items-end max-lg:text-start max-lg:items-start block">
                   <AuroraText colors={["#D42290", "#2DAEEF"]}>
                     Brand Reach
                   </AuroraText>
@@ -191,11 +191,11 @@ export default function SSM() {
             </div>
           </div>
 
-          <div className="max-md:hidden lg:hidden relative z-20 my-10">
+          <div className="max-md:hidden lg:hidden relative z-20 mt-10">
             <img
-              src="/images/services/seo/hero.png"
-              className="w-4/5 mx-auto h-auto"
-              alt="SEO Hero"
+              src="/images/services/ssm/hero.png"
+              className="w-3/5 mx-auto h-auto"
+              alt="Social Media Marketing Hero"
             />
           </div>
         </section>

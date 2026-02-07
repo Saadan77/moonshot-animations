@@ -279,12 +279,12 @@ export default function FormCTA() {
                 How can we help you?
               </p>
 
-              <div className="space-y-3 lg:space-y-6">
+              <div className="hidden lg:block space-y-3 lg:space-y-6">
                 {[tags.slice(0, 4), tags.slice(4, 8), tags.slice(8, 12)].map(
                   (row, rowIdx) => (
                     <div
                       key={`tag-row-${rowIdx}`}
-                      className="w-full grid grid-cols-2 lg:flex flex-wrap lg:flex-nowrap gap-3 lg:justify-between"
+                      className="w-full grid grid-cols-2 md:grid-cols-3 lg:flex flex-wrap lg:flex-nowrap gap-3 lg:justify-between"
                     >
                       {row.map((t) => {
                         const isSelected = selectedTag === t;
@@ -306,6 +306,28 @@ export default function FormCTA() {
                     </div>
                   ),
                 )}
+              </div>
+              
+              <div className="block lg:hidden">
+                <div className="w-full grid grid-cols-2 md:grid-cols-3 flex-wrap gap-3">
+                  {tags.map((t) => {
+                    const isSelected = selectedTag === t;
+                    return (
+                      <button
+                        key={t}
+                        type="button"
+                        onClick={() => toggleTag(t)}
+                        className={`max-sm:w-full py-4 px-3 1920:px-8 1600:px-6 1280:px-5 lg:px-3 max-xl:py-3 rounded-full bg-[#000911] text-[11px] 1920:text-[13px] 1600:text-[12px] 1440:text-[11px] 1280:text-[10px] lg:text-[9px] transition-colors duration-200 border ${
+                          isSelected
+                            ? "border-white/80 text-white/80"
+                            : "border-[#18354D] text-[#999999]"
+                        } hover:border-white/80 hover:text-white/80 cursor-pointer`}
+                      >
+                        {t}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="md:flex justify-between items-center mt-8">
